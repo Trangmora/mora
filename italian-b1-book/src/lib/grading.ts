@@ -1,5 +1,6 @@
 import type { BookPage, Exercise, Lang } from "../types";
 import type { ExerciseResult, ItemResult, Mistake } from "./store";
+import { setNeuralVoice } from "./speech";
 
 // ---------- So khớp đáp án (không cần API) ----------
 
@@ -136,6 +137,7 @@ export async function checkAI(): Promise<boolean> {
     const r = await fetch("/api/health");
     const j = await r.json();
     aiAvailable = !!j.ai;
+    setNeuralVoice(!!j.tts);
   } catch {
     aiAvailable = false;
   }

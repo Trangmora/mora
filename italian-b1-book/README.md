@@ -16,7 +16,7 @@ Website học tiếng Ý trình độ B1, thiết kế như **một cuốn sách
 | **Chấm bài tại chỗ** | ✓ *Chấm bài* (theo đáp án, không cần mạng) và 🤖 *AI chấm & giải thích* (chấm cả bài viết, bài nói). |
 | **Bài nói** | Ghi âm câu trả lời → chuyển thành chữ (sửa được) → AI chấm ngữ pháp, từ vựng, nội dung và đưa câu sửa. |
 | **Sổ lỗi — “tôi sai ở đâu”** | ✗ *Lỗi của tôi*: tổng hợp mọi câu sai, đáp án đúng và giải thích; bấm 🤖 để AI giải thích câu chưa có lời giải. |
-| **Hình minh hoạ** | Tranh SVG sinh động có sẵn (quán bar, nhà ga, chợ, thành phố…) hoặc ảnh thật đặt trong `public/images`. |
+| **Ảnh thật** | Mỗi hình trong trang là ảnh chụp thật, tự tìm theo từ khoá (Wikimedia Commons miễn phí, hoặc Pexels/Unsplash nếu có key), có ghi tên tác giả & giấy phép. Có thể dùng ảnh riêng trong `public/images`. |
 | **Lộ trình & bảng điểm** | Nút *Lộ trình* trên menu: điểm trung bình, số trang đã học, chuỗi ngày học; điểm và đường tiến bộ theo từng kỹ năng **Nghe · Viết · Ngữ pháp** (cùng Đọc hiểu, Nói & phát âm); lộ trình từng trang (xong / đang học / chưa học); gợi ý bài tiếp theo, kỹ năng cần ôn, bài điểm thấp nên làm lại. |
 | **Nhiều người học** | Mỗi người một hồ sơ riêng (tiến độ, câu trả lời, sổ lỗi, ghi chú, lịch sử điểm). Thêm / đổi tên / chuyển người học ngay trong bảng *Lộ trình*. |
 | **Ghi chú** | Trang *Appunti* cuối sách để ghi chép. Tiến độ, câu trả lời, ghi chú tự lưu trong trình duyệt. |
@@ -70,6 +70,32 @@ Có 2 API:
 > (nhận dạng tiếng Ý), rồi AI suy ra lỗi phát âm từ những chỗ máy nghe nhầm (ví dụ *anno → ano* = thiếu
 > phụ âm đôi). Vì vậy hãy đọc rõ ràng và ở nơi yên tĩnh.
 
+## Giọng đọc tiếng Ý — tạo một lần, dùng mãi
+
+Ưu tiên giọng đọc theo thứ tự:
+
+1. **File nghe của sách** (`src: "/audio/…mp3"` trong bài nghe) — giọng thật của người bản xứ, tốt nhất.
+2. **Giọng AI đã tạo sẵn** trong `public/voices/` — tạo **một lần** bằng lệnh dưới, commit lên repo, sau đó
+   nghe lại bao nhiêu lần cũng **không gọi API, không tốn tiền**.
+3. **Giọng máy của trình duyệt** — miễn phí nhưng nghe không tự nhiên, chỉ dùng khi chưa có hai loại trên.
+
+```bash
+npm run voices -- --dry   # xem có bao nhiêu câu / ký tự cần tạo (không gọi API)
+npm run voices            # tạo giọng cho các câu còn thiếu, lưu vào public/voices
+```
+
+Chỉ cần **một** key trong `.env`:
+
+| Dịch vụ | Biến trong `.env` | Chi phí |
+|---|---|---|
+| Google Cloud Text-to-Speech | `GOOGLE_TTS_API_KEY` | Có hạn mức miễn phí hằng tháng cho giọng Neural2 |
+| Azure Speech | `AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION` | Gói F0 miễn phí hằng tháng |
+| ElevenLabs | `ELEVENLABS_API_KEY` | Tự nhiên nhất, gói miễn phí nhỏ |
+
+Hai trang mẫu chỉ khoảng 1.000 ký tự; cả một cuốn sách B1 vẫn nằm trong hạn mức miễn phí của Google hoặc Azure
+(xem lại hạn mức hiện tại trên trang giá của từng dịch vụ). Mỗi lần thêm trang mới, chạy lại `npm run voices`
+là chỉ tạo phần câu mới. Bài nghe có nhiều người nói sẽ xen kẽ giọng nữ / nam.
+
 ## Thêm trang sách mới
 
 Mỗi trang sách là một file trong [`src/content/pages/`](src/content/pages), tự động xuất hiện trong
@@ -81,7 +107,7 @@ Các loại nội dung (xem [`src/types.ts`](src/types.ts)):
 - `unitHeader` — đầu bài (Unità), mục tiêu bài học
 - `heading`, `text` (bài đọc), `dialogue` (hội thoại), `vocab` (từ vựng), `grammar` (bảng ngữ pháp), `tip`
 - `audio` — bài nghe: `track: "1.04"`, `src: "/audio/1-04.mp3"` (đặt file vào `public/audio/`), `transcript: "Anna: …\nMarco: …"`
-- `image` — tranh minh hoạ (`scene: "cafe" | "station" | "market" | "city" | "home" | "office" | "travel" | "friends" | "food" | "weather"`) hoặc ảnh `src: "/images/..."`
+- `image` — ảnh thật: `photo: "Italian espresso bar"` (từ khoá tiếng Anh; `photoIndex: 1` để lấy ảnh khác), hoặc ảnh riêng `src: "/images/..."`; `scene: "cafe"` là tranh vẽ dự phòng khi không tải được ảnh
 - `exercise` với các dạng: `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
   `match` (nối), `write` (viết), `speak` (nói)
 
@@ -100,7 +126,10 @@ Hai trang `p000-demo-*.ts` chỉ là trang mẫu để xem thử, sẽ được 
 italian-b1-book/
 ├── server/
 │   ├── index.ts        # server Express (+ Vite khi dev)
-│   └── grader.ts       # "giáo viên AI" — nơi duy nhất gọi API
+│   ├── grader.ts       # "giáo viên AI" chấm bài (Claude)
+│   ├── tts.ts          # giọng đọc AI, lưu file vào public/voices
+│   └── photos.ts       # tìm ảnh thật theo từ khoá
+├── scripts/voices.ts   # npm run voices — tạo giọng một lần
 ├── src/
 │   ├── content/pages/  # ← các trang sách (mỗi ngày thêm 1 file)
 │   ├── components/     # Book (lật trang), Cover, TableOfContents, blocks/, illustrations/…
@@ -108,5 +137,6 @@ italian-b1-book/
 │   ├── i18n.ts         # chữ giao diện Việt / Anh
 │   └── styles.css      # giao diện cuốn sách
 ├── public/audio/       # file nghe mp3 của sách (nếu có)
+├── public/voices/      # giọng đọc đã tạo sẵn (commit lên repo)
 └── public/images/      # ảnh minh hoạ thật (nếu có)
 ```

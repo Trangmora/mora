@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { getState } from "./store";
+import { voiceKey } from "./voiceText";
 
 // ---------- Đọc mẫu (Text-to-Speech) ----------
 
@@ -18,14 +19,74 @@ if (typeof speechSynthesis !== "undefined") {
   speechSynthesis.addEventListener?.("voiceschanged", pickVoice);
 }
 
-export function speak(text: string, opts: { rate?: number; pitch?: number; onEnd?: () => void } = {}) {
-  if (typeof speechSynthesis === "undefined") return;
-  speechSynthesis.cancel();
+/** Bật khi server có key giọng đọc AI (ElevenLabs / Google / Azure). */
+let neural = false;
+/** Các câu đã có sẵn file giọng (public/voices) — phát thẳng, không cần API. */
+let voices: Record<string, string> = {};
+
+export async function loadVoices() {
+  try {
+    const r = await fetch(`${import.meta.env.BASE_URL}voices/manifest.json`, { cache: "no-cache" });
+    if (r.ok) voices = await r.json();
+  } catch {
+    /* chưa có file giọng nào */
+  }
+}
+let current: HTMLAudioElement | null = null;
+
+export function setNeuralVoice(on: boolean) {
+  neural = on;
+}
+
+export function hasNeuralVoice() {
+  return neural || Object.keys(voices).length > 0;
+}
+
+type SpeakOpts = { rate?: number; voice?: "f" | "m"; pitch?: number; onEnd?: () => void };
+
+export function speak(text: string, opts: SpeakOpts = {}) {
+  stopSpeaking();
+  const rate = opts.rate ?? getState().speechRate;
+  const file = voices[voiceKey(text, opts.voice ?? "f")];
+  if (file || neural) {
+    const a = new Audio(
+      file ? `${import.meta.env.BASE_URL}voices/${file}` : `/api/tts?voice=${opts.voice ?? "f"}&text=${encodeURIComponent(text)}`,
+    );
+    a.playbackRate = rate;
+    a.preservesPitch = true;
+    let ended = false;
+    const done = () => {
+      if (ended) return;
+      ended = true;
+      if (current === a) current = null;
+      opts.onEnd?.();
+    };
+    a.onended = done;
+    a.onerror = () => {
+      // Lỗi server/hết hạn mức → đọc tạm bằng giọng trình duyệt.
+      if (current !== a) return;
+      current = null;
+      speakBrowser(text, { ...opts, rate });
+    };
+    current = a;
+    a.play().catch(() => {
+      if (current === a) {
+        current = null;
+        speakBrowser(text, { ...opts, rate });
+      }
+    });
+    return;
+  }
+  speakBrowser(text, { ...opts, rate });
+}
+
+function speakBrowser(text: string, opts: SpeakOpts) {
+  if (typeof speechSynthesis === "undefined") return opts.onEnd?.();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "it-IT";
   if (italianVoice) u.voice = italianVoice;
   u.rate = opts.rate ?? getState().speechRate;
-  if (opts.pitch) u.pitch = opts.pitch;
+  u.pitch = opts.pitch ?? (opts.voice === "m" ? 0.8 : 1);
   if (opts.onEnd) {
     u.onend = opts.onEnd;
     u.onerror = opts.onEnd;
@@ -34,6 +95,13 @@ export function speak(text: string, opts: { rate?: number; pitch?: number; onEnd
 }
 
 export function stopSpeaking() {
+  if (current) {
+    const a = current;
+    current = null;
+    a.onended = null;
+    a.onerror = null;
+    a.pause();
+  }
   if (typeof speechSynthesis !== "undefined") speechSynthesis.cancel();
 }
 

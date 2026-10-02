@@ -6,7 +6,7 @@ import { speak, speechRecognitionSupported, useItalianRecorder } from "../lib/sp
 import { gradeReadingAI, gradeReadingLocal, isAIAvailable, type ReadingResult } from "../lib/grading";
 
 /** Khung luyện đọc: nghe mẫu → ghi âm → chấm từng từ → AI nhận xét phát âm. */
-export function ReadingCoach({ text, onClose }: { text: string; onClose: () => void }) {
+export function ReadingCoach({ text, voice = "f", onClose }: { text: string; voice?: "f" | "m"; onClose: () => void }) {
   const lang = useStore((s) => s.lang);
   const rec = useItalianRecorder();
   const [result, setResult] = useState<ReadingResult | null>(null);
@@ -54,7 +54,7 @@ export function ReadingCoach({ text, onClose }: { text: string; onClose: () => v
       </div>
 
       <div className="coach-actions">
-        <button className="pill" onClick={() => speak(text)}><Icon name="volume" size={15} /> {t(lang, "listen")}</button>
+        <button className="pill" onClick={() => speak(text, { voice })}><Icon name="volume" size={15} /> {t(lang, "listen")}</button>
         {rec.recording ? (
           <button className="pill rec" onClick={rec.stop}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
         ) : (

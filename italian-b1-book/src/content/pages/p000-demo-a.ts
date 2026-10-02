@@ -22,7 +22,7 @@ const page: BookPage = {
       ],
     },
     { type: "heading", text: "1 · Un caffè con Giulia", tr: { vi: "Một ly cà phê với Giulia", en: "A coffee with Giulia" } },
-    { type: "image", scene: "cafe", caption: { vi: "Marco và Giulia gặp nhau ở quán bar.", en: "Marco and Giulia meet at the bar." } },
+    { type: "image", photo: "Italian espresso bar cappuccino counter", scene: "cafe", caption: { vi: "Marco và Giulia gặp nhau ở quán bar.", en: "Marco and Giulia meet at the bar." } },
     {
       type: "dialogue",
       lines: [

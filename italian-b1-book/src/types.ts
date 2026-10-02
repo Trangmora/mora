@@ -109,7 +109,20 @@ export type Block =
   | { type: "text"; it: string; tr?: L10n; title?: string; readAloud?: boolean }
   | { type: "dialogue"; title?: string; lines: { speaker: string; it: string; tr?: L10n }[] }
   | { type: "vocab"; title?: string; items: { it: string; tr: L10n; note?: string }[] }
-  | { type: "image"; scene?: SceneName; src?: string; caption?: L10n; alt?: string; float?: "left" | "right" }
+  | {
+      type: "image";
+      /** Ảnh thật tự tìm theo từ khoá (tiếng Anh cho kết quả tốt nhất), ví dụ "Italian espresso bar". */
+      photo?: string;
+      /** Chọn ảnh thứ mấy trong kết quả tìm (0 = ảnh đầu tiên) nếu ảnh đầu chưa hợp. */
+      photoIndex?: number;
+      /** Ảnh có sẵn: file trong public/images hoặc đường link ảnh. */
+      src?: string;
+      /** Tranh vẽ dự phòng khi không tải được ảnh. */
+      scene?: SceneName;
+      caption?: L10n;
+      alt?: string;
+      float?: "left" | "right";
+    }
   | {
       type: "grammar";
       title: string;

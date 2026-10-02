@@ -2164,3 +2164,52 @@ button.advice-card .advice-kicker {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------------- Ảnh chụp ---------------- */
+.photo-box {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(110deg, #efebe3 30%, #f7f4ee 50%, #efebe3 70%) 0 0 / 200% 100%;
+}
+.photo-box.loading {
+  animation: shimmer 1.4s linear infinite;
+}
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.photo-box.ok img {
+  opacity: 1;
+}
+.photo-box.missing {
+  display: grid;
+  place-items: center;
+  font: 13px var(--font-ui);
+  color: var(--ink-soft);
+}
+.illus .credit {
+  font-size: 11px;
+  opacity: 0.8;
+}
+.illus .credit a {
+  color: inherit;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-box.loading {
+    animation: none;
+  }
+}

@@ -4,6 +4,8 @@ import { useStore } from "../../lib/store";
 import { speak } from "../../lib/speech";
 import { Speakable } from "../Speakable";
 import { Scene } from "../illustrations/Scene";
+import { Photo } from "../Photo";
+import { speakerVoices, splitParagraphs } from "../../lib/voiceText";
 import { ExerciseBlock } from "./ExerciseBlock";
 import { AudioBlock } from "./AudioBlock";
 
@@ -41,7 +43,7 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
       return (
         <div className="reading">
           {block.title && <h3 className="reading-title">{block.title}</h3>}
-          {block.it.split(/\n\s*\n/).map((para, i, arr) => (
+          {splitParagraphs(block.it).map((para, i, arr) => (
             <Speakable key={i} it={para} translation={arr.length === 1 ? block.tr : undefined} className="para" />
           ))}
           {showTr && block.tr && block.it.split(/\n\s*\n/).length > 1 && (
@@ -50,17 +52,19 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
         </div>
       );
 
-    case "dialogue":
+    case "dialogue": {
+      const voiceOf = speakerVoices(block.lines.map((l) => l.speaker));
       return (
         <div className="dialogue">
           {block.title && <h3 className="reading-title">{block.title}</h3>}
           {block.lines.map((l, i) => (
-            <Speakable key={i} it={l.it} translation={l.tr} className="dl-line">
+            <Speakable key={i} it={l.it} translation={l.tr} voice={voiceOf(l.speaker)} className="dl-line">
               <b className="speaker">{l.speaker}:</b> {l.it}
             </Speakable>
           ))}
         </div>
       );
+    }
 
     case "vocab":
       return (
@@ -83,8 +87,14 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
     case "image":
       return (
         <figure className={`illus ${block.float ? `float-${block.float}` : ""}`}>
-          {block.src ? <img src={block.src} alt={block.alt ?? ""} /> : block.scene ? <Scene name={block.scene} /> : null}
-          {block.caption && <figcaption>{tr(lang, block.caption)}</figcaption>}
+          {block.src ? (
+            <img src={block.src} alt={block.alt ?? ""} loading="lazy" />
+          ) : block.photo ? (
+            <Photo query={block.photo} index={block.photoIndex} fallback={block.scene} caption={block.caption && tr(lang, block.caption)} />
+          ) : block.scene ? (
+            <Scene name={block.scene} />
+          ) : null}
+          {block.caption && !block.photo && <figcaption>{tr(lang, block.caption)}</figcaption>}
         </figure>
       );
 

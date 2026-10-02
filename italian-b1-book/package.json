@@ -6,7 +6,8 @@
     "dev": "tsx watch server/index.ts",
     "build": "vite build",
     "start": "NODE_ENV=production tsx server/index.ts",
-    "typecheck": "tsc --noEmit -p ."
+    "typecheck": "tsc --noEmit -p .",
+    "voices": "tsx scripts/voices.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

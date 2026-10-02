@@ -3,8 +3,9 @@ import { Icon } from "../Icon";
 import { t, tr } from "../../i18n";
 import type { L10n } from "../../types";
 import { useStore } from "../../lib/store";
-import { speak, stopSpeaking } from "../../lib/speech";
+import { hasNeuralVoice, speak, stopSpeaking } from "../../lib/speech";
 import { Speakable } from "../Speakable";
+import { parseTranscript as parseLines, speakerVoices } from "../../lib/voiceText";
 
 type Props = { block: { track?: string; title?: string; src?: string; transcript?: string; tr?: L10n } };
 
@@ -14,18 +15,6 @@ function fmt(sec: number) {
   if (!isFinite(sec)) return "0:00";
   const m = Math.floor(sec / 60);
   return `${m}:${String(Math.floor(sec % 60)).padStart(2, "0")}`;
-}
-
-/** Tách lời bài nghe thành từng câu, nhận diện "Tên: câu". */
-function parseLines(transcript: string) {
-  return transcript
-    .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean)
-    .map((l) => {
-      const m = l.match(/^([A-ZÀ-Ý][\p{L} .']{0,24}):\s*(.+)$/u);
-      return m ? { speaker: m[1], text: m[2] } : { speaker: "", text: l };
-    });
 }
 
 /** Bài nghe: phát file audio của sách, hoặc đọc lời bằng giọng Ý khi chưa có file. */
@@ -44,7 +33,7 @@ export function AudioBlock({ block }: Props) {
   const ttsRun = useRef(0);
 
   const lines = block.transcript ? parseLines(block.transcript) : [];
-  const speakers = [...new Set(lines.map((l) => l.speaker).filter(Boolean))];
+  const voiceOf = speakerVoices(lines.map((l) => l.speaker));
 
   useEffect(() => {
     if (audio.current) audio.current.playbackRate = speed;
@@ -68,10 +57,7 @@ export function AudioBlock({ block }: Props) {
         return;
       }
       setCurrent(i);
-      const idx = speakers.indexOf(lines[i].speaker);
-      // Mỗi người nói một cao độ giọng khác nhau cho dễ phân biệt.
-      const pitch = idx < 0 ? 1 : [1, 0.75, 1.25, 0.9][idx % 4];
-      speak(lines[i].text, { rate: 0.9 * speed, pitch, onEnd: () => setTimeout(() => step(i + 1), 350) });
+      speak(lines[i].text, { rate: 0.95 * speed, voice: voiceOf(lines[i].speaker), onEnd: () => setTimeout(() => step(i + 1), 350) });
     };
     step(from);
   }
@@ -129,7 +115,7 @@ export function AudioBlock({ block }: Props) {
         <button className={`mini ${loop ? "on" : ""}`} onClick={() => setLoop((v) => !v)} title={t(lang, "loop")}><Icon name="repeat" size={16} /></button>
       </div>
       {block.title && <div className="audio-title">{block.title}</div>}
-      {!block.src && <div className="audio-note">{t(lang, "ttsAudio")}</div>}
+      {!block.src && <div className="audio-note">{t(lang, hasNeuralVoice() ? "ttsNeural" : "ttsAudio")}</div>}
       {block.src && (
         <audio
           ref={audio}
@@ -150,7 +136,7 @@ export function AudioBlock({ block }: Props) {
       {textVisible && (
         <div className="audio-transcript">
           {lines.map((l, i) => (
-            <Speakable key={i} it={l.text} className={`dl-line ${i === current ? "now" : ""}`}>
+            <Speakable key={i} it={l.text} voice={voiceOf(l.speaker)} className={`dl-line ${i === current ? "now" : ""}`}>
               {l.speaker && <b className="speaker">{l.speaker}:</b>} {l.text}
             </Speakable>
           ))}

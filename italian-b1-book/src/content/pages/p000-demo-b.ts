@@ -9,7 +9,7 @@ const page: BookPage = {
   title: "Lettura, ascolto e produzione",
   blocks: [
     { type: "heading", text: "2 · Una cartolina da Firenze", tr: { vi: "Bưu thiếp từ Florence", en: "A postcard from Florence" } },
-    { type: "image", scene: "travel", float: "right", caption: { vi: "Chuyến đi Toscana", en: "A trip to Tuscany" } },
+    { type: "image", photo: "Florence Ponte Vecchio Arno", scene: "travel", float: "right", caption: { vi: "Chuyến đi Toscana", en: "A trip to Tuscany" } },
     {
       type: "text",
       readAloud: true,

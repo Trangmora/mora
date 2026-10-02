@@ -4,6 +4,7 @@ import { MistakesPanel } from "./components/MistakesPanel";
 import { ProgressPanel } from "./components/ProgressPanel";
 import { TopMenu } from "./components/TopMenu";
 import { checkAI } from "./lib/grading";
+import { loadVoices } from "./lib/speech";
 import { useStore } from "./lib/store";
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
 
   useEffect(() => {
     checkAI().then(setAiOnline);
+    loadVoices();
   }, []);
 
   useEffect(() => {

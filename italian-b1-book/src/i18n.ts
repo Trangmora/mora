@@ -64,7 +64,11 @@ const strings = {
   done: { vi: "đã làm", en: "done" },
   transcript: { vi: "Lời bài nghe", en: "Transcript" },
   hideTranscript: { vi: "Ẩn lời", en: "Hide transcript" },
-  ttsAudio: { vi: "Giọng đọc máy (chưa có file nghe của sách)", en: "Synthetic voice (no book audio file yet)" },
+  ttsAudio: {
+    vi: "Giọng máy của trình duyệt — thêm key giọng đọc AI vào .env để nghe giọng tự nhiên (hoặc gửi file nghe của sách)",
+    en: "Browser voice — add an AI voice key to .env for a natural voice (or add the book's audio file)",
+  },
+  ttsNeural: { vi: "Giọng đọc AI (chưa có file nghe của sách)", en: "AI voice (book audio file not added yet)" },
   speed: { vi: "Tốc độ", en: "Speed" },
   loop: { vi: "Lặp lại", en: "Repeat" },
   progressTitle: { vi: "Lộ trình & bảng điểm", en: "Learning path & scores" },
