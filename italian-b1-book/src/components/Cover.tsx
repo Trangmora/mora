@@ -1,5 +1,7 @@
 import { bookInfo, pages } from "../content/book";
-import { t } from "../i18n";
+import { t, tr } from "../i18n";
+import { coverQuip } from "../lib/humor";
+import { NonnaFace } from "./Nonna";
 import { useStore } from "../lib/store";
 
 export function Cover({ onOpen }: { onOpen: () => void }) {
@@ -26,6 +28,13 @@ export function Cover({ onOpen }: { onOpen: () => void }) {
             {t(lang, "openBook")}
             <span aria-hidden>→</span>
           </button>
+        </div>
+        <div className="cover-sticker">
+          <NonnaFace size={54} mood="wink" />
+          <span>
+            {coverQuip.it}
+            <small>{tr(lang, coverQuip.tr)}</small>
+          </span>
         </div>
         <p className="cover-count">
           {pages.length} {t(lang, "page").toLowerCase()} · {lang === "vi" ? "cập nhật mỗi ngày" : "updated daily"}

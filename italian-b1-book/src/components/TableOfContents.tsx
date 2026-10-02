@@ -31,7 +31,8 @@ export function pageLabel(p: BookPage) {
 export function TableOfContents({ part, leaves, goTo }: { part: number; leaves: Leaf[]; goTo: (i: number) => void }) {
   const lang = useStore((s) => s.lang);
   const results = useStore((s) => s.results);
-  const pages = leaves.flatMap((l) => (l.kind === "content" ? [l.page] : []));
+  // Mỗi trang sách chỉ một dòng, dù được chia thành nhiều khung.
+  const pages = leaves.flatMap((l) => (l.kind === "content" && l.sheet.part === 1 ? [l.page] : []));
   const all = rows(pages);
   const slice = all.slice(part * PER_TOC_PAGE, (part + 1) * PER_TOC_PAGE);
   const leafOf = (p: BookPage) => leaves.findIndex((l) => l.kind === "content" && l.page.id === p.id);

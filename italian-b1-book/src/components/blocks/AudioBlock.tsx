@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "../Icon";
+import { useMeasuring } from "../../lib/measure";
 import { t, tr } from "../../i18n";
 import type { L10n } from "../../types";
 import { useStore } from "../../lib/store";
@@ -39,11 +40,16 @@ export function AudioBlock({ block }: Props) {
     if (audio.current) audio.current.playbackRate = speed;
   }, [speed]);
 
-  // Dừng khi lật sang trang khác
-  useEffect(() => () => {
-    ttsRun.current++;
-    stopSpeaking();
-  }, []);
+  // Dừng khi lật sang trang khác (không áp dụng cho bản đo kích thước ẩn).
+  const measuring = useMeasuring();
+  useEffect(
+    () => () => {
+      if (measuring) return;
+      ttsRun.current++;
+      stopSpeaking();
+    },
+    [measuring],
+  );
 
   function playTTS(from = 0) {
     const run = ++ttsRun.current;

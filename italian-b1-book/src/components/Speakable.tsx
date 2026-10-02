@@ -1,4 +1,6 @@
 import { useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
+import { useMeasuring } from "../lib/measure";
 import { Icon } from "./Icon";
 import { t, tr } from "../i18n";
 import type { L10n } from "../types";
@@ -25,6 +27,7 @@ export function Speakable({
   const lang = useStore((s) => s.lang);
   const showTr = useStore((s) => s.showTranslation);
   const [coach, setCoach] = useState(false);
+  const measuring = useMeasuring();
 
   return (
     <Tag className={`speakable ${className ?? ""}`}>
@@ -34,7 +37,14 @@ export function Speakable({
         <button className="mini" title={t(lang, "practice")} onClick={() => setCoach((c) => !c)}><Icon name="mic" size={15} /></button>
       </span>
       {showTr && translation && <span className="translation">{tr(lang, translation)}</span>}
-      {coach && <ReadingCoach text={it} voice={voice} onClose={() => setCoach(false)} />}
+      {coach &&
+        !measuring &&
+        createPortal(
+          <div className="overlay" onClick={() => setCoach(false)}>
+            <ReadingCoach text={it} voice={voice} onClose={() => setCoach(false)} />
+          </div>,
+          document.body,
+        )}
     </Tag>
   );
 }

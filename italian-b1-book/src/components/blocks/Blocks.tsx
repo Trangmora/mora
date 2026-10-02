@@ -5,11 +5,25 @@ import { speak } from "../../lib/speech";
 import { Speakable } from "../Speakable";
 import { Scene } from "../illustrations/Scene";
 import { Photo } from "../Photo";
-import { speakerVoices, splitParagraphs } from "../../lib/voiceText";
-import { ExerciseBlock } from "./ExerciseBlock";
 import { AudioBlock } from "./AudioBlock";
 
-/** Vẽ một block nội dung theo đúng kiểu của nó. */
+/** Đoạn văn / hội thoại / bài nghe của trang — gửi kèm khi AI chấm bài có tham chiếu. */
+export function pageContext(page: BookPage) {
+  return page.blocks
+    .filter((b) => b.type === "text" || b.type === "dialogue" || b.type === "audio")
+    .map((b) =>
+      b.type === "text"
+        ? b.it
+        : b.type === "dialogue"
+          ? b.lines.map((l) => `${l.speaker}: ${l.it}`).join("\n")
+          : b.type === "audio"
+            ? `[Audio ${b.track ?? ""}]\n${b.transcript ?? ""}`
+            : "",
+    )
+    .join("\n\n");
+}
+
+/** Vẽ một block không cần chia nhỏ (tiêu đề, ảnh, ngữ pháp, mẹo, bài nghe). */
 export function BlockView({ block, page }: { block: Block; page: BookPage }) {
   const lang = useStore((s) => s.lang);
   const showTr = useStore((s) => s.showTranslation);
@@ -38,51 +52,6 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
         </H>
       );
     }
-
-    case "text":
-      return (
-        <div className="reading">
-          {block.title && <h3 className="reading-title">{block.title}</h3>}
-          {splitParagraphs(block.it).map((para, i, arr) => (
-            <Speakable key={i} it={para} translation={arr.length === 1 ? block.tr : undefined} className="para" />
-          ))}
-          {showTr && block.tr && block.it.split(/\n\s*\n/).length > 1 && (
-            <p className="translation">{tr(lang, block.tr)}</p>
-          )}
-        </div>
-      );
-
-    case "dialogue": {
-      const voiceOf = speakerVoices(block.lines.map((l) => l.speaker));
-      return (
-        <div className="dialogue">
-          {block.title && <h3 className="reading-title">{block.title}</h3>}
-          {block.lines.map((l, i) => (
-            <Speakable key={i} it={l.it} translation={l.tr} voice={voiceOf(l.speaker)} className="dl-line">
-              <b className="speaker">{l.speaker}:</b> {l.it}
-            </Speakable>
-          ))}
-        </div>
-      );
-    }
-
-    case "vocab":
-      return (
-        <div className="vocab">
-          {block.title && <h3 className="vocab-title">{block.title}</h3>}
-          <ul>
-            {block.items.map((v, i) => (
-              <li key={i}>
-                <button className="vocab-word" onClick={() => speak(v.it)} title={t(lang, "listen")}>
-                  {v.it}
-                </button>
-                <span className="vocab-tr">{tr(lang, v.tr)}</span>
-                {v.note && <span className="vocab-note">{v.note}</span>}
-              </li>
-            ))}
-          </ul>
-        </div>
-      );
 
     case "image":
       return (
@@ -140,23 +109,9 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
     case "audio":
       return <AudioBlock block={block} />;
 
-    case "exercise": {
-      // Tìm đoạn văn được bài tập tham chiếu để AI chấm có ngữ cảnh.
-      const context = block.ex.refText
-        ? page.blocks
-            .filter((b) => b.type === "text" || b.type === "dialogue" || b.type === "audio")
-            .map((b) =>
-              b.type === "text"
-                ? b.it
-                : b.type === "dialogue"
-                  ? b.lines.map((l) => `${l.speaker}: ${l.it}`).join("\n")
-                  : b.type === "audio"
-                    ? `[Audio ${b.track ?? ""}]\n${b.transcript ?? ""}`
-                    : "",
-            )
-            .join("\n\n")
-        : undefined;
-      return <ExerciseBlock ex={block.ex} page={page} context={context} />;
-    }
+    default:
+      // text, dialogue, vocab, exercise được chia nhỏ trong units.tsx
+      return null;
+
   }
 }

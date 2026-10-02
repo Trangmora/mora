@@ -5,6 +5,8 @@ Website học tiếng Ý trình độ B1, thiết kế như **một cuốn sách
 
 | Tính năng | Cách dùng |
 |---|---|
+| **Mỗi trang vừa một màn hình** | Không có thanh cuộn: nội dung dài tự chia sang trang kế tiếp như sách in (số trang hiện dạng `12 · 2/3`). Bật đáp án / bản dịch hay đổi cỡ cửa sổ thì trang tự chia lại, vẫn giữ đúng chỗ đang đọc. |
+| **Chút hài hước kiểu Ý** | *Nonna Pina* (bà nội Ý) phản ứng mỗi khi chấm bài — «Perfetto! 🤌» hay «Mamma mia!» — và chân mỗi trang có một mẩu *Lo sapevi?* về văn hoá Ý (cappuccino sau 11 giờ, dứa trên pizza…), kèm bản dịch. |
 | **Lật trang** | Nút ‹ › hai bên, phím ← →, hoặc vuốt trên điện thoại. Máy tính hiện 2 trang, điện thoại hiện 1 trang. |
 | **Mục lục (Indice)** | Menu ☰ *Mục lục*, bấm vào tên bài để lật đến trang đó. Có số bài đã làm ✎ 1/2. |
 | **Đáp án bên cạnh** | Bật ✎ *Hiện đáp án* → đáp án hiện bằng “bút đỏ” ngay cạnh từng câu. |

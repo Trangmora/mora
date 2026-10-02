@@ -1,4 +1,6 @@
 import { setState, useStore } from "../lib/store";
+import { notesQuip } from "../lib/humor";
+import { NonnaSays } from "./Nonna";
 
 /** Trang "Appunti" cuối sách: ghi chú riêng của bạn, tự lưu trong trình duyệt. */
 export function NotesPage() {
@@ -8,6 +10,7 @@ export function NotesPage() {
     <div className="notes-page">
       <h2 className="toc-title">Appunti</h2>
       <p className="toc-sub">{lang === "vi" ? "Ghi chú của tôi" : "My notes"}</p>
+      <NonnaSays quip={notesQuip} mood="wink" size={36} />
       <textarea
         className="lined notes-area"
         value={notes}

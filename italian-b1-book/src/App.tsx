@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Book, buildLeaves } from "./components/Book";
+import { useEffect, useRef, useState } from "react";
+import { Book, type BookApi } from "./components/Book";
 import { MistakesPanel } from "./components/MistakesPanel";
 import { ProgressPanel } from "./components/ProgressPanel";
 import { TopMenu } from "./components/TopMenu";
@@ -12,8 +12,7 @@ export function App() {
   const [aiOnline, setAiOnline] = useState<boolean | null>(null);
   const [mistakesOpen, setMistakesOpen] = useState(false);
   const [progressOpen, setProgressOpen] = useState(false);
-  const goTo = useRef<(leafIndex: number) => void>(() => {});
-  const leaves = useMemo(buildLeaves, []);
+  const book = useRef<BookApi | null>(null);
 
   useEffect(() => {
     checkAI().then(setAiOnline);
@@ -24,30 +23,19 @@ export function App() {
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const openPageById = (pageId: string) => {
-    const i = leaves.findIndex((l) => l.kind === "content" && l.page.id === pageId);
-    if (i >= 0) goTo.current(i);
-  };
-
-  const openPageByNumber = (n: number) => {
-    // Trang có số gần nhất ≤ n
-    let best = -1;
-    leaves.forEach((l, i) => {
-      if (l.kind === "content" && l.page.number <= n) best = i;
-    });
-    if (best >= 0) goTo.current(best);
-  };
+  const openPageById = (pageId: string) => book.current?.openPage(pageId);
+  const openPageByNumber = (n: number) => book.current?.openNumber(n);
 
   return (
     <div className="app">
       <TopMenu
-        onContents={() => goTo.current(1)}
+        onContents={() => book.current?.goTo(1)}
         onMistakes={() => setMistakesOpen(true)}
         onProgress={() => setProgressOpen(true)}
         onGoToPage={openPageByNumber}
         aiOnline={aiOnline}
       />
-      <Book goToRef={goTo} />
+      <Book apiRef={book} />
       {progressOpen && <ProgressPanel onClose={() => setProgressOpen(false)} onOpenPage={openPageById} />}
       {mistakesOpen && (
         <MistakesPanel

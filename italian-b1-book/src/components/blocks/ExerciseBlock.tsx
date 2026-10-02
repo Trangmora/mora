@@ -6,20 +6,72 @@ import type { BookPage, Exercise } from "../../types";
 import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
 import { blanksOf, gradeByKey, gradeWithAI, isAIAvailable, needsAI, SEP, toMistakes } from "../../lib/grading";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib/speech";
+import { reaction, thinkingQuip } from "../../lib/humor";
+import { useMeasuring } from "../../lib/measure";
+import { NonnaSays } from "../Nonna";
 
 const EMPTY: Record<string, string> = {};
 
-export function ExerciseBlock({ ex, page, context }: { ex: Exercise; page: BookPage; context?: string }) {
+/** Mảnh của một bài tập khi chia trang: đề bài, từng câu, hoặc phần nút chấm. */
+export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind: "whole" } | { kind: "foot" };
+
+/** Số câu có thể tách riêng sang trang khác (bài nối giữ nguyên một khối). */
+export function itemCount(ex: Exercise) {
+  return ex.kind === "match" ? 0 : ex.items.length;
+}
+
+function useExercise(ex: Exercise) {
+  const responses = useStore((s) => s.responses[ex.id] ?? EMPTY);
+  const result = useStore((s) => s.results[ex.id]);
+  const byId = new Map<string, ItemResult>((result?.items ?? []).map((i) => [i.id, i]));
+  const set = (itemId: string, v: string) => setResponse(ex.id, itemId, v);
+  return { responses, result, byId, set };
+}
+
+export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: BookPage; context?: string; part: ExPart }) {
   const lang = useStore((s) => s.lang);
   const showAnswers = useStore((s) => s.showAnswers);
   const showTr = useStore((s) => s.showTranslation);
-  const responses = useStore((s) => s.responses[ex.id] ?? EMPTY);
-  const result = useStore((s) => s.results[ex.id]);
+  const measuring = useMeasuring();
+  const { responses, byId, set } = useExercise(ex);
+
+  if (part.kind === "head") {
+    return (
+      <div className={`exercise kind-${ex.kind} ex-part-head`} id={measuring ? undefined : ex.id}>
+        <header className="ex-head">
+          {ex.number && <span className="ex-num">{ex.number}</span>}
+          <span className="ex-instr">{ex.instruction}</span>
+        </header>
+        {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
+        {ex.kind === "fill" && ex.wordBank && (
+          <div className="word-bank">
+            {ex.wordBank.map((w) => <span key={w}>{w}</span>)}
+          </div>
+        )}
+      </div>
+    );
+  }
+  if (part.kind === "foot") return <ExerciseFoot ex={ex} page={page} context={context} />;
+  return (
+    <div className={`exercise kind-${ex.kind} ex-part-body`}>
+      <Body
+        ex={ex}
+        only={part.kind === "item" ? part.index : undefined}
+        responses={responses}
+        set={set}
+        showAnswers={showAnswers}
+        results={byId}
+        radioPrefix={measuring ? "m-" : ""}
+      />
+    </div>
+  );
+}
+
+function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; context?: string }) {
+  const lang = useStore((s) => s.lang);
+  const { responses, result } = useExercise(ex);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const byId = new Map<string, ItemResult>((result?.items ?? []).map((i) => [i.id, i]));
-  const set = (itemId: string, v: string) => setResponse(ex.id, itemId, v);
 
   function checkByKey() {
     const r = gradeByKey(ex, responses, lang);
@@ -40,47 +92,51 @@ export function ExerciseBlock({ ex, page, context }: { ex: Exercise; page: BookP
   }
 
   const ai = isAIAvailable();
+  const scored = result && !(needsAI(ex) && result.by === "key");
 
   return (
-    <section className={`exercise kind-${ex.kind}`} id={ex.id}>
-      <header className="ex-head">
-        {ex.number && <span className="ex-num">{ex.number}</span>}
-        <span className="ex-instr">{ex.instruction}</span>
-      </header>
-      {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
-
-      <Body ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={byId} />
-
+    <div className="exercise ex-part-foot">
       <footer className="ex-foot">
         {!needsAI(ex) && (
           <button className="pill primary" onClick={checkByKey}><Icon name="check" size={15} /> {t(lang, "check")}</button>
         )}
         {ai && (
           <button className="pill ai" onClick={checkWithAI} disabled={loading}>
-            {loading ? t(lang, "thinking") : <><Icon name="sparkle" size={15} /> {t(lang, "aiCheck")}</>}
+            <Icon name="sparkle" size={15} /> {t(lang, "aiCheck")}
           </button>
         )}
         {(result || Object.keys(responses).length > 0) && (
           <button className="pill ghost" onClick={() => resetExercise(ex.id)}><Icon name="reset" size={14} /> {t(lang, "reset")}</button>
         )}
-        {result && !(needsAI(ex) && result.by === "key") && (
+        {scored && (
           <span className="score-badge" data-good={result.score >= 80}>
-            {t(lang, "score")}: {result.score}/100 {result.by === "ai" ? "· AI" : ""}
+            {result.score}/100{result.by === "ai" ? " · AI" : ""}
           </span>
         )}
       </footer>
+      {loading && <NonnaSays quip={thinkingQuip} mood="wink" size={34} />}
+      {!loading && scored && (
+        <NonnaSays
+          quip={reaction(result.score, result.at.length + ex.id.length + Number(result.at.slice(-3, -1)))}
+          mood={result.score >= 80 ? "happy" : result.score >= 50 ? "wink" : "shocked"}
+          size={34}
+        />
+      )}
       {needsAI(ex) && ai === false && <p className="warn small">{t(lang, "aiOffline")}</p>}
       {error && <p className="warn">{error}</p>}
       {result?.summary && <p className="ai-note">{result.summary}</p>}
       {result?.tips?.length ? (
         <ul className="ai-tips">{result.tips.map((x, i) => <li key={i}>{x}</li>)}</ul>
       ) : null}
-    </section>
+    </div>
   );
 }
 
 type BodyProps = {
   ex: Exercise;
+  /** Chỉ vẽ câu thứ `only` (khi bài bị chia sang nhiều trang). */
+  only?: number;
+  radioPrefix: string;
   responses: Record<string, string>;
   set: (itemId: string, v: string) => void;
   showAnswers: boolean;
@@ -109,20 +165,18 @@ function Margin({ show, answer, r }: { show: boolean; answer?: string; r?: ItemR
   );
 }
 
-function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
+function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: BodyProps) {
   const lang = useStore((s) => s.lang);
+  // Danh sách câu cần vẽ + thuộc tính start để giữ đúng a, b, c… khi tách trang.
+  const pick = <T,>(items: T[]) => (only === undefined ? items : items.slice(only, only + 1));
+  const start = (only ?? 0) + 1;
 
   switch (ex.kind) {
     case "fill":
       return (
         <>
-          {ex.wordBank && (
-            <div className="word-bank">
-              {ex.wordBank.map((w) => <span key={w}>{w}</span>)}
-            </div>
-          )}
-          <ol className="ex-items">
-            {ex.items.map((it) => {
+          <ol className="ex-items" start={start}>
+            {pick(ex.items).map((it) => {
               const parts = it.prompt.split("___");
               const n = blanksOf(it.prompt);
               const values = (responses[it.id] ?? "").split(SEP);
@@ -163,8 +217,8 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
 
     case "choice":
       return (
-        <ol className="ex-items">
-          {ex.items.map((it) => {
+        <ol className="ex-items" start={start}>
+          {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
               <li key={it.id} className="ex-item">
@@ -179,7 +233,7 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
                     >
                       <input
                         type="radio"
-                        name={`${ex.id}-${it.id}`}
+                        name={`${radioPrefix}${ex.id}-${it.id}`}
                         checked={responses[it.id] === String(k)}
                         onChange={() => set(it.id, String(k))}
                       />
@@ -196,8 +250,8 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
 
     case "truefalse":
       return (
-        <ol className="ex-items">
-          {ex.items.map((it) => {
+        <ol className="ex-items" start={start}>
+          {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
               <li key={it.id} className="ex-item tf">
@@ -210,7 +264,7 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
                       key={v}
                       className={`opt ${responses[it.id] === v ? "sel" : ""} ${showAnswers && String(it.answer) === v ? "is-answer" : ""}`}
                     >
-                      <input type="radio" name={`${ex.id}-${it.id}`} checked={responses[it.id] === v} onChange={() => set(it.id, v)} />
+                      <input type="radio" name={`${radioPrefix}${ex.id}-${it.id}`} checked={responses[it.id] === v} onChange={() => set(it.id, v)} />
                       {v === "true" ? "V" : "F"}
                     </label>
                   ))}
@@ -263,8 +317,8 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
 
     case "write":
       return (
-        <ol className="ex-items">
-          {ex.items.map((it) => {
+        <ol className="ex-items" start={start}>
+          {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
               <li key={it.id} className="ex-item">
@@ -297,8 +351,8 @@ function Body({ ex, responses, set, showAnswers, results }: BodyProps) {
 
     case "speak":
       return (
-        <ol className="ex-items">
-          {ex.items.map((it) => (
+        <ol className="ex-items" start={start}>
+          {pick(ex.items).map((it) => (
             <SpeakItem
               key={it.id}
               prompt={it.prompt}

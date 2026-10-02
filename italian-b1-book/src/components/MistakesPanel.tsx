@@ -7,6 +7,8 @@ import { getState, setState, useStore, type Mistake } from "../lib/store";
 import { speak } from "../lib/speech";
 import type { Exercise } from "../types";
 import { pageLabel } from "./TableOfContents";
+import { noMistakesQuip } from "../lib/humor";
+import { NonnaSays } from "./Nonna";
 
 function findExercise(id: string): Exercise | undefined {
   for (const p of pages) for (const b of p.blocks) if (b.type === "exercise" && b.ex.id === id) return b.ex;
@@ -27,7 +29,12 @@ export function MistakesPanel({ onClose, onOpenPage }: { onClose: () => void; on
           <h2>{t(lang, "mistakesTitle")}</h2>
           <button className="icon-btn" onClick={onClose} aria-label={t(lang, "close")}><Icon name="close" /></button>
         </div>
-        {mistakes.length === 0 && <p className="nb-empty">{t(lang, "noMistakes")}</p>}
+        {mistakes.length === 0 && (
+          <>
+            <NonnaSays quip={noMistakesQuip} mood="happy" />
+            <p className="nb-empty">{t(lang, "noMistakes")}</p>
+          </>
+        )}
         {[...byPage.entries()].map(([pageId, list]) => {
           const page = pages.find((p) => p.id === pageId);
           return (
