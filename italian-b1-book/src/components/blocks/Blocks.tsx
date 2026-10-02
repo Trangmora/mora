@@ -92,7 +92,8 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
       return (
         <aside className="grammar">
           <h3>
-            📐 {block.title}
+            <span className="eyebrow">Grammatica</span>
+            {block.title}
             {block.tr && <span className="translation inline"> — {tr(lang, block.tr)}</span>}
           </h3>
           {block.explain && <p>{tr(lang, block.explain)}</p>}
@@ -121,7 +122,7 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
     case "tip":
       return (
         <aside className="tip">
-          💡 {block.it && <b>{block.it} </b>}
+          {block.it && <b>{block.it} </b>}
           {tr(lang, block.tr)}
         </aside>
       );

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Icon } from "./Icon";
 import { t } from "../i18n";
-import { useStore } from "../lib/store";
+import { logAttempt, useStore } from "../lib/store";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../lib/speech";
 import { gradeReadingAI, gradeReadingLocal, isAIAvailable, type ReadingResult } from "../lib/grading";
 
@@ -14,6 +15,14 @@ export function ReadingCoach({ text, onClose }: { text: string; onClose: () => v
 
   const local = !rec.recording && rec.transcript ? gradeReadingLocal(text, rec.transcript) : null;
   const shown = result ?? local;
+
+  // Mỗi lần đọc xong được ghi vào lộ trình (kỹ năng Nói & phát âm).
+  useEffect(() => {
+    if (!rec.recording && rec.transcript) {
+      logAttempt({ at: new Date().toISOString(), skill: "speaking", score: gradeReadingLocal(text, rec.transcript).score });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rec.recording, rec.transcript]);
 
   async function askAI() {
     setLoading(true);
@@ -30,8 +39,8 @@ export function ReadingCoach({ text, onClose }: { text: string; onClose: () => v
   return (
     <div className="coach" onClick={(e) => e.stopPropagation()}>
       <div className="coach-head">
-        <span>🎙️ {t(lang, "pronunciation")}</span>
-        <button className="icon-btn" onClick={onClose} aria-label={t(lang, "close")}>✕</button>
+        <span><Icon name="mic" size={16} /> {t(lang, "pronunciation")}</span>
+        <button className="icon-btn" onClick={onClose} aria-label={t(lang, "close")}><Icon name="close" size={16} /></button>
       </div>
 
       <div className="coach-target">
@@ -45,17 +54,17 @@ export function ReadingCoach({ text, onClose }: { text: string; onClose: () => v
       </div>
 
       <div className="coach-actions">
-        <button className="pill" onClick={() => speak(text)}>🔊 {t(lang, "listen")}</button>
+        <button className="pill" onClick={() => speak(text)}><Icon name="volume" size={15} /> {t(lang, "listen")}</button>
         {rec.recording ? (
-          <button className="pill rec" onClick={rec.stop}>⏹ {t(lang, "stop")}</button>
+          <button className="pill rec" onClick={rec.stop}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
         ) : (
-          <button className="pill primary" onClick={() => { setResult(null); rec.start(); }}>🎙️ {t(lang, "record")}</button>
+          <button className="pill primary" onClick={() => { setResult(null); rec.start(); }}><Icon name="mic" size={15} /> {t(lang, "record")}</button>
         )}
         {rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
       </div>
 
       {!speechRecognitionSupported && <p className="warn">{t(lang, "noSpeech")}</p>}
-      {rec.error === "mic" && <p className="warn">🎤 Microphone?</p>}
+      {rec.error === "mic" && <p className="warn">Microphone?</p>}
 
       {rec.recording && (
         <p className="coach-live">
@@ -81,7 +90,7 @@ export function ReadingCoach({ text, onClose }: { text: string; onClose: () => v
           ) : null}
           {!result && isAIAvailable() && (
             <button className="pill ai" onClick={askAI} disabled={loading}>
-              {loading ? t(lang, "thinking") : `🤖 ${t(lang, "aiCheck")}`}
+              {loading ? t(lang, "thinking") : <><Icon name="sparkle" size={15} /> {t(lang, "aiCheck")}</>}
             </button>
           )}
           {error && <p className="warn">{error}</p>}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Icon } from "../Icon";
 import { t, tr } from "../../i18n";
 import type { L10n } from "../../types";
 import { useStore } from "../../lib/store";
@@ -102,10 +103,10 @@ export function AudioBlock({ block }: Props) {
   return (
     <div className="audio-block">
       <div className="audio-bar">
-        <span className="audio-track">🎧 {block.track ?? ""}</span>
-        <button className="audio-play" onClick={toggle} aria-label="play">{playing ? "❚❚" : "▶"}</button>
-        <button className="mini" onClick={() => seek(-5)} title="-5s">⏪</button>
-        <button className="mini" onClick={() => seek(5)} title="+5s">⏩</button>
+        <span className="audio-track">Traccia {block.track ?? ""}</span>
+        <button className="audio-play" onClick={toggle} aria-label="play"><Icon name={playing ? "pause" : "play"} size={18} /></button>
+        <button className="mini" onClick={() => seek(-5)} title="-5s"><Icon name="back" size={16} /></button>
+        <button className="mini" onClick={() => seek(5)} title="+5s"><Icon name="fwd" size={16} /></button>
         {block.src ? (
           <input
             className="audio-progress"
@@ -125,7 +126,7 @@ export function AudioBlock({ block }: Props) {
         <select value={speed} onChange={(e) => setSpeed(Number(e.target.value))} title={t(lang, "speed")}>
           {SPEEDS.map((s) => <option key={s} value={s}>{s}×</option>)}
         </select>
-        <button className={`mini ${loop ? "on" : ""}`} onClick={() => setLoop((v) => !v)} title={t(lang, "loop")}>🔁</button>
+        <button className={`mini ${loop ? "on" : ""}`} onClick={() => setLoop((v) => !v)} title={t(lang, "loop")}><Icon name="repeat" size={16} /></button>
       </div>
       {block.title && <div className="audio-title">{block.title}</div>}
       {!block.src && <div className="audio-note">{t(lang, "ttsAudio")}</div>}
@@ -143,7 +144,7 @@ export function AudioBlock({ block }: Props) {
       )}
       {lines.length > 0 && (
         <button className="pill ghost audio-toggle" onClick={() => setShowText((v) => !v)}>
-          📝 {textVisible ? t(lang, "hideTranscript") : t(lang, "transcript")}
+          <Icon name="text" size={14} /> {textVisible ? t(lang, "hideTranscript") : t(lang, "transcript")}
         </button>
       )}
       {textVisible && (

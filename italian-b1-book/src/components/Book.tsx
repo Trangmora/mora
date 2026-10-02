@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Icon } from "./Icon";
 import { pages } from "../content/book";
 import { t } from "../i18n";
 import { setState, useStore } from "../lib/store";
@@ -168,9 +169,9 @@ export function Book({ goToRef }: { goToRef: React.MutableRefObject<(leafIndex: 
 
   return (
     <div className="book-stage" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-      <button className="turn prev" onClick={() => go(-1)} disabled={atStart} aria-label={t(lang, "prev")}>‹</button>
+      <button className="turn prev" onClick={() => go(-1)} disabled={atStart} aria-label={t(lang, "prev")}><Icon name="left" size={26} /></button>
       {content}
-      <button className="turn next" onClick={() => go(1)} disabled={atEnd} aria-label={t(lang, "next")}>›</button>
+      <button className="turn next" onClick={() => go(1)} disabled={atEnd} aria-label={t(lang, "next")}><Icon name="right" size={26} /></button>
     </div>
   );
 }

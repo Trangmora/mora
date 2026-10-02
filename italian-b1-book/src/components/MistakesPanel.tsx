@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Icon } from "./Icon";
 import { pages } from "../content/book";
 import { t } from "../i18n";
 import { gradeWithAI, isAIAvailable } from "../lib/grading";
@@ -24,7 +25,7 @@ export function MistakesPanel({ onClose, onOpenPage }: { onClose: () => void; on
       <div className="notebook" onClick={(e) => e.stopPropagation()}>
         <div className="notebook-head">
           <h2>{t(lang, "mistakesTitle")}</h2>
-          <button className="icon-btn" onClick={onClose} aria-label={t(lang, "close")}>✕</button>
+          <button className="icon-btn" onClick={onClose} aria-label={t(lang, "close")}><Icon name="close" /></button>
         </div>
         {mistakes.length === 0 && <p className="nb-empty">{t(lang, "noMistakes")}</p>}
         {[...byPage.entries()].map(([pageId, list]) => {
@@ -40,7 +41,7 @@ export function MistakesPanel({ onClose, onOpenPage }: { onClose: () => void; on
           );
         })}
         {mistakes.length > 0 && (
-          <button className="pill ghost" onClick={() => setState({ mistakes: [] })}>🗑 {t(lang, "clearMistakes")}</button>
+          <button className="pill ghost" onClick={() => setState({ mistakes: [] })}><Icon name="trash" size={14} /> {t(lang, "clearMistakes")}</button>
         )}
       </div>
     </div>
@@ -89,7 +90,7 @@ function MistakeRow({ m }: { m: Mistake }) {
         <span className="nb-wrong">✗ {m.userAnswer}</span>
         {m.correctAnswer && (
           <span className="nb-right">
-            ✓ {m.correctAnswer} <button className="mini" onClick={() => speak(m.correctAnswer!)}>🔊</button>
+            ✓ {m.correctAnswer} <button className="mini" onClick={() => speak(m.correctAnswer!)}><Icon name="volume" size={14} /></button>
           </span>
         )}
       </p>
@@ -100,7 +101,7 @@ function MistakeRow({ m }: { m: Mistake }) {
       ) : (
         isAIAvailable() && (
           <button className="pill ai" onClick={explain} disabled={loading}>
-            {loading ? t(lang, "thinking") : `🤖 ${t(lang, "explanation")}`}
+            {loading ? t(lang, "thinking") : <><Icon name="sparkle" size={15} /> {t(lang, "explanation")}</>}
           </button>
         )
       )}

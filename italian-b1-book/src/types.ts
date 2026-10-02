@@ -5,6 +5,9 @@
 
 export type Lang = "vi" | "en";
 
+/** Kỹ năng được chấm điểm trong lộ trình học. */
+export type Skill = "listening" | "writing" | "grammar" | "reading" | "speaking";
+
 /** Bản dịch sang tiếng Việt và tiếng Anh. */
 export type L10n = { vi: string; en: string };
 
@@ -94,6 +97,8 @@ export type Exercise = ExerciseBody & {
   tr?: L10n;
   /** Gắn với một bài đọc / nghe trong trang (nếu có). */
   refText?: string;
+  /** Kỹ năng của bài (nếu bỏ trống sẽ tự đoán: nghe sau bài audio, viết, nói, đọc, còn lại là ngữ pháp). */
+  skill?: Skill;
 };
 
 // ---------- Block nội dung ----------

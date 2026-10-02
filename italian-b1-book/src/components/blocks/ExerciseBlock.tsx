@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Icon } from "../Icon";
+import { skillOf } from "../../lib/skills";
 import { t, tr } from "../../i18n";
 import type { BookPage, Exercise } from "../../types";
 import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
@@ -21,7 +23,7 @@ export function ExerciseBlock({ ex, page, context }: { ex: Exercise; page: BookP
 
   function checkByKey() {
     const r = gradeByKey(ex, responses, lang);
-    saveResult(ex.id, r, toMistakes(page, ex, r));
+    saveResult(ex.id, r, toMistakes(page, ex, r), { skill: skillOf(ex, page), pageId: page.id, counts: !needsAI(ex) });
   }
 
   async function checkWithAI() {
@@ -29,7 +31,7 @@ export function ExerciseBlock({ ex, page, context }: { ex: Exercise; page: BookP
     setError(null);
     try {
       const r = await gradeWithAI(ex, responses, lang, context);
-      saveResult(ex.id, r, toMistakes(page, ex, r));
+      saveResult(ex.id, r, toMistakes(page, ex, r), { skill: skillOf(ex, page), pageId: page.id, counts: true });
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -51,15 +53,15 @@ export function ExerciseBlock({ ex, page, context }: { ex: Exercise; page: BookP
 
       <footer className="ex-foot">
         {!needsAI(ex) && (
-          <button className="pill primary" onClick={checkByKey}>✓ {t(lang, "check")}</button>
+          <button className="pill primary" onClick={checkByKey}><Icon name="check" size={15} /> {t(lang, "check")}</button>
         )}
         {ai && (
           <button className="pill ai" onClick={checkWithAI} disabled={loading}>
-            {loading ? t(lang, "thinking") : `🤖 ${t(lang, "aiCheck")}`}
+            {loading ? t(lang, "thinking") : <><Icon name="sparkle" size={15} /> {t(lang, "aiCheck")}</>}
           </button>
         )}
         {(result || Object.keys(responses).length > 0) && (
-          <button className="pill ghost" onClick={() => resetExercise(ex.id)}>↺ {t(lang, "reset")}</button>
+          <button className="pill ghost" onClick={() => resetExercise(ex.id)}><Icon name="reset" size={14} /> {t(lang, "reset")}</button>
         )}
         {result && !(needsAI(ex) && result.by === "key") && (
           <span className="score-badge" data-good={result.score >= 80}>
@@ -333,13 +335,13 @@ function SpeakItem(props: {
   return (
     <li className="ex-item speak-item">
       <span className="line">
-        🗣️ {props.prompt} <Mark r={r} />
+        {props.prompt} <Mark r={r} />
       </span>
       <span className="coach-actions">
         {rec.recording ? (
-          <button className="pill rec" onClick={() => { rec.stop(); }}>⏹ {t(lang, "stop")}</button>
+          <button className="pill rec" onClick={() => rec.stop()}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
         ) : (
-          <button className="pill primary" onClick={() => rec.start()}>🎙️ {t(lang, "record")}</button>
+          <button className="pill primary" onClick={() => rec.start()}><Icon name="mic" size={15} /> {t(lang, "record")}</button>
         )}
         {rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
       </span>
@@ -360,7 +362,7 @@ function SpeakItem(props: {
         <span className="margin-note">
           <span className="pen">
             {t(lang, "corrected")}: {r.correctAnswer}{" "}
-            <button className="mini" onClick={() => speak(r.correctAnswer!)}>🔊</button>
+            <button className="mini" onClick={() => speak(r.correctAnswer!)}><Icon name="volume" size={14} /></button>
           </span>
           {r.explanation && <span className="why">{r.explanation}</span>}
         </span>
@@ -368,7 +370,7 @@ function SpeakItem(props: {
       {props.showAnswers && props.sample && (
         <span className="margin-note">
           <span className="pen">
-            {t(lang, "sample")}: {props.sample} <button className="mini" onClick={() => speak(props.sample!)}>🔊</button>
+            {t(lang, "sample")}: {props.sample} <button className="mini" onClick={() => speak(props.sample!)}><Icon name="volume" size={14} /></button>
           </span>
         </span>
       )}

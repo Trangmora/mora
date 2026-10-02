@@ -67,6 +67,8 @@ const strings = {
   ttsAudio: { vi: "Giọng đọc máy (chưa có file nghe của sách)", en: "Synthetic voice (no book audio file yet)" },
   speed: { vi: "Tốc độ", en: "Speed" },
   loop: { vi: "Lặp lại", en: "Repeat" },
+  progressTitle: { vi: "Lộ trình & bảng điểm", en: "Learning path & scores" },
+  path: { vi: "Lộ trình", en: "My path" },
   pick: { vi: "— chọn —", en: "— choose —" },
 } satisfies Record<string, L10n>;
 

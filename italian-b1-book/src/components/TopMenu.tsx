@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { pages } from "../content/book";
+import { Icon } from "./Icon";
+import { allExercises, isDone } from "../lib/skills";
 import { t } from "../i18n";
 import { setState, useStore } from "../lib/store";
 import type { Lang } from "../types";
@@ -7,11 +8,13 @@ import type { Lang } from "../types";
 export function TopMenu({
   onContents,
   onMistakes,
+  onProgress,
   onGoToPage,
   aiOnline,
 }: {
   onContents: () => void;
   onMistakes: () => void;
+  onProgress: () => void;
   onGoToPage: (pageNumber: number) => void;
   aiOnline: boolean | null;
 }) {
@@ -21,21 +24,22 @@ export function TopMenu({
   const rate = useStore((s) => s.speechRate);
   const mistakes = useStore((s) => s.mistakes.length);
   const results = useStore((s) => s.results);
+  const me = useStore((s) => s.users.find((u) => u.id === s.currentUser)?.name ?? "?");
   const [jump, setJump] = useState("");
   const [settings, setSettings] = useState(false);
 
-  const allEx = pages.flatMap((p) => p.blocks.flatMap((b) => (b.type === "exercise" ? [b.ex.id] : [])));
-  const done = allEx.filter((id) => results[id]).length;
+  const allEx = allExercises;
+  const done = allExercises.filter((e) => isDone(e.ex, results[e.ex.id])).length;
 
   return (
     <nav className="topmenu">
-      <div className="brand">📖 {t(lang, "bookTitle")}</div>
+      <div className="brand"><span className="brand-mark"><Icon name="book" size={16} /></span>{t(lang, "bookTitle")}</div>
 
       <div className="menu-items">
-        <button className="menu-btn" onClick={onContents}>☰ {t(lang, "contents")}</button>
+        <button className="menu-btn" onClick={onContents}><Icon name="menu" /> <span className="lbl">{t(lang, "contents")}</span></button>
 
         <label className="menu-select">
-          🌐
+          <Icon name="globe" />
           <select value={lang} onChange={(e) => setState({ lang: e.target.value as Lang })} aria-label={t(lang, "language")}>
             <option value="vi">Tiếng Việt – Italiano</option>
             <option value="en">English – Italiano</option>
@@ -43,20 +47,22 @@ export function TopMenu({
         </label>
 
         <button className={`menu-btn toggle ${showAnswers ? "on" : ""}`} onClick={() => setState({ showAnswers: !showAnswers })}>
-          ✎ {showAnswers ? t(lang, "hideAnswers") : t(lang, "showAnswers")}
+          <Icon name="key" /> <span className="lbl">{showAnswers ? t(lang, "hideAnswers") : t(lang, "showAnswers")}</span>
         </button>
 
         <button className={`menu-btn toggle ${showTr ? "on" : ""}`} onClick={() => setState({ showTranslation: !showTr })}>
-          ⇄ {t(lang, "showTranslation")}
+          <Icon name="translate" /> <span className="lbl">{t(lang, "showTranslation")}</span>
         </button>
 
         <button className="menu-btn" onClick={onMistakes}>
-          ✗ {t(lang, "mistakes")} {mistakes > 0 && <span className="badge">{mistakes}</span>}
+          <Icon name="alert" /> <span className="lbl">{t(lang, "mistakes")}</span> {mistakes > 0 && <span className="badge">{mistakes}</span>}
         </button>
 
-        <span className="menu-progress" title={t(lang, "progress")}>
-          ★ {done}/{allEx.length}
-        </span>
+        <button className="menu-btn path-btn" onClick={onProgress} title={t(lang, "progressTitle")}>
+          <span className="avatar mini-avatar">{me.slice(0, 1).toUpperCase()}</span>
+          <span className="lbl">{t(lang, "path")}</span>
+          <span className="menu-progress-num">{done}/{allEx.length}</span>
+        </button>
 
         <form
           className="menu-jump"
@@ -71,11 +77,11 @@ export function TopMenu({
 
         <div className="menu-settings">
           <button className="menu-btn" onClick={() => setSettings((v) => !v)} aria-label={t(lang, "settings")}>
-            ⚙ <span className={`ai-dot ${aiOnline ? "on" : "off"}`} />
+            <Icon name="settings" /> <span className={`ai-dot ${aiOnline ? "on" : "off"}`} />
           </button>
           {settings && (
             <div className="popover">
-              <p className={aiOnline ? "ok-text" : "warn small"}>{aiOnline ? `🤖 ${t(lang, "aiOnline")}` : t(lang, "aiOffline")}</p>
+              <p className={aiOnline ? "ok-text" : "warn small"}>{aiOnline ? t(lang, "aiOnline") : t(lang, "aiOffline")}</p>
               <label>
                 {t(lang, "speechRate")}: {rate.toFixed(2)}×
                 <input type="range" min={0.5} max={1.2} step={0.05} value={rate} onChange={(e) => setState({ speechRate: Number(e.target.value) })} />

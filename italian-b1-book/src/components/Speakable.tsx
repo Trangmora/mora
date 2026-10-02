@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import { Icon } from "./Icon";
 import { t, tr } from "../i18n";
 import type { L10n } from "../types";
 import { useStore } from "../lib/store";
@@ -27,8 +28,8 @@ export function Speakable({
     <Tag className={`speakable ${className ?? ""}`}>
       <span className="it">{children ?? it}</span>
       <span className="sp-tools">
-        <button className="mini" title={t(lang, "listen")} onClick={() => speak(it)}>🔊</button>
-        <button className="mini" title={t(lang, "practice")} onClick={() => setCoach((c) => !c)}>🎙️</button>
+        <button className="mini" title={t(lang, "listen")} onClick={() => speak(it)}><Icon name="volume" size={15} /></button>
+        <button className="mini" title={t(lang, "practice")} onClick={() => setCoach((c) => !c)}><Icon name="mic" size={15} /></button>
       </span>
       {showTr && translation && <span className="translation">{tr(lang, translation)}</span>}
       {coach && <ReadingCoach text={it} onClose={() => setCoach(false)} />}

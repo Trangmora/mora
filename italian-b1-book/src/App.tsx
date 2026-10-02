@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Book, buildLeaves } from "./components/Book";
 import { MistakesPanel } from "./components/MistakesPanel";
+import { ProgressPanel } from "./components/ProgressPanel";
 import { TopMenu } from "./components/TopMenu";
 import { checkAI } from "./lib/grading";
 import { useStore } from "./lib/store";
@@ -9,6 +10,7 @@ export function App() {
   const lang = useStore((s) => s.lang);
   const [aiOnline, setAiOnline] = useState<boolean | null>(null);
   const [mistakesOpen, setMistakesOpen] = useState(false);
+  const [progressOpen, setProgressOpen] = useState(false);
   const goTo = useRef<(leafIndex: number) => void>(() => {});
   const leaves = useMemo(buildLeaves, []);
 
@@ -39,10 +41,12 @@ export function App() {
       <TopMenu
         onContents={() => goTo.current(1)}
         onMistakes={() => setMistakesOpen(true)}
+        onProgress={() => setProgressOpen(true)}
         onGoToPage={openPageByNumber}
         aiOnline={aiOnline}
       />
       <Book goToRef={goTo} />
+      {progressOpen && <ProgressPanel onClose={() => setProgressOpen(false)} onOpenPage={openPageById} />}
       {mistakesOpen && (
         <MistakesPanel
           onClose={() => setMistakesOpen(false)}

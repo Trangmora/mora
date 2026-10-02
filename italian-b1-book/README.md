@@ -17,6 +17,8 @@ Website học tiếng Ý trình độ B1, thiết kế như **một cuốn sách
 | **Bài nói** | Ghi âm câu trả lời → chuyển thành chữ (sửa được) → AI chấm ngữ pháp, từ vựng, nội dung và đưa câu sửa. |
 | **Sổ lỗi — “tôi sai ở đâu”** | ✗ *Lỗi của tôi*: tổng hợp mọi câu sai, đáp án đúng và giải thích; bấm 🤖 để AI giải thích câu chưa có lời giải. |
 | **Hình minh hoạ** | Tranh SVG sinh động có sẵn (quán bar, nhà ga, chợ, thành phố…) hoặc ảnh thật đặt trong `public/images`. |
+| **Lộ trình & bảng điểm** | Nút *Lộ trình* trên menu: điểm trung bình, số trang đã học, chuỗi ngày học; điểm và đường tiến bộ theo từng kỹ năng **Nghe · Viết · Ngữ pháp** (cùng Đọc hiểu, Nói & phát âm); lộ trình từng trang (xong / đang học / chưa học); gợi ý bài tiếp theo, kỹ năng cần ôn, bài điểm thấp nên làm lại. |
+| **Nhiều người học** | Mỗi người một hồ sơ riêng (tiến độ, câu trả lời, sổ lỗi, ghi chú, lịch sử điểm). Thêm / đổi tên / chuyển người học ngay trong bảng *Lộ trình*. |
 | **Ghi chú** | Trang *Appunti* cuối sách để ghi chép. Tiến độ, câu trả lời, ghi chú tự lưu trong trình duyệt. |
 
 ## Chạy trên máy
@@ -82,6 +84,13 @@ Các loại nội dung (xem [`src/types.ts`](src/types.ts)):
 - `image` — tranh minh hoạ (`scene: "cafe" | "station" | "market" | "city" | "home" | "office" | "travel" | "friends" | "food" | "weather"`) hoặc ảnh `src: "/images/..."`
 - `exercise` với các dạng: `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
   `match` (nối), `write` (viết), `speak` (nói)
+
+Mỗi bài tập được xếp vào một kỹ năng để tính điểm lộ trình: tự đoán theo dạng bài (`write` → Viết,
+`speak` → Nói, bài ngay sau `audio` → Nghe, bài gắn với bài đọc → Đọc hiểu, còn lại → Ngữ pháp),
+hoặc ghi rõ bằng `skill: "listening" | "writing" | "grammar" | "reading" | "speaking"`.
+
+> Hồ sơ và điểm được lưu trong trình duyệt của máy đang dùng. Muốn đồng bộ giữa nhiều máy thì cần thêm
+> tài khoản đăng nhập và cơ sở dữ liệu trên server (có thể làm ở bước sau).
 
 Hai trang `p000-demo-*.ts` chỉ là trang mẫu để xem thử, sẽ được xoá khi có trang thật đầu tiên.
 
