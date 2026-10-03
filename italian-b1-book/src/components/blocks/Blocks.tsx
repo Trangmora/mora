@@ -7,10 +7,11 @@ import { Scene } from "../illustrations/Scene";
 import { Photo } from "../Photo";
 import { AudioBlock } from "./AudioBlock";
 import { Theory } from "./Theory";
+import { flatBlocks } from "../../lib/skills";
 
 /** Đoạn văn / hội thoại / bài nghe của trang — gửi kèm khi AI chấm bài có tham chiếu. */
 export function pageContext(page: BookPage) {
-  return page.blocks
+  return flatBlocks(page.blocks)
     .filter((b) => b.type === "text" || b.type === "dialogue" || b.type === "audio")
     .map((b) =>
       b.type === "text"

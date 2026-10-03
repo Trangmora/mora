@@ -1,3 +1,4 @@
+import { flatBlocks } from "../lib/skills";
 import { useState } from "react";
 import { Icon } from "./Icon";
 import { pages } from "../content/book";
@@ -11,7 +12,7 @@ import { noMistakesQuip } from "../lib/humor";
 import { NonnaSays } from "./Nonna";
 
 function findExercise(id: string): Exercise | undefined {
-  for (const p of pages) for (const b of p.blocks) if (b.type === "exercise" && b.ex.id === id) return b.ex;
+  for (const p of pages) for (const b of flatBlocks(p.blocks)) if (b.type === "exercise" && b.ex.id === id) return b.ex;
 }
 
 /** Sổ lỗi: tổng hợp mọi câu sai kèm giải thích; có thể nhờ AI giải thích câu chưa có lời giải thích. */

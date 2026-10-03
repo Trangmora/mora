@@ -1,5 +1,5 @@
 import { pages } from "../content/book";
-import type { BookPage, Exercise, L10n, Lang, Skill } from "../types";
+import type { Block, BookPage, Exercise, L10n, Lang, Skill } from "../types";
 import type { Attempt, ExerciseResult } from "./store";
 import { needsAI } from "./grading";
 
@@ -17,9 +17,10 @@ export function skillOf(ex: Exercise, page: BookPage): Skill {
   if (ex.kind === "speak") return "speaking";
   if (ex.kind === "write") return "writing";
   if (ex.refText === "audio") return "listening";
-  const idx = page.blocks.findIndex((b) => b.type === "exercise" && b.ex.id === ex.id);
+  const blocks = flatBlocks(page.blocks);
+  const idx = blocks.findIndex((b) => b.type === "exercise" && b.ex.id === ex.id);
   for (let i = idx - 1; i >= 0; i--) {
-    const b = page.blocks[i];
+    const b = blocks[i];
     if (b.type === "exercise" || b.type === "heading" || b.type === "image") continue;
     if (b.type === "audio") return "listening";
     break;
@@ -29,8 +30,13 @@ export function skillOf(ex: Exercise, page: BookPage): Skill {
 
 export type ExerciseRef = { ex: Exercise; page: BookPage; skill: Skill };
 
+/** Mọi block của trang, kể cả block nằm trong khối chia cột. */
+export function flatBlocks(blocks: Block[]): Block[] {
+  return blocks.flatMap((b) => (b.type === "columns" ? flatBlocks(b.cols.flat()) : [b]));
+}
+
 export const allExercises: ExerciseRef[] = pages.flatMap((page) =>
-  page.blocks.flatMap((b) => (b.type === "exercise" ? [{ ex: b.ex, page, skill: skillOf(b.ex, page) }] : [])),
+  flatBlocks(page.blocks).flatMap((b) => (b.type === "exercise" ? [{ ex: b.ex, page, skill: skillOf(b.ex, page) }] : [])),
 );
 
 /** Bài viết/nói chỉ tính là đã làm khi AI đã chấm. */

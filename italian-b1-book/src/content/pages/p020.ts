@@ -52,7 +52,7 @@ const page: BookPage = {
           },
         ],
         [
-          { type: "image", src: "images/u1/svg/p20-studenti.svg", alt: "Un gruppo di studenti ride insieme" },
+          { type: "photo", src: "images/u1/p20-studenti.jpg", alt: "Un gruppo di studenti ride insieme" },
           {
             type: "text",
             it: "e le aziende italiane o per fare carriera o per trovare un lavoro in Italia; di meno sono quelli che studiano l'italiano perché si occupano di traduzione e di insegnamento. Vediamo nel grafico le percentuali:",
@@ -97,29 +97,40 @@ const page: BookPage = {
       },
     },
     {
-      type: "exercise",
-      ex: {
-        id: "p020-ex2",
-        number: "2",
-        icons: ["look"],
-        kind: "speak",
-        skill: "speaking",
-        instruction: "Osserviamo l'immagine.",
-        subtitle: "Vorrei studiare l'italiano!",
-        tr: {
-          vi: "Quan sát bức tranh: «Tôi muốn học tiếng Ý!» — Bạn hãy trả lời câu hỏi của thầy giáo.",
-          en: "Look at the picture: “I'd like to study Italian!” — Answer the teacher's question.",
-        },
-        items: [
-          {
-            id: "a",
-            prompt: "«Perché vuoi studiare l'italiano?»",
-            sample: "Perché amo la cultura italiana. Mi piacciono anche la cucina, la moda e la musica italiana, e un giorno vorrei lavorare in Italia.",
-          },
+      type: "columns",
+      widths: [2, 3],
+      align: "end",
+      cols: [
+        [
+            {
+              type: "exercise",
+              ex: {
+                id: "p020-ex2",
+                number: "2",
+                icons: ["look"],
+                kind: "speak",
+                skill: "speaking",
+                instruction: "Osserviamo l'immagine.",
+                subtitle: "Vorrei studiare l'italiano!",
+                tr: {
+                  vi: "Quan sát bức tranh: «Tôi muốn học tiếng Ý!» — Bạn hãy trả lời câu hỏi của thầy giáo.",
+                  en: "Look at the picture: “I'd like to study Italian!” — Answer the teacher's question.",
+                },
+                items: [
+                  {
+                    id: "a",
+                    prompt: "«Perché vuoi studiare l'italiano?»",
+                    sample: "Perché amo la cultura italiana. Mi piacciono anche la cucina, la moda e la musica italiana, e un giorno vorrei lavorare in Italia.",
+                  },
+                ],
+              },
+            }
         ],
-      },
+        [
+            { type: "photo", src: "images/u1/p20-vorrei.jpg", alt: "Il professore chiede: «Perché vuoi studiare l'italiano?» La ragazza risponde: «Perché amo la cultura italiana.»" }
+        ],
+      ],
     },
-    { type: "image", src: "images/u1/svg/p20-vorrei.svg", alt: "Il professore chiede: «Perché vuoi studiare l'italiano?» La ragazza risponde: «Perché amo la cultura italiana.»" },
   ],
 };
 

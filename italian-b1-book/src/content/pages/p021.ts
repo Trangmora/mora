@@ -37,7 +37,7 @@ const page: BookPage = {
             it: "– Nasce a Roma il 7 marzo 1908.\n– Muore il 26 settembre 1973.\n– Chi è? È una delle più grandi attrici nella storia del cinema italiano.",
           },
         ],
-        [{ type: "image", src: "images/u1/svg/p21-anna.svg", alt: "Anna Magnani" }],
+        [{ type: "photo", src: "images/u1/p21-anna.jpg", alt: "Anna Magnani" }],
       ],
     },
     {
@@ -48,7 +48,16 @@ const page: BookPage = {
       type: "columns",
       widths: [1, 1],
       cols: [
-        [{ type: "image", src: "images/u1/svg/p21-film.svg", alt: "Roma città aperta (1945) di Roberto Rossellini" }],
+        [
+          {
+            type: "collage",
+            height: 56,
+            items: [
+              { src: "images/u1/p21-urlo.jpg", alt: "Anna Magnani grida in una scena drammatica", x: 0, y: 0, w: 44.5 },
+              { src: "images/u1/p21-poltrona.jpg", alt: "Anna Magnani seduta in poltrona con un abito scuro", x: 45.7, y: 0, w: 54.3 },
+            ],
+          },
+        ],
         [
           {
             type: "text",
@@ -71,9 +80,9 @@ const page: BookPage = {
           en: "Look and match the pictures to the titles of Anna Magnani's films.",
         },
         left: [
-          { id: "1", text: "Una donna con una rosa tatuata.", image: "images/u1/svg/p21-rosa.svg" },
-          { id: "2", text: "Una bella ragazza bionda, come una stella del cinema.", image: "images/u1/svg/p21-stella.svg" },
-          { id: "3", text: "Il panorama di Roma con la cupola di San Pietro.", image: "images/u1/svg/p21-roma.svg" },
+          { id: "1", text: "Una donna con una rosa tatuata.", image: "images/u1/p21-b1.jpg" },
+          { id: "2", text: "Una bella ragazza bionda, come una stella del cinema.", image: "images/u1/p21-b2.jpg" },
+          { id: "3", text: "Il panorama di Roma con la cupola di San Pietro.", image: "images/u1/p21-b3.jpg" },
         ],
         right: [
           { id: "a", text: "Bellissima." },
