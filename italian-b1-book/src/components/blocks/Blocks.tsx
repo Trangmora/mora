@@ -6,6 +6,7 @@ import { Speakable } from "../Speakable";
 import { Scene } from "../illustrations/Scene";
 import { Photo } from "../Photo";
 import { AudioBlock } from "./AudioBlock";
+import { Theory } from "./Theory";
 
 /** Đoạn văn / hội thoại / bài nghe của trang — gửi kèm khi AI chấm bài có tham chiếu. */
 export function pageContext(page: BookPage) {
@@ -156,6 +157,9 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
 
     case "audio":
       return <AudioBlock block={block} />;
+
+    case "theory":
+      return <Theory text={block.text} note={block.tr} />;
 
     default:
       // text, dialogue, vocab, exercise được chia nhỏ trong units.tsx

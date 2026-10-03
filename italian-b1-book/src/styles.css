@@ -2419,7 +2419,7 @@ button.advice-card .advice-kicker {
 }
 .side-tab b {
   writing-mode: vertical-rl;
-  background: var(--book-blue);
+  background: var(--tab, var(--book-blue));
   color: white;
   padding: 18px 8px 12px;
   font: 800 26px var(--book-sans);
@@ -3965,4 +3965,164 @@ textarea.form-input {
   background: #2a55a3;
   border-color: #2a55a3;
   color: white;
+}
+
+/* Bảng chép chính tả (trang 12): ô đỏ / xanh dương, khung chữ để gõ từ nghe được. */
+.board.palette-red {
+  --tone-a: #e03a3e;
+  --tone-a-soft: white;
+  --tone-b: #4d6fb8;
+  --tone-b-soft: white;
+}
+.board.palette-red .board-total {
+  color: white;
+}
+.board.palette-red .board-cmd {
+  border: 2px solid var(--tone-a);
+  margin: 3px -1px -1px;
+}
+.board.palette-red .tone-b .board-cmd {
+  border-color: var(--tone-b);
+}
+.board-cmd.pattern {
+  font: 600 14px/1 "Courier New", monospace;
+  letter-spacing: 0.04em;
+  color: #333;
+}
+.board-cmd.pattern input {
+  width: 100%;
+  min-width: 0;
+  padding: 3px 2px;
+  border: none;
+  border-bottom: 1px dashed #bbb;
+  background: transparent;
+  text-align: center;
+  font: 600 16px/1.2 var(--book-sans);
+  color: #1d3f8f;
+  outline: none;
+}
+.board-cmd.pattern input::placeholder {
+  font: 600 13px/1.2 "Courier New", monospace;
+  letter-spacing: 0.06em;
+  color: #555;
+}
+.board-tile.write.ok input {
+  color: #1f7a43;
+}
+.board-tile.write.ko input {
+  color: #b42318;
+  text-decoration: line-through;
+}
+
+/* ---------------- Grammatica: lý thuyết 2 cột (trang 13–14) ---------------- */
+.theory-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 30px;
+}
+.theory-col + .theory-col {
+  padding-left: 18px;
+  border-left: 1.5px solid #222;
+}
+.theory p {
+  margin: 0;
+  font: 15.5px/1.38 var(--book-serif);
+}
+.th-gap {
+  height: 10px;
+}
+.th-h1 {
+  display: inline-block;
+  margin: 4px 0 6px;
+  padding-bottom: 1px;
+  border-bottom: 2.5px solid #2a55a3;
+  font: 700 16px/1.2 var(--book-sans);
+  color: #d4363a;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.th-h2 {
+  margin: 4px 0 4px;
+  font: 500 14.5px/1.25 var(--book-sans);
+  color: #e0612a;
+  text-transform: uppercase;
+}
+.th-h2 i {
+  text-transform: none;
+}
+.th-warn {
+  font: italic 500 15px/1.3 var(--book-sans) !important;
+  color: #e0612a;
+}
+.th-li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
+.th-p.indent,
+.th-ex.indent,
+.th-pair.indent {
+  padding-left: 20px;
+}
+.th-say {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.th-say:hover {
+  background: rgba(239, 125, 58, 0.15);
+}
+.th-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-style: italic !important;
+}
+.th-table {
+  width: 100%;
+  margin: 4px 0 6px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ef8a3a;
+  font: 14px/1.2 var(--book-sans);
+}
+.th-table th,
+.th-table td {
+  padding: 4px 8px;
+}
+.th-table thead th {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+.th-table thead th:first-child {
+  background: #ef8a3a;
+}
+.th-table tbody th {
+  width: 52%;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.th-table tbody th span {
+  display: inline-block;
+  min-width: 48%;
+  white-space: nowrap;
+}
+.th-table tbody th span.sub {
+  min-width: 0;
+}
+.th-table td {
+  background: white;
+  text-align: center;
+  color: #d4363a;
+  border-bottom: 2px solid #ef8a3a;
+  border-left: 2px solid #ef8a3a;
+  cursor: pointer;
+}
+.book-page.phone .theory-cols {
+  grid-template-columns: minmax(0, 1fr);
+}
+.book-page.phone .theory-col + .theory-col {
+  padding-left: 0;
+  border-left: none;
 }

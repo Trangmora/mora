@@ -1,3 +1,4 @@
+import type React from "react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { numeroInLettere } from "../lib/numeri";
 import type { Sheet } from "./Book";
@@ -64,9 +65,9 @@ export function ContentPage({ sheet, fit = "page" }: { sheet: Sheet; fit?: "page
           </div>
         )}
         {page.sideTab && (
-          <div className="side-tab" aria-hidden>
+          <div className="side-tab" aria-hidden style={page.sideTab.color ? ({ "--tab": page.sideTab.color } as React.CSSProperties) : undefined}>
             <b>{page.sideTab.unit}</b>
-            <span>{page.sideTab.title}</span>
+            {page.sideTab.title && <span>{page.sideTab.title}</span>}
           </div>
         )}
         <div className={`book-page-body ${page.notebook ? "notebook-frame" : ""}`}>

@@ -20,7 +20,7 @@ export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind
 /** Số câu có thể tách riêng sang trang khác (bài nối giữ nguyên một khối). */
 export function itemCount(ex: Exercise) {
   // Bài nối và mẫu đơn giữ nguyên một khối như sách.
-  if (ex.kind === "speak" && ex.layout === "board") return 0;
+  if ((ex.kind === "speak" || ex.kind === "fill") && ex.layout === "board") return 0;
   return ex.kind === "match" || ex.kind === "form" || ex.kind === "cloze" ? 0 : ex.items.length;
 }
 
@@ -82,7 +82,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
           </span>
         </header>
         {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
-        {ex.subtitle && <p className={`ex-subtitle ${ex.kind === "speak" && ex.layout === "board" ? "center" : ""}`}>{ex.subtitle}</p>}
+        {ex.subtitle && <p className={`ex-subtitle ${"layout" in ex && ex.layout === "board" ? "center" : ""}`}>{ex.subtitle}</p>}
         {ex.intro && (
           <div className="ex-intro">
             {ex.intro.split("\n").map((l, i) => <p key={i}>{l}</p>)}
@@ -211,6 +211,8 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
 
   switch (ex.kind) {
     case "fill":
+      if (ex.layout === "board")
+        return <BoardView ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={results} />;
       return (
         <>
           <ol className="ex-items" start={start}>
@@ -432,7 +434,7 @@ function BoardView({
   showAnswers,
   results,
 }: {
-  ex: Extract<Exercise, { kind: "speak" }>;
+  ex: Extract<Exercise, { kind: "speak" | "fill" }>;
   responses: Record<string, string>;
   set: (itemId: string, v: string) => void;
   showAnswers: boolean;
@@ -450,12 +452,27 @@ function BoardView({
           <span className="board-es-label">Esempio:</span>
           <div className="board-tile tone-a board-es">
             {b.example.image && <img src={b.example.image} alt="" loading="lazy" />}
-            <span className="board-cmd">{b.example.prompt}</span>
+            <span className={`board-cmd ${b.example.pattern ? "pattern" : ""}`}>{b.example.prompt ?? b.example.pattern}</span>
           </div>
           <p className="board-es-answer">→ {b.example.answer}</p>
         </>
       )}
-      {ex.items.map((it, i) => (
+      {ex.kind === "fill" && ex.items.map((it, i) => (
+        <WriteTile
+          key={it.id}
+          n={i + 1}
+          tone={tone(i)}
+          first={i < 2}
+          pattern={it.hint ?? ""}
+          image={it.image}
+          answer={it.answers[0]?.split("|")[0] ?? ""}
+          value={responses[it.id] ?? ""}
+          onChange={(v) => set(it.id, v)}
+          showAnswers={showAnswers}
+          r={results.get(it.id)}
+        />
+      ))}
+      {ex.kind === "speak" && ex.items.map((it, i) => (
         <BoardTile
           key={it.id}
           n={i + 1}
@@ -475,6 +492,51 @@ function BoardView({
           {results.size ? `Totale: ${got} / ${ex.items.length * points} punti` : b.total}
         </div>
       )}
+    </div>
+  );
+}
+
+/** Vị trí ô trong lưới: hàng đầu 2 ô ở cột 3–4, sau đó mỗi hàng 4 ô. */
+function tilePos(n: number, first: boolean) {
+  return first ? { gridRow: 2, gridColumn: n + 2 } : { gridRow: 3 + Math.floor((n - 3) / 4), gridColumn: 1 + ((n - 3) % 4) };
+}
+
+/** Ô chép chính tả: tranh + khung chữ như sách, gõ từ nghe được. */
+function WriteTile(props: {
+  n: number;
+  tone: "a" | "b";
+  first: boolean;
+  pattern: string;
+  image?: string;
+  answer: string;
+  value: string;
+  onChange: (v: string) => void;
+  showAnswers: boolean;
+  r?: ItemResult;
+}) {
+  const lang = useStore((s) => s.lang);
+  const { r } = props;
+  const state = r ? (r.correct ? "ok" : "ko") : props.value ? "done" : "";
+  return (
+    <div className={`board-tile write tone-${props.tone} ${state}`} style={tilePos(props.n, props.first)}>
+      <span className="board-num">{props.n}</span>
+      {props.image && <img src={props.image} alt="" loading="lazy" />}
+      <span className="board-cmd pattern">
+        <input
+          value={props.value}
+          placeholder={props.pattern}
+          aria-label={props.pattern || String(props.n)}
+          autoCapitalize="off"
+          autoCorrect="off"
+          spellCheck={false}
+          onChange={(e) => props.onChange(e.target.value)}
+        />
+      </span>
+      <button className="board-mic" onClick={() => speak(props.answer)} title={t(lang, "listen")}>
+        <Icon name="volume" size={14} />
+      </button>
+      {r && !r.correct && <span className="board-why">{r.correctAnswer}{r.explanation ? ` — ${r.explanation}` : ""}</span>}
+      {props.showAnswers && !r && <span className="board-sample">{props.answer}</span>}
     </div>
   );
 }
@@ -502,11 +564,7 @@ function BoardTile(props: {
   return (
     <div
       className={`board-tile tone-${props.tone} ${props.image ? "" : "no-img"} ${state}`}
-      style={
-        props.first
-          ? { gridRow: 2, gridColumn: props.n + 2 }
-          : { gridRow: 3 + Math.floor((props.n - 3) / 4), gridColumn: 1 + ((props.n - 3) % 4) }
-      }
+      style={tilePos(props.n, props.first)}
     >
       <span className="board-num">{props.n}</span>
       {props.image && <img src={props.image} alt="" loading="lazy" />}

@@ -33,10 +33,16 @@ export type FillExercise = {
     prompt: string;
     /** Đáp án cho từng ô trống theo thứ tự; nhiều đáp án đúng ngăn cách bởi "|". */
     answers: string[];
+    /** Gợi ý; trong bảng trò chơi là khung chữ như sách, ví dụ "a _ _ _ _ do _ _ o". */
     hint?: string;
+    /** Tranh của ô trong bảng trò chơi. */
+    image?: string;
   }[];
   /** Ngân hàng từ (nếu sách cho sẵn các từ để chọn). */
   wordBank?: string[];
+  /** "board": bảng trò chơi chép chính tả — mỗi câu là một ô có tranh, gõ từ nghe được. */
+  layout?: "board";
+  board?: BoardSettings;
 };
 
 /** Trắc nghiệm / chọn đáp án đúng. */
@@ -83,6 +89,18 @@ export type WriteExercise = {
   }[];
 };
 
+/** Bảng trò chơi "Giochiamo insieme!" (trang 10–12). */
+export type BoardSettings = {
+  /** Ô "Esempio" và câu mẫu (đỏ) bên cạnh; pattern là khung chữ gợi ý trong ô (bài chép chính tả). */
+  example?: { prompt?: string; pattern?: string; image?: string; answer: string };
+  /** Ô tổng điểm cuối bảng, ví dụ "Totale: 34 punti". */
+  total?: string;
+  /** Màu xen kẽ của các hàng ô: cam/vàng (trang 11), xanh lá/cam (trang 10), đỏ/xanh dương (trang 12). */
+  palette?: "orange" | "green" | "red";
+  /** Điểm mỗi câu đúng. */
+  points?: number;
+};
+
 /** Bài nói — ghi âm, chuyển thành chữ rồi AI chấm. */
 export type SpeakExercise = {
   kind: "speak";
@@ -96,16 +114,7 @@ export type SpeakExercise = {
   /** "board": bảng trò chơi "Giochiamo insieme!" — mỗi câu là một ô có tranh và số. */
   layout?: "board";
   /** Thiết lập bảng trò chơi. */
-  board?: {
-    /** Ô "Esempio" và câu mẫu (đỏ) bên cạnh. */
-    example?: { prompt: string; image?: string; answer: string };
-    /** Ô tổng điểm cuối bảng, ví dụ "Totale: 34 punti". */
-    total?: string;
-    /** Màu xen kẽ của các hàng ô: cam/vàng (trang 11) hay xanh lá/cam (trang 10). */
-    palette?: "orange" | "green";
-    /** Điểm mỗi câu đúng. */
-    points?: number;
-  };
+  board?: BoardSettings;
 };
 
 /** Một ô trong mẫu đơn (form): ô viết hoặc ô tích chọn. */
@@ -283,6 +292,14 @@ export type Block =
       autoTranscript?: boolean;
       tr?: L10n;
     }
+  /**
+   * Trang lý thuyết ngữ pháp (Grammatica) chia 2 cột như sách. Cú pháp từng dòng:
+   * "# TIÊU ĐỀ" (đỏ gạch chân) · "## Tiêu đề phụ" (cam) · "! ATTENZIONE!" (cam nghiêng)
+   * "- gạch đầu dòng" · "> ví dụ" (nghiêng, bấm để nghe; thụt vào nếu ngay sau "- "; ">> " luôn thụt vào)
+   * "| a | b | c" bảng cam (dòng đầu là tiêu đề) · "%% • a || • b" hai cột hội thoại ngắn
+   * "===" sang cột mới · dòng trống = đoạn mới · **đậm**, *nghiêng*, ***đậm nghiêng***.
+   */
+  | { type: "theory"; text: string; tr?: L10n }
   | { type: "exercise"; ex: Exercise };
 
 export type BookPage = {
@@ -302,7 +319,7 @@ export type BookPage = {
   /** Dải chữ đỏ ở đầu trang (ví dụ "GLI STRANIERI E L'ITALIA"). */
   banner?: string;
   /** Thẻ bên lề (trang lẻ ở phải, trang chẵn ở trái), ví dụ "U1 · Entriamo in Italia!". */
-  sideTab?: { unit: string; title: string };
+  sideTab?: { unit: string; title?: string; /** Màu thẻ (mặc định xanh), ví dụ đỏ ở Lessico, cam ở Grammatica. */ color?: string };
   /** Khung sổ gáy lò xo bao quanh trang, với tiêu đề cam như "Ripassiamo quello che abbiamo studiato!". */
   notebook?: { title: string };
   blocks: Block[];

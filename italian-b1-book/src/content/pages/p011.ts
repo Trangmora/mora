@@ -11,7 +11,7 @@ const page: BookPage = {
   title: "Lessico · Giochiamo insieme!",
   addedOn: "2026-10-05",
   runningHead: "Lessico",
-  sideTab: { unit: "U1", title: "Entriamo in Italia!" },
+  sideTab: { unit: "U1", color: "#d8333a" },
   blocks: [
     {
       type: "exercise",
