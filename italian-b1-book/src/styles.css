@@ -4809,3 +4809,24 @@ button.ds-card {
 .ds-score-label {
   flex-basis: 100%;
 }
+.toc-u.closed {
+  padding: 8px 14px 6px;
+  margin-bottom: 8px;
+  background: transparent;
+}
+.toc-u.closed .toc-u-head {
+  cursor: pointer;
+}
+.toc-u.closed .toc-u-title {
+  font-size: 15.5px;
+}
+.toc-u.closed .toc-u-score {
+  font-size: 17px;
+}
+.toc-u.closed .toc-u-bar {
+  height: 4px;
+  margin: 6px 0 2px;
+}
+.toc-u.closed:hover {
+  border-color: var(--accent);
+}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { t } from "../i18n";
 import { allExercises, isDone } from "../lib/skills";
 import { useStore, type ExerciseResult } from "../lib/store";
@@ -46,6 +47,13 @@ export function TableOfContents({ leaves, goTo }: { part: number; leaves: Leaf[]
     else u.sections.push({ name, pages: [p] });
   }
 
+  // Chỉ Unità đang học mở rộng (Unità đầu tiên còn bài chưa xong); các Unità khác thu gọn một dòng.
+  const current =
+    units.find((u) => u.sections.some((s) => s.pages.some((p) => ["todo", "progress"].includes(pageStats(p, results).status))))?.unit ??
+    units[units.length - 1]?.unit;
+  const [openUnit, setOpenUnit] = useState<string | null>(null);
+  const shown = openUnit ?? current;
+
   const label = { done: vi ? "Xong" : "Done", progress: vi ? "Đang làm" : "In progress", todo: vi ? "Chưa làm" : "To do" };
 
   return (
@@ -62,8 +70,13 @@ export function TableOfContents({ leaves, goTo }: { part: number; leaves: Leaf[]
         const avg = scores.length ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null;
         const pct = total ? Math.round((done / total) * 100) : 0;
         return (
-          <section key={u.unit} className="toc-u">
-            <header className="toc-u-head">
+          <section key={u.unit} className={`toc-u ${u.unit === shown ? "open" : "closed"}`}>
+            <header
+              className="toc-u-head"
+              onClick={() => setOpenUnit(u.unit)}
+              role={u.unit === shown ? undefined : "button"}
+              title={u.unit === shown ? undefined : vi ? "Bấm để mở Unità này" : "Open this Unità"}
+            >
               <span className="toc-u-badge">U{u.unit}</span>
               <span className="toc-u-title">{u.title}</span>
               <span className={`toc-u-score t-${avg === null ? "none" : avg >= 70 ? "good" : avg >= 50 ? "warn" : "bad"}`}>
@@ -74,6 +87,7 @@ export function TableOfContents({ leaves, goTo }: { part: number; leaves: Leaf[]
             <div className="toc-u-bar" title={`${done}/${total}`}>
               <span style={{ width: `${pct}%` }} />
             </div>
+            {u.unit !== shown ? null : <>
             <p className="toc-u-meta">
               {vi ? `Đã làm ${done}/${total} bài · ${pct}%` : `${done}/${total} exercises done · ${pct}%`}
             </p>
@@ -102,6 +116,7 @@ export function TableOfContents({ leaves, goTo }: { part: number; leaves: Leaf[]
                 </li>
               ))}
             </ul>
+            </>}
           </section>
         );
       })}
