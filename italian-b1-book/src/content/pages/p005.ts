@@ -25,7 +25,7 @@ const page: BookPage = {
           {
             boxed: true,
             title: "Sapete perché l'Italia è famosa nel mondo?",
-            image: { src: "images/u1/svg/p5-moka.svg", alt: "La moka del caffè", side: "right", width: 30 },
+            image: { src: "images/u1/p5-moka.jpg", alt: "La moka del caffè", side: "right", width: 30 },
             text: [
               "Tutto il mondo conosce la nostra moda, le nostre scarpe, i nostri prodotti di pelle: gli italiani (*diventare*) {{=sono diventati}} famosi, ormai da tempo, grazie all'artigianato. Non sono solo questi, però, i settori economici più importanti: gli italiani (*avere*) {{hanno avuto}} molto successo, negli ultimi anni, anche nella produzione di macchine per la lavorazione dei metalli; molte industrie (*realizzare*) {{hanno realizzato}} elettrodomestici utili e unici (per esempio la moka del caffè). L'Italia (*avere*) {{ha avuto}} anche buoni risultati nel campo scientifico: i nostri astronomi (*progettare*) {{hanno progettato}} nuovi satelliti per studiare i pianeti del sistema solare, i fisici del Centro Nazionale della Ricerca (*fare*) {{hanno fatto}} importanti scoperte e molti medici (*preparare*) {{hanno preparato}} nuove medicine per la cura di alcune malattie. Inoltre, molti ricercatori (*andare*) {{sono andati}} all'estero per migliorare i propri studi e (*collaborare*) {{hanno collaborato}} con i centri internazionali più prestigiosi. E in campo culturale? Nel 1997, per esempio, lo scrittore Dario Fo (*vincere*) {{ha vinto}} il premio Nobel per la letteratura; nel 1999 l'attore Roberto Benigni (*conquistare*) {{ha conquistato}} l'Oscar per il migliore film straniero, *La vita è bella*; l'architetto Renzo Piano (*essere*) {{è stato}} l'ideatore di alcuni edifici moderni molto importanti in Giappone e negli Stati Uniti.",
             ].join("\n"),
@@ -47,11 +47,11 @@ const page: BookPage = {
           {
             boxed: true,
             title: "Come eravamo…",
-            image: { src: "images/u1/svg/p5-emigranti.svg", alt: "Emigranti italiani in attesa della nave", side: "right", width: 42 },
+            image: { src: "images/u1/p5-emigranti.jpg", alt: "Emigranti italiani in attesa della nave", side: "right", width: 42 },
             text: "Nel 1861 è nato lo stato italiano, ma la popolazione (*avere*) {{=aveva}} ancora numerosi problemi da risolvere: (*esserci*) {{c'erano}} tanti analfabeti (circa il 70% della popolazione non sapeva leggere e scrivere), non (*esistere*) {{esistevano}} ancora varie industrie, molta gente (*lavorare*) {{lavorava}} soprattutto nell'agricoltura. Inoltre, circa 100.000 persone all'anno (*emigrare*) {{emigravano}} verso altri paesi, specialmente negli Stati Uniti.",
           },
           {
-            image: { src: "images/u1/svg/p5-fabbrica.svg", alt: "Lo stabilimento Fiat del Lingotto a Torino", side: "left", width: 30 },
+            image: { src: "images/u1/p5-fabbrica.jpg", alt: "Lo stabilimento Fiat del Lingotto a Torino", side: "left", width: 30 },
             text: "Verso la fine del secolo l'industria italiana, comunque, (*potere*) {{poteva}} già competere con quella degli altri paesi europei: mentre la famiglia Agnelli (*fondare*) {{fondava}} la Fiat, l'azienda più importante di automobili, (*nascere*) {{nascevano}} anche le industrie per l'elettricità e per la produzione di acciaio. Dopo il dramma delle guerre mondiali la società italiana (*volere*) {{voleva}} cambiare e costruire un mondo nuovo: durante gli anni del \"boom economico\" (1950-'60) (*esserci*) {{c'erano}} maggiori possibilità di lavoro e la gente (*essere*) {{era}} più istruita.",
           },
         ],
