@@ -86,7 +86,26 @@ export type WriteExercise = {
 /** Bài nói — ghi âm, chuyển thành chữ rồi AI chấm. */
 export type SpeakExercise = {
   kind: "speak";
-  items: { id: string; prompt: string; sample?: string }[];
+  items: {
+    id: string;
+    prompt: string;
+    sample?: string;
+    /** Tranh của ô trong bảng trò chơi (public/images/…). */
+    image?: string;
+  }[];
+  /** "board": bảng trò chơi "Giochiamo insieme!" — mỗi câu là một ô có tranh và số. */
+  layout?: "board";
+  /** Thiết lập bảng trò chơi. */
+  board?: {
+    /** Ô "Esempio" và câu mẫu (đỏ) bên cạnh. */
+    example?: { prompt: string; image?: string; answer: string };
+    /** Ô tổng điểm cuối bảng, ví dụ "Totale: 34 punti". */
+    total?: string;
+    /** Màu xen kẽ của các hàng ô: cam/vàng (trang 11) hay xanh lá/cam (trang 10). */
+    palette?: "orange" | "green";
+    /** Điểm mỗi câu đúng. */
+    points?: number;
+  };
 };
 
 /** Một ô trong mẫu đơn (form): ô viết hoặc ô tích chọn. */
@@ -190,9 +209,13 @@ export type Exercise = ExerciseBody & {
   icons?: BadgeIcon[];
   /** Phần A / B của cùng một bài (in đậm xanh trước đề bài). */
   label?: string;
+  /** Dòng phụ in nghiêng xanh dưới đề bài, ví dụ "Giochiamo insieme!". */
+  subtitle?: string;
+  /** Đoạn hướng dẫn in thường dưới đề bài (luật chơi…), mỗi dòng một câu. */
+  intro?: string;
 };
 
-export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match";
+export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match" | "check";
 
 // ---------- Block nội dung ----------
 
@@ -280,5 +303,7 @@ export type BookPage = {
   banner?: string;
   /** Thẻ bên lề (trang lẻ ở phải, trang chẵn ở trái), ví dụ "U1 · Entriamo in Italia!". */
   sideTab?: { unit: string; title: string };
+  /** Khung sổ gáy lò xo bao quanh trang, với tiêu đề cam như "Ripassiamo quello che abbiamo studiato!". */
+  notebook?: { title: string };
   blocks: Block[];
 };

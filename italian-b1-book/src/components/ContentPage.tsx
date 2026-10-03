@@ -69,7 +69,13 @@ export function ContentPage({ sheet, fit = "page" }: { sheet: Sheet; fit?: "page
             <span>{page.sideTab.title}</span>
           </div>
         )}
-        <div className="book-page-body">
+        <div className={`book-page-body ${page.notebook ? "notebook-frame" : ""}`}>
+          {page.notebook && (
+            <>
+              <div className="spiral" aria-hidden />
+              <p className="notebook-title">{page.notebook.title}</p>
+            </>
+          )}
           {units.map((u) => (
             <div className="unit" key={u.key}>
               {u.node}

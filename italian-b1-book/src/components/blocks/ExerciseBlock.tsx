@@ -20,6 +20,7 @@ export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind
 /** Số câu có thể tách riêng sang trang khác (bài nối giữ nguyên một khối). */
 export function itemCount(ex: Exercise) {
   // Bài nối và mẫu đơn giữ nguyên một khối như sách.
+  if (ex.kind === "speak" && ex.layout === "board") return 0;
   return ex.kind === "match" || ex.kind === "form" || ex.kind === "cloze" ? 0 : ex.items.length;
 }
 
@@ -47,6 +48,7 @@ function BadgeGlyph({ name }: { name: BadgeIcon }) {
     write: "m4 12.5 1-3.2 7.6-7.6a1.4 1.4 0 0 1 2 2L7 11.3l-3 1.2Zm7.5-9.7 2 2",
     listen: "M4 10V8a6 6 0 0 1 12 0v2M4 10h2.4v3.5H4zM13.6 10H16v3.5h-2.4z",
     match: "M3 4h5M3 8h5M3 12h5M11 4l6 7m0 0v-3.5m0 3.5h-3.5",
+    check: "M4 8.5 8 12.5 16 2.5",
   };
   return (
     <svg viewBox="0 0 20 15" width="22" height="16" aria-hidden>
@@ -80,6 +82,12 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
           </span>
         </header>
         {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
+        {ex.subtitle && <p className={`ex-subtitle ${ex.kind === "speak" && ex.layout === "board" ? "center" : ""}`}>{ex.subtitle}</p>}
+        {ex.intro && (
+          <div className="ex-intro">
+            {ex.intro.split("\n").map((l, i) => <p key={i}>{l}</p>)}
+          </div>
+        )}
         {ex.kind === "fill" && ex.wordBank && (
           <div className="word-bank">
             {ex.wordBank.map((w) => <span key={w}>{w}</span>)}
@@ -395,6 +403,8 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
       );
 
     case "speak":
+      if (ex.layout === "board")
+        return <BoardView ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={results} />;
       return (
         <ol className={`ex-items ${ex.items.length === 1 ? "single" : "numbered"}`} start={start}>
           {pick(ex.items).map((it) => (
@@ -412,6 +422,115 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
         </ol>
       );
   }
+}
+
+/** Bảng trò chơi "Giochiamo insieme!": ô Esempio, các ô có số + tranh + lệnh, ô "Totale". Bấm ô để ghi âm câu trả lời. */
+function BoardView({
+  ex,
+  responses,
+  set,
+  showAnswers,
+  results,
+}: {
+  ex: Extract<Exercise, { kind: "speak" }>;
+  responses: Record<string, string>;
+  set: (itemId: string, v: string) => void;
+  showAnswers: boolean;
+  results: Map<string, ItemResult>;
+}) {
+  const b = ex.board ?? {};
+  const points = b.points ?? 2;
+  const got = [...results.values()].filter((r) => r.correct).length * points;
+  // Hàng đầu 2 ô, sau đó mỗi hàng 4 ô; các hàng xen kẽ màu như sách.
+  const tone = (i: number) => ((i < 2 ? 0 : 1 + Math.floor((i - 2) / 4)) % 2 === 0 ? "a" : "b");
+  return (
+    <div className={`board palette-${b.palette ?? "orange"}`}>
+      {b.example && (
+        <>
+          <span className="board-es-label">Esempio:</span>
+          <div className="board-tile tone-a board-es">
+            {b.example.image && <img src={b.example.image} alt="" loading="lazy" />}
+            <span className="board-cmd">{b.example.prompt}</span>
+          </div>
+          <p className="board-es-answer">→ {b.example.answer}</p>
+        </>
+      )}
+      {ex.items.map((it, i) => (
+        <BoardTile
+          key={it.id}
+          n={i + 1}
+          tone={tone(i)}
+          first={i < 2}
+          prompt={it.prompt}
+          image={it.image}
+          sample={it.sample}
+          value={responses[it.id] ?? ""}
+          onChange={(v) => set(it.id, v)}
+          showAnswers={showAnswers}
+          r={results.get(it.id)}
+        />
+      ))}
+      {b.total && (
+        <div className="board-total" style={{ gridRow: 3 + Math.floor((ex.items.length - 3) / 4) + ((ex.items.length - 2) % 4 === 0 ? 1 : 0), gridColumn: 4 }}>
+          {results.size ? `Totale: ${got} / ${ex.items.length * points} punti` : b.total}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BoardTile(props: {
+  n: number;
+  tone: "a" | "b";
+  first: boolean;
+  prompt: string;
+  image?: string;
+  sample?: string;
+  value: string;
+  onChange: (v: string) => void;
+  showAnswers: boolean;
+  r?: ItemResult;
+}) {
+  const lang = useStore((s) => s.lang);
+  const rec = useItalianRecorder();
+  const { r, onChange } = props;
+  useEffect(() => {
+    if (!rec.recording && rec.transcript) onChange(rec.transcript);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rec.recording, rec.transcript]);
+  const state = r ? (r.correct ? "ok" : "ko") : props.value ? "done" : "";
+  return (
+    <div
+      className={`board-tile tone-${props.tone} ${props.image ? "" : "no-img"} ${state}`}
+      style={
+        props.first
+          ? { gridRow: 2, gridColumn: props.n + 2 }
+          : { gridRow: 3 + Math.floor((props.n - 3) / 4), gridColumn: 1 + ((props.n - 3) % 4) }
+      }
+    >
+      <span className="board-num">{props.n}</span>
+      {props.image && <img src={props.image} alt="" loading="lazy" />}
+      <span className="board-cmd">{props.prompt}</span>
+      <button
+        className={`board-mic ${rec.recording ? "on" : ""}`}
+        onClick={() => (rec.recording ? rec.stop() : rec.start())}
+        title={rec.recording ? t(lang, "stop") : t(lang, "record")}
+      >
+        <Icon name={rec.recording ? "stop" : "mic"} size={14} />
+      </button>
+      {(rec.recording || props.value) && (
+        <span className="board-said" title={props.value}>
+          {rec.recording ? `${rec.transcript} ${rec.interim}`.trim() || "…" : props.value}
+        </span>
+      )}
+      {r && !r.correct && r.explanation && <span className="board-why">{r.explanation}</span>}
+      {props.showAnswers && props.sample && (
+        <button className="board-sample" onClick={() => speak(props.sample!)} title={props.sample}>
+          {props.sample}
+        </button>
+      )}
+    </div>
+  );
 }
 
 function SpeakItem(props: {
