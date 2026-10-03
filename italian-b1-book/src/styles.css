@@ -3529,3 +3529,156 @@ textarea.form-input {
 .book-page .match-right li {
   padding: 3px 0 8px;
 }
+
+/* ---------------- Điện thoại (≤600px) ----------------
+   Trang sách hẹp lại (460px thiết kế) để chữ đủ đọc, các cột xếp chồng,
+   cuộn dọc bên trong trang; lật trang bằng vuốt hoặc hai nút nổi ở đáy. */
+@media (max-width: 600px) {
+  .book-stage {
+    padding: 6px 6px 26px;
+  }
+  .book.single {
+    width: calc(100vw - 12px);
+  }
+  .turn {
+    position: absolute;
+    bottom: 34px;
+    z-index: 30;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .turn.prev {
+    left: auto;
+    right: 58px;
+  }
+  .turn.next {
+    right: 12px;
+  }
+  .turn:disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .page-slot .zoom-btn {
+    display: none;
+  }
+  .stage-fact {
+    width: calc(100% - 24px);
+    font-size: 11.5px;
+  }
+  .stage-fact span {
+    display: none;
+  }
+  .page-viewport.phone {
+    inset: 0;
+    border-radius: inherit;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  .page-viewport.phone::after {
+    content: "";
+    display: block;
+    height: 70px;
+  }
+
+  .book-page.phone {
+    padding: 18px 18px 22px;
+    font-size: 15px;
+  }
+  .book-page.phone.has-tab {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .book-page.phone .side-tab {
+    display: none;
+  }
+  .book-page.phone .book-columns {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .book-page.phone .book-col {
+    flex: none !important;
+    width: 100%;
+  }
+  .book-page.phone .notes3,
+  .book-page.phone .form-cols,
+  .book-page.phone .form-siena .form-foot,
+  .book-page.phone .match {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .book-page.phone .cloze-part.cols-2 .cloze-text {
+    columns: 1;
+  }
+  .book-page.phone .book-form {
+    margin-left: 0;
+  }
+  .book-page.phone .section-row {
+    gap: 6px;
+  }
+  .book-page.phone .section-banner {
+    margin-left: 0;
+  }
+  .book-page.phone .unit-band {
+    flex-direction: column;
+    gap: 6px;
+    margin: -18px 0 0 -18px;
+    padding-top: 26px;
+    border-left-width: 10px;
+  }
+  .book-page.phone .book-folio {
+    margin-top: 18px;
+  }
+  .book-page.phone .section-title {
+    margin-left: -18px;
+  }
+  .book-page.phone .unit-band-goals {
+    padding: 0 0 4px 12px;
+  }
+  .book-page.phone .section-title {
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+  .book-page.phone .section-banner,
+  .book-page.phone .section-row .section-banner {
+    margin: 0 0 12px;
+    font-size: 19px;
+  }
+  .book-page.phone .banner-row {
+    margin: 4px 0 0;
+  }
+  .book-page.phone .running-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .book-page.phone .running-row .section-banner {
+    align-self: flex-end;
+  }
+  .book-page.phone .running-head,
+  .book-page.phone.even .running-row .running-head {
+    margin: -4px 0 12px auto;
+    padding: 0 0 4px;
+    font-size: 19px;
+  }
+  .stage-fact {
+    padding-left: 52px;
+  }
+
+  .buddy-nonna {
+    width: 46px;
+    height: 46px;
+  }
+  .buddy-nonna svg {
+    width: 40px;
+    height: 40px;
+  }
+  .buddy-bubble {
+    font-size: 13px;
+    padding: 10px 12px;
+    max-width: calc(100vw - 130px);
+    margin-bottom: 20px;
+  }
+  .buddy-it {
+    font-size: 13.5px;
+  }
+}
