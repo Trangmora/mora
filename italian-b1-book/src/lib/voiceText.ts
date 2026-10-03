@@ -57,6 +57,8 @@ function fromBlock(b: Block): { text: string; voice: Voice }[] {
       if (ex.kind === "write" || ex.kind === "speak") return ex.items.flatMap((i) => (i.sample ? [f(i.sample)] : []));
       return [];
     }
+    case "columns":
+      return b.cols.flatMap((col) => col.flatMap(fromBlock));
     default:
       return [];
   }

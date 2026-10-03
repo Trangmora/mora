@@ -8,7 +8,7 @@ import { hasNeuralVoice, speak, stopSpeaking } from "../../lib/speech";
 import { Speakable } from "../Speakable";
 import { parseTranscript as parseLines, speakerVoices } from "../../lib/voiceText";
 
-type Props = { block: { track?: string; title?: string; src?: string; transcript?: string; tr?: L10n } };
+type Props = { block: { track?: string; title?: string; src?: string; transcript?: string; autoTranscript?: boolean; tr?: L10n } };
 
 const SPEEDS = [0.75, 0.9, 1, 1.25];
 
@@ -119,6 +119,12 @@ export function AudioBlock({ block }: Props) {
           {SPEEDS.map((s) => <option key={s} value={s}>{s}×</option>)}
         </select>
         <button className={`mini ${loop ? "on" : ""}`} onClick={() => setLoop((v) => !v)} title={t(lang, "loop")}><Icon name="repeat" size={16} /></button>
+        {lines.length > 0 && (
+          <button className="pill ghost audio-toggle" onClick={() => setShowText((v) => !v)}>
+            <Icon name="text" size={14} /> {textVisible ? t(lang, "hideTranscript") : t(lang, "transcript")}
+          </button>
+        )}
+
       </div>
       {block.title && <div className="audio-title">{block.title}</div>}
       {!block.src && <div className="audio-note">{t(lang, hasNeuralVoice() ? "ttsNeural" : "ttsAudio")}</div>}
@@ -134,11 +140,6 @@ export function AudioBlock({ block }: Props) {
           onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
         />
       )}
-      {lines.length > 0 && (
-        <button className="pill ghost audio-toggle" onClick={() => setShowText((v) => !v)}>
-          <Icon name="text" size={14} /> {textVisible ? t(lang, "hideTranscript") : t(lang, "transcript")}
-        </button>
-      )}
       {textVisible && (
         <div className="audio-transcript">
           {lines.map((l, i) => (
@@ -147,6 +148,7 @@ export function AudioBlock({ block }: Props) {
             </Speakable>
           ))}
           {showTr && block.tr && <p className="translation">{tr(lang, block.tr)}</p>}
+          {block.autoTranscript && <p className="audio-note">{t(lang, "autoTranscript")}</p>}
         </div>
       )}
     </div>

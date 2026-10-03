@@ -78,8 +78,46 @@ export type SpeakExercise = {
   items: { id: string; prompt: string; sample?: string }[];
 };
 
+/** Một ô trong mẫu đơn (form): ô viết hoặc ô tích chọn. */
+export type FormField = {
+  id: string;
+  /** Nhãn của ô, giữ nguyên như sách, ví dụ "Cognome" hay "1. Quante lingue conosce?". */
+  label: string;
+  /** Tiêu đề nhỏ hiện phía trên ô này (khi mẫu đơn chuyển sang phần mới). */
+  section?: string;
+  /** Ô đã điền sẵn trong sách (ví dụ "Smith"). */
+  given?: string;
+  /** Đáp án của ô viết; nhiều đáp án đúng ngăn cách bởi "|". Bỏ trống = câu trả lời cá nhân, AI chấm. */
+  answers?: string;
+  /** Các ô tích (☐ sì ☐ no). */
+  options?: string[];
+  /** Vị trí ô tích đúng (bắt đầu từ 0). */
+  answer?: number;
+  /** Cột trong mẫu đơn: 1 (trái), 2 (phải) hoặc "foot" (hàng cuối như Data / Firma). */
+  col?: 1 | 2 | "foot";
+  /** Dòng phụ dưới tiêu đề phần (ví dụ "Allora rispondete alle seguenti domande:"). */
+  sectionNote?: string;
+  /** Số dòng kẻ để viết (mặc định 1). */
+  lines?: number;
+  /** Số cột cho các ô tích. */
+  optionCols?: number;
+};
+
+/** Mẫu đơn: điền thông tin, trả lời câu hỏi, tích ô — như phiếu đăng ký trong sách. */
+export type FormExercise = {
+  kind: "form";
+  /** Kiểu mẫu đơn giống sách. */
+  formStyle?: "corso" | "siena";
+  /** Tiêu đề in trên mẫu đơn, ví dụ "CORSO DI LINGUA". */
+  formTitle?: string;
+  /** Dòng tiêu đề phụ, ví dụ "MODULO DI ISCRIZIONE". */
+  formSubtitle?: string;
+  items: FormField[];
+};
+
 export type ExerciseBody =
   | FillExercise
+  | FormExercise
   | ChoiceExercise
   | MatchExercise
   | TrueFalseExercise
@@ -99,12 +137,25 @@ export type Exercise = ExerciseBody & {
   refText?: string;
   /** Kỹ năng của bài (nếu bỏ trống sẽ tự đoán: nghe sau bài audio, viết, nói, đọc, còn lại là ngữ pháp). */
   skill?: Skill;
+  /** Icon dưới số bài như trong sách. */
+  icons?: BadgeIcon[];
 };
+
+export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen";
 
 // ---------- Block nội dung ----------
 
 export type Block =
-  | { type: "unitHeader"; unit: string; title: string; tr?: L10n; goals?: L10n[] }
+  | {
+      type: "unitHeader";
+      unit: string;
+      title: string;
+      tr?: L10n;
+      /** Câu dẫn mục tiêu, ví dụ "In questa Unità impariamo a:". */
+      intro?: string;
+      /** Mục tiêu bài học (tiếng Ý như sách + bản dịch). */
+      goals?: { it?: string; tr: L10n }[];
+    }
   | { type: "heading"; text: string; tr?: L10n; level?: 2 | 3 }
   | { type: "text"; it: string; tr?: L10n; title?: string; readAloud?: boolean }
   | { type: "dialogue"; title?: string; lines: { speaker: string; it: string; tr?: L10n }[] }
@@ -133,6 +184,16 @@ export type Block =
       examples?: { it: string; tr?: L10n }[];
     }
   | { type: "tip"; it?: string; tr: L10n }
+  /** Tiêu đề phần lớn như "Cominciamo". */
+  | { type: "sectionTitle"; text: string }
+  /** Chia cột như trong sách; widths là tỉ lệ mỗi cột (ví dụ [3, 5, 2]). */
+  | { type: "columns"; cols: Block[][]; widths?: number[]; align?: "start" | "center" | "end" }
+  /** Ảnh cắt từ trang sách (public/images/…). */
+  | { type: "photo"; src: string; alt: string; caption?: L10n }
+  /** Ảnh ghép đặt tự do như trang sách: x, y, w tính theo % khung; height tính theo % chiều rộng. */
+  | { type: "collage"; height: number; items: { src: string; alt: string; x: number; y: number; w: number; caption?: L10n }[] }
+  /** Chữ "dán" trang trí như trong sách, ví dụ "CIAO!". */
+  | { type: "sticker"; text: string; tr?: L10n }
   | {
       type: "audio";
       /** Số track như trong sách, ví dụ "1.04". */
@@ -142,6 +203,8 @@ export type Block =
       src?: string;
       /** Lời bài nghe. Nếu không có file mp3, máy sẽ đọc lời này bằng giọng Ý. Dạng "Tên: câu" để chia người nói. */
       transcript?: string;
+      /** Lời bài nghe được chép tự động từ file nghe (có thể sai sót nhỏ). */
+      autoTranscript?: boolean;
       tr?: L10n;
     }
   | { type: "exercise"; ex: Exercise };
@@ -158,5 +221,9 @@ export type BookPage = {
   title: string;
   /** Ngày bạn học trang này. */
   addedOn?: string;
+  /** Tiêu đề chạy ở đầu trang như sách (ví dụ "Cominciamo"). */
+  runningHead?: string;
+  /** Thẻ bên lề trang lẻ (ví dụ "U1 · Entriamo in Italia!"). */
+  sideTab?: { unit: string; title: string };
   blocks: Block[];
 };

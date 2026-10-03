@@ -23,6 +23,7 @@ const paths = {
   text: "M4 6h16M4 12h16M4 18h9",
   close: "M6 6l12 12M18 6 6 18",
   book: "M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13",
+  search: "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5-2 4.5 4.5M8 11h6M11 8v6",
   chart: "M4 20V10M10 20V4M16 20v-7M22 20H2",
   trash: "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3",
 } as const;

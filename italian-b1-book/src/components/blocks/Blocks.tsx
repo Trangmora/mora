@@ -27,20 +27,58 @@ export function pageContext(page: BookPage) {
 export function BlockView({ block, page }: { block: Block; page: BookPage }) {
   const lang = useStore((s) => s.lang);
   const showTr = useStore((s) => s.showTranslation);
+  const showAnswers = useStore((s) => s.showAnswers);
 
   switch (block.type) {
     case "unitHeader":
+      // Dải mục tiêu đầu Unità như sách: nhãn xanh "In questa Unità impariamo a:" + gạch đầu dòng.
       return (
-        <header className="unit-header">
-          <div className="unit-tag">Unità {block.unit}</div>
-          <h1>{block.title}</h1>
-          {block.tr && <p className="translation always">{tr(lang, block.tr)}</p>}
-          {block.goals && (
-            <ul className="goals">
-              {block.goals.map((g, i) => <li key={i}>{tr(lang, g)}</li>)}
-            </ul>
-          )}
+        <header className="unit-band">
+          <div className="unit-band-label">{block.intro ?? `Unità ${block.unit}`}</div>
+          <ul className="unit-band-goals">
+            {block.goals?.map((g, i) => (
+              <li key={i}>
+                {g.it ?? tr(lang, g.tr)}
+                {showTr && g.it && <span className="translation">{tr(lang, g.tr)}</span>}
+              </li>
+            ))}
+          </ul>
         </header>
+      );
+
+    case "sectionTitle":
+      return (
+        <h2 className="section-title">
+          <span className="section-initial">{block.text.slice(0, 1)}</span>
+          {block.text.slice(1)}
+        </h2>
+      );
+
+    case "photo":
+      return (
+        <figure className="book-photo">
+          <img src={block.src} alt={block.alt} loading="lazy" />
+          {showTr && block.caption && <figcaption>{tr(lang, block.caption)}</figcaption>}
+        </figure>
+      );
+
+    case "collage":
+      return (
+        <div className="collage" style={{ paddingBottom: `${block.height}%` }}>
+          {block.items.map((it, i) => (
+            <figure key={i} className="collage-item" style={{ left: `${it.x}%`, top: `${(it.y * block.height) / 100}%`, width: `${it.w}%` }}>
+              <img src={it.src} alt={it.alt} loading="lazy" />
+              {showAnswers && it.caption && <figcaption>{tr(lang, it.caption)}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      );
+
+    case "sticker":
+      return (
+        <div className="sticker" title={block.tr ? tr(lang, block.tr) : undefined}>
+          <span>{block.text}</span>
+        </div>
       );
 
     case "heading": {

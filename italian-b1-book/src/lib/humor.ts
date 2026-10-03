@@ -61,6 +61,11 @@ export const coverQuip: Quip = {
   tr: { vi: "Trời đất, cuốn sách gì mà hay thế!", en: "Mamma mia, what a book!" },
 };
 
+export const blankQuip: Quip = {
+  it: "Pagina bianca? Perfetta per la lista della spesa: pasta, pomodori, basilico…",
+  tr: { vi: "Trang trắng à? Hợp để ghi danh sách đi chợ: mì, cà chua, húng quế…", en: "A blank page? Perfect for the shopping list: pasta, tomatoes, basil…" },
+};
+
 export const notesQuip: Quip = {
   it: "Scrivi, scrivi… la memoria è come il ragù: va mescolata spesso.",
   tr: { vi: "Viết đi, viết đi… trí nhớ như nồi ragù: phải khuấy thường xuyên.", en: "Write, write… memory is like ragù: stir it often." },

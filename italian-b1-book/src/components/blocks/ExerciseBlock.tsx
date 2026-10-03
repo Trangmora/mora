@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "../Icon";
 import { skillOf } from "../../lib/skills";
 import { t, tr } from "../../i18n";
-import type { BookPage, Exercise } from "../../types";
+import type { BadgeIcon, BookPage, Exercise, FormExercise } from "../../types";
 import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
 import { blanksOf, gradeByKey, gradeWithAI, isAIAvailable, needsAI, SEP, toMistakes } from "../../lib/grading";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib/speech";
@@ -17,7 +17,39 @@ export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind
 
 /** Số câu có thể tách riêng sang trang khác (bài nối giữ nguyên một khối). */
 export function itemCount(ex: Exercise) {
-  return ex.kind === "match" ? 0 : ex.items.length;
+  // Bài nối và mẫu đơn giữ nguyên một khối như sách.
+  return ex.kind === "match" || ex.kind === "form" ? 0 : ex.items.length;
+}
+
+/** Ô số bài màu đỏ như sách, bên dưới là icon dạng bài (nói, nhìn, đọc, viết, nghe). */
+function Badge({ number, icons }: { number?: string; icons?: BadgeIcon[] }) {
+  return (
+    <span className="ex-badge">
+      <span className="ex-badge-num">{number ?? "•"}</span>
+      {icons?.length ? (
+        <span className="ex-badge-icons">
+          {icons.map((i) => (
+            <BadgeGlyph key={i} name={i} />
+          ))}
+        </span>
+      ) : null}
+    </span>
+  );
+}
+
+function BadgeGlyph({ name }: { name: BadgeIcon }) {
+  const d: Record<BadgeIcon, string> = {
+    speak: "M4 6.5C4 4.6 6.7 3 10 3s6 1.6 6 3.5S13.3 10 10 10c-.7 0-1.4-.1-2-.2L5 11.5l.8-2.4C4.7 8.4 4 7.5 4 6.5Z",
+    look: "M2 7s2.7-4 8-4 8 4 8 4-2.7 4-8 4-8-4-8-4Zm8 2.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z",
+    read: "M2 3.5c2.5-.8 5-.6 8 1 3-1.6 5.5-1.8 8-1v8.5c-2.5-.8-5-.6-8 1-3-1.6-5.5-1.8-8-1V3.5Zm8 1v8.5",
+    write: "m4 12.5 1-3.2 7.6-7.6a1.4 1.4 0 0 1 2 2L7 11.3l-3 1.2Zm7.5-9.7 2 2",
+    listen: "M4 10V8a6 6 0 0 1 12 0v2M4 10h2.4v3.5H4zM13.6 10H16v3.5h-2.4z",
+  };
+  return (
+    <svg viewBox="0 0 20 15" width="22" height="16" aria-hidden>
+      <path d={d[name]} fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" strokeLinecap="round" />
+    </svg>
+  );
 }
 
 function useExercise(ex: Exercise) {
@@ -39,7 +71,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
     return (
       <div className={`exercise kind-${ex.kind} ex-part-head`} id={measuring ? undefined : ex.id}>
         <header className="ex-head">
-          {ex.number && <span className="ex-num">{ex.number}</span>}
+          <Badge number={ex.number} icons={ex.icons} />
           <span className="ex-instr">{ex.instruction}</span>
         </header>
         {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
@@ -122,7 +154,6 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
           size={34}
         />
       )}
-      {needsAI(ex) && ai === false && <p className="warn small">{t(lang, "aiOffline")}</p>}
       {error && <p className="warn">{error}</p>}
       {result?.summary && <p className="ai-note">{result.summary}</p>}
       {result?.tips?.length ? (
@@ -315,6 +346,9 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
         </div>
       );
 
+    case "form":
+      return <FormView ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={results} radioPrefix={radioPrefix} />;
+
     case "write":
       return (
         <ol className="ex-items" start={start}>
@@ -351,7 +385,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
 
     case "speak":
       return (
-        <ol className="ex-items" start={start}>
+        <ol className={`ex-items ${ex.items.length === 1 ? "single" : ""}`} start={start}>
           {pick(ex.items).map((it) => (
             <SpeakItem
               key={it.id}
@@ -388,9 +422,11 @@ function SpeakItem(props: {
 
   return (
     <li className="ex-item speak-item">
-      <span className="line">
-        {props.prompt} <Mark r={r} />
-      </span>
+      {props.prompt && (
+        <span className="line speak-prompt">
+          {props.prompt} <Mark r={r} />
+        </span>
+      )}
       <span className="coach-actions">
         {rec.recording ? (
           <button className="pill rec" onClick={() => rec.stop()}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
@@ -404,13 +440,16 @@ function SpeakItem(props: {
           <span className="dot" /> <em>{rec.transcript} {rec.interim}</em>
         </span>
       )}
-      <textarea
-        className="lined"
-        rows={3}
-        value={props.value}
-        placeholder={t(lang, "speakHint")}
-        onChange={(e) => props.onChange(e.target.value)}
-      />
+      {/* Bản chép lời chỉ hiện sau khi ghi âm, để trang vẫn gọn như sách. */}
+      {(props.value || rec.transcript) && !rec.recording && (
+        <textarea
+          className="lined"
+          rows={2}
+          value={props.value}
+          placeholder={t(lang, "speakHint")}
+          onChange={(e) => props.onChange(e.target.value)}
+        />
+      )}
       {!speechRecognitionSupported && <span className="warn small">{t(lang, "noSpeech")}</span>}
       {r && !r.correct && r.correctAnswer && (
         <span className="margin-note">
@@ -429,5 +468,94 @@ function SpeakItem(props: {
         </span>
       )}
     </li>
+  );
+}
+
+/** Mẫu đơn như trong sách: hai cột, dòng kẻ để viết, ô tích ☐; hàng "Data / Firma" ở cuối. */
+function FormView({
+  ex,
+  responses,
+  set,
+  showAnswers,
+  results,
+  radioPrefix,
+}: {
+  ex: FormExercise & { id: string };
+  responses: Record<string, string>;
+  set: (itemId: string, v: string) => void;
+  showAnswers: boolean;
+  results: Map<string, ItemResult>;
+  radioPrefix: string;
+}) {
+  const col = (c: 1 | 2 | "foot") => ex.items.filter((f) => (f.col ?? 1) === c);
+  const field = (f: FormExercise["items"][number]) => {
+    const r = results.get(f.id);
+    const key = f.options ? (f.answer !== undefined ? f.options[f.answer] : undefined) : f.answers?.split("|")[0];
+    return (
+      <div key={f.id} className={`form-field ${f.options ? "has-options" : ""} ${f.section ? "has-section" : ""}`}>
+        {f.section && <div className="form-section">{f.section}</div>}
+        {f.sectionNote && <div className="form-section-note">{f.sectionNote}</div>}
+        {f.options ? (
+          <>
+            <div className="form-q">{f.label}</div>
+            <div className="form-options" style={{ gridTemplateColumns: `repeat(${f.optionCols ?? 2}, auto)` }}>
+              {f.options.map((o, k) => (
+                <label key={k} className={`form-check ${responses[f.id] === String(k) ? "sel" : ""} ${showAnswers && f.answer === k ? "is-answer" : ""}`}>
+                  <input
+                    type="radio"
+                    name={`${radioPrefix}${ex.id}-${f.id}`}
+                    checked={responses[f.id] === String(k)}
+                    onChange={() => set(f.id, String(k))}
+                  />
+                  <span className="box" aria-hidden>{responses[f.id] === String(k) ? "✗" : ""}</span>
+                  {o}
+                </label>
+              ))}
+              <Mark r={r} />
+            </div>
+          </>
+        ) : (
+          <label className={`form-line lines-${f.lines ?? 1}`}>
+            <span className="form-label">{f.label}</span>
+            {f.given ? (
+              <span className="form-given">{f.given}</span>
+            ) : (f.lines ?? 1) > 1 ? (
+              <textarea
+                className={`form-input ${r ? (r.correct ? "ok" : "ko") : ""}`}
+                rows={f.lines}
+                value={responses[f.id] ?? ""}
+                onChange={(e) => set(f.id, e.target.value)}
+                spellCheck={false}
+              />
+            ) : (
+              <input
+                className={`form-input ${r ? (r.correct ? "ok" : "ko") : ""}`}
+                value={responses[f.id] ?? ""}
+                onChange={(e) => set(f.id, e.target.value)}
+                spellCheck={false}
+                autoCapitalize="off"
+              />
+            )}
+            <Mark r={r} />
+          </label>
+        )}
+        {!f.given && <Margin show={showAnswers && !!key} answer={key} r={r} />}
+      </div>
+    );
+  };
+  return (
+    <div className={`book-form form-${ex.formStyle ?? "corso"}`}>
+      {(ex.formTitle || ex.formSubtitle) && (
+        <div className="form-title">
+          {ex.formTitle && <div className="form-title-main">{ex.formTitle}</div>}
+          {ex.formSubtitle && <div className="form-title-sub">{ex.formSubtitle}</div>}
+        </div>
+      )}
+      <div className="form-cols">
+        <div className="form-col">{col(1).map(field)}</div>
+        <div className="form-col">{col(2).map(field)}</div>
+      </div>
+      {col("foot").length > 0 && <div className="form-foot">{col("foot").map(field)}</div>}
+    </div>
   );
 }

@@ -2319,3 +2319,625 @@ button.advice-card .advice-kicker {
     margin-left: 0;
   }
 }
+
+/* =========================================================
+   Trang sách in — dựng y như sách (Unità 1 trở đi)
+   ========================================================= */
+:root {
+  --book-blue: #1f4e9c;
+  --book-red: #d9262b;
+  --book-teal: #2a86b8;
+  --book-lime: #c7d64a;
+  --book-sans: "Figtree", "Gill Sans", "Segoe UI", sans-serif;
+  --book-serif: "Source Serif 4", "Garamond", Georgia, serif;
+}
+
+.book-stage {
+  position: relative;
+}
+.stage-fact {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: min(900px, calc(100% - 140px));
+  margin: 0;
+  text-align: center;
+  font: 12.5px/1.3 var(--font-ui);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stage-fact b {
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 4px;
+}
+.stage-fact span {
+  opacity: 0.8;
+}
+
+.page-viewport {
+  position: absolute;
+  inset: 10px 14px;
+  overflow: hidden;
+}
+.book-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 44px 24px;
+  font: 16px/1.45 var(--book-serif);
+  color: #1b1b1b;
+}
+.book-page.odd {
+  padding-right: 78px;
+}
+.book-page-body {
+  flex: 1;
+}
+.book-page .unit {
+  display: flow-root;
+}
+
+/* Số trang "2 due" */
+.book-folio {
+  display: flex;
+  gap: 48px;
+  margin-top: 14px;
+  font: 400 20px var(--book-sans);
+  color: #333;
+}
+.book-page.odd .book-folio {
+  justify-content: flex-end;
+}
+
+/* Tiêu đề chạy & thẻ lề */
+.running-head {
+  margin: -6px -34px 18px 45%;
+  padding: 0 34px 6px 0;
+  text-align: right;
+  font: 500 24px var(--book-sans);
+  letter-spacing: 0.1em;
+  border-bottom: 1.5px solid #222;
+}
+.side-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.side-tab b {
+  writing-mode: vertical-rl;
+  background: var(--book-blue);
+  color: white;
+  padding: 18px 8px 12px;
+  font: 800 26px var(--book-sans);
+  letter-spacing: 0.05em;
+}
+.side-tab span {
+  writing-mode: vertical-rl;
+  padding: 14px 8px;
+  font: 500 23px var(--book-sans);
+  letter-spacing: 0.04em;
+  color: var(--book-blue);
+  border-left: 2px solid var(--book-blue);
+}
+
+/* Dải mục tiêu đầu Unità */
+.unit-band {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: -30px 0 0 -44px;
+  padding: 50px 0 0 0;
+  border-left: 14px solid var(--book-blue);
+}
+.unit-band-label {
+  flex: none;
+  margin-top: 4px;
+  background: var(--book-blue);
+  color: white;
+  font: 700 17px var(--book-sans);
+  padding: 5px 12px;
+}
+.unit-band-goals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font: 400 18px/1.35 var(--book-sans);
+}
+.unit-band-goals li::before {
+  content: "• ";
+}
+.unit-band-goals .translation {
+  display: block;
+  margin: 0 0 2px 12px;
+  font-size: 13.5px;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  width: 80%;
+  margin: 18px 0 22px -44px;
+  padding-left: 0;
+  font: 500 50px/1 var(--book-sans);
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid #222;
+}
+.section-initial {
+  color: var(--book-blue);
+  background: white;
+  padding: 0 2px 0 4px;
+  border-left: 14px solid var(--book-blue);
+}
+
+/* Số bài màu đỏ + icon */
+.book-page .ex-head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.ex-badge {
+  flex: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 66px;
+}
+.ex-badge-num {
+  background: var(--book-red);
+  color: white;
+  font: 700 28px/1 var(--book-sans);
+  text-align: center;
+  padding: 6px 0 5px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+.ex-badge-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 2px;
+  background: white;
+  color: #333;
+  border: 1px solid #777;
+  transform: rotate(-3deg);
+  margin: -1px 4px 0 2px;
+}
+.book-page .ex-instr {
+  padding-top: 4px;
+  font: 500 21px var(--book-sans);
+  color: #1b1b1b;
+}
+.book-page .exercise > .translation {
+  margin-left: 80px;
+}
+.book-page .ex-part-head {
+  padding-top: 16px;
+}
+.book-page .ex-items {
+  padding-left: 80px;
+}
+.book-page .ex-items.single {
+  list-style: none;
+}
+.book-page .speak-prompt {
+  display: block;
+  font: 400 21px/1.42 var(--book-serif);
+  color: #222;
+  margin-top: 14px;
+}
+.book-page .coach-actions .pill {
+  font-size: 12.5px;
+  padding: 4px 11px;
+}
+.book-page .ex-part-foot {
+  padding: 2px 0 8px 80px;
+}
+.book-page .ex-foot {
+  margin-left: 0;
+}
+.book-page .ex-foot .pill {
+  font-size: 12.5px;
+  padding: 4px 11px;
+}
+.book-page .ex-part-foot .nonna-says,
+.book-page .ai-note,
+.book-page .ai-tips {
+  margin-left: 0;
+}
+
+/* Cột, ảnh, ảnh ghép, chữ dán */
+.book-columns {
+  display: flex;
+  gap: 20px;
+}
+.book-col {
+  min-width: 0;
+}
+.book-col .ex-items {
+  padding-left: 0;
+}
+.book-col .ex-part-foot {
+  padding-left: 0;
+}
+.book-photo {
+  margin: 14px 0 0;
+}
+.book-photo img {
+  width: 100%;
+  display: block;
+}
+.book-photo figcaption,
+.collage-item figcaption {
+  font: 12px var(--font-ui);
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2px 6px;
+}
+.collage {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin-top: 6px;
+}
+.collage-item {
+  position: absolute;
+  margin: 0;
+}
+.collage-item img {
+  width: 100%;
+  display: block;
+}
+.collage-item figcaption {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  max-width: calc(100% - 8px);
+  border-radius: 4px;
+}
+.sticker {
+  padding-top: 26px;
+  text-align: center;
+}
+.sticker span {
+  display: inline-block;
+  transform: rotate(12deg);
+  font: 700 38px/1 var(--font-hand);
+  color: #2b3b8f;
+  padding: 0 6px 8px;
+  background: linear-gradient(170deg, transparent 72%, rgba(217, 38, 43, 0.85) 72%, rgba(217, 38, 43, 0.85) 84%, transparent 84%);
+}
+
+/* Mẫu đơn như sách */
+.book-form {
+  margin: 12px 0 6px 80px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+.book-form .form-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.book-form .form-col {
+  min-width: 0;
+  padding: 6px 18px 12px;
+}
+.form-field {
+  margin: 4px 0;
+}
+.form-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.form-line.lines-2,
+.form-line.lines-3 {
+  display: block;
+}
+.form-label {
+  flex: none;
+  max-width: 100%;
+}
+.form-input {
+  flex: 1;
+  min-width: 80px;
+  border: none;
+  border-bottom: 1px solid #888;
+  background: transparent;
+  font: 600 19px/1.15 var(--font-hand);
+  color: #1d4ed8;
+  padding: 0 4px;
+  outline: none;
+}
+textarea.form-input {
+  display: block;
+  width: 100%;
+  resize: none;
+  border-bottom: none;
+  line-height: 26px;
+  background: repeating-linear-gradient(180deg, transparent 0 25px, #888 25px 26px);
+}
+.form-input:focus {
+  background-color: rgba(29, 78, 216, 0.05);
+}
+.form-input.ok {
+  color: #15803d;
+}
+.form-input.ko {
+  color: var(--pen);
+  text-decoration: line-through;
+}
+.form-given {
+  flex: 1;
+  border-bottom: 1px solid #888;
+  font: 700 20px/1.1 var(--font-hand);
+  color: var(--book-red);
+  padding: 0 6px;
+}
+.form-options {
+  display: grid;
+  gap: 2px 26px;
+  align-items: center;
+  padding: 4px 0 2px 2px;
+}
+.form-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.form-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.form-check .box {
+  display: inline-grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  border: 1.3px solid #444;
+  font: 700 15px/1 var(--font-hand);
+  color: #1d4ed8;
+}
+.form-check.is-answer .box {
+  box-shadow: 0 0 0 2px var(--pen);
+}
+.form-section {
+  margin-top: 10px;
+  font: 700 17px var(--book-sans);
+}
+.form-section-note {
+  font: 400 15px var(--book-sans);
+}
+.book-form .margin-note {
+  font-size: 18px;
+}
+
+/* Kiểu "Corso di lingua" */
+.form-corso {
+  padding: 16px 0 6px;
+  font: 400 15px/1.5 var(--book-sans);
+}
+.form-corso .form-title {
+  padding: 0 18px 8px;
+}
+.form-corso .form-title-main {
+  font: 300 46px/1 var(--book-sans);
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1.1px var(--book-teal);
+}
+.form-corso .form-title-sub {
+  margin-top: 4px;
+  font: 800 17px var(--book-sans);
+  letter-spacing: 0.32em;
+  color: #1a6f9c;
+}
+.form-corso .form-col + .form-col {
+  border-left: 1.5px solid var(--book-teal);
+}
+.form-corso .form-section {
+  color: #1a6f9c;
+}
+.form-corso .form-label {
+  color: #222;
+}
+
+/* Kiểu "Università per Stranieri di Siena" */
+.form-siena {
+  padding: 0 0 10px;
+  font: 400 16px/1.55 var(--book-serif);
+}
+.form-siena .form-title {
+  width: 74%;
+  padding: 8px 18px;
+  background: var(--book-lime);
+}
+.form-siena .form-title-main {
+  font: 400 22px var(--book-serif);
+  letter-spacing: 0.06em;
+}
+.form-siena .form-cols {
+  padding-top: 10px;
+}
+.form-siena .form-col:last-child .form-q {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 10px;
+}
+.form-siena .form-col:last-child .form-q::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  background: var(--book-lime);
+}
+.form-siena .form-options {
+  padding-left: 22px;
+}
+.form-siena .form-foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 6px 18px 0;
+}
+
+/* Trang trắng chèn thêm */
+.blank-page {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+/* ---- Tinh chỉnh tỉ lệ cho sát sách in ---- */
+.book-page .speak-prompt {
+  font-size: 17.5px;
+  line-height: 1.38;
+  margin-top: 10px;
+}
+.book-page .ex-part-head {
+  padding-top: 12px;
+}
+.book-page .coach-actions {
+  margin: 6px 0 2px;
+}
+.book-page .audio-block {
+  margin: 10px 0 0;
+}
+.book-page .audio-bar {
+  gap: 6px;
+}
+.book-page .audio-play {
+  width: 30px;
+  height: 30px;
+}
+.book-page .audio-toggle {
+  margin-top: 2px;
+  font-size: 11.5px;
+  padding: 2px 9px;
+}
+.book-form {
+  margin-left: 0;
+}
+.form-corso {
+  padding-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.3;
+}
+.form-corso .form-title-main {
+  font-size: 38px;
+}
+.form-corso .form-title-sub {
+  font-size: 15px;
+}
+.book-form .form-col {
+  padding: 2px 14px 8px;
+}
+.form-field {
+  margin: 1px 0 3px;
+}
+.form-input {
+  font-size: 17px;
+}
+textarea.form-input {
+  line-height: 21px;
+  background: repeating-linear-gradient(180deg, transparent 0 20px, #888 20px 21px);
+}
+.form-section {
+  margin-top: 6px;
+  font-size: 15px;
+}
+.form-section-note {
+  font-size: 13.5px;
+}
+.form-siena {
+  font-size: 14.5px;
+  line-height: 1.32;
+}
+.form-siena .form-title {
+  padding: 6px 16px;
+}
+.form-siena .form-title-main {
+  font-size: 19px;
+}
+.form-siena .form-col:last-child .form-q {
+  margin-top: 6px;
+}
+.form-options {
+  gap: 0 22px;
+  padding-top: 2px;
+}
+
+/* ---- Phóng to một trang ---- */
+.zoom-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink-soft);
+  opacity: 0.55;
+  transition: opacity 0.15s;
+}
+.page-surface:hover .zoom-btn,
+.zoom-btn:focus-visible {
+  opacity: 1;
+}
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(29, 33, 38, 0.55);
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+.zoom-sheet {
+  position: relative;
+  width: min(1110px, 100%);
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+.page-viewport.fit-width {
+  inset: 0;
+  overflow-y: auto;
+}
+.zoom-close {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: var(--ink);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}

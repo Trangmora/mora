@@ -87,6 +87,30 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
         });
       }
       break;
+    case "form":
+      for (const f of ex.items) {
+        if (f.given) continue;
+        const g = responses[f.id] ?? "";
+        if (f.options) {
+          items.push({
+            id: f.id,
+            correct: g !== "" && Number(g) === f.answer,
+            userAnswer: g !== "" ? f.options[Number(g)] ?? "" : "",
+            correctAnswer: f.answer !== undefined ? f.options[f.answer] : undefined,
+          });
+        } else {
+          const accepted = (f.answers ?? "").split("|").filter(Boolean);
+          const ok = accepted.some((a) => looseMatch(g, a));
+          items.push({
+            id: f.id,
+            correct: ok,
+            userAnswer: g,
+            correctAnswer: accepted[0],
+            explanation: !ok && accepted.some((a) => stripAccents(normalize(a)) === stripAccents(normalize(g))) && g ? accentNote : undefined,
+          });
+        }
+      }
+      break;
     case "write":
     case "speak":
       // Không có đáp án cố định — cần AI chấm.
@@ -101,12 +125,26 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
 }
 
 export function needsAI(ex: Exercise) {
+  if (ex.kind === "form") return ex.items.some((f) => !f.given && !f.answers && f.answer === undefined);
   return ex.kind === "write" || ex.kind === "speak";
+}
+
+/** So khớp mềm cho ô điền thông tin: bỏ dấu câu, khoảng trắng trong số, chấp nhận câu trả lời chứa đáp án. */
+export function looseMatch(given: string, key: string): boolean {
+  const g = normalize(given);
+  const k = normalize(key);
+  if (!g) return false;
+  if (g === k) return true;
+  const compact = (s: string) => s.replace(/[\s/.\-]/g, "");
+  if (/\d/.test(k) && compact(g) === compact(k)) return true;
+  // "Washington DC" cho đáp án "Washington", "ha studiato arte" cho "arte"…
+  return k.length >= 3 && (` ${g} `.includes(` ${k} `) || (g.length >= 4 && ` ${k} `.includes(` ${g} `) && g.length >= k.length * 0.6));
 }
 
 /** Đề của từng câu, để hiển thị trong sổ lỗi. */
 export function itemPrompt(ex: Exercise, itemId: string): string {
   if (ex.kind === "match") return ex.left.find((l) => l.id === itemId)?.text ?? itemId;
+  if (ex.kind === "form") return ex.items.find((f) => f.id === itemId)?.label ?? itemId;
   const it = (ex.items as { id: string; prompt: string }[]).find((i) => i.id === itemId);
   return it?.prompt ?? itemId;
 }

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Icon } from "./Icon";
 import { pages } from "../content/book";
 import { t } from "../i18n";
@@ -10,7 +10,9 @@ import { TableOfContents, tocPageCount } from "./TableOfContents";
 import { ContentPage } from "./ContentPage";
 import { NotesPage } from "./NotesPage";
 import { unitsOf, type Unit } from "./units";
-import { MeasureCtx } from "../lib/measure";
+import { NonnaSays } from "./Nonna";
+import { blankQuip, factFor } from "../lib/humor";
+import { tr } from "../i18n";
 
 /** Một trang trên màn hình (vừa đúng một khung, không cuộn): một phần của trang sách. */
 export type Sheet = { page: BookPage; units: Unit[]; part: number; parts: number; zoom: Record<string, number> };
@@ -21,6 +23,7 @@ export type Leaf =
   | { kind: "toc"; part: number }
   | { kind: "content"; page: BookPage; sheet: Sheet }
   | { kind: "notes" }
+  | { kind: "blank" }
   | { kind: "end" };
 
 export type BookApi = {
@@ -31,14 +34,20 @@ export type BookApi = {
 
 const allUnits = pages.map((page) => ({ page, units: unitsOf(page) }));
 
-/** Mặc định (trước khi đo xong): mỗi trang sách là một khung. */
-const unsplit: Sheet[] = allUnits.map(({ page, units }) => ({ page, units, part: 1, parts: 1, zoom: {} }));
+/** Mỗi trang sách là đúng một trang trên màn hình (thu nhỏ cho vừa khung, không cuộn). */
+const sheetsAll: Sheet[] = allUnits.map(({ page, units }) => ({ page, units, part: 1, parts: 1, zoom: {} }));
 
 export function buildLeaves(sheets: Sheet[]): Leaf[] {
   const leaves: Leaf[] = [{ kind: "cover" }];
   const n = tocPageCount(pages);
   for (let i = 0; i < n; i++) leaves.push({ kind: "toc", part: i });
-  sheets.forEach((sheet) => leaves.push({ kind: "content", page: sheet.page, sheet }));
+  sheets.forEach((sheet) => {
+    // Như sách in: trang số chẵn nằm bên trái (vị trí lẻ), trang số lẻ bên phải.
+    const wantLeft = sheet.page.number % 2 === 0;
+    const isLeft = leaves.length % 2 === 1;
+    if (Number.isInteger(sheet.page.number) && wantLeft !== isLeft) leaves.push({ kind: "blank" });
+    leaves.push({ kind: "content", page: sheet.page, sheet });
+  });
   // Trang "Appunti" (ghi chú) để bìa sau luôn nằm bên trái như sách thật.
   if (leaves.length % 2 === 0) leaves.push({ kind: "notes" });
   leaves.push({ kind: "end" });
@@ -59,52 +68,13 @@ function useIsNarrow() {
 
 type Flip = { dir: 1 | -1; target: number } | null;
 
-/**
- * Xếp các mảnh nội dung vào từng khung trang cho vừa chiều cao; mảnh cao hơn cả trang thì thu nhỏ.
- */
-function paginate(heights: Map<string, number>, avail: number): Sheet[] {
-  const sheets: Sheet[] = [];
-  for (const { page, units } of allUnits) {
-    const groups: { units: Unit[]; zoom: Record<string, number> }[] = [];
-    let cur: Unit[] = [];
-    let zoom: Record<string, number> = {};
-    let used = 0;
-    const flush = () => {
-      if (cur.length) groups.push({ units: cur, zoom });
-      cur = [];
-      zoom = {};
-      used = 0;
-    };
-    units.forEach((u, i) => {
-      let h = heights.get(u.key) ?? 0;
-      const next = units[i + 1];
-      const hNext = next ? Math.min(heights.get(next.key) ?? 0, avail) : 0;
-      const need = u.keepWithNext && next ? h + hNext : h;
-      if (cur.length && used + Math.min(need, avail) > avail) flush();
-      if (h > avail) {
-        zoom[u.key] = Math.max(0.55, avail / h);
-        h = avail;
-      }
-      cur.push(u);
-      used += h;
-    });
-    flush();
-    if (groups.length === 0) groups.push({ units: [], zoom: {} });
-    groups.forEach((g, i) => sheets.push({ page, units: g.units, part: i + 1, parts: groups.length, zoom: g.zoom }));
-  }
-  return sheets;
-}
-
-const signature = (sheets: Sheet[]) =>
-  sheets.map((s) => s.units.map((u) => u.key + (s.zoom[u.key] ? `@${s.zoom[u.key].toFixed(2)}` : "")).join(",")).join("|");
-
 export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null> }) {
   const narrow = useIsNarrow();
-  const [sheets, setSheets] = useState<Sheet[]>(unsplit);
-  const leaves = useMemo(() => buildLeaves(sheets), [sheets]);
+  const leaves = useMemo(() => buildLeaves(sheetsAll), []);
   const lang = useStore((s) => s.lang);
   const position = useStore((s) => Math.min(s.position, leaves.length - 1));
   const [flip, setFlip] = useState<Flip>(null);
+  const [zoom, setZoom] = useState<number | null>(null);
 
   // Ở chế độ 2 trang: spread k hiện trang trái 2k-1 và phải 2k.
   const spreadOf = (pos: number) => Math.floor((pos + 1) / 2);
@@ -158,78 +128,21 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
     },
   };
 
-  // ---------- Đo kích thước & chia trang ----------
-  const measureBody = useRef<HTMLDivElement>(null);
-  const sigRef = useRef(signature(unsplit));
-  const anchor = useRef<string | null>(null);
-
-
-  const remeasure = useCallback(() => {
-    const body = measureBody.current;
-    if (!body) return;
-    const cs = getComputedStyle(body);
-    const avail = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - 2;
-    if (avail < 80) return;
-    const heights = new Map<string, number>();
-    body.querySelectorAll<HTMLElement>(":scope > .unit").forEach((el) => {
-      heights.set(el.dataset.key!, el.getBoundingClientRect().height);
-    });
-    const next = paginate(heights, avail);
-    const sig = signature(next);
-    if (sig === sigRef.current) return;
-    sigRef.current = sig;
-    setSheets(next);
-  }, []);
-
-  useLayoutEffect(() => {
-    remeasure();
-    const body = measureBody.current;
-    if (!body) return;
-    let raf = 0;
-    const schedule = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(remeasure);
-    };
-    const ro = new ResizeObserver(schedule);
-    ro.observe(body);
-    body.querySelectorAll(":scope > .unit").forEach((el) => ro.observe(el));
-    document.fonts?.ready.then(schedule);
-    return () => {
-      cancelAnimationFrame(raf);
-      ro.disconnect();
-    };
-  }, [remeasure, narrow]);
-
-  // Sau khi chia lại trang: giữ nguyên nội dung đang đọc.
-  const leavesRef = useRef(leaves);
-  useEffect(() => {
-    leavesRef.current = leaves;
-    const key = anchor.current;
-    if (!key) return;
-    const i = leaves.findIndex(
-      (l) => l.kind === "content" && (l.sheet.units.some((u) => u.key === key) || (l.sheet.units.length === 0 && l.page.id === key)),
-    );
-    if (i >= 0 && i !== position) setState({ position: i });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [leaves]);
-
-  // Ghi nhớ mảnh đầu tiên của trang đang mở.
-  useEffect(() => {
-    const l = leavesRef.current[position];
-    anchor.current = l?.kind === "content" ? (l.sheet.units[0]?.key ?? l.page.id) : null;
-  }, [position]);
-
   // Phím mũi tên để lật trang
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      if (zoom !== null) {
+        if (e.key === "Escape") setZoom(null);
+        return;
+      }
       if (e.key === "ArrowRight" || e.key === "PageDown") go(1);
       if (e.key === "ArrowLeft" || e.key === "PageUp") go(-1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [go]);
+  }, [go, zoom]);
 
   // Vuốt trên điện thoại
   const touch = useRef<{ x: number; y: number } | null>(null);
@@ -245,7 +158,7 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
   const render = (i: number, isStatic = false): ReactNode => {
     const leaf = leaves[i];
     if (!leaf) return <div className="page-surface empty" />;
-    return <LeafView leaf={leaf} index={i} leaves={leaves} goTo={goTo} inert={isStatic} />;
+    return <LeafView leaf={leaf} index={i} leaves={leaves} goTo={goTo} inert={isStatic} onZoom={setZoom} />;
   };
 
   const sideClass = (i: number) => (i % 2 === 1 ? "left" : "right");
@@ -255,7 +168,6 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
     const under = flip ? (flip.dir === 1 ? flip.target : position) : position;
     content = (
       <div className="book single">
-        <MeasureLayer bodyRef={measureBody} full={true} />
         <div className={`page-slot full ${sideClass(under)}`}>{render(under)}</div>
         {flip && (
           <div
@@ -280,7 +192,6 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
         <div className="page-slot left">{leftIdx >= 0 ? render(leftIdx) : null}</div>
         <div className="page-slot right">{rightIdx < leaves.length ? render(rightIdx) : null}</div>
         <div className="spine" />
-        <MeasureLayer bodyRef={measureBody} full={false} />
         {flip && flip.dir === 1 && (
           <div className="flipper fwd" onAnimationEnd={() => commit(flip.target)}>
             <div className="face front right">{render(2 * k, true)}</div>
@@ -297,6 +208,7 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
     );
   }
 
+  const fact = factFor(`spread-${narrow ? position : spread}`);
   const atStart = narrow ? position === 0 : spread === 0;
   const atEnd = narrow ? position === leaves.length - 1 : spread === lastSpread;
 
@@ -304,6 +216,19 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
     <div className="book-stage" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       <button className="turn prev" onClick={() => go(-1)} disabled={atStart} aria-label={t(lang, "prev")} title="Indietro!"><Icon name="left" size={26} /></button>
       {content}
+      <p className="stage-fact">
+        <b>Lo sapevi?</b> {fact.it} <span>— {tr(lang, fact.tr)}</span>
+      </p>
+      {zoom !== null && leaves[zoom]?.kind === "content" && (
+        <div className="zoom-overlay" onClick={() => setZoom(null)}>
+          <div className="zoom-sheet paper" onClick={(e) => e.stopPropagation()}>
+            <ContentPage sheet={(leaves[zoom] as Extract<Leaf, { kind: "content" }>).sheet} fit="width" />
+          </div>
+          <button className="zoom-close" onClick={() => setZoom(null)} aria-label={t(lang, "close")}>
+            <Icon name="close" size={20} />
+          </button>
+        </div>
+      )}
       <button className="turn next" onClick={() => go(1)} disabled={atEnd} aria-label={t(lang, "next")} title="Avanti!"><Icon name="right" size={26} /></button>
     </div>
   );
@@ -315,12 +240,14 @@ function LeafView({
   leaves,
   goTo,
   inert,
+  onZoom,
 }: {
   leaf: Leaf;
   index: number;
   leaves: Leaf[];
   goTo: (i: number) => void;
   inert: boolean;
+  onZoom: (i: number) => void;
 }) {
   const props = inert ? { inert: true } : {};
   switch (leaf.kind) {
@@ -328,6 +255,12 @@ function LeafView({
       return <div className="page-surface cover-surface" {...props}><Cover onOpen={() => goTo(1)} /></div>;
     case "end":
       return <div className="page-surface cover-surface back-cover" {...props}><BackCover /></div>;
+    case "blank":
+      return (
+        <div className="page-surface paper blank-page" {...props}>
+          <NonnaSays quip={blankQuip} mood="wink" size={44} />
+        </div>
+      );
     case "notes":
       return (
         <div className="page-surface paper" {...props}>
@@ -344,8 +277,14 @@ function LeafView({
       );
     case "content":
       return (
-        <div className="page-surface paper" {...props}>
+        <div className="page-surface paper" {...props} onDoubleClick={(e) => {
+          if ((e.target as HTMLElement).closest("input, textarea, button, select, label")) return;
+          onZoom(index);
+        }}>
           <ContentPage sheet={leaf.sheet} />
+          <button className="zoom-btn" onClick={() => onZoom(index)} title="Phóng to trang / Zoom">
+            <Icon name="search" size={16} />
+          </button>
         </div>
       );
   }
@@ -353,32 +292,4 @@ function LeafView({
 
 function PageFoot({ index }: { index: number }) {
   return <div className="page-foot">{["i", "ii", "iii", "iv", "v", "vi"][index - 1] ?? "✎"}</div>;
-}
-
-/** Lớp ẩn có đúng kích thước một trang, vẽ mọi mảnh nội dung để đo chiều cao. */
-function MeasureLayer({ bodyRef, full }: { bodyRef: React.RefObject<HTMLDivElement | null>; full: boolean }) {
-  return (
-    <MeasureCtx.Provider value={true}>
-      <div className={`page-slot measure-slot ${full ? "full" : "left"}`} aria-hidden inert>
-        <div className="page-surface paper">
-          <div className="page-head">
-            <span>Unità</span>
-            <span>Measure</span>
-          </div>
-          <div className="page-body" ref={bodyRef}>
-            {allUnits.flatMap(({ units }) =>
-              units.map((u) => (
-                <div className="unit" data-key={u.key} key={u.key}>
-                  {u.node}
-                </div>
-              )),
-            )}
-          </div>
-          <div className="page-foot">
-            <span>0</span>
-          </div>
-        </div>
-      </div>
-    </MeasureCtx.Provider>
-  );
 }

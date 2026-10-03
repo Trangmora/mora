@@ -68,6 +68,10 @@ const strings = {
     vi: "Giọng máy của trình duyệt — thêm key giọng đọc AI vào .env để nghe giọng tự nhiên (hoặc gửi file nghe của sách)",
     en: "Browser voice — add an AI voice key to .env for a natural voice (or add the book's audio file)",
   },
+  autoTranscript: {
+    vi: "Lời này được máy chép tự động từ file nghe, có thể sai vài chữ (tên riêng, con số).",
+    en: "Transcribed automatically from the audio; a few words (names, numbers) may be off.",
+  },
   ttsNeural: { vi: "Giọng đọc AI (chưa có file nghe của sách)", en: "AI voice (book audio file not added yet)" },
   speed: { vi: "Tốc độ", en: "Speed" },
   loop: { vi: "Lặp lại", en: "Repeat" },

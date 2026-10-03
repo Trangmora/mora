@@ -76,6 +76,28 @@ function blockUnits(b: Block, k: string, page: BookPage): Unit[] {
       return units;
     }
 
+    case "columns": {
+      const total = (b.widths ?? b.cols.map(() => 1)).reduce((a, x) => a + x, 0);
+      return [
+        {
+          key: k,
+          node: (
+            <div className="book-columns" style={{ alignItems: b.align ?? "start" }}>
+              {b.cols.map((col, ci) => (
+                <div key={ci} className="book-col" style={{ flex: `${(b.widths?.[ci] ?? 1) / total} 1 0` }}>
+                  {col.flatMap((cb, bi) => blockUnits(cb, `${k}:c${ci}:${bi}`, page)).map((u) => (
+                    <div className="unit" key={u.key}>
+                      {u.node}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ),
+        },
+      ];
+    }
+
     case "exercise": {
       const ex = b.ex;
       const context = ex.refText ? pageContext(page) : undefined;

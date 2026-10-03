@@ -5,7 +5,7 @@ Website học tiếng Ý trình độ B1, thiết kế như **một cuốn sách
 
 | Tính năng | Cách dùng |
 |---|---|
-| **Mỗi trang vừa một màn hình** | Không có thanh cuộn: nội dung dài tự chia sang trang kế tiếp như sách in (số trang hiện dạng `12 · 2/3`). Bật đáp án / bản dịch hay đổi cỡ cửa sổ thì trang tự chia lại, vẫn giữ đúng chỗ đang đọc. |
+| **Y hệt sách** | Mỗi trang web là đúng một trang sách, dựng lại cùng bố cục (dải mục tiêu, "Cominciamo", số bài đỏ kèm icon, ảnh cắt từ trang sách, mẫu đơn 2 cột, số trang "2 due"). Trang chẵn bên trái, trang lẻ bên phải như sách mở; cả trang thu nhỏ vừa màn hình, không cuộn. Bấm 🔍 ở góc (hoặc nhấp đúp) để phóng to một trang khi đọc / điền. |
 | **Chút hài hước kiểu Ý** | *Nonna Pina* (bà nội Ý) phản ứng mỗi khi chấm bài — «Perfetto! 🤌» hay «Mamma mia!» — và chân mỗi trang có một mẩu *Lo sapevi?* về văn hoá Ý (cappuccino sau 11 giờ, dứa trên pizza…), kèm bản dịch. |
 | **Lật trang** | Nút ‹ › hai bên, phím ← →, hoặc vuốt trên điện thoại. Máy tính hiện 2 trang, điện thoại hiện 1 trang. |
 | **Mục lục (Indice)** | Menu ☰ *Mục lục*, bấm vào tên bài để lật đến trang đó. Có số bài đã làm ✎ 1/2. |
@@ -110,7 +110,8 @@ Các loại nội dung (xem [`src/types.ts`](src/types.ts)):
 - `heading`, `text` (bài đọc), `dialogue` (hội thoại), `vocab` (từ vựng), `grammar` (bảng ngữ pháp), `tip`
 - `audio` — bài nghe: `track: "1.04"`, `src: "/audio/1-04.mp3"` (đặt file vào `public/audio/`), `transcript: "Anna: …\nMarco: …"`
 - `image` — ảnh thật: `photo: "Italian espresso bar"` (từ khoá tiếng Anh; `photoIndex: 1` để lấy ảnh khác), hoặc ảnh riêng `src: "/images/..."`; `scene: "cafe"` là tranh vẽ dự phòng khi không tải được ảnh
-- `exercise` với các dạng: `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
+- Bố cục sách: `sectionTitle` ("Cominciamo"), `columns` (chia cột), `photo` (ảnh cắt từ trang sách), `collage` (ảnh ghép đặt tự do), `sticker` ("CIAO!")
+- `exercise` với các dạng: `form` (mẫu đơn như sách: ô viết, ô tích, kiểu `corso` / `siena`), `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
   `match` (nối), `write` (viết), `speak` (nói)
 
 Mỗi bài tập được xếp vào một kỹ năng để tính điểm lộ trình: tự đoán theo dạng bài (`write` → Viết,
