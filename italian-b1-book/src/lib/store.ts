@@ -51,6 +51,8 @@ type Progress = {
   mistakes: Mistake[];
   notes: string;
   history: Attempt[];
+  /** Cấp bậc espresso cao nhất đã ăn mừng (để biết khi nào lên cấp). */
+  lastLevel?: number;
 };
 
 /** Cài đặt chung của máy. */
@@ -59,6 +61,8 @@ type Settings = {
   showAnswers: boolean;
   showTranslation: boolean;
   speechRate: number;
+  /** Âm thanh vui (lật trang, đúng/sai, lên cấp). */
+  sound?: boolean;
   users: Profile[];
   currentUser: string;
 };
@@ -132,8 +136,8 @@ let state: State = load();
 const listeners = new Set<() => void>();
 
 function save() {
-  const { lang, showAnswers, showTranslation, speechRate, users, currentUser, ...progress } = state;
-  write(SETTINGS_KEY, { lang, showAnswers, showTranslation, speechRate, users, currentUser });
+  const { lang, showAnswers, showTranslation, speechRate, sound, users, currentUser, ...progress } = state;
+  write(SETTINGS_KEY, { lang, showAnswers, showTranslation, speechRate, sound, users, currentUser });
   write(userKey(currentUser), progress);
 }
 

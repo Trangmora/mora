@@ -12,6 +12,7 @@ import { NotesPage } from "./NotesPage";
 import { unitsOf, type Unit } from "./units";
 import { NonnaSays } from "./Nonna";
 import { blankQuip, factFor } from "../lib/humor";
+import { emitFun } from "../lib/fun";
 import { tr } from "../i18n";
 
 /** Một trang trên màn hình (vừa đúng một khung, không cuộn): một phần của trang sách. */
@@ -75,6 +76,11 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
   const position = useStore((s) => Math.min(s.position, leaves.length - 1));
   const [flip, setFlip] = useState<Flip>(null);
   const [zoom, setZoom] = useState<number | null>(null);
+
+  // Tiếng giấy sột soạt mỗi lần lật trang.
+  useEffect(() => {
+    if (flip) emitFun({ type: "flip" });
+  }, [flip]);
 
   // Ở chế độ 2 trang: spread k hiện trang trái 2k-1 và phải 2k.
   const spreadOf = (pos: number) => Math.floor((pos + 1) / 2);

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Book, type BookApi } from "./components/Book";
 import { MistakesPanel } from "./components/MistakesPanel";
 import { ProgressPanel } from "./components/ProgressPanel";
+import { FunLayer } from "./components/Fun";
 import { TopMenu } from "./components/TopMenu";
 import { checkAI } from "./lib/grading";
 import { loadVoices } from "./lib/speech";
@@ -36,6 +37,7 @@ export function App() {
         aiOnline={aiOnline}
       />
       <Book apiRef={book} />
+      <FunLayer />
       {progressOpen && <ProgressPanel onClose={() => setProgressOpen(false)} onOpenPage={openPageById} />}
       {mistakesOpen && (
         <MistakesPanel

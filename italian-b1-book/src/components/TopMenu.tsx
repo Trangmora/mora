@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "./Icon";
+import { EspressoBadge } from "./Fun";
 import { allExercises, isDone } from "../lib/skills";
 import { t } from "../i18n";
 import { setState, useStore } from "../lib/store";
@@ -22,6 +23,7 @@ export function TopMenu({
   const showAnswers = useStore((s) => s.showAnswers);
   const showTr = useStore((s) => s.showTranslation);
   const rate = useStore((s) => s.speechRate);
+  const sound = useStore((s) => s.sound);
   const mistakes = useStore((s) => s.mistakes.length);
   const results = useStore((s) => s.results);
   const me = useStore((s) => s.users.find((u) => u.id === s.currentUser)?.name ?? "?");
@@ -58,6 +60,8 @@ export function TopMenu({
           <Icon name="alert" /> <span className="lbl">{t(lang, "mistakes")}</span> {mistakes > 0 && <span className="badge">{mistakes}</span>}
         </button>
 
+        <EspressoBadge onClick={onProgress} />
+
         <button className="menu-btn path-btn" onClick={onProgress} title={t(lang, "progressTitle")}>
           <span className="avatar mini-avatar">{me.slice(0, 1).toUpperCase()}</span>
           <span className="lbl">{t(lang, "path")}</span>
@@ -82,6 +86,10 @@ export function TopMenu({
           {settings && (
             <div className="popover">
               <p className={aiOnline ? "ok-text" : "warn small"}>{aiOnline ? t(lang, "aiOnline") : t(lang, "aiOffline")}</p>
+              <label className="toggle-row">
+                <input type="checkbox" checked={sound !== false} onChange={(e) => setState({ sound: e.target.checked })} />
+                {lang === "vi" ? "Âm thanh vui (lật trang, đúng/sai)" : "Fun sounds (page turns, right/wrong)"}
+              </label>
               <label>
                 {t(lang, "speechRate")}: {rate.toFixed(2)}×
                 <input type="range" min={0.5} max={1.2} step={0.05} value={rate} onChange={(e) => setState({ speechRate: Number(e.target.value) })} />

@@ -2941,3 +2941,279 @@ textarea.form-input {
   color: var(--ink);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
+
+/* =========================================================
+   Cho vui: Nonna đồng hành, pháo giấy, lên cấp, espresso
+   ========================================================= */
+.confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 120;
+}
+
+.buddy {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 95;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+}
+.buddy-nonna {
+  order: -1;
+  pointer-events: auto;
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #fbe7e1;
+  box-shadow: 0 8px 22px rgba(40, 35, 25, 0.25);
+  animation: buddy-hop 0.6s cubic-bezier(0.3, 1.6, 0.5, 1);
+  transition: transform 0.15s;
+}
+.buddy-nonna:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+.buddy-nonna.mood-shocked {
+  animation: buddy-shake 0.5s ease;
+}
+@keyframes buddy-hop {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(-16px) rotate(-6deg); }
+  100% { transform: translateY(0); }
+}
+@keyframes buddy-shake {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-14deg); }
+  40% { transform: rotate(12deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(5deg); }
+}
+.buddy-bubble {
+  pointer-events: auto;
+  cursor: pointer;
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 40px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 16px 16px 16px 4px;
+  box-shadow: 0 10px 28px rgba(40, 35, 25, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: bubble-in 0.35s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.buddy-it {
+  font: italic 600 15px/1.35 var(--font-body);
+  color: var(--ink);
+}
+.buddy-tr {
+  font: 12.5px/1.4 var(--font-ui);
+  color: var(--ink-soft);
+}
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.9); }
+  to { opacity: 1; transform: none; }
+}
+
+.levelup {
+  width: min(380px, 100%);
+  padding: 26px 26px 22px;
+  background: var(--paper);
+  border-radius: 22px;
+  text-align: center;
+  font-family: var(--font-ui);
+  box-shadow: 0 30px 70px rgba(29, 33, 38, 0.35);
+  animation: bubble-in 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.levelup-emoji {
+  font-size: 64px;
+  line-height: 1;
+  animation: buddy-hop 0.8s 0.2s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.levelup-kicker {
+  margin: 10px 0 0;
+  font: 700 12px var(--font-ui);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.levelup h2 {
+  margin: 4px 0 0;
+  font: 700 34px var(--font-display);
+  letter-spacing: -0.02em;
+}
+.levelup-tr {
+  margin: 2px 0 14px;
+  color: var(--ink-soft);
+}
+.levelup-nonna {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.levelup-nonna span {
+  display: flex;
+  flex-direction: column;
+  font: 14.5px/1.35 var(--font-body);
+}
+.levelup-nonna small {
+  font: 12.5px var(--font-ui);
+  color: var(--ink-soft);
+}
+
+.menu-btn.espresso b {
+  font-variant-numeric: tabular-nums;
+}
+.espresso-cup {
+  display: inline-block;
+  font-size: 16px;
+  filter: saturate(1.2);
+}
+.menu-btn.espresso:hover .espresso-cup {
+  animation: buddy-shake 0.5s ease;
+}
+
+.level-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  background: white;
+  border-radius: 16px;
+}
+.level-now {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.level-now > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.level-now b {
+  font: 700 20px var(--font-display);
+}
+.level-now small {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.level-emoji {
+  font-size: 34px;
+}
+.level-points {
+  margin-left: auto;
+  font: 700 22px var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+.level-track {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+.level-step {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  padding: 4px 0;
+  border-radius: 10px;
+  background: #f3f0ea;
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+.level-step.done {
+  filter: none;
+  opacity: 0.85;
+}
+.level-step.now {
+  filter: none;
+  opacity: 1;
+  background: #fff1d6;
+  box-shadow: 0 0 0 2px var(--saffron);
+}
+.level-bar {
+  display: block;
+  height: 6px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  background: #efece5;
+  overflow: hidden;
+}
+.level-bar span {
+  display: block;
+  height: 100%;
+  background: var(--saffron);
+  border-radius: 3px;
+}
+.toggle-row {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+  margin-bottom: 10px;
+}
+
+/* Đúng thì nảy, sai thì rung */
+.form-input.ok,
+.blank.ok,
+.form-check.sel .box {
+  animation: pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.form-input.ko,
+.blank.ko {
+  animation: shake 0.4s ease;
+}
+.mark {
+  animation: pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+@keyframes pop {
+  0% { transform: scale(0.6); }
+  100% { transform: scale(1); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+}
+
+@media (max-width: 900px) {
+  .buddy {
+    left: 8px;
+    bottom: 8px;
+  }
+  .buddy-nonna {
+    width: 56px;
+    height: 56px;
+  }
+  .buddy-nonna svg {
+    width: 48px;
+    height: 48px;
+  }
+  .buddy-bubble {
+    max-width: calc(100vw - 90px);
+    margin-bottom: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .buddy-nonna,
+  .buddy-bubble,
+  .levelup,
+  .levelup-emoji,
+  .form-input.ok,
+  .form-input.ko,
+  .blank.ok,
+  .blank.ko,
+  .mark {
+    animation: none !important;
+  }
+}

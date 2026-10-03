@@ -4,6 +4,7 @@ import { computeStats, levelOf, SKILLS, type SkillStat } from "../lib/skills";
 import { addUser, renameUser, switchUser, useStore, type Attempt } from "../lib/store";
 import type { Lang, Skill } from "../types";
 import { Icon } from "./Icon";
+import { espressoPoints, levelOf as espressoLevel, LEVELS } from "../lib/fun";
 import { pageLabel } from "./TableOfContents";
 
 /** Bảng điểm & lộ trình học của người đang học. */
@@ -35,6 +36,8 @@ export function ProgressPanel({ onClose, onOpenPage }: { onClose: () => void; on
             <Icon name="close" />
           </button>
         </header>
+
+        <LevelStrip />
 
         <section className="dash-kpis">
           <Kpi label={vi ? "Điểm trung bình" : "Average score"} value={stats.overall === null ? "—" : `${stats.overall}`} unit={stats.overall === null ? undefined : "/100"} />
@@ -299,5 +302,43 @@ function UserSwitcher() {
       </button>
       <button className="pill" onClick={() => setMode("add")}>+ {vi ? "Người học" : "Learner"}</button>
     </div>
+  );
+}
+
+/** Cấp bậc espresso: từ Turista đến Vero italiano. */
+function LevelStrip() {
+  const lang = useStore((s) => s.lang);
+  const results = useStore((s) => s.results);
+  const history = useStore((s) => s.history);
+  const points = useMemo(() => espressoPoints(results, history), [results, history]);
+  const { index, level, next, progress } = espressoLevel(points);
+  return (
+    <section className="level-strip">
+      <div className="level-now">
+        <span className="level-emoji">{level.emoji}</span>
+        <span>
+          <b>{level.it}</b>
+          <small>{tr(lang, level.tr)}</small>
+        </span>
+        <span className="level-points">{points} ☕</span>
+      </div>
+      <div className="level-track" aria-label={`${points} ☕`}>
+        {LEVELS.map((l, i) => (
+          <span key={l.it} className={`level-step ${i < index ? "done" : i === index ? "now" : ""}`} title={`${l.it} · ${l.min} ☕`}>
+            {l.emoji}
+          </span>
+        ))}
+      </div>
+      {next && (
+        <p className="muted">
+          <span className="level-bar">
+            <span style={{ width: `${Math.round(progress * 100)}%` }} />
+          </span>
+          {lang === "vi"
+            ? `Còn ${next.min - points} ☕ nữa để thành ${next.it} — mỗi câu đúng +10 ☕, bài 100 điểm +20 ☕.`
+            : `${next.min - points} ☕ to become ${next.it} — each right answer +10 ☕, a perfect exercise +20 ☕.`}
+        </p>
+      )}
+    </section>
   );
 }

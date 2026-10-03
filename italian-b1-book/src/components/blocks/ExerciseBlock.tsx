@@ -6,9 +6,9 @@ import type { BadgeIcon, BookPage, Exercise, FormExercise } from "../../types";
 import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
 import { blanksOf, gradeByKey, gradeWithAI, isAIAvailable, needsAI, SEP, toMistakes } from "../../lib/grading";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib/speech";
-import { reaction, thinkingQuip } from "../../lib/humor";
+import { thinkingQuip } from "../../lib/humor";
+import { emitFun } from "../../lib/fun";
 import { useMeasuring } from "../../lib/measure";
-import { NonnaSays } from "../Nonna";
 
 const EMPTY: Record<string, string> = {};
 
@@ -108,6 +108,7 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
   function checkByKey() {
     const r = gradeByKey(ex, responses, lang);
     saveResult(ex.id, r, toMistakes(page, ex, r), { skill: skillOf(ex, page), pageId: page.id, counts: !needsAI(ex) });
+    if (!needsAI(ex)) emitFun({ type: "graded", score: r.score, wrong: r.items.filter((i) => !i.correct).length });
   }
 
   async function checkWithAI() {
@@ -116,6 +117,7 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
     try {
       const r = await gradeWithAI(ex, responses, lang, context);
       saveResult(ex.id, r, toMistakes(page, ex, r), { skill: skillOf(ex, page), pageId: page.id, counts: true });
+      emitFun({ type: "graded", score: r.score, wrong: r.items.filter((i) => !i.correct).length });
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -134,7 +136,7 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
         )}
         {ai && (
           <button className="pill ai" onClick={checkWithAI} disabled={loading}>
-            <Icon name="sparkle" size={15} /> {t(lang, "aiCheck")}
+            <Icon name="sparkle" size={15} /> {loading ? thinkingQuip.it : t(lang, "aiCheck")}
           </button>
         )}
         {(result || Object.keys(responses).length > 0) && (
@@ -146,14 +148,6 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
           </span>
         )}
       </footer>
-      {loading && <NonnaSays quip={thinkingQuip} mood="wink" size={34} />}
-      {!loading && scored && (
-        <NonnaSays
-          quip={reaction(result.score, result.at.length + ex.id.length + Number(result.at.slice(-3, -1)))}
-          mood={result.score >= 80 ? "happy" : result.score >= 50 ? "wink" : "shocked"}
-          size={34}
-        />
-      )}
       {error && <p className="warn">{error}</p>}
       {result?.summary && <p className="ai-note">{result.summary}</p>}
       {result?.tips?.length ? (
