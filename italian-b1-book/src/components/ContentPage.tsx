@@ -36,11 +36,16 @@ export function ContentPage({ sheet, fit = "page" }: { sheet: Sheet; fit?: "page
     <div className={`page-viewport fit-${fit}`} ref={viewport}>
       {fit === "width" && <div style={{ height: (canvas.current?.scrollHeight ?? 0) * box.scale }} aria-hidden />}
       <div
-        className={`book-page ${odd ? "odd" : "even"}`}
+        className={`book-page ${odd ? "odd" : "even"} ${page.sideTab ? "has-tab" : ""}`}
         ref={canvas}
         style={{ width: PAGE_W, minHeight: PAGE_W * PAGE_RATIO, transform: `translate(${box.left}px, 0) scale(${box.scale})` }}
       >
-        {page.runningHead && <div className="running-head">{page.runningHead}</div>}
+        {page.runningHead && (
+          <div className="running-row">
+            <div className="running-head">{page.runningHead}</div>
+            {page.banner && <div className="section-banner">{page.banner}</div>}
+          </div>
+        )}
         {page.sideTab && (
           <div className="side-tab" aria-hidden>
             <b>{page.sideTab.unit}</b>

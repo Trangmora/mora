@@ -71,7 +71,9 @@ function MistakeRow({ m }: { m: Mistake }) {
       const single: Exercise =
         ex.kind === "match"
           ? { ...ex, left: ex.left.filter((l) => l.id === itemId) }
-          : ({ ...ex, items: (ex.items as { id: string }[]).filter((i) => i.id === itemId) } as Exercise);
+          : ex.kind === "cloze"
+            ? ex // đoạn văn: gửi cả đoạn để AI có ngữ cảnh, chỉ kèm câu trả lời của ô sai
+            : ({ ...ex, items: (ex.items as { id: string }[]).filter((i) => i.id === itemId) } as Exercise);
       const saved = getState().responses[m.exerciseId]?.[itemId];
       const responses: Record<string, string> = saved !== undefined ? { [itemId]: saved } : {};
       const r = await gradeWithAI(single, responses, lang);

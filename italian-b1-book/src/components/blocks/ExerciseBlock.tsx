@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { Icon } from "../Icon";
 import { skillOf } from "../../lib/skills";
 import { t, tr } from "../../i18n";
-import type { BadgeIcon, BookPage, Exercise, FormExercise } from "../../types";
+import type { BadgeIcon, BookPage, ClozeExercise, Exercise, FormExercise } from "../../types";
+import { parseCloze } from "../../lib/cloze";
+import { Photo } from "../Photo";
 import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
 import { blanksOf, gradeByKey, gradeWithAI, isAIAvailable, needsAI, SEP, toMistakes } from "../../lib/grading";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib/speech";
@@ -18,7 +20,7 @@ export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind
 /** Số câu có thể tách riêng sang trang khác (bài nối giữ nguyên một khối). */
 export function itemCount(ex: Exercise) {
   // Bài nối và mẫu đơn giữ nguyên một khối như sách.
-  return ex.kind === "match" || ex.kind === "form" ? 0 : ex.items.length;
+  return ex.kind === "match" || ex.kind === "form" || ex.kind === "cloze" ? 0 : ex.items.length;
 }
 
 /** Ô số bài màu đỏ như sách, bên dưới là icon dạng bài (nói, nhìn, đọc, viết, nghe). */
@@ -340,6 +342,9 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
         </div>
       );
 
+    case "cloze":
+      return <ClozeView ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={results} />;
+
     case "form":
       return <FormView ex={ex} responses={responses} set={set} showAnswers={showAnswers} results={results} radioPrefix={radioPrefix} />;
 
@@ -550,6 +555,71 @@ function FormView({
         <div className="form-col">{col(2).map(field)}</div>
       </div>
       {col("foot").length > 0 && <div className="form-foot">{col("foot").map(field)}</div>}
+    </div>
+  );
+}
+
+/** Đoạn văn / hội thoại có chỗ trống ngay trong câu, bố cục như sách (khung bo góc, chữ chạy quanh ảnh). */
+function ClozeView({
+  ex,
+  responses,
+  set,
+  showAnswers,
+  results,
+}: {
+  ex: ClozeExercise & { id: string };
+  responses: Record<string, string>;
+  set: (itemId: string, v: string) => void;
+  showAnswers: boolean;
+  results: Map<string, ItemResult>;
+}) {
+  const parts = parseCloze(ex);
+  return (
+    <div className="cloze">
+      {parts.map((part, pi) => (
+        <section key={pi} className={`cloze-part ${part.boxed ? "boxed" : ""} cols-${part.columns ?? 1}`}>
+          {part.image && (
+            <figure className={`cloze-img ${part.image.side}`} style={{ width: `${part.image.width}%` }}>
+              {part.image.src ? (
+                <img src={part.image.src} alt={part.image.alt} loading="lazy" />
+              ) : part.image.photo ? (
+                <Photo query={part.image.photo} alt={part.image.alt} />
+              ) : null}
+            </figure>
+          )}
+          {part.title && <h4 className="cloze-title">{part.title}</h4>}
+          <div className="cloze-text">
+            {part.lines.map((line, li) => (
+              <p key={li} className={`cloze-line ${line.bullet ? "cloze-turn" : ""}`}>
+                {line.bullet && <span className="cloze-bullet">{line.bullet}</span>}
+                {line.tokens.map((tok, ti) => {
+                  if (tok.t === "text") return <span key={ti}>{tok.s}</span>;
+                  if (tok.t === "em") return <em key={ti}>{tok.s}</em>;
+                  if (tok.t === "given") return <em key={ti} className="cloze-given">{tok.s}</em>;
+                  const r = results.get(tok.id);
+                  const showKey = (showAnswers || (r && !r.correct)) && tok.answers[0];
+                  return (
+                    <span key={ti} className="cloze-slot">
+                      <input
+                        className={`blank ${r ? (r.correct ? "ok" : "ko") : ""}`}
+                        value={responses[tok.id] ?? ""}
+                        style={{ width: `${Math.max(3.2, tok.answers[0].length * 0.48 + 1.4)}em` }}
+                        onChange={(e) => set(tok.id, e.target.value)}
+                        spellCheck={false}
+                        autoCapitalize="off"
+                        aria-label={tok.id}
+                      />
+                      {showKey && <sup className="cloze-key">{tok.answers[0]}</sup>}
+                      {r && !r.correct && r.explanation && <span className="cloze-why">{r.explanation}</span>}
+                    </span>
+                  );
+                })}
+              </p>
+            ))}
+          </div>
+        </section>
+      ))}
+      {ex.source && <p className="cloze-source">{ex.source}</p>}
     </div>
   );
 }

@@ -111,7 +111,7 @@ Các loại nội dung (xem [`src/types.ts`](src/types.ts)):
 - `audio` — bài nghe: `track: "1.04"`, `src: "/audio/1-04.mp3"` (đặt file vào `public/audio/`), `transcript: "Anna: …\nMarco: …"`
 - `image` — ảnh thật: `photo: "Italian espresso bar"` (từ khoá tiếng Anh; `photoIndex: 1` để lấy ảnh khác), hoặc ảnh riêng `src: "/images/..."`; `scene: "cafe"` là tranh vẽ dự phòng khi không tải được ảnh
 - Bố cục sách: `sectionTitle` ("Cominciamo"), `columns` (chia cột), `photo` (ảnh cắt từ trang sách), `collage` (ảnh ghép đặt tự do), `sticker` ("CIAO!")
-- `exercise` với các dạng: `form` (mẫu đơn như sách: ô viết, ô tích, kiểu `corso` / `siena`), `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
+- `exercise` với các dạng: `cloze` (đoạn văn / hội thoại có ô trống ngay trong câu: `{{đáp án|đáp án khác}}`, `{{=mẫu sách}}`, `*gợi ý nghiêng*`, dòng "• " / "○ " là lượt thoại), `form` (mẫu đơn như sách: ô viết, ô tích, kiểu `corso` / `siena`), `fill` (điền từ, `___` là ô trống), `choice` (trắc nghiệm), `truefalse`,
   `match` (nối), `write` (viết), `speak` (nói)
 
 Mỗi bài tập được xếp vào một kỹ năng để tính điểm lộ trình: tự đoán theo dạng bài (`write` → Viết,

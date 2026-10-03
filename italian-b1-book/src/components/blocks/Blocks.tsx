@@ -48,10 +48,13 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
 
     case "sectionTitle":
       return (
-        <h2 className="section-title">
-          <span className="section-initial">{block.text.slice(0, 1)}</span>
-          {block.text.slice(1)}
-        </h2>
+        <div className="section-row">
+          <h2 className="section-title">
+            <span className="section-initial">{block.text.slice(0, 1)}</span>
+            {block.text.slice(1)}
+          </h2>
+          {block.banner && <div className="section-banner">{block.banner}</div>}
+        </div>
       );
 
     case "photo":

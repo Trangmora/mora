@@ -115,8 +115,38 @@ export type FormExercise = {
   items: FormField[];
 };
 
+/** Ảnh nằm trong một phần của bài (chữ chạy quanh ảnh như sách). */
+export type InlineImage = {
+  /** Ảnh có sẵn (public/images/…). */
+  src?: string;
+  /** Hoặc ảnh thật tìm theo từ khoá. */
+  photo?: string;
+  alt: string;
+  side: "left" | "right";
+  /** Chiều rộng ảnh, % khung. */
+  width: number;
+};
+
+/** Đoạn văn / hội thoại có chỗ trống ngay trong câu — xem cú pháp ở src/lib/cloze.ts. */
+export type ClozeExercise = {
+  kind: "cloze";
+  parts: {
+    /** Tiêu đề phần, ví dụ "Tutti i numeri… del Bel Paese" hoặc "A. Yunjie Bo, cinese…". */
+    title?: string;
+    text: string;
+    image?: InlineImage;
+    /** Đóng khung như sách (viền xanh bo góc). */
+    boxed?: boolean;
+    /** Chia chữ thành 2 cột. */
+    columns?: 1 | 2;
+  }[];
+  /** Nguồn trích, ví dụ "(adattato da Focus, n. 2, 2000)". */
+  source?: string;
+};
+
 export type ExerciseBody =
   | FillExercise
+  | ClozeExercise
   | FormExercise
   | ChoiceExercise
   | MatchExercise
@@ -185,7 +215,7 @@ export type Block =
     }
   | { type: "tip"; it?: string; tr: L10n }
   /** Tiêu đề phần lớn như "Cominciamo". */
-  | { type: "sectionTitle"; text: string }
+  | { type: "sectionTitle"; text: string; banner?: string }
   /** Chia cột như trong sách; widths là tỉ lệ mỗi cột (ví dụ [3, 5, 2]). */
   | { type: "columns"; cols: Block[][]; widths?: number[]; align?: "start" | "center" | "end" }
   /** Ảnh cắt từ trang sách (public/images/…). */
@@ -223,7 +253,9 @@ export type BookPage = {
   addedOn?: string;
   /** Tiêu đề chạy ở đầu trang như sách (ví dụ "Cominciamo"). */
   runningHead?: string;
-  /** Thẻ bên lề trang lẻ (ví dụ "U1 · Entriamo in Italia!"). */
+  /** Dải chữ đỏ ở đầu trang (ví dụ "GLI STRANIERI E L'ITALIA"). */
+  banner?: string;
+  /** Thẻ bên lề (trang lẻ ở phải, trang chẵn ở trái), ví dụ "U1 · Entriamo in Italia!". */
   sideTab?: { unit: string; title: string };
   blocks: Block[];
 };

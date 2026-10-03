@@ -1,4 +1,5 @@
 import type { BookPage, Exercise, Lang } from "../types";
+import { clozeBlanks } from "./cloze";
 import type { ExerciseResult, ItemResult, Mistake } from "./store";
 import { setNeuralVoice } from "./speech";
 
@@ -87,6 +88,20 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
         });
       }
       break;
+    case "cloze":
+      for (const b of clozeBlanks(ex)) {
+        const g = responses[b.id] ?? "";
+        const accepted = b.answers.map(normalize);
+        const ok = accepted.includes(normalize(g));
+        items.push({
+          id: b.id,
+          correct: ok,
+          userAnswer: g,
+          correctAnswer: b.answers[0],
+          explanation: !ok && g && accepted.map(stripAccents).includes(stripAccents(normalize(g))) ? accentNote : undefined,
+        });
+      }
+      break;
     case "form":
       for (const f of ex.items) {
         if (f.given) continue;
@@ -145,6 +160,7 @@ export function looseMatch(given: string, key: string): boolean {
 export function itemPrompt(ex: Exercise, itemId: string): string {
   if (ex.kind === "match") return ex.left.find((l) => l.id === itemId)?.text ?? itemId;
   if (ex.kind === "form") return ex.items.find((f) => f.id === itemId)?.label ?? itemId;
+  if (ex.kind === "cloze") return clozeBlanks(ex).find((b) => b.id === itemId)?.context ?? itemId;
   const it = (ex.items as { id: string; prompt: string }[]).find((i) => i.id === itemId);
   return it?.prompt ?? itemId;
 }

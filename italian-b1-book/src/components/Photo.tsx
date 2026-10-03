@@ -26,7 +26,20 @@ function cached(key: string): PhotoInfo | null {
 }
 
 /** Ảnh chụp thật tìm theo từ khoá (qua /api/photo), có ghi công tác giả; lỗi thì hiện tranh vẽ dự phòng. */
-export function Photo({ query, index = 0, fallback, caption }: { query: string; index?: number; fallback?: SceneName; caption?: string }) {
+export function Photo({
+  query,
+  index = 0,
+  fallback,
+  caption,
+  alt,
+}: {
+  query: string;
+  index?: number;
+  fallback?: SceneName;
+  caption?: string;
+  /** Mô tả hiện trong khung khi chưa tải được ảnh. */
+  alt?: string;
+}) {
   const key = `${query}#${index}`;
   const [info, setInfo] = useState<PhotoInfo | null>(() => cached(key));
   const [state, setState] = useState<"loading" | "ok" | "fail">("loading");
@@ -54,7 +67,7 @@ export function Photo({ query, index = 0, fallback, caption }: { query: string; 
   if (state === "fail") {
     return (
       <>
-        {fallback ? <Scene name={fallback} /> : <div className="photo-box missing">{query}</div>}
+        {fallback ? <Scene name={fallback} /> : <div className="photo-box missing">📷 {alt ?? query}</div>}
         {caption && <figcaption>{caption}</figcaption>}
       </>
     );
