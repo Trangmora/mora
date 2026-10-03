@@ -158,6 +158,33 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
     case "audio":
       return <AudioBlock block={block} />;
 
+    case "barChart":
+      return (
+        <figure className="bar-chart">
+          <div className="bars">
+            {block.bars.map((b, i) => (
+              <div key={i} className="bar-row">
+                <span className="bar" style={{ width: `${(b.value / block.max) * 100}%`, background: b.color }} />
+                <span className="bar-val">{String(b.value).replace(".", ",")}</span>
+              </div>
+            ))}
+          </div>
+          <div className="bar-axis">
+            {Array.from({ length: Math.floor(block.max / block.step) + 1 }, (_, i) => (
+              <span key={i} style={{ left: `${((i * block.step) / block.max) * 100}%` }}>{i * block.step}</span>
+            ))}
+          </div>
+          <figcaption className="bar-legend">
+            {block.bars.map((b, i) => (
+              <span key={i}>
+                <i style={{ background: b.color }} /> {b.label}
+              </span>
+            ))}
+          </figcaption>
+          {showTr && block.caption && <p className="translation">{tr(lang, block.caption)}</p>}
+        </figure>
+      );
+
     case "theory":
       return <Theory text={block.text} note={block.tr} />;
 

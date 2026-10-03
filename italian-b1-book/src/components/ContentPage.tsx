@@ -54,7 +54,7 @@ export function ContentPage({ sheet, fit = "page" }: { sheet: Sheet; fit?: "page
     <div className={`page-viewport fit-${mode === "phone" ? "width phone" : mode}`} ref={viewport}>
       {mode !== "page" && <div style={{ height: box.h * box.scale }} aria-hidden />}
       <div
-        className={`book-page ${odd ? "odd" : "even"} ${page.sideTab ? "has-tab" : ""} ${phone ? "phone" : ""}`}
+        className={`book-page ${odd ? "odd" : "even"} ${page.sideTab ? "has-tab" : ""} ${phone ? "phone" : ""} ${page.tint ? `tint-${page.tint}` : ""} ${page.framed ? "framed" : ""}`}
         ref={canvas}
         style={{ width: W, minHeight: phone ? 0 : PAGE_W * PAGE_RATIO, transform: `translate(${box.left}px, 0) scale(${box.scale})` }}
       >
@@ -68,6 +68,11 @@ export function ContentPage({ sheet, fit = "page" }: { sheet: Sheet; fit?: "page
           <div className="side-tab" aria-hidden style={page.sideTab.color ? ({ "--tab": page.sideTab.color } as React.CSSProperties) : undefined}>
             <b>{page.sideTab.unit}</b>
             {page.sideTab.title && <span>{page.sideTab.title}</span>}
+          </div>
+        )}
+        {page.ribbon && (
+          <div className="page-ribbon">
+            <span>{page.ribbon}</span>
           </div>
         )}
         <div className={`book-page-body ${page.notebook ? "notebook-frame" : ""}`}>

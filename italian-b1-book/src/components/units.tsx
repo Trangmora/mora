@@ -104,6 +104,8 @@ function blockUnits(b: Block, k: string, page: BookPage): Unit[] {
       const units: Unit[] = [
         { key: `${k}:h`, keepWithNext: true, node: <ExercisePart ex={ex} page={page} context={context} part={{ kind: "head" }} /> },
       ];
+      // Bài chỉ có đề (ví dụ "1 A. Leggiamo." đứng trước đoạn đọc): không có câu hỏi, không nút chấm.
+      if ((ex.kind === "speak" || ex.kind === "write") && ex.items.length === 0) return units;
       const n = itemCount(ex);
       // Câu cuối luôn đi cùng nút chấm bài, để nút không nằm lẻ loi đầu trang sau.
       if (n === 0)

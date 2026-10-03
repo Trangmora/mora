@@ -5,7 +5,7 @@ import { speak } from "../../lib/speech";
 import { useStore } from "../../lib/store";
 
 /** **đậm**, *nghiêng*, ***đậm nghiêng*** trong một dòng. */
-function inline(text: string): ReactNode[] {
+export function inline(text: string): ReactNode[] {
   const out: ReactNode[] = [];
   const re = /\*\*\*(.+?)\*\*\*|\*\*(.+?)\*\*|\*(.+?)\*/g;
   let last = 0;
@@ -22,26 +22,31 @@ function inline(text: string): ReactNode[] {
   return out;
 }
 
-const plain = (s: string) => s.replace(/\*/g, "");
+const plain = (s: string) => s.replace(/\*/g, "").replace(/^\d+\.\s*/, "").replace(/^\([^)]*\)\s*/, "");
 
 /** Câu ví dụ in nghiêng: bấm để nghe giọng Ý. */
-function Example({ text, indent }: { text: string; indent: boolean }) {
-  // Phần sau " = " là lời giải thích, không đọc.
-  const [it, ...rest] = text.split(" = ");
+function Example({ text, indent, bullet, as = "p" }: { text: string; indent?: boolean; bullet?: string; as?: "p" | "span" }) {
+  // Phần sau " = " là lời giải thích, không đọc. "1. " ở đầu là số thứ tự, không nghiêng.
+  const [first, ...rest] = text.split(" = ");
+  const num = first.match(/^(\d+\.)\s+(.*)$/);
+  const it = num ? num[2] : first;
+  const Tag = as;
   return (
-    <p className={`th-ex ${indent ? "indent" : ""}`}>
+    <Tag className={`th-ex ${indent ? "indent" : ""} ${bullet ? "th-dl" : ""}`}>
+      {bullet && <span className="th-bullet">{bullet}</span>}
+      {num && <span className="th-num">{num[1]} </span>}
       <span className="th-say" role="button" tabIndex={0} onClick={() => speak(plain(it))} onKeyDown={(e) => e.key === "Enter" && speak(plain(it))}>
         <i>{inline(it)}</i>
       </span>
       {rest.length > 0 && <> = {inline(rest.join(" = "))}</>}
-    </p>
+    </Tag>
   );
 }
 
 function Table({ rows }: { rows: string[][] }) {
   const [head, ...body] = rows;
   return (
-    <table className="th-table">
+    <table className={`th-table ${head.length > 3 ? "wide" : ""}`}>
       <thead>
         <tr>
           {head.map((h, i) => (
@@ -77,6 +82,7 @@ export function Theory({ text, note }: { text: string; note?: L10n }) {
   const showTr = useStore((s) => s.showTranslation);
   const lines = text.split("\n");
   const cols: ReactNode[][] = [[]];
+  const top: ReactNode[] = [];
   let col = cols[0];
   let inList = false;
   let k = 0;
@@ -104,12 +110,31 @@ export function Theory({ text, note }: { text: string; note?: L10n }) {
       col.push(<Table key={k++} rows={rows} />);
       continue;
     }
-    if (line.startsWith("## ")) col.push(<h4 key={k++} className="th-h2">{inline(line.slice(3))}</h4>);
+    if (line === "---") {
+      // Phần phía trên chiếm cả chiều ngang trang, phía dưới chia 2 cột.
+      top.push(...cols.flat());
+      cols.length = 0;
+      col = [];
+      cols.push(col);
+      inList = false;
+      continue;
+    }
+    if (line.startsWith("### ")) col.push(<h5 key={k++} className="th-h3">{inline(line.slice(4))}</h5>);
+    else if (line.startsWith("## ")) col.push(<h4 key={k++} className="th-h2">{inline(line.slice(3))}</h4>);
+    else if (line.startsWith("^^ ")) col.push(<p key={k++} className="th-center">{inline(line.slice(3))}</p>);
+    else if (line.startsWith("• ") || line.startsWith("○ ")) col.push(<Example key={k++} text={line.slice(2)} bullet={line[0]} indent={inList} />);
     else if (line.startsWith("# ")) col.push(<h3 key={k++} className="th-h1">{inline(line.slice(2))}</h3>);
     else if (line.startsWith("! ")) col.push(<p key={k++} className="th-warn">{inline(line.slice(2))}</p>);
     else if (line.startsWith("- ")) {
       inList = true;
-      col.push(<p key={k++} className="th-li">– {inline(line.slice(2))}</p>);
+      // "- nhãn: | ví dụ" → nhãn thường + ví dụ nghiêng bấm để nghe.
+      const [label, ex] = line.slice(2).split(" | ");
+      col.push(
+        <p key={k++} className="th-li">
+          – {inline(label)}
+          {ex !== undefined && <> <Example text={ex} as="span" /></>}
+        </p>,
+      );
     } else if (line.startsWith(">> ")) col.push(<Example key={k++} text={line.slice(3)} indent />);
     else if (line.startsWith("> ")) col.push(<Example key={k++} text={line.slice(2)} indent={inList} />);
     else if (line.startsWith("%% ")) {
@@ -124,7 +149,8 @@ export function Theory({ text, note }: { text: string; note?: L10n }) {
   }
   return (
     <div className="theory">
-      <div className="theory-cols">
+      {top.length > 0 && <div className="theory-top">{top}</div>}
+      <div className={`theory-cols ${cols.length === 1 ? "single" : ""}`}>
         {cols.map((c, i) => (
           <div key={i} className="theory-col">
             {c}

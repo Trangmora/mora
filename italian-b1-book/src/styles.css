@@ -4126,3 +4126,246 @@ textarea.form-input {
   padding-left: 0;
   border-left: none;
 }
+
+/* ---- Lý thuyết: thêm ---- */
+.theory-top {
+  margin-bottom: 10px;
+}
+.th-h3 {
+  margin: 6px 0 4px;
+  font: 500 15.5px/1.2 var(--book-serif);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  color: #222;
+}
+.th-center {
+  text-align: center;
+  font: 15.5px var(--book-serif);
+  color: #2a55a3;
+}
+.th-dl {
+  display: flex;
+  gap: 8px;
+}
+.th-bullet {
+  flex: none;
+  width: 10px;
+  color: #444;
+  font-style: normal;
+}
+.th-num {
+  font-style: normal;
+}
+.th-li .th-ex {
+  font: inherit;
+}
+.th-table.wide tbody th {
+  width: 12%;
+  text-align: center;
+}
+.th-table.wide thead th {
+  border-left: 2px solid white;
+}
+.th-table.wide td {
+  color: #222;
+  font-weight: 500;
+}
+
+/* ---- Verifica (trang 19): nền xanh, ví dụ, ô "Punti", khung "Ora sono capace di…" ---- */
+.book-page.tint-blue {
+  background: linear-gradient(#d6ecf7, #cfe7f4);
+}
+.ex-example {
+  margin: 2px 0 6px 76px;
+  font: 15.5px/1.4 var(--book-serif);
+}
+.ex-example p {
+  margin: 0;
+}
+.ex-example-a {
+  padding-left: 76px;
+}
+.ex-example-a i,
+.ex-example-a b i {
+  font-family: var(--book-sans);
+}
+.punti {
+  order: 9;
+  margin-left: auto;
+  padding: 3px 10px;
+  background: white;
+  font: 600 15px var(--book-serif);
+}
+.tint-blue .ex-head .ex-badge-num {
+  background: #2e8cc9;
+}
+.ex-part-head.capace,
+.ex-part-body.capace,
+.ex-part-foot.capace {
+  border: 2px dashed #3d6db5;
+  background: rgba(255, 255, 255, 0.75);
+}
+.ex-part-head.capace {
+  margin-top: 10px;
+  padding: 10px 18px 0;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+}
+.ex-part-head.capace .ex-head .ex-badge {
+  display: none;
+}
+.ex-part-head.capace .ex-instr {
+  font: italic 700 25px/1.2 var(--book-sans);
+  color: #2a55a3;
+  text-transform: uppercase;
+}
+.ex-part-body.capace {
+  padding: 0 18px 4px;
+  border-top: none;
+  border-bottom: none;
+}
+.ex-part-body.capace .ex-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 28px;
+  list-style: none;
+  padding-left: 0;
+}
+.ex-part-foot.capace {
+  padding: 0 18px 8px;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+.ex-lead {
+  display: block;
+  font: italic 14px/1.3 var(--book-sans);
+  color: #222;
+}
+.ex-lead::before {
+  content: "▶ ";
+  font-style: normal;
+  color: #2a55a3;
+}
+.ex-item.has-lead .line {
+  display: block;
+  padding-left: 18px;
+}
+
+/* ---- Dải đỏ nghiêng đầu trang (Viaggiamo in Italia / Un'italiana famosa) ---- */
+.page-ribbon {
+  display: flex;
+  justify-content: center;
+  margin: -14px 0 10px;
+}
+.page-ribbon span {
+  padding: 6px 34px 4px;
+  background: #e0393e;
+  color: white;
+  font: italic 500 30px/1.1 "Caveat", var(--book-sans);
+  letter-spacing: 0.02em;
+  transform: rotate(-4deg);
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.book-page.framed .book-page-body {
+  border: 1px solid #333;
+  padding: 10px 14px;
+}
+
+/* ---- Biểu đồ cột ngang ---- */
+.bar-chart {
+  margin: 8px 0 10px;
+  padding: 8px 12px 8px 14px;
+  background: white;
+  font: 12px var(--book-sans);
+}
+.bars {
+  position: relative;
+  border-left: 1px solid #666;
+  padding: 2px 0;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+}
+.bar {
+  height: 11px;
+  border-radius: 0 2px 2px 0;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+}
+.bar-val {
+  font-weight: 600;
+}
+.bar-axis {
+  position: relative;
+  height: 16px;
+  border-top: 1px solid #666;
+  margin-right: 34px;
+}
+.bars {
+  margin-right: 34px;
+}
+.bar-axis span {
+  position: absolute;
+  top: 2px;
+  transform: translateX(-50%);
+}
+.bar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin-top: 4px;
+}
+.bar-legend i {
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  vertical-align: middle;
+}
+
+/* Hội thoại •/○ trong lý thuyết */
+.th-ex.th-dl {
+  display: block;
+  position: relative;
+  padding-left: 18px;
+}
+.th-ex.th-dl.indent {
+  padding-left: 38px;
+}
+.th-dl .th-bullet {
+  position: absolute;
+  left: 2px;
+}
+.th-dl.indent .th-bullet {
+  left: 22px;
+}
+
+/* Bài điền trong trang sách: đánh số 1. 2. 3. như sách; Verifica gọn hơn */
+.book-page .kind-fill .ex-items {
+  list-style: decimal;
+}
+.book-page .kind-fill .ex-items li::marker {
+  font: 15.5px var(--book-serif);
+  color: inherit;
+}
+.book-page .kind-fill .ex-item {
+  font: 16px/1.5 var(--book-serif);
+}
+.tint-blue .ex-item {
+  margin: 0 0 2px;
+  line-height: 1.6;
+}
+.tint-blue .blank {
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.7);
+}
+.tint-blue .ex-foot {
+  margin-top: 2px;
+}
+.ex-part-body.capace .ex-item {
+  margin: 0 0 6px;
+}
+.book-page .ex-part-body.capace .ex-items {
+  list-style: none;
+}

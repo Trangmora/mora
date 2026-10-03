@@ -37,6 +37,8 @@ export type FillExercise = {
     hint?: string;
     /** Tranh của ô trong bảng trò chơi. */
     image?: string;
+    /** Nhãn in nghiêng phía trên câu (khung "Ora sono capace di…"), ví dụ "usare i verbi al passato prossimo:". */
+    lead?: string;
   }[];
   /** Ngân hàng từ (nếu sách cho sẵn các từ để chọn). */
   wordBank?: string[];
@@ -222,6 +224,12 @@ export type Exercise = ExerciseBody & {
   subtitle?: string;
   /** Đoạn hướng dẫn in thường dưới đề bài (luật chơi…), mỗi dòng một câu. */
   intro?: string;
+  /** Câu ví dụ đầu bài: "Esempio: …" và dòng đáp án mẫu "→ …". */
+  example?: { q: string; a: string };
+  /** Dòng "Punti …… / 10" cuối bài (bài kiểm tra Verifica). */
+  points?: number;
+  /** "capace": khung nét đứt "ORA SONO CAPACE DI…" cuối bài Verifica. */
+  variant?: "capace";
 };
 
 export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match" | "check";
@@ -300,6 +308,8 @@ export type Block =
    * "===" sang cột mới · dòng trống = đoạn mới · **đậm**, *nghiêng*, ***đậm nghiêng***.
    */
   | { type: "theory"; text: string; tr?: L10n }
+  /** Biểu đồ cột ngang như sách (trang 20). */
+  | { type: "barChart"; bars: { label: string; value: number; color: string }[]; max: number; step: number; caption?: L10n }
   | { type: "exercise"; ex: Exercise };
 
 export type BookPage = {
@@ -320,6 +330,12 @@ export type BookPage = {
   banner?: string;
   /** Thẻ bên lề (trang lẻ ở phải, trang chẵn ở trái), ví dụ "U1 · Entriamo in Italia!". */
   sideTab?: { unit: string; title?: string; /** Màu thẻ (mặc định xanh), ví dụ đỏ ở Lessico, cam ở Grammatica. */ color?: string };
+  /** Nền màu cả trang (trang Verifica màu xanh nhạt). */
+  tint?: "blue";
+  /** Dải đỏ nghiêng đầu trang như "Viaggiamo in Italia", "Un'italiana famosa". */
+  ribbon?: string;
+  /** Khung viền mảnh bao nội dung trang. */
+  framed?: boolean;
   /** Khung sổ gáy lò xo bao quanh trang, với tiêu đề cam như "Ripassiamo quello che abbiamo studiato!". */
   notebook?: { title: string };
   blocks: Block[];

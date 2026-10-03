@@ -11,6 +11,7 @@ import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib
 import { thinkingQuip } from "../../lib/humor";
 import { emitFun } from "../../lib/fun";
 import { useMeasuring } from "../../lib/measure";
+import { inline } from "./Theory";
 
 const EMPTY: Record<string, string> = {};
 
@@ -21,6 +22,8 @@ export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind
 export function itemCount(ex: Exercise) {
   // Bài nối và mẫu đơn giữ nguyên một khối như sách.
   if ((ex.kind === "speak" || ex.kind === "fill") && ex.layout === "board") return 0;
+  // Khung "Ora sono capace di…" giữ nguyên một khối 2 cột.
+  if (ex.variant === "capace") return 0;
   return ex.kind === "match" || ex.kind === "form" || ex.kind === "cloze" ? 0 : ex.items.length;
 }
 
@@ -74,7 +77,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
 
   if (part.kind === "head") {
     return (
-      <div className={`exercise kind-${ex.kind} ex-part-head`} id={measuring ? undefined : ex.id}>
+      <div className={`exercise kind-${ex.kind} ex-part-head ${ex.variant ?? ""}`} id={measuring ? undefined : ex.id}>
         <header className="ex-head">
           <Badge number={ex.number} icons={ex.icons} />
           <span className="ex-instr">
@@ -88,6 +91,14 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
             {ex.intro.split("\n").map((l, i) => <p key={i}>{l}</p>)}
           </div>
         )}
+        {ex.example && (
+          <div className="ex-example">
+            <p>
+              <b>Esempio:</b> {inline(ex.example.q)}
+            </p>
+            <p className="ex-example-a">→ {inline(ex.example.a)}</p>
+          </div>
+        )}
         {ex.kind === "fill" && ex.wordBank && (
           <div className="word-bank">
             {ex.wordBank.map((w) => <span key={w}>{w}</span>)}
@@ -98,7 +109,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
   }
   if (part.kind === "foot") return <ExerciseFoot ex={ex} page={page} context={context} />;
   return (
-    <div className={`exercise kind-${ex.kind} ex-part-body`}>
+    <div className={`exercise kind-${ex.kind} ex-part-body ${ex.variant ?? ""}`}>
       <Body
         ex={ex}
         only={part.kind === "item" ? part.index : undefined}
@@ -142,8 +153,13 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
   const scored = result && !(needsAI(ex) && result.by === "key");
 
   return (
-    <div className="exercise ex-part-foot">
+    <div className={`exercise ex-part-foot ${ex.variant ?? ""}`}>
       <footer className="ex-foot">
+        {ex.points && (
+          <span className="punti">
+            Punti {result ? Math.round((result.score / 100) * ex.points) : "……"} / {ex.points}
+          </span>
+        )}
         {!needsAI(ex) && (
           <button className="pill primary" onClick={checkByKey}><Icon name="check" size={15} /> {t(lang, "check")}</button>
         )}
@@ -227,11 +243,12 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
                 set(it.id, next.join(SEP));
               };
               return (
-                <li key={it.id} className="ex-item">
+                <li key={it.id} className={`ex-item ${it.lead ? "has-lead" : ""}`}>
+                  {it.lead && <span className="ex-lead">{it.lead}</span>}
                   <span className="line">
                     {parts.map((p, k) => (
                       <span key={k}>
-                        {p}
+                        {inline(p)}
                         {k < parts.length - 1 && (
                           <input
                             className={`blank ${r ? (r.correct ? "ok" : "ko") : ""}`}
