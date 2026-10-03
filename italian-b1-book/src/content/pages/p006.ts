@@ -59,7 +59,7 @@ const page: BookPage = {
           {
             boxed: true,
             title: "A. Yunjie Bo, cinese, impiegata della Shangai Fasco International Tour.",
-            image: { photo: "Chinese businesswoman laptop office", alt: "Yunjie Bo al computer", side: "right", width: 24 },
+            image: { src: "images/u1/svg/p6-yunjie.svg", alt: "Yunjie Bo al computer", side: "right", width: 24 },
             text: [
               "• Signora Bo, l'Italia attira i turisti cinesi?",
               "○ Sì, {{=le}} assicuro che i nostri itinerari europei prevedono almeno tre giorni in Italia.",
@@ -74,7 +74,7 @@ const page: BookPage = {
           {
             boxed: true,
             title: "B. Joel Berg, svedese, impiegato alla Benetton.",
-            image: { photo: "businessman blue shirt tie smiling", alt: "Joel Berg", side: "right", width: 24 },
+            image: { src: "images/u1/svg/p6-joel.svg", alt: "Joel Berg", side: "right", width: 24 },
             text: [
               "• Signor Berg, lei per motivi di lavoro ha viaggiato molto in Italia: quale città preferisce?",
               "○ Preferisco Firenze: {{mi}} piace visitarla tutte le volte che vengo in Italia; {{mi}} piace anche fermar{{mi}} nella campagna toscana durante l'estate con la mia famiglia.",
@@ -88,7 +88,7 @@ const page: BookPage = {
             boxed: true,
             columns: 2,
             title: "C. Tanya Jones, israeliana, stilista.",
-            image: { photo: "woman fashion designer boutique", alt: "Tanya Jones nel suo negozio", side: "left", width: 22 },
+            image: { src: "images/u1/svg/p6-tanya.svg", alt: "Tanya Jones nel suo negozio", side: "left", width: 22 },
             text: [
               "• Tanya, da quanto tempo lei è in Italia?",
               "○ Vivo e lavoro a Milano dal 1988.",

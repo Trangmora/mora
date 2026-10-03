@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7eaf7"/><stop offset="1" stop-color="#9cc8e8"/></linearGradient></defs>
+  <rect width="300" height="300" fill="url(#b)"/>
+  <g fill="#fff3a6" stroke="#d4a017" stroke-width="2">
+    <path d="M50 50 L56 64 L71 64 L59 73 L63 88 L50 79 L37 88 L41 73 L29 64 L44 64Z"/>
+    <path d="M250 70 L255 81 L267 81 L257 88 L261 100 L250 93 L239 100 L243 88 L233 81 L245 81Z"/>
+  </g>
+  <g stroke="#333" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M70 300 C90 240 110 220 150 214 C190 220 210 240 230 300 Z" fill="#222"/>
+    <path d="M136 214 L140 188 L160 188 L164 214" fill="#f3d2b0"/>
+    <circle cx="150" cy="150" r="40" fill="#f3d2b0"/>
+    <path d="M104 150 C90 90 200 80 198 146 C210 170 196 196 182 196 C190 170 182 130 150 122 C122 126 110 150 118 196 C100 192 96 170 104 150 Z" fill="#f2c94c"/>
+    <path d="M134 146 L140 146 M160 146 L166 146"/>
+    <path d="M136 168 C144 176 156 176 164 168" fill="#c0392b"/>
+    <path d="M222 250 C246 230 252 210 244 196" fill="none"/>
+  </g>
+  <text x="150" y="290" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="18" fill="#fff">«una stella!»</text>
+</svg>

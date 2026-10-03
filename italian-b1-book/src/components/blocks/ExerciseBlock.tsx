@@ -334,6 +334,37 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
       );
 
     case "match":
+      if (ex.left.some((l) => l.image))
+        // Bài nối tranh: tên (a, b, c) ở trên, bên dưới là tranh có ô "1. ……" để chọn chữ cái.
+        return (
+          <div className="match-pics">
+            {ex.right.map((rr) => (
+              <div key={rr.id} className="match-pic-title">
+                {rr.id}. <i>{rr.text}</i>
+              </div>
+            ))}
+            {ex.left.map((l) => {
+              const r = results.get(l.id);
+              return (
+                <figure key={l.id} className={`match-pic ${r ? (r.correct ? "ok" : "ko") : ""}`}>
+                  <img src={l.image} alt={l.text} loading="lazy" />
+                  <label className="match-pic-box">
+                    {l.id}.
+                    <select value={responses[l.id] ?? ""} onChange={(e) => set(l.id, e.target.value)} aria-label={l.text}>
+                      <option value="">……</option>
+                      {ex.right.map((rr) => (
+                        <option key={rr.id} value={rr.id}>
+                          {rr.id}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  {(showAnswers || (r && !r.correct)) && <span className="match-pic-key">→ {ex.answer[l.id]}</span>}
+                </figure>
+              );
+            })}
+          </div>
+        );
       return (
         <div className="match">
           {ex.title && <div className="match-title">{ex.title}</div>}

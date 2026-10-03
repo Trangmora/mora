@@ -62,7 +62,8 @@ export type ChoiceExercise = {
 /** Nối cột A với cột B. */
 export type MatchExercise = {
   kind: "match";
-  left: { id: string; text: string }[];
+  /** image: bài nối tranh (trang 21) — tranh có ô số "1. ……" để chọn chữ cái. */
+  left: { id: string; text: string; image?: string }[];
   right: { id: string; text: string }[];
   /** leftId -> rightId */
   answer: Record<string, string>;

@@ -4369,3 +4369,59 @@ textarea.form-input {
 .book-page .ex-part-body.capace .ex-items {
   list-style: none;
 }
+
+/* Bài nối tranh (trang 21, bài 3B) */
+.match-pics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px 14px;
+  margin-top: 6px;
+}
+.match-pic-title {
+  font: 15.5px var(--book-serif);
+}
+.match-pic {
+  position: relative;
+  margin: 0;
+}
+.match-pic img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.match-pic.ok img {
+  outline: 3px solid #2e9d57;
+}
+.match-pic.ko img {
+  outline: 3px solid #d4363a;
+}
+.match-pic-box {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border: 1.5px solid #333;
+  border-radius: 6px;
+  background: white;
+  font: 600 14px var(--book-sans);
+}
+.match-pic-box select {
+  border: none;
+  background: none;
+  font: 700 15px var(--book-sans);
+  color: #1d3f8f;
+}
+.match-pic-key {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: white;
+  font: 700 18px "Caveat", cursive;
+  color: #d4363a;
+}

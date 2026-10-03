@@ -26,7 +26,7 @@ const page: BookPage = {
           {
             boxed: true,
             title: "Tutti i numeri… del Bel Paese",
-            image: { photo: "Italy satellite image", alt: "L'Italia vista dal satellite", side: "right", width: 63 },
+            image: { src: "images/u1/svg/p4-italia.svg", alt: "L'Italia vista dal satellite", side: "right", width: 63 },
             text: [
               "Vi (*noi, presentare*) {{=presentiamo}} alcuni aspetti dell'Italia. (*voi, sapere*) {{sapete}} che, in confronto agli abitanti degli altri paesi, gli italiani (*essere*) {{sono}} meno grassi? Infatti, solo il 10% degli italiani è obeso, mentre, per esempio, in Germania, in Spagna e negli Stati Uniti la percentuale (*salire*) {{sale}} moltissimo (circa il 20%).",
               "Comunque, gli italiani non (*potere*) {{possono}} rinunciare a mangiare la pasta: in un anno (*consumare*) {{consumano}} circa 30 chili di pasta a testa.",

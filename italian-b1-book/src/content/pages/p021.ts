@@ -37,7 +37,7 @@ const page: BookPage = {
             it: "– Nasce a Roma il 7 marzo 1908.\n– Muore il 26 settembre 1973.\n– Chi è? È una delle più grandi attrici nella storia del cinema italiano.",
           },
         ],
-        [{ type: "image", photo: "Anna Magnani actress", alt: "Anna Magnani" }],
+        [{ type: "image", src: "images/u1/svg/p21-anna.svg", alt: "Anna Magnani" }],
       ],
     },
     {
@@ -48,7 +48,7 @@ const page: BookPage = {
       type: "columns",
       widths: [1, 1],
       cols: [
-        [{ type: "image", photo: "Anna Magnani Roma città aperta", photoIndex: 1, alt: "Anna Magnani in una scena drammatica" }],
+        [{ type: "image", src: "images/u1/svg/p21-film.svg", alt: "Roma città aperta (1945) di Roberto Rossellini" }],
         [
           {
             type: "text",
@@ -71,9 +71,9 @@ const page: BookPage = {
           en: "Look and match the pictures to the titles of Anna Magnani's films.",
         },
         left: [
-          { id: "1", text: "Immagine 1: una donna con una rosa tatuata sul braccio." },
-          { id: "2", text: "Immagine 2: una bella ragazza bionda in costume da bagno, come una stella del cinema." },
-          { id: "3", text: "Immagine 3: il panorama di Roma con la cupola di San Pietro." },
+          { id: "1", text: "Una donna con una rosa tatuata.", image: "images/u1/svg/p21-rosa.svg" },
+          { id: "2", text: "Una bella ragazza bionda, come una stella del cinema.", image: "images/u1/svg/p21-stella.svg" },
+          { id: "3", text: "Il panorama di Roma con la cupola di San Pietro.", image: "images/u1/svg/p21-roma.svg" },
         ],
         right: [
           { id: "a", text: "Bellissima." },

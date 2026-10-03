@@ -52,7 +52,7 @@ const page: BookPage = {
           },
         ],
         [
-          { type: "image", photo: "students laughing together university friends", alt: "Un gruppo di studenti ride insieme" },
+          { type: "image", src: "images/u1/svg/p20-studenti.svg", alt: "Un gruppo di studenti ride insieme" },
           {
             type: "text",
             it: "e le aziende italiane o per fare carriera o per trovare un lavoro in Italia; di meno sono quelli che studiano l'italiano perché si occupano di traduzione e di insegnamento. Vediamo nel grafico le percentuali:",
@@ -119,6 +119,7 @@ const page: BookPage = {
         ],
       },
     },
+    { type: "image", src: "images/u1/svg/p20-vorrei.svg", alt: "Il professore chiede: «Perché vuoi studiare l'italiano?» La ragazza risponde: «Perché amo la cultura italiana.»" },
   ],
 };
 
