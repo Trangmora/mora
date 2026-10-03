@@ -26,8 +26,8 @@ export function itemCount(ex: Exercise) {
 /** Ô số bài màu đỏ như sách, bên dưới là icon dạng bài (nói, nhìn, đọc, viết, nghe). */
 function Badge({ number, icons }: { number?: string; icons?: BadgeIcon[] }) {
   return (
-    <span className="ex-badge">
-      <span className="ex-badge-num">{number ?? "•"}</span>
+    <span className={`ex-badge ${number ? "" : "no-num"}`}>
+      {number && <span className="ex-badge-num">{number}</span>}
       {icons?.length ? (
         <span className="ex-badge-icons">
           {icons.map((i) => (
@@ -46,6 +46,7 @@ function BadgeGlyph({ name }: { name: BadgeIcon }) {
     read: "M2 3.5c2.5-.8 5-.6 8 1 3-1.6 5.5-1.8 8-1v8.5c-2.5-.8-5-.6-8 1-3-1.6-5.5-1.8-8-1V3.5Zm8 1v8.5",
     write: "m4 12.5 1-3.2 7.6-7.6a1.4 1.4 0 0 1 2 2L7 11.3l-3 1.2Zm7.5-9.7 2 2",
     listen: "M4 10V8a6 6 0 0 1 12 0v2M4 10h2.4v3.5H4zM13.6 10H16v3.5h-2.4z",
+    match: "M3 4h5M3 8h5M3 12h5M11 4l6 7m0 0v-3.5m0 3.5h-3.5",
   };
   return (
     <svg viewBox="0 0 20 15" width="22" height="16" aria-hidden>
@@ -74,7 +75,9 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
       <div className={`exercise kind-${ex.kind} ex-part-head`} id={measuring ? undefined : ex.id}>
         <header className="ex-head">
           <Badge number={ex.number} icons={ex.icons} />
-          <span className="ex-instr">{ex.instruction}</span>
+          <span className="ex-instr">
+            {ex.label && <b className="ex-label">{ex.label}.</b>} {ex.instruction}
+          </span>
         </header>
         {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
         {ex.kind === "fill" && ex.wordBank && (
@@ -306,14 +309,20 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
     case "match":
       return (
         <div className="match">
+          {ex.title && <div className="match-title">{ex.title}</div>}
           <ol className="ex-items">
             {ex.left.map((l) => {
               const r = results.get(l.id);
+              const given = ex.given?.[l.id];
               return (
-                <li key={l.id} className="ex-item">
+                <li key={l.id} className={`ex-item ${given ? "given" : ""}`}>
                   <span className="line">
                     <span>{l.text}</span>
-                    <select value={responses[l.id] ?? ""} onChange={(e) => set(l.id, e.target.value)}>
+                    <select
+                      value={given ?? responses[l.id] ?? ""}
+                      disabled={!!given}
+                      onChange={(e) => set(l.id, e.target.value)}
+                    >
                       <option value="">{t(lang, "pick")}</option>
                       {ex.right.map((rr) => (
                         <option key={rr.id} value={rr.id}>
@@ -334,8 +343,8 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
           </ol>
           <ul className="match-right">
             {ex.right.map((rr) => (
-              <li key={rr.id}>
-                <b>{rr.id})</b> {rr.text}
+              <li key={rr.id} className={Object.values(ex.given ?? {}).includes(rr.id) ? "given" : ""}>
+                <b>{rr.id}.</b> {rr.text}
               </li>
             ))}
           </ul>
@@ -350,14 +359,17 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
 
     case "write":
       return (
-        <ol className="ex-items" start={start}>
+        <ol className={`ex-items ${ex.items.length === 1 ? "single" : ""}`} start={start}>
           {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
               <li key={it.id} className="ex-item">
-                <span className="line">
-                  {it.prompt} <Mark r={r} />
-                </span>
+                {it.prompt && (
+                  <span className="line">
+                    {it.prompt} <Mark r={r} />
+                  </span>
+                )}
+                {it.starter && <span className="write-starter">{it.starter}</span>}
                 <textarea
                   className="lined"
                   rows={it.lines ?? 2}
@@ -384,10 +396,11 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
 
     case "speak":
       return (
-        <ol className={`ex-items ${ex.items.length === 1 ? "single" : ""}`} start={start}>
+        <ol className={`ex-items ${ex.items.length === 1 ? "single" : "numbered"}`} start={start}>
           {pick(ex.items).map((it) => (
             <SpeakItem
               key={it.id}
+              compact={ex.items.length > 1}
               prompt={it.prompt}
               sample={it.sample}
               value={responses[it.id] ?? ""}
@@ -402,6 +415,8 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
 }
 
 function SpeakItem(props: {
+  /** Nhiều câu hỏi: nút ghi âm thu nhỏ thành icon cuối câu để trang gọn như sách. */
+  compact?: boolean;
   prompt: string;
   sample?: string;
   value: string;
@@ -423,17 +438,28 @@ function SpeakItem(props: {
     <li className="ex-item speak-item">
       {props.prompt && (
         <span className="line speak-prompt">
-          {props.prompt} <Mark r={r} />
+          {props.prompt}{" "}
+          {props.compact && (
+            <button
+              className={`mini speak-mini ${rec.recording ? "on" : ""}`}
+              onClick={() => (rec.recording ? rec.stop() : rec.start())}
+              title={rec.recording ? t(lang, "stop") : t(lang, "record")}
+            >
+              <Icon name={rec.recording ? "stop" : "mic"} size={15} />
+            </button>
+          )}
+          <Mark r={r} />
         </span>
       )}
-      <span className="coach-actions">
+      {props.compact && rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
+      {!props.compact && <span className="coach-actions">
         {rec.recording ? (
           <button className="pill rec" onClick={() => rec.stop()}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
         ) : (
           <button className="pill primary" onClick={() => rec.start()}><Icon name="mic" size={15} /> {t(lang, "record")}</button>
         )}
         {rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
-      </span>
+      </span>}
       {rec.recording && (
         <span className="coach-live">
           <span className="dot" /> <em>{rec.transcript} {rec.interim}</em>
@@ -574,51 +600,65 @@ function ClozeView({
   results: Map<string, ItemResult>;
 }) {
   const parts = parseCloze(ex);
+  const renderPart = (part: (typeof parts)[number], pi: number) => (
+    <section key={pi} className={`cloze-part ${part.boxed ? "boxed" : ""} ${part.variant ?? ""} cols-${part.columns ?? 1} ${part.text ? "" : "image-only"}`}>
+      {part.image && (
+        <figure className={`cloze-img ${part.image.side}`} style={{ width: `${part.image.width}%` }}>
+          {part.image.src ? (
+            <img src={part.image.src} alt={part.image.alt} loading="lazy" />
+          ) : part.image.photo ? (
+            <Photo query={part.image.photo} alt={part.image.alt} />
+          ) : null}
+        </figure>
+      )}
+      {part.title && <h4 className="cloze-title">{part.title}</h4>}
+      {part.text && (
+        <div className="cloze-text">
+          {part.lines.map((line, li) => (
+            <p key={li} className={`cloze-line ${line.bullet ? "cloze-turn" : ""}`}>
+              {line.bullet && <span className="cloze-bullet">{line.bullet}</span>}
+              {line.tokens.map((tok, ti) => {
+                if (tok.t === "text") return <span key={ti}>{tok.s}</span>;
+                if (tok.t === "em") return <em key={ti}>{tok.s}</em>;
+                if (tok.t === "given") return <em key={ti} className="cloze-given">{tok.s}</em>;
+                const r = results.get(tok.id);
+                const showKey = (showAnswers || (r && !r.correct)) && tok.answers[0];
+                return (
+                  <span key={ti} className="cloze-slot">
+                    <input
+                      className={`blank ${r ? (r.correct ? "ok" : "ko") : ""}`}
+                      value={responses[tok.id] ?? ""}
+                      style={{ width: `${Math.max(3.2, tok.answers[0].length * 0.48 + 1.4)}em` }}
+                      onChange={(e) => set(tok.id, e.target.value)}
+                      spellCheck={false}
+                      autoCapitalize="off"
+                      aria-label={tok.id}
+                    />
+                    {showKey && <sup className="cloze-key">{tok.answers[0]}</sup>}
+                    {r && !r.correct && r.explanation && <span className="cloze-why">{r.explanation}</span>}
+                  </span>
+                );
+              })}
+            </p>
+          ))}
+        </div>
+      )}
+    </section>
+  );
   return (
-    <div className="cloze">
-      {parts.map((part, pi) => (
-        <section key={pi} className={`cloze-part ${part.boxed ? "boxed" : ""} cols-${part.columns ?? 1}`}>
-          {part.image && (
-            <figure className={`cloze-img ${part.image.side}`} style={{ width: `${part.image.width}%` }}>
-              {part.image.src ? (
-                <img src={part.image.src} alt={part.image.alt} loading="lazy" />
-              ) : part.image.photo ? (
-                <Photo query={part.image.photo} alt={part.image.alt} />
-              ) : null}
-            </figure>
-          )}
-          {part.title && <h4 className="cloze-title">{part.title}</h4>}
-          <div className="cloze-text">
-            {part.lines.map((line, li) => (
-              <p key={li} className={`cloze-line ${line.bullet ? "cloze-turn" : ""}`}>
-                {line.bullet && <span className="cloze-bullet">{line.bullet}</span>}
-                {line.tokens.map((tok, ti) => {
-                  if (tok.t === "text") return <span key={ti}>{tok.s}</span>;
-                  if (tok.t === "em") return <em key={ti}>{tok.s}</em>;
-                  if (tok.t === "given") return <em key={ti} className="cloze-given">{tok.s}</em>;
-                  const r = results.get(tok.id);
-                  const showKey = (showAnswers || (r && !r.correct)) && tok.answers[0];
-                  return (
-                    <span key={ti} className="cloze-slot">
-                      <input
-                        className={`blank ${r ? (r.correct ? "ok" : "ko") : ""}`}
-                        value={responses[tok.id] ?? ""}
-                        style={{ width: `${Math.max(3.2, tok.answers[0].length * 0.48 + 1.4)}em` }}
-                        onChange={(e) => set(tok.id, e.target.value)}
-                        spellCheck={false}
-                        autoCapitalize="off"
-                        aria-label={tok.id}
-                      />
-                      {showKey && <sup className="cloze-key">{tok.answers[0]}</sup>}
-                      {r && !r.correct && r.explanation && <span className="cloze-why">{r.explanation}</span>}
-                    </span>
-                  );
-                })}
-              </p>
-            ))}
-          </div>
-        </section>
-      ))}
+    <div className={`cloze ${ex.layout ? `layout-${ex.layout}` : ""}`}>
+      {ex.heading && <h3 className="cloze-heading">{ex.heading}</h3>}
+      {ex.layout === "notes3" ? (
+        <div className="notes3">
+          {[1, 2, 3].map((c) => (
+            <div key={c} className="notes3-col">
+              {parts.map((p, i) => ((p.col ?? 1) === c ? renderPart(p, i) : null))}
+            </div>
+          ))}
+        </div>
+      ) : (
+        parts.map(renderPart)
+      )}
       {ex.source && <p className="cloze-source">{ex.source}</p>}
     </div>
   );

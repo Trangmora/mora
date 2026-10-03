@@ -58,6 +58,10 @@ export type MatchExercise = {
   right: { id: string; text: string }[];
   /** leftId -> rightId */
   answer: Record<string, string>;
+  /** Cặp sách đã nối sẵn làm ví dụ (leftId -> rightId). */
+  given?: Record<string, string>;
+  /** Tiêu đề phía trên hai cột, ví dụ "Alcune informazioni sull'Italia…". */
+  title?: string;
 };
 
 /** Đúng / Sai (Vero / Falso). */
@@ -69,7 +73,14 @@ export type TrueFalseExercise = {
 /** Viết tự do / biến đổi câu — chấm bằng AI (có đáp án mẫu thì so sánh luôn). */
 export type WriteExercise = {
   kind: "write";
-  items: { id: string; prompt: string; sample?: string; lines?: number }[];
+  items: {
+    id: string;
+    prompt: string;
+    sample?: string;
+    lines?: number;
+    /** Câu mở đầu sách in sẵn (đỏ), ví dụ "In Italia, nella seconda metà del 1800…". */
+    starter?: string;
+  }[];
 };
 
 /** Bài nói — ghi âm, chuyển thành chữ rồi AI chấm. */
@@ -122,7 +133,7 @@ export type InlineImage = {
   /** Hoặc ảnh thật tìm theo từ khoá. */
   photo?: string;
   alt: string;
-  side: "left" | "right";
+  side: "left" | "right" | "center";
   /** Chiều rộng ảnh, % khung. */
   width: number;
 };
@@ -139,7 +150,15 @@ export type ClozeExercise = {
     boxed?: boolean;
     /** Chia chữ thành 2 cột. */
     columns?: 1 | 2;
+    /** Cột của ô ghi chú khi bài xếp 3 cột (layout "notes3"). */
+    col?: 1 | 2 | 3;
+    /** Ô ghi chú vuông như "La carta d'identità." trang 7. */
+    variant?: "note";
   }[];
+  /** "notes3": xếp các phần thành 3 cột ô ghi chú. */
+  layout?: "notes3";
+  /** Tiêu đề lớn của bài, ví dụ "Giuseppe Russo, l'italiano medio". */
+  heading?: string;
   /** Nguồn trích, ví dụ "(adattato da Focus, n. 2, 2000)". */
   source?: string;
 };
@@ -169,9 +188,11 @@ export type Exercise = ExerciseBody & {
   skill?: Skill;
   /** Icon dưới số bài như trong sách. */
   icons?: BadgeIcon[];
+  /** Phần A / B của cùng một bài (in đậm xanh trước đề bài). */
+  label?: string;
 };
 
-export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen";
+export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match";
 
 // ---------- Block nội dung ----------
 
@@ -224,6 +245,8 @@ export type Block =
   | { type: "collage"; height: number; items: { src: string; alt: string; x: number; y: number; w: number; caption?: L10n }[] }
   /** Chữ "dán" trang trí như trong sách, ví dụ "CIAO!". */
   | { type: "sticker"; text: string; tr?: L10n }
+  /** Dải chữ đỏ đặt bên phải, cạnh bài tập (ví dụ "IERI E OGGI"). */
+  | { type: "banner"; text: string }
   | {
       type: "audio";
       /** Số track như trong sách, ví dụ "1.04". */

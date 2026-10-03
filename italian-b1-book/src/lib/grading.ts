@@ -78,6 +78,7 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
       break;
     case "match":
       for (const l of ex.left) {
+        if (ex.given?.[l.id]) continue;
         const g = responses[l.id];
         const right = (id?: string) => ex.right.find((r) => r.id === id)?.text ?? "";
         items.push({

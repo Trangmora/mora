@@ -77,6 +77,13 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
         </div>
       );
 
+    case "banner":
+      return (
+        <div className="banner-row">
+          <span className="section-banner">{block.text}</span>
+        </div>
+      );
+
     case "sticker":
       return (
         <div className="sticker" title={block.tr ? tr(lang, block.tr) : undefined}>
