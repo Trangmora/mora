@@ -1,20 +1,21 @@
 import type { Lang } from "../types";
+import saved from "../content/translations.json";
 
 /**
- * Dịch một câu tiếng Ý khi người học bấm icon dịch cạnh câu đó. Thứ tự thử:
- * 1. bản dịch đã lưu trên máy (localStorage);
- * 2. bộ dịch có sẵn trong trình duyệt (Chrome 138+, chạy ngay trên máy, miễn phí);
- * 3. máy chủ /api/translate (Claude) khi có ANTHROPIC_API_KEY.
- * Không cách nào dùng được thì trả null — giao diện đưa link Google Dịch.
+ * Bản dịch cho icon dịch cạnh mỗi câu. Thứ tự tìm:
+ * 1. bộ nhớ bản dịch của sách (src/content/translations.json) — dịch sẵn một lần, dùng mãi, không tốn API;
+ * 2. bản dịch đã lưu trên máy này (localStorage);
+ * 3. API dịch trên máy chủ (/api/translate, Claude) — máy chủ ghi kết quả vào bộ nhớ bản dịch để lần sau khỏi gọi lại.
  */
+
+type Entry = Partial<Record<Lang, string>>;
+const book = saved as Record<string, Entry>;
 
 const CACHE_KEY = "italian-b1-book:v2:translations";
 
-type Cache = Record<string, string>;
-
-function readCache(): Cache {
+function readCache(): Record<string, string> {
   try {
-    return JSON.parse(localStorage.getItem(CACHE_KEY) ?? "{}") as Cache;
+    return JSON.parse(localStorage.getItem(CACHE_KEY) ?? "{}") as Record<string, string>;
   } catch {
     return {};
   }
@@ -30,58 +31,14 @@ function remember(key: string, value: string) {
   }
 }
 
-export function cachedTranslation(text: string, lang: Lang): string | undefined {
-  return readCache()[`${lang}|${text}`];
-}
-
-type BrowserTranslator = { translate(text: string): Promise<string> };
-type TranslatorApi = {
-  availability(o: { sourceLanguage: string; targetLanguage: string }): Promise<string>;
-  create(o: { sourceLanguage: string; targetLanguage: string }): Promise<BrowserTranslator>;
-};
-
-/** Chờ tối đa ms mili-giây, quá thì coi như không có kết quả. */
-function within<T>(p: Promise<T>, ms: number): Promise<T | null> {
-  return Promise.race([p, new Promise<null>((r) => setTimeout(() => r(null), ms))]);
-}
-
-const browserTranslators: Partial<Record<Lang, Promise<BrowserTranslator | null>>> = {};
-
-function browserTranslator(lang: Lang): Promise<BrowserTranslator | null> {
-  const api = (globalThis as { Translator?: TranslatorApi }).Translator;
-  if (!api) return Promise.resolve(null);
-  browserTranslators[lang] ??= (async (): Promise<BrowserTranslator | null> => {
-    try {
-      const opts = { sourceLanguage: "it", targetLanguage: lang };
-      const avail = await within(api.availability(opts), 3000);
-      if (!avail || avail === "unavailable") return null;
-      // Lần đầu Chrome tải gói ngôn ngữ về máy; quá lâu (mạng chặn) thì bỏ qua.
-      return await within(api.create(opts), avail === "available" ? 5000 : 20000);
-    } catch {
-      return null;
-    }
-  })();
-  return browserTranslators[lang]!;
+/** Bản dịch có sẵn ngay (bộ nhớ của sách hoặc của máy), không cần gọi API. */
+export function savedTranslation(text: string, lang: Lang): string | undefined {
+  return book[text]?.[lang] ?? readCache()[`${lang}|${text}`];
 }
 
 export async function translate(text: string, lang: Lang): Promise<string | null> {
-  const key = `${lang}|${text}`;
-  const hit = readCache()[key];
+  const hit = savedTranslation(text, lang);
   if (hit) return hit;
-
-  const local = await browserTranslator(lang);
-  if (local) {
-    try {
-      const out = await within(local.translate(text), 8000);
-      if (out) {
-        remember(key, out);
-        return out;
-      }
-    } catch {
-      /* thử cách tiếp theo */
-    }
-  }
-
   try {
     const r = await fetch("/api/translate", {
       method: "POST",
@@ -91,7 +48,7 @@ export async function translate(text: string, lang: Lang): Promise<string | null
     if (r.ok) {
       const j = (await r.json()) as { translation?: string };
       if (j.translation) {
-        remember(key, j.translation);
+        remember(`${lang}|${text}`, j.translation);
         return j.translation;
       }
     }
@@ -99,10 +56,6 @@ export async function translate(text: string, lang: Lang): Promise<string | null
     /* không có máy chủ (ví dụ bản xem trực tuyến) */
   }
   return null;
-}
-
-export function googleTranslateUrl(text: string, lang: Lang) {
-  return `https://translate.google.com/?sl=it&tl=${lang}&text=${encodeURIComponent(text)}&op=translate`;
 }
 
 /** Chữ thuần để dịch: bỏ dấu ** * của định dạng, ô trống thành "…". */

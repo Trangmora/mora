@@ -4892,3 +4892,7 @@ button.ds-card {
 .ex-instr .tr-pop {
   font-size: 13px;
 }
+.tr-missing {
+  color: #8a6d3b;
+  font-size: 12px;
+}

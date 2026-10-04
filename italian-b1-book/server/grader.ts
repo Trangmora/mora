@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
 
 /**
@@ -179,20 +182,35 @@ const translateSchema = {
   additionalProperties: false,
 } as const;
 
-/** Bản dịch đã làm, để không gọi API hai lần cho cùng một câu. */
-const translations = new Map<string, { translation: string }>();
+/** Bộ nhớ bản dịch của sách: câu tiếng Ý → { vi, en }. Dùng chung với giao diện (src/content/translations.json). */
+const MEMORY = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../src/content/translations.json");
+type Memory = Record<string, Partial<Record<Lang, string>>>;
 
-/** Dịch một câu tiếng Ý trong sách sang tiếng Việt / tiếng Anh (icon dịch cạnh mỗi câu). */
+function readMemory(): Memory {
+  try {
+    return JSON.parse(fs.readFileSync(MEMORY, "utf8")) as Memory;
+  } catch {
+    return {};
+  }
+}
+
+function saveToMemory(text: string, lang: Lang, translation: string) {
+  const mem = readMemory();
+  mem[text] = { ...mem[text], [lang]: translation };
+  const sorted = Object.fromEntries(Object.entries(mem).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
+  fs.writeFileSync(MEMORY, JSON.stringify(sorted, null, 1) + "\n");
+}
+
+/** Dịch một câu trong sách sang tiếng Việt / tiếng Anh: tìm trong bộ nhớ trước, chưa có thì gọi Claude rồi lưu lại. */
 export async function translateText(body: TranslateBody) {
   const { text, lang = "vi" } = body ?? ({} as TranslateBody);
   if (!text?.trim()) throw new GradingError(400, "Thiếu câu cần dịch.");
-  if (text.length > 2000) throw new GradingError(400, "Câu quá dài.");
-  const key = `${lang}|${text}`;
-  const hit = translations.get(key);
-  if (hit) return hit;
+  if (text.length > 4000) throw new GradingError(400, "Câu quá dài.");
+  const hit = readMemory()[text]?.[lang];
+  if (hit) return { translation: hit };
   const system = `You translate sentences from an Italian B1 coursebook for a learner. Translate naturally and faithfully into ${langName(lang)}.
-"…" or "___" marks a blank the student must fill: keep it as "…" and do not guess the missing word. Keep names, titles and numbers. Return only the translation.`;
-  const out = (await askJSON(system, text, translateSchema)) as { translation: string };
-  translations.set(key, out);
+"…" marks a blank the student must fill: keep it as "…" and do not guess the missing word. Keep names, titles and numbers. Return only the translation.`;
+  const out = await askJSON<{ translation: string }>(system, text, translateSchema);
+  saveToMemory(text, lang, out.translation);
   return out;
 }

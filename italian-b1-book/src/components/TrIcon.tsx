@@ -2,11 +2,11 @@ import { useState } from "react";
 import { tr as pick } from "../i18n";
 import type { L10n } from "../types";
 import { useStore } from "../lib/store";
-import { cachedTranslation, googleTranslateUrl, plainForTranslation, translate } from "../lib/translate";
+import { plainForTranslation, savedTranslation, translate } from "../lib/translate";
 
 /**
  * Icon dịch nhỏ cạnh mỗi câu tiếng Ý: bấm để xem bản dịch (Việt / Anh theo ngôn ngữ đang chọn), bấm lần nữa để ẩn.
- * Có bản dịch soạn sẵn (tr) thì dùng luôn; không thì dịch tự động (xem src/lib/translate.ts).
+ * Có bản dịch soạn sẵn (tr) hoặc trong bộ nhớ bản dịch thì hiện ngay; không thì gọi API dịch (xem src/lib/translate.ts).
  */
 export function TrIcon({ text, tr }: { text: string; tr?: L10n }) {
   const lang = useStore((s) => s.lang);
@@ -15,7 +15,7 @@ export function TrIcon({ text, tr }: { text: string; tr?: L10n }) {
   const source = plainForTranslation(text);
   if (!source) return null;
 
-  const ready = tr ? pick(lang, tr) : state?.lang === lang ? state.text : cachedTranslation(source, lang) ?? undefined;
+  const ready = tr ? pick(lang, tr) : state?.lang === lang ? state.text : savedTranslation(source, lang);
 
   const toggle = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -33,6 +33,7 @@ export function TrIcon({ text, tr }: { text: string; tr?: L10n }) {
       <button
         type="button"
         className={`tr-icon ${open ? "on" : ""}`}
+        data-src={source}
         onClick={toggle}
         title={lang === "vi" ? "Xem bản dịch" : "Show translation"}
         aria-label={lang === "vi" ? "Xem bản dịch" : "Show translation"}
@@ -50,9 +51,11 @@ export function TrIcon({ text, tr }: { text: string; tr?: L10n }) {
           ) : loading ? (
             <em>{lang === "vi" ? "Đang dịch…" : "Translating…"}</em>
           ) : (
-            <a href={googleTranslateUrl(source, lang)} target="_blank" rel="noreferrer">
-              {lang === "vi" ? "Mở Google Dịch ↗" : "Open Google Translate ↗"}
-            </a>
+            <em className="tr-missing">
+              {lang === "vi"
+                ? "Câu này chưa có trong bộ nhớ bản dịch. Bật API dịch trên máy chủ (ANTHROPIC_API_KEY) để dịch và lưu lại."
+                : "This sentence isn't in the translation memory yet. Turn on the translation API on the server (ANTHROPIC_API_KEY) to translate and save it."}
+            </em>
           )}
         </span>
       )}
