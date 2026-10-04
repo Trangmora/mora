@@ -10,6 +10,7 @@ const paths = {
   left: "m15 18-6-6 6-6",
   right: "m9 18 6-6-6-6",
   volume: "M11 5 6 9H3v6h3l5 4V5Zm4.5 3.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13",
+  mute: "M11 5 6 9H3v6h3l5 4V5Zm5 4.5 5 5m0-5-5 5",
   mic: "M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm-6-3a6 6 0 0 0 12 0M12 18v3",
   stop: "M7 7h10v10H7z",
   play: "M8 5v14l11-7L8 5Z",

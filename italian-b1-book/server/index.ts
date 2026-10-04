@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { gradeExercise, gradeReading, aiEnabled, GradingError } from "./grader";
+import { gradeExercise, gradeReading, translateText, aiEnabled, GradingError } from "./grader";
 import { findPhoto } from "./photos";
 import { synthesize, ttsProvider, TTSError } from "./tts";
 
@@ -34,6 +34,14 @@ app.post("/api/grade/reading", async (req, res) => {
 });
 
 // Ảnh thật cho trang sách: /api/photo?q=italian+espresso+bar&i=0
+app.post("/api/translate", async (req, res) => {
+  try {
+    res.json(await translateText(req.body));
+  } catch (e) {
+    handleError(res, e);
+  }
+});
+
 app.get("/api/photo", async (req, res) => {
   const q = String(req.query.q ?? "");
   const i = Math.max(0, Math.min(10, Number(req.query.i ?? 0) || 0));

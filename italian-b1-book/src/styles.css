@@ -4830,3 +4830,65 @@ button.ds-card {
 .toc-u.closed:hover {
   border-color: var(--accent);
 }
+
+/* ---- Nút tắt tiếng trên thanh công cụ ---- */
+.sound-btn.muted {
+  color: #c0392b;
+  background: #fbe9e7;
+}
+
+/* ---- Icon dịch cạnh mỗi câu ---- */
+.tr-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin: 0 1px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: none;
+  color: #8a8172;
+  vertical-align: middle;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s, color 0.15s;
+}
+.tr-icon:hover,
+.tr-icon:focus-visible,
+.tr-icon.on {
+  opacity: 1;
+  color: #2a55a3;
+  background: #e8eef9;
+  border-color: #c9d6ef;
+}
+.tr-pop {
+  display: block;
+  margin: 2px 0 4px;
+  padding: 3px 9px;
+  border-left: 3px solid #2a55a3;
+  border-radius: 0 6px 6px 0;
+  background: #eef3fb;
+  font: 500 13.5px/1.4 var(--font-ui);
+  font-style: normal;
+  color: #1d3f8f;
+  text-align: left;
+  white-space: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.tr-pop a {
+  color: #1d3f8f;
+  font-weight: 600;
+}
+.board-cmd .tr-icon {
+  width: 15px;
+  height: 15px;
+}
+.board-cmd .tr-pop {
+  font-size: 11.5px;
+}
+.ex-subtitle .tr-pop,
+.ex-instr .tr-pop {
+  font-size: 13px;
+}

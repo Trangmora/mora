@@ -56,6 +56,20 @@ export function TopMenu({
           <Icon name="translate" /> <span className="lbl">{t(lang, "showTranslation")}</span>
         </button>
 
+        <button
+          className={`menu-btn sound-btn ${sound === false ? "muted" : ""}`}
+          onClick={() => setState({ sound: sound === false })}
+          title={
+            sound === false
+              ? lang === "vi" ? "Bật tiếng lật trang" : "Turn page sounds on"
+              : lang === "vi" ? "Tắt tiếng lật trang" : "Mute page sounds"
+          }
+          aria-pressed={sound === false}
+          aria-label={lang === "vi" ? "Tắt / bật tiếng" : "Mute / unmute"}
+        >
+          <Icon name={sound === false ? "mute" : "volume"} />
+        </button>
+
         <button className="menu-btn" onClick={onMistakes}>
           <Icon name="alert" /> <span className="lbl">{t(lang, "mistakes")}</span> {mistakes > 0 && <span className="badge">{mistakes}</span>}
         </button>

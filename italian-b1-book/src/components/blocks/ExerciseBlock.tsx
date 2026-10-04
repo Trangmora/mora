@@ -12,6 +12,7 @@ import { thinkingQuip } from "../../lib/humor";
 import { emitFun } from "../../lib/fun";
 import { useMeasuring } from "../../lib/measure";
 import { inline } from "./Theory";
+import { TrIcon } from "../TrIcon";
 
 const EMPTY: Record<string, string> = {};
 
@@ -81,14 +82,22 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
         <header className="ex-head">
           <Badge number={ex.number} icons={ex.icons} />
           <span className="ex-instr">
-            {ex.label && <b className="ex-label">{ex.label}.</b>} {ex.instruction}
+            {ex.label && <b className="ex-label">{ex.label}.</b>} {ex.instruction} <TrIcon text={ex.instruction} tr={ex.tr} />
           </span>
         </header>
         {showTr && ex.tr && <p className="translation">{tr(lang, ex.tr)}</p>}
-        {ex.subtitle && <p className={`ex-subtitle ${"layout" in ex && ex.layout === "board" ? "center" : ""}`}>{ex.subtitle}</p>}
+        {ex.subtitle && (
+          <p className={`ex-subtitle ${"layout" in ex && ex.layout === "board" ? "center" : ""}`}>
+            {ex.subtitle} <TrIcon text={ex.subtitle} />
+          </p>
+        )}
         {ex.intro && (
           <div className="ex-intro">
-            {ex.intro.split("\n").map((l, i) => <p key={i}>{l}</p>)}
+            {ex.intro.split("\n").map((l, i) => (
+              <p key={i}>
+                {l} <TrIcon text={l} />
+              </p>
+            ))}
           </div>
         )}
         {ex.example && (
@@ -262,6 +271,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
                       </span>
                     ))}
                     {it.hint && <span className="hint">({it.hint})</span>}
+                    <TrIcon text={it.prompt} />
                     <Mark r={r} />
                   </span>
                   <Margin show={showAnswers} answer={it.answers.map((a) => a.split("|")[0]).join(" / ")} r={r} />
@@ -280,7 +290,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
             return (
               <li key={it.id} className="ex-item">
                 <span className="line">
-                  {it.prompt} <Mark r={r} />
+                  {it.prompt} <TrIcon text={`${it.prompt} ${it.options.map((o, k) => `(${String.fromCharCode(97 + k)}) ${o}`).join(" ")}`} /> <Mark r={r} />
                 </span>
                 <span className="options">
                   {it.options.map((o, k) => (
@@ -313,7 +323,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
             return (
               <li key={it.id} className="ex-item tf">
                 <span className="line">
-                  {it.prompt} <Mark r={r} />
+                  {it.prompt} <TrIcon text={it.prompt} /> <Mark r={r} />
                 </span>
                 <span className="options">
                   {(["true", "false"] as const).map((v) => (
@@ -375,7 +385,9 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
               return (
                 <li key={l.id} className={`ex-item ${given ? "given" : ""}`}>
                   <span className="line">
-                    <span>{l.text}</span>
+                    <span>
+                      {l.text} <TrIcon text={l.text} />
+                    </span>
                     <select
                       value={given ?? responses[l.id] ?? ""}
                       disabled={!!given}
@@ -402,7 +414,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
           <ul className="match-right">
             {ex.right.map((rr) => (
               <li key={rr.id} className={Object.values(ex.given ?? {}).includes(rr.id) ? "given" : ""}>
-                <b>{rr.id}.</b> {rr.text}
+                <b>{rr.id}.</b> {rr.text} <TrIcon text={rr.text} />
               </li>
             ))}
           </ul>
@@ -424,7 +436,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
               <li key={it.id} className="ex-item">
                 {it.prompt && (
                   <span className="line">
-                    {it.prompt} <Mark r={r} />
+                    {it.prompt} <TrIcon text={it.prompt} /> <Mark r={r} />
                   </span>
                 )}
                 {it.starter && <span className="write-starter">{it.starter}</span>}
@@ -616,7 +628,9 @@ function BoardTile(props: {
     >
       <span className="board-num">{props.n}</span>
       {props.image && <img src={props.image} alt="" loading="lazy" />}
-      <span className="board-cmd">{props.prompt}</span>
+      <span className="board-cmd">
+        {props.prompt} <TrIcon text={props.prompt} />
+      </span>
       <button
         className={`board-mic ${rec.recording ? "on" : ""}`}
         onClick={() => (rec.recording ? rec.stop() : rec.start())}
@@ -663,7 +677,7 @@ function SpeakItem(props: {
     <li className="ex-item speak-item">
       {props.prompt && (
         <span className="line speak-prompt">
-          {props.prompt}{" "}
+          {props.prompt} <TrIcon text={props.prompt} />{" "}
           {props.compact && (
             <button
               className={`mini speak-mini ${rec.recording ? "on" : ""}`}
@@ -747,7 +761,9 @@ function FormView({
         {f.sectionNote && <div className="form-section-note">{f.sectionNote}</div>}
         {f.options ? (
           <>
-            <div className="form-q">{f.label}</div>
+            <div className="form-q">
+              {f.label} <TrIcon text={f.label} />
+            </div>
             <div className="form-options" style={{ gridTemplateColumns: `repeat(${f.optionCols ?? 2}, auto)` }}>
               {f.options.map((o, k) => (
                 <label key={k} className={`form-check ${responses[f.id] === String(k) ? "sel" : ""} ${showAnswers && f.answer === k ? "is-answer" : ""}`}>
@@ -766,7 +782,10 @@ function FormView({
           </>
         ) : (
           <label className={`form-line lines-${f.lines ?? 1}`}>
-            <span className="form-label">{f.label}</span>
+            <span className="form-label">
+              {f.label}
+              {f.label.length > 14 && <TrIcon text={f.label} />}
+            </span>
             {f.given ? (
               <span className="form-given">{f.given}</span>
             ) : (f.lines ?? 1) > 1 ? (
@@ -864,6 +883,7 @@ function ClozeView({
                   </span>
                 );
               })}
+              <TrIcon text={line.tokens.map((x) => (x.t === "blank" ? "…" : x.s)).join("")} />
             </p>
           ))}
         </div>

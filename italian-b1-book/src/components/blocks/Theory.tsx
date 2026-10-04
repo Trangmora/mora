@@ -3,6 +3,7 @@ import { tr } from "../../i18n";
 import type { L10n } from "../../types";
 import { speak } from "../../lib/speech";
 import { useStore } from "../../lib/store";
+import { TrIcon } from "../TrIcon";
 
 /** **đậm**, *nghiêng*, ***đậm nghiêng*** trong một dòng. */
 export function inline(text: string): ReactNode[] {
@@ -38,7 +39,7 @@ function Example({ text, indent, bullet, as = "p" }: { text: string; indent?: bo
       <span className="th-say" role="button" tabIndex={0} onClick={() => speak(plain(it))} onKeyDown={(e) => e.key === "Enter" && speak(plain(it))}>
         <i>{inline(it)}</i>
       </span>
-      {rest.length > 0 && <> = {inline(rest.join(" = "))}</>}
+      {rest.length > 0 && <> = {inline(rest.join(" = "))}</>} <TrIcon text={it} />
     </Tag>
   );
 }
@@ -132,7 +133,7 @@ export function Theory({ text, note }: { text: string; note?: L10n }) {
       col.push(
         <p key={k++} className="th-li">
           – {inline(label)}
-          {ex !== undefined && <> <Example text={ex} as="span" /></>}
+          {ex !== undefined ? <> <Example text={ex} as="span" /></> : <> <TrIcon text={label} /></>}
         </p>,
       );
     } else if (line.startsWith(">> ")) col.push(<Example key={k++} text={line.slice(3)} indent />);
@@ -145,7 +146,12 @@ export function Theory({ text, note }: { text: string; note?: L10n }) {
           <span className="th-say" onClick={() => speak(plain(b.replace(/^[•○]\s*/, "")))}>{inline(b)}</span>
         </p>,
       );
-    } else col.push(<p key={k++} className={`th-p ${inList ? "indent" : ""}`}>{inline(line)}</p>);
+    } else
+      col.push(
+        <p key={k++} className={`th-p ${inList ? "indent" : ""}`}>
+          {inline(line)} <TrIcon text={line} />
+        </p>,
+      );
   }
   return (
     <div className="theory">

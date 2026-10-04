@@ -169,3 +169,30 @@ ${confidence != null ? `Recogniser confidence: ${confidence.toFixed(2)}` : ""}`;
 
   return askJSON(system, user, readingSchema);
 }
+
+type TranslateBody = { text: string; lang?: Lang };
+
+const translateSchema = {
+  type: "object",
+  properties: { translation: { type: "string" } },
+  required: ["translation"],
+  additionalProperties: false,
+} as const;
+
+/** Bản dịch đã làm, để không gọi API hai lần cho cùng một câu. */
+const translations = new Map<string, { translation: string }>();
+
+/** Dịch một câu tiếng Ý trong sách sang tiếng Việt / tiếng Anh (icon dịch cạnh mỗi câu). */
+export async function translateText(body: TranslateBody) {
+  const { text, lang = "vi" } = body ?? ({} as TranslateBody);
+  if (!text?.trim()) throw new GradingError(400, "Thiếu câu cần dịch.");
+  if (text.length > 2000) throw new GradingError(400, "Câu quá dài.");
+  const key = `${lang}|${text}`;
+  const hit = translations.get(key);
+  if (hit) return hit;
+  const system = `You translate sentences from an Italian B1 coursebook for a learner. Translate naturally and faithfully into ${langName(lang)}.
+"…" or "___" marks a blank the student must fill: keep it as "…" and do not guess the missing word. Keep names, titles and numbers. Return only the translation.`;
+  const out = (await askJSON(system, text, translateSchema)) as { translation: string };
+  translations.set(key, out);
+  return out;
+}
