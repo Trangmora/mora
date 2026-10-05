@@ -7,7 +7,8 @@
     "build": "vite build",
     "start": "NODE_ENV=production tsx server/index.ts",
     "typecheck": "tsc --noEmit -p .",
-    "voices": "tsx scripts/voices.ts"
+    "voices": "tsx scripts/voices.ts",
+    "site": "vite build --base=./ --outDir site/book --emptyOutDir"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
