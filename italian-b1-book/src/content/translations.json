@@ -67,6 +67,10 @@
   "en": "(io, prendere) …… always the bus.",
   "vi": "(io, prendere) …… lúc nào cũng xe buýt."
  },
+ "(noi, tornare) … due settimane fa: stanchi ma entusiasti. È proprio vero: la mia vita (cambiare) …!": {
+  "en": "We (tornare) … two weeks ago: tired but thrilled. It's really true: my life (cambiare) …!",
+  "vi": "Bọn mình (tornare) … hai tuần trước: mệt nhưng rất hào hứng. Đúng thật: cuộc đời mình (cambiare) …!"
+ },
  "(tu, preferire) … guardare un film alla TV o al cinema?": {
   "en": "(tu, preferire) … watching a film on TV or at the cinema?",
   "vi": "(tu, preferire) … xem phim trên TV hay ở rạp?"
@@ -79,9 +83,17 @@
   "en": "Did (voi, pranzare) … at the restaurant yesterday?",
   "vi": "Hôm qua (voi, pranzare) … ở nhà hàng à?"
  },
+ "1. Gianni (scendere) … le scale in fretta.": {
+  "en": "1. Gianni (scendere) … the stairs in a hurry.",
+  "vi": "1. Gianni (scendere) … cầu thang vội vàng."
+ },
  "1. Ha mai visto un film italiano? Quale?": {
   "en": "1. Have you ever seen an Italian film? Which one?",
   "vi": "1. Bạn đã từng xem phim Ý nào chưa? Phim nào?"
+ },
+ "1. Mentre Giorgio (camminare) …, (incontrare) … Lucia.": {
+  "en": "1. While Giorgio (camminare) …, he (incontrare) … Lucia.",
+  "vi": "1. Trong khi Giorgio (camminare) …, anh ấy (incontrare) … Lucia."
  },
  "1. Quante lingue conosce?": {
   "en": "1. How many languages do you know?",
@@ -91,6 +103,10 @@
   "en": "10. What (tu, volere) …? (e) I (servire) … a pen.",
   "vi": "10. (tu, volere) … gì? (e) Tôi (servire) … một cây bút."
  },
+ "2. (io, accendere) … la radio perché (volere) … ascoltare un po' di musica.": {
+  "en": "2. (io, accendere) … the radio because I (volere) … to listen to some music.",
+  "vi": "2. (io, accendere) … radio vì (volere) … nghe chút nhạc."
+ },
  "2. Dove ha studiato la lingua italiana? Per quanto tempo?": {
   "en": "2. Where did you study Italian? For how long?",
   "vi": "2. Bạn đã học tiếng Ý ở đâu? Trong bao lâu?"
@@ -98,6 +114,10 @@
  "2. Ha mai letto un libro di un autore italiano? Quale?": {
   "en": "2. Have you ever read a book by an Italian author? Which one?",
   "vi": "2. Bạn đã từng đọc sách của một tác giả Ý chưa? Sách nào?"
+ },
+ "2. I passeggeri (scendere) … dal treno.": {
+  "en": "2. The passengers (scendere) … off the train.",
+  "vi": "2. Hành khách (scendere) … khỏi tàu."
  },
  "2. Siccome (noi, essere) … stanchi, (i) non (volere) … andare a casa a piedi.": {
   "en": "2. As (noi, essere) … tired, (i) we didn't (volere) … walk home.",
@@ -191,6 +211,10 @@
   "en": "We have a microwave oven, but we never use … .",
   "vi": "Nhà mình có lò vi sóng, nhưng không bao giờ dùng … cả."
  },
+ "Abbiamo incontrato Andrea e Cristina mentre passeggiavano.": {
+  "en": "We met Andrea and Cristina while they were out for a walk.",
+  "vi": "Chúng tôi đã gặp Andrea và Cristina khi họ đang đi dạo."
+ },
  "Abbiamo incontrato alcuni amici che (noi, conoscere) … tre anni fa.": {
   "en": "We met some friends whom (noi, conoscere) … three years before.",
   "vi": "Chúng tôi đã gặp vài người bạn mà (noi, conoscere) … từ ba năm trước."
@@ -198,6 +222,14 @@
  "Abbiamo parlato per telefono.": {
   "en": "We spoke on the phone.",
   "vi": "Chúng tôi đã nói chuyện qua điện thoại."
+ },
+ "Abbiamo sceso le scale insieme.": {
+  "en": "We went down the stairs together.",
+  "vi": "Chúng tôi đã cùng nhau đi xuống cầu thang."
+ },
+ "Abbiamo terminato il lavoro.": {
+  "en": "We finished the work.",
+  "vi": "Chúng tôi đã làm xong công việc."
  },
  "Abbiniamo e completiamo le frasi con i verbi all'imperfetto.": {
   "en": "Let's match and complete the sentences with the verbs in the imperfetto.",
@@ -218,6 +250,14 @@
  "Alberto prende la metropolitana perché: (a) c'è molto traffico. (b) non ama camminare a piedi. (c) non sa guidare.": {
   "en": "Alberto takes the underground because: (a) there's a lot of traffic. (b) he doesn't like walking. (c) he can't drive.",
   "vi": "Alberto đi tàu điện ngầm vì: (a) có nhiều xe cộ. (b) không thích đi bộ. (c) không biết lái xe."
+ },
+ "Alcuni sociologi hanno studiato i comportamenti dei nuclei familiari del passato e hanno fatto delle scoperte interessanti. Prima di tutto hanno analizzato il fenomeno della famiglia patriarcale: in questa tipologia familiare il padre aveva un ruolo fondamentale e i figli dovevano rispettare regole severe. Le famiglie restavano più unite e più vicine agli anziani e ai genitori. I sociologi hanno dimostrato che, nelle famiglie italiane di cento anni fa, le persone sposate si ammalavano meno, vivevano più a lungo e si sentivano più felici. Un dato rilevante dell'attuale società italiana è che i padri sono i più vecchi del mondo: il primo figlio nasce quando il padre ha 33 anni. Gli uomini italiani sono fra quelli che escono più tardi dalla famiglia di origine: fino ai 30 anni preferiscono di solito vivere in casa con mamma e papà. Quando si sposano imparano più tardi a fare i lavori di casa e lasciano così più responsabilità alle donne. Un'indagine dell'ISTAT dice che oggi il matrimonio e i figli arrivano dopo l'affermazione professionale ed economica.": {
+  "en": "Some sociologists have studied the behaviour of families in the past and made some interesting discoveries. First of all they analysed the patriarchal family: in this type of family the father had a key role and the children had to follow strict rules. Families stayed more united and closer to the elderly and to parents. The sociologists showed that in Italian families a hundred years ago, married people fell ill less, lived longer and felt happier. A striking fact about Italian society today is that its fathers are the oldest in the world: the first child is born when the father is 33. Italian men are among those who leave their family home latest: until 30 they usually prefer to live with mum and dad. When they marry they learn housework later and so leave more responsibility to women. An ISTAT survey says that today marriage and children come after professional and financial success.",
+  "vi": "Một số nhà xã hội học đã nghiên cứu hành vi của các gia đình xưa và có những phát hiện thú vị. Trước hết họ phân tích hiện tượng gia đình gia trưởng: trong kiểu gia đình này người cha có vai trò then chốt và con cái phải tuân theo những quy tắc nghiêm khắc. Các gia đình gắn bó hơn và gần gũi hơn với người già và cha mẹ. Các nhà xã hội học đã chứng minh rằng trong các gia đình Ý cách đây một trăm năm, người đã lập gia đình ít bệnh hơn, sống lâu hơn và cảm thấy hạnh phúc hơn. Một số liệu đáng chú ý của xã hội Ý hiện nay là các ông bố già nhất thế giới: đứa con đầu tiên ra đời khi người bố 33 tuổi. Đàn ông Ý thuộc nhóm rời gia đình muộn nhất: đến 30 tuổi họ thường thích sống với bố mẹ. Khi lấy vợ, họ học làm việc nhà muộn hơn và vì vậy để lại nhiều trách nhiệm hơn cho phụ nữ. Một khảo sát của ISTAT cho biết ngày nay hôn nhân và con cái đến sau khi đã thành đạt về nghề nghiệp và kinh tế."
+ },
+ "Alcuni verbi possono essere transitivi e intransitivi: aumentare, cambiare, cominciare, continuare, diminuire, finire, guarire, iniziare, migliorare, passare, salire, scendere, terminare, ecc.": {
+  "en": "Some verbs can be both transitive and intransitive: aumentare, cambiare, cominciare, continuare, diminuire, finire, guarire, iniziare, migliorare, passare, salire, scendere, terminare, etc.",
+  "vi": "Một số động từ có thể vừa là ngoại động từ vừa là nội động từ: aumentare, cambiare, cominciare, continuare, diminuire, finire, guarire, iniziare, migliorare, passare, salire, scendere, terminare, v.v."
  },
  "Alessandro studiava sempre con Giulio.": {
   "en": "Alessandro always studied with Giulio.",
@@ -287,6 +327,10 @@
   "en": "Anna looks at herself in the mirror.",
   "vi": "Anna tự ngắm mình trong gương."
  },
+ "Antonio De Curtis in arte TOTÒ": {
+  "en": "Antonio De Curtis, stage name TOTÒ",
+  "vi": "Antonio De Curtis, nghệ danh TOTÒ"
+ },
  "Arrivo a mezzogiorno.": {
   "en": "I arrive at noon.",
   "vi": "Tôi đến lúc giữa trưa."
@@ -307,9 +351,21 @@
   "en": "Let's listen and complete the table.",
   "vi": "Nghe và hoàn thành bảng."
  },
+ "Ascoltiamo e leggiamo le parole.": {
+  "en": "Let's listen and read the words.",
+  "vi": "Nghe và đọc các từ."
+ },
+ "Ascoltiamo e leggiamo le vocali.": {
+  "en": "Let's listen and read the vowels.",
+  "vi": "Nghe và đọc các nguyên âm."
+ },
  "Ascoltiamo e scegliamo la risposta giusta.": {
   "en": "Let's listen and choose the right answer.",
   "vi": "Nghe và chọn câu trả lời đúng."
+ },
+ "Ascoltiamo e scriviamo le parole.": {
+  "en": "Let's listen and write the words.",
+  "vi": "Nghe và viết các từ."
  },
  "Ascoltiamo e scriviamo.": {
   "en": "Let's listen and write.",
@@ -322,6 +378,10 @@
  "Aspetti Carlo?": {
   "en": "Are you waiting for Carlo?",
   "vi": "Bạn đợi Carlo à?"
+ },
+ "Avete capito la lezione?": {
+  "en": "Did you understand the lesson?",
+  "vi": "Các bạn đã hiểu bài chưa?"
  },
  "Avete contatti con le comunità italiane o con gli Istituti italiani di cultura nel vostro paese?": {
   "en": "Do you have contact with Italian communities or Italian Cultural Institutes in your country?",
@@ -367,6 +427,10 @@
   "en": "Good morning, madam: what would you like?",
   "vi": "Xin chào bà: bà cần gì ạ?"
  },
+ "Buongiorno, volevo un litro di latte.": {
+  "en": "Good morning, I'd like a litre of milk.",
+  "vi": "Xin chào, tôi muốn mua một lít sữa."
+ },
  "Buongiorno, volevo una carta telefonica da trenta euro.": {
   "en": "Good morning, I'd like a thirty-euro phone card.",
   "vi": "Xin chào, tôi muốn mua một thẻ điện thoại ba mươi euro."
@@ -398,6 +462,10 @@
  "Che bella casa! Non (io, vedere) l' … ancora ….": {
   "en": "What a lovely house! I (io, vedere) … not … it yet.",
   "vi": "Ngôi nhà đẹp quá! Tôi (io, vedere) … chưa … nó bao giờ."
+ },
+ "Che carino tuo figlio! Non l'avevo mai visto prima!": {
+  "en": "Your son is so cute! I'd never seen him before!",
+  "vi": "Con bạn dễ thương quá! Trước giờ mình chưa từng gặp bé!"
  },
  "Che cosa (tu, fare) … ieri sera?": {
   "en": "What (tu, fare) … last night?",
@@ -487,13 +555,25 @@
   "en": "Are there Italian immigrants?",
   "vi": "Có người Ý di cư đến không?"
  },
+ "Ci sono verbi intransitivi con l'ausiliare essere e avere:": {
+  "en": "Some intransitive verbs take both essere and avere:",
+  "vi": "Có những nội động từ dùng được cả trợ động từ essere và avere:"
+ },
  "Ci vediamo tra / fra due ore.": {
   "en": "See you in two hours.",
   "vi": "Hai tiếng nữa gặp nhau nhé."
  },
+ "Ciao Massimo,": {
+  "en": "Hi Massimo,",
+  "vi": "Chào Massimo,"
+ },
  "Ciao, tu sei Marco?": {
   "en": "Hi, are you Marco?",
   "vi": "Chào, bạn là Marco à?"
+ },
+ "Clara, tu per me sei una persona di famiglia.": {
+  "en": "Clara, to me you're like one of the family.",
+  "vi": "Clara, với tôi bạn như người trong nhà."
  },
  "Com'era la situazione in Italia nella seconda metà del 1800?": {
   "en": "What was the situation in Italy in the second half of the 1800s?",
@@ -539,6 +619,10 @@
   "en": "With the modal verbs potere, dovere and volere, unstressed pronouns can go before the modal or after the infinitive:",
   "vi": "Với các động từ khuyết thiếu potere, dovere và volere, đại từ không nhấn có thể đứng trước động từ khuyết thiếu hoặc sau động từ nguyên mẫu:"
  },
+ "Con l'aiuto dell'insegnante spiegate il significato di questi proverbi:": {
+  "en": "With the teacher's help, explain the meaning of these proverbs:",
+  "vi": "Với sự giúp đỡ của giáo viên, hãy giải thích ý nghĩa của những câu tục ngữ này:"
+ },
  "Con l'aiuto delle immagini e dei titoli dei giornali, rispondiamo alle domande.": {
   "en": "With the help of the pictures and the newspaper headlines, let's answer the questions.",
   "vi": "Dựa vào các bức ảnh và tiêu đề báo, hãy trả lời các câu hỏi."
@@ -575,9 +659,17 @@
   "en": "In summer it's hot. / In summer it's hot.",
   "vi": "Mùa hè trời nóng. / Vào mùa hè trời nóng."
  },
+ "D'inverno Paola sentiva sempre freddo.": {
+  "en": "In winter Paola always felt cold.",
+  "vi": "Mùa đông Paola lúc nào cũng thấy lạnh."
+ },
  "D'inverno il tempo è brutto.": {
   "en": "In winter the weather is bad.",
   "vi": "Mùa đông thời tiết xấu."
+ },
+ "Da bambini ogni giorno giocavamo nel parco.": {
+  "en": "As children we played in the park every day.",
+  "vi": "Hồi nhỏ ngày nào chúng tôi cũng chơi ở công viên."
  },
  "Da bambino ero grasso.": {
   "en": "As a child I was fat.",
@@ -731,6 +823,10 @@
   "en": "After tra/fra and before the pronoun we can also use the preposition di:",
   "vi": "Sau tra/fra và trước đại từ ta cũng có thể dùng giới từ di:"
  },
+ "Dopo una breve sosta abbiamo continuato il viaggio.": {
+  "en": "After a short stop we continued our journey.",
+  "vi": "Sau một chặng nghỉ ngắn chúng tôi tiếp tục hành trình."
+ },
  "Dottore, La disturbo?": {
   "en": "Doctor, am I disturbing you?",
   "vi": "Thưa bác sĩ, tôi có làm phiền ông không?"
@@ -742,6 +838,10 @@
  "Dove fate shopping di solito?": {
   "en": "Where do you usually go shopping?",
   "vi": "Các ông thường mua sắm ở đâu?"
+ },
+ "Dove hai messo le chiavi?": {
+  "en": "Where did you put the keys?",
+  "vi": "Bạn để chìa khoá ở đâu rồi?"
  },
  "Dove sono andati gli italiani per cercare fortuna?": {
   "en": "Where did Italians go to seek their fortune?",
@@ -774,6 +874,10 @@
  "E per la residenza?": {
   "en": "And for the residence certificate?",
   "vi": "Còn giấy xác nhận cư trú thì sao?"
+ },
+ "Edoardo ha chiesto un'informazione a Umberto.": {
+  "en": "Edoardo asked Umberto for some information.",
+  "vi": "Edoardo đã hỏi Umberto một thông tin."
  },
  "Egli ed ella compaiono solo nella lingua scritta formale e in testi letterari: il pronome femminile ella è raro anche nella lingua scritta. Egli ed ella si riferiscono soltanto a una persona.": {
   "en": "Egli and ella appear only in formal written language and literary texts: the feminine pronoun ella is rare even in writing. Egli and ella refer only to a person.",
@@ -815,6 +919,10 @@
   "en": "At last I found the keys that (io, perdere) …!",
   "vi": "Cuối cùng tôi đã tìm thấy chùm chìa khoá mà (io, perdere) …!"
  },
+ "Formiamo il trapassato prossimo con l'imperfetto di avere o essere + il participio passato del verbo.": {
+  "en": "We form the trapassato prossimo with the imperfetto of avere or essere + the past participle of the verb.",
+  "vi": "Ta tạo thì trapassato prossimo bằng imperfetto của avere hoặc essere + phân từ quá khứ của động từ."
+ },
  "Formiamo le preposizioni articolate con le preposizioni semplici e gli articoli determinativi:": {
   "en": "We form articulated prepositions by combining simple prepositions with definite articles:",
   "vi": "Ta tạo giới từ có mạo từ bằng cách ghép giới từ đơn với mạo từ xác định:"
@@ -826,6 +934,10 @@
  "Gianna (abitare) … dieci anni a Parigi.": {
   "en": "Gianna (abitare) … in Paris for ten years.",
   "vi": "Gianna (abitare) … mười năm ở Paris."
+ },
+ "Gianni ha deciso di mettere su famiglia.": {
+  "en": "Gianni has decided to settle down and start a family.",
+  "vi": "Gianni đã quyết định lập gia đình."
  },
  "Giochiamo a pallone?": {
   "en": "Shall we play football?",
@@ -850,6 +962,10 @@
  "Giorgio va a prendere l'autobus.": {
   "en": "Giorgio is going to catch the bus.",
   "vi": "Giorgio đi bắt xe buýt."
+ },
+ "Giulia aveva i capelli biondi e gli occhi azzurri.": {
+  "en": "Giulia had blond hair and blue eyes.",
+  "vi": "Giulia có mái tóc vàng và đôi mắt xanh."
  },
  "Giulia pensa solo a sé stessa.": {
   "en": "Giulia thinks only of herself.",
@@ -923,13 +1039,41 @@
   "en": "Did you write to your friends?",
   "vi": "Bạn đã viết thư cho các bạn chưa?"
  },
+ "Ho acceso la TV perché volevo ascoltare le notizie del telegiornale.": {
+  "en": "I turned on the TV because I wanted to hear the news.",
+  "vi": "Tôi đã bật tivi vì muốn nghe bản tin thời sự."
+ },
  "Ho acceso la TV perché volevo ascoltare le notizie.": {
   "en": "I turned on the TV because I wanted to listen to the news.",
   "vi": "Tôi đã bật tivi vì tôi muốn nghe tin tức."
  },
+ "Ho corso per un'ora.": {
+  "en": "I ran for an hour.",
+  "vi": "Tôi đã chạy một tiếng."
+ },
  "Ho incontrato Cesare e … ho detto tutto.": {
   "en": "I met Cesare and told … everything.",
   "vi": "Tôi đã gặp Cesare và kể hết cho … ."
+ },
+ "Ho offerto una birra ai miei amici.": {
+  "en": "I bought my friends a beer.",
+  "vi": "Tôi đã mời các bạn một cốc bia."
+ },
+ "Ho passato un bel fine settimana a Capri.": {
+  "en": "I spent a lovely weekend in Capri.",
+  "vi": "Tôi đã có một cuối tuần đẹp ở Capri."
+ },
+ "Ho salito le scale in fretta.": {
+  "en": "I hurried up the stairs.",
+  "vi": "Tôi đã vội vàng leo cầu thang."
+ },
+ "Ho speso tutti i soldi.": {
+  "en": "I spent all the money.",
+  "vi": "Tôi đã tiêu hết tiền."
+ },
+ "Ho vissuto per un anno a Parigi.": {
+  "en": "I lived in Paris for a year.",
+  "vi": "Tôi đã sống một năm ở Paris."
  },
  "Hugo viene da Parigi.": {
   "en": "Hugo comes from Paris.",
@@ -938,6 +1082,10 @@
  "I bambini cominciano la scuola a cinque anni.": {
   "en": "Children start school at five.",
   "vi": "Trẻ em bắt đầu đi học lúc năm tuổi."
+ },
+ "I bambini hanno finito i compiti.": {
+  "en": "The children finished their homework.",
+  "vi": "Bọn trẻ đã làm xong bài tập."
  },
  "I genitori di Patrizia hanno affittato una barca.": {
   "en": "Patrizia's parents hired a boat.",
@@ -954,6 +1102,14 @@
  "I nomi, da sinistra a destra:": {
   "en": "The names, from left to right:",
   "vi": "Tên, từ trái sang phải:"
+ },
+ "I panni sporchi si lavano in famiglia.": {
+  "en": "Dirty laundry is washed at home (don't air family problems in public).",
+  "vi": "Áo bẩn thì giặt trong nhà (chuyện nhà đóng cửa bảo nhau)."
+ },
+ "I prezzi sono aumentati.": {
+  "en": "Prices have gone up.",
+  "vi": "Giá cả đã tăng."
  },
  "I pronomi atoni precedono il verbo e possono avere funzione di:": {
   "en": "Unstressed pronouns come before the verb and can act as:",
@@ -979,9 +1135,25 @@
   "en": "His friends and his cousin too.",
   "vi": "Bạn bè của cậu ấy và cả em họ cậu ấy nữa."
  },
+ "I tifosi erano felici per la vittoria della loro squadra.": {
+  "en": "The fans were happy about their team's victory.",
+  "vi": "Các cổ động viên vui mừng vì đội nhà chiến thắng."
+ },
+ "I verbi intransitivi non hanno un oggetto diretto e al passato prossimo possono avere l'ausiliare essere o avere:": {
+  "en": "Intransitive verbs have no direct object and in the passato prossimo can take the auxiliary essere or avere:",
+  "vi": "Nội động từ không có tân ngữ trực tiếp và ở thì passato prossimo có thể dùng trợ động từ essere hoặc avere:"
+ },
+ "I verbi transitivi hanno un oggetto diretto e al passato prossimo hanno l'ausiliare avere:": {
+  "en": "Transitive verbs have a direct object and in the passato prossimo take the auxiliary avere:",
+  "vi": "Ngoại động từ có tân ngữ trực tiếp và ở thì passato prossimo dùng trợ động từ avere:"
+ },
  "Ieri Elena mi ha detto che la sera prima era andata a vedere un concerto di Giorgia.": {
   "en": "Yesterday Elena told me that the evening before she had gone to see a Giorgia concert.",
   "vi": "Hôm qua Elena kể với tôi rằng tối hôm trước cô ấy đã đi xem buổi hoà nhạc của Giorgia."
+ },
+ "Ieri ho camminato molto.": {
+  "en": "Yesterday I walked a lot.",
+  "vi": "Hôm qua tôi đã đi bộ nhiều."
  },
  "Ieri ho visto un film in televisione.": {
   "en": "Yesterday I watched a film on television.",
@@ -991,9 +1163,17 @@
   "en": "Yesterday morning Carla (alzarsi) … early and (farsi) … a shower.",
   "vi": "Sáng hôm qua Carla (alzarsi) … sớm và (farsi) … tắm."
  },
+ "Ieri non stavo bene: avevo mal di stomaco.": {
+  "en": "Yesterday I wasn't well: I had a stomach ache.",
+  "vi": "Hôm qua tôi không khoẻ: tôi bị đau bụng."
+ },
  "Ieri sera Marco era felice perché aveva superato un esame difficile.": {
   "en": "Last night Marco was happy because he had passed a difficult exam.",
   "vi": "Tối qua Marco rất vui vì cậu ấy đã vượt qua một kỳ thi khó."
+ },
+ "Ieri sera, mentre guardavo la partita in televisione, Claudio mi ha telefonato.": {
+  "en": "Last night, while I was watching the match on TV, Claudio phoned me.",
+  "vi": "Tối qua, trong khi tôi đang xem trận đấu trên tivi, Claudio gọi điện cho tôi."
  },
  "Il bambino (nuotare) … in piscina con i suoi amici.": {
   "en": "The little boy (nuotare) … in the pool with his friends.",
@@ -1019,6 +1199,10 @@
   "en": "The cook greases the pan with butter.",
   "vi": "Đầu bếp quét bơ lên chảo."
  },
+ "Il direttore mi ha aumentato lo stipendio.": {
+  "en": "The director gave me a pay rise.",
+  "vi": "Giám đốc đã tăng lương cho tôi."
+ },
  "Il direttore vuole te.": {
   "en": "The director wants you.",
   "vi": "Giám đốc muốn gặp bạn."
@@ -1043,9 +1227,17 @@
   "en": "The cat sleeps on this sofa.",
   "vi": "Con mèo ngủ trên chiếc ghế sofa này."
  },
+ "Il governo ha diminuito il prezzo della benzina.": {
+  "en": "The government lowered the price of petrol.",
+  "vi": "Chính phủ đã giảm giá xăng."
+ },
  "Il libro costa sui venti euro.": {
   "en": "The book costs about twenty euros.",
   "vi": "Cuốn sách giá khoảng hai mươi euro."
+ },
+ "Il malato è guarito.": {
+  "en": "The patient recovered.",
+  "vi": "Người bệnh đã khỏi."
  },
  "Il mio compleanno è in aprile.": {
   "en": "My birthday is in April.",
@@ -1066,6 +1258,10 @@
  "Il professor Rosina ha curato un'indagine: (a) sulle abitudini degli anziani. (b) sulle abitudini degli adolescenti. (c) sulle abitudini dei giovani trentenni.": {
   "en": "Professor Rosina carried out a survey: (a) on the habits of the elderly. (b) on the habits of teenagers. (c) on the habits of young people in their thirties.",
   "vi": "Giáo sư Rosina đã thực hiện một cuộc khảo sát: (a) về thói quen của người già. (b) về thói quen của thanh thiếu niên. (c) về thói quen của những người trẻ khoảng ba mươi tuổi."
+ },
+ "Il professore ha cominciato la lezione.": {
+  "en": "The teacher started the lesson.",
+  "vi": "Thầy giáo đã bắt đầu bài giảng."
  },
  "Il professore interrogherà voi.": {
   "en": "The teacher will test you (all).",
@@ -1091,9 +1287,17 @@
   "en": "The weather has changed.",
   "vi": "Thời tiết đã thay đổi."
  },
+ "Il trapassato prossimo esprime un'azione compiuta nel passato prima di un'altra azione passata:": {
+  "en": "The trapassato prossimo expresses an action completed in the past before another past action:",
+  "vi": "Thì trapassato prossimo diễn tả một hành động đã hoàn thành trong quá khứ trước một hành động quá khứ khác:"
+ },
  "In Italia gli immigrati non imparano l'italiano.": {
   "en": "In Italy immigrants don't learn Italian.",
   "vi": "Ở Ý người nhập cư không học tiếng Ý."
+ },
+ "In Italia i papà più vecchi del mondo": {
+  "en": "In Italy, the oldest dads in the world",
+  "vi": "Ở Ý có những ông bố già nhất thế giới"
  },
  "In autunno piove spesso.": {
   "en": "In autumn it often rains.",
@@ -1114,6 +1318,10 @@
  "In italiano non è obbligatorio esprimere il pronome personale soggetto, perché il verbo già indica la persona:": {
   "en": "In Italian it isn't necessary to express the subject pronoun, because the verb already shows the person:",
   "vi": "Trong tiếng Ý không bắt buộc phải nói đại từ chủ ngữ, vì động từ đã cho biết ngôi:"
+ },
+ "In montagna nevicava spesso.": {
+  "en": "It often snowed in the mountains.",
+  "vi": "Trên núi tuyết thường rơi."
  },
  "In ogni gruppo uno studente, con l'aiuto della sua squadra, risponde al comando delle caselle.": {
   "en": "In each group one student, with the help of the team, answers the command in the squares.",
@@ -1143,6 +1351,14 @@
   "en": "I look at Sonia, but she looks at you.",
   "vi": "Tôi nhìn Sonia, nhưng cô ấy nhìn bạn."
  },
+ "Io ho cambiato lavoro due settimane fa.": {
+  "en": "I changed jobs two weeks ago.",
+  "vi": "Hai tuần trước tôi đã đổi việc."
+ },
+ "Io ho perso l'ombrello.": {
+  "en": "I lost my umbrella.",
+  "vi": "Tôi đã làm mất cái ô."
+ },
  "Io lavoro dalla mattina alla sera e tu non fai niente tutto il giorno.": {
   "en": "I work from morning to night and you do nothing all day.",
   "vi": "Tôi làm việc từ sáng đến tối còn bạn thì cả ngày chẳng làm gì."
@@ -1155,6 +1371,10 @@
   "en": "Io, lei and te are personal pronouns.",
   "vi": "Io, lei và te là đại từ nhân xưng."
  },
+ "L'Italia ha vinto il campionato mondiale di calcio nel 2006.": {
+  "en": "Italy won the football World Cup in 2006.",
+  "vi": "Ý đã vô địch World Cup bóng đá năm 2006."
+ },
  "L'Italia oggi è diventata terra di immigrazione?": {
   "en": "Has Italy today become a land of immigration?",
   "vi": "Ngày nay Ý đã trở thành nơi đến của người nhập cư chưa?"
@@ -1162,6 +1382,10 @@
  "L'Umbria e la Toscana, anche se durante l'estate … piacciono di meno perché sono piene di turisti!": {
   "en": "Umbria and Tuscany, although in summer … like them less because they are full of tourists!",
   "vi": "Umbria và Toscana, dù vào mùa hè … ít thích hơn vì đông nghẹt du khách!"
+ },
+ "L'atleta ha migliorato il record del mondo.": {
+  "en": "The athlete improved the world record.",
+  "vi": "Vận động viên đã cải thiện kỷ lục thế giới."
  },
  "L'estate non lavoro per un mese.": {
   "en": "In summer I don't work for a month.",
@@ -1195,6 +1419,10 @@
   "en": "The bomboniera is: (a) a trip. (b) a keepsake the couple gives to friends. (c) a type of music.",
   "vi": "Bomboniera là: (a) một chuyến đi. (b) món quà kỷ niệm cô dâu chú rể tặng bạn bè. (c) một thể loại nhạc."
  },
+ "La campagna era stupenda in primavera.": {
+  "en": "The countryside was stunning in spring.",
+  "vi": "Vùng quê mùa xuân thật tuyệt đẹp."
+ },
  "La cerimonia di nozze di Vittoria (finire) … tardi.": {
   "en": "Vittoria's wedding ceremony (finire) … late.",
   "vi": "Lễ cưới của Vittoria (finire) … muộn."
@@ -1211,13 +1439,25 @@
   "en": "Patrizia's family",
   "vi": "Gia đình của Patrizia"
  },
+ "La famiglia italiana": {
+  "en": "The Italian family",
+  "vi": "Gia đình Ý"
+ },
  "La famiglia è … media di 3 persone; risiede … nord, … una casa di proprietà.": {
   "en": "The family is … average 3 people; it lives … the north, … a house it owns.",
   "vi": "Gia đình … trung bình có 3 người; sống … miền Bắc, … một ngôi nhà thuộc sở hữu riêng."
  },
+ "La febbre è diminuita.": {
+  "en": "The fever has gone down.",
+  "vi": "Cơn sốt đã giảm."
+ },
  "La fede è: (a) l'anello degli sposi. (b) una foto degli sposi. (c) un documento.": {
   "en": "The fede is: (a) the couple's wedding ring. (b) a photo of the couple. (c) a document.",
   "vi": "Fede là: (a) nhẫn cưới của cô dâu chú rể. (b) một bức ảnh của cô dâu chú rể. (c) một giấy tờ."
+ },
+ "La festa (essere) … bellissima: (cominciare) … alle 7 di sera ed (finire) … alle 4 di notte! Gli invitati (essere) … felicissimi, Katrin (essere) … splendida. Il giorno dopo (noi, partire) … per Buenos Aires, (noi, viaggiare) … per 12 ore, ma il volo ci (piacere) … moltissimo.": {
+  "en": "The party (essere) … wonderful: it (cominciare) … at 7 in the evening and (finire) … at 4 in the morning! The guests (essere) … delighted, Katrin (essere) … stunning. The next day we (partire) … for Buenos Aires, we (viaggiare) … for 12 hours, but we (piacere) … the flight a lot.",
+  "vi": "Bữa tiệc (essere) … tuyệt vời: (cominciare) … lúc 7 giờ tối và (finire) … lúc 4 giờ sáng! Khách mời (essere) … rất vui, Katrin (essere) … lộng lẫy. Hôm sau bọn mình (partire) … đi Buenos Aires, (viaggiare) … 12 tiếng, nhưng bọn mình (piacere) … chuyến bay lắm."
  },
  "La lezione è finita.": {
   "en": "The lesson has finished.",
@@ -1235,6 +1475,10 @@
   "en": "Most … Italians drink mineral water. One … three drinks wine every day.",
   "vi": "Phần lớn … người Ý uống nước khoáng. Cứ … ba người thì một người uống rượu vang mỗi ngày."
  },
+ "La mamma cucinava e i bambini giocavano.": {
+  "en": "Mum was cooking and the children were playing.",
+  "vi": "Mẹ nấu ăn còn bọn trẻ thì chơi."
+ },
  "La mia mamma (cominciare) … ieri il nuovo lavoro.": {
   "en": "Yesterday my mum (cominciare) … her new job.",
   "vi": "Hôm qua mẹ tôi (cominciare) … công việc mới."
@@ -1242,6 +1486,10 @@
  "La nuora è: (a) la sorella della nonna. (b) la figlia della zia. (c) la moglie del figlio.": {
   "en": "The nuora is: (a) the grandmother's sister. (b) the aunt's daughter. (c) the son's wife.",
   "vi": "Nuora là: (a) chị/em gái của bà. (b) con gái của cô/dì. (c) vợ của con trai."
+ },
+ "La partita è terminata.": {
+  "en": "The match is over.",
+  "vi": "Trận đấu đã kết thúc."
  },
  "La preposizione a indica:": {
   "en": "The preposition a indicates:",
@@ -1271,9 +1519,17 @@
   "en": "The preposition su indicates:",
   "vi": "Giới từ su chỉ:"
  },
+ "La scorsa settimana ho comprato un libro sulla vita di Garibaldi, l'ho letto tutto e poi l'ho prestato a Gianni.": {
+  "en": "Last week I bought a book about Garibaldi's life, read it all and then lent it to Gianni.",
+  "vi": "Tuần trước tôi đã mua một cuốn sách về cuộc đời Garibaldi, đọc hết rồi cho Gianni mượn."
+ },
  "La scorsa settimana siamo andati a teatro.": {
   "en": "Last week we went to the theatre.",
   "vi": "Tuần trước chúng tôi đã đi xem kịch."
+ },
+ "La situazione è migliorata.": {
+  "en": "The situation has improved.",
+  "vi": "Tình hình đã được cải thiện."
  },
  "La società italiana (cambiare) … molto in questi ultimi anni.": {
   "en": "Italian society (cambiare) … a lot in recent years.",
@@ -1315,6 +1571,10 @@
   "en": "The forms me and te replace io and tu:",
   "vi": "Dạng me và te thay cho io và tu:"
  },
+ "Le medicine lo hanno guarito.": {
+  "en": "The medicine cured him.",
+  "vi": "Thuốc đã chữa khỏi bệnh cho anh ấy."
+ },
  "Le preposizioni semplici collegano le parole e hanno diversi significati.": {
   "en": "Simple prepositions link words and have different meanings.",
   "vi": "Giới từ đơn nối các từ với nhau và có nhiều nghĩa khác nhau."
@@ -1342,6 +1602,10 @@
  "Leggiamo e abbiniamo le domande alle risposte.": {
   "en": "Let's read and match the questions to the answers.",
   "vi": "Đọc và nối câu hỏi với câu trả lời."
+ },
+ "Leggiamo e abbiniamo le frasi di Totò alle immagini.": {
+  "en": "Let's read and match Totò's lines to the pictures.",
+  "vi": "Đọc và nối các câu nói của Totò với các bức tranh."
  },
  "Leggiamo e completiamo il testo con i verbi al passato prossimo.": {
   "en": "Let's read and complete the text with the verbs in the passato prossimo.",
@@ -1411,6 +1675,10 @@
   "en": "Course level requested:",
   "vi": "Trình độ khoá học đăng ký:"
  },
+ "Lo spettacolo è continuato.": {
+  "en": "The show went on.",
+  "vi": "Buổi biểu diễn vẫn tiếp tục."
+ },
  "Lo zio James: (a) ha visitato da poco l'Italia. (b) abita in Italia. (c) ha lasciato tanti anni fa l'Italia.": {
   "en": "Uncle James: (a) has recently visited Italy. (b) lives in Italy. (c) left Italy many years ago.",
   "vi": "Chú James: (a) mới đến thăm Ý gần đây. (b) sống ở Ý. (c) đã rời Ý nhiều năm trước."
@@ -1427,9 +1695,17 @@
   "en": "Luca loves you.",
   "vi": "Luca yêu bạn."
  },
+ "Luca è andato in gioielleria perché doveva comprare un anello.": {
+  "en": "Luca went to the jeweller's because he had to buy a ring.",
+  "vi": "Luca đã đến tiệm kim hoàn vì phải mua một chiếc nhẫn."
+ },
  "Lucia e Stefano hanno pranzato insieme.": {
   "en": "Lucia and Stefano had lunch together.",
   "vi": "Lucia và Stefano đã ăn trưa cùng nhau."
+ },
+ "Lucia e Stefano sono tornati dal viaggio di nozze la settimana scorsa.": {
+  "en": "Lucia and Stefano came back from their honeymoon last week.",
+  "vi": "Lucia và Stefano đã đi tuần trăng mật về hồi tuần trước."
  },
  "Lui è mio fratello.": {
   "en": "He is my brother.",
@@ -1471,6 +1747,14 @@
   "en": "Marco did this for her.",
   "vi": "Marco đã làm điều này vì cô ấy."
  },
+ "Marco ha iniziato la scuola a settembre.": {
+  "en": "Marco started school in September.",
+  "vi": "Marco đã bắt đầu đi học vào tháng Chín."
+ },
+ "Marco è entrato in camera mentre Paolo dormiva.": {
+  "en": "Marco came into the room while Paolo was sleeping.",
+  "vi": "Marco đã vào phòng trong khi Paolo đang ngủ."
+ },
  "Marco è più alto di Luigi.": {
   "en": "Marco is taller than Luigi.",
   "vi": "Marco cao hơn Luigi."
@@ -1507,6 +1791,10 @@
   "en": "While Carla was walking, she met Vittoria.",
   "vi": "Trong khi Carla đang đi dạo thì cô ấy gặp Vittoria."
  },
+ "Mentre Lucia apparecchiava la tavola è caduto un bicchiere.": {
+  "en": "While Lucia was laying the table, a glass fell.",
+  "vi": "Trong khi Lucia đang dọn bàn thì một chiếc cốc rơi."
+ },
  "Mentre Luisa scriveva, Beatrice leggeva il giornale.": {
   "en": "While Luisa was writing, Beatrice was reading the paper.",
   "vi": "Trong khi Luisa viết thì Beatrice đọc báo."
@@ -1522,6 +1810,10 @@
  "Mentre il professore spiegava, gli studenti stavano attenti.": {
   "en": "While the teacher was explaining, the students were paying attention.",
   "vi": "Trong khi thầy giáo giảng bài, các học viên chăm chú lắng nghe."
+ },
+ "Mentre la mamma cucinava, i bambini giocavano.": {
+  "en": "While Mum was cooking, the children were playing.",
+  "vi": "Trong khi mẹ nấu ăn, bọn trẻ chơi."
  },
  "Mentre studiavo, mi ha telefonato Manuela.": {
   "en": "While I was studying, Manuela phoned me.",
@@ -1559,6 +1851,10 @@
   "en": "My father scolded me.",
   "vi": "Bố tôi đã mắng tôi."
  },
+ "Moglie e buoi dei paesi tuoi.": {
+  "en": "Wives and oxen from your own village (marry someone from home).",
+  "vi": "Vợ và bò thì nên lấy ở làng mình (lấy người cùng quê là tốt nhất)."
+ },
  "Molte persone all'estero studiano e parlano italiano: non solo gli immigrati italiani, ma anche gli stranieri. La lingua italiana è diventata sempre più importante in vari paesi. All'estero ci sono molti Istituti italiani di cultura e molte scuole private che promuovono la conoscenza della nostra lingua e della nostra cultura: per questo oggi l'italiano è la quinta lingua più studiata nel mondo e molte persone seguono corsi di italiano negli Stati Uniti, in Australia, in Giappone, nei paesi del Mediterraneo e in quelli dell'Europa dell'Est. Nel grafico potete vedere quali sono le motivazioni allo studio dell'italiano:": {
   "en": "Many people abroad study and speak Italian: not only Italian immigrants but also foreigners. Italian has become more and more important in various countries. Abroad there are many Italian Cultural Institutes and many private schools that promote knowledge of our language and culture: that is why today Italian is the fifth most studied language in the world and many people take Italian courses in the United States, Australia, Japan, the Mediterranean countries and Eastern Europe. In the chart you can see the reasons for studying Italian:",
   "vi": "Nhiều người ở nước ngoài học và nói tiếng Ý: không chỉ người Ý di cư mà cả người nước ngoài. Tiếng Ý ngày càng trở nên quan trọng ở nhiều nước. Ở nước ngoài có nhiều Viện Văn hoá Ý và nhiều trường tư thúc đẩy việc tìm hiểu ngôn ngữ và văn hoá của chúng tôi: vì thế ngày nay tiếng Ý là ngôn ngữ được học nhiều thứ năm trên thế giới và nhiều người theo học các khoá tiếng Ý ở Mỹ, Úc, Nhật Bản, các nước Địa Trung Hải và Đông Âu. Trong biểu đồ các bạn có thể thấy những lý do học tiếng Ý:"
@@ -1594,6 +1890,10 @@
  "Nel 1861 è nato lo stato italiano, ma la popolazione (avere) aveva ancora numerosi problemi da risolvere: (esserci) … tanti analfabeti (circa il 70% della popolazione non sapeva leggere e scrivere), non (esistere) … ancora varie industrie, molta gente (lavorare) … soprattutto nell'agricoltura. Inoltre, circa 100.000 persone all'anno (emigrare) … verso altri paesi, specialmente negli Stati Uniti.": {
   "en": "In 1861 the Italian state was born, but the population (avere) still had many problems to solve: (esserci) … many illiterate people (about 70% of the population couldn't read or write), various industries did not (esistere) … yet, many people (lavorare) … mainly in agriculture. Moreover, about 100,000 people a year (emigrare) … to other countries, especially the United States.",
   "vi": "Năm 1861 nhà nước Ý ra đời, nhưng dân chúng (avere) vẫn còn nhiều vấn đề phải giải quyết: (esserci) … rất nhiều người mù chữ (khoảng 70% dân số không biết đọc biết viết), (esistere) … chưa có nhiều ngành công nghiệp, nhiều người (lavorare) … chủ yếu trong nông nghiệp. Ngoài ra, mỗi năm khoảng 100.000 người (emigrare) … sang các nước khác, nhất là sang Mỹ."
+ },
+ "Nel bar c'era molta gente: le persone bevevano e parlavano.": {
+  "en": "The bar was crowded: people were drinking and talking.",
+  "vi": "Trong quán bar có nhiều người: mọi người đang uống và trò chuyện."
  },
  "Nel vostro paese le persone parlano altre lingue? Ci sono molti stranieri?": {
   "en": "In your country do people speak other languages? Are there many foreigners?",
@@ -1631,6 +1931,10 @@
   "en": "It often snowed in the mountains.",
   "vi": "Trên núi tuyết thường rơi."
  },
+ "New York, Central Park": {
+  "en": "New York, Central Park",
+  "vi": "New York, Công viên Trung tâm"
+ },
  "No, non li bevo.": {
   "en": "No, I don't drink them.",
   "vi": "Không, tôi không uống chúng."
@@ -1651,9 +1955,17 @@
   "en": "I don't like the traffic and the disorganisation of the big cities!",
   "vi": "Tôi không thích giao thông và sự thiếu tổ chức ở các thành phố lớn!"
  },
+ "Non avevo niente da mangiare e così ho fatto la spesa.": {
+  "en": "I had nothing to eat, so I went shopping.",
+  "vi": "Tôi không có gì để ăn nên đã đi chợ."
+ },
  "Non fumarla! / Non la fumare!": {
   "en": "Don't smoke it! / Don't smoke it!",
   "vi": "Đừng hút nó! / Đừng hút nó!"
+ },
+ "Non hai chiuso la porta.": {
+  "en": "You didn't close the door.",
+  "vi": "Bạn chưa đóng cửa."
  },
  "Non volevo giocare a tennis perché avevo un dolore al braccio.": {
   "en": "I didn't want to play tennis because my arm hurt.",
@@ -1723,6 +2035,10 @@
   "en": "Let's look and read.",
   "vi": "Quan sát và đọc."
  },
+ "Osserviamo i disegni e parliamo.": {
+  "en": "Let's look at the drawings and talk.",
+  "vi": "Quan sát tranh và nói."
+ },
  "Osserviamo l'immagine e scriviamo.": {
   "en": "Let's look at the picture and write.",
   "vi": "Quan sát bức tranh và viết."
@@ -1731,9 +2047,17 @@
   "en": "Let's look at the picture.",
   "vi": "Quan sát bức tranh."
  },
+ "Osserviamo le immagini.": {
+  "en": "Let's look at the pictures.",
+  "vi": "Quan sát các bức tranh."
+ },
  "Paola è una bambina dagli occhi azzurri.": {
   "en": "Paola is a little girl with blue eyes.",
   "vi": "Paola là một cô bé mắt xanh."
+ },
+ "Paolo non ha detto la verità.": {
+  "en": "Paolo didn't tell the truth.",
+  "vi": "Paolo đã không nói thật."
  },
  "Paolo sta a casa.": {
   "en": "Paolo is at home.",
@@ -1815,9 +2139,21 @@
   "en": "I weigh about seventy kilos.",
   "vi": "Tôi nặng khoảng bảy mươi ký."
  },
+ "Pino": {
+  "en": "Pino",
+  "vi": "Pino"
+ },
  "Possiamo rafforzare il pronome sé con stesso / stessa / stessi / stesse:": {
   "en": "We can reinforce the pronoun sé with stesso / stessa / stessi / stesse:",
   "vi": "Ta có thể nhấn mạnh đại từ sé bằng stesso / stessa / stessi / stesse:"
+ },
+ "Possiamo usare il passato prossimo e l'imperfetto insieme:": {
+  "en": "We can use the passato prossimo and the imperfetto together:",
+  "vi": "Ta có thể dùng passato prossimo và imperfetto cùng nhau:"
+ },
+ "Possiamo usare il trapassato prossimo anche da solo:": {
+  "en": "We can also use the trapassato prossimo on its own:",
+  "vi": "Ta cũng có thể dùng thì trapassato prossimo một mình:"
  },
  "Povero me!": {
   "en": "Poor me!",
@@ -1838,6 +2174,10 @@
  "Prima non (esistere) … i frigoriferi; dunque, le donne (fare) … la spesa tutte le mattine. Questo elettrodomestico (segnare) … un passaggio di condizione sociale, poiché, quando (entrare) … nella casa degli italiani, (essere) … il primo segno della fine di un periodo di miseria. Voglio dire che, con l'introduzione degli elettrodomestici, le donne (liberarsi) … da molte fatiche.": {
   "en": "Before, fridges did not (esistere) …; so women (fare) … the shopping every morning. This appliance (segnare) … a change in social status, because when it (entrare) … Italian homes, it (essere) … the first sign of the end of a period of poverty. I mean that, with the arrival of household appliances, women (liberarsi) … from a lot of hard work.",
   "vi": "Trước đây (esistere) … chưa có tủ lạnh; vì vậy phụ nữ (fare) … đi chợ mỗi sáng. Thiết bị gia dụng này (segnare) … một bước chuyển về địa vị xã hội, vì khi nó (entrare) … vào nhà người Ý, nó (essere) … dấu hiệu đầu tiên cho thấy thời kỳ nghèo khó đã chấm dứt. Ý tôi là, nhờ có đồ gia dụng, phụ nữ (liberarsi) … khỏi nhiều việc nặng nhọc."
+ },
+ "Proverbi": {
+  "en": "Proverbs",
+  "vi": "Tục ngữ"
  },
  "Puoi comprare i biglietti?": {
   "en": "Can you buy the tickets?",
@@ -1874,6 +2214,18 @@
  "Quando ho cominciato l'università, mio fratello (finire) … la sua tesi.": {
   "en": "When I started university, my brother (finire) … his thesis.",
   "vi": "Khi tôi bắt đầu học đại học, anh tôi (finire) … luận văn của anh ấy."
+ },
+ "Quando ritorna a Napoli, dopo la guerra, comincia a recitare in piccoli teatri con un suo repertorio di imitazioni, ma non ha un grande successo; così decide di trasferirsi a Roma. Dopo le esibizioni nei teatri della capitale e di altre città italiane diventa famoso in tutta Italia grazie alla sua mimica e alla sua straordinaria comicità. Nel 1927 torna a Napoli, dove ottiene un autentico trionfo. In quel periodo in Italia si diffonde l'avanspettacolo, una forma di spettacolo popolare che precede o segue la proiezione di film. I copioni sono spesso improvvisati, i costumi di scena sono di poco prezzo e i teatri sono piccoli e poco importanti. Totò diventa il simbolo di questo genere di spettacolo e fa non solo l'attore, ma anche l'impresario. Recita poi in spettacoli più importanti con grandi attori come Anna Magnani e Peppino De Filippo. In seguito lavora nel cinema: dal 1937 al 1967 interpreta 97 film, che hanno avuto circa 270 milioni di spettatori, un record assoluto nella storia del cinema italiano. Totò ha un grande talento anche come scrittore: scrive un'importante raccolta di poesie pubblicata nel 1964, 'A livella (La livella), e anche musiche e testi di numerose canzoni (la più famosa è Malafemmina).": {
+  "en": "When he returned to Naples after the war, he began acting in small theatres with his own repertoire of impressions, but without great success; so he decided to move to Rome. After performing in theatres in the capital and other Italian cities he became famous throughout Italy thanks to his facial expressions and extraordinary comic talent. In 1927 he returned to Naples, where he had a real triumph. At that time the avanspettacolo spread in Italy, a form of popular entertainment shown before or after a film. The scripts were often improvised, the costumes cheap and the theatres small and unimportant. Totò became the symbol of this kind of show and was not only the actor but also the impresario. He then acted in more important shows with great actors such as Anna Magnani and Peppino De Filippo. Later he worked in cinema: from 1937 to 1967 he made 97 films, which had about 270 million viewers, an absolute record in the history of Italian cinema. Totò was also a talented writer: he wrote an important collection of poems published in 1964, 'A livella (The Leveller), as well as music and lyrics for many songs (the most famous is Malafemmina).",
+  "vi": "Khi trở về Napoli sau chiến tranh, ông bắt đầu diễn ở các nhà hát nhỏ với các tiết mục bắt chước của riêng mình, nhưng không thành công lắm; vì vậy ông quyết định chuyển đến Roma. Sau những buổi diễn ở các nhà hát thủ đô và các thành phố khác, ông nổi tiếng khắp nước Ý nhờ tài diễn nét mặt và óc hài hước phi thường. Năm 1927 ông về Napoli và đạt thành công vang dội. Thời đó ở Ý thịnh hành avanspettacolo, một loại hình giải trí bình dân diễn trước hoặc sau khi chiếu phim. Kịch bản thường được ứng tác, trang phục rẻ tiền và nhà hát thì nhỏ, không mấy quan trọng. Totò trở thành biểu tượng của thể loại này, vừa là diễn viên vừa là ông bầu. Sau đó ông diễn trong những vở lớn hơn cùng các diễn viên nổi tiếng như Anna Magnani và Peppino De Filippo. Rồi ông chuyển sang điện ảnh: từ 1937 đến 1967 ông đóng 97 phim với khoảng 270 triệu khán giả, một kỷ lục tuyệt đối trong lịch sử điện ảnh Ý. Totò cũng có tài viết văn: ông viết một tập thơ quan trọng xuất bản năm 1964, 'A livella (Cái thước thăng bằng), cùng nhạc và lời của nhiều bài hát (nổi tiếng nhất là Malafemmina)."
+ },
+ "Quando siamo arrivati a casa, Stefania (partire) … già ….": {
+  "en": "When we got home, Stefania (partire) … already ….",
+  "vi": "Khi chúng tôi về đến nhà, Stefania (partire) … đã … rồi."
+ },
+ "Quando sono arrivato Carla era già uscita.": {
+  "en": "When I arrived Carla had already gone out.",
+  "vi": "Khi tôi đến thì Carla đã đi ra ngoài rồi."
  },
  "Quando vedo Giuseppe e Francesca … dico tutto.": {
   "en": "When I see Giuseppe and Francesca I tell … everything.",
@@ -1927,6 +2279,10 @@
   "en": "Answer the questions.",
   "vi": "Trả lời các câu hỏi."
  },
+ "Sabato sera sono andato in discoteca.": {
+  "en": "On Saturday night I went to a club.",
+  "vi": "Tối thứ Bảy tôi đã đi vũ trường."
+ },
  "Salve, ho bisogno di una serie di … perché mi devo sposare tra 6 mesi. Allora, vorrei il … … … e quello di ….": {
   "en": "Hello, I need a series of … because I'm getting married in 6 months. So, I'd like the … … … and the … one.",
   "vi": "Chào anh, tôi cần một loạt … vì sáu tháng nữa tôi kết hôn. Vậy tôi muốn lấy … … … và giấy chứng nhận …."
@@ -1942,6 +2298,10 @@
  "Scriviamo.": {
   "en": "Let's write.",
   "vi": "Cùng viết."
+ },
+ "Scriviamo: completiamo il testo con i verbi al passato.": {
+  "en": "Let's write: complete the text with the verbs in the past.",
+  "vi": "Cùng viết: hoàn thành đoạn văn với động từ ở thì quá khứ."
  },
  "Scriviamo: completiamo le frasi con i pronomi.": {
   "en": "Let's write: complete the sentences with pronouns.",
@@ -1967,6 +2327,10 @@
   "en": "Excuse me, I wanted to ask you a favour…",
   "vi": "Xin lỗi, mình muốn nhờ bạn một việc…"
  },
+ "Scusi, volevo un'informazione.": {
+  "en": "Excuse me, I'd like some information.",
+  "vi": "Xin lỗi, tôi muốn hỏi một thông tin."
+ },
  "Se lei abita a Bologna, ho bisogno solo del suo …, lo scrivo al computer e il suo certificato è pronto in pochi secondi.": {
   "en": "If you live in Bologna, I only need your …, I type it into the computer and your certificate is ready in a few seconds.",
   "vi": "Nếu chị sống ở Bologna, tôi chỉ cần … của chị, tôi nhập vào máy tính và giấy chứng nhận có ngay trong vài giây."
@@ -1991,6 +2355,10 @@
   "en": "We got off the train in Verona.",
   "vi": "Chúng tôi đã xuống tàu ở Verona."
  },
+ "Siamo scesi dal treno alla stazione di Verona.": {
+  "en": "We got off the train at Verona station.",
+  "vi": "Chúng tôi đã xuống tàu ở ga Verona."
+ },
  "Siamo soli io e te.": {
   "en": "It's just you and me.",
   "vi": "Chỉ có tôi và bạn thôi."
@@ -2002,6 +2370,10 @@
  "Siccome (noi, essere) …… stanchi,": {
   "en": "As (noi, essere) …… tired,",
   "vi": "Vì (noi, essere) …… mệt,"
+ },
+ "Siena, Piazza del Campo": {
+  "en": "Siena, Piazza del Campo",
+  "vi": "Siena, Quảng trường Campo"
  },
  "Siete al comune e avete bisogno del certificato di matrimonio.": {
   "en": "You are at the town hall and you need your marriage certificate.",
@@ -2039,6 +2411,10 @@
   "en": "They went mainly to North and South America and Australia.",
   "vi": "Họ chủ yếu đã đến Bắc Mỹ, Nam Mỹ và Úc."
  },
+ "Sono corso a casa.": {
+  "en": "I ran home.",
+  "vi": "Tôi đã chạy về nhà."
+ },
  "Sono felice per la tua promozione.": {
   "en": "I'm happy about your promotion.",
   "vi": "Tôi vui vì bạn được thăng chức."
@@ -2055,6 +2431,10 @@
   "en": "I've been here since June.",
   "vi": "Tôi ở đây từ tháng Sáu."
  },
+ "Sono vissuto a Roma.": {
+  "en": "I lived in Rome.",
+  "vi": "Tôi đã sống ở Roma."
+ },
  "Spero di rivederti presto.": {
   "en": "I hope to see you again soon.",
   "vi": "Mong sớm gặp lại bạn."
@@ -2062,6 +2442,10 @@
  "Spesso lavoro di notte.": {
   "en": "I often work at night.",
   "vi": "Tôi hay làm việc ban đêm."
+ },
+ "Spieghiamo il significato.": {
+  "en": "Explain the meaning.",
+  "vi": "Giải thích ý nghĩa."
  },
  "Spolverare significa: (a) togliere la polvere. (b) lavare. (c) preparare la cena.": {
   "en": "Spolverare means: (a) to remove the dust. (b) to wash. (c) to make dinner.",
@@ -2163,6 +2547,10 @@
   "en": "Do you like plain rice?",
   "vi": "Bạn có thích cơm trắng (không sốt) không?"
  },
+ "Ti saluto e ti aspetto a casa nostra! Con affetto": {
+  "en": "Bye for now, I'll be expecting you at our place! With love",
+  "vi": "Chào cậu nhé, mình đợi cậu đến chơi nhà! Thân mến"
+ },
  "Tra / Fra le squadre di calcio italiane c'è la Juventus.": {
   "en": "Among the Italian football teams there is Juventus.",
   "vi": "Trong số các đội bóng Ý có Juventus."
@@ -2207,6 +2595,10 @@
   "en": "Ugo is selling the motorbike for a thousand euros.",
   "vi": "Ugo bán chiếc xe máy với giá một nghìn euro."
  },
+ "Un anno fa, a Palermo, ho mangiato la cassata. / A Palermo mangiavo la cassata ogni giorno.": {
+  "en": "A year ago in Palermo I ate cassata. / In Palermo I used to eat cassata every day.",
+  "vi": "Một năm trước ở Palermo tôi đã ăn bánh cassata. / Ở Palermo ngày nào tôi cũng ăn cassata."
+ },
  "Un italiano … tre ha preso farmaci … ultimi due giorni.": {
   "en": "One Italian … three has taken medicines … last two days.",
   "vi": "Cứ … ba người Ý thì có một người đã uống thuốc … hai ngày gần đây."
@@ -2219,6 +2611,14 @@
   "en": "A … … …, please.",
   "vi": "Một tờ … … …, làm ơn."
  },
+ "Usiamo il passato prossimo per descrivere un'azione che avviene in un momento preciso del passato e l'imperfetto per descrivere un'azione continuata nel passato:": {
+  "en": "We use the passato prossimo for an action at a precise moment in the past and the imperfetto for an ongoing action in the past:",
+  "vi": "Ta dùng passato prossimo để diễn tả một hành động xảy ra ở một thời điểm xác định trong quá khứ, và imperfetto để diễn tả một hành động kéo dài trong quá khứ:"
+ },
+ "Usiamo il passato prossimo per:": {
+  "en": "We use the passato prossimo to:",
+  "vi": "Ta dùng thì passato prossimo để:"
+ },
  "Usiamo il pronome Lei quando ci rivolgiamo a una persona con cui non siamo in confidenza (situazione formale):": {
   "en": "We use the pronoun Lei when we speak to someone we are not close to (formal situation):",
   "vi": "Ta dùng đại từ Lei khi nói với người mà mình không thân (tình huống trang trọng):"
@@ -2230,6 +2630,10 @@
  "Usiamo l'imperfetto indicativo per…": {
   "en": "We use the imperfetto to…",
   "vi": "Ta dùng thì imperfetto để…"
+ },
+ "Usiamo l'imperfetto per:": {
+  "en": "We use the imperfetto to:",
+  "vi": "Ta dùng thì imperfetto để:"
  },
  "Usiamo la forma forte quando vogliamo dare un maggiore rilievo al pronome:": {
   "en": "We use the strong form when we want to give the pronoun more emphasis:",
@@ -2495,13 +2899,29 @@
   "en": "Uncle Sandro often baked nice cakes.",
   "vi": "Chú Sandro hay làm những chiếc bánh ngọt ngon."
  },
+ "a": {
+  "en": "the vowel a",
+  "vi": "nguyên âm a"
+ },
  "abitare → Abbiamo abitato a Milano.": {
   "en": "abitare → We lived in Milan.",
   "vi": "abitare (sống) → Chúng tôi đã sống ở Milano."
  },
+ "andare → Siete andati al cinema ieri sera?": {
+  "en": "andare → Did you go to the cinema last night?",
+  "vi": "andare (đi) → Tối qua các bạn đã đi xem phim à?"
+ },
  "apparecchiare la tavola": {
   "en": "to lay the table",
   "vi": "dọn bàn ăn"
+ },
+ "arrivare → A che ora siete arrivati?": {
+  "en": "arrivare → What time did you arrive?",
+  "vi": "arrivare (đến) → Các bạn đã đến lúc mấy giờ?"
+ },
+ "ballare → Ho ballato tutta la sera.": {
+  "en": "ballare → I danced all evening.",
+  "vi": "ballare (nhảy) → Tôi đã nhảy suốt cả buổi tối."
  },
  "bisnonno": {
   "en": "great-grandfather",
@@ -2511,6 +2931,18 @@
   "en": "wedding favour",
   "vi": "hộp kẹo quà cưới tặng khách"
  },
+ "bussare → Chi ha bussato alla porta?": {
+  "en": "bussare → Who knocked at the door?",
+  "vi": "bussare (gõ cửa) → Ai đã gõ cửa vậy?"
+ },
+ "bórsa": {
+  "en": "bag",
+  "vi": "cái túi"
+ },
+ "cadere → Paolo è caduto.": {
+  "en": "cadere → Paolo fell.",
+  "vi": "cadere (ngã) → Paolo đã bị ngã."
+ },
  "cambiare la disposizione dei mobili": {
   "en": "to rearrange the furniture",
   "vi": "sắp xếp lại đồ đạc"
@@ -2518,6 +2950,10 @@
  "cambiare → Io ho cambiato lavoro due settimane fa.": {
   "en": "cambiare → I changed jobs two weeks ago.",
   "vi": "cambiare (thay đổi) → Hai tuần trước tôi đã đổi việc."
+ },
+ "camminare → Abbiamo camminato per tutta la città.": {
+  "en": "camminare → We walked all over the city.",
+  "vi": "camminare (đi bộ) → Chúng tôi đã đi bộ khắp thành phố."
  },
  "celibe": {
   "en": "single (man)",
@@ -2563,9 +2999,21 @@
   "en": "couple",
   "vi": "cặp đôi"
  },
+ "costare → Quanto è costata la tua auto?": {
+  "en": "costare → How much did your car cost?",
+  "vi": "costare (có giá) → Xe của bạn giá bao nhiêu?"
+ },
  "costare → Quanto è costata la tua borsa?": {
   "en": "costare → How much did your bag cost?",
   "vi": "costare (có giá) → Cái túi của bạn giá bao nhiêu?"
+ },
+ "credere → Chi ha creduto alla tua storia?": {
+  "en": "credere → Who believed your story?",
+  "vi": "credere (tin) → Ai đã tin câu chuyện của bạn?"
+ },
+ "crescere → Il bambino è cresciuto.": {
+  "en": "crescere → The child has grown.",
+  "vi": "crescere (lớn lên) → Đứa bé đã lớn rồi."
  },
  "cucinare": {
   "en": "to cook",
@@ -2579,6 +3027,34 @@
   "en": "to look after the plants",
   "vi": "chăm sóc cây"
  },
+ "descrivere azioni che avvengono una dopo l'altra nel passato:": {
+  "en": "describe actions that happened one after another in the past:",
+  "vi": "diễn tả các hành động nối tiếp nhau trong quá khứ:"
+ },
+ "descrivere azioni contemporanee nel passato:": {
+  "en": "describe simultaneous actions in the past:",
+  "vi": "mô tả các hành động diễn ra đồng thời trong quá khứ:"
+ },
+ "descrivere le abitudini nel passato:": {
+  "en": "describe habits in the past:",
+  "vi": "mô tả thói quen trong quá khứ:"
+ },
+ "descrivere sentimenti, stati d'animo, sensazioni, condizioni fisiche nel passato:": {
+  "en": "describe feelings, moods, sensations and physical conditions in the past:",
+  "vi": "mô tả cảm xúc, tâm trạng, cảm giác, tình trạng cơ thể trong quá khứ:"
+ },
+ "descrivere situazioni, persone, paesaggi, condizioni atmosferiche nel passato:": {
+  "en": "describe situations, people, landscapes and weather in the past:",
+  "vi": "mô tả hoàn cảnh, con người, phong cảnh, thời tiết trong quá khứ:"
+ },
+ "descrivere un'azione passata:": {
+  "en": "describe a past action:",
+  "vi": "diễn tả một hành động đã qua:"
+ },
+ "diventare → Andrea è diventato ricco.": {
+  "en": "diventare → Andrea has become rich.",
+  "vi": "diventare (trở thành) → Andrea đã trở nên giàu có."
+ },
  "divorziare": {
   "en": "to divorce",
   "vi": "ly hôn"
@@ -2591,6 +3067,10 @@
   "en": "after più / meno di:",
   "vi": "sau più / meno di:"
  },
+ "dormire → Questa notte ho dormito poco.": {
+  "en": "dormire → I slept little last night.",
+  "vi": "dormire (ngủ) → Đêm nay tôi ngủ ít."
+ },
  "durare → Il film è durato due ore.": {
   "en": "durare → The film lasted two hours.",
   "vi": "durare (kéo dài) → Bộ phim đã kéo dài hai tiếng."
@@ -2598,6 +3078,10 @@
  "e le aziende italiane o per fare carriera o per trovare un lavoro in Italia; di meno sono quelli che studiano l'italiano perché si occupano di traduzione e di insegnamento. Vediamo nel grafico le percentuali:": {
   "en": "and companies, or to build a career or find a job in Italy; fewer are those who study Italian because they work in translation and teaching. Let's look at the percentages in the chart:",
   "vi": "và các công ty Ý, hoặc để thăng tiến hay để tìm việc ở Ý; ít hơn là những người học tiếng Ý vì làm biên dịch và giảng dạy. Cùng xem tỉ lệ phần trăm trong biểu đồ:"
+ },
+ "entrare → Siamo entrati in ufficio alle 9.": {
+  "en": "entrare → We came into the office at 9.",
+  "vi": "entrare (vào) → Chúng tôi đã vào văn phòng lúc 9 giờ."
  },
  "fare il bucato": {
   "en": "to do the laundry",
@@ -2619,6 +3103,10 @@
   "en": "to do the shopping",
   "vi": "đi chợ"
  },
+ "fare una richiesta in modo cortese:": {
+  "en": "make a polite request:",
+  "vi": "đưa ra một yêu cầu lịch sự:"
+ },
  "fede": {
   "en": "wedding ring",
   "vi": "nhẫn cưới"
@@ -2630,6 +3118,10 @@
  "finire → I bambini hanno finito i compiti.": {
   "en": "finire → The children have finished their homework.",
   "vi": "finire (kết thúc, làm xong) → Bọn trẻ đã làm xong bài tập."
+ },
+ "francése": {
+  "en": "French",
+  "vi": "tiếng Pháp / người Pháp"
  },
  "fratello": {
   "en": "brother",
@@ -2646,6 +3138,14 @@
  "gli studenti ascoltano il professore con attenzione.": {
   "en": "the students listen to the teacher attentively.",
   "vi": "các học viên chăm chú nghe giáo viên."
+ },
+ "gènte": {
+  "en": "people",
+  "vi": "người (mọi người)"
+ },
+ "i": {
+  "en": "the vowel i",
+  "vi": "nguyên âm i"
  },
  "i pronomi personali con funzione di complemento.": {
   "en": "personal pronouns acting as objects/complements.",
@@ -2691,6 +3191,10 @@
   "en": "to wash",
   "vi": "rửa, giặt"
  },
+ "lavorare → Ho lavorato tutto il giorno.": {
+  "en": "lavorare → I worked all day.",
+  "vi": "lavorare (làm việc) → Tôi đã làm việc cả ngày."
+ },
  "madre": {
   "en": "mother",
   "vi": "mẹ"
@@ -2706,6 +3210,14 @@
  "moglie": {
   "en": "wife",
   "vi": "vợ"
+ },
+ "morire → Garibaldi è morto a Caprera nel 1882.": {
+  "en": "morire → Garibaldi died on Caprera in 1882.",
+  "vi": "morire (chết) → Garibaldi mất ở Caprera năm 1882."
+ },
+ "nascere → Patrizia è nata a Roma.": {
+  "en": "nascere → Patrizia was born in Rome.",
+  "vi": "nascere (sinh ra) → Patrizia sinh ra ở Roma."
  },
  "nell'espressione io e te:": {
   "en": "in the expression io e te:",
@@ -2743,6 +3255,14 @@
   "en": "daughter-in-law",
   "vi": "con dâu"
  },
+ "nuotare → Ieri ho nuotato in piscina.": {
+  "en": "nuotare → Yesterday I swam in the pool.",
+  "vi": "nuotare (bơi) → Hôm qua tôi đã bơi ở bể bơi."
+ },
+ "nòzze": {
+  "en": "wedding",
+  "vi": "đám cưới"
+ },
  "padre": {
   "en": "father",
   "vi": "bố"
@@ -2754,6 +3274,10 @@
  "parlare → Hai parlato con Paolo?": {
   "en": "parlare → Did you speak to Paolo?",
   "vi": "parlare (nói) → Bạn đã nói chuyện với Paolo chưa?"
+ },
+ "partire → Marco è partito per gli Stati Uniti.": {
+  "en": "partire → Marco left for the United States.",
+  "vi": "partire (khởi hành) → Marco đã đi Mỹ."
  },
  "passare l'aspirapolvere": {
   "en": "to vacuum",
@@ -2767,13 +3291,33 @@
   "en": "passeggiare → Maria went for a walk around Rome.",
   "vi": "passeggiare (đi dạo) → Maria đã đi dạo khắp Roma."
  },
+ "per descrivere un'azione precisa del passato (passato prossimo) all'interno di una situazione in svolgimento (imperfetto):": {
+  "en": "to describe a precise past action (passato prossimo) within an ongoing situation (imperfetto):",
+  "vi": "để diễn tả một hành động xác định (passato prossimo) xảy ra trong một hoàn cảnh đang diễn ra (imperfetto):"
+ },
+ "per descrivere un'azione precisa del passato (passato prossimo) e la causa che ha determinato quell'azione (imperfetto):": {
+  "en": "to describe a precise past action (passato prossimo) and its cause (imperfetto):",
+  "vi": "để diễn tả một hành động xác định (passato prossimo) và nguyên nhân dẫn đến hành động đó (imperfetto):"
+ },
  "piacere → Mi sono piaciuti molto i tuoi figli.": {
   "en": "piacere → I really liked your children.",
   "vi": "piacere (thích) → Tôi rất quý các con của bạn."
  },
+ "piacere → Mi è piaciuto molto lo spettacolo.": {
+  "en": "piacere → I really liked the show.",
+  "vi": "piacere (thích) → Tôi rất thích buổi biểu diễn."
+ },
+ "piangere → Ho pianto di gioia.": {
+  "en": "piangere → I cried with joy.",
+  "vi": "piangere (khóc) → Tôi đã khóc vì vui."
+ },
  "possesso o specificazione:": {
   "en": "possession or specification:",
   "vi": "sở hữu hoặc sự xác định:"
+ },
+ "pranzare → Oggi ho pranzato al ristorante.": {
+  "en": "pranzare → Today I had lunch at the restaurant.",
+  "vi": "pranzare (ăn trưa) → Hôm nay tôi đã ăn trưa ở nhà hàng."
  },
  "pronunciare il sì": {
   "en": "to say “I do”",
@@ -2803,9 +3347,17 @@
   "en": "reception",
   "vi": "tiệc chiêu đãi"
  },
+ "ridere → A teatro ho riso tanto.": {
+  "en": "ridere → At the theatre I laughed a lot.",
+  "vi": "ridere (cười) → Ở nhà hát tôi đã cười rất nhiều."
+ },
  "rifare i letti": {
   "en": "to make the beds",
   "vi": "dọn giường"
+ },
+ "rimanere → Antonio è rimasto a casa.": {
+  "en": "rimanere → Antonio stayed at home.",
+  "vi": "rimanere (ở lại) → Antonio đã ở nhà."
  },
  "rinfresco": {
   "en": "buffet reception",
@@ -2814,6 +3366,10 @@
  "riporre i vestiti negli armadi": {
   "en": "to put clothes away in the wardrobes",
   "vi": "cất quần áo vào tủ"
+ },
+ "rispondere → Hai risposto alla sua lettera?": {
+  "en": "rispondere → Did you answer his letter?",
+  "vi": "rispondere (trả lời) → Bạn đã trả lời thư của anh ấy chưa?"
  },
  "rispondere → Perché non mi hai risposto?": {
   "en": "rispondere → Why didn't you answer me?",
@@ -2831,9 +3387,17 @@
   "en": "salire → I hurried up the stairs.",
   "vi": "salire (đi lên) → Tôi đã vội vàng leo cầu thang."
  },
+ "sbadigliare → Ho sbadigliato per la noia.": {
+  "en": "sbadigliare → I yawned out of boredom.",
+  "vi": "sbadigliare (ngáp) → Tôi đã ngáp vì chán."
+ },
  "scendere → Abbiamo sceso le scale insieme.": {
   "en": "scendere → We went down the stairs together.",
   "vi": "scendere (đi xuống) → Chúng tôi đã cùng nhau đi xuống cầu thang."
+ },
+ "scherzare → Abbiamo scherzato un po'.": {
+  "en": "scherzare → We joked a bit.",
+  "vi": "scherzare (đùa) → Chúng tôi đã đùa một chút."
  },
  "se il verbo è all'imperativo:": {
   "en": "if the verb is in the imperative:",
@@ -2875,6 +3439,10 @@
   "en": "groom",
   "vi": "chú rể"
  },
+ "stare → L'estate scorsa sono stato a Londra.": {
+  "en": "stare → Last summer I was in London.",
+  "vi": "stare (ở) → Mùa hè năm ngoái tôi đã ở London."
+ },
  "stendere i panni": {
   "en": "to hang out the washing",
   "vi": "phơi quần áo"
@@ -2882,6 +3450,10 @@
  "stirare": {
   "en": "to iron",
   "vi": "là (ủi) quần áo"
+ },
+ "succedere → Ieri è successo un incidente.": {
+  "en": "succedere → An accident happened yesterday.",
+  "vi": "succedere (xảy ra) → Hôm qua đã xảy ra một tai nạn."
  },
  "succedere → Ieri è successo un problema alla mia macchina.": {
   "en": "succedere → Yesterday something went wrong with my car.",
@@ -2899,6 +3471,18 @@
   "en": "witness",
   "vi": "người làm chứng"
  },
+ "ti scrivo per dirti che finalmente il 4 giugno (sposarsi) mi sono sposato! Noi l'(decidere) … già da molto tempo, ma non (trovare) … mai il giorno giusto. Non ti dico quante difficoltà (avere) …: prima di sposarci (dovere) … trovare la chiesa libera, (incontrarsi) … con il prete, (dovere) … scrivere la lista degli invitati in un'ora e l'(portare) … al ristorante che (allestire) … già la sala per il rinfresco. (noi, passare) … un periodo veramente stressante! Sai, (io, divertirsi) … anche a scegliere l'abito e le scarpe per me e per i miei!": {
+  "en": "I'm writing to tell you that at last, on 4 June, I got married! We (decidere) … a long time ago, but we never (trovare) … the right day. I can't tell you how many difficulties we (avere) …: before getting married we (dovere) … find a free church, (incontrarsi) … with the priest, (dovere) … write the guest list in an hour and (portare) … it to the restaurant, which (allestire) … the reception room already. We (passare) … a really stressful time! You know, I also (divertirsi) … choosing the clothes and shoes for me and my family!",
+  "vi": "mình viết thư để báo với cậu rằng cuối cùng ngày 4 tháng 6 mình đã cưới vợ! Bọn mình (decidere) … từ lâu rồi, nhưng chưa bao giờ (trovare) … được ngày thích hợp. Không kể hết được bọn mình (avere) … bao nhiêu khó khăn: trước khi cưới (dovere) … tìm nhà thờ còn trống, (incontrarsi) … với cha xứ, (dovere) … viết danh sách khách mời trong một tiếng rồi (portare) … đến nhà hàng, nơi họ (allestire) … sẵn phòng tiệc. Bọn mình (passare) … một thời gian thật sự căng thẳng! Mà cậu biết không, mình (divertirsi) … cả khi chọn quần áo và giày cho mình và cho gia đình!"
+ },
+ "tornare → Ieri sera siamo tornati tardi.": {
+  "en": "tornare → Last night we came back late.",
+  "vi": "tornare (về) → Tối qua chúng tôi về muộn."
+ },
+ "u": {
+  "en": "the vowel u",
+  "vi": "nguyên âm u"
+ },
  "una forma debole o atona (= senza accento).": {
   "en": "a weak or unstressed form (= without stress).",
   "vi": "dạng yếu hay dạng không nhấn (= không có trọng âm)."
@@ -2907,9 +3491,21 @@
   "en": "a strong or stressed form (= with stress):",
   "vi": "dạng mạnh hay dạng nhấn (= có trọng âm):"
  },
+ "uscire → Rita è uscita con Sandro.": {
+  "en": "uscire → Rita went out with Sandro.",
+  "vi": "uscire (ra ngoài) → Rita đã đi chơi với Sandro."
+ },
  "vedovo": {
   "en": "widower",
   "vi": "goá vợ"
+ },
+ "venire → Perché non sei venuto con noi?": {
+  "en": "venire → Why didn't you come with us?",
+  "vi": "venire (đến) → Sao bạn không đi cùng chúng tôi?"
+ },
+ "viaggiare → Ho viaggiato per tutto il mondo.": {
+  "en": "viaggiare → I travelled all over the world.",
+  "vi": "viaggiare (du lịch) → Tôi đã đi du lịch khắp thế giới."
  },
  "viaggio di nozze": {
   "en": "honeymoon",
@@ -2959,9 +3555,29 @@
   "en": "(She) is a friend of Martina's.",
   "vi": "(Cô ấy) là bạn của Martina."
  },
+ "è /ɛ/": {
+  "en": "open e /ɛ/",
+  "vi": "e mở /ɛ/"
+ },
+ "é /e/": {
+  "en": "closed e /e/",
+  "vi": "e đóng /e/"
+ },
+ "ò /ɔ/": {
+  "en": "open o /ɔ/",
+  "vi": "o mở /ɔ/"
+ },
+ "ó /o/": {
+  "en": "closed o /o/",
+  "vi": "o đóng /o/"
+ },
  "– Nasce a Roma il 7 marzo 1908. – Muore il 26 settembre 1973. – Chi è? È una delle più grandi attrici nella storia del cinema italiano.": {
   "en": "– Born in Rome on 7 March 1908. – Died on 26 September 1973. – Who is she? One of the greatest actresses in the history of Italian cinema.",
   "vi": "– Sinh tại Roma ngày 7 tháng 3 năm 1908. – Mất ngày 26 tháng 9 năm 1973. – Bà là ai? Là một trong những nữ diễn viên vĩ đại nhất trong lịch sử điện ảnh Ý."
+ },
+ "– Nome: Antonio De Curtis. – Nasce a Napoli il 15 febbraio 1898. – Muore il 15 aprile 1967. – Chi è? È un grande attore comico italiano. Fin da piccolo vuole diventare attore, ma la madre non è d'accordo: Totò decide allora di fare il prete, poi l'imbianchino; infine, poiché non finisce gli studi, entra nell'esercito.": {
+  "en": "– Name: Antonio De Curtis. – Born in Naples on 15 February 1898. – Died on 15 April 1967. – Who is he? A great Italian comic actor. From childhood he wanted to be an actor, but his mother did not agree: so Totò decided to become a priest, then a house painter; finally, since he did not finish school, he joined the army.",
+  "vi": "– Tên: Antonio De Curtis. – Sinh tại Napoli ngày 15 tháng 2 năm 1898. – Mất ngày 15 tháng 4 năm 1967. – Ông là ai? Một diễn viên hài lớn của Ý. Từ nhỏ ông đã muốn làm diễn viên, nhưng mẹ ông không đồng ý: Totò bèn quyết định đi tu, rồi làm thợ sơn; cuối cùng, vì không học xong, ông đi lính."
  },
  "• Chi porta la macchina fotografica? ○ … porto io!": {
   "en": "• Who's bringing the camera? ○ I'll bring … !",
