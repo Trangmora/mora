@@ -128,6 +128,18 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
       }
       break;
     case "write":
+      if (ex.items.every((it) => it.wordSet)) {
+        // Xếp từ vào cột: so tập từ người học viết với tập từ đúng (không kể thứ tự, dấu trọng âm).
+        const words = (t: string) => normalize(stripAccents(t)).split(" ").filter(Boolean);
+        for (const it of ex.items) {
+          const want = new Set(it.wordSet!.flatMap(words));
+          const got = new Set([...words(it.starter ?? ""), ...words(responses[it.id] ?? "")]);
+          const ok = want.size === got.size && [...want].every((w) => got.has(w));
+          items.push({ id: it.id, correct: ok, userAnswer: responses[it.id] ?? "", correctAnswer: it.wordSet!.join(", ") });
+        }
+        break;
+      }
+    // fallthrough
     case "speak":
       // Không có đáp án cố định — cần AI chấm.
       for (const it of ex.items) {
@@ -143,7 +155,8 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
 export function needsAI(ex: Exercise) {
   if (ex.noKey) return true;
   if (ex.kind === "form") return ex.items.some((f) => !f.given && !f.answers && f.answer === undefined);
-  return ex.kind === "write" || ex.kind === "speak";
+  if (ex.kind === "write") return !ex.items.every((it) => it.wordSet);
+  return ex.kind === "speak";
 }
 
 /** So khớp mềm cho ô điền thông tin: bỏ dấu câu, khoảng trắng trong số, chấp nhận câu trả lời chứa đáp án. */

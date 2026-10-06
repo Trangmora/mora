@@ -89,6 +89,8 @@ export type WriteExercise = {
     lines?: number;
     /** Câu mở đầu sách in sẵn (đỏ), ví dụ "In Italia, nella seconda metà del 1800…". */
     starter?: string;
+    /** Bài xếp từ vào cột: các từ đúng của ô này (thứ tự tuỳ ý) — chấm ngay, không cần AI. */
+    wordSet?: string[];
   }[];
 };
 
