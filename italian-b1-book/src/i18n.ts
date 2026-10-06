@@ -45,7 +45,7 @@ const strings = {
   feedback: { vi: "Nhận xét", en: "Feedback" },
   tips: { vi: "Mẹo luyện tập", en: "Tips" },
   writeHere: { vi: "Viết câu trả lời bằng tiếng Ý…", en: "Write your answer in Italian…" },
-  speakHint: { vi: "Bấm ghi âm, trả lời bằng tiếng Ý. Bạn có thể sửa lại chữ trước khi chấm.", en: "Press record and answer in Italian. You can edit the transcript before grading." },
+  speakHint: { vi: "Viết câu trả lời bằng tiếng Ý…", en: "Write your answer in Italian…" },
   vero: { vi: "Vero (Đúng)", en: "Vero (True)" },
   falso: { vi: "Falso (Sai)", en: "Falso (False)" },
   page: { vi: "Trang", en: "Page" },

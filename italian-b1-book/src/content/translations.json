@@ -6694,5 +6694,1769 @@
  "Osserviamo e abbiniamo le immagini alle frasi.": {
   "vi": "Quan sát và nối các bức ảnh với các câu.",
   "en": "Let's look and match the pictures to the sentences."
+ },
+ "Immaginate di trovarvi in queste situazioni: che cosa fate?": {
+  "vi": "Hãy tưởng tượng bạn ở trong những tình huống này: bạn sẽ làm gì?",
+  "en": "Imagine you're in these situations: what do you do?"
+ },
+ "Che cosa fate?": {
+  "vi": "Bạn sẽ làm gì?",
+  "en": "What do you do?"
+ },
+ "Situazione 1: a cena qualcuno fuma a tavola.": {
+  "vi": "Tình huống 1: trong bữa tối có người hút thuốc ở bàn ăn.",
+  "en": "Situation 1: at dinner someone is smoking at the table."
+ },
+ "Situazione 2: in un negozio c'è troppo rumore.": {
+  "vi": "Tình huống 2: trong cửa hàng quá ồn ào.",
+  "en": "Situation 2: there's too much noise in a shop."
+ },
+ "Situazione 3: arrivate in ritardo a una riunione.": {
+  "vi": "Tình huống 3: bạn đến muộn một cuộc họp.",
+  "en": "Situation 3: you arrive late at a meeting."
+ },
+ "Ascoltiamo il testo e completiamo le frasi.": {
+  "vi": "Nghe đoạn văn và hoàn thành câu.",
+  "en": "Let's listen to the text and complete the sentences."
+ },
+ "A scuola e in macchina…": {
+  "vi": "Ở trường và trong ô tô…",
+  "en": "At school and in the car…"
+ },
+ "Quando la maestra parla,": {
+  "vi": "Khi cô giáo nói,",
+  "en": "When the teacher is speaking,"
+ },
+ "Quando i bambini arrivano a scuola": {
+  "vi": "Khi các em đến trường",
+  "en": "When the children arrive at school"
+ },
+ "Quando i bambini vanno a mensa": {
+  "vi": "Khi các em xuống nhà ăn",
+  "en": "When the children go to the canteen"
+ },
+ "Quando la maestra assegna i compiti,": {
+  "vi": "Khi cô giáo giao bài tập,",
+  "en": "When the teacher gives homework,"
+ },
+ "Il buon guidatore, quando vede delle signore anziane,": {
+  "vi": "Người lái xe tốt, khi thấy các cụ bà,",
+  "en": "The good driver, when he sees elderly ladies,"
+ },
+ "Se piove, gli autisti devono": {
+  "vi": "Nếu trời mưa, các tài xế phải",
+  "en": "If it rains, drivers must"
+ },
+ "I bambini in macchina": {
+  "vi": "Trẻ em trên ô tô",
+  "en": "Children in the car"
+ },
+ "I guidatori devono essere sempre calmi al volante e": {
+  "vi": "Người lái xe phải luôn bình tĩnh sau tay lái và",
+  "en": "Drivers must always be calm at the wheel and"
+ },
+ "Arrivare a 100 anni: le regole per vivere bene degli italiani": {
+  "vi": "Sống đến 100 tuổi: những quy tắc sống khỏe của người Ý",
+  "en": "Reaching 100: Italians' rules for living well"
+ },
+ "Le persone che si avvicinano ai 100 anni in buona salute sono sempre di più. Il segreto? In gran parte nei loro geni. Ma non solo in quelli. Tra i centenari in gamba ci sono anche diversi italiani. Loro abitano tutti in Sardegna e continuano ancora a lavorare: Giovanni Occhioni, 102 anni, di Aglientu; Rosa Frau, 103 anni, di Ovodda e la coetanea Antonia Biddittu. Forse l'obiettivo, per tutti, è quello di battere il record della francese Jeanne Calment, morta a 122 anni.": {
+  "vi": "Số người khỏe mạnh khi gần 100 tuổi ngày càng nhiều. Bí quyết? Phần lớn nằm ở gen. Nhưng không chỉ thế. Trong số những cụ trăm tuổi còn minh mẫn có nhiều người Ý. Họ đều sống ở Sardegna và vẫn tiếp tục làm việc: Giovanni Occhioni, 102 tuổi, ở Aglientu; Rosa Frau, 103 tuổi, ở Ovodda và Antonia Biddittu cùng tuổi. Có lẽ mục tiêu của tất cả là phá kỷ lục của bà Jeanne Calment người Pháp, mất ở tuổi 122.",
+  "en": "People reaching 100 in good health are more and more numerous. The secret? Largely in their genes. But not only there. Among the fit centenarians there are several Italians. They all live in Sardinia and are still working: Giovanni Occhioni, 102, from Aglientu; Rosa Frau, 103, from Ovodda, and Antonia Biddittu, the same age. Perhaps everyone's goal is to beat the record of the Frenchwoman Jeanne Calment, who died at 122."
+ },
+ "Vediamo, allora, una serie di regole che questi anziani ci suggeriscono: «Bevete un goccio di vino rosso prima di dormire e, possibilmente, bevetelo in compagnia». «Mangiate molta verdura e molti legumi come fave e ceci». «Cercate di leggere tanto». «Dedicatevi ad attività tranquille e rilassanti come lavorare all'uncinetto». «Andate a letto presto». «Siate calmi: non arrabbiatevi mai troppo!». «Fate regolare attività fisica».": {
+  "vi": "Vậy hãy xem một loạt quy tắc mà các cụ khuyên chúng ta: «Uống một chút rượu vang đỏ trước khi ngủ và nếu được thì uống cùng mọi người». «Ăn nhiều rau và nhiều đậu như đậu tằm và đậu gà». «Cố gắng đọc thật nhiều». «Dành thời gian cho những hoạt động thư thái như đan móc». «Đi ngủ sớm». «Hãy bình tĩnh: đừng bao giờ giận quá!». «Tập thể dục đều đặn».",
+  "en": "Let's see, then, a series of rules these old people suggest: «Drink a drop of red wine before sleeping and, if possible, drink it in company». «Eat lots of vegetables and pulses like broad beans and chickpeas». «Try to read a lot». «Devote yourselves to calm, relaxing activities like crochet». «Go to bed early». «Be calm: never get too angry!». «Do regular physical activity»."
+ },
+ "I ricercatori, però, sanno che non possono essere solo queste le ricette di lunga vita e, da anni, tentano di scoprire perché alcune persone vivono molto più di altre: nel mondo i centenari sono circa 145 mila, più donne che uomini. Che cosa gli permette di passare attraverso il tempo, senza avere tumori, infarti, ictus? Lo stile di vita? O nel loro Dna c'è qualcosa di speciale? In Italia, per esempio, gli scienziati studiano le abitudini di vita nel Cilento, una zona dove ci sono persone molto anziane, per scoprire il segreto della longevità… Quale sarà?": {
+  "vi": "Tuy nhiên các nhà nghiên cứu biết rằng đó không thể là công thức sống lâu duy nhất, và nhiều năm nay họ cố tìm hiểu vì sao có người sống lâu hơn hẳn người khác: trên thế giới có khoảng 145 nghìn cụ trăm tuổi, nữ nhiều hơn nam. Điều gì giúp họ vượt qua thời gian mà không bị ung thư, nhồi máu, đột quỵ? Lối sống? Hay trong DNA của họ có gì đặc biệt? Ở Ý, chẳng hạn, các nhà khoa học nghiên cứu thói quen sống ở vùng Cilento, nơi có nhiều người rất cao tuổi, để khám phá bí quyết trường thọ… Đó sẽ là gì nhỉ?",
+  "en": "Researchers, however, know that these can't be the only recipes for a long life and for years they've been trying to find out why some people live much longer than others: in the world there are about 145,000 centenarians, more women than men. What allows them to pass through time without cancer, heart attacks or strokes? Lifestyle? Or is there something special in their DNA? In Italy, for example, scientists study the lifestyle in the Cilento, an area with very old people, to discover the secret of longevity… What will it be?"
+ },
+ "Il numero delle persone anziane è oggi in aumento.": {
+  "vi": "Số người cao tuổi ngày nay đang tăng.",
+  "en": "The number of elderly people is increasing today."
+ },
+ "In Italia non vivono persone con più di cento anni.": {
+  "vi": "Ở Ý không có người nào sống quá trăm tuổi.",
+  "en": "In Italy nobody lives to more than a hundred."
+ },
+ "La donna più anziana d'Europa è una francese.": {
+  "vi": "Người phụ nữ cao tuổi nhất châu Âu là một người Pháp.",
+  "en": "The oldest woman in Europe is French."
+ },
+ "Gli anziani dicono che non bisogna bere vino.": {
+  "vi": "Các cụ nói rằng không nên uống rượu vang.",
+  "en": "The old people say you shouldn't drink wine."
+ },
+ "Le donne vivono più a lungo degli uomini.": {
+  "vi": "Phụ nữ sống lâu hơn nam giới.",
+  "en": "Women live longer than men."
+ },
+ "Leggiamo e abbiniamo le frasi.": {
+  "vi": "Đọc và nối các câu.",
+  "en": "Let's read and match the sentences."
+ },
+ "Date dei consigli a Roberto che non sa cosa fare in alcune situazioni…": {
+  "vi": "Hãy cho Roberto lời khuyên, cậu ấy không biết làm gì trong vài tình huống…",
+  "en": "Give advice to Roberto, who doesn't know what to do in some situations…"
+ },
+ "Devo andare a cena da nonna Pina, festeggia il suo compleanno: cosa le regalo?": {
+  "vi": "Mình phải đến ăn tối ở nhà bà Pina, bà tổ chức sinh nhật: mình tặng bà cái gì đây?",
+  "en": "I have to go to dinner at Grandma Pina's, she's celebrating her birthday: what shall I give her?"
+ },
+ "Il mio nipotino Piero ha rotto un meraviglioso vaso in un negozio d'arredamento…": {
+  "vi": "Cháu Piero của mình đã làm vỡ một chiếc bình tuyệt đẹp ở cửa hàng đồ nội thất…",
+  "en": "My little nephew Piero broke a wonderful vase in a furniture shop…"
+ },
+ "Devo andare a un pranzo di lavoro, ma sono in ritardo…": {
+  "vi": "Mình phải đi ăn trưa công việc, nhưng mình bị muộn…",
+  "en": "I have to go to a business lunch, but I'm late…"
+ },
+ "La mia vicina di casa guarda sempre la televisione con un volume altissimo!": {
+  "vi": "Bà hàng xóm của mình lúc nào cũng xem TV với âm lượng to khủng khiếp!",
+  "en": "My neighbour always watches TV with the volume really loud!"
+ },
+ "Devo organizzare una cena per degli ospiti importanti, ma non so apparecchiare la tavola!": {
+  "vi": "Mình phải tổ chức bữa tối cho những vị khách quan trọng, nhưng mình không biết bày bàn ăn!",
+  "en": "I have to organise a dinner for important guests, but I don't know how to lay the table!"
+ },
+ "Sono in fila all'ufficio postale, ma una signora mi passa avanti…": {
+  "vi": "Mình đang xếp hàng ở bưu điện thì một bà chen lên trước…",
+  "en": "I'm queuing at the post office, but a lady pushes in front of me…"
+ },
+ "Il mio amico Giorgio mi telefona molte volte al giorno e non vuole mai chiudere la comunicazione!": {
+  "vi": "Bạn mình là Giorgio gọi cho mình nhiều lần mỗi ngày và chẳng bao giờ chịu cúp máy!",
+  "en": "My friend Giorgio phones me many times a day and never wants to hang up!"
+ },
+ "Compra una rivista per la casa e leggi i suggerimenti per la tavola.": {
+  "vi": "Mua một tạp chí về nhà cửa và đọc các gợi ý bày bàn.",
+  "en": "Buy a home magazine and read the tips for the table."
+ },
+ "Scrivile una lettera e chiedile di abbassare il volume della TV.": {
+  "vi": "Viết thư cho bà ấy và nhờ bà vặn nhỏ tiếng TV.",
+  "en": "Write her a letter and ask her to turn the TV volume down."
+ },
+ "Regalale dei fiori e dei cioccolatini.": {
+  "vi": "Tặng bà hoa và sô-cô-la.",
+  "en": "Give her flowers and chocolates."
+ },
+ "Dille di rispettare la fila.": {
+  "vi": "Bảo bà ấy hãy tôn trọng hàng người xếp.",
+  "en": "Tell her to respect the queue."
+ },
+ "Cambia numero di telefono.": {
+  "vi": "Đổi số điện thoại đi.",
+  "en": "Change your phone number."
+ },
+ "Paga il danno e scusati con il negoziante.": {
+  "vi": "Đền thiệt hại và xin lỗi người bán hàng.",
+  "en": "Pay for the damage and apologise to the shopkeeper."
+ },
+ "Telefona ai tuoi colleghi e di' che la tua macchina si è rotta.": {
+  "vi": "Gọi cho đồng nghiệp và nói xe của bạn bị hỏng.",
+  "en": "Phone your colleagues and say your car has broken down."
+ },
+ "L'imperativo": {
+  "vi": "Thức mệnh lệnh",
+  "en": "The imperative"
+ },
+ "Barbara, compra il giornale!": {
+  "vi": "Barbara, mua tờ báo đi!",
+  "en": "Barbara, buy the newspaper!"
+ },
+ "Signora, scriva il suo nome in questo modulo!": {
+  "vi": "Thưa bà, xin bà viết tên vào tờ đơn này!",
+  "en": "Madam, write your name on this form!"
+ },
+ "Stasera usciamo tutti insieme!": {
+  "vi": "Tối nay tất cả chúng ta cùng đi chơi nhé!",
+  "en": "Tonight let's all go out together!"
+ },
+ "Bambini, finite i compiti!": {
+  "vi": "Các con, làm xong bài tập đi!",
+  "en": "Children, finish your homework!"
+ },
+ "guardiamo": {
+  "vi": "chúng ta hãy nhìn",
+  "en": "let's look"
+ },
+ "scriviamo": {
+  "vi": "chúng ta hãy viết",
+  "en": "let's write"
+ },
+ "Non buttare i rifiuti per terra!": {
+  "vi": "Đừng vứt rác ra đất!",
+  "en": "Don't throw rubbish on the ground!"
+ },
+ "Non prenda il treno! Oggi c'è sciopero…": {
+  "vi": "Ông/bà đừng đi tàu! Hôm nay có đình công…",
+  "en": "Don't take the train! There's a strike today…"
+ },
+ "Non fumiamo! Fa male alla salute.": {
+  "vi": "Chúng ta đừng hút thuốc! Có hại cho sức khỏe.",
+  "en": "Let's not smoke! It's bad for your health."
+ },
+ "Bambini, non aprite la finestra!": {
+  "vi": "Các con, đừng mở cửa sổ!",
+  "en": "Children, don't open the window!"
+ },
+ "non guardare": {
+  "vi": "đừng nhìn (bạn)",
+  "en": "don't look (tu)"
+ },
+ "non guardi": {
+  "vi": "đừng nhìn (ông/bà)",
+  "en": "don't look (Lei)"
+ },
+ "non guardiamo": {
+  "vi": "chúng ta đừng nhìn",
+  "en": "let's not look"
+ },
+ "non guardate": {
+  "vi": "đừng nhìn (các bạn)",
+  "en": "don't look (voi)"
+ },
+ "non scrivere": {
+  "vi": "đừng viết (bạn)",
+  "en": "don't write (tu)"
+ },
+ "non scriva": {
+  "vi": "đừng viết (ông/bà)",
+  "en": "don't write (Lei)"
+ },
+ "non scriviamo": {
+  "vi": "chúng ta đừng viết",
+  "en": "let's not write"
+ },
+ "non scrivete": {
+  "vi": "đừng viết (các bạn)",
+  "en": "don't write (voi)"
+ },
+ "non sentire": {
+  "vi": "đừng nghe (bạn)",
+  "en": "don't listen (tu)"
+ },
+ "non senta": {
+  "vi": "đừng nghe (ông/bà)",
+  "en": "don't listen (Lei)"
+ },
+ "non sentiamo": {
+  "vi": "chúng ta đừng nghe",
+  "en": "let's not listen"
+ },
+ "non sentite": {
+  "vi": "đừng nghe (các bạn)",
+  "en": "don't listen (voi)"
+ },
+ "Leggiamo e completiamo il testo con i verbi all'imperativo.": {
+  "vi": "Đọc và hoàn thành đoạn văn với động từ ở thức mệnh lệnh.",
+  "en": "Let's read and complete the text with the verbs in the imperative."
+ },
+ "contribuire (noi) • non esagerare (noi) • utilizzare (voi) • non posteggiare (voi) • spegnere (noi) • controllare (voi) • riscoprire (noi) • preferire (voi)": {
+  "vi": "góp phần (chúng ta) • đừng quá đà (chúng ta) • sử dụng (các bạn) • đừng đỗ xe (các bạn) • tắt (chúng ta) • kiểm tra (các bạn) • khám phá lại (chúng ta) • ưu tiên (các bạn)",
+  "en": "contribute (we) • don't overdo it (we) • use (you pl.) • don't park (you pl.) • switch off (we) • check (you pl.) • rediscover (we) • prefer (you pl.)"
+ },
+ "Contribuiamo tutti a proteggere l'ambiente e la salute delle persone! Ecco qualche accorgimento che costa poco e rende molto.": {
+  "vi": "Tất cả chúng ta hãy góp phần bảo vệ môi trường và sức khỏe mọi người! Đây là vài mẹo nhỏ tốn ít mà hiệu quả nhiều.",
+  "en": "Let's all help protect the environment and people's health! Here are a few tips that cost little and achieve a lot."
+ },
+ "… il meno possibile l'automobile.": {
+  "vi": "… ô tô càng ít càng tốt.",
+  "en": "… the car as little as possible."
+ },
+ "… i mezzi di trasporto pubblici.": {
+  "vi": "… phương tiện giao thông công cộng.",
+  "en": "… public transport."
+ },
+ "… il piacere della bicicletta o di una passeggiata.": {
+  "vi": "… niềm vui đạp xe hoặc đi dạo.",
+  "en": "… the pleasure of cycling or walking."
+ },
+ "… il motore diesel: se non è in regola, inquina molto.": {
+  "vi": "… động cơ diesel: nếu không đạt chuẩn, nó gây ô nhiễm nhiều.",
+  "en": "… the diesel engine: if it isn't in order, it pollutes a lot."
+ },
+ "… il motore per le soste.": {
+  "vi": "… động cơ khi dừng xe.",
+  "en": "… the engine when stopped."
+ },
+ "… l'auto in seconda fila.": {
+  "vi": "… ô tô ở hàng thứ hai (đỗ xe chặn đường).",
+  "en": "… the car double-parked."
+ },
+ "… con il riscaldamento (né con il condizionatore) in casa e in ufficio.": {
+  "vi": "… với máy sưởi (và cả máy điều hòa) ở nhà và ở cơ quan.",
+  "en": "… with the heating (or the air conditioning) at home and in the office."
+ },
+ "L'imperativo con i pronomi": {
+  "vi": "Thức mệnh lệnh với đại từ",
+  "en": "The imperative with pronouns"
+ },
+ "Porta a me quel giornale! → Portamelo!": {
+  "vi": "Mang tờ báo đó cho tôi! → Mang nó cho tôi!",
+  "en": "Bring me that newspaper! → Bring it to me!"
+ },
+ "Signor Mattei, spieghi a noi che cosa è successo! → Signor Mattei, ce lo spieghi!": {
+  "vi": "Ông Mattei, xin ông giải thích cho chúng tôi chuyện gì đã xảy ra! → Ông Mattei, giải thích điều đó cho chúng tôi đi!",
+  "en": "Mr Mattei, explain to us what happened! → Mr Mattei, explain it to us!"
+ },
+ "Pensate all'esame → Pensateci!": {
+  "vi": "Hãy nghĩ đến kỳ thi → Hãy nghĩ đến nó!",
+  "en": "Think about the exam → Think about it!"
+ },
+ "Quante pizze dobbiamo comprare? → Compriamone cinque!": {
+  "vi": "Chúng ta phải mua bao nhiêu pizza? → Mua năm cái đi!",
+  "en": "How many pizzas do we have to buy? → Let's buy five (of them)!"
+ },
+ "Non scrivere la lettera a Chiara! → Non gliela scrivere! / Non scrivergliela!": {
+  "vi": "Đừng viết thư cho Chiara! → Đừng viết nó cho cô ấy!",
+  "en": "Don't write the letter to Chiara! → Don't write it to her!"
+ },
+ "Non parlate sempre di calcio! → Non ne parlate! / Non parlatene!": {
+  "vi": "Đừng lúc nào cũng nói về bóng đá! → Đừng nói về nó nữa!",
+  "en": "Don't always talk about football! → Don't talk about it!"
+ },
+ "Un amico vi ospita una settimana a casa sua… come vi comportate?": {
+  "vi": "Một người bạn cho bạn ở nhờ nhà một tuần… bạn cư xử thế nào?",
+  "en": "A friend has you to stay for a week… how do you behave?"
+ },
+ "Leggete questi consigli, scegliete quelli più adatti a voi, attribuitevi il punteggio e poi controllate il vostro profilo: siete o non siete ospiti perfetti?": {
+  "vi": "Đọc các lời khuyên, chọn những điều hợp với bạn, tự chấm điểm rồi xem kết quả: bạn có phải là vị khách hoàn hảo không?",
+  "en": "Read these tips, choose the ones that suit you, give yourself the points and then check your profile: are you perfect guests or not?"
+ },
+ "Continua a seguire i tuoi ritmi e i tuoi orari! Se è un vero amico, farà quello che dici tu. (punti: 1) (a) sì (b) no": {
+  "vi": "Cứ giữ nhịp sống và giờ giấc của bạn! Nếu là bạn thật, anh ấy sẽ làm theo ý bạn. (1 điểm) (a) có (b) không",
+  "en": "Keep to your own rhythms and timetable! If he's a real friend, he'll do what you say. (1 point) (a) yes (b) no"
+ },
+ "Non adeguarti alla sua cucina! Preparagli un piatto diverso ogni giorno: lo apprezzerà! (punti: 3) (a) sì (b) no": {
+  "vi": "Đừng chiều theo cách nấu của bạn ấy! Mỗi ngày nấu cho bạn ấy một món khác: bạn ấy sẽ thích! (3 điểm) (a) có (b) không",
+  "en": "Don't adapt to his cooking! Make him a different dish every day: he'll appreciate it! (3 points) (a) yes (b) no"
+ },
+ "Portagli un piccolo regalo quando arrivi a casa sua! (punti: 3) (a) sì (b) no": {
+  "vi": "Mang cho bạn ấy một món quà nhỏ khi đến nhà! (3 điểm) (a) có (b) không",
+  "en": "Bring him a small present when you arrive at his house! (3 points) (a) yes (b) no"
+ },
+ "Se ci sono dei bambini, non giocarci insieme! Potrebbero urlare e litigare. (punti: 1) (a) sì (b) no": {
+  "vi": "Nếu có trẻ con, đừng chơi với chúng! Chúng có thể la hét và cãi nhau. (1 điểm) (a) có (b) không",
+  "en": "If there are children, don't play with them! They might shout and quarrel. (1 point) (a) yes (b) no"
+ },
+ "Non curarti della tua camera! Non metterla a posto: ci penserà il tuo amico. (punti: 1) (a) sì (b) no": {
+  "vi": "Đừng bận tâm đến phòng của bạn! Đừng dọn dẹp: bạn bạn sẽ lo. (1 điểm) (a) có (b) không",
+  "en": "Don't bother about your room! Don't tidy it: your friend will see to it. (1 point) (a) yes (b) no"
+ },
+ "Apparecchia la tavola e sparecchiala a fine pasto. (punti: 3) (a) sì (b) no": {
+  "vi": "Bày bàn ăn và dọn bàn sau bữa ăn. (3 điểm) (a) có (b) không",
+  "en": "Lay the table and clear it after the meal. (3 points) (a) yes (b) no"
+ },
+ "Se ti accorgi che il tuo amico ha un problema, non parlargli: potrebbe offendersi. (punti: 1) (a) sì (b) no": {
+  "vi": "Nếu thấy bạn mình có chuyện, đừng nói gì với bạn ấy: bạn ấy có thể phật lòng. (1 điểm) (a) có (b) không",
+  "en": "If you notice your friend has a problem, don't talk to him: he might be offended. (1 point) (a) yes (b) no"
+ },
+ "Se hai rotto il suo vaso cinese preferito, non dirglielo: ne ricomprerà un altro. (punti: 1) (a) sì (b) no": {
+  "vi": "Nếu bạn làm vỡ chiếc bình Trung Hoa bạn ấy thích nhất, đừng nói: bạn ấy sẽ mua cái khác. (1 điểm) (a) có (b) không",
+  "en": "If you've broken his favourite Chinese vase, don't tell him: he'll buy another one. (1 point) (a) yes (b) no"
+ },
+ "Offrigli una cena al ristorante: è una buona occasione per stare insieme! (punti: 3) (a) sì (b) no": {
+  "vi": "Mời bạn ấy ăn tối ở nhà hàng: đó là dịp tốt để ở bên nhau! (3 điểm) (a) có (b) không",
+  "en": "Treat him to dinner at a restaurant: it's a good chance to be together! (3 points) (a) yes (b) no"
+ },
+ "Alla fine della settimana salutalo con affetto! (punti: 3) (a) sì (b) no": {
+  "vi": "Cuối tuần hãy chào tạm biệt bạn ấy thật trìu mến! (3 điểm) (a) có (b) không",
+  "en": "At the end of the week say goodbye to him affectionately! (3 points) (a) yes (b) no"
+ },
+ "Se hai ottenuto dai 5 agli 8 punti:": {
+  "vi": "Nếu bạn được từ 5 đến 8 điểm:",
+  "en": "If you got from 5 to 8 points:"
+ },
+ "non sei un ospite perfetto… il tuo amico potrebbe arrabbiarsi per il tuo comportamento e non invitarti mai più. Pensaci bene!": {
+  "vi": "bạn chưa phải là vị khách hoàn hảo… bạn của bạn có thể giận vì cách cư xử của bạn và không bao giờ mời bạn nữa. Hãy suy nghĩ kỹ!",
+  "en": "you're not a perfect guest… your friend might get angry about your behaviour and never invite you again. Think about it!"
+ },
+ "Se hai ottenuto più di 8 punti:": {
+  "vi": "Nếu bạn được hơn 8 điểm:",
+  "en": "If you got more than 8 points:"
+ },
+ "sei un ospite perfetto! Complimenti! I tuoi amici ti invitano sempre volentieri perché sei gentile ed educato.": {
+  "vi": "bạn là vị khách hoàn hảo! Chúc mừng! Bạn bè luôn sẵn lòng mời bạn vì bạn lịch sự và có giáo dục.",
+  "en": "you're a perfect guest! Congratulations! Your friends always invite you gladly because you're kind and polite."
+ },
+ "Veronica, stai / sta' zitta!": {
+  "vi": "Veronica, im lặng đi!",
+  "en": "Veronica, be quiet!"
+ },
+ "Signor Rossi, faccia attenzione!": {
+  "vi": "Ông Rossi, xin ông cẩn thận!",
+  "en": "Mr Rossi, be careful!"
+ },
+ "Abbiate un po' di pazienza!": {
+  "vi": "Các bạn kiên nhẫn một chút!",
+  "en": "Be a little patient!"
+ },
+ "Signora, non abbia paura: l'intervento chirurgico è molto semplice!": {
+  "vi": "Thưa bà, bà đừng sợ: ca phẫu thuật rất đơn giản!",
+  "en": "Madam, don't be afraid: the operation is very simple!"
+ },
+ "Ragazzi, non fate tardi stanotte!": {
+  "vi": "Các cậu, đêm nay đừng về muộn!",
+  "en": "Guys, don't stay out late tonight!"
+ },
+ "Abbiniamo e completiamo le frasi con i verbi all'imperativo.": {
+  "vi": "Nối và hoàn thành câu với động từ ở thức mệnh lệnh.",
+  "en": "Let's match and complete the sentences with the verbs in the imperative."
+ },
+ "Dovete fare un regalo?": {
+  "vi": "Bạn phải tặng quà ư?",
+  "en": "Do you have to give a present?"
+ },
+ "Seguite alcuni consigli e non sbaglierete…": {
+  "vi": "Hãy làm theo vài lời khuyên và bạn sẽ không sai…",
+  "en": "Follow some advice and you won't go wrong…"
+ },
+ "(tenere, tu) Tieni conto dei gusti della persona che riceverà il dono,": {
+  "vi": "(lưu ý, bạn) Hãy lưu ý đến sở thích của người sẽ nhận quà,",
+  "en": "(take, you) Take into account the tastes of the person who'll receive the gift,"
+ },
+ "(essere, tu) …… generoso,": {
+  "vi": "(là, bạn) …… hào phóng,",
+  "en": "(be, you) …… generous,"
+ },
+ "Non (regalare, tu) …… un oggetto inutile:": {
+  "vi": "Đừng (tặng, bạn) …… một món đồ vô dụng:",
+  "en": "Don't (give, you) …… a useless object:"
+ },
+ "(dare, tu) …… il regalo il giorno giusto:": {
+  "vi": "(trao, bạn) …… quà vào đúng ngày:",
+  "en": "(give, you) …… the present on the right day:"
+ },
+ "(andare, tu) …… a fare un giro nei negozi:": {
+  "vi": "(đi, bạn) …… một vòng các cửa hàng:",
+  "en": "(go, you) …… round the shops:"
+ },
+ "(ricordarsi, tu) …… sempre di scrivere un piccolo biglietto,": {
+  "vi": "(nhớ, bạn) …… luôn viết một tấm thiệp nhỏ,",
+  "en": "(remember, you) …… always to write a little card,"
+ },
+ "Da molto tempo non ricevi un regalo?": {
+  "vi": "Lâu lắm rồi bạn không nhận được quà?",
+  "en": "Haven't you received a present for a long time?"
+ },
+ "(sapere) …… che spesso rimane chiuso in un cassetto!": {
+  "vi": "(biết) …… rằng nó thường nằm im trong ngăn kéo!",
+  "en": "(know) …… that it often stays shut in a drawer!"
+ },
+ "perché le parole arrivano subito al cuore!": {
+  "vi": "vì lời nói đi thẳng đến trái tim!",
+  "en": "because words go straight to the heart!"
+ },
+ "non (dimenticare, tu) …… il regalo nel cassetto!": {
+  "vi": "đừng (quên, bạn) …… món quà trong ngăn kéo!",
+  "en": "don't (forget, you) …… the present in the drawer!"
+ },
+ "non (comprare) …… la prima cosa che vedi!": {
+  "vi": "đừng (mua) …… thứ đầu tiên bạn thấy!",
+  "en": "don't (buy) …… the first thing you see!"
+ },
+ "(Avere, tu) …… fiducia: qualcuno prima o poi si ricorderà di te!": {
+  "vi": "(có, bạn) …… niềm tin: sớm muộn cũng có người nhớ đến bạn!",
+  "en": "(have, you) …… faith: sooner or later someone will remember you!"
+ },
+ "ma non (spendere) …… tutto il tuo patrimonio!": {
+  "vi": "nhưng đừng (tiêu) …… hết gia sản của bạn!",
+  "en": "but don't (spend) …… all your fortune!"
+ },
+ "non (fare) fare affidamento solo sui tuoi gusti.": {
+  "vi": "đừng (dựa) chỉ dựa vào sở thích của riêng bạn.",
+  "en": "don't (rely) rely only on your own tastes."
+ },
+ "Completiamo con i verbi all'imperativo.": {
+  "vi": "Điền động từ ở thức mệnh lệnh.",
+  "en": "Complete with the verbs in the imperative."
+ },
+ "2. (essere, tu) … generoso,": {
+  "vi": "2. (là, bạn) … hào phóng,",
+  "en": "2. (be, you) … generous,"
+ },
+ "3. Non (regalare, tu) … un oggetto inutile:": {
+  "vi": "3. Đừng (tặng, bạn) … một món đồ vô dụng:",
+  "en": "3. Don't (give, you) … a useless object:"
+ },
+ "4. (dare, tu) … il regalo il giorno giusto:": {
+  "vi": "4. (trao, bạn) … quà vào đúng ngày:",
+  "en": "4. (give, you) … the present on the right day:"
+ },
+ "5. (andare, tu) … a fare un giro nei negozi:": {
+  "vi": "5. (đi, bạn) … một vòng các cửa hàng:",
+  "en": "5. (go, you) … round the shops:"
+ },
+ "6. (ricordarsi, tu) … sempre di scrivere un piccolo biglietto,": {
+  "vi": "6. (nhớ, bạn) … luôn viết một tấm thiệp nhỏ,",
+  "en": "6. (remember, you) … always to write a little card,"
+ },
+ "a. (sapere) … che spesso rimane chiuso in un cassetto!": {
+  "vi": "a. (biết) … rằng nó thường nằm im trong ngăn kéo!",
+  "en": "a. (know) … that it often stays shut in a drawer!"
+ },
+ "c. non (dimenticare, tu) … il regalo nel cassetto!": {
+  "vi": "c. đừng (quên, bạn) … món quà trong ngăn kéo!",
+  "en": "c. don't (forget, you) … the present in the drawer!"
+ },
+ "d. non (comprare) … la prima cosa che vedi!": {
+  "vi": "d. đừng (mua) … thứ đầu tiên bạn thấy!",
+  "en": "d. don't (buy) … the first thing you see!"
+ },
+ "e. (Avere, tu) … fiducia: qualcuno prima o poi si ricorderà di te!": {
+  "vi": "e. (có, bạn) … niềm tin: sớm muộn cũng có người nhớ đến bạn!",
+  "en": "e. (have, you) … faith: sooner or later someone will remember you!"
+ },
+ "f. ma non (spendere) … tutto il tuo patrimonio!": {
+  "vi": "f. nhưng đừng (tiêu) … hết gia sản của bạn!",
+  "en": "f. but don't (spend) … all your fortune!"
+ },
+ "Leggiamo e completiamo i testi.": {
+  "vi": "Đọc và hoàn thành các bức thư.",
+  "en": "Let's read and complete the letters."
+ },
+ "Lettere a Lina Sotis": {
+  "vi": "Thư gửi Lina Sotis",
+  "en": "Letters to Lina Sotis"
+ },
+ "1. Cara Lina, tra qualche giorno una mia cara amica compirà gli anni e vorrei regalarle dei fiori. Purtroppo non posso spedirglieli a casa il giorno del suo compleanno: quando devo mandarglieli? Grazie per la sua cortese risposta. — Anna, Taranto.": {
+  "vi": "1. Chị Lina thân mến, vài ngày nữa là sinh nhật một người bạn thân của tôi và tôi muốn tặng cô ấy hoa. Tiếc là tôi không thể gửi hoa đến nhà cô ấy đúng ngày sinh nhật: tôi nên gửi khi nào? Cảm ơn chị đã trả lời. — Anna, Taranto.",
+  "en": "1. Dear Lina, in a few days a dear friend of mine has her birthday and I'd like to give her flowers. Unfortunately I can't send them to her house on her birthday: when should I send them? Thank you for your kind reply. — Anna, Taranto."
+ },
+ "Cara Anna, faccia il regalo prima del compleanno: vada da un fioraio, scelga un bel mazzo di rose bianche e scriva un bel biglietto. Non si preoccupi! La sua amica apprezzerà il suo pensiero anche se in anticipo.": {
+  "vi": "Anna thân mến, hãy tặng quà trước sinh nhật: đến tiệm hoa, chọn một bó hồng trắng đẹp và viết một tấm thiệp thật hay. Đừng lo! Bạn của chị sẽ trân trọng tấm lòng của chị dù tặng sớm.",
+  "en": "Dear Anna, give the present before the birthday: go to a florist, choose a nice bunch of white roses and write a nice card. Don't worry! Your friend will appreciate the thought even if it's early."
+ },
+ "2. Cara Lina, devo regalare un candelabro. Le candele devo metterle da parte o non è necessario? — Fabiola, Pisa.": {
+  "vi": "2. Chị Lina thân mến, tôi phải tặng một chân nến. Tôi có nên mua kèm nến không hay không cần? — Fabiola, Pisa.",
+  "en": "2. Dear Lina, I have to give a candelabra. Should I add the candles or isn't it necessary? — Fabiola, Pisa."
+ },
+ "3. Cara Lina, è giusto fare il regalo a una coppia di sposi che conosco, anche se loro non mi hanno invitato al pranzo di matrimonio? Grazie per i suoi consigli! — Stefano, Ferrara.": {
+  "vi": "3. Chị Lina thân mến, có nên tặng quà cho một cặp cô dâu chú rể mà tôi quen dù họ không mời tôi dự tiệc cưới không? Cảm ơn lời khuyên của chị! — Stefano, Ferrara.",
+  "en": "3. Dear Lina, is it right to give a present to a couple I know who are getting married, even if they didn't invite me to the wedding lunch? Thank you for your advice! — Stefano, Ferrara."
+ },
+ "4. Cara Lina, mi sono innamorato di un'altra donna, ma non ho il coraggio di dirlo a mia moglie: come devo fare? Aiutami! — Michele, disperato… Palermo.": {
+  "vi": "4. Chị Lina thân mến, tôi đã yêu một người phụ nữ khác nhưng không đủ can đảm nói với vợ: tôi phải làm sao? Giúp tôi với! — Michele, tuyệt vọng… Palermo.",
+  "en": "4. Dear Lina, I've fallen in love with another woman, but I don't have the courage to tell my wife: what should I do? Help me! — Michele, desperate… Palermo."
+ },
+ "DAMMELO!": {
+  "vi": "ĐƯA NÓ CHO TÔI!",
+  "en": "GIVE IT TO ME!"
+ },
+ "Da' un bacio a me! → Dammelo!": {
+  "vi": "Hôn tôi một cái! → Hôn tôi đi!",
+  "en": "Give me a kiss! → Give it to me!"
+ },
+ "Di' a me il tuo problema! → Dimmelo!": {
+  "vi": "Nói cho tôi vấn đề của bạn! → Nói nó cho tôi!",
+  "en": "Tell me your problem! → Tell it to me!"
+ },
+ "Fa' una vacanza! → Falla!": {
+  "vi": "Đi nghỉ đi! → Đi đi!",
+  "en": "Take a holiday! → Take it!"
+ },
+ "Sta' qui! → Stacci!": {
+  "vi": "Ở đây! → Ở lại đây!",
+  "en": "Stay here! → Stay there!"
+ },
+ "Va' a casa tua! → Vacci!": {
+  "vi": "Về nhà bạn đi! → Về đó đi!",
+  "en": "Go home! → Go there!"
+ },
+ "Di' a lei la verità! → Digliela!": {
+  "vi": "Nói sự thật với cô ấy! → Nói nó với cô ấy!",
+  "en": "Tell her the truth! → Tell it to her!"
+ },
+ "Signor Bianchi, mi dia il suo cappotto! → Me lo dia!": {
+  "vi": "Ông Bianchi, xin đưa áo khoác cho tôi! → Xin đưa nó cho tôi!",
+  "en": "Mr Bianchi, give me your coat! → Give it to me!"
+ },
+ "Signora Rossi, mi dia la sua borsa! → Me la dia!": {
+  "vi": "Bà Rossi, xin đưa túi cho tôi! → Xin đưa nó cho tôi!",
+  "en": "Mrs Rossi, give me your bag! → Give it to me!"
+ },
+ "Sapete che oggi è il compleanno di Alberto? (a) Sì, facciamogli un regalo! (b) Sì, gli facciamo un regalo! (c) Sì, lo facciamo un regalo!": {
+  "vi": "Các bạn có biết hôm nay là sinh nhật Alberto không? (a) Có, ta tặng quà cho cậu ấy đi! (b) Có, chúng ta tặng quà cho cậu ấy! (c) Có, chúng ta tặng nó một món quà!",
+  "en": "Do you know it's Alberto's birthday today? (a) Yes, let's give him a present! (b) Yes, we're giving him a present! (c) Yes, we're giving it a present!"
+ },
+ "Posso chiederti un favore? (a) Dimi! (b) Dimmi! (c) Digli!": {
+  "vi": "Mình nhờ bạn một việc được không? (a) Dimi! (b) Nói đi! (c) Nói với anh ấy!",
+  "en": "Can I ask you a favour? (a) Dimi! (b) Tell me! (c) Tell him!"
+ },
+ "Non ti sopporto più: (a) vattene! (b) te ne vai! (c) vatene!": {
+  "vi": "Mình chịu hết nổi bạn rồi: (a) cút đi! (b) bạn đi à! (c) vatene!",
+  "en": "I can't stand you any more: (a) go away! (b) you're leaving! (c) vatene!"
+ },
+ "Hai le foto della vacanza? (a) Fammele vedere! (b) Fattele vedere (c) Fa mele vedere!": {
+  "vi": "Bạn có ảnh kỳ nghỉ không? (a) Cho mình xem với! (b) Tự xem đi (c) Fa mele vedere!",
+  "en": "Have you got the holiday photos? (a) Let me see them! (b) Have them shown to you (c) Fa mele vedere!"
+ },
+ "Vuoi una fetta di dolce? (a) Sì, dame ne due, grazie! (b) Sì, damme ne due, grazie! (c) Sì, dammene due, grazie!": {
+  "vi": "Bạn muốn một miếng bánh không? (a) dame ne due (b) damme ne due (c) Có, cho mình hai miếng, cảm ơn!",
+  "en": "Would you like a slice of cake? (a) dame ne due (b) damme ne due (c) Yes, give me two, thanks!"
+ },
+ "Siete stanchi? (a) Andatevene! (b) Vene andate! (c) Andatene!": {
+  "vi": "Các bạn mệt à? (a) Về đi! (b) Vene andate! (c) Andatene!",
+  "en": "Are you tired? (a) Off you go! (b) Vene andate! (c) Andatene!"
+ },
+ "Mi aspettate? (a) Certo, ma sbriga ti! (b) Certo, ma sbrigati! (c) Certo, ma ti sbrighi!": {
+  "vi": "Các bạn đợi mình nhé? (a) sbriga ti (b) Được, nhưng nhanh lên! (c) Được, nhưng bạn nhanh lên à!",
+  "en": "Will you wait for me? (a) sbriga ti (b) Of course, but hurry up! (c) Of course, but you hurry up?"
+ },
+ "Posso domandarle una cosa? (a) Prego, mi dica! (b) Prego, mi dici! (c) Prego, mi di'!": {
+  "vi": "Tôi hỏi ông/bà một chuyện được không? (a) Xin mời, ông/bà cứ nói! (b) mi dici (c) mi di'",
+  "en": "May I ask you something? (a) Please, go ahead! (b) mi dici (c) mi di'"
+ },
+ "Devo darvi le chiavi? (a) Daccele! (b) Dacele! (c) Dacceli!": {
+  "vi": "Tôi có phải đưa chìa khóa cho các bạn không? (a) Đưa chúng cho chúng tôi! (b) Dacele! (c) Dacceli!",
+  "en": "Should I give you the keys? (a) Give them to us! (b) Dacele! (c) Dacceli!"
+ },
+ "Buongiorno, avrei bisogno di un aiuto, sono una turista inglese: è la prima volta che prendo l'autobus qui a Siena. Mi potrebbe dare delle informazioni?": {
+  "vi": "Chào anh, tôi cần giúp đỡ, tôi là khách du lịch người Anh: đây là lần đầu tôi đi xe buýt ở Siena. Anh có thể cho tôi vài thông tin không?",
+  "en": "Good morning, I need some help, I'm an English tourist: it's the first time I've taken the bus here in Siena. Could you give me some information?"
+ },
+ "Certo, qui trova gli …. Poi deve comprare un biglietto: lo può trovare nelle tabaccherie o nelle edicole. Mi …, deve obliterare il biglietto, lo deve … per la durata del percorso e lo deve mostrare al personale di vigilanza.": {
+  "vi": "Được chứ, đây là … . Sau đó chị phải mua vé: có bán ở các tiệm thuốc lá hoặc sạp báo. Tôi … , chị phải bấm vé, phải … vé suốt hành trình và phải xuất trình cho nhân viên kiểm soát.",
+  "en": "Of course, here you'll find the … . Then you have to buy a ticket: you can find it in tobacconists or at newsstands. I …, you must validate the ticket, … it for the whole journey and show it to the inspectors."
+ },
+ "Se la macchinetta non funziona, che faccio?": {
+  "vi": "Nếu máy bấm vé không hoạt động thì tôi làm sao?",
+  "en": "If the machine doesn't work, what do I do?"
+ },
+ "Se la macchinetta per obliterare il biglietto non funziona, scriva la data e l'ora di inizio del viaggio sul biglietto. Comunque può leggere il regolamento sull'autobus.": {
+  "vi": "Nếu máy bấm vé không hoạt động, chị hãy viết ngày và giờ bắt đầu chuyến đi lên vé. Dù sao chị cũng có thể đọc nội quy trên xe buýt.",
+  "en": "If the ticket-stamping machine doesn't work, write the date and time the journey started on the ticket. Anyway, you can read the rules on the bus."
+ },
+ "Oh, grazie mille, lo leggo senz'altro. Ah, eccolo! Guarda, Paul, leggiamolo.": {
+  "vi": "Ồ, cảm ơn nhiều, tôi sẽ đọc. À, đây rồi! Paul, nhìn này, cùng đọc nhé.",
+  "en": "Oh, thanks a lot, I'll certainly read it. Ah, here it is! Look, Paul, let's read it."
+ },
+ "Il regolamento: completiamo le regole.": {
+  "vi": "Nội quy: hoàn thành các quy định.",
+  "en": "The rules: complete the rules."
+ },
+ "1. … un solo posto a sedere.": {
+  "vi": "1. … chỉ một chỗ ngồi.",
+  "en": "1. … only one seat."
+ },
+ "2. … i posti riservati.": {
+  "vi": "2. … các ghế dành riêng.",
+  "en": "2. … the reserved seats."
+ },
+ "3. Non … gli altri viaggiatori.": {
+  "vi": "3. Không … các hành khách khác.",
+  "en": "3. Don't … the other passengers."
+ },
+ "4. Non … e non … i mezzi.": {
+  "vi": "4. Không … và không … xe.",
+  "en": "4. Don't … and don't … the vehicles."
+ },
+ "5. Non … oggetti pericolosi.": {
+  "vi": "5. Không … đồ vật nguy hiểm.",
+  "en": "5. Don't … dangerous objects."
+ },
+ "6. Non … armi.": {
+  "vi": "6. Không … vũ khí.",
+  "en": "6. Don't … weapons."
+ },
+ "7. Non … segnali di allarme se non in caso di pericolo.": {
+  "vi": "7. Không … tín hiệu báo động trừ khi có nguy hiểm.",
+  "en": "7. Don't … alarm signals except in case of danger."
+ },
+ "8. Non ….": {
+  "vi": "8. Không ….",
+  "en": "8. Don't …."
+ },
+ "9. Non … oggetti dai finestrini.": {
+  "vi": "9. Không … đồ vật ra ngoài cửa sổ.",
+  "en": "9. Don't … objects out of the windows."
+ },
+ "Siete alla stazione di Milano: dovete prendere un treno per andare a Bologna, chiedete informazioni.": {
+  "vi": "Bạn đang ở ga Milano: bạn phải đi tàu đến Bologna, hãy hỏi thông tin.",
+  "en": "You're at Milan station: you have to take a train to Bologna, ask for information."
+ },
+ "Chiedete informazioni sul treno per Bologna.": {
+  "vi": "Hỏi thông tin về chuyến tàu đi Bologna.",
+  "en": "Ask for information about the train to Bologna."
+ },
+ "Scrivete il regolamento di un villaggio turistico elegante in una località della Sardegna.": {
+  "vi": "Viết nội quy của một khu nghỉ dưỡng sang trọng ở Sardegna.",
+  "en": "Write the rules of an elegant holiday village in Sardinia."
+ },
+ "Siete i proprietari di una piscina: decidete il regolamento per i bagnanti.": {
+  "vi": "Bạn là chủ một hồ bơi: hãy đặt nội quy cho người bơi.",
+  "en": "You own a swimming pool: decide the rules for swimmers."
+ },
+ "Ascoltiamo le interviste.": {
+  "vi": "Nghe các cuộc phỏng vấn.",
+  "en": "Let's listen to the interviews."
+ },
+ "1. Osservate le immagini: i seguenti comportamenti sono corretti o sbagliati? Perché?": {
+  "vi": "1. Quan sát tranh: những cách cư xử sau đúng hay sai? Vì sao?",
+  "en": "1. Look at the pictures: are the following behaviours right or wrong? Why?"
+ },
+ "2. Come vi comportate nel vostro paese in queste situazioni?": {
+  "vi": "2. Ở nước bạn, bạn cư xử thế nào trong những tình huống này?",
+  "en": "2. How do you behave in your country in these situations?"
+ },
+ "Giappone: una ragazza rifiuta la tazza di tè.": {
+  "vi": "Nhật Bản: một cô gái từ chối tách trà.",
+  "en": "Japan: a girl refuses the cup of tea."
+ },
+ "Giappone: una ragazza entra in casa con le scarpe.": {
+  "vi": "Nhật Bản: một cô gái đi giày vào nhà.",
+  "en": "Japan: a girl goes into the house with her shoes on."
+ },
+ "Singapore: un ragazzo mangia nella metropolitana.": {
+  "vi": "Singapore: một cậu bé ăn trong tàu điện ngầm.",
+  "en": "Singapore: a boy eats on the underground."
+ },
+ "Austria: gli ospiti portano un regalo alla cena.": {
+  "vi": "Áo: khách mang quà đến bữa tối.",
+  "en": "Austria: the guests bring a present to dinner."
+ },
+ "Thailandia: una donna tocca la testa di un bambino.": {
+  "vi": "Thái Lan: một phụ nữ chạm vào đầu một đứa trẻ.",
+  "en": "Thailand: a woman touches a child's head."
+ },
+ "Thailandia: la padrona di casa annusa l'orecchio di un ospite.": {
+  "vi": "Thái Lan: bà chủ nhà ngửi tai một vị khách.",
+  "en": "Thailand: the hostess sniffs a guest's ear."
+ },
+ "Quali regole devono rispettare i figli a casa? Quali regole voi avete dovuto rispettare quando eravate bambini?": {
+  "vi": "Con cái phải tuân theo những quy tắc nào ở nhà? Hồi nhỏ bạn đã phải tuân theo những quy tắc nào?",
+  "en": "What rules must children respect at home? What rules did you have to respect as children?"
+ },
+ "Quali sono i comportamenti culturalmente scorretti nel vostro paese?": {
+  "vi": "Ở nước bạn, những cách cư xử nào bị coi là không đúng về mặt văn hóa?",
+  "en": "What behaviours are culturally incorrect in your country?"
+ },
+ "Che cosa, invece, nel vostro paese è particolarmente apprezzato?": {
+  "vi": "Ngược lại, ở nước bạn điều gì được đặc biệt coi trọng?",
+  "en": "What, on the other hand, is particularly appreciated in your country?"
+ },
+ "La puntualità è importante per voi?": {
+  "vi": "Đúng giờ có quan trọng với bạn không?",
+  "en": "Is punctuality important to you?"
+ },
+ "Se andate a cena a casa di amici come vi comportate?": {
+  "vi": "Nếu đến ăn tối ở nhà bạn bè, bạn cư xử thế nào?",
+  "en": "If you go to dinner at friends' houses, how do you behave?"
+ },
+ "Le manifestazioni d'affetto fisiche (come abbracciarsi, baciarsi, stringersi) sono appropriate nel vostro paese in luoghi pubblici?": {
+  "vi": "Những cử chỉ tình cảm (như ôm, hôn, siết tay) có phù hợp ở nơi công cộng tại nước bạn không?",
+  "en": "Are physical displays of affection (like hugging, kissing, holding each other) appropriate in public places in your country?"
+ },
+ "In quali situazioni vi vestite in maniera formale?": {
+  "vi": "Trong những tình huống nào bạn ăn mặc trang trọng?",
+  "en": "In what situations do you dress formally?"
+ },
+ "Se dovete rifiutare un invito o un cibo che non vi piace, come fate?": {
+  "vi": "Nếu phải từ chối một lời mời hay món ăn bạn không thích, bạn làm thế nào?",
+  "en": "If you have to refuse an invitation or a food you don't like, what do you do?"
+ },
+ "In quali situazioni usate un linguaggio informale?": {
+  "vi": "Trong những tình huống nào bạn dùng ngôn ngữ thân mật?",
+  "en": "In what situations do you use informal language?"
+ },
+ "Se dovete guidare la macchina nel vostro paese, quali sono le regole fondamentali?": {
+  "vi": "Nếu phải lái xe ở nước bạn, những quy tắc cơ bản là gì?",
+  "en": "If you have to drive in your country, what are the basic rules?"
+ },
+ "Che cosa suggerite in queste situazioni?": {
+  "vi": "Bạn khuyên gì trong những tình huống này?",
+  "en": "What do you suggest in these situations?"
+ },
+ "Raccontate un episodio imbarazzante della vostra vita.": {
+  "vi": "Hãy kể một kỷ niệm đáng xấu hổ trong đời bạn.",
+  "en": "Tell an embarrassing episode from your life."
+ },
+ "cedere il posto": {
+  "vi": "nhường chỗ",
+  "en": "to give up one's seat"
+ },
+ "dare la precedenza": {
+  "vi": "nhường đường",
+  "en": "to give way"
+ },
+ "dare soccorso a chi ha bisogno": {
+  "vi": "giúp đỡ người cần giúp",
+  "en": "to help those in need"
+ },
+ "essere ospitali": {
+  "vi": "hiếu khách",
+  "en": "to be hospitable"
+ },
+ "fare la raccolta differenziata dei rifiuti": {
+  "vi": "phân loại rác",
+  "en": "to separate rubbish for recycling"
+ },
+ "guidare con prudenza": {
+  "vi": "lái xe cẩn thận",
+  "en": "to drive carefully"
+ },
+ "mantenere l'ambiente pulito": {
+  "vi": "giữ môi trường sạch",
+  "en": "to keep the environment clean"
+ },
+ "ringraziare": {
+  "vi": "cảm ơn",
+  "en": "to thank"
+ },
+ "rispettare gli animali": {
+  "vi": "tôn trọng động vật",
+  "en": "to respect animals"
+ },
+ "rispettare gli orari": {
+  "vi": "đúng giờ",
+  "en": "to respect timetables, be punctual"
+ },
+ "rispettare i monumenti artistici": {
+  "vi": "tôn trọng di tích nghệ thuật",
+  "en": "to respect artistic monuments"
+ },
+ "rispettare l'ambiente": {
+  "vi": "tôn trọng môi trường",
+  "en": "to respect the environment"
+ },
+ "rispettare l'ordine": {
+  "vi": "giữ trật tự",
+  "en": "to respect order"
+ },
+ "rispettare la cultura degli altri popoli": {
+  "vi": "tôn trọng văn hóa các dân tộc khác",
+  "en": "to respect other peoples' cultures"
+ },
+ "rispettare la fila": {
+  "vi": "xếp hàng đúng thứ tự",
+  "en": "to respect the queue"
+ },
+ "rispettare la tavola": {
+  "vi": "giữ phép lịch sự ở bàn ăn",
+  "en": "to have good table manners"
+ },
+ "rispettare le leggi": {
+  "vi": "tôn trọng pháp luật",
+  "en": "to respect the law"
+ },
+ "rispettare se stessi e gli altri": {
+  "vi": "tôn trọng bản thân và người khác",
+  "en": "to respect oneself and others"
+ },
+ "salutare": {
+  "vi": "chào hỏi",
+  "en": "to greet"
+ },
+ "vestirsi adeguatamente": {
+  "vi": "ăn mặc phù hợp",
+  "en": "to dress appropriately"
+ },
+ "arrivare in ritardo": {
+  "vi": "đến muộn",
+  "en": "to arrive late"
+ },
+ "avere scarsa pulizia personale": {
+  "vi": "vệ sinh cá nhân kém",
+  "en": "to have poor personal hygiene"
+ },
+ "dire parolacce": {
+  "vi": "nói tục",
+  "en": "to swear"
+ },
+ "fare gesti sgradevoli": {
+  "vi": "có cử chỉ khó chịu",
+  "en": "to make rude gestures"
+ },
+ "fare rumore": {
+  "vi": "làm ồn",
+  "en": "to make noise"
+ },
+ "inquinare": {
+  "vi": "gây ô nhiễm",
+  "en": "to pollute"
+ },
+ "insultare": {
+  "vi": "lăng mạ",
+  "en": "to insult"
+ },
+ "interrompere la conversazione": {
+  "vi": "ngắt lời",
+  "en": "to interrupt the conversation"
+ },
+ "litigare": {
+  "vi": "cãi nhau",
+  "en": "to quarrel"
+ },
+ "mangiare rumorosamente": {
+  "vi": "ăn uống ồn ào",
+  "en": "to eat noisily"
+ },
+ "offendere": {
+  "vi": "xúc phạm",
+  "en": "to offend"
+ },
+ "picchiare": {
+  "vi": "đánh người",
+  "en": "to hit"
+ },
+ "ridere smodatamente": {
+  "vi": "cười quá trớn",
+  "en": "to laugh excessively"
+ },
+ "rubare": {
+  "vi": "ăn cắp",
+  "en": "to steal"
+ },
+ "sbattere le porte": {
+  "vi": "đóng sầm cửa",
+  "en": "to slam doors"
+ },
+ "soffiarsi il naso rumorosamente": {
+  "vi": "hỉ mũi ồn ào",
+  "en": "to blow one's nose noisily"
+ },
+ "sporcare": {
+  "vi": "làm bẩn",
+  "en": "to make things dirty"
+ },
+ "suonare il clacson quando non è necessario": {
+  "vi": "bấm còi khi không cần thiết",
+  "en": "to honk the horn when not necessary"
+ },
+ "tenere il cellulare sempre acceso": {
+  "vi": "luôn để điện thoại bật",
+  "en": "to keep one's mobile always on"
+ },
+ "urlare": {
+  "vi": "la hét",
+  "en": "to shout"
+ },
+ "dare un'educazione": {
+  "vi": "giáo dục (ai đó)",
+  "en": "to bring up, educate"
+ },
+ "educazione all'ambiente": {
+  "vi": "giáo dục về môi trường",
+  "en": "environmental education"
+ },
+ "educazione allo studio": {
+  "vi": "giáo dục thói quen học tập",
+  "en": "study skills education"
+ },
+ "educazione artistica": {
+  "vi": "giáo dục mỹ thuật",
+  "en": "art education"
+ },
+ "educazione civica": {
+  "vi": "giáo dục công dân",
+  "en": "civics"
+ },
+ "educazione fisica": {
+  "vi": "giáo dục thể chất",
+  "en": "physical education"
+ },
+ "educazione musicale": {
+  "vi": "giáo dục âm nhạc",
+  "en": "music education"
+ },
+ "educazione permanente": {
+  "vi": "giáo dục suốt đời",
+  "en": "lifelong learning"
+ },
+ "educazione religiosa": {
+  "vi": "giáo dục tôn giáo",
+  "en": "religious education"
+ },
+ "educazione rigida": {
+  "vi": "giáo dục nghiêm khắc",
+  "en": "strict upbringing"
+ },
+ "educazione sbagliata": {
+  "vi": "giáo dục sai lầm",
+  "en": "wrong upbringing"
+ },
+ "educazione sessuale": {
+  "vi": "giáo dục giới tính",
+  "en": "sex education"
+ },
+ "educazione severa": {
+  "vi": "giáo dục khắt khe",
+  "en": "severe upbringing"
+ },
+ "educazione stradale": {
+  "vi": "giáo dục an toàn giao thông",
+  "en": "road safety education"
+ },
+ "educazione tecnica": {
+  "vi": "giáo dục kỹ thuật",
+  "en": "technical education"
+ },
+ "impartire un'educazione": {
+  "vi": "truyền đạt sự giáo dục",
+  "en": "to impart an education"
+ },
+ "ineducazione": {
+  "vi": "sự thiếu giáo dục",
+  "en": "lack of manners"
+ },
+ "insegnare l'educazione": {
+  "vi": "dạy phép lịch sự",
+  "en": "to teach good manners"
+ },
+ "maleducazione": {
+  "vi": "sự vô giáo dục, bất lịch sự",
+  "en": "rudeness, bad manners"
+ },
+ "ricevere un'educazione": {
+  "vi": "được giáo dục",
+  "en": "to receive an education"
+ },
+ "Scriviamo il significato delle parole e delle espressioni.": {
+  "vi": "Viết nghĩa của các từ và thành ngữ.",
+  "en": "Let's write the meaning of the words and expressions."
+ },
+ "Fare la raccolta differenziata significa:": {
+  "vi": "Phân loại rác nghĩa là:",
+  "en": "Separating rubbish for recycling means:"
+ },
+ "Guidare con prudenza significa:": {
+  "vi": "Lái xe cẩn thận nghĩa là:",
+  "en": "Driving carefully means:"
+ },
+ "Offendere significa:": {
+  "vi": "Xúc phạm nghĩa là:",
+  "en": "To offend means:"
+ },
+ "Ridere smodatamente significa:": {
+  "vi": "Cười quá trớn nghĩa là:",
+  "en": "Laughing excessively means:"
+ },
+ "Educazione civica significa:": {
+  "vi": "Giáo dục công dân nghĩa là:",
+  "en": "Civics means:"
+ },
+ "Ricevere un'educazione rigida significa:": {
+  "vi": "Nhận một sự giáo dục khắt khe nghĩa là:",
+  "en": "Receiving a strict upbringing means:"
+ },
+ "Educazione fisica significa:": {
+  "vi": "Giáo dục thể chất nghĩa là:",
+  "en": "Physical education means:"
+ },
+ "Scriviamo: completiamo le frasi con le parole giuste.": {
+  "vi": "Cùng viết: hoàn thành câu với từ thích hợp.",
+  "en": "Let's write: complete the sentences with the right words."
+ },
+ "1. Se siamo degli automobilisti corretti, a un incrocio diamo la … a destra, non suoniamo il … quando non è necessario, non superiamo i limiti di …, non passiamo con il semaforo ….": {
+  "vi": "1. Nếu là người lái xe đúng mực, ở ngã tư ta nhường … bên phải, không bấm … khi không cần, không vượt quá giới hạn …, không vượt đèn ….",
+  "en": "1. If we're correct drivers, at a crossroads we give … to the right, we don't sound the … when it isn't necessary, we don't exceed the … limits, we don't go through a … light."
+ },
+ "2. Rispettare i capolavori artistici significa: non toccare le … d'arte, non … i monumenti antichi, non … con il flash i dipinti, non … oggetti vicino alle statue.": {
+  "vi": "2. Tôn trọng các kiệt tác nghệ thuật nghĩa là: không chạm vào các … nghệ thuật, không … các di tích cổ, không … tranh bằng đèn flash, không … đồ vật gần các bức tượng.",
+  "en": "2. Respecting artistic masterpieces means: don't touch works of …, don't … ancient monuments, don't … paintings with a flash, don't … objects near the statues."
+ },
+ "3. Seguire un regime di vita sano significa: … sport, avere un'… sana, … ore all'aria aperta, non fare … sedentaria, non fumare.": {
+  "vi": "3. Theo một lối sống lành mạnh nghĩa là: … thể thao, có một chế độ … lành mạnh, … nhiều giờ ngoài trời, không sống … ít vận động, không hút thuốc.",
+  "en": "3. Following a healthy lifestyle means: … sport, have a healthy …, … hours in the open air, not leading a sedentary …, not smoking."
+ },
+ "4. Saper stare a tavola significa: … da tavola solo quando tutti hanno finito di mangiare, … appropriatamente le posate, non … rumorosamente, non … conversazioni sgradevoli, fare dei … positivi sul cibo.": {
+  "vi": "4. Biết cư xử ở bàn ăn nghĩa là: chỉ … khỏi bàn khi mọi người đã ăn xong, … dao nĩa đúng cách, không … ồn ào, không … những cuộc nói chuyện khó chịu, đưa ra những … tích cực về món ăn.",
+  "en": "4. Knowing how to behave at table means: … from the table only when everyone has finished eating, … cutlery properly, not … noisily, not … unpleasant conversations, making positive … about the food."
+ },
+ "Scriviamo: associamo le parole.": {
+  "vi": "Cùng viết: liên tưởng các từ.",
+  "en": "Let's write: associate the words."
+ },
+ "INQUINARE": {
+  "vi": "GÂY Ô NHIỄM",
+  "en": "POLLUTING"
+ },
+ "RISPETTARE LA CULTURA DEGLI ALTRI POPOLI": {
+  "vi": "TÔN TRỌNG VĂN HÓA CÁC DÂN TỘC KHÁC",
+  "en": "RESPECTING OTHER PEOPLES' CULTURES"
+ },
+ "ESSERE MALEDUCATI": {
+  "vi": "BẤT LỊCH SỰ",
+  "en": "BEING RUDE"
+ },
+ "L'ozio è il padre di tutti i vizi.": {
+  "vi": "Nhàn cư vi bất thiện (lười biếng là cha đẻ mọi thói xấu).",
+  "en": "Idleness is the father of all vices."
+ },
+ "Meglio soli che male accompagnati.": {
+  "vi": "Thà ở một mình còn hơn có bạn xấu.",
+  "en": "Better alone than in bad company."
+ },
+ "Caro Giulio, fai bene con i tuoi figli a usare il bastone e la carota.": {
+  "vi": "Giulio thân mến, anh làm đúng khi dùng cả cây gậy lẫn củ cà rốt (vừa nghiêm vừa thưởng) với các con.",
+  "en": "Dear Giulio, you do well to use the carrot and stick with your children."
+ },
+ "Edoardo è veramente una persona gentile: è proprio un signore!": {
+  "vi": "Edoardo thật là người lịch sự: đúng là một quý ông!",
+  "en": "Edoardo is a really kind person: he's a real gentleman!"
+ },
+ "Usare il bastone e la carota.": {
+  "vi": "Dùng cả cây gậy và củ cà rốt (vừa phạt vừa thưởng).",
+  "en": "To use the carrot and the stick."
+ },
+ "Essere un signore.": {
+  "vi": "Là một quý ông (người rất lịch sự).",
+  "en": "To be a gentleman."
+ },
+ "Ascoltiamo e completiamo le parole con c, ce, ci, cie.": {
+  "vi": "Nghe và điền c, ce, ci hoặc cie vào các từ.",
+  "en": "Let's listen and complete the words with c, ce, ci, cie."
+ },
+ "simpati…o": {
+  "vi": "simpati…o (dễ mến)",
+  "en": "simpati…o (nice)"
+ },
+ "spe…": {
+  "vi": "spe… (loài, loại)",
+  "en": "spe… (species, kind)"
+ },
+ "uffi…o": {
+  "vi": "uffi…o (văn phòng)",
+  "en": "uffi…o (office)"
+ },
+ "pre…denza": {
+  "vi": "pre…denza (quyền ưu tiên)",
+  "en": "pre…denza (right of way)"
+ },
+ "spe…ali": {
+  "vi": "spe…ali (đặc biệt)",
+  "en": "spe…ali (special)"
+ },
+ "parti…olari": {
+  "vi": "parti…olari (đặc biệt, chi tiết)",
+  "en": "parti…olari (particular)"
+ },
+ "suffi…nte": {
+  "vi": "suffi…nte (đủ)",
+  "en": "suffi…nte (sufficient)"
+ },
+ "minac…": {
+  "vi": "minac… (những lời đe dọa)",
+  "en": "minac… (threats)"
+ },
+ "…rto": {
+  "vi": "…rto (chắc chắn)",
+  "en": "…rto (certain)"
+ },
+ "pia…vole": {
+  "vi": "pia…vole (dễ chịu)",
+  "en": "pia…vole (pleasant)"
+ },
+ "a…do": {
+  "vi": "a…do (chua)",
+  "en": "a…do (sour, acid)"
+ },
+ "con…tto": {
+  "vi": "con…tto (khái niệm)",
+  "en": "con…tto (concept)"
+ },
+ "de…nte": {
+  "vi": "de…nte (tử tế, đàng hoàng)",
+  "en": "de…nte (decent)"
+ },
+ "cos…ente": {
+  "vi": "cos…ente (tỉnh táo, ý thức)",
+  "en": "cos…ente (aware, conscious)"
+ },
+ "pac…o": {
+  "vi": "pac…o (gói hàng)",
+  "en": "pac…o (parcel)"
+ },
+ "cuc…olo": {
+  "vi": "cuc…olo (chó con)",
+  "en": "cuc…olo (puppy)"
+ },
+ "muc…a": {
+  "vi": "muc…a (con bò cái)",
+  "en": "muc…a (cow)"
+ },
+ "li…nza": {
+  "vi": "li…nza (giấy phép)",
+  "en": "li…nza (licence)"
+ },
+ "goc…a": {
+  "vi": "goc…a (giọt)",
+  "en": "goc…a (drop)"
+ },
+ "Ascoltiamo e completiamo le parole con g, ge, gi, gie.": {
+  "vi": "Nghe và điền g, ge, gi hoặc gie vào các từ.",
+  "en": "Let's listen and complete the words with g, ge, gi, gie."
+ },
+ "…uarire": {
+  "vi": "…uarire (khỏi bệnh)",
+  "en": "…uarire (to recover)"
+ },
+ "…rasole": {
+  "vi": "…rasole (hoa hướng dương)",
+  "en": "…rasole (sunflower)"
+ },
+ "…nte": {
+  "vi": "…nte (người ta)",
+  "en": "…nte (people)"
+ },
+ "…ntilezza": {
+  "vi": "…ntilezza (sự lịch sự)",
+  "en": "…ntilezza (kindness)"
+ },
+ "bu…": {
+  "vi": "bu… (những lời nói dối)",
+  "en": "bu… (lies)"
+ },
+ "assag…are": {
+  "vi": "assag…are (nếm)",
+  "en": "assag…are (to taste)"
+ },
+ "aspara…": {
+  "vi": "aspara… (măng tây)",
+  "en": "aspara… (asparagus)"
+ },
+ "formag…o": {
+  "vi": "formag…o (phô mai)",
+  "en": "formag…o (cheese)"
+ },
+ "…orno": {
+  "vi": "…orno (ngày)",
+  "en": "…orno (day)"
+ },
+ "…lato": {
+  "vi": "…lato (kem)",
+  "en": "…lato (ice cream)"
+ },
+ "cilie…": {
+  "vi": "cilie… (anh đào)",
+  "en": "cilie… (cherries)"
+ },
+ "fu…a": {
+  "vi": "fu…a (cuộc chạy trốn)",
+  "en": "fu…a (escape)"
+ },
+ "frig…re": {
+  "vi": "frig…re (chiên)",
+  "en": "frig…re (to fry)"
+ },
+ "e…oismo": {
+  "vi": "e…oismo (sự ích kỷ)",
+  "en": "e…oismo (selfishness)"
+ },
+ "diri…nte": {
+  "vi": "diri…nte (người quản lý)",
+  "en": "diri…nte (manager)"
+ },
+ "di…stione": {
+  "vi": "di…stione (sự tiêu hóa)",
+  "en": "di…stione (digestion)"
+ },
+ "ra…one": {
+  "vi": "ra…one (lý lẽ, lẽ phải)",
+  "en": "ra…one (reason)"
+ },
+ "pa…lla": {
+  "vi": "pa…lla (học bạ)",
+  "en": "pa…lla (school report)"
+ },
+ "pa…are": {
+  "vi": "pa…are (trả tiền)",
+  "en": "pa…are (to pay)"
+ },
+ "Ascoltiamo e completiamo le frasi con le parole giuste.": {
+  "vi": "Nghe và hoàn thành câu với từ thích hợp.",
+  "en": "Let's listen and complete the sentences with the right words."
+ },
+ "2. … ancora perché non ci credo!": {
+  "vi": "2. … lần nữa đi vì mình không tin!",
+  "en": "2. … again because I don't believe it!"
+ },
+ "3. …, non ti voglio più vedere!": {
+  "vi": "3. …, mình không muốn gặp bạn nữa!",
+  "en": "3. …, I don't want to see you any more!"
+ },
+ "4. … …, non ne ha bisogno!": {
+  "vi": "4. … …, anh ấy không cần nó!",
+  "en": "4. … …, he doesn't need it!"
+ },
+ "5. … … un favore!": {
+  "vi": "5. … … giúp chúng tôi một việc!",
+  "en": "5. … … us a favour!"
+ },
+ "6. …, le farà piacere!": {
+  "vi": "6. …, cô ấy sẽ vui lắm!",
+  "en": "6. …, she'll like it!"
+ },
+ "7. … vicino, ha bisogno di te!": {
+  "vi": "7. … bên cô ấy, cô ấy cần bạn!",
+  "en": "7. … close to her, she needs you!"
+ },
+ "8. Al cinema? … da solo, io non ne ho voglia!": {
+  "vi": "8. Đi xem phim à? … một mình đi, mình không muốn đi!",
+  "en": "8. To the cinema? … alone, I don't feel like it!"
+ },
+ "9. • Volete un caffè? ○ Sì, grazie, … tre!": {
+  "vi": "9. • Các bạn uống cà phê không? ○ Có, cảm ơn, … ba ly!",
+  "en": "9. • Would you like a coffee? ○ Yes, thanks, … three!"
+ },
+ "10. … un consiglio!": {
+  "vi": "10. … một lời khuyên!",
+  "en": "10. … some advice!"
+ },
+ "Usiamo l'imperativo per dare un comando, un ordine o per rivolgere un invito, una preghiera, un'esortazione.": {
+  "vi": "Ta dùng thức mệnh lệnh để ra lệnh, sai bảo hoặc để mời, cầu xin, khuyến khích.",
+  "en": "We use the imperative to give a command, an order, or to make an invitation, a request, an exhortation."
+ },
+ "Guarda quel cartello!": {
+  "vi": "Nhìn tấm biển kia kìa!",
+  "en": "Look at that sign!"
+ },
+ "Scrivi un'e-mail a Giorgio!": {
+  "vi": "Viết email cho Giorgio đi!",
+  "en": "Write an e-mail to Giorgio!"
+ },
+ "Senti bene le mie parole!": {
+  "vi": "Nghe kỹ lời tôi nói!",
+  "en": "Listen carefully to my words!"
+ },
+ "Mangiate tutto!": {
+  "vi": "Ăn hết đi!",
+  "en": "Eat everything!"
+ },
+ "Prendete le chiavi!": {
+  "vi": "Cầm lấy chìa khóa!",
+  "en": "Take the keys!"
+ },
+ "Finite i compiti!": {
+  "vi": "Làm xong bài tập đi!",
+  "en": "Finish your homework!"
+ },
+ "L'imperativo ha soltanto la seconda persona singolare (tu) e la seconda persona plurale (voi). Per la terza persona singolare (Lei) e per la prima persona plurale (noi) usiamo queste forme:": {
+  "vi": "Thức mệnh lệnh chỉ có ngôi thứ hai số ít (tu) và ngôi thứ hai số nhiều (voi). Với ngôi thứ ba số ít (Lei) và ngôi thứ nhất số nhiều (noi), ta dùng các dạng sau:",
+  "en": "The imperative only has the second person singular (tu) and second person plural (voi). For the third person singular (Lei) and first person plural (noi) we use these forms:"
+ },
+ "Dottore, guardi qui!": {
+  "vi": "Bác sĩ, xin nhìn đây!",
+  "en": "Doctor, look here!"
+ },
+ "Senta con attenzione quello che le devo dire!": {
+  "vi": "Xin ông/bà nghe kỹ điều tôi phải nói!",
+  "en": "Listen carefully to what I have to tell you!"
+ },
+ "Cantiamo tutti insieme!": {
+  "vi": "Chúng ta cùng hát nào!",
+  "en": "Let's all sing together!"
+ },
+ "Vediamo il film!": {
+  "vi": "Chúng ta xem phim đi!",
+  "en": "Let's watch the film!"
+ },
+ "Partiamo subito!": {
+  "vi": "Chúng ta đi ngay thôi!",
+  "en": "Let's leave at once!"
+ },
+ "Va' fuori!": {
+  "vi": "Ra ngoài!",
+  "en": "Get out!"
+ },
+ "Vada via!": {
+  "vi": "Ông/bà đi đi!",
+  "en": "Go away!"
+ },
+ "Andate a letto!": {
+  "vi": "Đi ngủ đi!",
+  "en": "Go to bed!"
+ },
+ "Abbi fiducia!": {
+  "vi": "Hãy tin tưởng!",
+  "en": "Have faith!"
+ },
+ "Abbia pietà di me!": {
+  "vi": "Xin hãy thương xót tôi!",
+  "en": "Have pity on me!"
+ },
+ "Piero, dà la penna a Claudio!": {
+  "vi": "Piero, đưa bút cho Claudio!",
+  "en": "Piero, give the pen to Claudio!"
+ },
+ "La prego, ci dia un aiuto!": {
+  "vi": "Xin ông/bà giúp chúng tôi một tay!",
+  "en": "Please, give us a hand!"
+ },
+ "Date i soldi a Daniele!": {
+  "vi": "Đưa tiền cho Daniele đi!",
+  "en": "Give the money to Daniele!"
+ },
+ "Di' la verità!": {
+  "vi": "Nói thật đi!",
+  "en": "Tell the truth!"
+ },
+ "Dica 33!": {
+  "vi": "Xin nói 33! (khi khám bệnh)",
+  "en": "Say 33! (at the doctor's)"
+ },
+ "Dite tutto ai vostri genitori!": {
+  "vi": "Kể hết cho bố mẹ các con đi!",
+  "en": "Tell your parents everything!"
+ },
+ "Sii giusto!": {
+  "vi": "Hãy công bằng!",
+  "en": "Be fair!"
+ },
+ "Sia buono!": {
+  "vi": "Xin ông/bà tử tế!",
+  "en": "Be good!"
+ },
+ "Siate bravi!": {
+  "vi": "Các con ngoan nhé!",
+  "en": "Be good!"
+ },
+ "Fa' subito!": {
+  "vi": "Làm ngay đi!",
+  "en": "Do it at once!"
+ },
+ "Faccia attenzione!": {
+  "vi": "Xin cẩn thận!",
+  "en": "Be careful!"
+ },
+ "Fate presto, siamo in ritardo!": {
+  "vi": "Nhanh lên, chúng ta trễ rồi!",
+  "en": "Hurry up, we're late!"
+ },
+ "Sappi una cosa!": {
+  "vi": "Biết một điều này!",
+  "en": "Know one thing!"
+ },
+ "Sappia giudicare bene!": {
+  "vi": "Xin ông/bà biết đánh giá đúng!",
+  "en": "Know how to judge well!"
+ },
+ "Sappiate comportarvi.": {
+  "vi": "Các bạn hãy biết cư xử.",
+  "en": "Know how to behave."
+ },
+ "Sta' fermo!": {
+  "vi": "Đứng yên!",
+  "en": "Keep still!"
+ },
+ "Stia calmo!": {
+  "vi": "Xin ông/bà bình tĩnh!",
+  "en": "Keep calm!"
+ },
+ "Ragazzi, state zitti!": {
+  "vi": "Các cậu, im lặng!",
+  "en": "Guys, be quiet!"
+ },
+ "Usiamo l'imperativo negativo per dire a una persona di non fare una cosa.": {
+  "vi": "Ta dùng thức mệnh lệnh phủ định để bảo ai đó đừng làm gì.",
+  "en": "We use the negative imperative to tell someone not to do something."
+ },
+ "Formiamo l'imperativo negativo con:": {
+  "vi": "Ta tạo thức mệnh lệnh phủ định bằng:",
+  "en": "We form the negative imperative with:"
+ },
+ "1. non + verbo all'infinito per la seconda persona singolare:": {
+  "vi": "1. non + động từ nguyên mẫu cho ngôi thứ hai số ít:",
+  "en": "1. non + infinitive for the second person singular:"
+ },
+ "Non guardare sempre la televisione!": {
+  "vi": "Đừng xem TV suốt thế!",
+  "en": "Don't watch television all the time!"
+ },
+ "Non scrivere sul muro!": {
+  "vi": "Đừng viết lên tường!",
+  "en": "Don't write on the wall!"
+ },
+ "Non sentire i suoi discorsi!": {
+  "vi": "Đừng nghe những lời anh ta nói!",
+  "en": "Don't listen to his speeches!"
+ },
+ "Non avere paura: l'intervento chirurgico è molto semplice!": {
+  "vi": "Đừng sợ: ca phẫu thuật rất đơn giản!",
+  "en": "Don't be afraid: the operation is very simple!"
+ },
+ "Non essere cattivo!": {
+  "vi": "Đừng hư thế!",
+  "en": "Don't be naughty!"
+ },
+ "2. non + verbo all'imperativo per la seconda persona plurale:": {
+  "vi": "2. non + động từ mệnh lệnh cho ngôi thứ hai số nhiều:",
+  "en": "2. non + imperative for the second person plural:"
+ },
+ "Non buttate i rifiuti per terra!": {
+  "vi": "Đừng vứt rác ra đất!",
+  "en": "Don't throw rubbish on the ground!"
+ },
+ "Non mettete in disordine!": {
+  "vi": "Đừng bày bừa!",
+  "en": "Don't make a mess!"
+ },
+ "Non dite le bugie!": {
+  "vi": "Đừng nói dối!",
+  "en": "Don't tell lies!"
+ },
+ "Per la terza persona singolare (Lei) e per la prima persona plurale (noi) usiamo queste forme:": {
+  "vi": "Với ngôi thứ ba số ít (Lei) và ngôi thứ nhất số nhiều (noi), ta dùng các dạng sau:",
+  "en": "For the third person singular (Lei) and first person plural (noi) we use these forms:"
+ },
+ "Signor Rossi, non mangi troppi dolci!": {
+  "vi": "Ông Rossi, đừng ăn nhiều đồ ngọt quá!",
+  "en": "Mr Rossi, don't eat too many sweets!"
+ },
+ "Non prenda il treno! Oggi c'è sciopero.": {
+  "vi": "Ông/bà đừng đi tàu! Hôm nay có đình công.",
+  "en": "Don't take the train! There's a strike today."
+ },
+ "Non senta i suoi consigli!": {
+  "vi": "Ông/bà đừng nghe lời khuyên của anh ta!",
+  "en": "Don't listen to his advice!"
+ },
+ "Non beviamo troppo vino!": {
+  "vi": "Chúng ta đừng uống quá nhiều rượu!",
+  "en": "Let's not drink too much wine!"
+ },
+ "I pronomi mi, ti, ecc., i pronomi combinati me lo, te lo, ecc., l'avverbio di luogo ci seguono il verbo all'imperativo e formano con il verbo una parola sola:": {
+  "vi": "Các đại từ mi, ti…, đại từ kép me lo, te lo…, trạng từ chỉ nơi chốn ci đứng sau động từ mệnh lệnh và viết liền với động từ thành một từ:",
+  "en": "The pronouns mi, ti, etc., the combined pronouns me lo, te lo, etc., and the adverb ci follow the imperative and form one word with the verb:"
+ },
+ "Nell'imperativo negativo i pronomi possono precedere o seguire il verbo:": {
+  "vi": "Ở thức mệnh lệnh phủ định, đại từ có thể đứng trước hoặc sau động từ:",
+  "en": "In the negative imperative, pronouns can go before or after the verb:"
+ },
+ "I pronomi mi, ti, ecc., i pronomi combinati me lo, te lo, ecc., l'avverbio di luogo ci precedono il verbo:": {
+  "vi": "Các đại từ mi, ti…, đại từ kép me lo, te lo…, trạng từ chỉ nơi chốn ci đứng trước động từ:",
+  "en": "The pronouns mi, ti, etc., the combined pronouns me lo, te lo, etc., and the adverb ci go before the verb:"
+ },
+ "I dolci ingrassano, non li mangi!": {
+  "vi": "Đồ ngọt làm béo, ông/bà đừng ăn chúng!",
+  "en": "Sweets are fattening, don't eat them!"
+ },
+ "Professore, gli studenti non hanno capito bene la lezione, gliela spieghi un'altra volta!": {
+  "vi": "Thưa giáo sư, sinh viên chưa hiểu rõ bài, xin thầy giảng lại cho họ một lần nữa!",
+  "en": "Professor, the students haven't understood the lesson well, explain it to them again!"
+ },
+ "I pronomi mi, ti, ecc., i pronomi combinati me lo, te lo, ecc., l'avverbio di luogo ci raddoppiano…": {
+  "vi": "Các đại từ mi, ti…, đại từ kép me lo, te lo…, trạng từ chỉ nơi chốn ci gấp đôi…",
+  "en": "The pronouns mi, ti, etc., the combined pronouns me lo, te lo, etc., and the adverb ci double…"
+ },
+ "…la consonante iniziale quando seguono gli imperativi da', di', fa', sta' e va':": {
+  "vi": "…phụ âm đầu khi đứng sau các dạng mệnh lệnh da', di', fa', sta' và va':",
+  "en": "…the initial consonant when they follow the imperatives da', di', fa', sta' and va':"
+ },
+ "Da' un bacio a me! → Dammi un bacio! → Dammelo!": {
+  "vi": "Hôn tôi một cái! → Hôn tôi đi! → Hôn đi!",
+  "en": "Give a kiss to me! → Give me a kiss! → Give it to me!"
+ },
+ "Di' a me il tuo problema! → Dimmi il tuo problema! → Dimmelo!": {
+  "vi": "Nói cho tôi vấn đề của bạn! → Nói vấn đề của bạn đi! → Nói đi!",
+  "en": "Tell me your problem! → Tell me your problem! → Tell it to me!"
+ },
+ "Il pronome gli e i pronomi combinati glielo, gliela, ecc. non raddoppiano la consonante iniziale:": {
+  "vi": "Đại từ gli và các đại từ kép glielo, gliela… không gấp đôi phụ âm đầu:",
+  "en": "The pronoun gli and the combined pronouns glielo, gliela, etc. don't double the initial consonant:"
+ },
+ "Di' a lei la verità! → Dille la verità! → Digliela!": {
+  "vi": "Nói sự thật với cô ấy! → Nói với cô ấy sự thật! → Nói nó với cô ấy!",
+  "en": "Tell the truth to her! → Tell her the truth! → Tell it to her!"
+ },
+ "Usiamo spesso l'imperativo con le espressioni di cortesia per favore, per piacere, per cortesia, ti prego, se non ti dispiace, ecc. per rendere meno forte il comando:": {
+  "vi": "Ta thường dùng thức mệnh lệnh với các cách nói lịch sự per favore, per piacere, per cortesia, ti prego, se non ti dispiace… để mệnh lệnh nhẹ nhàng hơn:",
+  "en": "We often use the imperative with polite expressions like per favore, per piacere, per cortesia, ti prego, se non ti dispiace, etc. to soften the command:"
+ },
+ "Chiudi la finestra! / Per piacere, chiudi la finestra! / Chiudi la finestra, per piacere!": {
+  "vi": "Đóng cửa sổ! / Làm ơn, đóng cửa sổ! / Đóng cửa sổ giúp với!",
+  "en": "Close the window! / Please, close the window! / Close the window, please!"
+ },
+ "Accompagnami a casa! / Per favore, accompagnami a casa! / Accompagnami a casa, per favore!": {
+  "vi": "Đưa tôi về nhà! / Làm ơn, đưa tôi về nhà! / Đưa tôi về nhà nhé!",
+  "en": "Take me home! / Please, take me home! / Take me home, please!"
+ },
+ "Passami il sale! / Per cortesia, passami il sale! / Passami il sale, per cortesia!": {
+  "vi": "Đưa tôi lọ muối! / Phiền bạn, đưa tôi lọ muối! / Đưa tôi lọ muối với!",
+  "en": "Pass me the salt! / Kindly pass me the salt! / Pass me the salt, please!"
+ },
+ "Avverti mia madre! / Ti prego, avverti mia madre! / Avverti mia madre, ti prego!": {
+  "vi": "Báo cho mẹ tôi! / Xin bạn, báo cho mẹ tôi! / Báo cho mẹ tôi nhé, xin bạn!",
+  "en": "Warn my mother! / I beg you, warn my mother! / Warn my mother, I beg you!"
+ },
+ "Stia zitto! / La prego, stia zitto! / Stia zitto, la prego!": {
+  "vi": "Im lặng! / Xin ông im lặng! / Im lặng đi, xin ông!",
+  "en": "Be quiet! / Please, be quiet! / Be quiet, please!"
+ },
+ "Apri la porta! / Se non ti dispiace, apri la porta! / Apri la porta, se non ti dispiace!": {
+  "vi": "Mở cửa! / Nếu bạn không phiền, mở cửa! / Mở cửa, nếu bạn không phiền!",
+  "en": "Open the door! / If you don't mind, open the door! / Open the door, if you don't mind!"
+ },
+ "Con espressioni di cortesia come ti prego, ti dispiace, ecc. possiamo usare l'infinito invece dell'imperativo:": {
+  "vi": "Với các cách nói lịch sự như ti prego, ti dispiace…, ta có thể dùng động từ nguyên mẫu thay cho mệnh lệnh:",
+  "en": "With polite expressions like ti prego, ti dispiace, etc. we can use the infinitive instead of the imperative:"
+ },
+ "Ti prego di avvertire mia madre.": {
+  "vi": "Xin bạn báo cho mẹ tôi.",
+  "en": "Please warn my mother."
+ },
+ "La prego di stare zitto.": {
+  "vi": "Xin ông im lặng.",
+  "en": "Please be quiet."
+ },
+ "Ti dispiace chiudere la finestra?": {
+  "vi": "Bạn có phiền đóng cửa sổ không?",
+  "en": "Would you mind closing the window?"
+ },
+ "Le dispiacerebbe aprire la porta?": {
+  "vi": "Ông/bà có phiền mở cửa không?",
+  "en": "Would you mind opening the door?"
+ },
+ "Usiamo anche l'imperativo con le parole prego (prima o dopo il verbo) e pure (sempre dopo il verbo):": {
+  "vi": "Ta cũng dùng thức mệnh lệnh với prego (trước hoặc sau động từ) và pure (luôn sau động từ):",
+  "en": "We also use the imperative with prego (before or after the verb) and pure (always after the verb):"
+ },
+ "Usiamo le forme scusa / scusi quando facciamo una domanda o quando facciamo qualcosa che può dare disturbo:": {
+  "vi": "Ta dùng scusa / scusi khi hỏi hoặc khi làm điều gì có thể làm phiền:",
+  "en": "We use scusa / scusi when we ask a question or do something that may disturb:"
+ },
+ "Scusa, che ora è?": {
+  "vi": "Xin lỗi, mấy giờ rồi?",
+  "en": "Excuse me, what time is it?"
+ },
+ "Scusi, non ho capito, può ripetere?": {
+  "vi": "Xin lỗi, tôi không hiểu, ông/bà nhắc lại được không?",
+  "en": "Excuse me, I didn't understand, can you repeat?"
+ },
+ "Scusi, non volevo urtarla!": {
+  "vi": "Xin lỗi, tôi không định va vào ông/bà!",
+  "en": "Sorry, I didn't mean to bump into you!"
+ },
+ "Usiamo le forme senti / senta, guarda / guardi, vedi / vede per richiamare l'attenzione di una persona:": {
+  "vi": "Ta dùng senti / senta, guarda / guardi, vedi / vede để gây sự chú ý của người khác:",
+  "en": "We use senti / senta, guarda / guardi, vedi / vede to attract someone's attention:"
+ },
+ "Senti un po', quella moto è tua?": {
+  "vi": "Này, chiếc xe máy kia là của bạn à?",
+  "en": "Listen, is that motorbike yours?"
+ },
+ "Senta, vorrei chiederle una cosa.": {
+  "vi": "Thưa ông/bà, tôi muốn hỏi một chuyện.",
+  "en": "Excuse me, I'd like to ask you something."
+ },
+ "Guardi, la situazione è molto difficile.": {
+  "vi": "Ông/bà xem, tình hình rất khó khăn.",
+  "en": "Look, the situation is very difficult."
+ },
+ "Vede, io non sono d'accordo.": {
+  "vi": "Ông/bà thấy đấy, tôi không đồng ý.",
+  "en": "You see, I don't agree."
+ },
+ "Scriviamo: completiamo le frasi con i verbi all'imperativo.": {
+  "vi": "Cùng viết: hoàn thành câu với động từ ở thức mệnh lệnh.",
+  "en": "Let's write: complete the sentences with the verbs in the imperative."
+ },
+ "1. (Scegliere, tu) … il dolce che ti piace!": {
+  "vi": "1. (Chọn, bạn) … món tráng miệng bạn thích!",
+  "en": "1. (Choose, you) … the dessert you like!"
+ },
+ "2. (Dire, tu) … quella cosa a Sandra!": {
+  "vi": "2. (Nói, bạn) … điều đó với Sandra!",
+  "en": "2. (Tell, you) … that to Sandra!"
+ },
+ "3. (Andare, noi) … a casa!": {
+  "vi": "3. (Đi, chúng ta) … về nhà!",
+  "en": "3. (Go, we) … home!"
+ },
+ "4. Non (andare, lei) … in quel ristorante!": {
+  "vi": "4. Ông/bà đừng (đi) … vào nhà hàng đó!",
+  "en": "4. Don't (go, Lei) … to that restaurant!"
+ },
+ "5. (Essere, voi) … più pazienti!": {
+  "vi": "5. (Hãy, các bạn) … kiên nhẫn hơn!",
+  "en": "5. (Be, you pl.) … more patient!"
+ },
+ "6. Non (avere, tu) … paura: rimango con te!": {
+  "vi": "6. Đừng (sợ, bạn) …: tôi ở lại với bạn!",
+  "en": "6. Don't (be, you) … afraid: I'll stay with you!"
+ },
+ "7. (Stare, tu) … tranquilla!": {
+  "vi": "7. (Ở, bạn) … yên tâm!",
+  "en": "7. (Stay, you) … calm!"
+ },
+ "8. (Fare, lei) … silenzio!": {
+  "vi": "8. (Giữ, ông/bà) … im lặng!",
+  "en": "8. (Be, Lei) … quiet!"
+ },
+ "9. (Venire, voi) … da noi stasera!": {
+  "vi": "9. (Đến, các bạn) … nhà chúng tôi tối nay!",
+  "en": "9. (Come, you pl.) … to our place tonight!"
+ },
+ "10. (Dare, tu) … un bacio alla zia!": {
+  "vi": "10. (Hôn, bạn) … cô một cái!",
+  "en": "10. (Give, you) … your aunt a kiss!"
+ },
+ "Scriviamo: completiamo il testo con i verbi all'imperativo.": {
+  "vi": "Cùng viết: hoàn thành đoạn văn với động từ ở thức mệnh lệnh.",
+  "en": "Let's write: complete the text with the verbs in the imperative."
+ },
+ "(mettersi, tu) Mettiti di fronte allo specchio; (guardarsi) … bene: che cosa non ti piace? Hai trovato alcuni difetti: non (preoccuparsi, tu) …, (parlarne) … con il tuo amico, (dire a lui) … tutto quello che vorresti cambiare di te e poi (andare, voi) … in un negozio di vestiti. Mi raccomando: (andarci, tu) … con lui, (guardare, tu) … i vestiti e (farsi, tu) … mostrare quelli che ti piacciono di più. (Parlare, tu) … con il commesso: (fargli, tu) … capire bene quali sono i tuoi gusti.": {
+  "vi": "(đứng, bạn) Đứng trước gương; (nhìn mình) … thật kỹ: bạn không thích điều gì? Bạn thấy vài khuyết điểm: đừng (lo, bạn) …, (nói về nó) … với bạn của bạn, (nói với anh ấy) … tất cả những gì bạn muốn thay đổi ở mình rồi (đi, các bạn) … đến một cửa hàng quần áo. Nhớ nhé: (đi đến đó, bạn) … cùng anh ấy, (xem, bạn) … quần áo và (nhờ, bạn) … cho xem những bộ bạn thích nhất. (Nói, bạn) … với nhân viên bán hàng: (làm cho anh ta, bạn) … hiểu rõ sở thích của bạn.",
+  "en": "(put yourself, you) Stand in front of the mirror; (look at yourself) … carefully: what don't you like? You've found some defects: don't (worry, you) …, (talk about it) … with your friend, (tell him) … everything you'd like to change about yourself and then (go, you pl.) … to a clothes shop. Remember: (go there, you) … with him, (look at, you) … the clothes and (get, you) … them to show you the ones you like best. (Talk, you) … to the shop assistant: (make him, you) … understand your tastes well."
+ },
+ "Vuoi un consiglio? (Leggere, tu) … questo libro!": {
+  "vi": "Bạn muốn một lời khuyên? (Đọc, bạn) … cuốn sách này!",
+  "en": "Do you want some advice? (Read, you) … this book!"
+ },
+ "• Possiamo chiedervi un favore? ○ Certo, (chiedere a noi il favore) …!": {
+  "vi": "• Chúng tôi nhờ các bạn một việc được không? ○ Tất nhiên, (cứ nhờ chúng tôi) …!",
+  "en": "• Can we ask you a favour? ○ Of course, (ask it of us) …!"
+ },
+ "Per favore, (stare, tu) … qui con me!": {
+  "vi": "Làm ơn, (ở lại, bạn) … đây với mình!",
+  "en": "Please, (stay, you) … here with me!"
+ },
+ "• Vuoi la carta di credito? ○ Sì, (dare a me la carta di credito) …, per favore!": {
+  "vi": "• Bạn cần thẻ tín dụng không? ○ Có, (đưa nó cho mình) …, làm ơn!",
+  "en": "• Do you want the credit card? ○ Yes, (give it to me) …, please!"
+ },
+ "In vacanza: gli italiani e il cellulare": {
+  "vi": "Đi nghỉ: người Ý và điện thoại di động",
+  "en": "On holiday: Italians and mobile phones"
+ },
+ "C'è sempre qualcosa che rappresenta gli italiani nel mondo. Tutti ci riconoscono perché, quando viaggiamo, vogliamo avere vicini i nostri oggetti o prodotti preferiti: la brillantina (negli anni '40), la Vespa (negli anni '50), gli spaghetti e la pizza (negli anni '50), l'Alfa Romeo (negli anni '70), i Ray-Ban e le Clarks (negli anni '70), le radio per sentire le partite (negli anni '80), gli occhiali da sole e la videocamera (negli anni '90). L'oggetto del nuovo millennio – non ci sono dubbi – è il telefono cellulare. I nostri viaggi sono impossibili senza telefonino. In Europa siamo ormai “quelli del telefonino”. Se qualcuno vede un signore che parla da solo per strada, tiene la mano destra sull'orecchio e fa gesti strani con la sinistra, non ha dubbi: è un italiano. La sigla GSM, in città come Parigi o Londra, ha per gli italiani un nuovo significato: Gridare Senza Motivo. Negli aeroporti, subito dopo l'atterraggio, iniziano a sentirsi squilli e melodie di tutti i tipi: i passeggeri italiani accendono subito il cellulare e gridano nel telefonino molte informazioni personali, familiari e sentimentali. Quando rientriamo dall'estero, non c'è bisogno di cercare l'uscita del volo per l'Italia: è l'unica dove tutti parlano al cellulare. Cosa dobbiamo dirci? Be', dobbiamo annunciare alla moglie “Guarda che sto arrivando”; dobbiamo spiegare al figlio dove siamo stati; dobbiamo dire ad amici e parenti “Indovina da dove chiamo…”. Gli scandinavi – è vero – possiedono più telefonini di noi in percentuale, ma nessuno è più bravo di noi a mostrarlo, a toccarlo e a farlo vedere. Senza telefonino non ci sarebbe vacanza: a chi potremmo raccontarla?": {
+  "vi": "Luôn có thứ gì đó tiêu biểu cho người Ý trên thế giới. Ai cũng nhận ra chúng tôi vì khi đi du lịch, chúng tôi muốn có bên mình những đồ vật hay sản phẩm yêu thích: keo vuốt tóc (thập niên 40), xe Vespa (thập niên 50), spaghetti và pizza (thập niên 50), xe Alfa Romeo (thập niên 70), kính Ray-Ban và giày Clarks (thập niên 70), radio để nghe bóng đá (thập niên 80), kính râm và máy quay phim (thập niên 90). Đồ vật của thiên niên kỷ mới – chẳng nghi ngờ gì – là điện thoại di động. Các chuyến đi của chúng tôi không thể thiếu điện thoại. Ở châu Âu, giờ chúng tôi là “dân điện thoại”. Nếu ai đó thấy một người đàn ông đi ngoài đường nói một mình, tay phải áp tai và tay trái khua những cử chỉ kỳ lạ, chắc chắn đó là người Ý. Chữ GSM, ở Paris hay London, có nghĩa mới với người Ý: La hét Vô cớ. Ở sân bay, ngay sau khi hạ cánh, đủ loại chuông và giai điệu bắt đầu vang lên: hành khách Ý bật điện thoại ngay và hét vào máy đủ thứ chuyện cá nhân, gia đình, tình cảm. Khi từ nước ngoài về, chẳng cần tìm cửa ra chuyến bay về Ý: đó là cửa duy nhất mà ai cũng nói điện thoại. Chúng tôi phải nói gì với nhau? À, phải báo vợ “Anh sắp về đây”; phải giải thích với con mình đã ở đâu; phải bảo bạn bè và họ hàng “Đoán xem anh gọi từ đâu…”. Người Bắc Âu – đúng là – có nhiều điện thoại hơn chúng tôi tính theo tỉ lệ, nhưng không ai giỏi bằng chúng tôi trong việc khoe nó, sờ nó và cho người khác xem. Không có điện thoại thì chẳng có kỳ nghỉ: biết kể cho ai nghe?",
+  "en": "There's always something that represents Italians in the world. Everyone recognises us because, when we travel, we want our favourite objects or products close to us: hair cream (in the '40s), the Vespa (in the '50s), spaghetti and pizza (in the '50s), the Alfa Romeo (in the '70s), Ray-Bans and Clarks (in the '70s), radios to listen to the matches (in the '80s), sunglasses and the video camera (in the '90s). The object of the new millennium – no doubt about it – is the mobile phone. Our trips are impossible without a mobile. In Europe we're now “the mobile phone people”. If someone sees a man talking to himself in the street, holding his right hand to his ear and making strange gestures with his left, there's no doubt: he's Italian. The acronym GSM, in cities like Paris or London, has a new meaning for Italians: Shouting Without Reason. In airports, right after landing, rings and melodies of every kind start to be heard: Italian passengers switch on their phones immediately and shout lots of personal, family and romantic information into them. When we come back from abroad, there's no need to look for the gate for the flight to Italy: it's the only one where everyone is on the phone. What do we have to say to each other? Well, we have to tell our wife “I'm on my way”; explain to our son where we've been; tell friends and relatives “Guess where I'm calling from…”. Scandinavians – it's true – own more mobiles than us in percentage terms, but nobody is better than us at showing them off, touching them and making others see them. Without a mobile there'd be no holiday: who could we tell about it?"
+ },
+ "Secondo voi, perché gli italiani amano tanto il telefonino anche in viaggio?": {
+  "vi": "Theo các bạn, vì sao người Ý mê điện thoại đến thế, kể cả khi đi du lịch?",
+  "en": "Why, in your opinion, do Italians love mobile phones so much, even when travelling?"
+ },
+ "Avete mai visto gli italiani in vacanza?": {
+  "vi": "Các bạn đã bao giờ thấy người Ý đi nghỉ chưa?",
+  "en": "Have you ever seen Italians on holiday?"
+ },
+ "Chi è, per voi, un “viaggiatore perfetto”?": {
+  "vi": "Với các bạn, ai là một “người du lịch hoàn hảo”?",
+  "en": "Who is, for you, a “perfect traveller”?"
+ },
+ "Come è educato questo bambino…": {
+  "vi": "Đứa bé này ngoan làm sao…",
+  "en": "How well-mannered this child is…"
+ },
+ "Mi dispiace, cara Emma, non sono potuta venire ieri, ho avuto una giornataccia: ho bucato la ruota della macchina, sono arrivata a lavoro in ritardo, ero così stanca che ieri sera ho mangiato solo un panino…": {
+  "vi": "Xin lỗi Emma thân mến, hôm qua mình không đến được, mình đã có một ngày tồi tệ: xe bị thủng lốp, đi làm muộn, mệt đến mức tối qua chỉ ăn mỗi cái bánh mì…",
+  "en": "I'm sorry, dear Emma, I couldn't come yesterday, I had an awful day: I got a flat tyre, I arrived late at work, I was so tired that last night I only ate a sandwich…"
+ },
+ "Ma come, mamma? Non dici alla zia Emma che ieri sera hai fatto una festa per 30 persone? Hai fatto tutte quelle cose buone! Perché non l'hai invitata?": {
+  "vi": "Sao thế mẹ? Mẹ không kể với dì Emma là tối qua mẹ tổ chức tiệc cho 30 người à? Mẹ đã làm bao nhiêu món ngon! Sao mẹ không mời dì?",
+  "en": "What, mum? Aren't you telling Aunt Emma that last night you had a party for 30 people? You made all those good things! Why didn't you invite her?"
+ },
+ "Emma Bonino": {
+  "vi": "Emma Bonino (chính trị gia Ý)",
+  "en": "Emma Bonino (Italian politician)"
+ },
+ "– Nome: Emma Bonino. – Nasce a Bra (Cuneo) il 9 marzo 1948. – Chi è? È una donna politica. Emma Bonino entra in politica nel 1975 e diventa subito uno dei protagonisti della campagna per la legalizzazione dell'aborto. Nell'anno successivo, a soli 28 anni, si presenta per la prima volta alle elezioni politiche e comincia la sua carriera politica nelle fila del Partito Radicale. Nel 1979 diventa parlamentare europeo. Tra il 1980 e il 1981, oltre a promuovere diverse campagne per i referendum e per i diritti civili nell'Europa dell'Est, comincia a lavorare per l'istituzione di una corte penale internazionale.": {
+  "vi": "– Tên: Emma Bonino. – Sinh tại Bra (Cuneo) ngày 9 tháng 3 năm 1948. – Bà là ai? Một nữ chính trị gia. Emma Bonino tham gia chính trị năm 1975 và nhanh chóng trở thành một trong những nhân vật chính của chiến dịch hợp pháp hóa phá thai. Năm sau, mới 28 tuổi, bà lần đầu ra tranh cử và bắt đầu sự nghiệp chính trị trong hàng ngũ Đảng Cấp tiến. Năm 1979 bà trở thành nghị sĩ châu Âu. Trong những năm 1980–1981, ngoài việc thúc đẩy nhiều chiến dịch trưng cầu dân ý và quyền công dân ở Đông Âu, bà bắt đầu vận động thành lập một tòa án hình sự quốc tế.",
+  "en": "– Name: Emma Bonino. – Born in Bra (Cuneo) on 9 March 1948. – Who is she? A politician. Emma Bonino entered politics in 1975 and immediately became one of the leaders of the campaign to legalise abortion. The following year, aged only 28, she stood for election for the first time and began her political career in the ranks of the Radical Party. In 1979 she became a member of the European Parliament. Between 1980 and 1981, as well as promoting several campaigns for referendums and for civil rights in Eastern Europe, she began working for the creation of an international criminal court."
+ },
+ "Nel maggio 1991 partecipa a una campagna internazionale contro la diffusione delle mine antiuomo. Nel 1993 è tra i fondatori di Non c'è Pace Senza Giustizia, un'associazione internazionale che lavora per la protezione e la promozione dei diritti umani, della democrazia, dello stato di diritto e della giustizia internazionale. Nello stesso anno incontra il Dalai Lama e con lui tiene una conferenza stampa per la tutela dei diritti e della libertà del popolo tibetano e per la democrazia in Cina. Nel 1994 diventa capo della delegazione del governo italiano all'Assemblea Generale delle Nazioni Unite per l'iniziativa della “moratoria sulla pena di morte”. Nel dicembre 2001 si trasferisce al Cairo con l'obiettivo di studiare la lingua e la cultura araba. Nel marzo 2003 inaugura una rassegna quotidiana di stampa araba in onda su Radio Radicale. Nel 2006 diventa ministro per il commercio internazionale e per le politiche europee. Emma Bonino ha ricevuto numerosi riconoscimenti, come il “Premio Presidente della Repubblica” (2003) per il suo impegno nella promozione dei diritti umani e civili nel mondo e il “Premio Galileo 2000” (2005) per il suo grande contributo alla pace internazionale.": {
+  "vi": "Tháng 5 năm 1991 bà tham gia một chiến dịch quốc tế chống lại việc phát tán mìn sát thương. Năm 1993 bà là một trong những người sáng lập tổ chức Không có Hòa bình nếu thiếu Công lý, một hiệp hội quốc tế hoạt động vì việc bảo vệ và thúc đẩy nhân quyền, dân chủ, pháp quyền và công lý quốc tế. Cùng năm đó bà gặp Đức Đạt Lai Lạt Ma và cùng ông tổ chức họp báo vì quyền và tự do của người dân Tây Tạng và vì dân chủ ở Trung Quốc. Năm 1994 bà làm trưởng đoàn chính phủ Ý tại Đại hội đồng Liên Hợp Quốc cho sáng kiến “tạm hoãn án tử hình”. Tháng 12 năm 2001 bà chuyển đến Cairo để học tiếng và văn hóa Ả Rập. Tháng 3 năm 2003 bà khởi xướng chương trình điểm báo Ả Rập hằng ngày trên Radio Radicale. Năm 2006 bà trở thành bộ trưởng thương mại quốc tế và chính sách châu Âu. Emma Bonino nhận nhiều giải thưởng, như “Giải Tổng thống Cộng hòa” (2003) vì những nỗ lực thúc đẩy nhân quyền và dân quyền trên thế giới và “Giải Galileo 2000” (2005) vì đóng góp lớn cho hòa bình quốc tế.",
+  "en": "In May 1991 she took part in an international campaign against the spread of anti-personnel mines. In 1993 she was one of the founders of No Peace Without Justice, an international association working to protect and promote human rights, democracy, the rule of law and international justice. That same year she met the Dalai Lama and held a press conference with him for the rights and freedom of the Tibetan people and for democracy in China. In 1994 she led the Italian government delegation to the UN General Assembly for the “moratorium on the death penalty” initiative. In December 2001 she moved to Cairo to study Arabic language and culture. In March 2003 she launched a daily review of the Arab press on Radio Radicale. In 2006 she became minister for international trade and European policies. Emma Bonino has received many awards, such as the “President of the Republic Prize” (2003) for her commitment to promoting human and civil rights in the world and the “Galileo 2000 Prize” (2005) for her great contribution to international peace."
  }
 }

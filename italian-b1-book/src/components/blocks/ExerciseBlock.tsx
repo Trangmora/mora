@@ -662,18 +662,13 @@ function BoardTile(props: {
       <span className="board-cmd">
         {props.prompt} <TrIcon text={props.prompt} />
       </span>
-      <button
-        className={`board-mic ${rec.recording ? "on" : ""}`}
-        onClick={() => (rec.recording ? rec.stop() : rec.start())}
-        title={rec.recording ? t(lang, "stop") : t(lang, "record")}
-      >
-        <Icon name={rec.recording ? "stop" : "mic"} size={14} />
-      </button>
-      {(rec.recording || props.value) && (
-        <span className="board-said" title={props.value}>
-          {rec.recording ? `${rec.transcript} ${rec.interim}`.trim() || "…" : props.value}
-        </span>
-      )}
+      <input
+        className="board-answer"
+        value={props.value}
+        placeholder="…"
+        onChange={(e) => onChange(e.target.value)}
+        aria-label={props.prompt}
+      />
       {r && !r.correct && r.explanation && <span className="board-why">{r.explanation}</span>}
       {props.showAnswers && props.sample && (
         <button className="board-sample" onClick={() => speak(props.sample!)} title={props.sample}>
@@ -709,43 +704,16 @@ function SpeakItem(props: {
       {props.prompt && (
         <span className="line speak-prompt">
           {props.prompt} <TrIcon text={props.prompt} />{" "}
-          {props.compact && (
-            <button
-              className={`mini speak-mini ${rec.recording ? "on" : ""}`}
-              onClick={() => (rec.recording ? rec.stop() : rec.start())}
-              title={rec.recording ? t(lang, "stop") : t(lang, "record")}
-            >
-              <Icon name={rec.recording ? "stop" : "mic"} size={15} />
-            </button>
-          )}
           <Mark r={r} />
         </span>
       )}
-      {props.compact && rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
-      {!props.compact && <span className="coach-actions">
-        {rec.recording ? (
-          <button className="pill rec" onClick={() => rec.stop()}><Icon name="stop" size={15} /> {t(lang, "stop")}</button>
-        ) : (
-          <button className="pill primary" onClick={() => rec.start()}><Icon name="mic" size={15} /> {t(lang, "record")}</button>
-        )}
-        {rec.audioUrl && <audio src={rec.audioUrl} controls className="coach-audio" />}
-      </span>}
-      {rec.recording && (
-        <span className="coach-live">
-          <span className="dot" /> <em>{rec.transcript} {rec.interim}</em>
-        </span>
-      )}
-      {/* Bản chép lời chỉ hiện sau khi ghi âm, để trang vẫn gọn như sách. */}
-      {(props.value || rec.transcript) && !rec.recording && (
-        <textarea
-          className="lined"
-          rows={2}
-          value={props.value}
-          placeholder={t(lang, "speakHint")}
-          onChange={(e) => props.onChange(e.target.value)}
-        />
-      )}
-      {!speechRecognitionSupported && <span className="warn small">{t(lang, "noSpeech")}</span>}
+      <textarea
+        className="lined"
+        rows={props.compact ? 1 : 2}
+        value={props.value}
+        placeholder={t(lang, "speakHint")}
+        onChange={(e) => props.onChange(e.target.value)}
+      />
       {r && !r.correct && r.correctAnswer && (
         <span className="margin-note">
           <span className="pen">
