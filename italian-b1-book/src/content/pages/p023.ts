@@ -38,6 +38,19 @@ const page: BookPage = {
     },
     { type: "tip", it: "(adattato da la Repubblica, 28-04-2005)", tr: { vi: "Nguồn trích", en: "Source" } },
     {
+      type: "audio",
+      src: "audio/u2-p23-ex2.mp3",
+      autoTranscript: true,
+      transcript: [
+        "Giornalista: Buongiorno, gentili ascoltatori di Radio Informazione. Oggi intervistiamo Alessandro Rosina, professore di demografia dell'Università Cattolica di Milano, che ha curato un'indagine dal titolo «Inizio dell'età adulta» sulle abitudini di vita dei giovani italiani di circa 30 anni. Perché i giovani lasciano la famiglia?",
+        "Rosina: In passato i giovani uscivano di casa soprattutto dopo che si erano sposati. Oggi invece aumentano i giovani che lasciano la casa per andare a convivere o per avere l'indipendenza. E poi in passato andavano fuori dopo che avevano finito gli studi. Oggi invece molti giovani si iscrivono all'università in altre regioni.",
+        "Giornalista: Allora vanno via per sempre dalla famiglia d'origine?",
+        "Rosina: Ecco, vede, questi giovani hanno cercato di staccarsi dalla famiglia e di diventare indipendenti, però poi spesso tornano in famiglia, e non per la nostalgia dei genitori, ma per problemi di lavoro e per problemi economici.",
+        "Giornalista: Quindi, a questo punto, i genitori che cosa fanno?",
+        "Rosina: Ma il legame familiare in Italia è molto forte. Nel resto dell'Europa c'è una politica sociale che incoraggia l'indipendenza dei giovani. In Italia, invece, i ragazzi possono contare solo sulla famiglia. I genitori quindi li ospitano sempre volentieri.",
+      ].join("\n"),
+    },
+    {
       type: "exercise",
       ex: {
         id: "p023-ex2b",
@@ -45,6 +58,7 @@ const page: BookPage = {
         icons: ["listen", "check"],
         kind: "choice",
         skill: "listening",
+        refText: "audio",
         instruction: "Ascoltiamo e scegliamo la risposta giusta.",
         tr: { vi: "Nghe và chọn câu trả lời đúng.", en: "Let's listen and choose the right answer." },
         items: [
