@@ -4938,5 +4938,1761 @@
  "Osserviamo e abbiniamo le immagini ai titoli delle opere di Pirandello.": {
   "vi": "Quan sát và nối các bức tranh với tên các tác phẩm của Pirandello.",
   "en": "Let's look and match the pictures to the titles of Pirandello's works."
+ },
+ "Leggiamo e abbiniamo i testi alle immagini.": {
+  "vi": "Đọc và nối các đoạn văn với các bức ảnh.",
+  "en": "Let's read and match the texts to the pictures."
+ },
+ "Conoscete alcuni piatti tipici italiani? Quali?": {
+  "vi": "Các bạn có biết vài món ăn đặc trưng của Ý không? Những món nào?",
+  "en": "Do you know any typical Italian dishes? Which ones?"
+ },
+ "Che tipo di alimentazione preferite nella vostra dieta quotidiana?": {
+  "vi": "Các bạn thích kiểu ăn uống nào trong chế độ ăn hằng ngày?",
+  "en": "What kind of food do you prefer in your daily diet?"
+ },
+ "Vi interessate di cucina? Leggete riviste o vedete programmi televisivi specifici?": {
+  "vi": "Các bạn có quan tâm đến nấu ăn không? Các bạn có đọc tạp chí hay xem chương trình TV chuyên về nấu ăn không?",
+  "en": "Are you interested in cooking? Do you read magazines or watch specific TV programmes?"
+ },
+ "Sapete cucinare? Che cosa in particolare?": {
+  "vi": "Các bạn có biết nấu ăn không? Nấu món gì đặc biệt?",
+  "en": "Can you cook? What in particular?"
+ },
+ "Quando andate a mangiare fuori, che tipo di cucina preferite?": {
+  "vi": "Khi đi ăn ngoài, các bạn thích ẩm thực nào?",
+  "en": "When you eat out, what kind of cuisine do you prefer?"
+ },
+ "Dovete preparare una cena per i vostri amici: che cosa mettereste a tavola?": {
+  "vi": "Các bạn phải chuẩn bị bữa tối cho bạn bè: các bạn sẽ bày món gì lên bàn?",
+  "en": "You have to prepare a dinner for your friends: what would you put on the table?"
+ },
+ "Ascoltiamo i testi e completiamo le tabelle con le informazioni.": {
+  "vi": "Nghe các đoạn và điền thông tin vào bảng.",
+  "en": "Let's listen to the texts and complete the tables with the information."
+ },
+ "DOLCI D'ITALIA": {
+  "vi": "CÁC MÓN TRÁNG MIỆNG CỦA Ý",
+  "en": "DESSERTS OF ITALY"
+ },
+ "Completiamo le tabelle.": {
+  "vi": "Điền vào các bảng.",
+  "en": "Complete the tables."
+ },
+ "Ascolto 1 · REGIONE": {
+  "vi": "Bài nghe 1 · VÙNG",
+  "en": "Listening 1 · REGION"
+ },
+ "Ascolto 1 · NOME DEL DOLCE": {
+  "vi": "Bài nghe 1 · TÊN MÓN TRÁNG MIỆNG",
+  "en": "Listening 1 · NAME OF THE DESSERT"
+ },
+ "Ascolto 1 · INGREDIENTI": {
+  "vi": "Bài nghe 1 · NGUYÊN LIỆU",
+  "en": "Listening 1 · INGREDIENTS"
+ },
+ "Ascolto 1 · ABBINAMENTO": {
+  "vi": "Bài nghe 1 · MÓN/ĐỒ UỐNG ĐI KÈM",
+  "en": "Listening 1 · PAIRING"
+ },
+ "Ascolto 2 · REGIONE": {
+  "vi": "Bài nghe 2 · VÙNG",
+  "en": "Listening 2 · REGION"
+ },
+ "Ascolto 2 · NOME DEL DOLCE": {
+  "vi": "Bài nghe 2 · TÊN MÓN TRÁNG MIỆNG",
+  "en": "Listening 2 · NAME OF THE DESSERT"
+ },
+ "Ascolto 2 · INGREDIENTI": {
+  "vi": "Bài nghe 2 · NGUYÊN LIỆU",
+  "en": "Listening 2 · INGREDIENTS"
+ },
+ "Ascolto 2 · ABBINAMENTO": {
+  "vi": "Bài nghe 2 · MÓN/ĐỒ UỐNG ĐI KÈM",
+  "en": "Listening 2 · PAIRING"
+ },
+ "Ascolto 3 · REGIONE": {
+  "vi": "Bài nghe 3 · VÙNG",
+  "en": "Listening 3 · REGION"
+ },
+ "Ascolto 3 · NOME DEL DOLCE": {
+  "vi": "Bài nghe 3 · TÊN MÓN TRÁNG MIỆNG",
+  "en": "Listening 3 · NAME OF THE DESSERT"
+ },
+ "Ascolto 3 · INGREDIENTI": {
+  "vi": "Bài nghe 3 · NGUYÊN LIỆU",
+  "en": "Listening 3 · INGREDIENTS"
+ },
+ "Ascolto 3 · ABBINAMENTO": {
+  "vi": "Bài nghe 3 · MÓN/ĐỒ UỐNG ĐI KÈM",
+  "en": "Listening 3 · PAIRING"
+ },
+ "Abbiamo cucinato le lasagne al ragù e le abbiamo mangiate tutte!": {
+  "vi": "Chúng tôi đã nấu món lasagne sốt thịt và đã ăn hết sạch!",
+  "en": "We cooked lasagne with meat sauce and ate it all!"
+ },
+ "Leggiamo e completiamo il testo.": {
+  "vi": "Đọc và hoàn thành đoạn văn.",
+  "en": "Let's read and complete the text."
+ },
+ "Volete conoscerli?": {
+  "vi": "Các bạn có muốn biết chúng không?",
+  "en": "Do you want to get to know them?"
+ },
+ "Davide Paolini, un esperto di cucina italiana, ha scoperto le tradizioni segrete di ogni regione e … ha catalogat…; ha conosciuto molti cuochi e … ha intervistat…; ha ricercato, città per città, i piatti e i vini caratteristici e … ha assaggiat…. Quindi, ha pubblicato nel 2005 Prodotti tipici d'Italia, un libro interessantissimo: noi … abbiamo lett… e abbiamo trovato molte notizie particolari. L'autore ha mostrato le delizie della tavola e … ha abbinat… alle bellezze artistiche di ogni territorio.": {
+  "vi": "Davide Paolini, một chuyên gia ẩm thực Ý, đã khám phá những truyền thống bí mật của từng vùng và … đã liệt kê …; ông đã gặp nhiều đầu bếp và … đã phỏng vấn …; ông đã tìm kiếm, từng thành phố một, các món ăn và rượu đặc trưng và … đã nếm thử …. Sau đó, năm 2005 ông xuất bản cuốn “Đặc sản nước Ý”, một cuốn sách vô cùng thú vị: chúng tôi … đã đọc … và tìm thấy nhiều thông tin đặc biệt. Tác giả giới thiệu những món ngon và … đã kết hợp … với vẻ đẹp nghệ thuật của từng vùng.",
+  "en": "Davide Paolini, an expert in Italian cooking, discovered the secret traditions of every region and catalogued …; he met many cooks and interviewed …; he searched, city by city, for the typical dishes and wines and tasted …. Then in 2005 he published Prodotti tipici d'Italia, a very interesting book: we read … and found a lot of unusual information. The author showed the delights of the table and matched … with the artistic beauties of each area."
+ },
+ "Un esempio? Abbiamo deciso di passare un fine settimana in Emilia Romagna e abbiamo percorso la famosa “Strada del Prosciutto”, in provincia di Parma: … abbiamo attraversat… tutta e ci siamo fermati a gustare, in alcune trattorie, l'inconfondibile prosciutto, l'eccezionale parmigiano reggiano, i vini delicati dei Colli e il salame di Felino. Come ci ha suggerito Paolini, siamo andati anche a scoprire i monumenti della provincia e … abbiamo vist… tutti: siamo entrati nel Castello di Felino e … abbiamo visitat… con una guida molto brava; siamo arrivati alla Rocca di Sala Baganza e … abbiamo ammirat… in tutta la sua bellezza.": {
+  "vi": "Một ví dụ? Chúng tôi quyết định dành một kỳ cuối tuần ở Emilia Romagna và đi theo “Con đường Prosciutto” nổi tiếng ở tỉnh Parma: chúng tôi … đã đi hết … và dừng lại ở vài quán ăn để thưởng thức món prosciutto không thể nhầm lẫn, phô mai parmigiano reggiano tuyệt hảo, những loại rượu thanh nhẹ của vùng đồi Colli và xúc xích Felino. Như Paolini gợi ý, chúng tôi cũng đi khám phá các di tích của tỉnh và … đã xem … hết: chúng tôi vào Lâu đài Felino và … đã tham quan … với một hướng dẫn viên rất giỏi; chúng tôi đến Pháo đài Sala Baganza và … đã chiêm ngưỡng … trọn vẹn vẻ đẹp của nó.",
+  "en": "An example? We decided to spend a weekend in Emilia Romagna and travelled the famous “Prosciutto Road” in the province of Parma: we crossed … all and stopped in some trattorias to taste the unmistakable prosciutto, the exceptional parmigiano reggiano, the delicate wines of the Colli and Felino salami. As Paolini suggested, we also went to discover the monuments of the province and saw … all: we went into Felino Castle and visited … with a very good guide; we reached the Rocca di Sala Baganza and admired … in all its beauty."
+ },
+ "Abbiniamo e completiamo le frasi con i pronomi.": {
+  "vi": "Nối và hoàn thành câu với các đại từ.",
+  "en": "Let's match and complete the sentences with the pronouns."
+ },
+ "Chi ti ha preparato i tortellini?": {
+  "vi": "Ai đã làm món tortellini cho bạn?",
+  "en": "Who made the tortellini for you?"
+ },
+ "Dove potremmo andare a mangiare stasera?": {
+  "vi": "Tối nay chúng ta có thể đi ăn ở đâu?",
+  "en": "Where could we go to eat tonight?"
+ },
+ "Perché non mangi il tartufo?": {
+  "vi": "Sao bạn không ăn nấm truffle?",
+  "en": "Why don't you eat the truffle?"
+ },
+ "Scusi, quando ci portano la pasta?": {
+  "vi": "Xin lỗi, khi nào họ mang mì ra cho chúng tôi?",
+  "en": "Excuse me, when will they bring us the pasta?"
+ },
+ "Hai cucinato gli spaghetti per me?": {
+  "vi": "Bạn đã nấu mì spaghetti cho mình à?",
+  "en": "Did you cook the spaghetti for me?"
+ },
+ "Avete dato la merenda ai bambini?": {
+  "vi": "Các bạn đã cho bọn trẻ ăn bữa phụ chưa?",
+  "en": "Did you give the children their snack?"
+ },
+ "Chi ti ha detto questa cosa?": {
+  "vi": "Ai đã nói với bạn chuyện này?",
+  "en": "Who told you this?"
+ },
+ "Mi puoi prendere un pacco di sale?": {
+  "vi": "Bạn lấy giúp mình một gói muối được không?",
+  "en": "Can you get me a packet of salt?"
+ },
+ "…… …… portano appena è pronta.": {
+  "vi": "…… …… mang ra ngay khi món xong.",
+  "en": "They'll bring …… …… as soon as it's ready."
+ },
+ "Certo, …… …… prendo subito.": {
+  "vi": "Tất nhiên, …… …… lấy ngay.",
+  "en": "Of course, I'll get …… …… right away."
+ },
+ "Sì, …… …… ho cucinati al dente, come li vuoi tu!": {
+  "vi": "Ừ, …… …… nấu vừa chín tới, đúng như bạn thích!",
+  "en": "Yes, I cooked …… …… al dente, just how you like them!"
+ },
+ "Me li ha preparati mia nonna perché sa che mi piacciono tanto.": {
+  "vi": "Bà mình làm cho mình đấy vì bà biết mình rất thích.",
+  "en": "My grandmother made them for me because she knows I love them."
+ },
+ "Perché ho scoperto di essere allergico: …… …… ha detto il dottore.": {
+  "vi": "Vì mình phát hiện ra bị dị ứng: …… …… bác sĩ đã nói.",
+  "en": "Because I found out I'm allergic: the doctor told …… ……."
+ },
+ "Potremmo andare da “Pino”: …… …… ha consigliato un mio amico.": {
+  "vi": "Chúng ta có thể đến quán “Pino”: …… …… một người bạn mình đã giới thiệu.",
+  "en": "We could go to “Pino”: a friend of mine recommended …… ……."
+ },
+ "No, …… diamo più tardi.": {
+  "vi": "Chưa, …… cho sau.",
+  "en": "No, we'll give …… later."
+ },
+ "…… …… ha detta Giovanni.": {
+  "vi": "…… …… Giovanni đã nói.",
+  "en": "Giovanni told …… ……."
+ },
+ "Completiamo con i pronomi combinati.": {
+  "vi": "Điền đại từ kép.",
+  "en": "Complete with the combined pronouns."
+ },
+ "a. … … portano appena è pronta.": {
+  "vi": "a. … … mang ra ngay khi món xong.",
+  "en": "a. They'll bring … … as soon as it's ready."
+ },
+ "b. Certo, … … prendo subito.": {
+  "vi": "b. Tất nhiên, … … lấy ngay.",
+  "en": "b. Of course, I'll get … … right away."
+ },
+ "c. Sì, … … ho cucinati al dente, come li vuoi tu!": {
+  "vi": "c. Ừ, … … nấu vừa chín tới, đúng như bạn thích!",
+  "en": "c. Yes, I cooked … … al dente, just how you like them!"
+ },
+ "e. Perché ho scoperto di essere allergico: … … ha detto il dottore.": {
+  "vi": "e. Vì mình phát hiện ra bị dị ứng: … … bác sĩ đã nói.",
+  "en": "e. Because I found out I'm allergic: the doctor told … …."
+ },
+ "f. Potremmo andare da “Pino”: … … ha consigliato un mio amico.": {
+  "vi": "f. Chúng ta có thể đến quán “Pino”: … … một người bạn mình đã giới thiệu.",
+  "en": "f. We could go to “Pino”: a friend of mine recommended … …."
+ },
+ "g. No, … diamo più tardi.": {
+  "vi": "g. Chưa, … cho sau.",
+  "en": "g. No, we'll give … later."
+ },
+ "h. … … ha detta Giovanni.": {
+  "vi": "h. … … Giovanni đã nói.",
+  "en": "h. Giovanni told … …."
+ },
+ "Leggiamo e completiamo il dialogo.": {
+  "vi": "Đọc và hoàn thành đoạn hội thoại.",
+  "en": "Let's read and complete the dialogue."
+ },
+ "A cena da Sandro": {
+  "vi": "Ăn tối ở nhà Sandro",
+  "en": "Dinner at Sandro's"
+ },
+ "Sandro, mi dici il segreto dei tuoi primi? Sono buonissimi, ricchi di sapore, semplici e raffinati.": {
+  "vi": "Sandro, bạn nói cho mình bí quyết các món mì của bạn nhé? Ngon tuyệt, đậm đà, đơn giản mà tinh tế.",
+  "en": "Sandro, will you tell me the secret of your first courses? They're delicious, full of flavour, simple and refined."
+ },
+ "Cara Silvia, … … spiego subito: cerco di rispettare i tempi di cottura, di mettere la pasta nella pentola quando l'acqua bolle, di aggiungere il sale nell'acqua un attimo prima della pasta…": {
+  "vi": "Silvia thân mến, … … giải thích ngay: mình cố gắng tôn trọng thời gian nấu, cho mì vào nồi khi nước sôi, cho muối vào nước ngay trước khi cho mì…",
+  "en": "Dear Silvia, I'll explain … … right away: I try to respect the cooking times, put the pasta in the pot when the water boils, add salt to the water just before the pasta…"
+ },
+ "Sì, bene! Ma la ricetta di stasera è deliziosa, … … dai?": {
+  "vi": "Ừ, hay đấy! Nhưng món tối nay ngon tuyệt, bạn cho mình … … công thức nhé?",
+  "en": "Yes, good! But tonight's recipe is delicious, will you give … … to me?"
+ },
+ "Senz'altro! È un piatto lombardo con influenze venete, è una ricetta antica, si chiama “stracci alla trevigiana”. … … ha consigliat… un mio amico che lavora in un ristorante di Cremona: i suoi clienti adorano questo primo e lui … prepara veramente ad arte! Allora, prendi una bella fetta di gorgonzola, uno spicchio di zucca, un rametto di rosmarino, un po' di insalata trevigiana, uno spicchio d'aglio…": {
+  "vi": "Chắc chắn rồi! Đó là món của vùng Lombardia chịu ảnh hưởng của vùng Veneto, một công thức cổ, tên là “stracci alla trevigiana”. … … một người bạn của mình làm ở nhà hàng tại Cremona đã giới thiệu …: khách của anh ấy rất mê món này và anh ấy … nấu thật điêu luyện! Nào, lấy một miếng phô mai gorgonzola, một miếng bí đỏ, một nhánh hương thảo, một ít rau diếp đỏ Treviso, một tép tỏi…",
+  "en": "Of course! It's a Lombard dish with Venetian influences, an old recipe called “stracci alla trevigiana”. A friend of mine who works in a restaurant in Cremona recommended … … …: his customers love this first course and he makes … really expertly! So, take a nice slice of gorgonzola, a piece of pumpkin, a sprig of rosemary, some Treviso salad, a clove of garlic…"
+ },
+ "Aspetta, aspetta, perché non … … scrivi?": {
+  "vi": "Khoan, khoan, sao bạn không viết … … cho mình?",
+  "en": "Wait, wait, why don't you write … … for me?"
+ },
+ "Va bene, se vuoi … … posso mandare al tuo indirizzo e-mail. Conosci il sito “Cibovagando”? … … suggerisco perché puoi trovare molte specialità regionali.": {
+  "vi": "Được, nếu bạn muốn mình có thể gửi … … vào email của bạn. Bạn biết trang “Cibovagando” không? Mình … … giới thiệu vì ở đó có nhiều đặc sản vùng miền.",
+  "en": "OK, if you want I can send … … to your e-mail address. Do you know the site “Cibovagando”? I suggest … … because you can find many regional specialities."
+ },
+ "Grazie mille! Sai che sono un'appassionata di formaggi? … mangio tutti, ma il gorgonzola è veramente il mio preferito: è un formaggio squisito, cremoso, sta bene con tutto. La scorsa settimana … ho assaggiat… sulla pizza: era speciale!": {
+  "vi": "Cảm ơn nhiều! Bạn biết mình mê phô mai mà? Mình … ăn tất, nhưng gorgonzola thật sự là loại mình thích nhất: một loại phô mai tuyệt hảo, béo mịn, hợp với mọi thứ. Tuần trước mình … đã nếm … trên pizza: đặc biệt lắm!",
+  "en": "Thanks a lot! You know I'm a cheese lover? I eat … all, but gorgonzola is really my favourite: it's an exquisite, creamy cheese, it goes with everything. Last week I tasted … on pizza: it was special!"
+ },
+ "Sì, infatti. Pensa che una volta sono andato proprio a Gorgonzola, vicino a Milano, e ho visitato una fattoria che lo produce: … avrei mangiat… tutto!": {
+  "vi": "Đúng vậy. Mình từng đến chính thị trấn Gorgonzola, gần Milano, và tham quan một trang trại làm loại phô mai này: mình đã muốn ăn … hết!",
+  "en": "Yes, indeed. Imagine that once I went to Gorgonzola itself, near Milan, and visited a farm that makes it: I would have eaten … all!"
+ },
+ "Perché non ci torniamo insieme?": {
+  "vi": "Sao chúng ta không cùng quay lại đó nhỉ?",
+  "en": "Why don't we go back there together?"
+ },
+ "CI": {
+  "vi": "CI (ở đó, ở đây)",
+  "en": "CI (there, here)"
+ },
+ "Ci = in quel luogo, lì; in questo luogo, qui": {
+  "vi": "Ci = ở nơi đó, ở đó; ở nơi này, ở đây",
+  "en": "Ci = in that place, there; in this place, here"
+ },
+ "mi, ti, vi + ci = mi ci, ti ci, vi ci": {
+  "vi": "mi, ti, vi + ci = mi ci, ti ci, vi ci",
+  "en": "mi, ti, vi + ci = mi ci, ti ci, vi ci"
+ },
+ "ci + lo, la, li, le = ce lo, ce la, ce li, ce le": {
+  "vi": "ci + lo, la, li, le = ce lo, ce la, ce li, ce le",
+  "en": "ci + lo, la, li, le = ce lo, ce la, ce li, ce le"
+ },
+ "Ci + pensare": {
+  "vi": "Ci + pensare (nghĩ đến)",
+  "en": "Ci + pensare (to think about)"
+ },
+ "(sostituisce: a lui, a lei, a loro, a questa cosa)": {
+  "vi": "(thay cho: đến anh ấy, cô ấy, họ, điều này)",
+  "en": "(replaces: about him, her, them, this thing)"
+ },
+ "• Pensi molto ai tuoi bambini?": {
+  "vi": "• Bạn có hay nghĩ đến các con không?",
+  "en": "• Do you think about your children a lot?"
+ },
+ "○ Sì, ci penso molto.": {
+  "vi": "○ Có, mình nghĩ đến chúng nhiều lắm.",
+  "en": "○ Yes, I think about them a lot."
+ },
+ "• Chi ha pensato a comprare la carne?": {
+  "vi": "• Ai đã lo việc mua thịt?",
+  "en": "• Who took care of buying the meat?"
+ },
+ "○ Ci ha pensato Giulia.": {
+  "vi": "○ Giulia đã lo việc đó.",
+  "en": "○ Giulia took care of it."
+ },
+ "Ci + credere": {
+  "vi": "Ci + credere (tin vào)",
+  "en": "Ci + credere (to believe in)"
+ },
+ "(sostituisce: a questa cosa)": {
+  "vi": "(thay cho: vào điều này)",
+  "en": "(replaces: in this thing)"
+ },
+ "• Piero, credi a quello che dico?": {
+  "vi": "• Piero, bạn có tin điều mình nói không?",
+  "en": "• Piero, do you believe what I say?"
+ },
+ "○ No, non ci credo.": {
+  "vi": "○ Không, mình không tin.",
+  "en": "○ No, I don't believe it."
+ },
+ "Ci + riuscire": {
+  "vi": "Ci + riuscire (làm được)",
+  "en": "Ci + riuscire (to manage)"
+ },
+ "(sostituisce: in questa cosa, a fare questa cosa)": {
+  "vi": "(thay cho: trong việc này, làm việc này)",
+  "en": "(replaces: in this thing, to do this thing)"
+ },
+ "• Sei riuscito a preparare il dolce ieri?": {
+  "vi": "• Hôm qua bạn làm được bánh ngọt không?",
+  "en": "• Did you manage to make the cake yesterday?"
+ },
+ "○ No, non ci sono riuscito: l'ho comprato!": {
+  "vi": "○ Không, mình không làm được: mình mua đấy!",
+  "en": "○ No, I didn't manage: I bought it!"
+ },
+ "• Dai, Matteo, fai l'esercizio di matematica!": {
+  "vi": "• Nào Matteo, làm bài toán đi!",
+  "en": "• Come on, Matteo, do your maths exercise!"
+ },
+ "○ Ma… mamma, non ci riesco!": {
+  "vi": "○ Nhưng… mẹ ơi, con không làm được!",
+  "en": "○ But… mum, I can't do it!"
+ },
+ "Ci + provare": {
+  "vi": "Ci + provare (thử)",
+  "en": "Ci + provare (to try)"
+ },
+ "(sostituisce: a fare questa cosa)": {
+  "vi": "(thay cho: làm việc này)",
+  "en": "(replaces: to do this thing)"
+ },
+ "• Vuoi provare ad andare in bicicletta?": {
+  "vi": "• Bạn muốn thử đi xe đạp không?",
+  "en": "• Do you want to try riding a bike?"
+ },
+ "○ Volentieri, ci provo subito.": {
+  "vi": "○ Rất sẵn lòng, mình thử ngay.",
+  "en": "○ Gladly, I'll try right away."
+ },
+ "Ci + contare": {
+  "vi": "Ci + contare (trông cậy)",
+  "en": "Ci + contare (to count on)"
+ },
+ "(sostituisce: su questa cosa, su questa persona)": {
+  "vi": "(thay cho: vào việc này, vào người này)",
+  "en": "(replaces: on this thing, on this person)"
+ },
+ "• Posso contare sul tuo aiuto?": {
+  "vi": "• Mình có thể trông cậy vào sự giúp đỡ của bạn không?",
+  "en": "• Can I count on your help?"
+ },
+ "○ Certo, puoi contarci sempre!": {
+  "vi": "○ Tất nhiên, bạn luôn có thể trông cậy vào mình!",
+  "en": "○ Of course, you can always count on it!"
+ },
+ "Ci + stare": {
+  "vi": "Ci + stare (ở cùng, hợp với)",
+  "en": "Ci + stare (to be with)"
+ },
+ "(sostituisce: con lui, con lei, con loro)": {
+  "vi": "(thay cho: với anh ấy, với cô ấy, với họ)",
+  "en": "(replaces: with him, with her, with them)"
+ },
+ "• Stai bene con lui?": {
+  "vi": "• Bạn ở bên anh ấy có vui không?",
+  "en": "• Are you happy with him?"
+ },
+ "○ Sì, ci sto bene.": {
+  "vi": "○ Có, mình ở bên anh ấy rất vui.",
+  "en": "○ Yes, I'm happy with him."
+ },
+ "Ci + mettere = impiegare": {
+  "vi": "Ci + mettere = mất (thời gian)",
+  "en": "Ci + mettere = to take (time)"
+ },
+ "Per andare a Verona ci mettiamo 3 ore.": {
+  "vi": "Để đi Verona chúng tôi mất 3 tiếng.",
+  "en": "It takes us 3 hours to get to Verona."
+ },
+ "Ci + volere = essere necessario": {
+  "vi": "Ci + volere = cần (phải có)",
+  "en": "Ci + volere = to be necessary"
+ },
+ "Per fare la marmellata ci sono voluti due chili di pesche.": {
+  "vi": "Để làm mứt đã cần đến hai ký đào.",
+  "en": "Making the jam took two kilos of peaches."
+ },
+ "Ci + avere = avere": {
+  "vi": "Ci + avere = có",
+  "en": "Ci + avere = to have"
+ },
+ "• Hai una sigaretta?": {
+  "vi": "• Bạn có điếu thuốc không?",
+  "en": "• Have you got a cigarette?"
+ },
+ "○ No, non ce l'ho, non fumo.": {
+  "vi": "○ Không, mình không có, mình không hút thuốc.",
+  "en": "○ No, I haven't got one, I don't smoke."
+ },
+ "• Avete i libri di cucina?": {
+  "vi": "• Các bạn có sách dạy nấu ăn không?",
+  "en": "• Have you got cookery books?"
+ },
+ "○ Sì, ce li abbiamo.": {
+  "vi": "○ Có, chúng tôi có.",
+  "en": "○ Yes, we have them."
+ },
+ "avercela = essere arrabbiato, offeso": {
+  "vi": "avercela = giận, phật ý (với ai)",
+  "en": "avercela = to be angry, offended (with someone)"
+ },
+ "Alberto ce l'ha sempre con me!": {
+  "vi": "Alberto lúc nào cũng giận tôi!",
+  "en": "Alberto is always angry with me!"
+ },
+ "farcela = riuscire a fare qualcosa": {
+  "vi": "farcela = làm được việc gì",
+  "en": "farcela = to manage to do something"
+ },
+ "• Puoi finire il lavoro per domani?": {
+  "vi": "• Bạn có thể làm xong việc trước ngày mai không?",
+  "en": "• Can you finish the work by tomorrow?"
+ },
+ "○ Mi dispiace, ma non ce la faccio.": {
+  "vi": "○ Xin lỗi, nhưng tôi không làm kịp.",
+  "en": "○ I'm sorry, but I can't manage."
+ },
+ "mettercela tutta = impegnarsi molto": {
+  "vi": "mettercela tutta = dốc hết sức",
+  "en": "mettercela tutta = to do one's best"
+ },
+ "Studiare italiano è un po' difficile, ma ce la metto tutta!": {
+  "vi": "Học tiếng Ý hơi khó, nhưng tôi dốc hết sức!",
+  "en": "Studying Italian is a bit difficult, but I'm doing my best!"
+ },
+ "La cucina del Veneto": {
+  "vi": "Ẩm thực vùng Veneto",
+  "en": "The cuisine of the Veneto"
+ },
+ "Nell'alimentazione veneta troviamo soprattutto riso, polenta, fagioli e baccalà: a questi cibi possiamo aggiungere le patate, alcuni ortaggi, i salumi freschi e i formaggi dolci.": {
+  "vi": "Trong ẩm thực Veneto, ta thấy chủ yếu là gạo, polenta (cháo ngô), đậu và cá tuyết khô: có thể thêm khoai tây, vài loại rau, thịt nguội tươi và phô mai ngọt.",
+  "en": "In Venetian food we mainly find rice, polenta, beans and salt cod: to these foods we can add potatoes, some vegetables, fresh cold meats and mild cheeses."
+ },
+ "Il riso è arrivato dal mondo arabo: ci sono voluti circa cinquecento anni per far… crescere nelle vaste pianure venete; oggi, nelle tradizioni gastronomiche di Verona, … sono quaranta piatti diversi a base di riso.": {
+  "vi": "Lúa gạo đến từ thế giới Ả Rập: đã mất khoảng năm trăm năm để … trồng được trên các đồng bằng rộng lớn của Veneto; ngày nay, trong truyền thống ẩm thực Verona, … có bốn mươi món khác nhau làm từ gạo.",
+  "en": "Rice came from the Arab world: it took about five hundred years to make … grow on the vast Venetian plains; today, in the culinary traditions of Verona, there … are forty different rice-based dishes."
+ },
+ "Dopo la scoperta dell'America sono arrivati anche la farina di mais e i fagioli.": {
+  "vi": "Sau khi châu Mỹ được phát hiện, bột ngô và đậu cũng đến.",
+  "en": "After the discovery of America, maize flour and beans arrived too."
+ },
+ "Dai mari del Nord abbiamo invece il baccalà (stoccafisso): … ha messo un po' di tempo per diventare il pesce preferito dei veneti, ma ha dato un gusto unico a molti piatti.": {
+  "vi": "Từ các biển phương Bắc thì có cá tuyết khô (stoccafisso): … đã mất một thời gian để trở thành loại cá người Veneto yêu thích nhất, nhưng nó mang lại hương vị độc đáo cho nhiều món ăn.",
+  "en": "From the northern seas, instead, we have salt cod (stockfish): it took … a while to become the Venetians' favourite fish, but it gave a unique flavour to many dishes."
+ },
+ "Per conoscere la vera cucina veneta … consigliamo di provare il radicchio e le cipolle: molte ricette a base di cipolla si chiamano “alla veneziana”. Per esempio, avete mai assaggiato il “fegato alla veneziana”? … trovate in tutti i ristoranti, di solito … propongono con un piatto di radicchio arrosto e con un raffinato abbinamento di vini bianchi.": {
+  "vi": "Để biết ẩm thực Veneto thật sự, chúng tôi … khuyên các bạn thử rau diếp đỏ radicchio và hành: nhiều công thức làm từ hành được gọi là “kiểu Venezia”. Ví dụ, các bạn đã bao giờ ăn “gan kiểu Venezia” chưa? Các bạn … tìm thấy ở mọi nhà hàng, thường người ta … phục vụ kèm một đĩa radicchio nướng và rượu vang trắng hảo hạng.",
+  "en": "To get to know real Venetian cooking we recommend … trying radicchio and onions: many onion-based recipes are called “alla veneziana”. For example, have you ever tasted “fegato alla veneziana”? You find … in all restaurants, and they usually serve … with a dish of roast radicchio and a fine pairing of white wines."
+ },
+ "La cucina veneta è famosa per l'uso del pepe nero e delle altre spezie che danno ai primi piatti e al pesce un gusto piccante: se non … piace il pepe nero, potete adoperare quello rosa, più delicato.": {
+  "vi": "Ẩm thực Veneto nổi tiếng vì dùng tiêu đen và các gia vị khác làm cho các món mì và món cá có vị cay: nếu các bạn không … thích tiêu đen, có thể dùng tiêu hồng, dịu hơn.",
+  "en": "Venetian cooking is famous for its use of black pepper and other spices that give first courses and fish a spicy taste: if you don't like … black pepper, you can use pink pepper, which is milder."
+ },
+ "… piace la selvaggina? In Veneto abbiamo l'oca in onto (oca sotto grasso): se … mangiate quasi cruda, diventerete dei “veri veneziani”!": {
+  "vi": "Các bạn … thích thịt thú rừng không? Ở Veneto có món ngỗng ngâm mỡ (oca in onto): nếu các bạn ăn … gần như sống, các bạn sẽ thành “người Venezia thực thụ”!",
+  "en": "Do you like … game? In the Veneto we have goose preserved in fat (oca in onto): if you eat … almost raw, you'll become “real Venetians”!"
+ },
+ "Un tipico pasto veneto finisce sempre con il pandoro veronese: … avete vist… a Natale sulle tavole di tutta Italia. Questo dolce è nato a Venezia e ha una storia antica: i pasticcieri … facevano con burro e zucchero e i ricchi signori della Serenissima … mangiavano sempre nel periodo di Carnevale.": {
+  "vi": "Một bữa ăn đặc trưng Veneto luôn kết thúc bằng bánh pandoro của Verona: các bạn … đã thấy … vào dịp Giáng sinh trên bàn ăn khắp nước Ý. Món bánh này ra đời ở Venezia và có lịch sử lâu đời: các thợ làm bánh … làm bằng bơ và đường, còn các quý ông giàu có của nước Cộng hòa Venezia … luôn ăn vào mùa Carnevale.",
+  "en": "A typical Venetian meal always ends with Veronese pandoro: you've seen … at Christmas on tables all over Italy. This cake was born in Venice and has an ancient history: pastry cooks made … with butter and sugar, and the rich lords of the Serenissima always ate … during Carnival."
+ },
+ "Ne = una quantità, una parte di qualcosa": {
+  "vi": "Ne = một lượng, một phần của cái gì đó",
+  "en": "Ne = a quantity, a part of something"
+ },
+ "ci + ne = ce ne": {
+  "vi": "ci + ne = ce ne",
+  "en": "ci + ne = ce ne"
+ },
+ "Ne = di lui, di lei, di loro": {
+  "vi": "Ne = về anh ấy, về cô ấy, về họ",
+  "en": "Ne = of/about him, her, them"
+ },
+ "Ne = di questa cosa": {
+  "vi": "Ne = về điều này",
+  "en": "Ne = of/about this thing"
+ },
+ "Domani andiamo a mangiare fuori: che ne pensi?": {
+  "vi": "Ngày mai chúng ta đi ăn ngoài: bạn nghĩ sao?",
+  "en": "Tomorrow we're eating out: what do you think about it?"
+ },
+ "andarsene = andare": {
+  "vi": "andarsene = đi (khỏi)",
+  "en": "andarsene = to go away"
+ },
+ "Sono stanco: me ne vado a casa.": {
+  "vi": "Tôi mệt rồi: tôi về nhà đây.",
+  "en": "I'm tired: I'm going home."
+ },
+ "starsene = stare": {
+  "vi": "starsene = ở (lì)",
+  "en": "starsene = to stay"
+ },
+ "Federica se ne sta sempre in casa: non esce mai.": {
+  "vi": "Federica lúc nào cũng ở lì trong nhà: không bao giờ ra ngoài.",
+  "en": "Federica always stays at home: she never goes out."
+ },
+ "uscirsene = dire all'improvviso, in modo inaspettato": {
+  "vi": "uscirsene = bất ngờ nói ra, nói một cách không ngờ",
+  "en": "uscirsene = to come out with something suddenly, unexpectedly"
+ },
+ "Ieri sera Amedeo se ne è uscito con un discorso strano.": {
+  "vi": "Tối qua Amedeo bất ngờ nói ra một chuyện lạ.",
+  "en": "Last night Amedeo came out with a strange speech."
+ },
+ "Molte regioni italiane hanno una ricchezza di frutti unica al mondo: per questo sono nati i marchi DOP (Denominazione di Origine Protetta) e IGP (Indicazione Geografica Protetta), che ne tutelano la genuinità e … garantiscono la qualità.": {
+  "vi": "Nhiều vùng của Ý có sự phong phú về trái cây độc nhất thế giới: vì thế các nhãn DOP (Xuất xứ được bảo hộ) và IGP (Chỉ dẫn địa lý được bảo hộ) ra đời, để bảo vệ sự nguyên chất và … bảo đảm chất lượng của chúng.",
+  "en": "Many Italian regions have a wealth of fruit that is unique in the world: that's why the DOP (Protected Designation of Origin) and IGP (Protected Geographical Indication) labels were created, which protect their authenticity and guarantee … their quality."
+ },
+ "Avete mai provato le castagne del Monte Amiata (in Toscana)? … … sono di vari tipi; sono frutti autunnali, molto buoni per fare il famoso “castagnaccio”, un dolce squisito che mangiamo soprattutto in inverno.": {
+  "vi": "Các bạn đã bao giờ ăn hạt dẻ núi Amiata (Toscana) chưa? … … có nhiều loại; là trái cây mùa thu, rất ngon để làm món “castagnaccio” nổi tiếng, một món tráng miệng tuyệt hảo mà chúng tôi ăn chủ yếu vào mùa đông.",
+  "en": "Have you ever tried the chestnuts of Monte Amiata (in Tuscany)? There … … are various kinds; they're autumn fruits, very good for making the famous “castagnaccio”, an exquisite cake we eat above all in winter."
+ },
+ "Le nocciole tonde di Giffoni (vicino ai Monti Piacentini, in Emilia Romagna) hanno un sapore molto intenso. Se … mangiate tre o quattro, avrete una bella carica di energia. Di solito … usiamo nel cioccolato e nei dolci.": {
+  "vi": "Hạt phỉ tròn Giffoni (gần dãy Monti Piacentini, ở Emilia Romagna) có vị rất đậm. Nếu các bạn ăn … ba bốn hạt, các bạn sẽ nạp được nhiều năng lượng. Thường chúng tôi … dùng trong sô-cô-la và bánh kẹo.",
+  "en": "The round hazelnuts of Giffoni (near the Monti Piacentini, in Emilia Romagna) have a very intense flavour. If you eat three or four … , you'll get a good boost of energy. We usually use … in chocolate and desserts."
+ },
+ "La pesca nettarina di Romagna è unica: … avete mai assaggiat…? È una varietà di pesca noce con la polpa che si stacca facilmente dal nocciolo: è ideale nelle macedonie e con il gelato.": {
+  "vi": "Đào trơn vùng Romagna thật độc đáo: các bạn … đã bao giờ nếm … chưa? Đó là một giống đào trơn có thịt dễ tách khỏi hạt: rất hợp với món trái cây trộn và kem.",
+  "en": "The nectarine of Romagna is unique: have you ever tasted …? It's a variety of nectarine whose flesh comes away easily from the stone: it's ideal in fruit salads and with ice cream."
+ },
+ "Tutti sanno quanto sono importanti gli agrumi in Italia: in Campania abbiamo due varietà di limoni, quello di Amalfi e quello di Sorrento. Il primo ha una buccia chiara e una polpa senza semi con un succo buonissimo. Il secondo ha una buccia ricca di oli essenziali: … possiamo fare un prodotto di bellezza per le mani. Da tutti e due otteniamo il famoso limoncello.": {
+  "vi": "Ai cũng biết trái cây họ cam quýt quan trọng thế nào ở Ý: ở Campania có hai giống chanh, chanh Amalfi và chanh Sorrento. Loại thứ nhất có vỏ màu nhạt và ruột không hạt với nước cốt rất ngon. Loại thứ hai có vỏ giàu tinh dầu: chúng ta … có thể làm sản phẩm làm đẹp cho tay. Từ cả hai ta làm ra rượu limoncello nổi tiếng.",
+  "en": "Everyone knows how important citrus fruits are in Italy: in Campania we have two varieties of lemon, the Amalfi one and the Sorrento one. The first has a pale peel and seedless flesh with delicious juice. The second has a peel rich in essential oils: we can make … a beauty product for the hands. From both we get the famous limoncello."
+ },
+ "La clementina di Calabria (frutto simile al mandarino) è molto dolce e succosa: se … mangiate una a colazione, … sentirete il sapore in bocca per tutto il giorno!": {
+  "vi": "Quýt clementine của Calabria (giống quả quýt) rất ngọt và mọng nước: nếu các bạn ăn … một quả vào bữa sáng, các bạn … sẽ cảm thấy vị của nó trong miệng suốt cả ngày!",
+  "en": "The Calabrian clementine (a fruit similar to the mandarin) is very sweet and juicy: if you eat one … at breakfast, you'll taste … in your mouth all day!"
+ },
+ "Deliziose sono le arance siciliane: … … sono tre varietà molto conosciute (tarocco, moro, sanguinello) che nascono vicino all'Etna. Dovete provar… tutte, perché hanno un gusto molto diverso: in Sicilia … usano in molte ricette e … mangiano almeno due al giorno.": {
+  "vi": "Cam Sicilia thật ngon: … … có ba giống rất nổi tiếng (tarocco, moro, sanguinello) mọc gần núi Etna. Các bạn phải thử … hết, vì chúng có vị rất khác nhau: ở Sicilia người ta … dùng trong nhiều món ăn và … ăn ít nhất hai quả mỗi ngày.",
+  "en": "Sicilian oranges are delicious: there … … are three very well-known varieties (tarocco, moro, sanguinello) that grow near Etna. You must try … all, because they taste very different: in Sicily they use … in many recipes and eat at least two … a day."
+ },
+ "Ascoltiamo il dialogo.": {
+  "vi": "Nghe đoạn hội thoại.",
+  "en": "Let's listen to the dialogue."
+ },
+ "La ricetta di Elena e Grazia": {
+  "vi": "Công thức của Elena và Grazia",
+  "en": "Elena and Grazia's recipe"
+ },
+ "Preparazione: 30 minuti": {
+  "vi": "Chuẩn bị: 30 phút",
+  "en": "Preparation: 30 minutes"
+ },
+ "Cottura: 30 minuti": {
+  "vi": "Nấu: 30 phút",
+  "en": "Cooking: 30 minutes"
+ },
+ "Difficoltà: ★": {
+  "vi": "Độ khó: ★",
+  "en": "Difficulty: ★"
+ },
+ "280 grammi di riso": {
+  "vi": "280 gam gạo",
+  "en": "280 grams of rice"
+ },
+ "80 grammi di piselli": {
+  "vi": "80 gam đậu Hà Lan",
+  "en": "80 grams of peas"
+ },
+ "80 grammi di asparagi": {
+  "vi": "80 gam măng tây",
+  "en": "80 grams of asparagus"
+ },
+ "80 grammi di zucchine": {
+  "vi": "80 gam bí ngòi",
+  "en": "80 grams of courgettes"
+ },
+ "80 grammi di carote": {
+  "vi": "80 gam cà rốt",
+  "en": "80 grams of carrots"
+ },
+ "una cipolla piccola": {
+  "vi": "một củ hành nhỏ",
+  "en": "a small onion"
+ },
+ "200 grammi di gamberi precotti": {
+  "vi": "200 gam tôm đã luộc sẵn",
+  "en": "200 grams of pre-cooked prawns"
+ },
+ "un mazzetto di erbe miste (prezzemolo, basilico)": {
+  "vi": "một bó rau thơm trộn (mùi tây, húng quế)",
+  "en": "a bunch of mixed herbs (parsley, basil)"
+ },
+ "1,5 litro di brodo vegetale": {
+  "vi": "1,5 lít nước dùng rau",
+  "en": "1.5 litres of vegetable stock"
+ },
+ "100 grammi di burro": {
+  "vi": "100 gam bơ",
+  "en": "100 grams of butter"
+ },
+ "olio extra vergine di oliva": {
+  "vi": "dầu ô liu nguyên chất",
+  "en": "extra virgin olive oil"
+ },
+ "sale": {
+  "vi": "muối",
+  "en": "salt"
+ },
+ "Tagliare la cipolla e le altre verdure. Mettere la cipolla in una padella con 60 grammi di burro, aggiungere il riso e mescolarlo per qualche minuto. Aggiungere tutte le verdure e il brodo a poco a poco. Mescolare bene. Intanto mettere i gamberi in un'altra padella con poco olio per pochi minuti. Tagliare le erbe, togliere il risotto dal fuoco, aggiungere il burro, le erbe e metà dei gamberi. Mescolare piano, versare il risotto nei piatti, distribuire l'altra metà dei gamberi e servire subito.": {
+  "vi": "Thái hành và các loại rau khác. Cho hành vào chảo với 60 gam bơ, thêm gạo và đảo vài phút. Cho tất cả rau và nước dùng vào từ từ. Đảo đều. Trong lúc đó cho tôm vào một chảo khác với ít dầu trong vài phút. Thái rau thơm, nhấc risotto khỏi bếp, thêm bơ, rau thơm và một nửa số tôm. Đảo nhẹ, múc risotto ra đĩa, rải nửa số tôm còn lại và dọn ăn ngay.",
+  "en": "Chop the onion and the other vegetables. Put the onion in a pan with 60 grams of butter, add the rice and stir it for a few minutes. Add all the vegetables and the stock a little at a time. Stir well. Meanwhile put the prawns in another pan with a little oil for a few minutes. Chop the herbs, take the risotto off the heat, add the butter, the herbs and half the prawns. Stir gently, pour the risotto onto the plates, spread the other half of the prawns on top and serve immediately."
+ },
+ "Scrivete una ricetta tipica del vostro paese.": {
+  "vi": "Hãy viết một công thức món ăn đặc trưng của nước bạn.",
+  "en": "Write a typical recipe from your country."
+ },
+ "Invitate alcuni amici a cena: descrivete quello che volete preparare e chiedete ai vostri amici di portarvi una loro specialità.": {
+  "vi": "Mời vài người bạn đến ăn tối: tả những món bạn định nấu và nhờ bạn bè mang đến một món đặc sản của họ.",
+  "en": "Invite some friends to dinner: describe what you want to cook and ask your friends to bring one of their specialities."
+ },
+ "Invita i tuoi amici a cena.": {
+  "vi": "Hãy mời bạn bè đến ăn tối.",
+  "en": "Invite your friends to dinner."
+ },
+ "Vengono per la prima volta a cena a casa i vostri futuri suoceri: che cosa gli preparate?": {
+  "vi": "Bố mẹ vợ/chồng tương lai lần đầu đến nhà bạn ăn tối: bạn sẽ nấu gì cho họ?",
+  "en": "Your future in-laws are coming to dinner at your house for the first time: what do you cook for them?"
+ },
+ "Partecipate a una cena molto elegante, a base di pesce, a casa di un direttore importante del vostro ufficio: voi, però, non mangiate il pesce. Che cosa fate?": {
+  "vi": "Bạn dự một bữa tối rất sang trọng, toàn món cá, ở nhà một giám đốc quan trọng ở cơ quan: nhưng bạn không ăn cá. Bạn làm gì?",
+  "en": "You go to a very elegant fish dinner at the house of an important manager from your office: but you don't eat fish. What do you do?"
+ },
+ "Decidete il menù per una festa di compleanno per 15 bambini molto vivaci: che cosa preparate?": {
+  "vi": "Hãy lên thực đơn cho tiệc sinh nhật của 15 đứa trẻ rất hiếu động: bạn sẽ chuẩn bị gì?",
+  "en": "Plan the menu for a birthday party for 15 very lively children: what do you prepare?"
+ },
+ "Avete mai letto un libro o visto un film che parlava di una storia legata al cibo o alle tradizioni alimentari? Raccontatene la trama.": {
+  "vi": "Bạn đã bao giờ đọc một cuốn sách hay xem một bộ phim kể về câu chuyện liên quan đến món ăn hoặc truyền thống ẩm thực chưa? Hãy kể lại cốt truyện.",
+  "en": "Have you ever read a book or seen a film about a story linked to food or food traditions? Tell the plot."
+ },
+ "Leggiamo e completiamo il testo con le parole giuste.": {
+  "vi": "Đọc và hoàn thành đoạn văn với các từ thích hợp.",
+  "en": "Let's read and complete the text with the right words."
+ },
+ "cucina • carciofo • piatti • scelta • si ispira • grattugiato • allevamento • dolci • mozzarelle": {
+  "vi": "ẩm thực • atisô • món ăn • sự lựa chọn • lấy cảm hứng • bào • chăn nuôi • đồ ngọt • phô mai mozzarella",
+  "en": "cuisine • artichoke • dishes • choice • is inspired • grated • breeding • desserts • mozzarellas"
+ },
+ "La cucina del Lazio ha dei piatti molto famosi: i bucatini all'amatriciana (pasta con la pancetta), le penne all'arrabbiata (pasta con un sugo molto piccante), gli spaghetti alla puttanesca (pasta con olive e capperi). Ma l'elenco dei sapori caldi, decisi e corposi non finisce qui.": {
+  "vi": "Ẩm thực vùng Lazio có nhiều món rất nổi tiếng: mì bucatini all'amatriciana (mì với thịt ba chỉ), penne all'arrabbiata (mì với nước sốt rất cay), spaghetti alla puttanesca (mì với ô liu và nụ bạch hoa). Nhưng danh sách những hương vị nồng nàn, đậm đà ấy chưa dừng ở đó.",
+  "en": "The cuisine of Lazio has some very famous dishes: bucatini all'amatriciana (pasta with pancetta), penne all'arrabbiata (pasta with a very spicy sauce), spaghetti alla puttanesca (pasta with olives and capers). But the list of warm, bold, full-bodied flavours doesn't end here."
+ },
+ "La cucina di questa regione … … alla tradizione delle campagne e dei pastori: ci sono molti tipi di formaggi semiduri e molli, come il pecorino romano e le …, oltre ai salumi e agli ortaggi, come il famosissimo … romanesco.": {
+  "vi": "Ẩm thực vùng này … … truyền thống nông thôn và người chăn cừu: có nhiều loại phô mai nửa cứng và mềm, như pecorino romano và …, ngoài ra còn thịt nguội và rau củ, như … romanesco vô cùng nổi tiếng.",
+  "en": "The cooking of this region … … the tradition of the countryside and of shepherds: there are many kinds of semi-hard and soft cheeses, like pecorino romano and …, as well as cold meats and vegetables, like the very famous Roman …."
+ },
+ "Le zuppe sono un cibo caratteristico delle zone interne del Lazio, famose per l'… di pecore, capre e mucche. Se andiamo a Rieti, la … dei primi piatti è varia e sfiziosa: ci sono gli stracci di Antrodoco, frittatine con ragù, fatte al forno con formaggio …, gli gnocchi, gli spaghetti aglio, olio e peperoncino. Altri … particolari sono la porchetta, le lenticchie, le fettuccine con funghi e peperoncino, la pasta con le famose olive di Gaeta (piccole e gustosissime olive nere) e, infine, i … come i maritozzi, morbidi panini con pinoli, uvetta e buccia d'arancia candita.": {
+  "vi": "Súp là món đặc trưng của vùng nội địa Lazio, nổi tiếng về … cừu, dê và bò. Nếu đến Rieti, … các món mì rất đa dạng và hấp dẫn: có stracci di Antrodoco, trứng tráng mỏng với sốt thịt, nướng lò với phô mai …, gnocchi, spaghetti tỏi, dầu và ớt. Những … đặc biệt khác là heo quay porchetta, đậu lăng, mì fettuccine với nấm và ớt, mì với ô liu Gaeta nổi tiếng (ô liu đen nhỏ và rất ngon) và cuối cùng là … như maritozzi, những chiếc bánh mì mềm với hạt thông, nho khô và vỏ cam ngâm đường.",
+  "en": "Soups are a typical food of the inland areas of Lazio, famous for the … of sheep, goats and cows. If we go to Rieti, the … of first courses is varied and tempting: there are stracci di Antrodoco, little omelettes with meat sauce baked with … cheese, gnocchi, spaghetti with garlic, oil and chilli. Other special … are porchetta, lentils, fettuccine with mushrooms and chilli, pasta with the famous Gaeta olives (small, very tasty black olives) and, finally, … like maritozzi, soft buns with pine nuts, raisins and candied orange peel."
+ },
+ "Leggiamo e riordiniamo il testo.": {
+  "vi": "Đọc và sắp xếp lại đoạn văn.",
+  "en": "Let's read and put the text in order."
+ },
+ "Pizza": {
+  "vi": "Pizza",
+  "en": "Pizza"
+ },
+ "a) Un giorno, nel 1899, un famoso pizzaiolo di Napoli, Raffaele Esposito, decide di fare un omaggio alla regina che è in visita alla Reggia di Capodimonte a Napoli; così le prepara una pizza con i colori della bandiera italiana, con il pomodoro (rosso), con la mozzarella (bianco) e con il basilico (verde).": {
+  "vi": "a) Một ngày năm 1899, một thợ làm pizza nổi tiếng ở Napoli, Raffaele Esposito, quyết định tỏ lòng kính trọng hoàng hậu đang đến thăm Cung điện Capodimonte ở Napoli; vì vậy ông làm cho bà một chiếc pizza mang màu cờ Ý: cà chua (đỏ), phô mai mozzarella (trắng) và húng quế (xanh lá).",
+  "en": "a) One day in 1899 a famous pizza maker from Naples, Raffaele Esposito, decides to pay homage to the queen, who is visiting the Royal Palace of Capodimonte in Naples; so he makes her a pizza in the colours of the Italian flag, with tomato (red), mozzarella (white) and basil (green)."
+ },
+ "b) Non esiste al mondo una ricetta più diffusa, amata, interpretata, cucinata. Puoi mangiare la pizza in mille modi diversi: con il curry, con le uova fritte, con le cozze e perfino con l'ananas!": {
+  "vi": "b) Trên thế giới không có công thức nào phổ biến, được yêu thích, biến tấu và nấu nhiều hơn. Bạn có thể ăn pizza theo nghìn cách khác nhau: với cà ri, với trứng ốp, với vẹm và thậm chí với dứa!",
+  "en": "b) There is no recipe in the world that is more widespread, loved, interpreted and cooked. You can eat pizza in a thousand different ways: with curry, with fried eggs, with mussels and even with pineapple!"
+ },
+ "c) La regina si innamora di questa ricetta: da quel momento tutte le pizzerie di Napoli la propongono e la pizza margherita diventa in poco tempo un simbolo dell'Italia nel mondo.": {
+  "vi": "c) Hoàng hậu mê món này: từ đó mọi tiệm pizza ở Napoli đều bán nó và pizza margherita chẳng mấy chốc trở thành biểu tượng của nước Ý trên thế giới.",
+  "en": "c) The queen falls in love with this recipe: from that moment all the pizzerias in Naples offer it and pizza margherita soon becomes a symbol of Italy around the world."
+ },
+ "d) La storia della pizza, però, è molto antica: la pizza margherita, infatti, prende il suo nome dalla regina Margherita, moglie di re Umberto I.": {
+  "vi": "d) Tuy nhiên, lịch sử của pizza rất lâu đời: thực ra pizza margherita lấy tên từ hoàng hậu Margherita, vợ vua Umberto I.",
+  "en": "d) The history of pizza, however, is very old: pizza margherita, in fact, takes its name from Queen Margherita, wife of King Umberto I."
+ },
+ "e) La trovi in Laos e a Stoccolma, buonissima a Brooklyn e, qualche volta, non proprio gustosa a Milano. Puoi mangiarla in ristoranti di lusso e in locali molto economici: piace a tutti, giovani e anziani, ed è accessibile a tutte le tasche!": {
+  "vi": "e) Bạn có thể tìm thấy nó ở Lào và Stockholm, rất ngon ở Brooklyn và đôi khi không ngon lắm ở Milano. Bạn có thể ăn nó ở nhà hàng sang trọng hay quán rất rẻ: ai cũng thích, cả người trẻ lẫn người già, và hợp với mọi túi tiền!",
+  "en": "e) You find it in Laos and Stockholm, delicious in Brooklyn and sometimes not very tasty in Milan. You can eat it in luxury restaurants and very cheap places: everyone likes it, young and old, and it suits every pocket!"
+ },
+ "Scriviamo l'ordine giusto (a, b, c, d, e).": {
+  "vi": "Viết thứ tự đúng (a, b, c, d, e).",
+  "en": "Write the right order (a, b, c, d, e)."
+ },
+ "1. …; 2. …; 3. …; 4. …; 5. …": {
+  "vi": "1. …; 2. …; 3. …; 4. …; 5. …",
+  "en": "1. …; 2. …; 3. …; 4. …; 5. …"
+ },
+ "L'insegnante divide la classe in due gruppi: uno studente per squadra deve descrivere un piatto senza dirne il nome e l'altro gruppo deve indovinarlo!": {
+  "vi": "Giáo viên chia lớp thành hai nhóm: mỗi đội một bạn tả một món ăn mà không nói tên, nhóm kia phải đoán!",
+  "en": "The teacher divides the class into two groups: one student per team describes a dish without saying its name and the other group must guess it!"
+ },
+ "Vince la squadra che indovina più piatti!": {
+  "vi": "Đội đoán đúng nhiều món nhất sẽ thắng!",
+  "en": "The team that guesses the most dishes wins!"
+ },
+ "Descrivi un piatto senza dirne il nome.": {
+  "vi": "Tả một món ăn mà không nói tên.",
+  "en": "Describe a dish without saying its name."
+ },
+ "affettare": {
+  "vi": "thái lát",
+  "en": "to slice"
+ },
+ "arrostire": {
+  "vi": "nướng, quay",
+  "en": "to roast"
+ },
+ "bollire": {
+  "vi": "đun sôi, luộc",
+  "en": "to boil"
+ },
+ "condire": {
+  "vi": "nêm, trộn gia vị",
+  "en": "to season, dress"
+ },
+ "cuocere": {
+  "vi": "nấu",
+  "en": "to cook"
+ },
+ "farcire": {
+  "vi": "nhồi nhân",
+  "en": "to stuff, fill"
+ },
+ "friggere": {
+  "vi": "chiên, rán",
+  "en": "to fry"
+ },
+ "gratinare": {
+  "vi": "nướng phủ mặt (gratin)",
+  "en": "to cook au gratin"
+ },
+ "grattugiare": {
+  "vi": "bào",
+  "en": "to grate"
+ },
+ "impastare": {
+  "vi": "nhào bột",
+  "en": "to knead"
+ },
+ "insaporire": {
+  "vi": "làm cho đậm vị",
+  "en": "to flavour"
+ },
+ "lessare": {
+  "vi": "luộc",
+  "en": "to boil (in water)"
+ },
+ "mescolare": {
+  "vi": "khuấy, trộn",
+  "en": "to stir, mix"
+ },
+ "pepare": {
+  "vi": "rắc tiêu",
+  "en": "to pepper"
+ },
+ "salare": {
+  "vi": "rắc muối",
+  "en": "to salt"
+ },
+ "scaldare": {
+  "vi": "hâm nóng",
+  "en": "to heat up"
+ },
+ "scolare": {
+  "vi": "chắt nước, để ráo",
+  "en": "to drain"
+ },
+ "spremere": {
+  "vi": "vắt",
+  "en": "to squeeze"
+ },
+ "ungere": {
+  "vi": "phết dầu/mỡ",
+  "en": "to grease"
+ },
+ "zuccherare": {
+  "vi": "cho đường",
+  "en": "to sugar, sweeten"
+ },
+ "bollitore": {
+  "vi": "ấm đun nước",
+  "en": "kettle"
+ },
+ "bottiglia": {
+  "vi": "chai",
+  "en": "bottle"
+ },
+ "caraffa": {
+  "vi": "bình rót",
+  "en": "carafe, jug"
+ },
+ "coltello": {
+  "vi": "dao",
+  "en": "knife"
+ },
+ "cucchiaino": {
+  "vi": "thìa nhỏ",
+  "en": "teaspoon"
+ },
+ "cucchiaio": {
+  "vi": "thìa",
+  "en": "spoon"
+ },
+ "forchetta": {
+  "vi": "nĩa",
+  "en": "fork"
+ },
+ "formaggiera": {
+  "vi": "hũ đựng phô mai bào",
+  "en": "cheese dish"
+ },
+ "frullatore": {
+  "vi": "máy xay sinh tố",
+  "en": "blender"
+ },
+ "grattugia": {
+  "vi": "dụng cụ bào",
+  "en": "grater"
+ },
+ "mestolo": {
+  "vi": "muôi",
+  "en": "ladle"
+ },
+ "padella": {
+  "vi": "chảo",
+  "en": "frying pan"
+ },
+ "passatutto": {
+  "vi": "dụng cụ nghiền rau",
+  "en": "food mill"
+ },
+ "pentola": {
+  "vi": "nồi",
+  "en": "pot, saucepan"
+ },
+ "piatto": {
+  "vi": "đĩa",
+  "en": "plate"
+ },
+ "pirofila": {
+  "vi": "khay nướng (chịu nhiệt)",
+  "en": "ovenproof dish"
+ },
+ "recipiente": {
+  "vi": "vật đựng, hộp",
+  "en": "container"
+ },
+ "tazza": {
+  "vi": "tách",
+  "en": "cup"
+ },
+ "tegame": {
+  "vi": "chảo sâu lòng có quai",
+  "en": "shallow pan"
+ },
+ "vassoio": {
+  "vi": "khay",
+  "en": "tray"
+ },
+ "aceto": {
+  "vi": "giấm",
+  "en": "vinegar"
+ },
+ "acqua": {
+  "vi": "nước",
+  "en": "water"
+ },
+ "birra": {
+  "vi": "bia",
+  "en": "beer"
+ },
+ "caffè": {
+  "vi": "cà phê",
+  "en": "coffee"
+ },
+ "carne": {
+  "vi": "thịt",
+  "en": "meat"
+ },
+ "dolce": {
+  "vi": "món ngọt, bánh ngọt",
+  "en": "dessert, cake"
+ },
+ "formaggio": {
+  "vi": "phô mai",
+  "en": "cheese"
+ },
+ "frutta": {
+  "vi": "trái cây",
+  "en": "fruit"
+ },
+ "latte": {
+  "vi": "sữa",
+  "en": "milk"
+ },
+ "legumi": {
+  "vi": "các loại đậu",
+  "en": "pulses, legumes"
+ },
+ "olio": {
+  "vi": "dầu",
+  "en": "oil"
+ },
+ "pane": {
+  "vi": "bánh mì",
+  "en": "bread"
+ },
+ "pasta": {
+  "vi": "mì ống",
+  "en": "pasta"
+ },
+ "pepe": {
+  "vi": "hạt tiêu",
+  "en": "pepper"
+ },
+ "riso": {
+  "vi": "gạo, cơm",
+  "en": "rice"
+ },
+ "spezie": {
+  "vi": "gia vị",
+  "en": "spices"
+ },
+ "verdura": {
+  "vi": "rau",
+  "en": "vegetables"
+ },
+ "vino": {
+  "vi": "rượu vang",
+  "en": "wine"
+ },
+ "zucchero": {
+  "vi": "đường",
+  "en": "sugar"
+ },
+ "Scriviamo: rispondiamo alle domande.": {
+  "vi": "Cùng viết: trả lời các câu hỏi.",
+  "en": "Let's write: answer the questions."
+ },
+ "Che cosa grattugiamo?": {
+  "vi": "Chúng ta bào cái gì?",
+  "en": "What do we grate?"
+ },
+ "Che cosa possiamo arrostire?": {
+  "vi": "Chúng ta có thể nướng cái gì?",
+  "en": "What can we roast?"
+ },
+ "Che cosa friggiamo?": {
+  "vi": "Chúng ta chiên cái gì?",
+  "en": "What do we fry?"
+ },
+ "Che cosa impastiamo?": {
+  "vi": "Chúng ta nhào cái gì?",
+  "en": "What do we knead?"
+ },
+ "Che cosa possiamo spremere?": {
+  "vi": "Chúng ta có thể vắt cái gì?",
+  "en": "What can we squeeze?"
+ },
+ "Che cosa zuccheriamo?": {
+  "vi": "Chúng ta cho đường vào cái gì?",
+  "en": "What do we sweeten?"
+ },
+ "Che cosa ungiamo?": {
+  "vi": "Chúng ta phết dầu vào cái gì?",
+  "en": "What do we grease?"
+ },
+ "Leggiamo gli aggettivi e abbiniamo i contrari.": {
+  "vi": "Đọc các tính từ và nối với từ trái nghĩa.",
+  "en": "Let's read the adjectives and match the opposites."
+ },
+ "leggero": {
+  "vi": "nhẹ (dễ tiêu)",
+  "en": "light"
+ },
+ "condito": {
+  "vi": "đã nêm gia vị",
+  "en": "dressed, seasoned"
+ },
+ "cotto": {
+  "vi": "chín",
+  "en": "cooked"
+ },
+ "insipido": {
+  "vi": "nhạt",
+  "en": "bland, tasteless"
+ },
+ "digeribile": {
+  "vi": "dễ tiêu",
+  "en": "digestible"
+ },
+ "naturale": {
+  "vi": "tự nhiên",
+  "en": "natural"
+ },
+ "grasso": {
+  "vi": "béo",
+  "en": "fatty"
+ },
+ "amaro": {
+  "vi": "đắng",
+  "en": "bitter"
+ },
+ "indigesto": {
+  "vi": "khó tiêu",
+  "en": "indigestible"
+ },
+ "magro": {
+  "vi": "nạc, ít béo",
+  "en": "lean"
+ },
+ "pesante": {
+  "vi": "nặng bụng",
+  "en": "heavy"
+ },
+ "salato": {
+  "vi": "mặn",
+  "en": "salty"
+ },
+ "scondito": {
+  "vi": "không nêm gia vị",
+  "en": "undressed, plain"
+ },
+ "crudo": {
+  "vi": "sống",
+  "en": "raw"
+ },
+ "sofisticato": {
+  "vi": "cầu kỳ, pha tạp",
+  "en": "sophisticated, adulterated"
+ },
+ "Scriviamo: sostituiamo le parole sbagliate.": {
+  "vi": "Cùng viết: thay các từ sai.",
+  "en": "Let's write: replace the wrong words."
+ },
+ "Francesco era innamorato cotto di Chiara, voleva invitarla a cena ma non sapeva che cosa prepararle. Ha comprato un libro di ricette, le ha lette tutte e alla fine ha deciso: avrebbe cucinato le penne al tartufo e l'arrosto di vitello.": {
+  "vi": "Francesco yêu Chiara say đắm, muốn mời cô đi ăn tối nhưng không biết nấu gì cho cô. Anh mua một cuốn sách dạy nấu ăn, đọc hết các công thức và cuối cùng quyết định: anh sẽ nấu mì penne nấm truffle và thịt bê quay.",
+  "en": "Francesco was madly in love with Chiara, he wanted to invite her to dinner but didn't know what to cook for her. He bought a recipe book, read them all and in the end decided: he would cook penne with truffle and roast veal."
+ },
+ "Prima ha gratinato → bollito le penne nell'acqua, poi ha annusato → … il tartufo a pezzetti; in un portafoglio → … ha fatto sciogliere il burro e ci ha messo il tartufo; mentre preparava la pasta, ha comprato → … il forno, ha fotografato → … il vitello a fette e lo ha guidato → … con un po' di sale, di pepe nero e di rosmarino. Quando il forno era dipinto → …, ci ha messo le scarpe → … con la carne. Mentre la carne cuoceva, ha ascoltato → … la pasta, l'ha buttata nella padella e l'ha presa → … con il tartufo. Alla fine ha tolto la carne dalla macchina → … e l'ha stirata → … in tavola.": {
+  "vi": "Đầu tiên anh đã nướng phủ mặt → luộc mì penne trong nước, rồi đã ngửi → … nấm truffle thành miếng nhỏ; trong một cái ví → … anh làm tan bơ và cho truffle vào; trong lúc làm mì, anh đã mua → … lò nướng, đã chụp ảnh → … thịt bê thành lát và đã lái → … nó với chút muối, tiêu đen và hương thảo. Khi lò đã được sơn → …, anh cho đôi giày → … với thịt vào. Trong lúc thịt chín, anh đã nghe → … mì, đổ vào chảo và đã cầm → … với truffle. Cuối cùng anh lấy thịt ra khỏi ô tô → … và đã là ủi → … lên bàn.",
+  "en": "First he gratinated → boiled the penne in the water, then he sniffed → … the truffle into small pieces; in a wallet → … he melted the butter and put the truffle in; while he was preparing the pasta, he bought → … the oven, he photographed → … the veal into slices and drove → … it with a little salt, black pepper and rosemary. When the oven was painted → …, he put the shoes → … with the meat in. While the meat was cooking, he listened to → … the pasta, threw it into the pan and took → … it with the truffle. Finally he took the meat out of the car → … and ironed → … it to the table."
+ },
+ "È stata una cena indimenticabile: Chiara se ne è andata via dopo il primo boccone. Chissà perché…": {
+  "vi": "Đó là một bữa tối khó quên: Chiara bỏ về sau miếng đầu tiên. Không biết tại sao nhỉ…",
+  "en": "It was an unforgettable dinner: Chiara left after the first mouthful. Who knows why…"
+ },
+ "Meglio un uovo oggi che una gallina domani.": {
+  "vi": "Thà một quả trứng hôm nay còn hơn một con gà mái ngày mai (thà chắc chắn ít còn hơn hứa hẹn nhiều).",
+  "en": "Better an egg today than a hen tomorrow (a bird in the hand is worth two in the bush)."
+ },
+ "Mangia questa minestra o salta dalla finestra!": {
+  "vi": "Ăn bát súp này đi hoặc nhảy qua cửa sổ! (không có lựa chọn nào khác)",
+  "en": "Eat this soup or jump out of the window! (take it or leave it)"
+ },
+ "Il diavolo fa le pentole ma non i coperchi.": {
+  "vi": "Quỷ làm nồi nhưng không làm nắp (gian dối sớm muộn cũng bị lộ).",
+  "en": "The devil makes the pots but not the lids (lies always come out)."
+ },
+ "Giovanna, come stai bene! Sei veramente in carne!": {
+  "vi": "Giovanna, trông bạn khỏe quá! Bạn thật là đẫy đà!",
+  "en": "Giovanna, you look great! You've really filled out!"
+ },
+ "Luca è buono come il pane.": {
+  "vi": "Luca tốt bụng như bánh mì (rất hiền lành).",
+  "en": "Luca is as good as bread (very kind-hearted)."
+ },
+ "Tua moglie è brava in cucina: ti prende per la gola!": {
+  "vi": "Vợ bạn nấu ăn giỏi: cô ấy chinh phục bạn qua cái dạ dày!",
+  "en": "Your wife is a good cook: she wins you over through your stomach!"
+ },
+ "Essere in carne.": {
+  "vi": "Đẫy đà, có da có thịt.",
+  "en": "To be plump, well-padded."
+ },
+ "Essere buono come il pane.": {
+  "vi": "Tốt bụng như bánh mì (rất hiền lành).",
+  "en": "To be as good as gold."
+ },
+ "Prendere qualcuno per la gola.": {
+  "vi": "Chinh phục ai đó bằng món ăn ngon.",
+  "en": "To win someone over with good food."
+ },
+ "Ascoltiamo e completiamo le parole con s, z.": {
+  "vi": "Nghe và điền s hoặc z vào các từ.",
+  "en": "Let's listen and complete the words with s or z."
+ },
+ "gra…ie": {
+  "vi": "gra…ie (cảm ơn)",
+  "en": "gra…ie (thank you)"
+ },
+ "an…ia": {
+  "vi": "an…ia (lo âu)",
+  "en": "an…ia (anxiety)"
+ },
+ "addi…ione": {
+  "vi": "addi…ione (phép cộng)",
+  "en": "addi…ione (addition)"
+ },
+ "giusti…ia": {
+  "vi": "giusti…ia (công lý)",
+  "en": "giusti…ia (justice)"
+ },
+ "pauro…o": {
+  "vi": "pauro…o (sợ hãi)",
+  "en": "pauro…o (fearful)"
+ },
+ "cal…e": {
+  "vi": "cal…e (tất)",
+  "en": "cal…e (socks)"
+ },
+ "…en…o": {
+  "vi": "…en…o (cảm giác, ý nghĩa)",
+  "en": "…en…o (sense)"
+ },
+ "…en…a": {
+  "vi": "…en…a (không có)",
+  "en": "…en…a (without)"
+ },
+ "pre…io…o": {
+  "vi": "pre…io…o (quý giá)",
+  "en": "pre…io…o (precious)"
+ },
+ "e…ibi…ione": {
+  "vi": "e…ibi…ione (buổi biểu diễn)",
+  "en": "e…ibi…ione (performance)"
+ },
+ "con…en…o": {
+  "vi": "con…en…o (sự đồng ý)",
+  "en": "con…en…o (consent)"
+ },
+ "Ascoltiamo e completiamo le parole con m, n.": {
+  "vi": "Nghe và điền m hoặc n vào các từ.",
+  "en": "Let's listen and complete the words with m or n."
+ },
+ "i…pegno": {
+  "vi": "i…pegno (sự cam kết)",
+  "en": "i…pegno (commitment)"
+ },
+ "la…poni": {
+  "vi": "la…poni (quả mâm xôi)",
+  "en": "la…poni (raspberries)"
+ },
+ "o…brelli": {
+  "vi": "o…brelli (những chiếc ô)",
+  "en": "o…brelli (umbrellas)"
+ },
+ "ro…pere": {
+  "vi": "ro…pere (làm vỡ)",
+  "en": "ro…pere (to break)"
+ },
+ "co…dire": {
+  "vi": "co…dire (nêm gia vị)",
+  "en": "co…dire (to season)"
+ },
+ "po…piere": {
+  "vi": "po…piere (lính cứu hỏa)",
+  "en": "po…piere (firefighter)"
+ },
+ "i…verno": {
+  "vi": "i…verno (mùa đông)",
+  "en": "i…verno (winter)"
+ },
+ "ca…pana": {
+  "vi": "ca…pana (cái chuông)",
+  "en": "ca…pana (bell)"
+ },
+ "co…to": {
+  "vi": "co…to (hóa đơn, tài khoản)",
+  "en": "co…to (bill, account)"
+ },
+ "la…po": {
+  "vi": "la…po (tia chớp)",
+  "en": "la…po (lightning flash)"
+ },
+ "te…porale": {
+  "vi": "te…porale (cơn giông)",
+  "en": "te…porale (thunderstorm)"
+ },
+ "Ascoltiamo e completiamo le parole con b, bb, p, pp.": {
+  "vi": "Nghe và điền b, bb, p hoặc pp vào các từ.",
+  "en": "Let's listen and complete the words with b, bb, p or pp."
+ },
+ "a…astanza": {
+  "vi": "a…astanza (khá, đủ)",
+  "en": "a…astanza (enough)"
+ },
+ "a…arire": {
+  "vi": "a…arire (xuất hiện)",
+  "en": "a…arire (to appear)"
+ },
+ "incalcola…ile": {
+  "vi": "incalcola…ile (không tính được)",
+  "en": "incalcola…ile (incalculable)"
+ },
+ "o…erazione": {
+  "vi": "o…erazione (ca phẫu thuật, hoạt động)",
+  "en": "o…erazione (operation)"
+ },
+ "a…attere": {
+  "vi": "a…attere (đánh đổ)",
+  "en": "a…attere (to knock down)"
+ },
+ "impossi…ile": {
+  "vi": "impossi…ile (không thể)",
+  "en": "impossi…ile (impossible)"
+ },
+ "ba…uino": {
+  "vi": "ba…uino (khỉ đầu chó)",
+  "en": "ba…uino (baboon)"
+ },
+ "o…osto": {
+  "vi": "o…osto (ngược lại)",
+  "en": "o…osto (opposite)"
+ },
+ "a…e": {
+  "vi": "a…e (con ong)",
+  "en": "a…e (bee)"
+ },
+ "o…rimere": {
+  "vi": "o…rimere (áp bức)",
+  "en": "o…rimere (to oppress)"
+ },
+ "su…ito": {
+  "vi": "su…ito (ngay lập tức)",
+  "en": "su…ito (immediately)"
+ },
+ "Ascoltiamo e scriviamo le frasi.": {
+  "vi": "Nghe và viết lại các câu.",
+  "en": "Let's listen and write the sentences."
+ },
+ "1.": {
+  "vi": "Câu 1.",
+  "en": "Sentence 1."
+ },
+ "2.": {
+  "vi": "Câu 2.",
+  "en": "Sentence 2."
+ },
+ "3.": {
+  "vi": "Câu 3.",
+  "en": "Sentence 3."
+ },
+ "4.": {
+  "vi": "Câu 4.",
+  "en": "Sentence 4."
+ },
+ "5.": {
+  "vi": "Câu 5.",
+  "en": "Sentence 5."
+ },
+ "6.": {
+  "vi": "Câu 6.",
+  "en": "Sentence 6."
+ },
+ "7.": {
+  "vi": "Câu 7.",
+  "en": "Sentence 7."
+ },
+ "8.": {
+  "vi": "Câu 8.",
+  "en": "Sentence 8."
+ },
+ "Quando ci sono i pronomi diretti lo, la, li, le prima di un verbo al passato prossimo, il participio passato ha il genere (maschile o femminile) e il numero (singolare o plurale) del pronome:": {
+  "vi": "Khi có đại từ tân ngữ trực tiếp lo, la, li, le đứng trước động từ ở thì passato prossimo, quá khứ phân từ mang giống (đực hoặc cái) và số (ít hoặc nhiều) của đại từ:",
+  "en": "When the direct pronouns lo, la, li, le come before a verb in the passato prossimo, the past participle takes the gender (masculine or feminine) and number (singular or plural) of the pronoun:"
+ },
+ "I pronomi lo e la diventano l' davanti alle forme del verbo avere che cominciano per h o per a:": {
+  "vi": "Đại từ lo và la thành l' trước các dạng của động từ avere bắt đầu bằng h hoặc a:",
+  "en": "The pronouns lo and la become l' before forms of avere beginning with h or a:"
+ },
+ "Formiamo i pronomi combinati con i pronomi indiretti e i pronomi diretti:": {
+  "vi": "Ta tạo đại từ kép từ đại từ gián tiếp và đại từ trực tiếp:",
+  "en": "We form combined pronouns with indirect and direct pronouns:"
+ },
+ "Quando ci sono i pronomi combinati glielo, gliela, glieli, gliele prima di un verbo al passato prossimo, il participio passato ha il genere (maschile o femminile) e il numero (singolare o plurale) del pronome:": {
+  "vi": "Khi có đại từ kép glielo, gliela, glieli, gliele đứng trước động từ ở thì passato prossimo, quá khứ phân từ mang giống (đực hoặc cái) và số (ít hoặc nhiều) của đại từ:",
+  "en": "When the combined pronouns glielo, gliela, glieli, gliele come before a verb in the passato prossimo, the past participle takes the gender and number of the pronoun:"
+ },
+ "I pronomi combinati sono prima del verbo. Sono dopo il verbo:": {
+  "vi": "Đại từ kép đứng trước động từ. Chúng đứng sau động từ:",
+  "en": "Combined pronouns go before the verb. They go after the verb:"
+ },
+ "Ho bisogno del sale, passamelo per favore!": {
+  "vi": "Mình cần muối, đưa nó cho mình với!",
+  "en": "I need the salt, pass it to me please!"
+ },
+ "Se ci sono novità, ti prego di comunicarmele subito.": {
+  "vi": "Nếu có tin gì mới, làm ơn báo ngay cho mình nhé.",
+  "en": "If there's any news, please tell it to me straight away."
+ },
+ "Quando sono dopo il verbo, i pronomi combinati formano con il verbo una parola sola. Con i verbi servili (dovere, potere, volere) i pronomi combinati possono seguire il verbo all'infinito o precedere il verbo servile:": {
+  "vi": "Khi đứng sau động từ, đại từ kép viết liền với động từ thành một từ. Với các trợ động từ (dovere, potere, volere), đại từ kép có thể đứng sau động từ nguyên mẫu hoặc trước trợ động từ:",
+  "en": "When they come after the verb, combined pronouns form a single word with it. With modal verbs (dovere, potere, volere) combined pronouns can follow the infinitive or precede the modal verb:"
+ },
+ "farla finita =": {
+  "vi": "farla finita =",
+  "en": "farla finita ="
+ },
+ "Basta, fatela finita!": {
+  "vi": "Đủ rồi, thôi đi!",
+  "en": "Enough, stop it!"
+ },
+ "Era stanco di vivere e ha deciso di farla finita.": {
+  "vi": "Anh ta chán sống và quyết định tự tử.",
+  "en": "He was tired of living and decided to end it all."
+ },
+ "farla franca = non essere scoperto": {
+  "vi": "farla franca = không bị phát hiện, thoát tội",
+  "en": "farla franca = to get away with it"
+ },
+ "Questa volta il colpevole non è riuscito a farla franca.": {
+  "vi": "Lần này kẻ phạm tội đã không thoát được.",
+  "en": "This time the culprit didn't manage to get away with it."
+ },
+ "farla pagare (a una persona) = vendicarsi.": {
+  "vi": "farla pagare (ai đó) = trả thù.",
+  "en": "farla pagare (to someone) = to take revenge."
+ },
+ "Giuro che te la farò pagare.": {
+  "vi": "Tôi thề sẽ bắt anh phải trả giá.",
+  "en": "I swear I'll make you pay for it."
+ },
+ "finirla / smetterla = smettere, interrompere": {
+  "vi": "finirla / smetterla = thôi, ngừng lại",
+  "en": "finirla / smetterla = to stop, quit"
+ },
+ "Finiscila con questi capricci!": {
+  "vi": "Thôi ngay mấy trò nhõng nhẽo đi!",
+  "en": "Stop these tantrums!"
+ },
+ "Smettetela di fare chiasso!": {
+  "vi": "Thôi làm ồn đi!",
+  "en": "Stop making noise!"
+ },
+ "saperla lunga = essere molto furbo.": {
+  "vi": "saperla lunga = rất ranh mãnh.",
+  "en": "saperla lunga = to be very cunning."
+ },
+ "Mario la sa lunga, non ti fidare!": {
+  "vi": "Mario ranh lắm, đừng tin anh ta!",
+  "en": "Mario knows a thing or two, don't trust him!"
+ },
+ "cavarsela = superare abbastanza bene una situazione difficile": {
+  "vi": "cavarsela = vượt qua một tình huống khó khăn khá ổn",
+  "en": "cavarsela = to get through a difficult situation quite well"
+ },
+ "darsela a gambe / svignarsela = fuggire, scappare": {
+  "vi": "darsela a gambe / svignarsela = chạy trốn, chuồn",
+  "en": "darsela a gambe / svignarsela = to run away, escape"
+ },
+ "I ladri se la sono data a gambe.": {
+  "vi": "Bọn trộm đã chạy mất.",
+  "en": "The thieves took to their heels."
+ },
+ "prendersela = offendersi, arrabbiarsi": {
+  "vi": "prendersela = phật lòng, nổi giận",
+  "en": "prendersela = to take offence, get angry"
+ },
+ "Non te la prendere per questa sciocchezza!": {
+  "vi": "Đừng giận vì chuyện vặt này!",
+  "en": "Don't get upset over this silly thing!"
+ },
+ "vedersela brutta = essere in pericolo": {
+  "vi": "vedersela brutta = gặp nguy hiểm",
+  "en": "vedersela brutta = to be in danger"
+ },
+ "Ho avuto un incidente e me la sono vista brutta.": {
+  "vi": "Tôi bị tai nạn và suýt nữa thì nguy.",
+  "en": "I had an accident and it was a close call."
+ },
+ "ci = in quel luogo, lì; in questo luogo, qui": {
+  "vi": "ci = ở nơi đó, ở đó; ở nơi này, ở đây",
+  "en": "ci = in that place, there; in this place, here"
+ },
+ "Il pronome ci sostituisce:": {
+  "vi": "Đại từ ci thay cho:",
+  "en": "The pronoun ci replaces:"
+ },
+ "a lui, a lei, a loro o a questa cosa:": {
+  "vi": "về anh ấy, cô ấy, họ hoặc về điều này:",
+  "en": "him, her, them or this thing (with a):"
+ },
+ "su di lui, su di lei, su di loro o su questa cosa:": {
+  "vi": "vào anh ấy, cô ấy, họ hoặc vào điều này:",
+  "en": "on him, her, them or on this thing:"
+ },
+ "di questa cosa:": {
+  "vi": "về điều này:",
+  "en": "about this thing:"
+ },
+ "in questa cosa, a fare questa cosa:": {
+  "vi": "trong việc này, làm việc này:",
+  "en": "in this thing, to do this thing:"
+ },
+ "con lui, con lei, con loro:": {
+  "vi": "với anh ấy, cô ấy, họ:",
+  "en": "with him, her, them:"
+ },
+ "averci = avere": {
+  "vi": "averci = có",
+  "en": "averci = to have"
+ },
+ "entrarci = avere relazione con qualcosa": {
+  "vi": "entrarci = có liên quan đến cái gì",
+  "en": "entrarci = to have to do with something"
+ },
+ "Questo non c'entra con quello che stavo dicendo.": {
+  "vi": "Chuyện này không liên quan đến điều tôi đang nói.",
+  "en": "This has nothing to do with what I was saying."
+ },
+ "In tutta questa storia io non c'entro niente.": {
+  "vi": "Trong toàn bộ chuyện này tôi chẳng liên quan gì.",
+  "en": "I have nothing to do with this whole story."
+ },
+ "metterci = impiegare": {
+  "vi": "metterci = mất (thời gian)",
+  "en": "metterci = to take (time)"
+ },
+ "restarci (o rimanerci) male = offendersi": {
+  "vi": "restarci (hoặc rimanerci) male = phật lòng",
+  "en": "restarci (or rimanerci) male = to be hurt, offended"
+ },
+ "Quando lo hai criticato ci è rimasto male.": {
+  "vi": "Khi bạn chê anh ấy, anh ấy đã buồn lắm.",
+  "en": "When you criticised him he was hurt."
+ },
+ "starci = essere d'accordo": {
+  "vi": "starci = đồng ý",
+  "en": "starci = to agree, be up for it"
+ },
+ "volerci = essere necessario": {
+  "vi": "volerci = cần (mất bao lâu, bao nhiêu)",
+  "en": "volerci = to be necessary, to take"
+ },
+ "Il pronome ne sostituisce:": {
+  "vi": "Đại từ ne thay cho:",
+  "en": "The pronoun ne replaces:"
+ },
+ "di lui, di lei, di loro:": {
+  "vi": "về anh ấy, cô ấy, họ:",
+  "en": "of/about him, her, them:"
+ },
+ "Ti sei sposato! Sono contento di questa cosa.": {
+  "vi": "Bạn lấy vợ rồi à! Mình mừng về chuyện này.",
+  "en": "You got married! I'm happy about it."
+ },
+ "Il pronome ne può anche indicare una quantità, una parte di qualcosa (ne partitivo):": {
+  "vi": "Đại từ ne cũng có thể chỉ một lượng, một phần của cái gì (ne bộ phận):",
+  "en": "The pronoun ne can also indicate a quantity, a part of something (partitive ne):"
+ },
+ "Quando il pronome ne è prima di un verbo al passato prossimo, il participio passato ha il genere (maschile o femminile) e il numero (singolare o plurale) del nome che il pronome sostituisce:": {
+  "vi": "Khi đại từ ne đứng trước động từ ở thì passato prossimo, quá khứ phân từ mang giống (đực hoặc cái) và số (ít hoặc nhiều) của danh từ mà đại từ thay thế:",
+  "en": "When ne comes before a verb in the passato prossimo, the past participle takes the gender and number of the noun the pronoun replaces:"
+ },
+ "farne (o combinarne) di tutti i colori = fare guai": {
+  "vi": "farne (hoặc combinarne) di tutti i colori = gây đủ thứ rắc rối",
+  "en": "farne (or combinarne) di tutti i colori = to get up to all sorts of mischief"
+ },
+ "Quando eri piccolo, ne facevi di tutti i colori!": {
+  "vi": "Hồi nhỏ con nghịch đủ trò!",
+  "en": "When you were little you got up to all sorts of mischief!"
+ },
+ "non poterne più / averne abbastanza / averne fin sopra i capelli = essere stufo": {
+  "vi": "non poterne più / averne abbastanza / averne fin sopra i capelli = chán ngấy",
+  "en": "non poterne più / averne abbastanza / averne fin sopra i capelli = to be fed up"
+ },
+ "Non ne posso più delle sue chiacchiere!": {
+  "vi": "Tôi chịu hết nổi những lời lải nhải của anh ta!",
+  "en": "I can't stand his chatter any more!"
+ },
+ "Ne ho abbastanza di lui e delle sue bugie!": {
+  "vi": "Tôi chán ngấy anh ta và những lời dối trá của anh ta rồi!",
+  "en": "I've had enough of him and his lies!"
+ },
+ "Ne ho fin sopra i capelli di tutti questi litigi!": {
+  "vi": "Tôi ngấy đến tận cổ những cuộc cãi vã này!",
+  "en": "I'm sick to death of all these quarrels!"
+ },
+ "valerne la pena = essere vantaggioso, utile": {
+  "vi": "valerne la pena = đáng giá, có ích",
+  "en": "valerne la pena = to be worth it"
+ },
+ "Il viaggio è faticoso, ma ne vale la pena.": {
+  "vi": "Chuyến đi mệt nhưng đáng công.",
+  "en": "The journey is tiring, but it's worth it."
+ },
+ "aversene a male = offendersi": {
+  "vi": "aversene a male = phật lòng",
+  "en": "aversene a male = to take offence"
+ },
+ "Non te ne avere a male per così poco!": {
+  "vi": "Đừng phật lòng vì chuyện nhỏ thế!",
+  "en": "Don't take offence over such a little thing!"
+ },
+ "• Mi puoi prestare la tua forchetta? ○ No, non … … presto perché è sporca.": {
+  "vi": "• Bạn cho mình mượn cái nĩa được không? ○ Không, mình không cho … … mượn được vì nó bẩn.",
+  "en": "• Can you lend me your fork? ○ No, I won't lend … … to you because it's dirty."
+ },
+ "• Chi vi lasciato le chiavi? ○ … … ha lasciate Pina.": {
+  "vi": "• Ai đã để lại chìa khóa cho các bạn? ○ Pina đã để … … lại.",
+  "en": "• Who left you the keys? ○ Pina left … … for us."
+ },
+ "• Gli avete portato i giornali? ○ No, ancora non … abbiamo portati.": {
+  "vi": "• Các bạn đã mang báo cho anh ấy chưa? ○ Chưa, chúng tôi chưa mang … đến.",
+  "en": "• Have you taken him the newspapers? ○ No, we haven't taken … to him yet."
+ },
+ "• Le hai detto la verità? ○ No, non … ho detta, non avevo il coraggio.": {
+  "vi": "• Bạn đã nói sự thật với cô ấy chưa? ○ Chưa, mình chưa nói …, mình không đủ can đảm.",
+  "en": "• Did you tell her the truth? ○ No, I didn't tell … to her, I didn't have the courage."
+ },
+ "Avevo prestato un libro a Daniela ma non … ha restituito.": {
+  "vi": "Tôi đã cho Daniela mượn một cuốn sách nhưng cô ấy chưa trả … cho tôi.",
+  "en": "I'd lent Daniela a book but she hasn't given … back to me."
+ },
+ "• Hanno comprato il regalo a Beatrice? ○ Sì, … hanno comprato ieri.": {
+  "vi": "• Họ đã mua quà cho Beatrice chưa? ○ Rồi, họ đã mua … hôm qua.",
+  "en": "• Did they buy Beatrice's present? ○ Yes, they bought … for her yesterday."
+ },
+ "• Chi ha preparato la cena ai bambini? ○ … ha preparata la nonna.": {
+  "vi": "• Ai đã nấu bữa tối cho bọn trẻ? ○ Bà đã nấu ….",
+  "en": "• Who made dinner for the children? ○ Grandma made … for them."
+ },
+ "Anna gli ha chiesto un favore, ma lui non … ha fatto.": {
+  "vi": "Anna nhờ anh ấy một việc nhưng anh ấy đã không làm ….",
+  "en": "Anna asked him a favour, but he didn't do … for her."
+ },
+ "• Quando ci presenti la tua fidanzata? ○ … presento sabato.": {
+  "vi": "• Khi nào bạn giới thiệu bạn gái với chúng mình? ○ … giới thiệu vào thứ Bảy.",
+  "en": "• When will you introduce your girlfriend to us? ○ I'll introduce … to you on Saturday."
+ },
+ "• Vi hanno portato il pane? ○ No, non … … hanno portato.": {
+  "vi": "• Họ đã mang bánh mì cho các bạn chưa? ○ Chưa, họ chưa mang … … đến.",
+  "en": "• Did they bring you the bread? ○ No, they didn't bring … … to us."
+ },
+ "Siete riusciti a prendere il treno?": {
+  "vi": "Các bạn có kịp bắt tàu không?",
+  "en": "Did you manage to catch the train?"
+ },
+ "Sapete qualcosa di Piero?": {
+  "vi": "Các bạn có biết tin gì về Piero không?",
+  "en": "Do you know anything about Piero?"
+ },
+ "Hai comprato la frutta?": {
+  "vi": "Bạn đã mua trái cây chưa?",
+  "en": "Did you buy the fruit?"
+ },
+ "La festa a casa di Michele era noiosa,": {
+  "vi": "Bữa tiệc ở nhà Michele chán quá,",
+  "en": "The party at Michele's was boring,"
+ },
+ "Hai voglia di un gelato?": {
+  "vi": "Bạn có thèm kem không?",
+  "en": "Do you feel like an ice cream?"
+ },
+ "Arturo ha detto che viene domani,": {
+  "vi": "Arturo nói ngày mai anh ấy đến,",
+  "en": "Arturo said he's coming tomorrow,"
+ },
+ "Andiamo al cinema,": {
+  "vi": "Đi xem phim đi,",
+  "en": "Let's go to the cinema,"
+ },
+ "Hai una penna da prestarmi?": {
+  "vi": "Bạn có cây bút nào cho mình mượn không?",
+  "en": "Have you got a pen to lend me?"
+ },
+ "Ti ricordi di passare da Matteo?": {
+  "vi": "Bạn có nhớ ghé qua chỗ Matteo không?",
+  "en": "Will you remember to stop by Matteo's?"
+ },
+ "Avete bisogno della macchina?": {
+  "vi": "Các bạn có cần xe ô tô không?",
+  "en": "Do you need the car?"
+ },
+ "Per andare a Bologna": {
+  "vi": "Để đến Bologna",
+  "en": "To get to Bologna"
+ },
+ "ci metto due ore.": {
+  "vi": "tôi mất hai tiếng.",
+  "en": "it takes me two hours."
+ },
+ "così …… …… sono andato subito.": {
+  "vi": "nên …… …… đã về ngay.",
+  "en": "so I left …… …… straight away."
+ },
+ "No, grazie, non …… abbiamo bisogno.": {
+  "vi": "Không, cảm ơn, chúng tôi không …… cần.",
+  "en": "No, thanks, we don't need …… ."
+ },
+ "Sì, …… …… ho, come …… vuoi: nera o rossa?": {
+  "vi": "Có, …… …… có, bạn muốn …… màu gì: đen hay đỏ?",
+  "en": "Yes, I've got …… ……, how do you want ……: black or red?"
+ },
+ "Sì, …… …… ricordo, non ti preoccupare.": {
+  "vi": "Có, …… …… nhớ, đừng lo.",
+  "en": "Yes, I'll remember …… ……, don't worry."
+ },
+ "No, …… …… sono dimenticato, scusa.": {
+  "vi": "Không, …… …… quên mất, xin lỗi.",
+  "en": "No, I forgot …… ……, sorry."
+ },
+ "Sì, …… …… abbiamo fatta.": {
+  "vi": "Có, …… …… làm được.",
+  "en": "Yes, we made …… …… ."
+ },
+ "No, non …… sappiamo niente, perché?": {
+  "vi": "Không, chúng tôi chẳng biết gì …… cả, sao vậy?",
+  "en": "No, we don't know anything …… , why?"
+ },
+ "che …… dici?": {
+  "vi": "bạn nghĩ sao ……?",
+  "en": "what do you think …… ?"
+ },
+ "ma io non …… credo.": {
+  "vi": "nhưng tôi không tin …… .",
+  "en": "but I don't believe …… ."
+ },
+ "Sì, …… ho proprio voglia! Come …… prendiamo?": {
+  "vi": "Có, mình thèm …… lắm! Mình lấy …… vị gì đây?",
+  "en": "Yes, I really feel like …… ! How shall we have …… ?"
+ },
+ "Completiamo con i pronomi.": {
+  "vi": "Điền đại từ.",
+  "en": "Complete with the pronouns."
+ },
+ "b. così … … sono andato subito.": {
+  "vi": "b. nên … … đã về ngay.",
+  "en": "b. so I left … … straight away."
+ },
+ "c. No, grazie, non … abbiamo bisogno.": {
+  "vi": "c. Không, cảm ơn, chúng tôi không … cần.",
+  "en": "c. No, thanks, we don't need … ."
+ },
+ "d. Sì, … … ho, come … vuoi: nera o rossa?": {
+  "vi": "d. Có, … … có, bạn muốn … màu gì: đen hay đỏ?",
+  "en": "d. Yes, I've got … …, how do you want …: black or red?"
+ },
+ "e. Sì, … … ricordo, non ti preoccupare.": {
+  "vi": "e. Có, … … nhớ, đừng lo.",
+  "en": "e. Yes, I'll remember … …, don't worry."
+ },
+ "f. No, … … sono dimenticato, scusa.": {
+  "vi": "f. Không, … … quên mất, xin lỗi.",
+  "en": "f. No, I forgot … …, sorry."
+ },
+ "g. Sì, … … abbiamo fatta.": {
+  "vi": "g. Có, … … làm được.",
+  "en": "g. Yes, we made … … ."
+ },
+ "h. No, non … sappiamo niente, perché?": {
+  "vi": "h. Không, chúng tôi chẳng biết gì … cả, sao vậy?",
+  "en": "h. No, we don't know anything … , why?"
+ },
+ "i. che … dici?": {
+  "vi": "i. bạn nghĩ sao …?",
+  "en": "i. what do you think … ?"
+ },
+ "l. ma io non … credo.": {
+  "vi": "l. nhưng tôi không tin … .",
+  "en": "l. but I don't believe … ."
+ },
+ "m. Sì, … ho proprio voglia! Come … prendiamo?": {
+  "vi": "m. Có, mình thèm … lắm! Mình lấy … vị gì đây?",
+  "en": "m. Yes, I really feel like … ! How shall we have … ?"
+ },
+ "• Mi hai portato il libro? ○ Sì, … … ho portato.": {
+  "vi": "• Bạn đã mang sách cho mình chưa? ○ Rồi, mình đã mang … … đến.",
+  "en": "• Did you bring me the book? ○ Yes, I brought … … to you."
+ },
+ "• Hai preparato la torta di mele? ○ No, non … sono riuscito.": {
+  "vi": "• Bạn đã làm bánh táo chưa? ○ Chưa, mình không làm … được.",
+  "en": "• Did you make the apple cake? ○ No, I didn't manage … ."
+ },
+ "• Quanti cappuccini hai bevuto? ○ … ho bevuti due.": {
+  "vi": "• Bạn đã uống mấy ly cappuccino? ○ … đã uống hai ly.",
+  "en": "• How many cappuccinos did you drink? ○ I drank two … ."
+ },
+ "• Sai che Pino è un bravo cuoco? ○ Sì, … … sono accorto: cucina benissimo!": {
+  "vi": "• Bạn biết Pino nấu ăn giỏi không? ○ Có, … … đã nhận ra: anh ấy nấu tuyệt lắm!",
+  "en": "• Do you know Pino is a good cook? ○ Yes, I've noticed … …: he cooks brilliantly!"
+ },
+ "Ieri non … … ho fatta a prendere l'autobus.": {
+  "vi": "Hôm qua tôi đã không … … bắt kịp xe buýt.",
+  "en": "Yesterday I didn't manage … … to catch the bus."
+ },
+ "Chi ha “mangiato” la pasta?": {
+  "vi": "Ai đã “ăn mất” mì ống?",
+  "en": "Who “ate” the pasta?"
+ },
+ "In dieci anni, purtroppo, sono spariti in Italia 250 tipi di pasta: siamo passati da 450 a 200 tipi. Gianni Mondelli, un esperto del settore, ci spiega che la differenza dei formati è il simbolo di una grande varietà culturale: per farsene un'idea basta viaggiare per tutta la penisola. Un napoletano potrebbe stupirvi mentre descrive le differenze fra una “penna liscia” e una “penna rigata”; un pugliese non rinuncerebbe mai alle orecchiette fatte in casa; un genovese vi parlerebbe della bontà delle trofie al pesto; un lombardo della Valtellina vi inviterebbe a gustare i pizzoccheri. Se non avete mai provato questi piatti, non avete ancora capito qual è la differenza fra “mangiare la pasta” e “gustare la tradizione italiana”.": {
+  "vi": "Thật đáng tiếc, trong mười năm ở Ý đã biến mất 250 loại mì: từ 450 loại còn 200. Gianni Mondelli, một chuyên gia trong ngành, giải thích rằng sự khác nhau về hình dạng mì là biểu tượng của sự đa dạng văn hóa lớn: để hình dung điều đó chỉ cần đi khắp bán đảo. Một người Napoli có thể khiến bạn ngạc nhiên khi tả sự khác nhau giữa “penna trơn” và “penna có rãnh”; một người Puglia sẽ không bao giờ từ bỏ món orecchiette tự làm; một người Genova sẽ kể cho bạn về độ ngon của trofie sốt pesto; một người Lombardia vùng Valtellina sẽ mời bạn thưởng thức pizzoccheri. Nếu chưa từng thử những món này, bạn vẫn chưa hiểu sự khác nhau giữa “ăn mì” và “thưởng thức truyền thống Ý”.",
+  "en": "In ten years, unfortunately, 250 types of pasta have disappeared in Italy: we've gone from 450 to 200 types. Gianni Mondelli, an expert in the sector, explains that the difference in shapes is the symbol of great cultural variety: to get an idea, you just have to travel around the peninsula. A Neapolitan could amaze you as he describes the differences between a “smooth penna” and a “ridged penna”; someone from Puglia would never give up homemade orecchiette; a Genoese would tell you about the goodness of trofie with pesto; a Lombard from Valtellina would invite you to taste pizzoccheri. If you've never tried these dishes, you haven't yet understood the difference between “eating pasta” and “savouring Italian tradition”."
+ },
+ "Sapete quali sono i pastifici più importanti in Italia?": {
+  "vi": "Các bạn có biết những hãng sản xuất mì quan trọng nhất ở Ý không?",
+  "en": "Do you know which are the most important pasta makers in Italy?"
+ },
+ "Mangiate spesso la pasta?": {
+  "vi": "Các bạn có hay ăn mì ống không?",
+  "en": "Do you often eat pasta?"
+ },
+ "Qual è il tipo di pasta che vi piace di più?": {
+  "vi": "Loại mì nào các bạn thích nhất?",
+  "en": "Which type of pasta do you like best?"
+ },
+ "Ho cucinato tutto il giorno, per te, mio caro Antonio.": {
+  "vi": "Mình đã nấu cả ngày, vì bạn đấy, Antonio thân mến.",
+  "en": "I've cooked all day, for you, my dear Antonio."
+ },
+ "Avrei voluto cucinare di più: comunque devi mangiare tutto!": {
+  "vi": "Lẽ ra mình đã muốn nấu nhiều hơn: dù sao bạn cũng phải ăn hết đấy!",
+  "en": "I'd have liked to cook more: anyway, you must eat everything!"
+ },
+ "Ma, io…": {
+  "vi": "Nhưng, mình…",
+  "en": "But, I…"
+ },
+ "Sophia Loren": {
+  "vi": "Sophia Loren (nữ diễn viên Ý)",
+  "en": "Sophia Loren (Italian actress)"
+ },
+ "– Nome: Sophia Loren (nome d'arte di Sofia Scicolone). – Nasce a Roma nel 1934. – Chi è? È una famosa attrice italiana. Ha cominciato la sua carriera nel 1954 con L'oro di Napoli e ha recitato in tanti film: Ieri, oggi e domani (1963), Matrimonio all'italiana (1964), La contessa di Hong Kong (1967), I girasoli (1970), Una giornata particolare (1977). Molti registi italiani e stranieri l'hanno considerata l'attrice più rappresentativa del cinema italiano.": {
+  "vi": "– Tên: Sophia Loren (nghệ danh của Sofia Scicolone). – Sinh tại Roma năm 1934. – Bà là ai? Một nữ diễn viên nổi tiếng người Ý. Bà bắt đầu sự nghiệp năm 1954 với phim “Vàng của Napoli” và đóng rất nhiều phim: “Hôm qua, hôm nay và ngày mai” (1963), “Hôn nhân kiểu Ý” (1964), “Nữ bá tước Hồng Kông” (1967), “Hoa hướng dương” (1970), “Một ngày đặc biệt” (1977). Nhiều đạo diễn Ý và nước ngoài coi bà là nữ diễn viên tiêu biểu nhất của điện ảnh Ý.",
+  "en": "– Name: Sophia Loren (stage name of Sofia Scicolone). – Born in Rome in 1934. – Who is she? A famous Italian actress. She began her career in 1954 with The Gold of Naples and acted in many films: Yesterday, Today and Tomorrow (1963), Marriage Italian Style (1964), A Countess from Hong Kong (1967), Sunflower (1970), A Special Day (1977). Many Italian and foreign directors have considered her the most representative actress of Italian cinema."
+ },
+ "Nel 1960 ha ottenuto la Palma d'oro al festival di Cannes e nel 1961 il premio Oscar per la sua interpretazione nel film La ciociara. Ha lavorato spesso con l'attore Marcello Mastroianni e con il regista Vittorio de Sica. Nel 1991 ha ricevuto il premio Oscar alla carriera e nel 1998 il Leone d'oro al Festival di Venezia. Sophia Loren piace agli italiani perché è un simbolo di bellezza e di femminilità. L'attrice, da tempo, si interessa anche alla grande tradizione gastronomica del nostro paese e ha pubblicato un libro di ricette.": {
+  "vi": "Năm 1960 bà giành Cành cọ vàng tại liên hoan Cannes và năm 1961 giải Oscar cho vai diễn trong phim “Hai người đàn bà”. Bà thường làm việc với nam diễn viên Marcello Mastroianni và đạo diễn Vittorio de Sica. Năm 1991 bà nhận giải Oscar thành tựu trọn đời và năm 1998 giải Sư tử vàng tại Liên hoan Venezia. Người Ý yêu mến Sophia Loren vì bà là biểu tượng của sắc đẹp và nữ tính. Từ lâu, bà cũng quan tâm đến truyền thống ẩm thực lớn của đất nước chúng tôi và đã xuất bản một cuốn sách công thức nấu ăn.",
+  "en": "In 1960 she won the Palme d'Or at the Cannes festival and in 1961 the Oscar for her performance in the film Two Women. She often worked with the actor Marcello Mastroianni and the director Vittorio de Sica. In 1991 she received an honorary Oscar and in 1998 the Golden Lion at the Venice Festival. Italians love Sophia Loren because she is a symbol of beauty and femininity. For some time the actress has also been interested in our country's great culinary tradition and has published a recipe book."
+ },
+ "Osserviamo e abbiniamo le immagini alle frasi.": {
+  "vi": "Quan sát và nối các bức ảnh với các câu.",
+  "en": "Let's look and match the pictures to the sentences."
  }
 }
