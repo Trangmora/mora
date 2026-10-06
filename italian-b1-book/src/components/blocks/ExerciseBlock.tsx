@@ -24,7 +24,7 @@ export function itemCount(ex: Exercise) {
   // Bài nối và mẫu đơn giữ nguyên một khối như sách.
   if ((ex.kind === "speak" || ex.kind === "fill") && ex.layout === "board") return 0;
   // Khung "Ora sono capace di…" giữ nguyên một khối 2 cột.
-  if (ex.variant === "capace") return 0;
+  if (ex.variant === "capace" || ex.variant === "twoCol") return 0;
   return ex.kind === "match" || ex.kind === "form" || ex.kind === "cloze" ? 0 : ex.items.length;
 }
 
@@ -295,7 +295,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
             return (
               <li key={it.id} className="ex-item">
                 <span className="line">
-                  {it.prompt} <TrIcon text={`${it.prompt} ${it.options.map((o, k) => `(${String.fromCharCode(97 + k)}) ${o}`).join(" ")}`} /> <Mark r={r} />
+                  {inline(it.prompt)} <TrIcon text={`${it.prompt} ${it.options.map((o, k) => `(${String.fromCharCode(97 + k)}) ${o}`).join(" ")}`} /> <Mark r={r} />
                 </span>
                 <span className="options">
                   {it.options.map((o, k) => (
