@@ -4977,3 +4977,30 @@ button.ds-card {
 .theory-cols.single {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* Bài "sottolineiamo": các lựa chọn trên cùng một dòng, bấm vào từ để gạch chân. */
+.book-page .inline-choice .ic-opt {
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+.book-page .inline-choice .ic-opt input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.book-page .inline-choice .ic-opt:hover {
+  background: rgba(216, 51, 58, 0.08);
+}
+.book-page .inline-choice .ic-opt.sel {
+  color: #c8372d;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.book-page .inline-choice .ic-opt.is-answer {
+  outline: 1.5px dashed #2e9d57;
+}
+.book-page .inline-choice .ic-sep {
+  color: #777;
+}

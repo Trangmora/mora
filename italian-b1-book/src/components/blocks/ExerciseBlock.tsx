@@ -292,6 +292,32 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
         <ol className="ex-items" start={start}>
           {pick(ex.items).map((it) => {
             const r = results.get(it.id);
+            if (ex.inline)
+              return (
+                <li key={it.id} className="ex-item inline-choice">
+                  <span className="line">
+                    {it.prompt && <>{inline(it.prompt)} </>}
+                    {it.options.map((o, k) => (
+                      <span key={k}>
+                        {k > 0 && <span className="ic-sep"> / </span>}
+                        <label
+                          className={`ic-opt ${responses[it.id] === String(k) ? "sel" : ""} ${showAnswers && k === it.answer ? "is-answer" : ""}`}
+                        >
+                          <input
+                            type="radio"
+                            name={`${radioPrefix}${ex.id}-${it.id}`}
+                            checked={responses[it.id] === String(k)}
+                            onChange={() => set(it.id, String(k))}
+                          />
+                          {o}
+                        </label>
+                      </span>
+                    ))}{" "}
+                    {it.prompt ? <TrIcon text={it.prompt} /> : null} <Mark r={r} />
+                  </span>
+                  <Margin show={false} r={r} />
+                </li>
+              );
             return (
               <li key={it.id} className="ex-item">
                 <span className="line">

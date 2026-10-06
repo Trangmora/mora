@@ -37,7 +37,7 @@ const page: BookPage = {
             it: "– Nome: Antonio De Curtis.\n– Nasce a Napoli il 15 febbraio 1898.\n– Muore il 15 aprile 1967.\n– Chi è? È un grande attore comico italiano. Fin da piccolo vuole diventare attore, ma la madre non è d'accordo: Totò decide allora di fare il prete, poi l'imbianchino; infine, poiché non finisce gli studi, entra nell'esercito.",
           },
         ],
-        [{ type: "image", src: "images/u2/p41-toto.svg", alt: "Totò dietro le sbarre con il cappello" }],
+        [{ type: "image", src: "images/u2/p41-toto.jpg", alt: "Totò dietro le sbarre con il cappello" }],
       ],
     },
     {
@@ -55,9 +55,9 @@ const page: BookPage = {
         instruction: "Leggiamo e abbiniamo le frasi di Totò alle immagini.",
         tr: { vi: "Đọc và nối các câu nói của Totò với các bức tranh.", en: "Let's read and match Totò's lines to the pictures." },
         left: [
-          { id: "1", text: "Una bella donna e Totò per terra.", image: "images/u2/p41-1.svg" },
-          { id: "2", text: "Totò con mezzo uovo in ogni mano.", image: "images/u2/p41-2.svg" },
-          { id: "3", text: "Totò e una signora anziana.", image: "images/u2/p41-3.svg" },
+          { id: "1", text: "Una bella donna e Totò per terra.", image: "images/u2/p41-1.jpg" },
+          { id: "2", text: "Totò con mezzo uovo in ogni mano.", image: "images/u2/p41-2.jpg" },
+          { id: "3", text: "Totò e una signora anziana.", image: "images/u2/p41-3.jpg" },
         ],
         right: [
           { id: "a", text: "Sulla famiglia: “A proposito della Befana, devo fare gli auguri a mia suocera”." },

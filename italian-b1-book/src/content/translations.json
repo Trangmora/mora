@@ -3626,5 +3626,1317 @@
  "○ Stavo ancora cenando.": {
   "en": "○ I was still having dinner.",
   "vi": "○ Mình vẫn đang ăn tối."
+ },
+ "Ascoltiamo i dialoghi e abbiniamo i nomi degli autori ai titoli dei libri.": {
+  "vi": "Nghe các đoạn hội thoại và nối tên tác giả với tên sách.",
+  "en": "Let's listen to the dialogues and match the authors' names to the book titles."
+ },
+ "Oriana Fallaci": {
+  "vi": "Oriana Fallaci (nhà văn, nhà báo Ý)",
+  "en": "Oriana Fallaci (Italian writer and journalist)"
+ },
+ "Luis Sepúlveda": {
+  "vi": "Luis Sepúlveda (nhà văn Chile)",
+  "en": "Luis Sepúlveda (Chilean writer)"
+ },
+ "Dan Brown": {
+  "vi": "Dan Brown (nhà văn Mỹ)",
+  "en": "Dan Brown (American writer)"
+ },
+ "Carlo Collodi": {
+  "vi": "Carlo Collodi (nhà văn Ý, tác giả Pinocchio)",
+  "en": "Carlo Collodi (Italian writer, author of Pinocchio)"
+ },
+ "Antoine de Saint-Exupéry": {
+  "vi": "Antoine de Saint-Exupéry (nhà văn Pháp)",
+  "en": "Antoine de Saint-Exupéry (French writer)"
+ },
+ "José Saramago": {
+  "vi": "José Saramago (nhà văn Bồ Đào Nha)",
+  "en": "José Saramago (Portuguese writer)"
+ },
+ "Umberto Eco": {
+  "vi": "Umberto Eco (nhà văn Ý)",
+  "en": "Umberto Eco (Italian writer)"
+ },
+ "Margaret Mazzantini": {
+  "vi": "Margaret Mazzantini (nhà văn Ý)",
+  "en": "Margaret Mazzantini (Italian writer)"
+ },
+ "Il Codice Da Vinci": {
+  "vi": "Mật mã Da Vinci",
+  "en": "The Da Vinci Code"
+ },
+ "Non ti muovere": {
+  "vi": "Đừng đi (Đừng nhúc nhích)",
+  "en": "Don't Move"
+ },
+ "Il nome della rosa": {
+  "vi": "Tên của đóa hồng",
+  "en": "The Name of the Rose"
+ },
+ "Memoriale del convento": {
+  "vi": "Ký sự tu viện",
+  "en": "Baltasar and Blimunda (Memorial of the Convent)"
+ },
+ "Pinocchio": {
+  "vi": "Pinocchio",
+  "en": "Pinocchio"
+ },
+ "La gabbianella e il gatto": {
+  "vi": "Chuyện con mèo dạy hải âu bay",
+  "en": "The Story of a Seagull and the Cat Who Taught Her to Fly"
+ },
+ "Il piccolo principe": {
+  "vi": "Hoàng tử bé",
+  "en": "The Little Prince"
+ },
+ "Un uomo": {
+  "vi": "Một người đàn ông",
+  "en": "A Man"
+ },
+ "Quanto tempo dedicate alla lettura?": {
+  "vi": "Các bạn dành bao nhiêu thời gian để đọc sách?",
+  "en": "How much time do you spend reading?"
+ },
+ "Quale genere di libri preferite?": {
+  "vi": "Các bạn thích thể loại sách nào?",
+  "en": "What kind of books do you prefer?"
+ },
+ "Qual è il vostro autore preferito?": {
+  "vi": "Tác giả yêu thích của các bạn là ai?",
+  "en": "Who is your favourite author?"
+ },
+ "Avete mai letto libri di autori italiani? Quali?": {
+  "vi": "Các bạn đã bao giờ đọc sách của tác giả Ý chưa? Những cuốn nào?",
+  "en": "Have you ever read books by Italian authors? Which ones?"
+ },
+ "Avete letto qualche libro fra quelli dell'attività 1?": {
+  "vi": "Các bạn đã đọc cuốn nào trong số các sách ở bài 1 chưa?",
+  "en": "Have you read any of the books from activity 1?"
+ },
+ "Quale libro avete letto di recente? Qual è la trama?": {
+  "vi": "Gần đây các bạn đã đọc cuốn sách nào? Cốt truyện là gì?",
+  "en": "What book have you read recently? What is the plot?"
+ },
+ "Il romanzo ha appassionato lettori e lettrici di ogni età. Una nonna racconta, in una lunga lettera a una nipote lontana, una storia ricca di sentimento.": {
+  "vi": "Cuốn tiểu thuyết đã làm say mê độc giả ở mọi lứa tuổi. Một người bà kể lại, trong một bức thư dài gửi cho cháu gái ở xa, một câu chuyện giàu tình cảm.",
+  "en": "The novel has captivated readers of all ages. A grandmother tells, in a long letter to a faraway granddaughter, a story full of feeling."
+ },
+ "New York è la città delle occasioni. Qui arrivano dodicimila stranieri al giorno. A New York nel 1903 arrivano anche dalla lontana Italia Diamante e Vita, due ragazzini di dodici e nove anni. Una storia buffa, comica, ma anche amara e dolorosa: la storia di una famiglia e insieme la storia di tutti noi alla ricerca della felicità.": {
+  "vi": "New York là thành phố của những cơ hội. Mỗi ngày có mười hai nghìn người nước ngoài đến đây. Năm 1903, từ nước Ý xa xôi cũng có Diamante và Vita đến New York, hai đứa trẻ mười hai và chín tuổi. Một câu chuyện buồn cười, hài hước nhưng cũng cay đắng và đau đớn: câu chuyện của một gia đình và đồng thời là câu chuyện của tất cả chúng ta trên hành trình tìm kiếm hạnh phúc.",
+  "en": "New York is the city of opportunities. Twelve thousand foreigners arrive here every day. In 1903 Diamante and Vita, two children aged twelve and nine, also arrive in New York from faraway Italy. A funny, comic story, but also bitter and painful: the story of a family and at the same time the story of all of us in search of happiness."
+ },
+ "La noia ci offre un ritratto profondo di una persona sola. Il protagonista non ha una vita sociale e si scontra con un'assurda realtà. Moravia lo descrive da diversi punti di vista: come artista, come uomo e come amante.": {
+  "vi": "“Sự nhàm chán” cho ta một chân dung sâu sắc về một con người cô đơn. Nhân vật chính không có đời sống xã hội và va chạm với một thực tại phi lý. Moravia miêu tả anh ta từ nhiều góc nhìn: như một nghệ sĩ, một người đàn ông và một người tình.",
+  "en": "Boredom offers us a deep portrait of a lonely person. The protagonist has no social life and clashes with an absurd reality. Moravia describes him from different points of view: as an artist, as a man and as a lover."
+ },
+ "Leggiamo e abbiniamo i testi ai libri dell'attività precedente.": {
+  "vi": "Đọc và nối các đoạn văn với các cuốn sách ở bài trước.",
+  "en": "Let's read and match the texts to the books in the previous activity."
+ },
+ "Camminavano vicino ai muri, per passare inosservati. Ma non passavano inosservati sulla Broadway alla Trentaquattresima strada, un ragazzino con un abito di cotone, un berretto e la fodera di un cuscino a righe sulla spalla e una bambina scalza con i capelli neri e un vestito a fiori più sporco del marciapiede. Vita guardava la vetrina di un negozio: tutte le donne qui, anche quelle vere, sembravano finte. Non erano vestite di nero, non portavano la tovaglia in testa. Erano altissime, magrissime, biondissime. Vita non aveva mai visto donne simili, ed era piena di sorpresa. Forse al sole di questa città, anche lei sarebbe diventata così da grande.": {
+  "vi": "Họ đi sát tường để không bị ai chú ý. Nhưng trên đại lộ Broadway ở phố Ba mươi tư, họ không thể không bị chú ý: một cậu bé mặc bộ quần áo vải bông, đội mũ lưỡi trai, vác trên vai cái áo gối kẻ sọc, và một bé gái đi chân trần, tóc đen, mặc chiếc váy hoa bẩn hơn cả vỉa hè. Vita nhìn vào tủ kính một cửa hàng: mọi phụ nữ ở đây, kể cả những người thật, đều trông như giả. Họ không mặc đồ đen, không trùm khăn trên đầu. Họ rất cao, rất gầy, tóc rất vàng. Vita chưa bao giờ thấy những người phụ nữ như vậy và vô cùng ngạc nhiên. Có lẽ dưới ánh mặt trời của thành phố này, lớn lên cô bé cũng sẽ trở nên như thế.",
+  "en": "They walked close to the walls so as not to be noticed. But on Broadway at Thirty-fourth Street they could not go unnoticed: a little boy in a cotton suit and a cap with a striped pillowcase over his shoulder, and a barefoot little girl with black hair and a flowered dress dirtier than the pavement. Vita looked at a shop window: all the women here, even the real ones, looked fake. They weren't dressed in black, they didn't wear a cloth on their heads. They were very tall, very thin, very blonde. Vita had never seen women like that and was full of surprise. Perhaps under the sun of this city she too would become like that when she grew up."
+ },
+ "Per molti la noia è il contrario del divertimento, per me, invece, la noia non è il contrario del divertimento, potrei dire, che, per certi aspetti, rassomiglia al divertimento, perché provoca distrazione. Quando mi annoio, la realtà mi sembra come una coperta troppo corta in una notte d'inverno.": {
+  "vi": "Với nhiều người, sự nhàm chán là điều ngược lại với niềm vui; còn với tôi thì không, tôi có thể nói rằng ở một số khía cạnh nó giống với niềm vui, vì nó làm ta xao lãng. Khi tôi chán, thực tại đối với tôi giống như một tấm chăn quá ngắn trong đêm đông.",
+  "en": "For many people boredom is the opposite of amusement; for me, however, boredom is not the opposite of amusement — I could say that in some ways it resembles amusement, because it causes distraction. When I'm bored, reality seems to me like a blanket that is too short on a winter night."
+ },
+ "So che tra i nostri patti al momento della partenza c'era quello che non ci saremmo scritte. Queste righe, quindi, non prenderanno mai il volo per raggiungerti in America. Se non ci sarò più io al tuo ritorno, ci saranno le mie lettere qui ad aspettarti. Perché dico così? Perché meno di un mese fa, per la prima volta nella mia vita, sono stata male in modo grave.": {
+  "vi": "Bà biết rằng trong những điều chúng ta giao hẹn lúc cháu ra đi, có điều là chúng ta sẽ không viết thư cho nhau. Vì vậy những dòng này sẽ không bao giờ bay sang Mỹ đến với cháu. Nếu khi cháu trở về bà không còn nữa, thì những bức thư của bà sẽ ở đây chờ cháu. Vì sao bà nói vậy? Vì chưa đầy một tháng trước, lần đầu tiên trong đời, bà đã ốm nặng.",
+  "en": "I know that among our agreements when you left there was one that we wouldn't write to each other. So these lines will never take flight to reach you in America. If I'm no longer here when you come back, my letters will be here waiting for you. Why do I say this? Because less than a month ago, for the first time in my life, I was seriously ill."
+ },
+ "Susanna Tamaro, Va' dove ti porta il cuore": {
+  "vi": "Susanna Tamaro, “Hãy đi nơi trái tim mách bảo”",
+  "en": "Susanna Tamaro, Follow Your Heart"
+ },
+ "Melania Mazzucco, Vita": {
+  "vi": "Melania Mazzucco, “Vita”",
+  "en": "Melania Mazzucco, Vita"
+ },
+ "Alberto Moravia, La noia": {
+  "vi": "Alberto Moravia, “Sự nhàm chán”",
+  "en": "Alberto Moravia, Boredom"
+ },
+ "Ascoltiamo i testi e completiamo le frasi.": {
+  "vi": "Nghe các đoạn văn và hoàn thành câu.",
+  "en": "Let's listen to the texts and complete the sentences."
+ },
+ "Tako vive in Italia …": {
+  "vi": "Tako sống ở Ý …",
+  "en": "Tako lives in Italy …"
+ },
+ "Nel tempo libero Tako …": {
+  "vi": "Lúc rảnh rỗi Tako …",
+  "en": "In his free time Tako …"
+ },
+ "Tako non può frequentare un corso d'equitazione perché …": {
+  "vi": "Tako không thể theo học lớp cưỡi ngựa vì …",
+  "en": "Tako can't take a horse-riding course because …"
+ },
+ "Saverio è …": {
+  "vi": "Saverio là …",
+  "en": "Saverio is …"
+ },
+ "La sua passione è …": {
+  "vi": "Niềm đam mê của anh ấy là …",
+  "en": "His passion is …"
+ },
+ "Nel fine settimana Saverio …": {
+  "vi": "Vào cuối tuần Saverio …",
+  "en": "At the weekend Saverio …"
+ },
+ "Linda lavora …": {
+  "vi": "Linda làm việc …",
+  "en": "Linda works …"
+ },
+ "Nel tempo libero Linda …": {
+  "vi": "Lúc rảnh rỗi Linda …",
+  "en": "In her free time Linda …"
+ },
+ "A Linda non piace …": {
+  "vi": "Linda không thích …",
+  "en": "Linda doesn't like …"
+ },
+ "Gino insegna …": {
+  "vi": "Gino dạy …",
+  "en": "Gino teaches …"
+ },
+ "Dopo il lavoro Gino …": {
+  "vi": "Sau giờ làm Gino …",
+  "en": "After work Gino …"
+ },
+ "La domenica Gino …": {
+  "vi": "Vào Chủ nhật Gino …",
+  "en": "On Sundays Gino …"
+ },
+ "Il condizionale presente": {
+  "vi": "Thì điều kiện hiện tại",
+  "en": "The present conditional"
+ },
+ "Stasera guarderei un bel film in TV…": {
+  "vi": "Tối nay tôi muốn xem một bộ phim hay trên TV…",
+  "en": "Tonight I'd watch a good film on TV…"
+ },
+ "Leggerei il giornale, ma non ho molto tempo oggi.": {
+  "vi": "Tôi sẽ đọc báo, nhưng hôm nay tôi không có nhiều thời gian.",
+  "en": "I'd read the newspaper, but I don't have much time today."
+ },
+ "Il condizionale per…": {
+  "vi": "Thì điều kiện dùng để…",
+  "en": "The conditional is used to…"
+ },
+ "Mangerei volentieri una fetta di torta al cioccolato…": {
+  "vi": "Tôi rất muốn ăn một miếng bánh sô-cô-la…",
+  "en": "I'd gladly eat a slice of chocolate cake…"
+ },
+ "Scusi, aprirebbe il finestrino per favore?": {
+  "vi": "Xin lỗi, ông/bà có thể mở cửa sổ xe giúp tôi được không?",
+  "en": "Excuse me, would you open the window, please?"
+ },
+ "Abbiniamo e completiamo le frasi con i verbi al condizionale.": {
+  "vi": "Nối và hoàn thành câu với động từ ở thì điều kiện.",
+  "en": "Let's match and complete the sentences with the verbs in the conditional."
+ },
+ "Chi mi (aiutare) aiuterebbe a spostare questo tavolo?": {
+  "vi": "Ai giúp tôi chuyển cái bàn này được không?",
+  "en": "Who would help me move this table?"
+ },
+ "Scusate, (chiudere) …… la finestra?": {
+  "vi": "Các bạn có thể (đóng) …… cửa sổ được không?",
+  "en": "Excuse me, would you (close) …… the window?"
+ },
+ "Oggi (io, mangiare) …… volentieri un piatto di gnocchi,": {
+  "vi": "Hôm nay (tôi, ăn) …… một đĩa gnocchi thì thích lắm,",
+  "en": "Today I'd gladly (eat) …… a plate of gnocchi,"
+ },
+ "Scusa, mi (portare) …… un bicchiere d'acqua?": {
+  "vi": "Này, bạn (mang) …… cho mình một cốc nước được không?",
+  "en": "Excuse me, would you (bring) me …… a glass of water?"
+ },
+ "Ci (fermare) …… volentieri a casa vostra,": {
+  "vi": "Chúng tôi rất muốn (ghé lại) …… nhà các bạn,",
+  "en": "We'd gladly (stop) …… at your house,"
+ },
+ "Luca, (essere) …… libero domenica sera per andare al cinema?": {
+  "vi": "Luca, tối Chủ nhật bạn có (rảnh) …… để đi xem phim không?",
+  "en": "Luca, would you (be) …… free on Sunday evening to go to the cinema?"
+ },
+ "Mi dispiace, ma domenica sono già impegnato.": {
+  "vi": "Tiếc quá, nhưng Chủ nhật tôi bận rồi.",
+  "en": "I'm sorry, but on Sunday I'm already busy."
+ },
+ "Sì, certamente! La vuoi gasata?": {
+  "vi": "Vâng, tất nhiên! Bạn muốn nước có ga không?",
+  "en": "Yes, of course! Do you want it sparkling?"
+ },
+ "ma abbiamo un impegno urgente.": {
+  "vi": "nhưng chúng tôi có việc gấp.",
+  "en": "but we have an urgent commitment."
+ },
+ "Non ti preoccupare: ti do una mano io!": {
+  "vi": "Đừng lo: để mình giúp một tay!",
+  "en": "Don't worry: I'll give you a hand!"
+ },
+ "Sì, subito.": {
+  "vi": "Vâng, ngay đây.",
+  "en": "Yes, right away."
+ },
+ "ma sono a dieta.": {
+  "vi": "nhưng tôi đang ăn kiêng.",
+  "en": "but I'm on a diet."
+ },
+ "Completiamo con i verbi al condizionale.": {
+  "vi": "Hoàn thành với động từ ở thì điều kiện.",
+  "en": "Complete with the verbs in the conditional."
+ },
+ "2. Scusate, (chiudere) … la finestra?": {
+  "vi": "2. Các bạn có thể (đóng) … cửa sổ được không?",
+  "en": "2. Excuse me, would you (close) … the window?"
+ },
+ "3. Oggi (io, mangiare) … volentieri un piatto di gnocchi,": {
+  "vi": "3. Hôm nay (tôi, ăn) … một đĩa gnocchi thì thích lắm,",
+  "en": "3. Today I'd gladly (eat) … a plate of gnocchi,"
+ },
+ "4. Scusa, mi (portare) … un bicchiere d'acqua?": {
+  "vi": "4. Này, bạn (mang) … cho mình một cốc nước được không?",
+  "en": "4. Excuse me, would you (bring) me … a glass of water?"
+ },
+ "5. Ci (fermare) … volentieri a casa vostra,": {
+  "vi": "5. Chúng tôi rất muốn (ghé lại) … nhà các bạn,",
+  "en": "5. We'd gladly (stop) … at your house,"
+ },
+ "6. Luca, (essere) … libero domenica sera per andare al cinema?": {
+  "vi": "6. Luca, tối Chủ nhật bạn có (rảnh) … để đi xem phim không?",
+  "en": "6. Luca, would you (be) … free on Sunday evening to go to the cinema?"
+ },
+ "Andresti a prendermi un caffè al bar?": {
+  "vi": "Bạn đi mua giúp mình một ly cà phê ở quán được không?",
+  "en": "Would you go and get me a coffee at the bar?"
+ },
+ "Ci dareste una mano? Siamo veramente stanchi!": {
+  "vi": "Các bạn giúp chúng tôi một tay được không? Chúng tôi mệt quá!",
+  "en": "Would you give us a hand? We're really tired!"
+ },
+ "I nostri amici verrebbero con noi in vacanza, ma quest'anno non hanno soldi.": {
+  "vi": "Bạn bè chúng tôi sẽ đi nghỉ cùng chúng tôi, nhưng năm nay họ không có tiền.",
+  "en": "Our friends would come on holiday with us, but this year they have no money."
+ },
+ "Stasera vorremmo andare a mangiare una pizza.": {
+  "vi": "Tối nay chúng tôi muốn đi ăn pizza.",
+  "en": "Tonight we'd like to go and eat a pizza."
+ },
+ "Rimarrei volentieri con te, ma devo finire i compiti.": {
+  "vi": "Mình rất muốn ở lại với bạn, nhưng mình phải làm xong bài tập.",
+  "en": "I'd gladly stay with you, but I have to finish my homework."
+ },
+ "Il condizionale per… dare consigli": {
+  "vi": "Thì điều kiện để… đưa ra lời khuyên",
+  "en": "The conditional to… give advice"
+ },
+ "Leggiamo e completiamo le frasi con i verbi al condizionale.": {
+  "vi": "Đọc và hoàn thành câu với động từ ở thì điều kiện.",
+  "en": "Let's read and complete the sentences with the verbs in the conditional."
+ },
+ "• Possiamo fare una fotocopia? ○ Sì, (voi, dovere) … andare nell'altro ufficio.": {
+  "vi": "• Chúng tôi photo được không? ○ Được, các bạn (nên) … sang văn phòng bên kia.",
+  "en": "• Can we make a photocopy? ○ Yes, you (should) … go to the other office."
+ },
+ "• Scusi professore, che cosa devo studiare per l'esame di storia? ○ (Fare) … meglio a riguardare gli appunti e poi (potere) … leggere l'ultimo libro di Le Goff.": {
+  "vi": "• Thưa thầy, em nên học gì cho kỳ thi lịch sử ạ? ○ Em (nên) … xem lại vở ghi rồi (có thể) … đọc cuốn sách mới nhất của Le Goff.",
+  "en": "• Excuse me, professor, what should I study for the history exam? ○ You'd (do) … better to look over your notes and then you (could) … read Le Goff's latest book."
+ },
+ "• Scusate, (noi, volere) … andare fuori a cena: ci (potere) … consigliare un buon ristorante? ○ Sì, (potere) … mangiare alla trattoria «Sotto le fonti».": {
+  "vi": "• Xin lỗi, (chúng tôi, muốn) … đi ăn tối ở ngoài: anh (có thể) … giới thiệu một nhà hàng ngon không? ○ Có, các bạn (có thể) … ăn ở quán «Sotto le fonti».",
+  "en": "• Excuse me, we (would like) … to go out for dinner: (could) you … recommend a good restaurant? ○ Yes, you (could) … eat at the «Sotto le fonti» trattoria."
+ },
+ "• Come faccio ad andare a Roma domattina? ○ (dovere) … prendere il treno perché non posso accompagnarti.": {
+  "vi": "• Sáng mai mình đi Roma bằng cách nào? ○ Bạn (nên) … đi tàu vì mình không đưa bạn đi được.",
+  "en": "• How do I get to Rome tomorrow morning? ○ You (should) … take the train because I can't take you."
+ },
+ "• (Io, volere) … comprare un vestito elegante: conosci un bel negozio qui a Firenze? ○ Certamente, (fare) … bene a guardare prima di tutto in Via Tornabuoni.": {
+  "vi": "• (Tôi, muốn) … mua một bộ đồ sang trọng: bạn biết cửa hàng nào đẹp ở Firenze không? ○ Tất nhiên, bạn (nên) … xem trước hết ở phố Tornabuoni.",
+  "en": "• I (would like) … to buy an elegant dress: do you know a nice shop here in Florence? ○ Certainly, you'd (do) … well to look first of all in Via Tornabuoni."
+ },
+ "• Come faccio a tenermi in forma? ○ (dovere) … fare un po' di sport.": {
+  "vi": "• Làm sao để giữ dáng? ○ Bạn (nên) … chơi thể thao một chút.",
+  "en": "• How can I keep fit? ○ You (should) … do a bit of sport."
+ },
+ "• Quando (noi, potere) … vedere il film di Visconti? ○ Se avete tempo (potere) … vederlo con me stasera.": {
+  "vi": "• Khi nào (chúng ta, có thể) … xem phim của Visconti? ○ Nếu các bạn có thời gian thì (có thể) … xem cùng mình tối nay.",
+  "en": "• When (could we) … see Visconti's film? ○ If you have time you (could) … see it with me tonight."
+ },
+ "Leggiamo e completiamo le frasi.": {
+  "vi": "Đọc và hoàn thành các câu.",
+  "en": "Let's read and complete the sentences."
+ },
+ "• Ho lavorato troppo! Sono molto stanca… ○ Io …": {
+  "vi": "• Tôi làm việc nhiều quá! Tôi mệt lắm… ○ Nếu là tôi thì …",
+  "en": "• I've worked too much! I'm very tired… ○ I …"
+ },
+ "• Non so che cosa comprare a Giovanna per il suo compleanno: che cosa mi suggerisci? ○ Io …": {
+  "vi": "• Tôi không biết mua gì tặng Giovanna nhân sinh nhật: bạn gợi ý gì không? ○ Tôi thì …",
+  "en": "• I don't know what to buy Giovanna for her birthday: what do you suggest? ○ I …"
+ },
+ "• Domani dobbiamo presentare la nostra relazione al professore: come potremmo cominciare? ○ Noi …": {
+  "vi": "• Ngày mai chúng ta phải trình bày báo cáo với thầy: chúng ta có thể bắt đầu thế nào? ○ Chúng ta …",
+  "en": "• Tomorrow we have to present our report to the professor: how could we begin? ○ We …"
+ },
+ "• Laura e Paolo non vogliono mai leggere: quale consiglio gli dareste? ○ Noi …": {
+  "vi": "• Laura và Paolo không bao giờ muốn đọc sách: các bạn sẽ khuyên họ điều gì? ○ Chúng tôi …",
+  "en": "• Laura and Paolo never want to read: what advice would you give them? ○ We …"
+ },
+ "• Siamo indecisi: andiamo al mare o in montagna questa estate? ○ Io …": {
+  "vi": "• Chúng tôi đang phân vân: hè này đi biển hay đi núi? ○ Tôi thì …",
+  "en": "• We can't decide: shall we go to the seaside or the mountains this summer? ○ I …"
+ },
+ "Tra questo vestito e quello non saprei quale scegliere.": {
+  "vi": "Giữa bộ váy này và bộ kia, tôi không biết nên chọn cái nào.",
+  "en": "Between this dress and that one I wouldn't know which to choose."
+ },
+ "Secondo la stampa l'attore Stefano Accorsi sarebbe già a Cannes per ricevere il premio.": {
+  "vi": "Theo báo chí, nam diễn viên Stefano Accorsi có lẽ đã ở Cannes để nhận giải.",
+  "en": "According to the press, the actor Stefano Accorsi is said to be already in Cannes to receive the award."
+ },
+ "Non ho la macchina, altrimenti ti darei un passaggio.": {
+  "vi": "Tôi không có xe, nếu không thì tôi đã cho bạn đi nhờ.",
+  "en": "I don't have the car, otherwise I'd give you a lift."
+ },
+ "Leggiamo e completiamo il testo con i verbi al condizionale.": {
+  "vi": "Đọc và hoàn thành đoạn văn với động từ ở thì điều kiện.",
+  "en": "Let's read and complete the text with the verbs in the conditional."
+ },
+ "Marco e Giovanni, due fratelli, vivono a Trieste: Marco studia economia, Giovanni ingegneria. Questa estate (volere) vorrebbero andare in vacanza insieme. A Marco (piacere) … rimanere in Italia, vicino a casa; Giovanni (preferire) … invece andare in Olanda, perché desidera vedere Amsterdam: tutti e due (potere) … dormire da un amico, Hans, che hanno conosciuto l'anno scorso.": {
+  "vi": "Marco và Giovanni là hai anh em sống ở Trieste: Marco học kinh tế, Giovanni học kỹ thuật. Hè này họ muốn đi nghỉ cùng nhau. Marco (thích) … ở lại Ý, gần nhà; còn Giovanni (thích hơn) … đi Hà Lan, vì cậu muốn xem Amsterdam: cả hai (có thể) … ngủ nhờ nhà một người bạn, Hans, mà họ quen năm ngoái.",
+  "en": "Marco and Giovanni, two brothers, live in Trieste: Marco studies economics, Giovanni engineering. This summer they'd like to go on holiday together. Marco (would like) … to stay in Italy, near home; Giovanni (would prefer) … instead to go to Holland, because he wants to see Amsterdam: both of them (could) … sleep at a friend's, Hans, whom they met last year."
+ },
+ "Marco (avere) … voglia comunque di riposarsi, (dovere) … anche pensare a prepararsi un po' per la tesi, perché sta finendo i suoi corsi all'università. Ancora non sa quale (potere) … essere l'argomento della tesi, ma a settembre (dovere) … cominciare a leggere almeno alcuni libri che gli hanno suggerito i suoi professori.": {
+  "vi": "Dù sao Marco cũng (muốn) … nghỉ ngơi, cậu (cũng nên) … nghĩ đến việc chuẩn bị một chút cho luận văn, vì cậu sắp học xong các môn ở đại học. Cậu vẫn chưa biết đề tài luận văn (có thể) … là gì, nhưng đến tháng Chín cậu (sẽ phải) … bắt đầu đọc ít nhất vài cuốn sách mà các giáo sư đã gợi ý.",
+  "en": "Marco (would) … feel like resting anyway, he (should) … also think about preparing a bit for his thesis, because he's finishing his university courses. He still doesn't know what the thesis topic (could) … be, but in September he (should) … start reading at least some books his professors suggested."
+ },
+ "Che consigli dareste ai due fratelli?": {
+  "vi": "Các bạn sẽ khuyên hai anh em điều gì?",
+  "en": "What advice would you give the two brothers?"
+ },
+ "Scriviamo: continuiamo la storia di Marco e Giovanni.": {
+  "vi": "Cùng viết: viết tiếp câu chuyện của Marco và Giovanni.",
+  "en": "Let's write: continue the story of Marco and Giovanni."
+ },
+ "Cecilia avrebbe fatto volentieri una gita in Spagna, ma due giorni prima di prendere l'aereo si è ammalata e non è potuta più partire.": {
+  "vi": "Cecilia đã rất muốn đi chơi Tây Ban Nha, nhưng hai ngày trước khi lên máy bay cô bị ốm và không thể đi được nữa.",
+  "en": "Cecilia would gladly have taken a trip to Spain, but two days before taking the plane she fell ill and couldn't leave any more."
+ },
+ "Domenica sera sarei andata alla festa, ma lunedì avevo un esame e non potevo fare tardi.": {
+  "vi": "Tối Chủ nhật lẽ ra tôi đã đi dự tiệc, nhưng thứ Hai tôi có bài thi và không thể thức khuya.",
+  "en": "On Sunday evening I would have gone to the party, but on Monday I had an exam and couldn't stay up late."
+ },
+ "Il condizionale passato per…": {
+  "vi": "Thì điều kiện quá khứ để…",
+  "en": "The past conditional to…"
+ },
+ "Quando era bambina Pina avrebbe voluto fare equitazione, ma non ha potuto perché non c'era un maneggio vicino a casa sua.": {
+  "vi": "Hồi nhỏ Pina đã rất muốn học cưỡi ngựa, nhưng không được vì gần nhà không có trường cưỡi ngựa.",
+  "en": "When she was a child Pina would have liked to go horse riding, but she couldn't because there was no riding school near her home."
+ },
+ "Domani dobbiamo partire… Peccato! Sarebbe stato bello rimanere con voi ancora un po'.": {
+  "vi": "Ngày mai chúng tôi phải đi rồi… Tiếc quá! Giá mà được ở lại với các bạn thêm chút nữa thì hay biết mấy.",
+  "en": "Tomorrow we have to leave… What a pity! It would have been nice to stay with you a little longer."
+ },
+ "Ti avevo detto che non avresti dovuto lasciare troppo tempo il pollo nel forno.": {
+  "vi": "Anh đã bảo em là không nên để gà trong lò lâu quá mà.",
+  "en": "I told you that you shouldn't have left the chicken in the oven too long."
+ },
+ "I due attori avrebbero divorziato.": {
+  "vi": "Nghe nói hai diễn viên đó đã ly hôn.",
+  "en": "The two actors have reportedly divorced."
+ },
+ "Scriviamo: completiamo le frasi con i verbi al condizionale passato.": {
+  "vi": "Cùng viết: hoàn thành câu với động từ ở thì điều kiện quá khứ.",
+  "en": "Let's write: complete the sentences with the verbs in the past conditional."
+ },
+ "Monica doveva partire, altrimenti …": {
+  "vi": "Monica phải đi, nếu không thì …",
+  "en": "Monica had to leave, otherwise …"
+ },
+ "Ieri ti avevo detto che …": {
+  "vi": "Hôm qua tôi đã nói với bạn rằng …",
+  "en": "Yesterday I told you that …"
+ },
+ "Non sapevamo come …": {
+  "vi": "Chúng tôi không biết làm sao …",
+  "en": "We didn't know how …"
+ },
+ "Eri sicuro che …": {
+  "vi": "Bạn đã chắc chắn rằng …",
+  "en": "You were sure that …"
+ },
+ "Il mese scorso Vincenzo diceva che …": {
+  "vi": "Tháng trước Vincenzo nói rằng …",
+  "en": "Last month Vincenzo said that …"
+ },
+ "Alcuni giorni fa pensavano che …": {
+  "vi": "Vài ngày trước họ nghĩ rằng …",
+  "en": "A few days ago they thought that …"
+ },
+ "Dovevo lavorare, altrimenti …": {
+  "vi": "Tôi phải làm việc, nếu không thì …",
+  "en": "I had to work, otherwise …"
+ },
+ "Ci avevano avvertito che …": {
+  "vi": "Họ đã báo trước cho chúng tôi rằng …",
+  "en": "They had warned us that …"
+ },
+ "Giovanna credeva che …": {
+  "vi": "Giovanna đã tin rằng …",
+  "en": "Giovanna believed that …"
+ },
+ "Ascoltiamo e completiamo il testo con le parole giuste.": {
+  "vi": "Nghe và hoàn thành đoạn hội thoại với từ thích hợp.",
+  "en": "Let's listen and complete the text with the right words."
+ },
+ "Pronto?": {
+  "vi": "A lô?",
+  "en": "Hello?"
+ },
+ "Pronto, buongiorno, siamo della … … il Mulino e la chiamiamo perché … … un abbonamento alla nostra nuova rivista «Spazio italiano». … interessarle la nostra proposta?": {
+  "vi": "A lô, chào ông, chúng tôi gọi từ … … il Mulino, chúng tôi gọi cho ông vì … … một gói đặt mua dài hạn tạp chí mới «Spazio italiano» của chúng tôi. Đề nghị của chúng tôi … ông quan tâm không ạ?",
+  "en": "Hello, good morning, we're from the … … il Mulino and we're calling you because … … a subscription to our new magazine «Spazio italiano». … our offer interest you?"
+ },
+ "Sì… mi … alcune informazioni in più?": {
+  "vi": "Vâng… cô … cho tôi thêm vài thông tin được không?",
+  "en": "Yes… … you give me some more information?"
+ },
+ "Certo, è una rivista …: tratta di politica, società e cultura. La … direttamente al suo recapito. Le … intanto inviare una … ….": {
+  "vi": "Dạ được, đó là một tạp chí …: viết về chính trị, xã hội và văn hóa. Chúng tôi … thẳng đến địa chỉ của ông. Trước mắt chúng tôi … gửi ông một … ….",
+  "en": "Certainly, it's a … magazine: it deals with politics, society and culture. We … it directly to your address. In the meantime we … send you a … …."
+ },
+ "Sì, ma quanto costa l'abbonamento per un anno?": {
+  "vi": "Vâng, nhưng đặt mua một năm giá bao nhiêu?",
+  "en": "Yes, but how much does a one-year subscription cost?"
+ },
+ "Il costo è di 50 euro. Le possiamo offrire diverse … di …: lei potrebbe pagare a … con il … che trova nella rivista oppure può fare un … dell'intero … presso il numero di conto corrente che noi le mandiamo.": {
+  "vi": "Giá là 50 euro. Chúng tôi có thể đưa ra nhiều … …: ông có thể trả … bằng … có trong tạp chí, hoặc có thể … toàn bộ … vào số tài khoản mà chúng tôi gửi ông.",
+  "en": "The cost is 50 euros. We can offer you various … of …: you could pay in … with the … you'll find in the magazine, or you can make a … of the whole … to the bank account number we'll send you."
+ },
+ "Sì, va bene, potete inviarmi il numero omaggio. Mi … anche un opuscolo con le vostre …? Sarei interessato ad acquistare un'… per i miei ragazzi.": {
+  "vi": "Vâng, được, các cô gửi cho tôi số tặng nhé. Các cô … gửi tôi thêm một cuốn giới thiệu các … của các cô không? Tôi muốn mua một bộ … cho các con tôi.",
+  "en": "Yes, fine, you can send me the free issue. … you also send me a brochure with your …? I'd be interested in buying an … for my kids."
+ },
+ "Certo. Se mi dà i suoi dati, le inviamo tutto al più presto.": {
+  "vi": "Dạ được. Nếu ông cho tôi thông tin của ông, chúng tôi sẽ gửi tất cả sớm nhất có thể.",
+  "en": "Certainly. If you give me your details, we'll send you everything as soon as possible."
+ },
+ "Osserviamo le immagini e parliamo.": {
+  "vi": "Quan sát tranh và nói.",
+  "en": "Let's look at the pictures and talk."
+ },
+ "Dopo qualche giorno…": {
+  "vi": "Vài ngày sau…",
+  "en": "A few days later…"
+ },
+ "Che cosa fareste a questo punto?": {
+  "vi": "Đến lúc này các bạn sẽ làm gì?",
+  "en": "What would you do at this point?"
+ },
+ "Uno studente immagina di essere un venditore di elettrodomestici e propone i suoi prodotti a un cliente.": {
+  "vi": "Một bạn tưởng tượng mình là người bán đồ điện gia dụng và giới thiệu sản phẩm cho một khách hàng.",
+  "en": "A student imagines being a household appliance salesperson and offers their products to a customer."
+ },
+ "Proponi i tuoi prodotti al cliente.": {
+  "vi": "Hãy giới thiệu sản phẩm của bạn cho khách hàng.",
+  "en": "Offer your products to the customer."
+ },
+ "Come trascorrete il tempo libero?": {
+  "vi": "Các bạn dành thời gian rảnh như thế nào?",
+  "en": "How do you spend your free time?"
+ },
+ "Che genere di film preferite?": {
+  "vi": "Các bạn thích thể loại phim nào?",
+  "en": "What kind of films do you prefer?"
+ },
+ "Quali sono le attività del tempo libero più diffuse nel vostro paese?": {
+  "vi": "Ở nước các bạn, những hoạt động giải trí nào phổ biến nhất?",
+  "en": "What are the most popular free-time activities in your country?"
+ },
+ "Immaginate di dare dei consigli a un italiano che viene nel vostro paese: che cosa potrebbe fare nel tempo libero?": {
+  "vi": "Hãy tưởng tượng bạn khuyên một người Ý đến nước bạn: lúc rảnh rỗi họ có thể làm gì?",
+  "en": "Imagine giving advice to an Italian coming to your country: what could they do in their free time?"
+ },
+ "Parliamo: rispondiamo alla domanda.": {
+  "vi": "Cùng nói: trả lời câu hỏi.",
+  "en": "Let's talk: answer the question."
+ },
+ "Voi che cosa fareste in queste situazioni?": {
+  "vi": "Các bạn sẽ làm gì trong những tình huống này?",
+  "en": "What would you do in these situations?"
+ },
+ "La signora bagnata dal motorino": {
+  "vi": "Người phụ nữ bị xe máy làm ướt",
+  "en": "The lady splashed by the scooter"
+ },
+ "I due escursionisti al bivio": {
+  "vi": "Hai người đi bộ đường dài ở ngã ba",
+  "en": "The two hikers at the fork in the path"
+ },
+ "Il cane che morde il vigile": {
+  "vi": "Con chó cắn anh cảnh sát",
+  "en": "The dog biting the policeman"
+ },
+ "Leggiamo e abbiniamo i titoli dei libri alle descrizioni.": {
+  "vi": "Đọc và nối tên sách với phần giới thiệu.",
+  "en": "Let's read and match the book titles to the descriptions."
+ },
+ "IN LIBRERIA…": {
+  "vi": "Ở hiệu sách…",
+  "en": "At the bookshop…"
+ },
+ "La scrittrice affronta un tema molto delicato e privato: le responsabilità che può avere una madre nella cura e nell'educazione di un figlio.": {
+  "vi": "Nữ tác giả đề cập đến một chủ đề rất tế nhị và riêng tư: những trách nhiệm mà một người mẹ có thể có trong việc chăm sóc và giáo dục con.",
+  "en": "The writer tackles a very delicate and private subject: the responsibilities a mother can have in caring for and raising a child."
+ },
+ "Questo splendido romanzo narra alcune vicende personali della vita di Ida durante la seconda guerra mondiale: l'autrice ci fa vedere quanto sono importanti le storie private per capire il significato della Storia degli uomini.": {
+  "vi": "Cuốn tiểu thuyết tuyệt vời này kể về một số biến cố riêng trong cuộc đời của Ida trong Chiến tranh thế giới thứ hai: tác giả cho ta thấy những câu chuyện riêng tư quan trọng thế nào để hiểu ý nghĩa của Lịch sử loài người.",
+  "en": "This splendid novel tells some personal events in Ida's life during the Second World War: the author shows us how important private stories are for understanding the meaning of the History of mankind."
+ },
+ "Due ragazzi, Ciccio e Jacolino, vogliono scoprire che cosa succede nella pensione vicino a casa loro. Un giorno conoscono la proprietaria, che li porta in un mondo misterioso e fantastico, dove i protagonisti vivono avventure particolari.": {
+  "vi": "Hai cậu bé, Ciccio và Jacolino, muốn khám phá chuyện gì đang xảy ra ở nhà trọ gần nhà mình. Một ngày, chúng quen bà chủ nhà trọ, người đưa chúng vào một thế giới bí ẩn và kỳ ảo, nơi các nhân vật trải qua những cuộc phiêu lưu đặc biệt.",
+  "en": "Two boys, Ciccio and Jacolino, want to find out what goes on in the boarding house near their home. One day they meet the owner, who takes them into a mysterious and fantastic world, where the main characters live unusual adventures."
+ },
+ "Sei bambini, con le loro biciclette, corrono in campagna: in mezzo al grano, uno di loro, Michele, scopre un segreto terribile che cambierà per sempre la sua vita. Michele comincia a capire il mondo degli adulti e la loro crudeltà: con grande coraggio, però, riuscirà a vincere la loro cattiveria.": {
+  "vi": "Sáu đứa trẻ đạp xe chạy khắp đồng quê: giữa cánh đồng lúa mì, một đứa trong số đó, Michele, phát hiện một bí mật khủng khiếp sẽ thay đổi cuộc đời cậu mãi mãi. Michele bắt đầu hiểu thế giới người lớn và sự tàn nhẫn của họ: tuy nhiên, với lòng dũng cảm lớn lao, cậu sẽ chiến thắng sự độc ác của họ.",
+  "en": "Six children race through the countryside on their bikes: in the middle of the wheat, one of them, Michele, discovers a terrible secret that will change his life forever. Michele begins to understand the adult world and its cruelty: but with great courage he will manage to overcome their wickedness."
+ },
+ "Andrea Camilleri, La pensione Eva (2006)": {
+  "vi": "Andrea Camilleri, “Nhà trọ Eva” (2006)",
+  "en": "Andrea Camilleri, The Eva Boarding House (2006)"
+ },
+ "Elsa Morante, La Storia (1974)": {
+  "vi": "Elsa Morante, “Lịch sử” (1974)",
+  "en": "Elsa Morante, History (1974)"
+ },
+ "Oriana Fallaci, Lettera a un bambino mai nato (1975)": {
+  "vi": "Oriana Fallaci, “Thư gửi đứa con chưa bao giờ chào đời” (1975)",
+  "en": "Oriana Fallaci, Letter to a Child Never Born (1975)"
+ },
+ "Niccolò Ammaniti, Io non ho paura (2001)": {
+  "vi": "Niccolò Ammaniti, “Tôi không sợ” (2001)",
+  "en": "Niccolò Ammaniti, I'm Not Scared (2001)"
+ },
+ "Quale di questi libri vi piacerebbe leggere?": {
+  "vi": "Các bạn muốn đọc cuốn nào trong số này?",
+  "en": "Which of these books would you like to read?"
+ },
+ "Quale regalereste a un vostro amico? Perché?": {
+  "vi": "Các bạn sẽ tặng cuốn nào cho một người bạn? Vì sao?",
+  "en": "Which would you give to a friend? Why?"
+ },
+ "Conoscete questi autori?": {
+  "vi": "Các bạn có biết những tác giả này không?",
+  "en": "Do you know these authors?"
+ },
+ "Quali narratori o poeti del vostro paese vorreste far conoscere? Che cosa hanno scritto?": {
+  "vi": "Các bạn muốn giới thiệu những nhà văn hay nhà thơ nào của nước mình? Họ đã viết gì?",
+  "en": "Which writers or poets from your country would you like to make known? What have they written?"
+ },
+ "Leggiamo e completiamo il testo con i verbi giusti.": {
+  "vi": "Đọc và hoàn thành đoạn văn với động từ thích hợp.",
+  "en": "Let's read and complete the text with the right verbs."
+ },
+ "(Essere) Era inverno e quel giovedì la nebbia (avvolgere) … Procida e il golfo di Napoli. In giornate simili, così rare da noi, l'isola (sembrare) … una flotta che (viaggiare) … sul mare. Io (compiere) … da poco quattordici anni; solo pochi giorni prima (sapere) … che da quel giorno, con l'arrivo del piroscafo delle tre, la mia esistenza (cambiare) …. E, in attesa delle tre, io mi aggiravo per il porto. Tre giorni prima mio padre mi aveva detto che tra un mese (sposare) … … una donna napoletana e aveva aggiunto: “Così, tu avrai una nuova madre.” E io, per la prima volta, avevo provato un senso di rivolta contro di lui: nessuna donna poteva essere mia madre! In quel momento non cercavo per nulla di pensare all'aspetto o al carattere della nuova sposa di mio padre: (respingere) … ogni curiosità. Mio padre (scegliere) … questa donna e io non la (dovere) … giudicare.": {
+  "vi": "(Là) Lúc ấy là mùa đông và hôm thứ Năm ấy sương mù (bao phủ) … Procida và vịnh Napoli. Vào những ngày như thế, rất hiếm ở chỗ chúng tôi, hòn đảo (trông như) … một hạm đội (đang đi) … trên biển. Tôi (tròn) … mười bốn tuổi chưa lâu; chỉ vài ngày trước đó tôi (biết) … rằng từ ngày hôm ấy, khi chuyến tàu thủy lúc ba giờ cập bến, cuộc đời tôi (sẽ thay đổi) …. Và trong lúc chờ đến ba giờ, tôi lang thang quanh bến cảng. Ba ngày trước, cha tôi nói rằng một tháng nữa ông (sẽ cưới) … … một người phụ nữ Napoli và nói thêm: “Thế là con sẽ có một người mẹ mới.” Và lần đầu tiên tôi cảm thấy muốn chống lại ông: không người phụ nữ nào có thể là mẹ tôi! Lúc đó tôi hoàn toàn không muốn nghĩ đến dáng vẻ hay tính cách của người vợ mới của cha: tôi (gạt bỏ) … mọi sự tò mò. Cha tôi (đã chọn) … người phụ nữ này và tôi không (được) … phán xét bà.",
+  "en": "(Be) It was winter and that Thursday the fog (wrap) … Procida and the Gulf of Naples. On days like these, so rare where we live, the island (seem) … a fleet (travel) … on the sea. I (turn) … fourteen not long before; only a few days earlier I (learn) … that from that day, with the arrival of the three o'clock steamer, my life (change) …. And, waiting for three o'clock, I wandered around the port. Three days earlier my father had told me that in a month he (marry) … … a Neapolitan woman and had added: “So you'll have a new mother.” And for the first time I had felt a sense of revolt against him: no woman could be my mother! At that moment I wasn't trying at all to think about the looks or the character of my father's new bride: I (reject) … all curiosity. My father (choose) … this woman and I (must) … not judge her."
+ },
+ "Scriviamo un testo con le parole indicate.": {
+  "vi": "Viết một đoạn văn với các từ cho sẵn.",
+  "en": "Let's write a text with the given words."
+ },
+ "castello · eroe · mago · fonte · bosco · rana · drago · cavallo · principe · fata": {
+  "vi": "lâu đài · anh hùng · phù thủy · con suối · khu rừng · con ếch · con rồng · con ngựa · hoàng tử · bà tiên",
+  "en": "castle · hero · wizard · spring · wood · frog · dragon · horse · prince · fairy"
+ },
+ "articolo": {
+  "vi": "bài báo",
+  "en": "article"
+ },
+ "biografia": {
+  "vi": "tiểu sử",
+  "en": "biography"
+ },
+ "diario": {
+  "vi": "nhật ký",
+  "en": "diary"
+ },
+ "fiaba": {
+  "vi": "truyện cổ tích",
+  "en": "fairy tale"
+ },
+ "favola": {
+  "vi": "truyện ngụ ngôn, truyện kể cho trẻ em",
+  "en": "fable"
+ },
+ "fumetto": {
+  "vi": "truyện tranh",
+  "en": "comic"
+ },
+ "giallo": {
+  "vi": "truyện trinh thám",
+  "en": "detective story, thriller"
+ },
+ "giornale": {
+  "vi": "tờ báo",
+  "en": "newspaper"
+ },
+ "guida turistica": {
+  "vi": "sách hướng dẫn du lịch",
+  "en": "tourist guide"
+ },
+ "lettera": {
+  "vi": "bức thư",
+  "en": "letter"
+ },
+ "manuale": {
+  "vi": "sách hướng dẫn, giáo trình",
+  "en": "manual, handbook"
+ },
+ "poesia": {
+  "vi": "thơ, bài thơ",
+  "en": "poetry, poem"
+ },
+ "quotidiano": {
+  "vi": "nhật báo",
+  "en": "daily newspaper"
+ },
+ "racconto": {
+  "vi": "truyện ngắn, câu chuyện",
+  "en": "short story, tale"
+ },
+ "recensione": {
+  "vi": "bài điểm sách, bài phê bình",
+  "en": "review"
+ },
+ "relazione": {
+  "vi": "bản báo cáo",
+  "en": "report"
+ },
+ "riassunto": {
+  "vi": "bản tóm tắt",
+  "en": "summary"
+ },
+ "rivista": {
+  "vi": "tạp chí",
+  "en": "magazine"
+ },
+ "romanzo": {
+  "vi": "tiểu thuyết",
+  "en": "novel"
+ },
+ "testo": {
+  "vi": "văn bản, bài đọc",
+  "en": "text"
+ },
+ "autore": {
+  "vi": "tác giả",
+  "en": "author"
+ },
+ "bibliografia": {
+  "vi": "thư mục tài liệu tham khảo",
+  "en": "bibliography"
+ },
+ "biblioteca": {
+  "vi": "thư viện",
+  "en": "library"
+ },
+ "brano": {
+  "vi": "đoạn trích",
+  "en": "passage, extract"
+ },
+ "capitolo": {
+  "vi": "chương",
+  "en": "chapter"
+ },
+ "casa editrice": {
+  "vi": "nhà xuất bản",
+  "en": "publishing house"
+ },
+ "consultare": {
+  "vi": "tra cứu",
+  "en": "to consult, look up"
+ },
+ "copertina": {
+  "vi": "bìa sách",
+  "en": "cover"
+ },
+ "dedica": {
+  "vi": "lời đề tặng",
+  "en": "dedication"
+ },
+ "edizione": {
+  "vi": "ấn bản",
+  "en": "edition"
+ },
+ "indice": {
+  "vi": "mục lục",
+  "en": "table of contents, index"
+ },
+ "introduzione": {
+  "vi": "lời giới thiệu",
+  "en": "introduction"
+ },
+ "lettore": {
+  "vi": "người đọc, độc giả",
+  "en": "reader"
+ },
+ "libreria": {
+  "vi": "hiệu sách",
+  "en": "bookshop"
+ },
+ "nota": {
+  "vi": "chú thích",
+  "en": "note"
+ },
+ "pagina": {
+  "vi": "trang",
+  "en": "page"
+ },
+ "paragrafo": {
+  "vi": "đoạn văn",
+  "en": "paragraph"
+ },
+ "sfogliare": {
+  "vi": "lật giở, đọc lướt",
+  "en": "to leaf through"
+ },
+ "stampa": {
+  "vi": "in ấn; báo chí",
+  "en": "printing; the press"
+ },
+ "titolo": {
+  "vi": "tên sách, tiêu đề",
+  "en": "title"
+ },
+ "andare fuori": {
+  "vi": "đi chơi bên ngoài",
+  "en": "to go out"
+ },
+ "ascoltare musica": {
+  "vi": "nghe nhạc",
+  "en": "to listen to music"
+ },
+ "ballare": {
+  "vi": "khiêu vũ, nhảy",
+  "en": "to dance"
+ },
+ "cavalcare": {
+  "vi": "cưỡi ngựa",
+  "en": "to ride a horse"
+ },
+ "dipingere": {
+  "vi": "vẽ tranh",
+  "en": "to paint"
+ },
+ "fare acquisti": {
+  "vi": "đi mua sắm",
+  "en": "to go shopping"
+ },
+ "fare bricolage": {
+  "vi": "tự làm đồ thủ công, sửa đồ",
+  "en": "to do DIY"
+ },
+ "fare sport": {
+  "vi": "chơi thể thao",
+  "en": "to do sport"
+ },
+ "fare volontariato": {
+  "vi": "làm tình nguyện",
+  "en": "to do volunteer work"
+ },
+ "frequentare corsi": {
+  "vi": "tham gia các khóa học",
+  "en": "to attend courses"
+ },
+ "giocare": {
+  "vi": "chơi",
+  "en": "to play"
+ },
+ "guardare la televisione": {
+  "vi": "xem tivi",
+  "en": "to watch television"
+ },
+ "mangiare fuori": {
+  "vi": "ăn ngoài",
+  "en": "to eat out"
+ },
+ "partecipare a spettacoli": {
+  "vi": "đi xem biểu diễn",
+  "en": "to go to shows"
+ },
+ "passeggiare": {
+  "vi": "đi dạo",
+  "en": "to go for a walk"
+ },
+ "pescare": {
+  "vi": "câu cá",
+  "en": "to fish"
+ },
+ "suonare uno strumento": {
+  "vi": "chơi một nhạc cụ",
+  "en": "to play an instrument"
+ },
+ "trascorrere tempo con gli amici": {
+  "vi": "dành thời gian với bạn bè",
+  "en": "to spend time with friends"
+ },
+ "viaggiare": {
+  "vi": "du lịch",
+  "en": "to travel"
+ },
+ "visitare luoghi": {
+  "vi": "tham quan các địa điểm",
+  "en": "to visit places"
+ },
+ "Leggiamo e sottolineiamo la parola sbagliata.": {
+  "vi": "Đọc và gạch chân từ không cùng nhóm.",
+  "en": "Let's read and underline the odd word out."
+ },
+ "Scriviamo: completiamo le frasi con la parola giusta.": {
+  "vi": "Cùng viết: hoàn thành câu với từ thích hợp.",
+  "en": "Let's write: complete the sentences with the right word."
+ },
+ "Se ti interessano le storie di personaggi famosi, leggi le loro ….": {
+  "vi": "Nếu bạn thích chuyện về người nổi tiếng thì hãy đọc … của họ.",
+  "en": "If you're interested in the stories of famous people, read their …."
+ },
+ "Per cercare un argomento nel libro, dobbiamo guardare l'….": {
+  "vi": "Để tìm một chủ đề trong sách, chúng ta phải xem ….",
+  "en": "To look for a topic in the book, we have to look at the …."
+ },
+ "Anna è appassionata di racconti misteriosi: leggerebbe sempre i ….": {
+  "vi": "Anna say mê những câu chuyện bí ẩn: cô ấy lúc nào cũng muốn đọc ….",
+  "en": "Anna loves mysterious stories: she'd always read …."
+ },
+ "Se vogliamo aiutare le persone che hanno bisogno, facciamo ….": {
+  "vi": "Nếu muốn giúp những người khó khăn, chúng ta làm ….",
+  "en": "If we want to help people in need, we do …."
+ },
+ "Mi piacciono tanto i cavalli: vado sempre a … in campagna il fine settimana.": {
+  "vi": "Tôi rất thích ngựa: cuối tuần tôi luôn đi … ở vùng quê.",
+  "en": "I really like horses: I always go … in the countryside at the weekend."
+ },
+ "Gli studenti vanno sempre in … per avere in prestito i libri.": {
+  "vi": "Sinh viên luôn đến … để mượn sách.",
+  "en": "Students always go to the … to borrow books."
+ },
+ "Quali … ti raccontava la tua mamma quando eri piccolo?": {
+  "vi": "Hồi bé mẹ bạn hay kể cho bạn những … nào?",
+  "en": "What … did your mum tell you when you were little?"
+ },
+ "Chi scrive un romanzo è un ….": {
+  "vi": "Người viết tiểu thuyết là một ….",
+  "en": "A person who writes a novel is an …."
+ },
+ "Se facciamo un viaggio in una nuova località, consultiamo la ….": {
+  "vi": "Khi đi du lịch đến một nơi mới, chúng ta tra cứu ….",
+  "en": "If we travel to a new place, we consult the …."
+ },
+ "Il capitolo è una parte del libro.": {
+  "vi": "Chương là một phần của cuốn sách.",
+  "en": "The chapter is a part of the book."
+ },
+ "L'introduzione di un libro si trova dopo il secondo capitolo.": {
+  "vi": "Lời giới thiệu của cuốn sách nằm sau chương hai.",
+  "en": "The introduction of a book comes after the second chapter."
+ },
+ "Le favole sono libri per bambini.": {
+  "vi": "Truyện ngụ ngôn là sách dành cho trẻ em.",
+  "en": "Fables are books for children."
+ },
+ "La casa editrice stampa i libri.": {
+  "vi": "Nhà xuất bản in sách.",
+  "en": "The publishing house prints books."
+ },
+ "Il paragrafo non è una parte del capitolo.": {
+  "vi": "Đoạn văn không phải là một phần của chương.",
+  "en": "The paragraph is not part of the chapter."
+ },
+ "Il fumetto è una recensione.": {
+  "vi": "Truyện tranh là một bài điểm sách.",
+  "en": "A comic is a review."
+ },
+ "Il giallo è un racconto d'amore.": {
+  "vi": "Truyện trinh thám là một câu chuyện tình yêu.",
+  "en": "A detective story is a love story."
+ },
+ "Nella poesia possiamo trovare i versi.": {
+  "vi": "Trong thơ ta có thể thấy các câu thơ.",
+  "en": "In poetry we can find verses."
+ },
+ "PROVERBI": {
+  "vi": "TỤC NGỮ",
+  "en": "PROVERBS"
+ },
+ "Con l'aiuto dell'insegnante spiegate il significato di queste espressioni:": {
+  "vi": "Với sự giúp đỡ của giáo viên, hãy giải thích ý nghĩa của các thành ngữ này:",
+  "en": "With the teacher's help, explain the meaning of these expressions:"
+ },
+ "ESPRESSIONI": {
+  "vi": "THÀNH NGỮ",
+  "en": "EXPRESSIONS"
+ },
+ "Il mio professore parla come un libro stampato.": {
+  "vi": "Thầy giáo tôi nói như sách (nói rất chuẩn, trau chuốt).",
+  "en": "My professor talks like a printed book (very correctly and formally)."
+ },
+ "Ah! Sei arrivato in ritardo oggi! Sicuramente sei nel libro nero del direttore.": {
+  "vi": "À! Hôm nay cậu lại đến muộn! Chắc chắn cậu đã bị giám đốc ghi vào sổ đen rồi.",
+  "en": "Ah! You arrived late today! You're surely in the director's bad books."
+ },
+ "Maria, come hai fatto a capire? Leggi proprio nel pensiero.": {
+  "vi": "Maria, sao bạn hiểu được vậy? Bạn đúng là đọc được suy nghĩ người khác.",
+  "en": "Maria, how did you understand? You really read minds."
+ },
+ "Più si legge più si impara.": {
+  "vi": "Càng đọc càng học được nhiều.",
+  "en": "The more you read, the more you learn."
+ },
+ "Chi cerca trova.": {
+  "vi": "Ai tìm thì sẽ thấy.",
+  "en": "Seek and you shall find."
+ },
+ "Parlare come un libro stampato.": {
+  "vi": "Nói như sách (nói chuẩn mực, trau chuốt).",
+  "en": "To talk like a printed book (to speak very correctly and formally)."
+ },
+ "Essere nel libro nero di qualcuno.": {
+  "vi": "Bị ai đó ghi vào sổ đen (bị ghét, mất lòng tin).",
+  "en": "To be in someone's black book (to be in their bad books)."
+ },
+ "Leggere nel pensiero.": {
+  "vi": "Đọc được suy nghĩ (của người khác).",
+  "en": "To read someone's mind."
+ },
+ "Ascoltiamo e sottolineiamo la parola giusta.": {
+  "vi": "Nghe và gạch chân từ đúng.",
+  "en": "Let's listen and underline the right word."
+ },
+ "Scriviamo: correggiamo se necessario.": {
+  "vi": "Cùng viết: sửa lỗi chính tả nếu cần.",
+  "en": "Let's write: correct if necessary."
+ },
+ "pagina → …": {
+  "vi": "pagina (trang) → …",
+  "en": "pagina (page) → …"
+ },
+ "recenzione → …": {
+  "vi": "recenzione → … (bài điểm sách)",
+  "en": "recenzione → … (review)"
+ },
+ "sfoliare → …": {
+  "vi": "sfoliare → … (lật giở)",
+  "en": "sfoliare → … (to leaf through)"
+ },
+ "stanpa → …": {
+  "vi": "stanpa → … (in ấn, báo chí)",
+  "en": "stanpa → … (printing, the press)"
+ },
+ "fumetto → …": {
+  "vi": "fumetto (truyện tranh) → …",
+  "en": "fumetto (comic) → …"
+ },
+ "scenza → …": {
+  "vi": "scenza → … (khoa học)",
+  "en": "scenza → … (science)"
+ },
+ "conoscenza → …": {
+  "vi": "conoscenza (hiểu biết) → …",
+  "en": "conoscenza (knowledge) → …"
+ },
+ "1–5": {
+  "vi": "Từ 1 đến 5",
+  "en": "Words 1 to 5"
+ },
+ "6–10": {
+  "vi": "Từ 6 đến 10",
+  "en": "Words 6 to 10"
+ },
+ "11–15": {
+  "vi": "Từ 11 đến 15",
+  "en": "Words 11 to 15"
+ },
+ "Ascoltiamo e scriviamo il punto interrogativo o esclamativo.": {
+  "vi": "Nghe và điền dấu chấm hỏi hoặc dấu chấm than.",
+  "en": "Let's listen and write the question mark or the exclamation mark."
+ },
+ "Come hai detto": {
+  "vi": "Bạn nói gì cơ",
+  "en": "What did you say"
+ },
+ "Vieni qui": {
+  "vi": "Lại đây",
+  "en": "Come here"
+ },
+ "Vorresti venire con me": {
+  "vi": "Bạn có muốn đi với mình không",
+  "en": "Would you like to come with me"
+ },
+ "Lo faresti": {
+  "vi": "Bạn sẽ làm điều đó chứ",
+  "en": "Would you do it"
+ },
+ "Ti ho detto di no": {
+  "vi": "Mình đã bảo là không mà",
+  "en": "I told you no"
+ },
+ "L'hai fatto tu": {
+  "vi": "Bạn đã làm điều đó à",
+  "en": "Did you do it"
+ },
+ "Ci vado io": {
+  "vi": "Để mình đi",
+  "en": "I'll go"
+ },
+ "Quando ci vedremo": {
+  "vi": "Khi nào chúng ta gặp lại nhau",
+  "en": "When will we see each other"
+ },
+ "Non prendere quel libro": {
+  "vi": "Đừng lấy cuốn sách đó",
+  "en": "Don't take that book"
+ },
+ "Siete sicuri": {
+  "vi": "Các bạn chắc chứ",
+  "en": "Are you sure"
+ },
+ "Usiamo il condizionale presente per:": {
+  "vi": "Ta dùng thì điều kiện hiện tại để:",
+  "en": "We use the present conditional to:"
+ },
+ "esprimere un desiderio:": {
+  "vi": "diễn tả một mong muốn:",
+  "en": "express a wish:"
+ },
+ "chiedere o dire qualcosa in modo cortese:": {
+  "vi": "hỏi hoặc nói điều gì một cách lịch sự:",
+  "en": "ask or say something politely:"
+ },
+ "Scusi, aprirebbe la finestra per favore?": {
+  "vi": "Xin lỗi, ông/bà có thể mở cửa sổ giúp tôi được không?",
+  "en": "Excuse me, would you open the window, please?"
+ },
+ "dare consigli:": {
+  "vi": "đưa ra lời khuyên:",
+  "en": "give advice:"
+ },
+ "esprimere un dubbio:": {
+  "vi": "diễn tả sự phân vân:",
+  "en": "express doubt:"
+ },
+ "presentare una notizia come non certa nel presente:": {
+  "vi": "đưa một tin chưa chắc chắn ở hiện tại:",
+  "en": "present a piece of news as uncertain in the present:"
+ },
+ "esprimere un'azione che dipende da un'altra:": {
+  "vi": "diễn tả một hành động phụ thuộc vào một hành động khác:",
+  "en": "express an action that depends on another:"
+ },
+ "Formiamo il condizionale passato con il condizionale semplice di avere o essere + il participio passato del verbo.": {
+  "vi": "Thì điều kiện quá khứ được tạo bởi thì điều kiện đơn của avere hoặc essere + quá khứ phân từ của động từ.",
+  "en": "We form the past conditional with the simple conditional of avere or essere + the past participle of the verb."
+ },
+ "Usiamo il condizionale passato per:": {
+  "vi": "Ta dùng thì điều kiện quá khứ để:",
+  "en": "We use the past conditional to:"
+ },
+ "esprimere un'azione che non si è potuta realizzare nel passato o che non si può realizzare nel presente o nel futuro:": {
+  "vi": "diễn tả một hành động đã không thể thực hiện trong quá khứ hoặc không thể thực hiện ở hiện tại hay tương lai:",
+  "en": "express an action that couldn't happen in the past or can't happen in the present or future:"
+ },
+ "esprimere un'azione futura rispetto a un momento del passato:": {
+  "vi": "diễn tả một hành động tương lai so với một thời điểm trong quá khứ:",
+  "en": "express a future action relative to a moment in the past:"
+ },
+ "La settimana scorsa ti avevo detto che non avresti dovuto telefonare a Matteo.": {
+  "vi": "Tuần trước tôi đã bảo bạn là không nên gọi điện cho Matteo.",
+  "en": "Last week I told you that you shouldn't have phoned Matteo."
+ },
+ "presentare una notizia come non certa nel passato:": {
+  "vi": "đưa một tin chưa chắc chắn trong quá khứ:",
+  "en": "present a piece of news as uncertain in the past:"
+ },
+ "Scriviamo: completiamo le frasi con i verbi al condizionale presente.": {
+  "vi": "Cùng viết: hoàn thành câu với động từ ở thì điều kiện hiện tại.",
+  "en": "Let's write: complete the sentences with the verbs in the present conditional."
+ },
+ "Ti (aiutare) … ma non posso.": {
+  "vi": "Tôi muốn (giúp) … bạn nhưng tôi không thể.",
+  "en": "I (help) … you but I can't."
+ },
+ "(noi, bere) … qualcosa di fresco perché fa molto caldo.": {
+  "vi": "(Chúng tôi, uống) … chút gì mát vì trời rất nóng.",
+  "en": "We (drink) … something cool because it's very hot."
+ },
+ "Scusate, (potere) … chiudere la porta?": {
+  "vi": "Xin lỗi, các bạn (có thể) … đóng cửa được không?",
+  "en": "Excuse me, (could) you … close the door?"
+ },
+ "Chi (sapere) … dirmi dov'è andato Luca?": {
+  "vi": "Ai (biết) … thì nói cho tôi biết Luca đã đi đâu?",
+  "en": "Who (know) … how to tell me where Luca went?"
+ },
+ "Dobbiamo andare via presto, altrimenti (rimanere) … con voi.": {
+  "vi": "Chúng tôi phải đi sớm, nếu không thì (ở lại) … với các bạn.",
+  "en": "We have to leave early, otherwise we (stay) … with you."
+ },
+ "(io, volere) … andare a vedere quello spettacolo al teatro.": {
+  "vi": "(Tôi, muốn) … đi xem vở diễn đó ở nhà hát.",
+  "en": "I (would like) … to go and see that show at the theatre."
+ },
+ "(loro, dovere) … studiare di più se vogliono passare l'esame.": {
+  "vi": "(Họ, nên) … học nhiều hơn nếu muốn đỗ kỳ thi.",
+  "en": "They (should) … study more if they want to pass the exam."
+ },
+ "Ci (piacere) … moltissimo vivere in Francia con i nostri amici.": {
+  "vi": "Chúng tôi (thích) … lắm được sống ở Pháp cùng bạn bè.",
+  "en": "We (like) … very much to live in France with our friends."
+ },
+ "(tu, tenere) … il mio cane a casa tua questo pomeriggio?": {
+  "vi": "(Bạn, giữ) … con chó của mình ở nhà bạn chiều nay được không?",
+  "en": "(Would) you (keep) … my dog at your house this afternoon?"
+ },
+ "(io, fare) … tutto quello che vuoi per te!": {
+  "vi": "(Tôi, làm) … mọi điều bạn muốn vì bạn!",
+  "en": "I (do) … anything you want for you!"
+ },
+ "(noi, rimanere) … volentieri, ma ci siamo accorti che era tardi.": {
+  "vi": "(Chúng tôi, ở lại) … thêm, nhưng chúng tôi nhận ra là đã muộn.",
+  "en": "We (stay) … gladly, but we realised it was late."
+ },
+ "(io, dovere) … andare all'ufficio postale, ma pensavo di andarci domani.": {
+  "vi": "(Tôi, lẽ ra phải) … đi bưu điện, nhưng tôi định mai mới đi.",
+  "en": "I (have to) … go to the post office, but I was thinking of going tomorrow."
+ },
+ "(noi, andare) … a trovare Luca al mare, ma il tempo non era bello.": {
+  "vi": "(Chúng tôi, lẽ ra đã đi) … thăm Luca ở biển, nhưng thời tiết không đẹp.",
+  "en": "We (go) … to visit Luca at the seaside, but the weather wasn't nice."
+ },
+ "(io, mangiare) … volentieri delle ciliegie, ma erano finite.": {
+  "vi": "(Tôi, lẽ ra đã ăn) … ít anh đào, nhưng hết mất rồi.",
+  "en": "I (eat) … some cherries gladly, but they were finished."
+ },
+ "(noi, dovere) … andare via prima, ma ci dispiaceva lasciarvi.": {
+  "vi": "(Chúng tôi, lẽ ra phải) … đi sớm hơn, nhưng chúng tôi tiếc phải rời các bạn.",
+  "en": "We (have to) … leave earlier, but we were sorry to leave you."
+ },
+ "Al posto tuo (io, riposare) … invece di lavorare così tanto.": {
+  "vi": "Nếu là bạn (tôi, nghỉ ngơi) … thay vì làm việc nhiều như thế.",
+  "en": "In your place I (rest) … instead of working so much."
+ },
+ "Secondo una recente indagine gli italiani quest'anno (leggere) … più dell'anno scorso.": {
+  "vi": "Theo một khảo sát gần đây, năm nay người Ý (có lẽ đã đọc) … nhiều hơn năm ngoái.",
+  "en": "According to a recent survey, Italians this year (read) … more than last year."
+ },
+ "Non avevo il tuo numero di telefono, altrimenti (io, chiamarti) ….": {
+  "vi": "Tôi không có số điện thoại của bạn, nếu không thì (tôi, gọi cho bạn) ….",
+  "en": "I didn't have your phone number, otherwise I (call you) …."
+ },
+ "Giorgio e Matteo (volere) … fare una bella vacanza, ma non avevano i soldi.": {
+  "vi": "Giorgio và Matteo (đã muốn) … có một kỳ nghỉ đẹp, nhưng họ không có tiền.",
+  "en": "Giorgio and Matteo (want) … to have a nice holiday, but they didn't have the money."
+ },
+ "Non potevamo aiutare Vincenzo, altrimenti (farlo) ….": {
+  "vi": "Chúng tôi không thể giúp Vincenzo, nếu không thì (đã làm việc đó) ….",
+  "en": "We couldn't help Vincenzo, otherwise we (do it) …."
+ },
+ "1. Anna, (essere) … libera domenica?": {
+  "vi": "1. Anna, chủ nhật bạn có (rảnh) … không?",
+  "en": "1. Anna, (would) you (be) … free on Sunday?"
+ },
+ "2. Ho sete: (bere) … una birra.": {
+  "vi": "2. Tôi khát: (uống) … một cốc bia thì tuyệt.",
+  "en": "2. I'm thirsty: I (drink) … a beer."
+ },
+ "3. Che cosa (noi, potere) … fare per te?": {
+  "vi": "3. (Chúng tôi, có thể) … làm gì cho bạn?",
+  "en": "3. What (could) we … do for you?"
+ },
+ "1. Sono dovuto tornare al lavoro, ma mi (piacere) … stare ancora qualche giorno in vacanza.": {
+  "vi": "1. Tôi phải quay lại làm việc, nhưng tôi (đã rất thích) … ở lại nghỉ thêm vài ngày.",
+  "en": "1. I had to go back to work, but I (like) … to stay on holiday for a few more days."
+ },
+ "2. Ieri ti avevo detto che oggi non (dovere) … chiamarmi perché non (essere) … in casa.": {
+  "vi": "2. Hôm qua tôi đã bảo bạn rằng hôm nay (không nên) … gọi cho tôi vì tôi (sẽ không có) … ở nhà.",
+  "en": "2. Yesterday I told you that today you (should) not … call me because I (be) … not at home."
+ },
+ "3. Ieri il segretario dell'ONU (incontrare) … il presidente francese.": {
+  "vi": "3. Hôm qua có tin Tổng thư ký Liên Hợp Quốc (đã gặp) … Tổng thống Pháp.",
+  "en": "3. Yesterday the UN Secretary-General (meet) … the French President, reportedly."
+ },
+ "Gli italiani e i libri": {
+  "vi": "Người Ý và sách",
+  "en": "Italians and books"
+ },
+ "15 milioni di italiani hanno comprato libri nel 2004: un milione in più rispetto al 2003.": {
+  "vi": "Năm 2004, 15 triệu người Ý đã mua sách: nhiều hơn một triệu người so với năm 2003.",
+  "en": "15 million Italians bought books in 2004: one million more than in 2003."
+ },
+ "Dove comprano i libri: l'italiano acquista libri nelle grandi librerie (39,2%), nelle piccole librerie (27,5%), al supermercato (26,5%), in edicola (12,3%). Cresce anche il numero di persone che comprano libri on-line: l'1,6% nel 2002. Negli ultimi anni il 41% degli italiani ha acquistato libri con quotidiani e riviste.": {
+  "vi": "Mua sách ở đâu: người Ý mua sách ở các hiệu sách lớn (39,2%), hiệu sách nhỏ (27,5%), siêu thị (26,5%), sạp báo (12,3%). Số người mua sách trực tuyến cũng tăng: 1,6% vào năm 2002. Những năm gần đây, 41% người Ý mua sách kèm báo và tạp chí.",
+  "en": "Where they buy books: Italians buy books in large bookshops (39.2%), small bookshops (27.5%), supermarkets (26.5%) and newsstands (12.3%). The number of people buying books online is also growing: 1.6% in 2002. In recent years 41% of Italians have bought books with newspapers and magazines."
+ },
+ "Dall'acquisto alla lettura: un'indagine Istat ha scoperto che nel 2000 quasi 32,5 milioni di italiani (che hanno più di 6 anni) hanno letto almeno un libro in quell'anno. Le donne leggono di più degli uomini (64,9%). Gli uomini, invece, leggono di più per motivi professionali. Per un terzo circa della popolazione italiana (il 28,1%) la lettura è un'attività del tempo libero. Gli italiani del Nord leggono di più di quelli del Sud.": {
+  "vi": "Từ mua đến đọc: một khảo sát của Istat cho thấy năm 2000 gần 32,5 triệu người Ý (trên 6 tuổi) đã đọc ít nhất một cuốn sách trong năm đó. Phụ nữ đọc nhiều hơn nam giới (64,9%). Ngược lại, nam giới đọc nhiều hơn vì lý do công việc. Với khoảng một phần ba dân số Ý (28,1%), đọc sách là một hoạt động giải trí. Người miền Bắc đọc nhiều hơn người miền Nam.",
+  "en": "From purchase to reading: an Istat survey found that in 2000 almost 32.5 million Italians (over 6 years old) read at least one book that year. Women read more than men (64.9%). Men, on the other hand, read more for professional reasons. For about a third of the Italian population (28.1%) reading is a free-time activity. Northern Italians read more than Southern Italians."
+ },
+ "I giovani: sono un po' incostanti e “confusi” tra la TV, la radio, la musica, il cinema. Quanto leggono? In media il 70% della popolazione giovanile – tra i 15 e i 34 anni – legge un libro in sei mesi (ma tra i 25-29 anni la percentuale diventa il 76,4%), anche se il 95,2% preferisce comunque guardare la TV nel tempo libero.": {
+  "vi": "Giới trẻ: họ hơi thất thường và “lạc lối” giữa TV, radio, âm nhạc, điện ảnh. Họ đọc bao nhiêu? Trung bình 70% giới trẻ – từ 15 đến 34 tuổi – đọc một cuốn sách trong sáu tháng (nhưng ở độ tuổi 25–29 tỉ lệ này là 76,4%), dù 95,2% vẫn thích xem TV hơn lúc rảnh rỗi.",
+  "en": "Young people: they are a bit inconsistent and “confused” between TV, radio, music and cinema. How much do they read? On average 70% of young people – aged 15 to 34 – read a book in six months (but among 25–29-year-olds the percentage rises to 76.4%), even though 95.2% still prefer watching TV in their free time."
+ },
+ "Che cosa leggono? Agli italiani piacciono soprattutto romanzi, biografie, guide di viaggio o manuali.": {
+  "vi": "Họ đọc gì? Người Ý thích nhất là tiểu thuyết, tiểu sử, sách hướng dẫn du lịch hoặc sách hướng dẫn.",
+  "en": "What do they read? Italians like above all novels, biographies, travel guides or manuals."
+ },
+ "Quanto leggono gli italiani?": {
+  "vi": "Người Ý đọc sách nhiều đến mức nào?",
+  "en": "How much do Italians read?"
+ },
+ "Perché, secondo voi, le donne leggono di più?": {
+  "vi": "Theo các bạn, vì sao phụ nữ đọc nhiều hơn?",
+  "en": "Why, in your opinion, do women read more?"
+ },
+ "I giovani italiani non leggono molto: è così anche nei vostri paesi?": {
+  "vi": "Giới trẻ Ý không đọc nhiều: ở nước các bạn cũng vậy chứ?",
+  "en": "Young Italians don't read much: is it the same in your countries?"
+ },
+ "Come è bello leggere per gli italiani…": {
+  "vi": "Người Ý thích đọc sách biết bao…",
+  "en": "How Italians love reading…"
+ },
+ "Bene, caro Santini. Quanti libri hai letto per fare questa meravigliosa ricerca su Pirandello?": {
+  "vi": "Tốt lắm, Santini. Em đã đọc bao nhiêu cuốn sách để làm bài nghiên cứu tuyệt vời này về Pirandello?",
+  "en": "Very good, Santini. How many books did you read to do this wonderful research on Pirandello?"
+ },
+ "Professoressa, ho studiato per un mese: ho letto con molta attenzione circa 6 libri.": {
+  "vi": "Thưa cô, em đã học cả một tháng: em đã đọc rất kỹ khoảng 6 cuốn sách.",
+  "en": "Professor, I studied for a month: I read about 6 books very carefully."
+ },
+ "Uffa, presto!": {
+  "vi": "Ôi, nhanh lên!",
+  "en": "Ugh, hurry up!"
+ },
+ "Luigi Pirandello": {
+  "vi": "Luigi Pirandello (nhà văn, nhà soạn kịch Ý)",
+  "en": "Luigi Pirandello (Italian writer and playwright)"
+ },
+ "– Nome: Luigi Pirandello. – Nasce ad Agrigento, in Sicilia, nel 1867. – Muore nel 1936. – Chi è? È un autore importante della letteratura italiana: ha scritto novelle, romanzi e commedie. Dopo gli studi liceali a Palermo, si trasferisce a Bonn e si laurea in Filologia romanza. Nel 1892, per seguire la sua vocazione letteraria, si stabilisce a Roma, dove vive con i soldi del padre. Nell'ambiente letterario della capitale diventa amico dello scrittore siciliano Luigi Capuana, che lo spinge verso il campo della narrativa. Compone così le sue prime novelle e il suo primo romanzo L'esclusa (1901).": {
+  "vi": "– Tên: Luigi Pirandello. – Sinh tại Agrigento, Sicilia, năm 1867. – Mất năm 1936. – Ông là ai? Một tác giả quan trọng của văn học Ý: ông viết truyện ngắn, tiểu thuyết và kịch. Sau khi học trung học ở Palermo, ông chuyển đến Bonn và tốt nghiệp ngành Ngữ văn Rôman. Năm 1892, để theo đuổi thiên hướng văn chương, ông định cư ở Roma và sống bằng tiền của cha. Trong giới văn chương thủ đô, ông kết bạn với nhà văn Sicilia Luigi Capuana, người đã thúc đẩy ông đến với văn xuôi. Nhờ vậy ông viết những truyện ngắn đầu tiên và cuốn tiểu thuyết đầu tay “Người đàn bà bị ruồng bỏ” (1901).",
+  "en": "– Name: Luigi Pirandello. – Born in Agrigento, Sicily, in 1867. – Died in 1936. – Who is he? An important author of Italian literature: he wrote short stories, novels and plays. After secondary school in Palermo, he moved to Bonn and graduated in Romance philology. In 1892, to follow his literary vocation, he settled in Rome, where he lived on his father's money. In the literary circles of the capital he became friends with the Sicilian writer Luigi Capuana, who pushed him towards fiction. So he wrote his first short stories and his first novel, The Outcast (1901)."
+ },
+ "In seguito inizia una fitta collaborazione con diversi giornali e riviste letterarie. Il successo arriva nel 1904 con il romanzo Il fu Mattia Pascal. Nel 1915-16 inizia la sua prodigiosa e intensa attività di scrittore di commedie; tra le sue opere teatrali più famose ricordiamo: Così è, se vi pare, Sei personaggi in cerca d'autore, Enrico IV. Nel 1934 riceve il premio Nobel per la letteratura. Pirandello rappresenta, nelle sue opere, la crisi dell'uomo contemporaneo, la sua disperazione e la sua solitudine: lo scrittore va oltre le apparenze per entrare nella condizione intima della vita di tanti individui.": {
+  "vi": "Sau đó ông bắt đầu cộng tác dày đặc với nhiều tờ báo và tạp chí văn học. Thành công đến năm 1904 với cuốn tiểu thuyết “Mattia Pascal quá cố”. Năm 1915–16 ông bắt đầu sự nghiệp viết kịch phi thường và sôi nổi; trong các vở kịch nổi tiếng nhất của ông có: “Đúng vậy, nếu bạn nghĩ thế”, “Sáu nhân vật đi tìm tác giả”, “Henry IV”. Năm 1934 ông nhận giải Nobel Văn học. Trong các tác phẩm của mình, Pirandello thể hiện cuộc khủng hoảng của con người hiện đại, nỗi tuyệt vọng và sự cô đơn của họ: nhà văn vượt qua vẻ bề ngoài để đi vào tình trạng sâu kín trong cuộc sống của rất nhiều cá nhân.",
+  "en": "Later he began an intense collaboration with various newspapers and literary magazines. Success came in 1904 with the novel The Late Mattia Pascal. In 1915–16 he began his prodigious and intense activity as a playwright; among his most famous plays are: Right You Are (If You Think So), Six Characters in Search of an Author, Henry IV. In 1934 he received the Nobel Prize for Literature. In his works Pirandello portrays the crisis of modern man, his despair and his loneliness: the writer goes beyond appearances to enter the intimate condition of the lives of many individuals."
+ },
+ "Osserviamo e abbiniamo le immagini ai titoli delle opere di Pirandello.": {
+  "vi": "Quan sát và nối các bức tranh với tên các tác phẩm của Pirandello.",
+  "en": "Let's look and match the pictures to the titles of Pirandello's works."
  }
 }
