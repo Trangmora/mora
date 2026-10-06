@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220">
+  <rect width="320" height="220" fill="#eef4f9"/>
+  <rect x="150" y="14" width="120" height="30" fill="#fff" stroke="#333" stroke-width="3"/>
+  <text x="210" y="35" text-anchor="middle" font-family="Georgia" font-weight="700" font-size="15" fill="#333">UNIVERSITÀ</text>
+  <circle cx="110" cy="30" r="18" fill="#fff" stroke="#333" stroke-width="3"/><path d="M110 30 L110 18 M110 30 L118 34" stroke="#333" stroke-width="2.5"/>
+  <g stroke="#333" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 150 L300 150 L280 200 L50 200 Z" fill="#c9a26a"/>
+    <circle cx="80" cy="90" r="18" fill="#e8c4a0"/><path d="M58 150 C58 112 102 112 102 150 Z" fill="#3e5f9e"/><path d="M76 112 L80 130 L84 112" fill="#c0392b"/>
+    <circle cx="160" cy="98" r="17" fill="#e8c4a0"/><path d="M140 150 C140 118 180 118 180 150 Z" fill="#9bbf4a"/><path d="M144 92 C146 76 176 76 178 92 Z" fill="#8a5a2a"/>
+    <circle cx="245" cy="88" r="18" fill="#e8c4a0"/><path d="M224 150 C224 110 266 110 266 150 Z" fill="#b0436b"/><path d="M228 82 C230 66 262 66 264 82 Z" fill="#e0a43a"/>
+    <path d="M238 96 C244 102 252 102 256 96" fill="none"/>
+    <rect x="120" y="140" width="40" height="8" fill="#fff"/><rect x="200" y="140" width="40" height="8" fill="#fff"/>
+  </g>
+</svg>

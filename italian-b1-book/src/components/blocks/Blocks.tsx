@@ -7,6 +7,7 @@ import { Scene } from "../illustrations/Scene";
 import { Photo } from "../Photo";
 import { AudioBlock } from "./AudioBlock";
 import { Theory } from "./Theory";
+import { GridTable } from "./GridTable";
 import { flatBlocks } from "../../lib/skills";
 
 /** Đoạn văn / hội thoại / bài nghe của trang — gửi kèm khi AI chấm bài có tham chiếu. */
@@ -158,6 +159,9 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
 
     case "audio":
       return <AudioBlock block={block} />;
+
+    case "gridTable":
+      return <GridTable head={block.head} rows={block.rows} firstCol={block.firstCol} split={block.split} />;
 
     case "barChart":
       return (

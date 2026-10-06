@@ -4896,3 +4896,76 @@ button.ds-card {
   color: #8a6d3b;
   font-size: 12px;
 }
+
+/* ---- Bảng cam (Unità 2: passato prossimo / imperfetto / trapassato) ---- */
+.grid-table {
+  width: 100%;
+  margin: 6px 0 10px;
+  border-collapse: collapse;
+  font: 14.5px/1.35 var(--book-sans);
+  border: 1.5px solid #ef8a3a;
+}
+.grid-table th {
+  padding: 5px 8px;
+  background: #ef8a3a;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.grid-table td {
+  padding: 5px 8px;
+  vertical-align: top;
+  border: 1px solid #ef8a3a;
+  background: white;
+}
+.grid-table .split {
+  border-left: 3px solid #ef8a3a;
+}
+.grid-table.first-col td {
+  text-align: center;
+  font-weight: 700;
+  color: #d4363a;
+  padding: 3px 8px;
+}
+.grid-table.first-col td.label {
+  text-align: left;
+  font-weight: 400;
+  color: #222;
+}
+.grid-table.first-col th {
+  text-align: center;
+}
+.gt-line {
+  display: block;
+}
+.gt-gap {
+  display: block;
+  height: 8px;
+}
+.gt-use {
+  font-style: italic;
+  color: #333;
+}
+.gt-red {
+  color: #d4363a;
+}
+.gt-blue {
+  color: #2a55a3;
+}
+.book-page.phone .grid-table {
+  display: block;
+  overflow-x: auto;
+}
+.book-page .ex-part-body.twoCol .ex-items {
+  columns: 2;
+  column-gap: 28px;
+}
+.book-page .ex-part-body.twoCol .ex-item {
+  break-inside: avoid;
+}
+.book-page .ex-part-body.twoCol .options {
+  margin-bottom: 4px;
+}
