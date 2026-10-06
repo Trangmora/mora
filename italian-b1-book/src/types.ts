@@ -50,6 +50,8 @@ export type FillExercise = {
 /** Trắc nghiệm / chọn đáp án đúng. */
 export type ChoiceExercise = {
   kind: "choice";
+  /** Các lựa chọn nằm trên cùng một dòng như sách ("libro / telefono / …"): bấm vào từ để gạch chân. */
+  inline?: boolean;
   items: {
     id: string;
     prompt: string;

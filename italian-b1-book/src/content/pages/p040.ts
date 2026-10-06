@@ -37,7 +37,7 @@ const page: BookPage = {
           },
           { type: "tip", it: "(adattato da la Repubblica, 21-10-2005)", tr: { vi: "Nguồn trích", en: "Source" } },
         ],
-        [{ type: "image", src: "images/u2/p40-famiglia.svg", alt: "Vecchie foto di famiglie italiane" }],
+        [{ type: "image", src: "images/u2/p40-famiglia.jpg", alt: "Vecchie foto di famiglie italiane" }],
       ],
     },
     {
@@ -57,8 +57,8 @@ const page: BookPage = {
     {
       type: "columns",
       cols: [
-        [{ type: "image", src: "images/u2/p40-ny.svg", alt: "New York, Central Park: un papà giovane corre con il passeggino" }, { type: "theory", text: "New York, Central Park" }],
-        [{ type: "image", src: "images/u2/p40-siena.svg", alt: "Siena, Piazza del Campo: un papà anziano non riesce a seguire il bambino" }, { type: "theory", text: "Siena, Piazza del Campo" }],
+        [{ type: "image", src: "images/u2/p40-ny.jpg", alt: "New York, Central Park: un papà giovane corre con il passeggino" }, { type: "theory", text: "New York, Central Park" }],
+        [{ type: "image", src: "images/u2/p40-siena.jpg", alt: "Siena, Piazza del Campo: un papà anziano non riesce a seguire il bambino" }, { type: "theory", text: "Siena, Piazza del Campo" }],
       ],
     },
   ],
