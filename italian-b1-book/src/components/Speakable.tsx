@@ -35,7 +35,6 @@ export function Speakable({
       <span className="it">{children ?? it}</span>
       <span className="sp-tools">
         <button className="mini" title={t(lang, "listen")} onClick={() => speak(it, { voice })}><Icon name="volume" size={15} /></button>
-        <button className="mini" title={t(lang, "practice")} onClick={() => setCoach((c) => !c)}><Icon name="mic" size={15} /></button>
         {!(showTr && translation) && <TrIcon text={it} tr={translation} />}
       </span>
       {showTr && translation && <span className="translation">{tr(lang, translation)}</span>}
