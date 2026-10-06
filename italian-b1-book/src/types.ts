@@ -230,7 +230,7 @@ export type Exercise = ExerciseBody & {
   /** Dòng "Punti …… / 10" cuối bài (bài kiểm tra Verifica). */
   points?: number;
   /** "capace": khung nét đứt "ORA SONO CAPACE DI…" cuối bài Verifica. */
-  variant?: "capace";
+  variant?: "capace" | "twoCol";
 };
 
 export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match" | "check";
@@ -309,6 +309,11 @@ export type Block =
    * "===" sang cột mới · dòng trống = đoạn mới · **đậm**, *nghiêng*, ***đậm nghiêng***.
    */
   | { type: "theory"; text: string; tr?: L10n }
+  /**
+   * Bảng cam như "Usiamo l'imperfetto per…": head = tiêu đề cột, rows = các hàng ô.
+   * Trong ô: "\n" xuống dòng, **đỏ đậm**, ^^xanh đậm^^, *nghiêng*. firstCol: cột đầu là nhãn (io, tu…).
+   */
+  | { type: "gridTable"; head: string[]; rows: string[][]; firstCol?: boolean; split?: number[] }
   /** Biểu đồ cột ngang như sách (trang 20). */
   | { type: "barChart"; bars: { label: string; value: number; color: string }[]; max: number; step: number; caption?: L10n }
   | { type: "exercise"; ex: Exercise };
