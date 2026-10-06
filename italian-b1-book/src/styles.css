@@ -4974,3 +4974,6 @@ button.ds-card {
   font: italic 12.5px var(--font-ui);
   color: #8a6d3b;
 }
+.theory-cols.single {
+  grid-template-columns: minmax(0, 1fr);
+}

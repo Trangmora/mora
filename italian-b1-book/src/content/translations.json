@@ -387,6 +387,10 @@
   "en": "Caterina was talking and everyone was listening.",
   "vi": "Caterina đang nói và mọi người đang lắng nghe."
  },
+ "Celibe significa: (a) un uomo non sposato. (b) una donna non sposata. (c) un uomo sposato.": {
+  "en": "Celibe means: (a) an unmarried man. (b) an unmarried woman. (c) a married man.",
+  "vi": "Celibe nghĩa là: (a) một người đàn ông chưa vợ. (b) một người phụ nữ chưa chồng. (c) một người đàn ông đã có vợ."
+ },
  "Cercano me.": {
   "en": "They are looking for me.",
   "vi": "Họ tìm tôi (chính tôi)."
@@ -438,6 +442,10 @@
  "Chiara non vuole uscire con lui.": {
   "en": "Chiara doesn't want to go out with him.",
   "vi": "Chiara không muốn đi chơi với anh ấy."
+ },
+ "Chiedere la mano significa: (a) aiutare qualcuno. (b) fidanzarsi con qualcuno. (c) chiedere a qualcuno di sposarsi.": {
+  "en": "Chiedere la mano means: (a) to help someone. (b) to get engaged to someone. (c) to ask someone to marry you.",
+  "vi": "Chiedere la mano nghĩa là: (a) giúp ai đó. (b) đính hôn với ai đó. (c) hỏi cưới ai đó."
  },
  "Chiedete di cambiare i soldi.": {
   "en": "Ask to change money.",
@@ -791,6 +799,10 @@
   "en": "Do as I do.",
   "vi": "Hãy làm như tôi."
  },
+ "Fare il bucato significa: (a) lavare i panni. (b) stirare i panni. (c) mettere i panni nell'armadio.": {
+  "en": "Fare il bucato means: (a) to wash clothes. (b) to iron clothes. (c) to put clothes in the wardrobe.",
+  "vi": "Fare il bucato nghĩa là: (a) giặt quần áo. (b) là quần áo. (c) cất quần áo vào tủ."
+ },
  "Fate la spesa.": {
   "en": "Do the shopping.",
   "vi": "Hãy đi chợ (mua đồ ăn)."
@@ -987,9 +999,17 @@
   "en": "The little boy (nuotare) … in the pool with his friends.",
   "vi": "Cậu bé (nuotare) … ở bể bơi với các bạn."
  },
+ "Il bisnonno è: (a) il fratello del padre. (b) il nonno del padre. (c) il cugino della madre.": {
+  "en": "The bisnonno is: (a) the father's brother. (b) the father's grandfather. (c) the mother's cousin.",
+  "vi": "Bisnonno là: (a) anh/em trai của bố. (b) ông của bố. (c) anh/em họ của mẹ."
+ },
  "Il cinema è tra / fra l'università e la biblioteca.": {
   "en": "The cinema is between the university and the library.",
   "vi": "Rạp chiếu phim nằm giữa trường đại học và thư viện."
+ },
+ "Il cognato è: (a) il marito della figlia. (b) il fratello del marito o della moglie. (c) il figlio della zia o dello zio.": {
+  "en": "The cognato is: (a) the daughter's husband. (b) the husband's or wife's brother. (c) the aunt's or uncle's son.",
+  "vi": "Cognato là: (a) chồng của con gái. (b) anh/em trai của chồng hoặc của vợ. (c) con trai của cô/dì hoặc chú/bác."
  },
  "Il contrario di PULITO è…": {
   "en": "The opposite of PULITO (clean) is…",
@@ -1171,6 +1191,10 @@
   "en": "Loredana's watch is new.",
   "vi": "Chiếc đồng hồ của Loredana còn mới."
  },
+ "La bomboniera è: (a) un viaggio. (b) un ricordo che gli sposi danno agli amici. (c) un tipo di musica.": {
+  "en": "The bomboniera is: (a) a trip. (b) a keepsake the couple gives to friends. (c) a type of music.",
+  "vi": "Bomboniera là: (a) một chuyến đi. (b) món quà kỷ niệm cô dâu chú rể tặng bạn bè. (c) một thể loại nhạc."
+ },
  "La cerimonia di nozze di Vittoria (finire) … tardi.": {
   "en": "Vittoria's wedding ceremony (finire) … late.",
   "vi": "Lễ cưới của Vittoria (finire) … muộn."
@@ -1191,6 +1215,10 @@
   "en": "The family is … average 3 people; it lives … the north, … a house it owns.",
   "vi": "Gia đình … trung bình có 3 người; sống … miền Bắc, … một ngôi nhà thuộc sở hữu riêng."
  },
+ "La fede è: (a) l'anello degli sposi. (b) una foto degli sposi. (c) un documento.": {
+  "en": "The fede is: (a) the couple's wedding ring. (b) a photo of the couple. (c) a document.",
+  "vi": "Fede là: (a) nhẫn cưới của cô dâu chú rể. (b) một bức ảnh của cô dâu chú rể. (c) một giấy tờ."
+ },
  "La lezione è finita.": {
   "en": "The lesson has finished.",
   "vi": "Buổi học đã kết thúc."
@@ -1210,6 +1238,10 @@
  "La mia mamma (cominciare) … ieri il nuovo lavoro.": {
   "en": "Yesterday my mum (cominciare) … her new job.",
   "vi": "Hôm qua mẹ tôi (cominciare) … công việc mới."
+ },
+ "La nuora è: (a) la sorella della nonna. (b) la figlia della zia. (c) la moglie del figlio.": {
+  "en": "The nuora is: (a) the grandmother's sister. (b) the aunt's daughter. (c) the son's wife.",
+  "vi": "Nuora là: (a) chị/em gái của bà. (b) con gái của cô/dì. (c) vợ của con trai."
  },
  "La preposizione a indica:": {
   "en": "The preposition a indicates:",
@@ -1338,6 +1370,10 @@
  "Leggiamo e scegliamo la frase giusta.": {
   "en": "Let's read and choose the right sentence.",
   "vi": "Đọc và chọn câu đúng."
+ },
+ "Leggiamo e scegliamo la risposta giusta.": {
+  "en": "Let's read and choose the right answer.",
+  "vi": "Đọc và chọn câu trả lời đúng."
  },
  "Leggiamo.": {
   "en": "Let's read.",
@@ -1883,6 +1919,10 @@
   "en": "Residence/address",
   "vi": "Nơi cư trú/địa chỉ"
  },
+ "Riordinare significa: (a) mettere in disordine. (b) ordinare il cibo al telefono. (c) mettere le cose a posto.": {
+  "en": "Riordinare means: (a) to make a mess. (b) to order food by phone. (c) to put things back in their place.",
+  "vi": "Riordinare nghĩa là: (a) làm bừa bộn. (b) gọi đồ ăn qua điện thoại. (c) xếp đồ đạc về đúng chỗ."
+ },
  "Rispondiamo.": {
   "en": "Answer the questions.",
   "vi": "Trả lời các câu hỏi."
@@ -1918,6 +1958,10 @@
  "Scriviamo: completiamo le frasi con i verbi.": {
   "en": "Let's write: complete the sentences with the verbs.",
   "vi": "Cùng viết: hoàn thành câu với động từ."
+ },
+ "Scriviamo: spieghiamo il significato delle parole.": {
+  "en": "Let's write: explain the meaning of the words.",
+  "vi": "Cùng viết: giải thích nghĩa của các từ."
  },
  "Scusami, volevo chiederti un favore…": {
   "en": "Excuse me, I wanted to ask you a favour…",
@@ -2018,6 +2062,10 @@
  "Spesso lavoro di notte.": {
   "en": "I often work at night.",
   "vi": "Tôi hay làm việc ban đêm."
+ },
+ "Spolverare significa: (a) togliere la polvere. (b) lavare. (c) preparare la cena.": {
+  "en": "Spolverare means: (a) to remove the dust. (b) to wash. (c) to make dinner.",
+  "vi": "Spolverare nghĩa là: (a) lau bụi. (b) rửa. (c) nấu bữa tối."
  },
  "Stasera Anna e Mario (venire) … a casa mia.": {
   "en": "Tonight Anna and Mario (venire) … to my place.",
@@ -2451,13 +2499,41 @@
   "en": "abitare → We lived in Milan.",
   "vi": "abitare (sống) → Chúng tôi đã sống ở Milano."
  },
+ "apparecchiare la tavola": {
+  "en": "to lay the table",
+  "vi": "dọn bàn ăn"
+ },
+ "bisnonno": {
+  "en": "great-grandfather",
+  "vi": "cụ (ông cố)"
+ },
+ "bomboniera": {
+  "en": "wedding favour",
+  "vi": "hộp kẹo quà cưới tặng khách"
+ },
+ "cambiare la disposizione dei mobili": {
+  "en": "to rearrange the furniture",
+  "vi": "sắp xếp lại đồ đạc"
+ },
  "cambiare → Io ho cambiato lavoro due settimane fa.": {
   "en": "cambiare → I changed jobs two weeks ago.",
   "vi": "cambiare (thay đổi) → Hai tuần trước tôi đã đổi việc."
  },
+ "celibe": {
+  "en": "single (man)",
+  "vi": "(đàn ông) độc thân"
+ },
  "cenare → Avete cenato fuori?": {
   "en": "cenare → Did you have dinner out?",
   "vi": "cenare (ăn tối) → Các bạn đã ăn tối ở ngoài à?"
+ },
+ "chiedere la mano (oggi scherzoso)": {
+  "en": "ask for someone's hand (now humorous)",
+  "vi": "cầu hôn (ngày nay mang ý đùa)"
+ },
+ "cognato": {
+  "en": "brother-in-law",
+  "vi": "anh/em rể, anh/em vợ, anh/em chồng"
  },
  "cominciare → Il professore ha cominciato la lezione.": {
   "en": "cominciare → The teacher started the lesson.",
@@ -2475,9 +2551,37 @@
   "en": "direct object (= without a preposition):",
   "vi": "tân ngữ trực tiếp (= không có giới từ):"
  },
+ "coniugato": {
+  "en": "married",
+  "vi": "đã kết hôn"
+ },
+ "convivenza": {
+  "en": "cohabitation",
+  "vi": "sống chung (không kết hôn)"
+ },
+ "coppia": {
+  "en": "couple",
+  "vi": "cặp đôi"
+ },
  "costare → Quanto è costata la tua borsa?": {
   "en": "costare → How much did your bag cost?",
   "vi": "costare (có giá) → Cái túi của bạn giá bao nhiêu?"
+ },
+ "cucinare": {
+  "en": "to cook",
+  "vi": "nấu ăn"
+ },
+ "cugino": {
+  "en": "cousin",
+  "vi": "anh/em họ"
+ },
+ "curare le piante": {
+  "en": "to look after the plants",
+  "vi": "chăm sóc cây"
+ },
+ "divorziare": {
+  "en": "to divorce",
+  "vi": "ly hôn"
  },
  "dopo come e quanto:": {
   "en": "after come and quanto:",
@@ -2495,9 +2599,49 @@
   "en": "and companies, or to build a career or find a job in Italy; fewer are those who study Italian because they work in translation and teaching. Let's look at the percentages in the chart:",
   "vi": "và các công ty Ý, hoặc để thăng tiến hay để tìm việc ở Ý; ít hơn là những người học tiếng Ý vì làm biên dịch và giảng dạy. Cùng xem tỉ lệ phần trăm trong biểu đồ:"
  },
+ "fare il bucato": {
+  "en": "to do the laundry",
+  "vi": "giặt giũ"
+ },
+ "fare il cambio di stagione": {
+  "en": "to swap seasonal clothes",
+  "vi": "thay đồ theo mùa (cất đồ mùa cũ)"
+ },
+ "fare la lavastoviglie": {
+  "en": "to run the dishwasher",
+  "vi": "chạy máy rửa bát"
+ },
+ "fare la lavatrice": {
+  "en": "to do a wash",
+  "vi": "chạy máy giặt"
+ },
+ "fare la spesa": {
+  "en": "to do the shopping",
+  "vi": "đi chợ"
+ },
+ "fede": {
+  "en": "wedding ring",
+  "vi": "nhẫn cưới"
+ },
+ "figlio": {
+  "en": "son",
+  "vi": "con trai"
+ },
  "finire → I bambini hanno finito i compiti.": {
   "en": "finire → The children have finished their homework.",
   "vi": "finire (kết thúc, làm xong) → Bọn trẻ đã làm xong bài tập."
+ },
+ "fratello": {
+  "en": "brother",
+  "vi": "anh/em trai"
+ },
+ "genero": {
+  "en": "son-in-law",
+  "vi": "con rể"
+ },
+ "genitore": {
+  "en": "parent",
+  "vi": "bố hoặc mẹ"
  },
  "gli studenti ascoltano il professore con attenzione.": {
   "en": "the students listen to the teacher attentively.",
@@ -2543,6 +2687,26 @@
   "en": "the old lady with the pink hat: …",
   "vi": "bà cụ đội mũ hồng: …"
  },
+ "lavare": {
+  "en": "to wash",
+  "vi": "rửa, giặt"
+ },
+ "madre": {
+  "en": "mother",
+  "vi": "mẹ"
+ },
+ "marito": {
+  "en": "husband",
+  "vi": "chồng"
+ },
+ "mettere in ordine": {
+  "en": "to tidy up",
+  "vi": "dọn dẹp cho gọn"
+ },
+ "moglie": {
+  "en": "wife",
+  "vi": "vợ"
+ },
  "nell'espressione io e te:": {
   "en": "in the expression io e te:",
   "vi": "trong cụm io e te:"
@@ -2551,13 +2715,49 @@
   "en": "in exclamations without a verb:",
   "vi": "trong câu cảm thán không có động từ:"
  },
+ "nipote": {
+  "en": "nephew/niece, grandchild",
+  "vi": "cháu (con của anh chị em / cháu nội ngoại)"
+ },
  "non (volere) …… andare a casa a piedi.": {
   "en": "didn't (volere) …… walk home.",
   "vi": "không (volere) …… đi bộ về nhà."
  },
+ "nonno": {
+  "en": "grandfather",
+  "vi": "ông"
+ },
+ "nozze": {
+  "en": "wedding",
+  "vi": "đám cưới"
+ },
+ "nubile": {
+  "en": "single (woman)",
+  "vi": "(phụ nữ) độc thân"
+ },
+ "nucleo familiare": {
+  "en": "household",
+  "vi": "hộ gia đình"
+ },
+ "nuora": {
+  "en": "daughter-in-law",
+  "vi": "con dâu"
+ },
+ "padre": {
+  "en": "father",
+  "vi": "bố"
+ },
+ "parente": {
+  "en": "relative",
+  "vi": "họ hàng"
+ },
  "parlare → Hai parlato con Paolo?": {
   "en": "parlare → Did you speak to Paolo?",
   "vi": "parlare (nói) → Bạn đã nói chuyện với Paolo chưa?"
+ },
+ "passare l'aspirapolvere": {
+  "en": "to vacuum",
+  "vi": "hút bụi"
  },
  "passare → Ho passato un bel fine settimana a Capri.": {
   "en": "passare → I spent a lovely weekend in Capri.",
@@ -2575,6 +2775,14 @@
   "en": "possession or specification:",
   "vi": "sở hữu hoặc sự xác định:"
  },
+ "pronunciare il sì": {
+  "en": "to say “I do”",
+  "vi": "nói lời đồng ý (trong lễ cưới)"
+ },
+ "pulire la casa": {
+  "en": "to clean the house",
+  "vi": "lau dọn nhà"
+ },
  "quando la forma del verbo è uguale per più persone:": {
   "en": "when the verb form is the same for several persons:",
   "vi": "khi dạng động từ giống nhau ở nhiều ngôi:"
@@ -2591,9 +2799,33 @@
   "en": "when we want to emphasise the subject:",
   "vi": "khi muốn nhấn mạnh chủ ngữ:"
  },
+ "ricevimento": {
+  "en": "reception",
+  "vi": "tiệc chiêu đãi"
+ },
+ "rifare i letti": {
+  "en": "to make the beds",
+  "vi": "dọn giường"
+ },
+ "rinfresco": {
+  "en": "buffet reception",
+  "vi": "tiệc nhẹ, tiệc đứng"
+ },
+ "riporre i vestiti negli armadi": {
+  "en": "to put clothes away in the wardrobes",
+  "vi": "cất quần áo vào tủ"
+ },
  "rispondere → Perché non mi hai risposto?": {
   "en": "rispondere → Why didn't you answer me?",
   "vi": "rispondere (trả lời) → Sao bạn không trả lời mình?"
+ },
+ "rito civile": {
+  "en": "civil ceremony",
+  "vi": "lễ cưới dân sự"
+ },
+ "rito religioso": {
+  "en": "religious ceremony",
+  "vi": "lễ cưới tôn giáo"
  },
  "salire → Ho salito le scale in fretta.": {
   "en": "salire → I hurried up the stairs.",
@@ -2611,17 +2843,61 @@
   "en": "if the verb is in the infinitive:",
   "vi": "nếu động từ ở dạng nguyên mẫu:"
  },
+ "separarsi": {
+  "en": "to separate",
+  "vi": "ly thân"
+ },
  "siamo tra / fra amici.": {
   "en": "we're among friends.",
   "vi": "chúng ta là bạn bè với nhau cả."
+ },
+ "sorella": {
+  "en": "sister",
+  "vi": "chị/em gái"
+ },
+ "sparecchiare la tavola": {
+  "en": "to clear the table",
+  "vi": "dọn bàn sau bữa ăn"
+ },
+ "spazzare": {
+  "en": "to sweep",
+  "vi": "quét nhà"
+ },
+ "spolverare": {
+  "en": "to dust",
+  "vi": "lau bụi"
+ },
+ "sposarsi": {
+  "en": "to get married",
+  "vi": "kết hôn"
+ },
+ "sposo": {
+  "en": "groom",
+  "vi": "chú rể"
+ },
+ "stendere i panni": {
+  "en": "to hang out the washing",
+  "vi": "phơi quần áo"
+ },
+ "stirare": {
+  "en": "to iron",
+  "vi": "là (ủi) quần áo"
  },
  "succedere → Ieri è successo un problema alla mia macchina.": {
   "en": "succedere → Yesterday something went wrong with my car.",
   "vi": "succedere (xảy ra) → Hôm qua xe tôi gặp sự cố."
  },
+ "suocero": {
+  "en": "father-in-law",
+  "vi": "bố chồng / bố vợ"
+ },
  "telefonare → Ho telefonato a Pietro.": {
   "en": "telefonare → I phoned Pietro.",
   "vi": "telefonare (gọi điện) → Tôi đã gọi điện cho Pietro."
+ },
+ "testimone": {
+  "en": "witness",
+  "vi": "người làm chứng"
  },
  "una forma debole o atona (= senza accento).": {
   "en": "a weak or unstressed form (= without stress).",
@@ -2630,6 +2906,18 @@
  "una forma forte o tonica (= con l'accento):": {
   "en": "a strong or stressed form (= with stress):",
   "vi": "dạng mạnh hay dạng nhấn (= có trọng âm):"
+ },
+ "vedovo": {
+  "en": "widower",
+  "vi": "goá vợ"
+ },
+ "viaggio di nozze": {
+  "en": "honeymoon",
+  "vi": "tuần trăng mật"
+ },
+ "zio": {
+  "en": "uncle",
+  "vi": "chú, bác, cậu"
  },
  "«Perché vuoi studiare l'italiano?»": {
   "en": "“Why do you want to study Italian?”",
