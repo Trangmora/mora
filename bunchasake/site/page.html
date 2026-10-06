@@ -1,0 +1,399 @@
+<title>Bunchasake</title>
+<meta name="description" content="Bunchasake – team marketing dùng AI: Branding, Social Media, SEO, KOL/KOC booking cho doanh nghiệp vừa và nhỏ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: một cột biên tập rộng, hero chữ lớn, băng chạy tên khách, lưới dịch vụ 2x2, lưới dự án có bộ lọc */
+:root {
+  --bg: #F1F4EC;        /* trắng bún, ngả xanh rau thơm */
+  --surface: #FFFFFF;
+  --ink: #15201A;       /* than nướng */
+  --muted: #5A665E;
+  --line: #CDD6CB;
+  --herb: #22704A;      /* xanh rau thơm – accent */
+  --herb-ink: #FFFFFF;
+  --amber: #F0B030;     /* vàng nước mắm – điểm nhấn hiếm */
+  --display: "Bricolage Grotesque", "Be Vietnam Pro", system-ui, sans-serif;
+  --body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1512; --surface: #18201B; --ink: #E8EEE6; --muted: #9AA79E; --line: #2C3830;
+    --herb: #63C58C; --herb-ink: #0C1610; --amber: #F2B53A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1512; --surface: #18201B; --ink: #E8EEE6; --muted: #9AA79E; --line: #2C3830;
+  --herb: #63C58C; --herb-ink: #0C1610; --amber: #F2B53A; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 17px/1.6 var(--body);
+  padding-inline: var(--gutter);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--max); margin-inline: auto; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--herb); outline-offset: 3px; border-radius: 4px;
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+.label {
+  font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+}
+
+/* Nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  margin-inline: calc(var(--gutter) * -1); padding: 14px var(--gutter);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; gap: 24px; }
+.logo { font: 800 24px/1 var(--display); text-decoration: none; letter-spacing: -0.03em; }
+.logo span { color: var(--herb); }
+.nav ul { display: flex; gap: 22px; list-style: none; margin: 0 0 0 auto; padding: 0; font-weight: 500; font-size: 15px; }
+.nav ul a { text-decoration: none; }
+.nav ul a:hover { color: var(--herb); }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer;
+  background: var(--ink); color: var(--bg); font: 600 15px/1 var(--body);
+  padding: 13px 20px; border-radius: 999px; text-decoration: none; white-space: nowrap;
+  transition: transform .2s ease, background .2s ease;
+}
+.btn:hover { background: var(--herb); color: var(--herb-ink); transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+@media (max-width: 760px) { .nav ul { display: none; } .nav .btn { margin-left: auto; padding: 11px 16px; font-size: 14px; } }
+
+/* Hero */
+.hero { padding-block: clamp(48px, 9vw, 110px) clamp(40px, 6vw, 72px); }
+.hero h1 {
+  font-size: clamp(44px, 8.6vw, 116px); line-height: 0.95; font-weight: 800; max-width: 12ch;
+}
+.hero h1 em { font-style: normal; color: var(--herb); }
+.hero h1 .mark { background: linear-gradient(transparent 62%, var(--amber) 62% 90%, transparent 90%); padding-inline: .04em; }
+.hero-foot { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; margin-top: clamp(28px, 4vw, 48px); }
+.hero-foot p { font-size: clamp(17px, 1.6vw, 20px); max-width: 52ch; color: var(--muted); }
+.hero-foot p strong { color: var(--ink); font-weight: 600; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 760px) { .hero-foot { grid-template-columns: 1fr; } }
+
+/* Marquee */
+.marquee {
+  margin-inline: calc(var(--gutter) * -1); overflow: hidden;
+  border-block: 1.5px solid var(--ink); background: var(--ink); color: var(--bg);
+}
+.marquee-track { display: flex; width: max-content; animation: slide 38s linear infinite; }
+.marquee span { font: 600 clamp(18px, 2.2vw, 26px)/1 var(--display); padding: 18px 0; white-space: nowrap; }
+.marquee span::after { content: "✱"; color: var(--amber); padding-inline: 28px; font-size: .8em; }
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } html { scroll-behavior: auto; } }
+
+/* Section */
+section.block { padding-block: clamp(64px, 9vw, 120px); }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; margin-bottom: clamp(32px, 5vw, 56px); }
+.head h2 { font-size: clamp(34px, 5vw, 62px); line-height: 1; font-weight: 800; }
+.head p { color: var(--muted); max-width: 48ch; }
+@media (max-width: 760px) { .head { grid-template-columns: 1fr; } }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1.5px solid var(--ink); }
+.svc { padding: clamp(24px, 3vw, 40px) clamp(0px, 2vw, 32px) clamp(28px, 3vw, 44px) 0; border-bottom: 1px solid var(--line); display: grid; gap: 14px; align-content: start; min-width: 0; }
+.svc:nth-child(odd) { border-right: 1px solid var(--line); }
+.svc:nth-child(even) { padding-left: clamp(20px, 3vw, 40px); }
+.svc h3 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; line-height: 1.05; }
+.svc .tag { display: inline-block; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--herb); }
+.svc > p { color: var(--muted); max-width: 46ch; }
+.svc ul { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 8px; font-size: 15.5px; }
+.svc li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
+.svc li::before { content: "→"; color: var(--herb); font-weight: 600; }
+.svc .ai { margin-top: 6px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font-size: 14.5px; }
+.svc .ai b { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--herb); display: block; margin-bottom: 6px; }
+@media (max-width: 760px) {
+  .services { grid-template-columns: 1fr; }
+  .svc:nth-child(odd) { border-right: 0; }
+  .svc:nth-child(even) { padding-left: 0; }
+}
+
+/* Work */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.chip {
+  font: 500 14px/1 var(--body); padding: 10px 16px; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--ink); border: 1.5px solid var(--line);
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip:hover { border-color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.card { display: grid; gap: 12px; align-content: start; text-decoration: none; min-width: 0; }
+.card .img { aspect-ratio: 3 / 2; max-width: 100%; border-radius: 12px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.card:hover img { transform: scale(1.04); }
+.card .placeholder { width: 100%; height: 100%; display: grid; place-items: center; background: var(--herb); color: var(--herb-ink); font: 800 clamp(26px, 3vw, 34px)/1 var(--display); text-align: center; padding: 20px; }
+.card .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.card .meta span { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 6px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+.card h3 { font-size: 22px; font-weight: 600; line-height: 1.15; }
+.card p { color: var(--muted); font-size: 15px; }
+.card .go { font-weight: 600; font-size: 14px; color: var(--herb); }
+
+/* Process */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: s; border-top: 1.5px solid var(--ink); }
+.step { padding: 24px 24px 8px 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.step + .step { padding-left: 24px; border-left: 1px solid var(--line); }
+.step .n { font: 800 44px/1 var(--display); color: var(--herb); }
+.step h3 { font-size: 21px; font-weight: 600; }
+.step p { color: var(--muted); font-size: 15px; }
+@media (max-width: 860px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .step:nth-child(3) { padding-left: 0; border-left: 0; }
+  .step:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 16px; }
+}
+@media (max-width: 520px) {
+  .steps { grid-template-columns: 1fr; }
+  .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 8px; }
+}
+
+/* AI band */
+.band {
+  background: var(--herb); color: var(--herb-ink); border-radius: 20px;
+  padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px 56px;
+}
+.band h2 { font-size: clamp(30px, 4.2vw, 52px); line-height: 1.02; font-weight: 800; }
+.band dl { margin: 0; display: grid; gap: 18px; }
+.band dt { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; opacity: .8; margin-bottom: 6px; }
+.band dd { margin: 0; font-size: 16.5px; }
+@media (max-width: 820px) { .band { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 64px; align-items: start; }
+.contact h2 { font-size: clamp(40px, 6.4vw, 84px); line-height: .95; font-weight: 800; }
+.contact h2 em { font-style: normal; color: var(--herb); }
+.contact .lead { margin-top: 20px; color: var(--muted); max-width: 42ch; }
+form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: clamp(20px, 3vw, 32px); }
+form label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+input, textarea, select {
+  font: 400 16px/1.4 var(--body); color: var(--ink); background: var(--bg);
+  border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
+}
+textarea { min-height: 110px; resize: vertical; }
+.checks { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.checks legend { font-size: 14px; font-weight: 500; margin-bottom: 8px; padding: 0; }
+.checks label { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; padding: 8px 12px; border: 1.5px solid var(--line); border-radius: 999px; cursor: pointer; }
+.checks input { width: auto; accent-color: var(--herb); }
+.note { font-size: 14px; color: var(--herb); font-weight: 500; }
+@media (max-width: 820px) { .contact { grid-template-columns: 1fr; } }
+
+footer { border-top: 1.5px solid var(--ink); padding-block: 28px 40px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; color: var(--muted); font-size: 14px; }
+footer .logo { font-size: 20px; color: var(--ink); }
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">bunchasake<span>.</span></a>
+    <ul>
+      <li><a href="#dich-vu">Dịch vụ</a></li>
+      <li><a href="#du-an">Dự án</a></li>
+      <li><a href="#quy-trinh">Quy trình</a></li>
+    </ul>
+    <a class="btn" href="#lien-he">Đặt lịch tư vấn</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <p class="label">Team marketing dùng AI</p>
+    <h1 style="margin-top:18px">Làm cho thương hiệu của bạn <em>được nhắc tên</em> <span class="mark">mỗi ngày.</span></h1>
+    <div class="hero-foot">
+      <p><strong>Bunchasake</strong> lo trọn phần marketing cho doanh nghiệp vừa và nhỏ: xây thương hiệu, chạy fanpage, lên top Google và kết nối KOL/KOC. AI làm phần lặp lại, con người làm phần sáng tạo.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#lien-he">Nhận audit miễn phí</a>
+        <a class="btn ghost" href="#du-an">Xem dự án</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Một số khách hàng">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <section class="block wrap" id="dich-vu">
+    <div class="head">
+      <h2>Bốn việc chúng tôi làm tốt.</h2>
+      <p>Bạn có thể thuê lẻ từng dịch vụ, hoặc gộp lại thành một kế hoạch hằng tháng với một đầu mối duy nhất.</p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <span class="tag">Branding</span>
+        <h3>Thương hiệu rõ ràng ngay từ đầu</h3>
+        <p>Định vị, tên gọi, giọng văn và bộ nhận diện để mọi kênh nói cùng một ngôn ngữ.</p>
+        <ul>
+          <li>Định vị và thông điệp chính</li>
+          <li>Logo, màu sắc, font chữ, bộ quy chuẩn thương hiệu</li>
+          <li>Hướng dẫn giọng văn cho đội nội dung</li>
+        </ul>
+        <div class="ai"><b>Phần AI</b>Phân tích đối thủ và gợi ý hàng chục phương án tên, slogan trong vài giờ thay vì vài tuần.</div>
+      </article>
+      <article class="svc">
+        <span class="tag">Social Media</span>
+        <h3>Fanpage đăng đều, có người tương tác</h3>
+        <p>Quản lý trọn Facebook, Instagram, TikTok theo gói cố định mỗi tháng.</p>
+        <ul>
+          <li>Lịch nội dung, thiết kế, video ngắn</li>
+          <li>Viết caption tiếng Việt và tiếng Anh</li>
+          <li>Báo cáo reach, tương tác, inbox hằng tháng</li>
+        </ul>
+        <div class="ai"><b>Phần AI</b>Lên ý tưởng, viết nháp và lên lịch tự động, nên team dành thời gian cho hình ảnh và chiến lược.</div>
+      </article>
+      <article class="svc">
+        <span class="tag">SEO</span>
+        <h3>Khách tìm là thấy bạn</h3>
+        <p>Đưa website lên Google và xuất hiện trong câu trả lời của ChatGPT, Gemini.</p>
+        <ul>
+          <li>Audit kỹ thuật và tối ưu tốc độ</li>
+          <li>Nghiên cứu từ khoá, bài viết chuẩn SEO</li>
+          <li>SEO địa phương với Google Maps</li>
+        </ul>
+        <div class="ai"><b>Phần AI</b>Gom nhóm từ khoá, viết dàn ý và kiểm tra thương hiệu có được AI nhắc tới hay không.</div>
+      </article>
+      <article class="svc">
+        <span class="tag">KOL · KOC</span>
+        <h3>Người thật nói về sản phẩm thật</h3>
+        <p>Tìm, booking và quản lý KOL/KOC phù hợp với ngân sách và tệp khách của bạn.</p>
+        <ul>
+          <li>Lọc danh sách KOL/KOC theo ngành và khu vực</li>
+          <li>Đàm phán, brief, duyệt nội dung</li>
+          <li>Theo dõi hiệu quả từng người</li>
+        </ul>
+        <div class="ai"><b>Phần AI</b>Quét và chấm điểm KOC theo mức tương tác thật, phát hiện tài khoản có follower ảo.</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block wrap" id="du-an" style="padding-top:0">
+    <div class="head">
+      <h2>Dự án đã thực hiện.</h2>
+      <p>Từ quán ăn ở Hà Nội đến quỹ đầu tư ở Ý. Bấm vào từng dự án để xem kênh thật của khách hàng.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Lọc dự án theo dịch vụ" id="filters"></div>
+    <div class="grid" id="work"></div>
+  </section>
+
+  <section class="block wrap" id="quy-trinh" style="padding-top:0">
+    <div class="head">
+      <h2>Làm việc với chúng tôi.</h2>
+      <p>Bốn bước, mỗi bước có đầu ra cụ thể để bạn duyệt trước khi đi tiếp.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Audit miễn phí</h3><p>Xem kênh, website và đối thủ của bạn. Gửi lại 5 điểm cần sửa ngay.</p></div>
+      <div class="step"><span class="n">2</span><h3>Kế hoạch 90 ngày</h3><p>Chọn dịch vụ, chỉ số cần đạt và ngân sách. Không ràng buộc dài hạn.</p></div>
+      <div class="step"><span class="n">3</span><h3>Triển khai</h3><p>Một đầu mối duy nhất, nhóm chat riêng, lịch nội dung được duyệt trước.</p></div>
+      <div class="step"><span class="n">4</span><h3>Báo cáo hằng tháng</h3><p>Số liệu thật, việc đã làm, việc tháng sau. Đọc trong 5 phút.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="band">
+      <h2>AI làm phần lặp lại. Con người làm phần đáng nhớ.</h2>
+      <dl>
+        <div><dt>Nhanh hơn</dt><dd>Nghiên cứu, viết nháp và báo cáo chạy tự động, nên nội dung lên sóng sớm hơn.</dd></div>
+        <div><dt>Rẻ hơn</dt><dd>Bớt giờ làm thủ công, bạn trả cho chiến lược và sáng tạo.</dd></div>
+        <div><dt>Có người chịu trách nhiệm</dt><dd>Mọi bài đăng, mọi booking đều được người trong team duyệt trước khi ra ngoài.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block wrap" id="lien-he">
+    <div class="contact">
+      <div>
+        <h2>Kể cho chúng tôi nghe về <em>thương hiệu của bạn.</em></h2>
+        <p class="lead">Để lại thông tin, team sẽ liên hệ và gửi bạn bản audit miễn phí.</p>
+      </div>
+      <form id="form" novalidate>
+        <label for="f-name">Tên của bạn<input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-brand">Thương hiệu / website<input id="f-brand" name="brand" placeholder="vd: chopchop.vn" required></label>
+        <label for="f-contact">Email hoặc số điện thoại<input id="f-contact" name="contact" required></label>
+        <fieldset class="checks">
+          <legend>Bạn quan tâm dịch vụ nào?</legend>
+          <label for="c-brand"><input type="checkbox" id="c-brand" name="svc" value="branding"> Branding</label>
+          <label for="c-social"><input type="checkbox" id="c-social" name="svc" value="social"> Social Media</label>
+          <label for="c-seo"><input type="checkbox" id="c-seo" name="svc" value="seo"> SEO</label>
+          <label for="c-kol"><input type="checkbox" id="c-kol" name="svc" value="kol"> KOL/KOC</label>
+        </fieldset>
+        <label for="f-msg">Bạn đang gặp khó ở đâu?<textarea id="f-msg" name="msg" placeholder="vd: fanpage có 5.000 follower nhưng ít inbox"></textarea></label>
+        <button class="btn" type="submit" style="justify-self:start">Gửi yêu cầu audit</button>
+        <p class="note" id="form-note" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <a class="logo" href="#top">bunchasake<span style="color:var(--herb)">.</span></a>
+  <span>Branding · Social Media · SEO · KOL/KOC</span>
+  <span>© 2026 Bunchasake</span>
+</footer>
+
+<script>
+const projects = [
+  { name: "Chop Chop", sector: "Nhà hàng Trung Hoa", desc: "Nhà hàng ẩm thực Trung Hoa đậm đà hương vị.", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", svc: ["social"], ch: "Facebook" },
+  { name: "Viet My Clean Home", sector: "Dịch vụ dọn nhà · Hà Nội", desc: "Dịch vụ dọn nhà chuẩn Mỹ tại Hà Nội.", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", svc: ["social"], ch: "Facebook" },
+  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", desc: "Kênh thông tin y tế chuyên nghiệp.", img: "work/bac-si-anh.jpg", url: "https://www.youtube.com/@onlybrainspodcast", svc: ["kol"], ch: "YouTube" },
+  { name: "Impact Investments", sector: "Đầu tư bất động sản · Ý", desc: "Đầu tư nhà cửa với tác động tích cực.", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", svc: ["branding", "seo"], ch: "Website" },
+  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", desc: "Hoa tươi và thiết kế cảnh quan.", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", svc: ["social"], ch: "Instagram" },
+  { name: "Talk2TheTop", sector: "Podcast", desc: "Sản xuất podcast chuyên nghiệp.", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", svc: ["kol"], ch: "YouTube" },
+  { name: "Lạc Hồng", sector: "Máy xây dựng · B2B", desc: "Giải pháp toàn diện về máy xây dựng.", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", svc: ["branding", "seo"], ch: "Website" },
+  { name: "Vestra Place", sector: "Coworking · Thể thao", desc: "Không gian làm việc chung cho doanh nhân và người sáng tạo.", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", svc: ["social"], ch: "Instagram" },
+  { name: "Vina KTV", sector: "Thiết bị âm thanh · B2B", desc: "Sản xuất và phân phối thiết bị âm thanh.", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", svc: ["branding", "seo"], ch: "Website" },
+  { name: "NA-VI Living", sector: "Nhà ở cho người mới đến", desc: "Quality living for new comers.", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", svc: ["branding", "seo"], ch: "Website" },
+  { name: "Borgo Villa Nemec", sector: "Ý", desc: "Đang cập nhật mô tả dự án.", img: "", url: "https://borgovillanemec.it/", svc: ["branding", "seo"], ch: "Website" },
+];
+const labels = { all: "Tất cả", branding: "Branding", social: "Social Media", seo: "SEO", kol: "KOL · KOC" };
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Marquee: lặp danh sách 2 lần để chạy liền mạch
+const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
+document.getElementById("marquee").innerHTML = names + names;
+
+const work = document.getElementById("work");
+function render(filter) {
+  work.innerHTML = projects.filter(p => filter === "all" || p.svc.includes(filter)).map(p => `
+    <a class="card" href="${p.url}" target="_blank" rel="noopener">
+      <div class="img">${p.img ? `<img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="600">` : `<div class="placeholder">${esc(p.name)}</div>`}</div>
+      <div class="meta">${p.svc.map(s => `<span>${labels[s]}</span>`).join("")}<span>${p.ch}</span></div>
+      <h3>${esc(p.name)}</h3>
+      <p>${esc(p.sector)}. ${esc(p.desc)}</p>
+      <span class="go">Xem kênh ↗</span>
+    </a>`).join("");
+}
+const filters = document.getElementById("filters");
+filters.innerHTML = Object.entries(labels).map(([k, v]) =>
+  `<button class="chip" type="button" data-f="${k}" aria-pressed="${k === "all"}">${v}</button>`).join("");
+filters.addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  filters.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b));
+  render(b.dataset.f);
+});
+render("all");
+
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, note = document.getElementById("form-note");
+  const missing = ["f-name", "f-brand", "f-contact"].filter(id => !f.querySelector("#" + id).value.trim());
+  note.hidden = false;
+  note.textContent = missing.length
+    ? "Vui lòng điền tên, thương hiệu và cách liên hệ."
+    : "Đã ghi nhận. Đây là bản demo nên form chưa gửi đi đâu.";
+});
+</script>
