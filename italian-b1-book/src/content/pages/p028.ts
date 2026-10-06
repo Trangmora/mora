@@ -31,7 +31,7 @@ const page: BookPage = {
       widths: [3, 2],
       align: "center",
       cols: [
-        [{ type: "image", src: "images/u2/p28-concerto.svg", alt: "Un concerto di Giorgia" }],
+        [{ type: "photo", src: "images/u2/p28-concerto.jpg", alt: "Un concerto di Giorgia" }],
         [{ type: "text", it: "Ieri Elena mi ha detto che la sera prima era andata a vedere un concerto di Giorgia." }],
       ],
     },
@@ -40,7 +40,7 @@ const page: BookPage = {
       widths: [3, 2],
       align: "center",
       cols: [
-        [{ type: "image", src: "images/u2/p28-esame.svg", alt: "Uno studente all'esame all'università" }],
+        [{ type: "photo", src: "images/u2/p28-esame.jpg", alt: "Un esame all'università" }],
         [{ type: "text", it: "Ieri sera Marco era felice perché aveva superato un esame difficile." }],
       ],
     },

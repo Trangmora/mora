@@ -71,7 +71,7 @@ function useExercise(ex: Exercise) {
 
 export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: BookPage; context?: string; part: ExPart }) {
   const lang = useStore((s) => s.lang);
-  const showAnswers = useStore((s) => s.showAnswers);
+  const showAnswers = useStore((s) => s.showAnswers) && !ex.noKey;
   const showTr = useStore((s) => s.showTranslation);
   const measuring = useMeasuring();
   const { responses, byId, set } = useExercise(ex);
@@ -163,6 +163,11 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
 
   return (
     <div className={`exercise ex-part-foot ${ex.variant ?? ""}`}>
+      {ex.noKey && (
+        <p className="nokey-note">
+          {lang === "vi" ? "🎧 Bài này chưa có đáp án (đang chờ file nghe) — có thể chấm bằng AI." : "🎧 No answer key yet (audio pending) — AI checking available."}
+        </p>
+      )}
       <footer className="ex-foot">
         {ex.points && (
           <span className="punti">
@@ -866,7 +871,7 @@ function ClozeView({
                 if (tok.t === "em") return <em key={ti}>{tok.s}</em>;
                 if (tok.t === "given") return <em key={ti} className="cloze-given">{tok.s}</em>;
                 const r = results.get(tok.id);
-                const showKey = (showAnswers || (r && !r.correct)) && tok.answers[0];
+                const showKey = !(ex as { noKey?: boolean }).noKey && (showAnswers || (r && !r.correct)) && tok.answers[0];
                 return (
                   <span key={ti} className="cloze-slot">
                     <input

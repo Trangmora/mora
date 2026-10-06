@@ -62,7 +62,7 @@ const page: BookPage = {
         parts: [
           {
             text: "",
-            image: { src: "images/u2/p27-mafai.svg", alt: "Miriam Mafai durante un'intervista", side: "left", width: 26 },
+            image: { src: "images/u2/p27-mafai.jpg", alt: "Miriam Mafai durante un'intervista", side: "left", width: 26 },
             title: "Risponde alle nostre domande sulla famiglia e sulla condizione della donna nella società italiana.",
           },
           {

@@ -141,6 +141,7 @@ export function gradeByKey(ex: Exercise, responses: Record<string, string>, lang
 }
 
 export function needsAI(ex: Exercise) {
+  if (ex.noKey) return true;
   if (ex.kind === "form") return ex.items.some((f) => !f.given && !f.answers && f.answer === undefined);
   return ex.kind === "write" || ex.kind === "speak";
 }
