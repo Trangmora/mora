@@ -239,6 +239,18 @@
   "en": "So, what dress (avere) …… the bride?",
   "vi": "Thế cô dâu (avere) …… bộ váy như thế nào?"
  },
+ "Allora, deve … i … che trova a destra, accanto allo … numero 3.": {
+  "en": "Then you have to … the … that you'll find on the right, next to … number 3.",
+  "vi": "Vậy chị phải … các … ở bên phải, cạnh … số 3."
+ },
+ "Allora, mi chiamo Lorenzo Giannini, abito a Firenze, in Via Faenza numero 45.": {
+  "en": "Right, my name is Lorenzo Giannini, I live in Florence, at 45 Via Faenza.",
+  "vi": "Vâng, tôi tên là Lorenzo Giannini, sống ở Firenze, số 45 phố Faenza."
+ },
+ "Allora, sono tre euro per le … … ….": {
+  "en": "So, that's three euros for the … … ….",
+  "vi": "Vậy là ba euro cho … … …."
+ },
  "Amavo mio marito con tutto il cuore.": {
   "en": "I loved my husband with all my heart.",
   "vi": "Tôi đã yêu chồng tôi bằng cả trái tim."
@@ -283,9 +295,17 @@
   "en": "Let's listen and complete the dialogues with pronouns.",
   "vi": "Nghe và hoàn thành các đoạn hội thoại với đại từ."
  },
+ "Ascoltiamo e completiamo i dialoghi con le parole giuste.": {
+  "en": "Let's listen and complete the dialogues with the right words.",
+  "vi": "Nghe và hoàn thành các đoạn hội thoại với từ thích hợp."
+ },
  "Ascoltiamo e completiamo il modulo.": {
   "en": "Let's listen and complete the form.",
   "vi": "Nghe và điền vào mẫu đơn."
+ },
+ "Ascoltiamo e completiamo la tabella.": {
+  "en": "Let's listen and complete the table.",
+  "vi": "Nghe và hoàn thành bảng."
  },
  "Ascoltiamo e scegliamo la risposta giusta.": {
   "en": "Let's listen and choose the right answer.",
@@ -294,6 +314,10 @@
  "Ascoltiamo e scriviamo.": {
   "en": "Let's listen and write.",
   "vi": "Nghe và viết."
+ },
+ "Ascoltiamo: vero o falso?": {
+  "en": "Let's listen: true or false?",
+  "vi": "Nghe: đúng hay sai?"
  },
  "Aspetti Carlo?": {
   "en": "Are you waiting for Carlo?",
@@ -311,6 +335,10 @@
   "en": "Lucky you!",
   "vi": "Sướng thế!"
  },
+ "Bene, ho bisogno di alcuni …: nome, cognome, indirizzo del ….": {
+  "en": "Fine, I need some …: name, surname, address of the ….",
+  "vi": "Được, tôi cần vài …: tên, họ, địa chỉ của …."
+ },
  "Bevi i liquori?": {
   "en": "Do you drink liqueurs?",
   "vi": "Bạn có uống rượu mạnh không?"
@@ -327,6 +355,14 @@
   "en": "Good morning, are you Doctor Rossi?",
   "vi": "Xin chào, ông là bác sĩ Rossi phải không?"
  },
+ "Buongiorno, signora, desidera?": {
+  "en": "Good morning, madam, can I help you?",
+  "vi": "Chào chị, chị cần gì ạ?"
+ },
+ "Buongiorno, signora, … un certificato…": {
+  "en": "Good morning, madam, I … a certificate…",
+  "vi": "Chào chị, tôi … một tờ giấy chứng nhận…"
+ },
  "Buongiorno, signora: che cosa desidera?": {
   "en": "Good morning, madam: what would you like?",
   "vi": "Xin chào bà: bà cần gì ạ?"
@@ -334,6 +370,14 @@
  "Buongiorno, volevo una carta telefonica da trenta euro.": {
   "en": "Good morning, I'd like a thirty-euro phone card.",
   "vi": "Xin chào, tôi muốn mua một thẻ điện thoại ba mươi euro."
+ },
+ "Caratteristiche del matrimonio di Clara": {
+  "en": "What Clara's wedding was like",
+  "vi": "Đặc điểm đám cưới của Clara"
+ },
+ "Caratteristiche dell'abito di nozze": {
+  "en": "What the wedding dress was like",
+  "vi": "Đặc điểm của váy cưới"
  },
  "Carla è una ragazza con i capelli biondi.": {
   "en": "Carla is a girl with blond hair.",
@@ -463,6 +507,10 @@
   "en": "In your opinion, what was the Italian family like in the last century? How many people were there? What were their eating habits? Where did they live?",
   "vi": "Theo các bạn, gia đình Ý ở thế kỷ trước như thế nào? Có bao nhiêu người? Thói quen ăn uống của họ ra sao? Họ sống ở đâu?"
  },
+ "Come sono cambiate le tradizioni della famiglia nel vostro paese? Quali sono le differenze che notate oggi? Com'è la situazione dei giovani nel vostro paese?": {
+  "en": "How have family traditions changed in your country? What differences do you notice today? What is the situation of young people in your country?",
+  "vi": "Truyền thống gia đình ở nước bạn đã thay đổi thế nào? Ngày nay bạn thấy những khác biệt gì? Tình hình của người trẻ ở nước bạn ra sao?"
+ },
  "Completiamo con i verbi all'imperfetto.": {
   "en": "Fill in the verbs in the imperfetto.",
   "vi": "Điền động từ ở thì imperfetto."
@@ -554,6 +602,10 @@
  "Dario cammina a testa bassa.": {
   "en": "Dario walks with his head down.",
   "vi": "Dario đi cúi đầu."
+ },
+ "Data del matrimonio di Giulia": {
+  "en": "Date of Giulia's wedding",
+  "vi": "Ngày cưới của Giulia"
  },
  "Data di nascita": {
   "en": "Date of birth",
@@ -711,6 +763,10 @@
   "en": "And art cities such as Siena, Lucca, Assisi?",
   "vi": "Còn các thành phố nghệ thuật như Siena, Lucca, Assisi thì sao?"
  },
+ "E per la residenza?": {
+  "en": "And for the residence certificate?",
+  "vi": "Còn giấy xác nhận cư trú thì sao?"
+ },
  "Egli ed ella compaiono solo nella lingua scritta formale e in testi letterari: il pronome femminile ella è raro anche nella lingua scritta. Egli ed ella si riferiscono soltanto a una persona.": {
   "en": "Egli and ella appear only in formal written language and literary texts: the feminine pronoun ella is rare even in writing. Egli and ella refer only to a person.",
   "vi": "Egli và ella chỉ xuất hiện trong văn viết trang trọng và văn bản văn học: đại từ giống cái ella hiếm gặp ngay cả trong văn viết. Egli và ella chỉ dùng cho người."
@@ -831,6 +887,10 @@
   "en": "Favourite pastimes are cinema and sports events. The favourite team is Juventus.",
   "vi": "Thú giải trí ưa thích là xem phim và các chương trình thể thao. Đội bóng được yêu thích nhất là Juventus."
  },
+ "Grazie!": {
+  "en": "Thank you!",
+  "vi": "Cảm ơn!"
+ },
  "Ha mai frequentato un corso all'Università per Stranieri di Siena?": {
   "en": "Have you ever attended a course at the University for Foreigners of Siena?",
   "vi": "Bạn đã từng theo học khoá nào ở Đại học cho Người nước ngoài Siena chưa?"
@@ -867,6 +927,10 @@
   "en": "Children start school at five.",
   "vi": "Trẻ em bắt đầu đi học lúc năm tuổi."
  },
+ "I genitori di Patrizia hanno affittato una barca.": {
+  "en": "Patrizia's parents hired a boat.",
+  "vi": "Bố mẹ Patrizia đã thuê một chiếc thuyền."
+ },
  "I giovani italiani tornano in famiglia: (a) per problemi economici. (b) perché hanno nostalgia dei genitori. (c) perché si sentono soli.": {
   "en": "Young Italians go back to their families: (a) because of economic problems. (b) because they miss their parents. (c) because they feel lonely.",
   "vi": "Người trẻ Ý quay về sống với gia đình: (a) vì khó khăn kinh tế. (b) vì nhớ bố mẹ. (c) vì cảm thấy cô đơn."
@@ -874,6 +938,10 @@
  "I nomi o gli aggettivi che si riferiscono al Lei vanno al maschile se ci rivolgiamo a un uomo, vanno al femminile se ci rivolgiamo a una donna:": {
   "en": "Nouns or adjectives referring to Lei are masculine if we speak to a man and feminine if we speak to a woman:",
   "vi": "Danh từ hoặc tính từ đi với Lei để giống đực nếu ta nói với đàn ông, để giống cái nếu ta nói với phụ nữ:"
+ },
+ "I nomi, da sinistra a destra:": {
+  "en": "The names, from left to right:",
+  "vi": "Tên, từ trái sang phải:"
  },
  "I pronomi atoni precedono il verbo e possono avere funzione di:": {
   "en": "Unstressed pronouns come before the verb and can act as:",
@@ -1115,6 +1183,10 @@
   "en": "The food and shopping at the little markets!",
   "vi": "Ẩm thực và mua sắm ở các chợ nhỏ!"
  },
+ "La famiglia di Patrizia": {
+  "en": "Patrizia's family",
+  "vi": "Gia đình của Patrizia"
+ },
  "La famiglia è … media di 3 persone; risiede … nord, … una casa di proprietà.": {
   "en": "The family is … average 3 people; it lives … the north, … a house it owns.",
   "vi": "Gia đình … trung bình có 3 người; sống … miền Bắc, … một ngôi nhà thuộc sở hữu riêng."
@@ -1283,6 +1355,10 @@
   "en": "She lives in the country, I live in the city.",
   "vi": "Cô ấy sống ở nông thôn, còn tôi ở thành phố."
  },
+ "Lei è nata nel … di Bologna?": {
+  "en": "Were you born in the … of Bologna?",
+  "vi": "Chị sinh ra ở … Bologna phải không?"
+ },
  "Lei è un'amica di Martina.": {
   "en": "She is a friend of Martina's.",
   "vi": "Cô ấy là bạn của Martina."
@@ -1326,6 +1402,10 @@
  "Luisa è passata da te alle 8.": {
   "en": "Luisa came by your place at 8.",
   "vi": "Luisa đã ghé qua nhà bạn lúc 8 giờ."
+ },
+ "Luogo del matrimonio": {
+  "en": "Place of the wedding",
+  "vi": "Nơi tổ chức đám cưới"
  },
  "Luogo di nascita": {
   "en": "Place of birth",
@@ -1523,6 +1603,10 @@
   "en": "No, I can't buy them. / No, I can't buy them.",
   "vi": "Không, tôi không mua được chúng. / Không, tôi không mua được chúng."
  },
+ "No, sono nata nel comune di Teramo.": {
+  "en": "No, I was born in the municipality of Teramo.",
+  "vi": "Không, tôi sinh ở thị xã Teramo."
+ },
  "Noi partiamo domani.": {
   "en": "We leave tomorrow.",
   "vi": "Chúng tôi đi vào ngày mai."
@@ -1543,9 +1627,17 @@
   "en": "We don't have … in our programmes because Chinese tourists prefer the big famous cities.",
   "vi": "Chúng tôi không có … trong chương trình vì du khách Trung Quốc thích các thành phố lớn nổi tiếng."
  },
+ "Nonna Rita aveva un camino in cucina.": {
+  "en": "Grandma Rita had a fireplace in the kitchen.",
+  "vi": "Trong bếp nhà bà Rita có một lò sưởi."
+ },
  "Nonno, … racconti una favola?": {
   "en": "Grandpa, will you tell … a fairy tale?",
   "vi": "Ông ơi, ông kể cho … nghe một câu chuyện cổ tích nhé?"
+ },
+ "Numero di invitati": {
+  "en": "Number of guests",
+  "vi": "Số khách mời"
  },
  "Offro un caffè a Lucia.": {
   "en": "I offer Lucia a coffee.",
@@ -1595,6 +1687,10 @@
   "en": "Let's look and read.",
   "vi": "Quan sát và đọc."
  },
+ "Osserviamo l'immagine e scriviamo.": {
+  "en": "Let's look at the picture and write.",
+  "vi": "Quan sát bức tranh và viết."
+ },
  "Osserviamo l'immagine.": {
   "en": "Let's look at the picture.",
   "vi": "Quan sát bức tranh."
@@ -1610,6 +1706,10 @@
  "Parli inglese?": {
   "en": "Do (you) speak English?",
   "vi": "(Bạn) nói tiếng Anh à?"
+ },
+ "Parliamo (a coppie).": {
+  "en": "Let's talk (in pairs).",
+  "vi": "Cùng nói (theo cặp)."
  },
  "Parliamo.": {
   "en": "Let's talk.",
@@ -1634,6 +1734,10 @@
  "Passo per Napoli. / Passo da Napoli.": {
   "en": "I pass through Naples. / I pass by Naples.",
   "vi": "Tôi đi qua Napoli. / Tôi ghé qua Napoli."
+ },
+ "Patrizia giocava sempre da sola.": {
+  "en": "Patrizia always played on her own.",
+  "vi": "Patrizia lúc nào cũng chơi một mình."
  },
  "Patrizia mi ha prestato un libro.": {
   "en": "Patrizia lent me a book.",
@@ -1666,6 +1770,10 @@
  "Perché oggi, secondo voi, in Italia nascono meno bambini?": {
   "en": "In your opinion, why are fewer children born in Italy today?",
   "vi": "Theo các bạn, tại sao ngày nay ở Ý sinh ít trẻ em hơn?"
+ },
+ "Perfetto: quante … le …?": {
+  "en": "Perfect: how many … do you …?",
+  "vi": "Được rồi: anh … bao nhiêu …?"
  },
  "Peso sui settanta chili.": {
   "en": "I weigh about seventy kilos.",
@@ -1755,6 +1863,18 @@
   "en": "This gold ring is very beautiful.",
   "vi": "Chiếc nhẫn vàng này rất đẹp."
  },
+ "Raccontate la storia di qualche famiglia importante e famosa del vostro paese.": {
+  "en": "Tell the story of an important and famous family in your country.",
+  "vi": "Hãy kể câu chuyện về một gia đình quan trọng và nổi tiếng ở nước bạn."
+ },
+ "Raccontate la vostra esperienza personale: se siete ancora in famiglia oppure a quanti anni l'avete lasciata, quando avete ottenuto l'indipendenza economica…": {
+  "en": "Talk about your own experience: whether you still live with your family or at what age you left, when you became financially independent…",
+  "vi": "Hãy kể về trải nghiệm của bạn: bạn vẫn sống cùng gia đình hay đã ra ở riêng từ năm bao nhiêu tuổi, khi nào bạn tự lập về tài chính…"
+ },
+ "Raccontate qualche episodio della vita dei vostri nonni.": {
+  "en": "Tell some stories from your grandparents' lives.",
+  "vi": "Hãy kể vài chuyện trong cuộc đời ông bà bạn."
+ },
  "Recapito a Siena": {
   "en": "Contact address in Siena",
   "vi": "Địa chỉ liên lạc ở Siena"
@@ -1763,9 +1883,21 @@
   "en": "Residence/address",
   "vi": "Nơi cư trú/địa chỉ"
  },
+ "Rispondiamo.": {
+  "en": "Answer the questions.",
+  "vi": "Trả lời các câu hỏi."
+ },
+ "Salve, ho bisogno di una serie di … perché mi devo sposare tra 6 mesi. Allora, vorrei il … … … e quello di ….": {
+  "en": "Hello, I need a series of … because I'm getting married in 6 months. So, I'd like the … … … and the … one.",
+  "vi": "Chào anh, tôi cần một loạt … vì sáu tháng nữa tôi kết hôn. Vậy tôi muốn lấy … … … và giấy chứng nhận …."
+ },
  "Sandro, aiutami per favore!": {
   "en": "Sandro, help me please!",
   "vi": "Sandro, giúp tôi với!"
+ },
+ "Scrivete i nomi delle persone della famiglia di Patrizia.": {
+  "en": "Write the names of the people in Patrizia's family.",
+  "vi": "Hãy viết tên các thành viên trong gia đình Patrizia."
  },
  "Scriviamo.": {
   "en": "Let's write.",
@@ -1790,6 +1922,10 @@
  "Scusami, volevo chiederti un favore…": {
   "en": "Excuse me, I wanted to ask you a favour…",
   "vi": "Xin lỗi, mình muốn nhờ bạn một việc…"
+ },
+ "Se lei abita a Bologna, ho bisogno solo del suo …, lo scrivo al computer e il suo certificato è pronto in pochi secondi.": {
+  "en": "If you live in Bologna, I only need your …, I type it into the computer and your certificate is ready in a few seconds.",
+  "vi": "Nếu chị sống ở Bologna, tôi chỉ cần … của chị, tôi nhập vào máy tính và giấy chứng nhận có ngay trong vài giây."
  },
  "Secondo Lei com'è cambiata la famiglia italiana? E in particolare (cambiare) … il ruolo del padre?": {
   "en": "In your opinion, how has the Italian family changed? And in particular, how (cambiare) … the father's role?",
@@ -1822,6 +1958,14 @@
  "Siccome (noi, essere) …… stanchi,": {
   "en": "As (noi, essere) …… tired,",
   "vi": "Vì (noi, essere) …… mệt,"
+ },
+ "Siete al comune e avete bisogno del certificato di matrimonio.": {
+  "en": "You are at the town hall and you need your marriage certificate.",
+  "vi": "Bạn đang ở uỷ ban và cần giấy chứng nhận kết hôn."
+ },
+ "Siete in questura: chiedete come inserire nel passaporto i nomi dei vostri figli.": {
+  "en": "You are at the police headquarters: ask how to add your children's names to your passport.",
+  "vi": "Bạn đang ở sở cảnh sát: hãy hỏi cách ghi tên các con vào hộ chiếu."
  },
  "Signor Berg, lei per motivi di lavoro ha viaggiato molto in Italia: quale città preferisce?": {
   "en": "Mr Berg, you have travelled a lot in Italy for work: which city do you prefer?",
@@ -1898,6 +2042,10 @@
  "Suo padre lavorava in fabbrica.": {
   "en": "His father worked in a factory.",
   "vi": "Bố anh ấy làm việc trong nhà máy."
+ },
+ "Sì, di che tipo?": {
+  "en": "Yes, what kind?",
+  "vi": "Vâng, loại nào ạ?"
  },
  "Sì, gli ho dato il regalo ieri.": {
   "en": "Yes, I gave him the present yesterday.",
@@ -1983,6 +2131,10 @@
   "en": "There's never an argument between us.",
   "vi": "Giữa chúng tôi không bao giờ có cãi vã."
  },
+ "Tre copie. Quanto devo pagare?": {
+  "en": "Three copies. How much do I have to pay?",
+  "vi": "Ba bản. Tôi phải trả bao nhiêu?"
+ },
  "Tre italiani … 10 non leggono il giornale.": {
   "en": "Three Italians … 10 don't read the newspaper.",
   "vi": "Cứ … 10 người Ý thì ba người không đọc báo."
@@ -2010,6 +2162,14 @@
  "Un italiano … tre ha preso farmaci … ultimi due giorni.": {
   "en": "One Italian … three has taken medicines … last two days.",
   "vi": "Cứ … ba người Ý thì có một người đã uống thuốc … hai ngày gần đây."
+ },
+ "Una volta tutta la famiglia ha fatto una gita al mare.": {
+  "en": "Once the whole family went on a trip to the seaside.",
+  "vi": "Có lần cả gia đình đã đi chơi biển."
+ },
+ "Uno … … …, per favore.": {
+  "en": "A … … …, please.",
+  "vi": "Một tờ … … …, làm ơn."
  },
  "Usiamo il pronome Lei quando ci rivolgiamo a una persona con cui non siamo in confidenza (situazione formale):": {
   "en": "We use the pronoun Lei when we speak to someone we are not close to (formal situation):",
@@ -2259,6 +2419,10 @@
   "en": "Is this money enough for you?",
   "vi": "Số tiền này có đủ cho các bạn không?"
  },
+ "Vi ricordate un fatto divertente che è successo quando eravate bambini?": {
+  "en": "Do you remember something funny that happened when you were children?",
+  "vi": "Bạn có nhớ chuyện gì vui đã xảy ra hồi bạn còn nhỏ không?"
+ },
  "Vivo e lavoro a Milano dal 1988.": {
   "en": "I have lived and worked in Milan since 1988.",
   "vi": "Tôi sống và làm việc ở Milano từ năm 1988."
@@ -2278,6 +2442,10 @@
  "Vuoi un gelato da due euro o da tre euro?": {
   "en": "Do you want a two-euro or a three-euro ice cream?",
   "vi": "Bạn muốn kem loại hai euro hay ba euro?"
+ },
+ "Zio Sandro spesso cucinava delle buone torte.": {
+  "en": "Uncle Sandro often baked nice cakes.",
+  "vi": "Chú Sandro hay làm những chiếc bánh ngọt ngon."
  },
  "abitare → Abbiamo abitato a Milano.": {
   "en": "abitare → We lived in Milan.",
@@ -2343,9 +2511,37 @@
   "en": "personal pronouns acting as subjects;",
   "vi": "đại từ nhân xưng làm chủ ngữ;"
  },
+ "il signore alto con i capelli rossi: …": {
+  "en": "the tall man with red hair: …",
+  "vi": "người đàn ông cao, tóc đỏ: …"
+ },
+ "il signore con i baffi e la canna da pesca: …": {
+  "en": "the man with the moustache and the fishing rod: …",
+  "vi": "người đàn ông có ria mép và cần câu: …"
+ },
+ "il vecchietto con la pipa: …": {
+  "en": "the old man with the pipe: …",
+  "vi": "ông cụ ngậm tẩu thuốc: …"
+ },
  "iniziare → Marco ha iniziato la scuola a settembre.": {
   "en": "iniziare → Marco started school in September.",
   "vi": "iniziare (bắt đầu) → Marco đã bắt đầu đi học vào tháng Chín."
+ },
+ "la bambina vicino al cane: …": {
+  "en": "the little girl next to the dog: …",
+  "vi": "cô bé ngồi cạnh con chó: …"
+ },
+ "la signora bionda con la gonna a fiori: …": {
+  "en": "the blonde woman in the flowered skirt: …",
+  "vi": "người phụ nữ tóc vàng mặc váy hoa: …"
+ },
+ "la signora un po' grassa con gli occhiali: …": {
+  "en": "the slightly plump woman with glasses: …",
+  "vi": "người phụ nữ hơi đẫy đà, đeo kính: …"
+ },
+ "la vecchietta con il cappellino rosa: …": {
+  "en": "the old lady with the pink hat: …",
+  "vi": "bà cụ đội mũ hồng: …"
  },
  "nell'espressione io e te:": {
   "en": "in the expression io e te:",
@@ -2458,6 +2654,10 @@
  "È mio fratello.": {
   "en": "(He) is my brother.",
   "vi": "(Anh ấy) là anh/em trai tôi."
+ },
+ "È nato un bambino nella vostra famiglia: andate al comune per registrare la sua nascita.": {
+  "en": "A baby has been born in your family: go to the town hall to register the birth.",
+  "vi": "Gia đình bạn vừa có em bé: hãy đến uỷ ban để đăng ký khai sinh."
  },
  "È obbligatorio esprimere il pronome personale soggetto:": {
   "en": "The subject pronoun must be expressed:",

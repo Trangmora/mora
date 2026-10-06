@@ -229,6 +229,8 @@ export type Exercise = ExerciseBody & {
   example?: { q: string; a: string };
   /** Dòng "Punti …… / 10" cuối bài (bài kiểm tra Verifica). */
   points?: number;
+  /** Chưa có đáp án (đang chờ file nghe): không chấm theo đáp án, chỉ chấm bằng AI; không hiện đáp án. */
+  noKey?: boolean;
   /** "capace": khung nét đứt "ORA SONO CAPACE DI…" cuối bài Verifica. */
   variant?: "capace" | "twoCol";
 };
