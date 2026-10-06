@@ -21,6 +21,7 @@ Dịch vụ chốt: Social Media Management · SEO · Branding · KOL/KOC bookin
 | 8 | Lạc Hồng Company | Máy xây dựng (B2B) | Giải pháp toàn diện về máy xây dựng | https://www.lachongshop.com/ | lac-hong-company.png | ? | ? |
 | 9 | NA-VI Living | Nhà ở / lưu trú | Quality Living for New Comers | https://www.naviliving.com/ | navi-living.png | ? | ? |
 | 10 | Vina KTV | Sản xuất thiết bị âm thanh (B2B) | Sản xuất và phân phối thiết bị âm thanh | https://vinaktv.com/ | vina-ktv.jpg | ? | ? |
+| 11 | Borgo Villa Nemec | ? (Ý) | ? | https://borgovillanemec.it/ | cần ảnh chụp màn hình | ? | ? |
 
 ## Không dùng
 
