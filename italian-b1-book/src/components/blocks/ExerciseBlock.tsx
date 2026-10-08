@@ -15,6 +15,8 @@ import { inline } from "./Theory";
 import { TrIcon } from "../TrIcon";
 
 const EMPTY: Record<string, string> = {};
+/** Câu đã tự ghi số như sách ("2. …") thì không vẽ thêm số tự động. */
+const SELF_NUM = /^\d+\.\s/;
 
 /** Mảnh của một bài tập khi chia trang: đề bài, từng câu, hoặc phần nút chấm. */
 export type ExPart = { kind: "head" } | { kind: "item"; index: number } | { kind: "whole" } | { kind: "foot" };
@@ -257,7 +259,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
                 set(it.id, next.join(SEP));
               };
               return (
-                <li key={it.id} className={`ex-item ${it.lead ? "has-lead" : ""}`}>
+                <li key={it.id} className={`ex-item ${it.lead ? "has-lead" : ""} ${SELF_NUM.test(it.prompt) ? "self-num" : ""}`}>
                   {it.lead && <span className="ex-lead">{it.lead}</span>}
                   <span className="line">
                     {parts.map((p, k) => (
