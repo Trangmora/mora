@@ -102,7 +102,7 @@ const page: BookPage = {
         tr: { vi: "Đọc và sửa chính tả nếu cần.", en: "Let's read and correct if necessary." },
         items: [
           { id: "2", prompt: "2. terribile → ___", answers: ["terribile"] },
-          { id: "3", prompt: "3. preoccupato → ___", answers: ["preoccupato"] },
+          { id: "3", prompt: "3. preocupato → ___", answers: ["preoccupato"] },
           { id: "4", prompt: "4. facia → ___", answers: ["faccia"] },
           { id: "5", prompt: "5. attaccare → ___", answers: ["attaccare"] },
           { id: "6", prompt: "6. immagginare → ___", answers: ["immaginare"] },
