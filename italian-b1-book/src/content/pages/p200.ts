@@ -75,6 +75,7 @@ const page: BookPage = {
         ],
       },
     },
+    { type: "audio", src: "audio/u10-p200-ex19.mp3", title: "19", autoTranscript: true, transcript: "1. Nel Palio di Siena ci sono 17 contrade. 2. Nel gioco del calcio fiorentino si sfidano 4 quartieri. 3. La Giostra della Quintana ha un fascino antico. 4. Il miracolo di San Gennaro è famosissimo. 5. Si incontrano molte persone alla festa dei Ceri. 6. Gli italiani celebrano molti anniversari. 7. Il Carnevale di Venezia attira numerosissimi turisti." },
     {
       type: "exercise",
       ex: {
@@ -87,13 +88,13 @@ const page: BookPage = {
         instruction: "Ascoltiamo e scriviamo le frasi.",
         tr: { vi: "Nghe và viết lại các câu.", en: "Let's listen and write the sentences." },
         items: [
-          { id: "1", prompt: "", lines: 2 },
-          { id: "2", prompt: "", lines: 2 },
-          { id: "3", prompt: "", lines: 2 },
-          { id: "4", prompt: "", lines: 2 },
-          { id: "5", prompt: "", lines: 2 },
-          { id: "6", prompt: "", lines: 2 },
-          { id: "7", prompt: "", lines: 2 },
+          { id: "1", prompt: "", lines: 2, sample: "Nel Palio di Siena ci sono 17 contrade." },
+          { id: "2", prompt: "", lines: 2, sample: "Nel gioco del calcio fiorentino si sfidano 4 quartieri." },
+          { id: "3", prompt: "", lines: 2, sample: "La Giostra della Quintana ha un fascino antico." },
+          { id: "4", prompt: "", lines: 2, sample: "Il miracolo di San Gennaro è famosissimo." },
+          { id: "5", prompt: "", lines: 2, sample: "Si incontrano molte persone alla festa dei Ceri." },
+          { id: "6", prompt: "", lines: 2, sample: "Gli italiani celebrano molti anniversari." },
+          { id: "7", prompt: "", lines: 2, sample: "Il Carnevale di Venezia attira numerosissimi turisti." },
         ],
       },
     },
