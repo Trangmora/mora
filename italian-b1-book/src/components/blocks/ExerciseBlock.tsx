@@ -296,7 +296,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
             const r = results.get(it.id);
             if (ex.inline)
               return (
-                <li key={it.id} className="ex-item inline-choice">
+                <li key={it.id} className="ex-item inline-choice" value={/^\d+$/.test(it.id) ? Number(it.id) : undefined}>
                   <span className="line">
                     {it.prompt && <>{inline(it.prompt)} </>}
                     {it.options.map((o, k) => (
@@ -321,7 +321,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
                 </li>
               );
             return (
-              <li key={it.id} className="ex-item">
+              <li key={it.id} className={`ex-item ${SELF_NUM.test(it.prompt ?? "") ? "self-num" : ""}`}>
                 <span className="line">
                   {inline(it.prompt)} <TrIcon text={`${it.prompt} ${it.options.map((o, k) => `(${String.fromCharCode(97 + k)}) ${o}`).join(" ")}`} /> <Mark r={r} />
                 </span>
@@ -354,7 +354,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
           {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
-              <li key={it.id} className="ex-item tf">
+              <li key={it.id} className={`ex-item tf ${SELF_NUM.test(it.prompt ?? "") ? "self-num" : ""}`}>
                 <span className="line">
                   {it.prompt} <TrIcon text={it.prompt} /> <Mark r={r} />
                 </span>
@@ -466,7 +466,7 @@ function Body({ ex, only, responses, set, showAnswers, results, radioPrefix }: B
           {pick(ex.items).map((it) => {
             const r = results.get(it.id);
             return (
-              <li key={it.id} className="ex-item">
+              <li key={it.id} className={`ex-item ${SELF_NUM.test(it.prompt ?? "") ? "self-num" : ""}`}>
                 {it.prompt && (
                   <span className="line">
                     {it.prompt} <TrIcon text={it.prompt} /> <Mark r={r} />

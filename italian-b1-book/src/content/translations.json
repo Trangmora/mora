@@ -10930,5 +10930,1449 @@
  "Osserviamo e abbiniamo le immagini ai titoli delle opere che Riccardo Muti ha diretto.": {
   "vi": "Quan sát và nối các bức ảnh với tên các vở opera mà Riccardo Muti đã chỉ huy.",
   "en": "Let's look and match the pictures to the titles of the operas Riccardo Muti has conducted."
+ },
+ "Osserviamo le immagini e abbiniamo i testi ai titoli dei giornali.": {
+  "vi": "Quan sát hình và nối các đoạn văn với tên các tờ báo.",
+  "en": "Let's look at the pictures and match the texts to the newspaper titles."
+ },
+ "È un importante quotidiano italiano e il suo sito web è sicuramente il migliore della stampa italiana.": {
+  "vi": "Đây là một tờ nhật báo quan trọng của Ý và trang web của nó chắc chắn là tốt nhất của báo chí Ý.",
+  "en": "It is an important Italian daily and its website is certainly the best in the Italian press."
+ },
+ "È il primo quotidiano economico e finanziario italiano. La domenica ha un inserto culturale molto interessante.": {
+  "vi": "Đây là tờ nhật báo kinh tế – tài chính hàng đầu của Ý. Chủ nhật có một phụ trương văn hóa rất hay.",
+  "en": "It is Italy's leading economic and financial daily. On Sundays it has a very interesting cultural supplement."
+ },
+ "È un settimanale del gruppo Mondadori, nato nel 1966, ed è il primo newsmagazine venduto anche fuori dall'Italia. Le sue copertine un po' “osé” nascondono inchieste e informazioni molto acute e apprezzate.": {
+  "vi": "Đây là một tuần báo của tập đoàn Mondadori, ra đời năm 1966, và là tạp chí tin tức đầu tiên được bán cả ở ngoài nước Ý. Những trang bìa hơi “táo bạo” của nó ẩn chứa những phóng sự và thông tin rất sắc sảo, được đánh giá cao.",
+  "en": "It is a weekly of the Mondadori group, founded in 1966, and it is the first newsmagazine sold outside Italy too. Its slightly “risqué” covers hide very sharp and highly regarded investigations and information."
+ },
+ "“La vecchia signora”, nata nel 1866 a Milano, è un quotidiano ancora in ottima salute. Il primo quotidiano italiano è sempre serio, rigoroso e neutrale. Appartiene al gruppo RCS, che pubblica anche la famosa Gazzetta dello Sport, e possiede il 45% del capitale del quotidiano spagnolo El Mundo.": {
+  "vi": "“Bà già”, ra đời năm 1866 ở Milano, là một tờ nhật báo vẫn còn rất khỏe mạnh. Tờ nhật báo hàng đầu nước Ý luôn nghiêm túc, chặt chẽ và trung lập. Nó thuộc tập đoàn RCS, đơn vị cũng xuất bản tờ Gazzetta dello Sport nổi tiếng, và sở hữu 45% vốn của nhật báo Tây Ban Nha El Mundo.",
+  "en": "“The old lady”, born in Milan in 1866, is a daily still in excellent health. Italy's leading daily is always serious, rigorous and neutral. It belongs to the RCS group, which also publishes the famous Gazzetta dello Sport, and owns 45% of the capital of the Spanish daily El Mundo."
+ },
+ "la Repubblica": {
+  "vi": "la Repubblica (nhật báo)",
+  "en": "la Repubblica (daily newspaper)"
+ },
+ "Panorama": {
+  "vi": "Panorama (tuần báo)",
+  "en": "Panorama (weekly magazine)"
+ },
+ "Il Sole 24 Ore": {
+  "vi": "Il Sole 24 Ore (nhật báo kinh tế)",
+  "en": "Il Sole 24 Ore (financial daily)"
+ },
+ "Corriere della Sera": {
+  "vi": "Corriere della Sera (nhật báo)",
+  "en": "Corriere della Sera (daily newspaper)"
+ },
+ "Quali giornali leggete, di solito, nel vostro paese?": {
+  "vi": "Ở nước các bạn, các bạn thường đọc báo nào?",
+  "en": "Which newspapers do you usually read in your country?"
+ },
+ "Qual è il rapporto tra la stampa e la politica nel vostro paese?": {
+  "vi": "Ở nước các bạn, quan hệ giữa báo chí và chính trị thế nào?",
+  "en": "What is the relationship between the press and politics in your country?"
+ },
+ "Avete mai scritto una lettera a un giornale? Su quale argomento?": {
+  "vi": "Các bạn đã bao giờ viết thư cho một tờ báo chưa? Về chủ đề gì?",
+  "en": "Have you ever written a letter to a newspaper? On what subject?"
+ },
+ "Quali riviste comprate?": {
+  "vi": "Các bạn mua những tạp chí nào?",
+  "en": "Which magazines do you buy?"
+ },
+ "Avete mai fatto un abbonamento a una rivista? Perché?": {
+  "vi": "Các bạn đã bao giờ đặt mua dài hạn một tạp chí chưa? Tại sao?",
+  "en": "Have you ever subscribed to a magazine? Why?"
+ },
+ "Ascoltiamo i dialoghi e leggiamo: vero o falso?": {
+  "vi": "Nghe các đoạn hội thoại và đọc: đúng hay sai?",
+  "en": "Let's listen to the dialogues and read: true or false?"
+ },
+ "L'articolo di cronaca della Nazione dice che il Comune vuole costruire una nuova scuola.": {
+  "vi": "Bài báo thời sự trên tờ Nazione nói rằng thành phố muốn xây một trường học mới.",
+  "en": "The local news article in La Nazione says that the Council wants to build a new school."
+ },
+ "Riccardo sta leggendo un articolo di economia.": {
+  "vi": "Riccardo đang đọc một bài báo về kinh tế.",
+  "en": "Riccardo is reading an article about economics."
+ },
+ "Martina ha letto un'intervista a un attore.": {
+  "vi": "Martina đã đọc một bài phỏng vấn một diễn viên.",
+  "en": "Martina read an interview with an actor."
+ },
+ "Zingaretti interpreterà il ruolo di un professore.": {
+  "vi": "Zingaretti sẽ đóng vai một giáo sư.",
+  "en": "Zingaretti will play the role of a professor."
+ },
+ "Leggiamo la tabella e parliamo.": {
+  "vi": "Đọc bảng và cùng nói.",
+  "en": "Let's read the table and talk."
+ },
+ "Osservate la lista degli argomenti che leggete di solito nei giornali: quali preferite? Spiegate perché.": {
+  "vi": "Hãy xem danh sách các chủ đề các bạn thường đọc trên báo: các bạn thích chủ đề nào? Giải thích tại sao.",
+  "en": "Look at the list of topics you usually read in newspapers: which do you prefer? Explain why."
+ },
+ "– informazioni sui programmi tv": {
+  "vi": "– thông tin về các chương trình TV",
+  "en": "– information on TV programmes"
+ },
+ "– politica estera": {
+  "vi": "– chính trị quốc tế",
+  "en": "– foreign politics"
+ },
+ "– recensioni cinematografiche, teatrali e letterarie": {
+  "vi": "– bình luận phim, kịch và văn học",
+  "en": "– film, theatre and book reviews"
+ },
+ "– cronaca estera": {
+  "vi": "– thời sự quốc tế",
+  "en": "– foreign news"
+ },
+ "– notizie di finanza": {
+  "vi": "– tin tài chính",
+  "en": "– financial news"
+ },
+ "– rubriche religiose": {
+  "vi": "– chuyên mục tôn giáo",
+  "en": "– religious columns"
+ },
+ "– cronaca interna": {
+  "vi": "– thời sự trong nước",
+  "en": "– home news"
+ },
+ "– notizie socioeconomiche": {
+  "vi": "– tin kinh tế – xã hội",
+  "en": "– socio-economic news"
+ },
+ "– scienza e tecnologia": {
+  "vi": "– khoa học và công nghệ",
+  "en": "– science and technology"
+ },
+ "– cronaca nera": {
+  "vi": "– tin hình sự (vụ án, tai nạn)",
+  "en": "– crime news"
+ },
+ "– notizie sul traffico, sui trasporti, sul tempo": {
+  "vi": "– tin giao thông, vận tải, thời tiết",
+  "en": "– news on traffic, transport and the weather"
+ },
+ "– cronaca rosa": {
+  "vi": "– tin đời tư người nổi tiếng",
+  "en": "– celebrity gossip"
+ },
+ "Il congiuntivo presente": {
+  "vi": "Thức giả định hiện tại",
+  "en": "The present subjunctive"
+ },
+ "Credo che Luisa ami Giorgio.": {
+  "vi": "Tôi nghĩ là Luisa yêu Giorgio.",
+  "en": "I think Luisa loves Giorgio."
+ },
+ "Mi dispiace che non vedano la partita.": {
+  "vi": "Tôi tiếc là họ không xem trận đấu.",
+  "en": "I'm sorry they won't watch the match."
+ },
+ "Vogliamo che partiate con noi.": {
+  "vi": "Chúng tôi muốn các bạn đi cùng chúng tôi.",
+  "en": "We want you to leave with us."
+ },
+ "Bisogna che finiscano subito quel lavoro.": {
+  "vi": "Họ cần hoàn thành ngay công việc đó.",
+  "en": "They need to finish that job at once."
+ },
+ "Scriviamo: trasformiamo le frasi e usiamo i verbi al congiuntivo.": {
+  "vi": "Cùng viết: biến đổi câu, dùng động từ ở thức giả định.",
+  "en": "Let's write: transform the sentences using the verbs in the subjunctive."
+ },
+ "1. Giorgio e Luca sono giornalisti da poco tempo. (Pensiamo che)": {
+  "vi": "1. Giorgio và Luca làm nhà báo chưa lâu. (Chúng tôi nghĩ rằng)",
+  "en": "1. Giorgio and Luca have been journalists for a short time. (We think that)"
+ },
+ "2. Michele Serra scrive articoli interessantissimi. (Crediamo che)": {
+  "vi": "2. Michele Serra viết những bài báo cực kỳ hay. (Chúng tôi tin rằng)",
+  "en": "2. Michele Serra writes extremely interesting articles. (We believe that)"
+ },
+ "3. Anna dorme a casa di Roberta. (È possibile che)": {
+  "vi": "3. Anna ngủ ở nhà Roberta. (Có thể là)",
+  "en": "3. Anna sleeps at Roberta's house. (It's possible that)"
+ },
+ "4. Domani non c'è sciopero della stampa. (Molti di noi sperano che)": {
+  "vi": "4. Ngày mai báo chí không đình công. (Nhiều người trong chúng tôi hy vọng rằng)",
+  "en": "4. Tomorrow there's no press strike. (Many of us hope that)"
+ },
+ "5. Leggete sempre due quotidiani alla settimana. (È bene che)": {
+  "vi": "5. Các bạn luôn đọc hai tờ nhật báo mỗi tuần. (Tốt là)",
+  "en": "5. You always read two dailies a week. (It's good that)"
+ },
+ "6. I giornalisti lavorano molto tutto il giorno. (Immagino che)": {
+  "vi": "6. Các nhà báo làm việc rất nhiều suốt cả ngày. (Tôi đoán rằng)",
+  "en": "6. Journalists work a lot all day. (I imagine that)"
+ },
+ "7. Il caporedattore non ha molte responsabilità. (Dubito che)": {
+  "vi": "7. Tổng biên tập không có nhiều trách nhiệm. (Tôi nghi ngờ rằng)",
+  "en": "7. The editor-in-chief doesn't have many responsibilities. (I doubt that)"
+ },
+ "Credo che Marco e Lucia vadano in vacanza in Sardegna.": {
+  "vi": "Tôi nghĩ là Marco và Lucia đi nghỉ ở Sardegna.",
+  "en": "I think Marco and Lucia are going on holiday to Sardinia."
+ },
+ "Penso che Matteo domani esca con Marina.": {
+  "vi": "Tôi nghĩ là ngày mai Matteo đi chơi với Marina.",
+  "en": "I think Matteo is going out with Marina tomorrow."
+ },
+ "È giusto che Giulio scelga la facoltà che gli piace di più.": {
+  "vi": "Giulio chọn khoa mà cậu ấy thích nhất là đúng.",
+  "en": "It's right that Giulio should choose the faculty he likes best."
+ },
+ "È opportuno che tu rimanga in ufficio oggi.": {
+  "vi": "Hôm nay bạn nên ở lại văn phòng.",
+  "en": "It's advisable that you stay in the office today."
+ },
+ "Spero che voi veniate alla festa.": {
+  "vi": "Tôi hy vọng các bạn sẽ đến dự tiệc.",
+  "en": "I hope you'll come to the party."
+ },
+ "Per le forme irregolari dei verbi, consultate la GRAMMATICA.": {
+  "vi": "Về các dạng bất quy tắc của động từ, hãy xem phần NGỮ PHÁP.",
+  "en": "For the irregular forms of the verbs, see the GRAMMAR section."
+ },
+ "Abbiniamo e completiamo le frasi con i verbi al congiuntivo.": {
+  "vi": "Nối và hoàn thành câu với động từ ở thức giả định.",
+  "en": "Let's match and complete the sentences with the verbs in the subjunctive."
+ },
+ "Luisa vuole che": {
+  "vi": "Luisa muốn rằng",
+  "en": "Luisa wants"
+ },
+ "Il direttore del giornale ha bisogno che": {
+  "vi": "Giám đốc tờ báo cần",
+  "en": "The newspaper's director needs"
+ },
+ "Noi giornalisti pensiamo che": {
+  "vi": "Chúng tôi, những nhà báo, nghĩ rằng",
+  "en": "We journalists think that"
+ },
+ "Marco ha paura che": {
+  "vi": "Marco sợ rằng",
+  "en": "Marco is afraid that"
+ },
+ "Ieri ho visto il film di Monicelli: spero che": {
+  "vi": "Hôm qua tôi đã xem phim của Monicelli: tôi hy vọng rằng",
+  "en": "Yesterday I saw Monicelli's film: I hope that"
+ },
+ "Vi do un consiglio da amica: è meglio che": {
+  "vi": "Tôi cho các bạn một lời khuyên của bạn bè: tốt hơn là",
+  "en": "I'll give you some friendly advice: it's better that"
+ },
+ "Il caporedattore desidera che": {
+  "vi": "Tổng biên tập mong muốn",
+  "en": "The editor-in-chief wishes"
+ },
+ "È giusto che": {
+  "vi": "Đúng là / Thật công bằng khi",
+  "en": "It's right that"
+ },
+ "tu (uscire) …… con chi vuoi.": {
+  "vi": "bạn (uscire) …… với người bạn muốn.",
+  "en": "you (go out) …… with whoever you want."
+ },
+ "voi (dire) …… sempre quello che pensate.": {
+  "vi": "các bạn (dire) …… luôn những gì các bạn nghĩ.",
+  "en": "you (say) …… always what you think."
+ },
+ "tu (andare) vada con lei stasera.": {
+  "vi": "bạn (andare) vada cùng cô ấy tối nay.",
+  "en": "you (go) vada with her this evening."
+ },
+ "i critici cinematografici (fare) …… una critica positiva.": {
+  "vi": "các nhà phê bình điện ảnh (fare) …… một lời phê bình tích cực.",
+  "en": "the film critics (make) …… a positive review."
+ },
+ "i suoi collaboratori (sapere) …… lavorare in modo efficiente.": {
+  "vi": "các cộng sự của ông ấy (sapere) …… làm việc hiệu quả.",
+  "en": "his collaborators (know how to) …… work efficiently."
+ },
+ "(volerci) …… troppo tempo per andare a Venezia in treno: per questo prenderà la macchina.": {
+  "vi": "(volerci) …… quá nhiều thời gian để đi Venezia bằng tàu: vì thế anh ấy sẽ đi ô tô.",
+  "en": "(take) …… too much time to go to Venice by train: so he'll take the car."
+ },
+ "l'opinionista (scrivere) …… un bell'articolo di fondo.": {
+  "vi": "người viết bình luận (scrivere) …… một bài xã luận hay.",
+  "en": "the columnist (write) …… a fine editorial."
+ },
+ "nessuno (potere) …… scrivere un articolo di fondo in poco tempo.": {
+  "vi": "không ai (potere) …… viết một bài xã luận trong thời gian ngắn.",
+  "en": "nobody (can) …… write an editorial in a short time."
+ },
+ "Scriviamo i verbi al congiuntivo.": {
+  "vi": "Viết các động từ ở thức giả định.",
+  "en": "Let's write the verbs in the subjunctive."
+ },
+ "a. tu (uscire) …": {
+  "vi": "a. bạn (uscire) …",
+  "en": "a. you (go out) …"
+ },
+ "b. voi (dire) …": {
+  "vi": "b. các bạn (dire) …",
+  "en": "b. you (say) …"
+ },
+ "d. i critici (fare) …": {
+  "vi": "d. các nhà phê bình (fare) …",
+  "en": "d. the critics (make) …"
+ },
+ "e. i collaboratori (sapere) …": {
+  "vi": "e. các cộng sự (sapere) …",
+  "en": "e. the collaborators (know) …"
+ },
+ "f. (volerci) …": {
+  "vi": "f. (volerci) …",
+  "en": "f. (take, be needed) …"
+ },
+ "g. l'opinionista (scrivere) …": {
+  "vi": "g. người viết bình luận (scrivere) …",
+  "en": "g. the columnist (write) …"
+ },
+ "h. nessuno (potere) …": {
+  "vi": "h. không ai (potere) …",
+  "en": "h. nobody (can) …"
+ },
+ "Leggiamo le frasi e correggiamo gli errori se necessario.": {
+  "vi": "Đọc các câu và sửa lỗi nếu cần.",
+  "en": "Let's read the sentences and correct the mistakes if necessary."
+ },
+ "2. Immaginiamo che il professore sia in ritardo. …": {
+  "vi": "2. Chúng tôi đoán là thầy giáo đến muộn. …",
+  "en": "2. We imagine the teacher is late. …"
+ },
+ "3. Luca dubita che i suoi amici escino stasera. …": {
+  "vi": "3. Luca nghi ngờ là các bạn cậu ấy đi chơi tối nay. …",
+  "en": "3. Luca doubts that his friends are going out tonight. …"
+ },
+ "4. La mamma ha paura che Stefano non scelghi la facoltà universitaria giusta. …": {
+  "vi": "4. Mẹ sợ là Stefano không chọn đúng khoa đại học. …",
+  "en": "4. Mum is afraid Stefano won't choose the right university faculty. …"
+ },
+ "5. Paolo desidera che i bambini faccino i compiti presto. …": {
+  "vi": "5. Paolo muốn bọn trẻ làm bài tập sớm. …",
+  "en": "5. Paolo wants the children to do their homework early. …"
+ },
+ "6. Non credo che Lucia rimanghi a casa stasera. …": {
+  "vi": "6. Tôi không nghĩ là tối nay Lucia ở nhà. …",
+  "en": "6. I don't think Lucia will stay at home tonight. …"
+ },
+ "7. Credete che Tiziana non guidi bene la macchina? …": {
+  "vi": "7. Các bạn có nghĩ là Tiziana lái xe không giỏi không? …",
+  "en": "7. Do you think Tiziana doesn't drive well? …"
+ },
+ "– Buonasera, carissimi ascoltatori! Oggi vi proponiamo un servizio interessante sui nostri giornali: abbiamo chiesto in giro qual è il … che gli italiani leggono più spesso. Sentiamo cosa ci hanno risposto!": {
+  "vi": "– Chào buổi tối, quý thính giả thân mến! Hôm nay chúng tôi giới thiệu một phóng sự thú vị về báo chí của chúng ta: chúng tôi đã đi hỏi xem … nào được người Ý đọc thường xuyên nhất. Hãy nghe họ trả lời nhé!",
+  "en": "– Good evening, dear listeners! Today we bring you an interesting report on our newspapers: we asked around which … Italians read most often. Let's hear what they told us!"
+ },
+ "– Io preferisco La Stampa, di Torino: mi piace leggere le … sulla mia città e penso che questo giornale … dei servizi molto interessanti. Non mi perdo mai, nella … …, la rubrica della cantante Mina: credo che le sue … su alcuni comportamenti degli italiani … sempre molto … e intelligenti.": {
+  "vi": "– Tôi thích tờ La Stampa ở Torino: tôi thích đọc … về thành phố của mình và tôi nghĩ tờ báo này … những phóng sự rất hay. Tôi không bao giờ bỏ lỡ, trên … …, chuyên mục của nữ ca sĩ Mina: tôi nghĩ những … của cô về một số cách cư xử của người Ý … luôn rất … và thông minh.",
+  "en": "– I prefer La Stampa, from Turin: I like reading the … about my city and I think this paper … some very interesting reports. I never miss, on the … …, the column by the singer Mina: I think her … on some behaviour of Italians … always very … and intelligent."
+ },
+ "– Non ho un giornale …, mi piace leggere un po' di tutto: adoro lo sport, gli spettacoli, la moda. È importante, comunque, che il giornale … delle … a colori e delle … stimolanti…": {
+  "vi": "– Tôi không có tờ báo …, tôi thích đọc mỗi thứ một chút: tôi mê thể thao, giải trí, thời trang. Dù sao thì điều quan trọng là tờ báo … những … màu và những … hấp dẫn…",
+  "en": "– I don't have a … newspaper, I like reading a bit of everything: I love sport, entertainment, fashion. What matters, anyway, is that the paper … colour … and stimulating …"
+ },
+ "– Sono una vecchia … del quotidiano La Nazione: lo compro sempre, ci sono … di cronaca …, notizie sulla mia città e poi… mio figlio scrive proprio su questo giornale: mi sembra giusto leggerlo, no?": {
+  "vi": "– Tôi là một … lâu năm của nhật báo La Nazione: tôi luôn mua nó, có những … thời sự …, tin tức về thành phố tôi và rồi… con trai tôi viết cho chính tờ báo này: tôi thấy đọc nó là đúng, phải không?",
+  "en": "– I'm a long-time … of the daily La Nazione: I always buy it, there are … of … news, news about my city and then… my son writes for this very paper: it seems right to me to read it, doesn't it?"
+ },
+ "– Studio economia, sto finendo l'ultimo anno all'università. Immagino che … già che cosa leggo: Il Sole 24ore! Penso che … un giornale molto utile per i miei studi e credo che anche l'… culturale della domenica … veramente interessante!": {
+  "vi": "– Tôi học kinh tế, đang học năm cuối đại học. Tôi đoán các bạn … rồi tôi đọc gì: Il Sole 24 Ore! Tôi nghĩ đó … một tờ báo rất có ích cho việc học của tôi và tôi nghĩ cả … văn hóa ngày chủ nhật … thật sự thú vị!",
+  "en": "– I study economics, I'm finishing my last year at university. I imagine you … already what I read: Il Sole 24 Ore! I think it … a very useful paper for my studies and I think the Sunday cultural … too … really interesting!"
+ },
+ "– A dire la verità non leggo tutti i giorni il giornale, preferisco i … o i …: mi sembra che, per esempio, l'Espresso e Panorama … un … della nostra società completo e ….": {
+  "vi": "– Nói thật là tôi không đọc báo hằng ngày, tôi thích … hoặc …: tôi thấy chẳng hạn l'Espresso và Panorama … một … đầy đủ và … về xã hội chúng ta.",
+  "en": "– To tell the truth I don't read the paper every day, I prefer … or …: it seems to me that, for example, l'Espresso and Panorama … a complete and … … of our society."
+ },
+ "(pensare, credere, ritenere, supporre, avere l'impressione, immaginare…)": {
+  "vi": "(nghĩ, tin, cho rằng, giả sử, có cảm giác, hình dung…)",
+  "en": "(think, believe, consider, suppose, have the impression, imagine…)"
+ },
+ "Riteniamo che il Corriere della Sera sia un giornale molto autorevole.": {
+  "vi": "Chúng tôi cho rằng Corriere della Sera là một tờ báo rất có uy tín.",
+  "en": "We consider the Corriere della Sera a very authoritative newspaper."
+ },
+ "(è meglio che, è probabile che, è importante che, è giusto che, è bene che…)": {
+  "vi": "(tốt hơn là, có lẽ là, điều quan trọng là, đúng là, tốt là…)",
+  "en": "(it's better that, it's likely that, it's important that, it's right that, it's good that…)"
+ },
+ "È meglio che lui rimanga a casa perché non sta molto bene.": {
+  "vi": "Tốt hơn là anh ấy ở nhà vì anh ấy không được khỏe lắm.",
+  "en": "It's better that he stays at home because he's not very well."
+ },
+ "(bisogna, conviene, occorre, può darsi, sembra…)": {
+  "vi": "(cần, nên, cần thiết, có thể là, có vẻ…)",
+  "en": "(it's necessary, it's worth, it's needed, maybe, it seems…)"
+ },
+ "Può darsi che tu abbia ragione, ma secondo me stai sbagliando.": {
+  "vi": "Có thể là bạn đúng, nhưng theo tôi thì bạn đang sai.",
+  "en": "Maybe you're right, but in my opinion you're wrong."
+ },
+ "Leggiamo e completiamo il testo con i verbi al congiuntivo.": {
+  "vi": "Đọc và hoàn thành đoạn văn với động từ ở thức giả định.",
+  "en": "Let's read and complete the text with the verbs in the subjunctive."
+ },
+ "Ce lo dice Luigi Saitta, una delle firme più autorevoli della stampa italiana: “Molti ragazzi credono che (essere) sia sufficiente scrivere bene per fare questo mestiere, ma non è così. Bisogna che (loro, imparare) …, per esempio, a saper riconoscere una notizia, e soprattutto è importante che la (sapere) … comunicare al lettore. Chi vuole fare questa professione non deve solo raccontare, ma deve favorire la comprensione della realtà. Un giornalista deve cercare di essere obiettivo: quindi è bene che (raccontare) … il fatto nel modo più immediato possibile, senza dire il suo pensiero. Per diventare professionisti è necessario, poi, che i giovani (fare) … pratica giornalistica per almeno diciotto mesi in una testata regolare. Ovviamente occorre che il direttore di questo giornale (essere) … un giornalista professionista. Alla fine di questo periodo bisogna che (loro, sostenere) … un esame per iscriversi all'albo dei professionisti.": {
+  "vi": "Luigi Saitta, một trong những cây bút uy tín nhất của báo chí Ý, nói với chúng ta: “Nhiều bạn trẻ tin rằng (essere) chỉ cần viết hay là đủ để làm nghề này, nhưng không phải vậy. Chẳng hạn, các bạn ấy cần (imparare) … biết nhận ra một tin tức, và trên hết, điều quan trọng là các bạn ấy (sapere) … truyền đạt nó đến người đọc. Ai muốn làm nghề này không chỉ kể lại, mà phải giúp hiểu thực tế. Một nhà báo phải cố gắng khách quan: vì vậy tốt nhất là anh ta (raccontare) … sự việc một cách trực tiếp nhất, không nói ra suy nghĩ của mình. Sau đó, để trở thành nhà báo chuyên nghiệp, các bạn trẻ cần (fare) … thực tập báo chí ít nhất mười tám tháng tại một tờ báo chính thức. Tất nhiên giám đốc tờ báo đó cần (essere) … một nhà báo chuyên nghiệp. Cuối giai đoạn này các bạn ấy cần (sostenere) … một kỳ thi để ghi danh vào danh sách nhà báo chuyên nghiệp.",
+  "en": "Luigi Saitta, one of the most authoritative bylines in the Italian press, tells us: “Many young people believe that (be) writing well is enough to do this job, but it isn't so. They need to (learn) …, for example, to recognise a news story, and above all it's important that they (know how to) … communicate it to the reader. Anyone who wants to do this profession must not only tell, but must help people understand reality. A journalist must try to be objective: so it's good that he (tell) … the fact in the most immediate way possible, without giving his own opinion. Then, to become professionals, young people must (do) … journalistic practice for at least eighteen months at a regular newspaper. Obviously the director of this paper must (be) … a professional journalist. At the end of this period they must (take) … an exam to join the register of professionals."
+ },
+ "Vorrei anche fare una raccomandazione: è bene che i giovani che si avvicinano a questa attività professionale (rivolgersi) … a testate giornalistiche serie e che (chiedere) … sempre informazioni aggiornate all'Ordine dei Giornalisti. Questo mestiere è molto affascinante, ma ogni giorno può rivelare nuove sorprese; perciò è importante che i giovani giornalisti (avere) … molta costanza e molta umiltà”.": {
+  "vi": "Tôi cũng muốn đưa ra một lời khuyên: tốt là những bạn trẻ đến với nghề này (rivolgersi) … các tờ báo nghiêm túc và (chiedere) … luôn thông tin cập nhật ở Hội Nhà báo. Nghề này rất hấp dẫn, nhưng mỗi ngày đều có thể mang lại bất ngờ mới; vì thế điều quan trọng là các nhà báo trẻ (avere) … nhiều kiên trì và nhiều khiêm tốn”.",
+  "en": "I'd also like to make a recommendation: it's good that young people approaching this profession (turn to) … serious newspapers and (ask) … the Order of Journalists for up-to-date information. This job is very fascinating, but every day it can reveal new surprises; so it's important that young journalists (have) … a lot of perseverance and a lot of humility”."
+ },
+ "Il congiuntivo per…": {
+  "vi": "Thức giả định dùng để…",
+  "en": "The subjunctive to…"
+ },
+ "(dubitare, non essere sicuro, …)": {
+  "vi": "(nghi ngờ, không chắc chắn, …)",
+  "en": "(doubt, not be sure, …)"
+ },
+ "Non so se Paul sia inglese o americano.": {
+  "vi": "Tôi không biết Paul là người Anh hay người Mỹ.",
+  "en": "I don't know whether Paul is English or American."
+ },
+ "Dubito che in Italia tutti leggano il giornale ogni giorno.": {
+  "vi": "Tôi nghi ngờ là ở Ý mọi người đều đọc báo hằng ngày.",
+  "en": "I doubt that in Italy everyone reads the paper every day."
+ },
+ "(volere, preferire, pretendere, ordinare, vietare, permettere…)": {
+  "vi": "(muốn, thích hơn, đòi hỏi, ra lệnh, cấm, cho phép…)",
+  "en": "(want, prefer, demand, order, forbid, allow…)"
+ },
+ "Gli italiani vogliono che i giornali dicano la verità.": {
+  "vi": "Người Ý muốn báo chí nói sự thật.",
+  "en": "Italians want newspapers to tell the truth."
+ },
+ "(avere paura, desiderare, dispiacersi, essere felice/contento, sperare, stupirsi, temere, vergognarsi…)": {
+  "vi": "(sợ, mong muốn, tiếc, vui/hài lòng, hy vọng, ngạc nhiên, e ngại, xấu hổ…)",
+  "en": "(be afraid, wish, be sorry, be happy/pleased, hope, be surprised, fear, be ashamed…)"
+ },
+ "Siamo contenti che i nostri studenti leggano alcune riviste italiane.": {
+  "vi": "Chúng tôi vui vì học sinh của chúng tôi đọc vài tạp chí Ý.",
+  "en": "We're pleased that our students read some Italian magazines."
+ },
+ "Leggiamo l'articolo.": {
+  "vi": "Đọc bài báo.",
+  "en": "Let's read the article."
+ },
+ "Da un po' di tempo nelle città italiane assistiamo a un fenomeno poco piacevole: quando le persone vanno al bancomat per prelevare il denaro e digitano il codice, alcune microtelecamere nascoste sopra la tastiera del bancomat spiano i loro movimenti; in questo modo i ladri riescono a clonare il codice segreto. I carabinieri pensano che dietro questo fenomeno ci sia una grande organizzazione criminale e credono che sia una situazione difficile da risolvere in poco tempo: raccomandano, quindi, che le persone stiano attente, che guardino bene chi sta davanti a loro prima di avvicinarsi allo sportello del bancomat e che chiamino subito la polizia se notano qualcosa di strano. È importante soprattutto che le persone molto anziane vadano a prelevare i soldi in compagnia di qualcuno.": {
+  "vi": "Đã một thời gian nay ở các thành phố Ý chúng ta chứng kiến một hiện tượng chẳng dễ chịu gì: khi người ta đến cây ATM để rút tiền và bấm mã số, vài chiếc camera siêu nhỏ giấu phía trên bàn phím theo dõi động tác của họ; bằng cách này kẻ trộm sao chép được mã bí mật. Lực lượng carabinieri nghĩ rằng đằng sau hiện tượng này có một tổ chức tội phạm lớn và tin rằng đây là tình trạng khó giải quyết trong thời gian ngắn: vì vậy họ khuyến cáo mọi người hãy cẩn thận, quan sát kỹ người đứng trước mình trước khi đến gần quầy ATM và gọi cảnh sát ngay nếu thấy điều gì lạ. Đặc biệt quan trọng là người cao tuổi nên đi rút tiền cùng ai đó.",
+  "en": "For some time now in Italian cities we have been witnessing a rather unpleasant phenomenon: when people go to the cash machine to withdraw money and key in their PIN, some tiny cameras hidden above the keypad spy on their movements; in this way thieves manage to clone the secret code. The carabinieri think that behind this phenomenon there is a large criminal organisation and believe it is a situation that is hard to solve quickly: so they recommend that people be careful, look closely at who is in front of them before approaching the cash machine and call the police at once if they notice anything strange. It is especially important that very elderly people go and withdraw money with someone."
+ },
+ "Questo fenomeno è presente anche nel vostro paese?": {
+  "vi": "Hiện tượng này có xảy ra ở nước các bạn không?",
+  "en": "Does this phenomenon exist in your country too?"
+ },
+ "Secondo voi che cosa possono fare le forze dell'ordine per eliminare questo problema?": {
+  "vi": "Theo các bạn, lực lượng an ninh có thể làm gì để loại bỏ vấn đề này?",
+  "en": "In your opinion, what can the police do to eliminate this problem?"
+ },
+ "Buongiorno, signora, avrei bisogno di alcune informazioni: mi … … la carta di credito, me ne sono accorto perché ho trovato degli … di spese che non ho mai fatto. Cosa devo fare?": {
+  "vi": "Chào chị, tôi cần vài thông tin: người ta đã … … thẻ tín dụng của tôi, tôi phát hiện ra vì thấy có những khoản … chi tiêu mà tôi chưa bao giờ thực hiện. Tôi phải làm gì?",
+  "en": "Good morning, madam, I need some information: someone … … my credit card, I noticed because I found some … for purchases I never made. What should I do?"
+ },
+ "È … che lei … questo modulo, con tutti i suoi … e mi … la sua carta: noi provvederemo a … subito il suo conto corrente.": {
+  "vi": "Anh … điền mẫu đơn này, với đầy đủ … của anh, và … thẻ cho tôi: chúng tôi sẽ … ngay tài khoản của anh.",
+  "en": "It's … that you … this form, with all your …, and … me your card: we will … your current account at once."
+ },
+ "Sì, ho bisogno, allora, di una nuova carta di credito…": {
+  "vi": "Vâng, vậy tôi cần một thẻ tín dụng mới…",
+  "en": "Yes, so I need a new credit card…"
+ },
+ "Penso che ci … almeno una settimana perché lei … avere a casa la nuova carta con il nuovo ….": {
+  "vi": "Tôi nghĩ … ít nhất một tuần để anh … nhận được thẻ mới tại nhà cùng với … mới.",
+  "en": "I think it'll … at least a week before you … get the new card at home with the new …."
+ },
+ "Sì, grazie mille. Avrei bisogno di fare anche un'altra … sul mio conto corrente.": {
+  "vi": "Vâng, cảm ơn nhiều. Tôi cũng cần thực hiện một … khác trên tài khoản của mình.",
+  "en": "Yes, thank you very much. I'd also need to do another … on my current account."
+ },
+ "Un … o un versamento?": {
+  "vi": "Một … hay nộp tiền?",
+  "en": "A … or a deposit?"
+ },
+ "Un prelievo, perché non ho più la possibilità di … i soldi al bancomat.": {
+  "vi": "Rút tiền, vì tôi không còn … tiền ở ATM được nữa.",
+  "en": "A withdrawal, because I can no longer … money from the cash machine."
+ },
+ "Certo, quanto vuole?": {
+  "vi": "Được, anh muốn rút bao nhiêu?",
+  "en": "Of course, how much would you like?"
+ },
+ "300 euro e vorrei anche sapere quanti soldi ho sul conto corrente.": {
+  "vi": "300 euro, và tôi cũng muốn biết trong tài khoản còn bao nhiêu tiền.",
+  "en": "300 euros, and I'd also like to know how much money I have in my account."
+ },
+ "Allora le do il ….": {
+  "vi": "Vậy tôi đưa anh … .",
+  "en": "Then I'll give you the …."
+ },
+ "Siete in banca: dovete fare delle operazioni (prelievi, versamenti, pagamenti vari) e chiedete all'impiegato tutte le informazioni necessarie.": {
+  "vi": "Các bạn đang ở ngân hàng: các bạn phải làm một số giao dịch (rút tiền, nộp tiền, các khoản thanh toán) và hỏi nhân viên mọi thông tin cần thiết.",
+  "en": "You are at the bank: you have to do some transactions (withdrawals, deposits, various payments) and ask the clerk for all the necessary information."
+ },
+ "Descrivete come sono le banche nel vostro paese: dite quali sono le più importanti, come funzionano…": {
+  "vi": "Hãy mô tả các ngân hàng ở nước các bạn: những ngân hàng nào quan trọng nhất, chúng hoạt động thế nào…",
+  "en": "Describe what banks are like in your country: say which are the most important, how they work…"
+ },
+ "Analizziamo adesso la tipologia e la struttura degli articoli. Guardiamo, per prima cosa, il contenuto. Un articolo può: 1. informare: come gli articoli di cronaca, di economia o di sport che presentano semplicemente il fatto; 2. attivare gli interessi del lettore: come gli articoli che trattano di argomenti di interesse generale; 3. convincere: come l'articolo di fondo che esprime un'opinione (l'articolo di fondo compare nella prima pagina, di solito nella colonna di sinistra, ed è dedicato a un fatto del giorno fondamentale; normalmente lo scrive il direttore del giornale o un giornalista autorevole);": {
+  "vi": "Bây giờ chúng ta phân tích loại hình và cấu trúc của các bài báo. Trước hết hãy xem nội dung. Một bài báo có thể: 1. thông tin: như các bài thời sự, kinh tế hay thể thao chỉ đơn giản trình bày sự việc; 2. khơi gợi sự quan tâm của người đọc: như các bài về những chủ đề được nhiều người quan tâm; 3. thuyết phục: như bài xã luận thể hiện một quan điểm (bài xã luận xuất hiện ở trang nhất, thường ở cột bên trái, và dành cho một sự kiện quan trọng trong ngày; thường do giám đốc tờ báo hoặc một nhà báo có uy tín viết);",
+  "en": "Let's now analyse the types and structure of articles. First, let's look at the content. An article can: 1. inform: like news, economics or sports articles that simply present the facts; 2. arouse the reader's interest: like articles dealing with topics of general interest; 3. persuade: like the editorial, which expresses an opinion (the editorial appears on the front page, usually in the left-hand column, and is devoted to a key event of the day; it's normally written by the editor or an authoritative journalist);"
+ },
+ "4. commentare: come gli articoli che spiegano una situazione in maniera personale; 5. divertire: come gli articoli che propongono riflessioni in modo umoristico; 6. insegnare: come le recensioni di libri o di spettacoli.": {
+  "vi": "4. bình luận: như các bài giải thích một tình huống theo cách riêng; 5. giải trí: như các bài đưa ra suy ngẫm một cách hài hước; 6. hướng dẫn: như các bài điểm sách hoặc điểm vở diễn.",
+  "en": "4. comment: like articles that explain a situation in a personal way; 5. entertain: like articles that offer reflections in a humorous way; 6. teach: like book or show reviews."
+ },
+ "Solitamente il giornalista, quando scrive un articolo, deve dare le informazioni più importanti all'inizio e descrivere dopo i dettagli. Ecco un possibile schema di un articolo: 1. idea o informazione centrale; 2. paragrafo che sviluppa l'argomento del titolo; 3. altre informazioni; 4. dettagli meno importanti.": {
+  "vi": "Thông thường, khi viết bài, nhà báo phải đưa thông tin quan trọng nhất lên đầu và mô tả chi tiết sau. Đây là một sơ đồ bài báo có thể dùng: 1. ý hoặc thông tin trung tâm; 2. đoạn phát triển chủ đề của tiêu đề; 3. thông tin khác; 4. chi tiết ít quan trọng hơn.",
+  "en": "Usually, when writing an article, the journalist must give the most important information at the beginning and describe the details afterwards. Here is a possible article outline: 1. central idea or information; 2. paragraph developing the topic of the headline; 3. other information; 4. less important details."
+ },
+ "Adesso cercate degli articoli di un giornale italiano su vari argomenti (cronaca, politica, sport, finanza…), sceglietene uno, leggetelo e presentatelo alla classe.": {
+  "vi": "Bây giờ hãy tìm các bài báo trên một tờ báo Ý về nhiều chủ đề (thời sự, chính trị, thể thao, tài chính…), chọn một bài, đọc và trình bày trước lớp.",
+  "en": "Now look for articles in an Italian newspaper on various topics (news, politics, sport, finance…), choose one, read it and present it to the class."
+ },
+ "“Ho aspettato i risultati della notte degli Oscar, a casa mia, in montagna”: Alessio Boni non è stato a Los Angeles ad accompagnare La bestia nel cuore, il film di Cristina Comencini che è uscito nel 2005 e ha rappresentato l'Italia agli Oscar. Alessio Boni è il protagonista maschile, mentre Giovanna Mezzogiorno è la protagonista femminile. “Questa candidatura all'Oscar è una grande soddisfazione per il cinema italiano, che non vive un buon momento dal punto di vista economico. Purtroppo la politica considera poco il cinema: infatti, negli ultimi anni, il governo ha tagliato i fondi per lo spettacolo del quaranta per cento”.": {
+  "vi": "“Tôi đã chờ kết quả đêm trao giải Oscar ở nhà mình, trên núi”: Alessio Boni không đến Los Angeles cùng La bestia nel cuore, bộ phim của Cristina Comencini ra mắt năm 2005 và đại diện cho Ý tại Oscar. Alessio Boni là nam chính, còn Giovanna Mezzogiorno là nữ chính. “Đề cử Oscar này là một niềm hài lòng lớn cho điện ảnh Ý, vốn đang trải qua thời kỳ khó khăn về kinh tế. Tiếc là giới chính trị ít coi trọng điện ảnh: thực tế, những năm gần đây chính phủ đã cắt bốn mươi phần trăm ngân sách cho ngành biểu diễn”.",
+  "en": "“I waited for the results of Oscar night at my house in the mountains”: Alessio Boni didn't go to Los Angeles with La bestia nel cuore, Cristina Comencini's film released in 2005 which represented Italy at the Oscars. Alessio Boni is the male lead, while Giovanna Mezzogiorno is the female lead. “This Oscar nomination is a great satisfaction for Italian cinema, which isn't going through a good time economically. Unfortunately politics pays little attention to cinema: in fact, in recent years the government has cut funds for entertainment by forty per cent”."
+ },
+ "Alessio Boni, 39 anni, era arrivato a Roma da Bergamo senza un soldo in tasca, ma con un entusiasmo straordinario. Oggi, dopo La meglio gioventù e La bestia nel cuore, è diventato uno dei volti italiani più famosi all'estero. “La bestia nel cuore racconta una storia profonda e intensa. Speriamo che questo film piaccia alla gente in tutto il mondo. Credo che sia il lavoro cinematografico più bello di Cristina Comencini”, conclude l'attore che ha da poco finito di interpretare un ruolo importante sul set del nuovo film di Roberto Andò, Viaggio segreto. (adattato da Il Venerdì di Repubblica, 03-03-2006)": {
+  "vi": "Alessio Boni, 39 tuổi, đã đến Roma từ Bergamo với túi rỗng nhưng với nhiệt huyết phi thường. Ngày nay, sau La meglio gioventù và La bestia nel cuore, anh đã trở thành một trong những gương mặt Ý nổi tiếng nhất ở nước ngoài. “La bestia nel cuore kể một câu chuyện sâu sắc và mãnh liệt. Chúng tôi hy vọng bộ phim này được khán giả khắp thế giới yêu thích. Tôi nghĩ đây là tác phẩm điện ảnh hay nhất của Cristina Comencini”, nam diễn viên kết luận; anh vừa đóng xong một vai quan trọng trên phim trường bộ phim mới của Roberto Andò, Viaggio segreto. (phỏng theo Il Venerdì di Repubblica, 03-03-2006)",
+  "en": "Alessio Boni, 39, had arrived in Rome from Bergamo without a penny in his pocket, but with extraordinary enthusiasm. Today, after La meglio gioventù and La bestia nel cuore, he has become one of the most famous Italian faces abroad. “La bestia nel cuore tells a deep and intense story. We hope people all over the world will like this film. I think it's Cristina Comencini's finest film”, concludes the actor, who has just finished playing an important role on the set of Roberto Andò's new film, Viaggio segreto. (adapted from Il Venerdì di Repubblica, 03-03-2006)"
+ },
+ "Date un titolo a questo articolo.": {
+  "vi": "Hãy đặt tiêu đề cho bài báo này.",
+  "en": "Give this article a title."
+ },
+ "Dite che tipo di articolo è.": {
+  "vi": "Cho biết đây là loại bài báo gì.",
+  "en": "Say what type of article it is."
+ },
+ "Dite in quale pagina del giornale lo potreste trovare.": {
+  "vi": "Cho biết bạn có thể tìm thấy nó ở trang nào của tờ báo.",
+  "en": "Say on which page of the newspaper you could find it."
+ },
+ "Sottolineate in nero le parti dell'articolo che danno informazioni e in rosso le parti dove l'attore esprime le sue opinioni.": {
+  "vi": "Gạch chân bằng màu đen những phần của bài đưa thông tin và bằng màu đỏ những phần diễn viên bày tỏ ý kiến.",
+  "en": "Underline in black the parts of the article that give information and in red the parts where the actor expresses his opinions."
+ },
+ "macchina • ladri • polizia • villa • cane lupo • ambulanza • carcere": {
+  "vi": "xe ô tô • kẻ trộm • cảnh sát • biệt thự • chó béc-giê • xe cứu thương • nhà tù",
+  "en": "car • thieves • police • villa • Alsatian • ambulance • prison"
+ },
+ "Siete dei giornalisti e dovete scrivere un articolo di cronaca su un fatto accaduto nella vostra città. Vi diamo delle parole: usatele e scrivete l'articolo.": {
+  "vi": "Các bạn là nhà báo và phải viết một bài thời sự về một sự việc xảy ra ở thành phố mình. Chúng tôi cho các bạn vài từ: hãy dùng chúng và viết bài báo.",
+  "en": "You are journalists and you must write a news article about something that happened in your city. We give you some words: use them and write the article."
+ },
+ "bollettino": {
+  "vi": "bản tin, công báo",
+  "en": "bulletin"
+ },
+ "fascicolo": {
+  "vi": "số báo, tập (ấn phẩm)",
+  "en": "issue, instalment"
+ },
+ "gazzetta": {
+  "vi": "công báo, báo",
+  "en": "gazette"
+ },
+ "giornale per ragazzi": {
+  "vi": "báo thiếu nhi",
+  "en": "children's newspaper"
+ },
+ "mensile": {
+  "vi": "nguyệt san",
+  "en": "monthly"
+ },
+ "numero": {
+  "vi": "số (báo)",
+  "en": "issue, number"
+ },
+ "numero arretrato": {
+  "vi": "số báo cũ",
+  "en": "back issue"
+ },
+ "organo di stampa": {
+  "vi": "cơ quan ngôn luận",
+  "en": "press organ, mouthpiece"
+ },
+ "periodico": {
+  "vi": "ấn phẩm định kỳ",
+  "en": "periodical"
+ },
+ "rotocalco": {
+  "vi": "tạp chí ảnh",
+  "en": "illustrated magazine"
+ },
+ "serie": {
+  "vi": "loạt, xê-ri",
+  "en": "series"
+ },
+ "settimanale": {
+  "vi": "tuần báo",
+  "en": "weekly"
+ },
+ "stampa estera": {
+  "vi": "báo chí nước ngoài",
+  "en": "foreign press"
+ },
+ "stampa locale": {
+  "vi": "báo chí địa phương",
+  "en": "local press"
+ },
+ "stampa nazionale": {
+  "vi": "báo chí toàn quốc",
+  "en": "national press"
+ },
+ "tabloid": {
+  "vi": "báo lá cải khổ nhỏ",
+  "en": "tabloid"
+ },
+ "testata": {
+  "vi": "tên báo (măng-sét)",
+  "en": "masthead, newspaper"
+ },
+ "tiratura": {
+  "vi": "số lượng phát hành",
+  "en": "circulation, print run"
+ },
+ "annuncio": {
+  "vi": "rao vặt, thông báo",
+  "en": "advertisement, notice"
+ },
+ "articolo di apertura": {
+  "vi": "bài mở đầu (tin chính)",
+  "en": "lead article"
+ },
+ "articolo di fondo": {
+  "vi": "bài xã luận",
+  "en": "editorial"
+ },
+ "colonna": {
+  "vi": "cột (báo)",
+  "en": "column"
+ },
+ "cronaca": {
+  "vi": "thời sự, tin tức",
+  "en": "news, news report"
+ },
+ "illustrazione": {
+  "vi": "hình minh họa",
+  "en": "illustration"
+ },
+ "inserto": {
+  "vi": "phụ trương",
+  "en": "insert, supplement"
+ },
+ "inchiesta": {
+  "vi": "phóng sự điều tra",
+  "en": "investigation, inquiry"
+ },
+ "inserzione": {
+  "vi": "mẩu quảng cáo",
+  "en": "advertisement, insertion"
+ },
+ "notiziario": {
+  "vi": "bản tin",
+  "en": "news bulletin"
+ },
+ "prima pagina": {
+  "vi": "trang nhất",
+  "en": "front page"
+ },
+ "pubblicità": {
+  "vi": "quảng cáo",
+  "en": "advertising"
+ },
+ "rubrica": {
+  "vi": "chuyên mục",
+  "en": "column, regular feature"
+ },
+ "seconda pagina": {
+  "vi": "trang hai",
+  "en": "page two"
+ },
+ "sommario": {
+  "vi": "mục lục",
+  "en": "summary, contents"
+ },
+ "sottotitolo": {
+  "vi": "phụ đề, tiêu đề phụ",
+  "en": "subheading"
+ },
+ "supplemento": {
+  "vi": "phụ trương, phụ bản",
+  "en": "supplement"
+ },
+ "terza pagina": {
+  "vi": "trang ba (trang văn hóa)",
+  "en": "page three (culture page)"
+ },
+ "trafiletto": {
+  "vi": "tin vắn",
+  "en": "short article, news brief"
+ },
+ "caporedattore": {
+  "vi": "tổng biên tập",
+  "en": "editor-in-chief"
+ },
+ "caposervizio": {
+  "vi": "trưởng ban",
+  "en": "section editor"
+ },
+ "collaboratore": {
+  "vi": "cộng tác viên",
+  "en": "contributor"
+ },
+ "corrispondente": {
+  "vi": "phóng viên thường trú",
+  "en": "correspondent"
+ },
+ "cronista": {
+  "vi": "phóng viên tin tức",
+  "en": "reporter"
+ },
+ "direttore": {
+  "vi": "giám đốc (tờ báo)",
+  "en": "editor, director"
+ },
+ "disegnatore": {
+  "vi": "họa sĩ minh họa",
+  "en": "illustrator"
+ },
+ "editore": {
+  "vi": "nhà xuất bản",
+  "en": "publisher"
+ },
+ "fotoreporter": {
+  "vi": "phóng viên ảnh",
+  "en": "photojournalist"
+ },
+ "giornalista": {
+  "vi": "nhà báo",
+  "en": "journalist"
+ },
+ "intervistatore": {
+  "vi": "người phỏng vấn",
+  "en": "interviewer"
+ },
+ "inviato": {
+  "vi": "phóng viên đặc phái",
+  "en": "special correspondent"
+ },
+ "opinionista": {
+  "vi": "nhà bình luận",
+  "en": "columnist, commentator"
+ },
+ "pubblicitario": {
+  "vi": "người làm quảng cáo",
+  "en": "advertising executive"
+ },
+ "recensore": {
+  "vi": "người điểm sách/phim",
+  "en": "reviewer"
+ },
+ "redattore": {
+  "vi": "biên tập viên",
+  "en": "editor, sub-editor"
+ },
+ "sala stampa": {
+  "vi": "phòng họp báo",
+  "en": "press room"
+ },
+ "segretario di redazione": {
+  "vi": "thư ký tòa soạn",
+  "en": "editorial secretary"
+ },
+ "vicedirettore": {
+  "vi": "phó tổng biên tập",
+  "en": "deputy editor"
+ },
+ "vignettista": {
+  "vi": "họa sĩ biếm họa",
+  "en": "cartoonist"
+ },
+ "Il cronista scrive articoli su fatti quotidiani.": {
+  "vi": "Phóng viên tin tức viết bài về các sự việc hằng ngày.",
+  "en": "The reporter writes articles on everyday events."
+ },
+ "L'opinionista dà i consigli su come scrivere un articolo.": {
+  "vi": "Nhà bình luận đưa ra lời khuyên về cách viết bài báo.",
+  "en": "The columnist gives advice on how to write an article."
+ },
+ "Il periodico è un giornale che esce ogni settimana.": {
+  "vi": "Ấn phẩm định kỳ là tờ báo ra hằng tuần.",
+  "en": "A periodical is a newspaper that comes out every week."
+ },
+ "La tiratura è il numero di copie di un giornale.": {
+  "vi": "Số lượng phát hành là số bản in của một tờ báo.",
+  "en": "The circulation is the number of copies of a newspaper."
+ },
+ "Il corrispondente scrive articoli fuori dalla sede del giornale.": {
+  "vi": "Phóng viên thường trú viết bài ở bên ngoài trụ sở tòa soạn.",
+  "en": "The correspondent writes articles away from the newspaper's office."
+ },
+ "Il redattore è il capo dei disegnatori.": {
+  "vi": "Biên tập viên là người đứng đầu các họa sĩ minh họa.",
+  "en": "The editor is the head of the illustrators."
+ },
+ "Il sommario comprende i titoli degli articoli più importanti.": {
+  "vi": "Mục lục gồm tiêu đề của những bài báo quan trọng nhất.",
+  "en": "The summary contains the headlines of the most important articles."
+ },
+ "Nell'articolo di fondo il giornalista scrive le sue opinioni.": {
+  "vi": "Trong bài xã luận nhà báo viết ý kiến của mình.",
+  "en": "In the editorial the journalist writes his opinions."
+ },
+ "2. Che cosa fa l'inviato?": {
+  "vi": "2. Phóng viên đặc phái làm gì?",
+  "en": "2. What does a special correspondent do?"
+ },
+ "3. Che cos'è un'inchiesta?": {
+  "vi": "3. Phóng sự điều tra là gì?",
+  "en": "3. What is an investigation?"
+ },
+ "4. Che cosa scrive un recensore?": {
+  "vi": "4. Người điểm sách/phim viết gì?",
+  "en": "4. What does a reviewer write?"
+ },
+ "5. Che cos'è un articolo di cronaca rosa?": {
+  "vi": "5. Bài báo đời tư người nổi tiếng là gì?",
+  "en": "5. What is a celebrity gossip article?"
+ },
+ "6. Che cos'è un articolo di cronaca nera?": {
+  "vi": "6. Bài báo tin hình sự là gì?",
+  "en": "6. What is a crime news article?"
+ },
+ "7. Che cosa fa l'editore?": {
+  "vi": "7. Nhà xuất bản làm gì?",
+  "en": "7. What does the publisher do?"
+ },
+ "8. Che cos'è un supplemento?": {
+  "vi": "8. Phụ trương là gì?",
+  "en": "8. What is a supplement?"
+ },
+ "9. Che cos'è un numero arretrato?": {
+  "vi": "9. Số báo cũ là gì?",
+  "en": "9. What is a back issue?"
+ },
+ "Niente nuove, buone nuove.": {
+  "vi": "Không có tin tức là tin tốt.",
+  "en": "No news is good news."
+ },
+ "La lingua batte dove il dente duole.": {
+  "vi": "Lưỡi cứ chạm vào chỗ răng đau. (Người ta cứ nhắc mãi đến điều làm mình bận tâm.)",
+  "en": "The tongue always goes to the aching tooth. (We keep coming back to what worries us.)"
+ },
+ "Quell'avvenimento ha fatto notizia, tutti ne parlano.": {
+  "vi": "Sự kiện đó đã gây xôn xao, ai cũng bàn tán.",
+  "en": "That event made the news, everyone is talking about it."
+ },
+ "Al telegiornale hanno dato una notizia lampo sulle ultime elezioni politiche; per saperne di più, dobbiamo comprare il giornale domani.": {
+  "vi": "Thời sự truyền hình vừa đưa một tin nóng về cuộc bầu cử vừa rồi; muốn biết thêm, mai chúng ta phải mua báo.",
+  "en": "The TV news gave a news flash on the latest elections; to find out more, we have to buy the paper tomorrow."
+ },
+ "Fare notizia.": {
+  "vi": "Gây xôn xao, thành tin tức.",
+  "en": "To make the news."
+ },
+ "Una notizia lampo.": {
+  "vi": "Một tin nóng (tin chớp nhoáng).",
+  "en": "A news flash."
+ },
+ "Ascoltiamo e completiamo le parole con sci, sce, scie.": {
+  "vi": "Nghe và điền sci, sce hoặc scie vào các từ.",
+  "en": "Let's listen and complete the words with sci, sce, scie."
+ },
+ "2. a…ugare": {
+  "vi": "2. a…ugare (lau khô)",
+  "en": "2. a…ugare (to dry)"
+ },
+ "3. …icco": {
+  "vi": "3. …icco (tù trưởng Ả Rập)",
+  "en": "3. …icco (sheikh)"
+ },
+ "4. …occo": {
+  "vi": "4. …occo (ngốc nghếch)",
+  "en": "4. …occo (silly)"
+ },
+ "5. …na": {
+  "vi": "5. …na (cảnh)",
+  "en": "5. …na (scene)"
+ },
+ "6. …nza": {
+  "vi": "6. …nza (khoa học)",
+  "en": "6. …nza (science)"
+ },
+ "7. palco…nico": {
+  "vi": "7. palco…nico (sân khấu)",
+  "en": "7. palco…nico (stage)"
+ },
+ "8. pro…utto": {
+  "vi": "8. pro…utto (giăm bông)",
+  "en": "8. pro…utto (ham)"
+ },
+ "9. co…nza": {
+  "vi": "9. co…nza (lương tâm)",
+  "en": "9. co…nza (conscience)"
+ },
+ "10. pe…": {
+  "vi": "10. pe… (cá)",
+  "en": "10. pe… (fish)"
+ },
+ "11. a…nsore": {
+  "vi": "11. a…nsore (thang máy)",
+  "en": "11. a…nsore (lift)"
+ },
+ "12. …ntifico": {
+  "vi": "12. …ntifico (thuộc khoa học)",
+  "en": "12. …ntifico (scientific)"
+ },
+ "1. …": {
+  "vi": "1. …",
+  "en": "1. …"
+ },
+ "2. …": {
+  "vi": "2. …",
+  "en": "2. …"
+ },
+ "3. …": {
+  "vi": "3. …",
+  "en": "3. …"
+ },
+ "4. …": {
+  "vi": "4. …",
+  "en": "4. …"
+ },
+ "5. …": {
+  "vi": "5. …",
+  "en": "5. …"
+ },
+ "6. …": {
+  "vi": "6. …",
+  "en": "6. …"
+ },
+ "7. …": {
+  "vi": "7. …",
+  "en": "7. …"
+ },
+ "8. …": {
+  "vi": "8. …",
+  "en": "8. …"
+ },
+ "9. …": {
+  "vi": "9. …",
+  "en": "9. …"
+ },
+ "10. …": {
+  "vi": "10. …",
+  "en": "10. …"
+ },
+ "11. …": {
+  "vi": "11. …",
+  "en": "11. …"
+ },
+ "12. …": {
+  "vi": "12. …",
+  "en": "12. …"
+ },
+ "1. … che tu … quello che ti ho detto.": {
+  "vi": "1. … rằng bạn … những gì tôi đã bảo.",
+  "en": "1. … that you … what I told you."
+ },
+ "2. Non … che tu me lo … ancora: l'ho già fatto.": {
+  "vi": "2. Không … bạn … lại với tôi nữa: tôi làm rồi.",
+  "en": "2. There's no … for you to … it to me again: I've already done it."
+ },
+ "3. È importante che lei … bene il suo corso.": {
+  "vi": "3. Điều quan trọng là chị … kỹ khóa học của mình.",
+  "en": "3. It's important that you … your course carefully."
+ },
+ "4. È meglio che voi … un'altra soluzione.": {
+  "vi": "4. Tốt hơn là các bạn … một giải pháp khác.",
+  "en": "4. It's better that you … another solution."
+ },
+ "5. … che … subito quella macchina dalla strada.": {
+  "vi": "5. … họ … ngay chiếc xe đó khỏi đường.",
+  "en": "5. … that they … that car off the road at once."
+ },
+ "6. Mi … che lui … andarsene.": {
+  "vi": "6. Tôi … là anh ấy … phải ra đi.",
+  "en": "6. I'm … that he … to leave."
+ },
+ "7. Credo che … venire con noi.": {
+  "vi": "7. Tôi nghĩ là các bạn … đi cùng chúng tôi.",
+  "en": "7. I think you … come with us."
+ },
+ "8. Pensiamo che tutti … la verità.": {
+  "vi": "8. Chúng tôi nghĩ là mọi người … sự thật.",
+  "en": "8. We think everyone … the truth."
+ },
+ "Scriviamo: correggiamo le parole se necessario.": {
+  "vi": "Cùng viết: sửa chính tả các từ nếu cần.",
+  "en": "Let's write: correct the words if necessary."
+ },
+ "2. inviato → …": {
+  "vi": "2. inviato (phóng viên đặc phái) → …",
+  "en": "2. inviato (special correspondent) → …"
+ },
+ "3. cronasta → …": {
+  "vi": "3. cronasta → …",
+  "en": "3. cronasta → …"
+ },
+ "4. articolo di fundo → …": {
+  "vi": "4. articolo di fundo → …",
+  "en": "4. articolo di fundo → …"
+ },
+ "5. rubbrica → …": {
+  "vi": "5. rubbrica → …",
+  "en": "5. rubbrica → …"
+ },
+ "6. notizziario → …": {
+  "vi": "6. notizziario → …",
+  "en": "6. notizziario → …"
+ },
+ "7. disegniatore → …": {
+  "vi": "7. disegniatore → …",
+  "en": "7. disegniatore → …"
+ },
+ "8. sommario → …": {
+  "vi": "8. sommario (mục lục) → …",
+  "en": "8. sommario (summary) → …"
+ },
+ "9. publicità → …": {
+  "vi": "9. publicità → …",
+  "en": "9. publicità → …"
+ },
+ "10. polittica estera → …": {
+  "vi": "10. polittica estera → …",
+  "en": "10. polittica estera → …"
+ },
+ "Usiamo il modo congiuntivo nelle frasi che non sono autonome (frasi dipendenti o subordinate), ma dipendono da un'altra frase (frase principale o reggente).": {
+  "vi": "Ta dùng thức giả định trong những câu không độc lập (mệnh đề phụ thuộc), mà phụ thuộc vào một câu khác (mệnh đề chính).",
+  "en": "We use the subjunctive mood in clauses that are not independent (dependent or subordinate clauses), but depend on another clause (main clause)."
+ },
+ "Introduciamo il congiuntivo con la congiunzione che:": {
+  "vi": "Ta mở đầu thức giả định bằng liên từ che:",
+  "en": "We introduce the subjunctive with the conjunction che:"
+ },
+ "verbo della frase principale + che + frase con il verbo al congiuntivo.": {
+  "vi": "động từ của mệnh đề chính + che + mệnh đề có động từ ở thức giả định.",
+  "en": "verb of the main clause + che + clause with the verb in the subjunctive."
+ },
+ "per esprimere un'opinione (nella frase principale il verbo è avere l'impressione, credere, immaginare, pensare, ritenere, supporre, ecc.):": {
+  "vi": "để bày tỏ ý kiến (trong mệnh đề chính, động từ là có cảm giác, tin, hình dung, nghĩ, cho rằng, giả sử, v.v.):",
+  "en": "to express an opinion (in the main clause the verb is have the impression, believe, imagine, think, consider, suppose, etc.):"
+ },
+ "Credo che Paolo sia a casa.": {
+  "vi": "Tôi nghĩ là Paolo đang ở nhà.",
+  "en": "I think Paolo is at home."
+ },
+ "Immagino che tu sia d'accordo con lui.": {
+  "vi": "Tôi đoán là bạn đồng ý với anh ấy.",
+  "en": "I imagine you agree with him."
+ },
+ "Penso che tu abbia torto.": {
+  "vi": "Tôi nghĩ là bạn sai.",
+  "en": "I think you're wrong."
+ },
+ "Supponiamo che le cose stiano in questo modo.": {
+  "vi": "Chúng ta giả sử mọi chuyện là như thế.",
+  "en": "Let's suppose things are like this."
+ },
+ "per esprimere un sentimento, una speranza, un desiderio, un timore (nella frase principale il verbo è augurarsi, avere paura, desiderare, dispiacersi, essere felice/contento, sperare, stupirsi, temere, vergognarsi, ecc.):": {
+  "vi": "để bày tỏ một cảm xúc, một hy vọng, một mong muốn, một nỗi lo (trong mệnh đề chính, động từ là mong, sợ, ước, tiếc, vui/hài lòng, hy vọng, ngạc nhiên, e ngại, xấu hổ, v.v.):",
+  "en": "to express a feeling, a hope, a wish, a fear (in the main clause the verb is hope, be afraid, wish, be sorry, be happy/pleased, hope, be surprised, fear, be ashamed, etc.):"
+ },
+ "Mi auguro che tutto proceda bene.": {
+  "vi": "Tôi mong mọi việc diễn ra tốt đẹp.",
+  "en": "I hope everything goes well."
+ },
+ "I bambini hanno paura che voi li sgridiate.": {
+  "vi": "Lũ trẻ sợ các bạn mắng chúng.",
+  "en": "The children are afraid you'll scold them."
+ },
+ "Carla desidera che Marco torni da lei.": {
+  "vi": "Carla mong Marco quay lại với cô.",
+  "en": "Carla wants Marco to come back to her."
+ },
+ "Mi dispiace che Giulia non venga alla festa.": {
+  "vi": "Tôi tiếc là Giulia không đến dự tiệc.",
+  "en": "I'm sorry Giulia isn't coming to the party."
+ },
+ "Siamo contenti che gli studenti leggano alcune riviste italiane.": {
+  "vi": "Chúng tôi vui vì học sinh đọc vài tạp chí Ý.",
+  "en": "We're pleased that the students read some Italian magazines."
+ },
+ "Spero che tu stia bene.": {
+  "vi": "Tôi hy vọng bạn khỏe.",
+  "en": "I hope you're well."
+ },
+ "Mi stupisco che Gianni si comporti così.": {
+  "vi": "Tôi ngạc nhiên là Gianni lại cư xử như vậy.",
+  "en": "I'm surprised Gianni behaves like this."
+ },
+ "Temo che non ci sia più il pane.": {
+  "vi": "Tôi e là hết bánh mì rồi.",
+  "en": "I'm afraid there's no bread left."
+ },
+ "per esprimere una volontà, un comando, un divieto, un permesso (nella frase principale il verbo è ordinare, preferire, pretendere, permettere, vietare, volere, ecc.):": {
+  "vi": "để bày tỏ ý muốn, mệnh lệnh, sự cấm đoán, sự cho phép (trong mệnh đề chính, động từ là ra lệnh, thích hơn, đòi hỏi, cho phép, cấm, muốn, v.v.):",
+  "en": "to express a will, an order, a prohibition, a permission (in the main clause the verb is order, prefer, demand, allow, forbid, want, etc.):"
+ },
+ "Preferisco che gli parliate voi.": {
+  "vi": "Tôi muốn các bạn nói chuyện với anh ấy hơn.",
+  "en": "I'd rather you spoke to him."
+ },
+ "Permetti che faccia una telefonata a Luigi?": {
+  "vi": "Bạn cho phép tôi gọi một cuộc điện thoại cho Luigi chứ?",
+  "en": "Will you let me make a phone call to Luigi?"
+ },
+ "per esprimere un dubbio (nella frase principale il verbo è dubitare, non essere sicuro, ecc.):": {
+  "vi": "để bày tỏ sự nghi ngờ (trong mệnh đề chính, động từ là nghi ngờ, không chắc chắn, v.v.):",
+  "en": "to express a doubt (in the main clause the verb is doubt, not be sure, etc.):"
+ },
+ "Non sono sicuro che la notizia sia attendibile.": {
+  "vi": "Tôi không chắc tin này đáng tin cậy.",
+  "en": "I'm not sure the news is reliable."
+ },
+ "dopo i verbi impersonali (bisogna, conviene, occorre, può darsi, sembra, ecc.):": {
+  "vi": "sau các động từ không ngôi (cần, nên, cần thiết, có thể là, có vẻ, v.v.):",
+  "en": "after impersonal verbs (it's necessary, it's worth, it's needed, maybe, it seems, etc.):"
+ },
+ "Bisogna che facciate in fretta se volete arrivare in orario.": {
+  "vi": "Các bạn cần nhanh lên nếu muốn đến đúng giờ.",
+  "en": "You need to hurry if you want to arrive on time."
+ },
+ "Conviene che tu gli scriva una lettera.": {
+  "vi": "Bạn nên viết cho anh ấy một lá thư.",
+  "en": "You'd better write him a letter."
+ },
+ "Occorre che tu prenda subito una decisione.": {
+  "vi": "Bạn cần đưa ra quyết định ngay.",
+  "en": "You need to make a decision at once."
+ },
+ "Sembra che domani ci sia il sole.": {
+  "vi": "Có vẻ ngày mai trời sẽ nắng.",
+  "en": "It seems it will be sunny tomorrow."
+ },
+ "dopo è + aggettivo / avverbio (è bene, è difficile, è facile, è giusto, è importante, è meglio, è necessario, è opportuno, è probabile, ecc.):": {
+  "vi": "sau è + tính từ / trạng từ (tốt là, khó mà, dễ là, đúng là, quan trọng là, tốt hơn là, cần thiết là, nên, có lẽ là, v.v.):",
+  "en": "after è + adjective / adverb (it's good, it's difficult, it's easy, it's right, it's important, it's better, it's necessary, it's advisable, it's likely, etc.):"
+ },
+ "È bene che anche voi siate presenti alla riunione.": {
+  "vi": "Tốt là các bạn cũng có mặt ở cuộc họp.",
+  "en": "It's good that you too are present at the meeting."
+ },
+ "È difficile che il Milan perda la partita.": {
+  "vi": "Khó mà Milan thua trận đấu.",
+  "en": "It's unlikely that Milan will lose the match."
+ },
+ "È facile che vi prendiate un raffreddore se non vi coprite bene.": {
+  "vi": "Các bạn dễ bị cảm lạnh nếu không mặc đủ ấm.",
+  "en": "You can easily catch a cold if you don't wrap up well."
+ },
+ "È necessario che vi impegnate di più.": {
+  "vi": "Các bạn cần cố gắng hơn.",
+  "en": "It's necessary that you work harder."
+ },
+ "È opportuno che tu gli chieda scusa.": {
+  "vi": "Bạn nên xin lỗi anh ấy.",
+  "en": "You should apologise to him."
+ },
+ "È probabile che fra poco piova.": {
+  "vi": "Có lẽ một lát nữa trời sẽ mưa.",
+  "en": "It will probably rain soon."
+ },
+ "Usiamo il congiuntivo presente in una frase dipendente quando nella frase principale abbiamo un verbo all'indicativo presente. Il congiuntivo presente esprime un'azione contemporanea rispetto a quella della principale:": {
+  "vi": "Ta dùng thức giả định hiện tại trong mệnh đề phụ khi ở mệnh đề chính có động từ ở thức trình bày hiện tại. Thức giả định hiện tại diễn tả một hành động xảy ra đồng thời với hành động của mệnh đề chính:",
+  "en": "We use the present subjunctive in a dependent clause when the main clause has a verb in the present indicative. The present subjunctive expresses an action contemporary with that of the main clause:"
+ },
+ "Penso (adesso) che tu dica (adesso) la verità.": {
+  "vi": "Tôi nghĩ (bây giờ) là bạn đang nói (bây giờ) sự thật.",
+  "en": "I think (now) that you are telling (now) the truth."
+ },
+ "Con il congiuntivo presente possiamo anche indicare un'azione futura rispetto a quella della frase principale; in questo caso usiamo di solito il congiuntivo con un avverbio o un'espressione temporale come domani, fra qualche giorno, la settimana prossima, ecc.:": {
+  "vi": "Với thức giả định hiện tại ta cũng có thể diễn tả một hành động trong tương lai so với mệnh đề chính; khi đó ta thường dùng thức giả định với một trạng từ hoặc cụm từ chỉ thời gian như ngày mai, vài ngày nữa, tuần sau, v.v.:",
+  "en": "With the present subjunctive we can also indicate a future action in relation to the main clause; in this case we usually use the subjunctive with an adverb or time expression like tomorrow, in a few days, next week, etc.:"
+ },
+ "Credo che Sandro parta domani.": {
+  "vi": "Tôi nghĩ ngày mai Sandro sẽ đi.",
+  "en": "I think Sandro is leaving tomorrow."
+ },
+ "Spero che la prossima domenica il tempo sia bello.": {
+  "vi": "Tôi hy vọng chủ nhật tới trời đẹp.",
+  "en": "I hope the weather will be nice next Sunday."
+ },
+ "Al posto di “che + congiuntivo” usiamo “di + infinito” quando il soggetto è lo stesso nelle due frasi:": {
+  "vi": "Thay cho “che + thức giả định” ta dùng “di + động từ nguyên mẫu” khi chủ ngữ của hai mệnh đề là một:",
+  "en": "Instead of “che + subjunctive” we use “di + infinitive” when the subject is the same in both clauses:"
+ },
+ "Marco spera di andare al mare domenica.": {
+  "vi": "Marco hy vọng chủ nhật được đi biển.",
+  "en": "Marco hopes to go to the seaside on Sunday."
+ },
+ "Io penso di uscire stasera.": {
+  "vi": "Tôi định tối nay đi chơi.",
+  "en": "I'm thinking of going out tonight."
+ },
+ "Con i verbi comandare, ordinare, permettere, proibire, vietare, chiedere, possiamo usare “di + infinito” o “che + congiuntivo”:": {
+  "vi": "Với các động từ ra lệnh, ra chỉ thị, cho phép, cấm, ngăn cấm, yêu cầu, ta có thể dùng “di + nguyên mẫu” hoặc “che + thức giả định”:",
+  "en": "With the verbs command, order, allow, prohibit, forbid, ask, we can use “di + infinitive” or “che + subjunctive”:"
+ },
+ "Il generale ordina ai soldati di ritirarsi.": {
+  "vi": "Vị tướng ra lệnh cho binh lính rút lui.",
+  "en": "The general orders the soldiers to withdraw."
+ },
+ "Il generale ordina che i soldati si ritirino.": {
+  "vi": "Vị tướng ra lệnh cho binh lính rút lui.",
+  "en": "The general orders that the soldiers withdraw."
+ },
+ "La legge vieta alle persone di fumare nei locali pubblici.": {
+  "vi": "Luật cấm mọi người hút thuốc ở nơi công cộng.",
+  "en": "The law forbids people to smoke in public places."
+ },
+ "La legge vieta che le persone fumino nei locali pubblici.": {
+  "vi": "Luật cấm việc mọi người hút thuốc ở nơi công cộng.",
+  "en": "The law forbids that people smoke in public places."
+ },
+ "Il verbo sapere regge il congiuntivo solo nelle frasi negative:": {
+  "vi": "Động từ sapere chỉ đi với thức giả định trong câu phủ định:",
+  "en": "The verb sapere takes the subjunctive only in negative sentences:"
+ },
+ "So che Paul è americano.": {
+  "vi": "Tôi biết Paul là người Mỹ.",
+  "en": "I know Paul is American."
+ },
+ "Usiamo il congiuntivo nelle frasi indipendenti per esprimere:": {
+  "vi": "Ta dùng thức giả định trong câu độc lập để diễn tả:",
+  "en": "We use the subjunctive in independent clauses to express:"
+ },
+ "un desiderio, un augurio:": {
+  "vi": "một mong ước, một lời chúc:",
+  "en": "a wish, a good wish:"
+ },
+ "Possiate essere felici!": {
+  "vi": "Chúc các bạn hạnh phúc!",
+  "en": "May you be happy!"
+ },
+ "Voglia il cielo che piova!": {
+  "vi": "Cầu trời cho mưa!",
+  "en": "Heaven grant that it rains!"
+ },
+ "un dubbio (la frase è una domanda e ha all'inizio che):": {
+  "vi": "một sự nghi ngờ (câu là câu hỏi và mở đầu bằng che):",
+  "en": "a doubt (the sentence is a question and begins with che):"
+ },
+ "Non mi ha salutato! Che non si ricordi di me?": {
+  "vi": "Anh ta không chào tôi! Chẳng lẽ anh ta không nhớ tôi?",
+  "en": "He didn't say hello to me! Could it be that he doesn't remember me?"
+ },
+ "I conti non tornano: che ci sia un errore?": {
+  "vi": "Sổ sách không khớp: liệu có sai sót nào chăng?",
+  "en": "The accounts don't add up: could there be a mistake?"
+ },
+ "un comando, un ordine o un invito, un'esortazione:": {
+  "vi": "một mệnh lệnh, một lời mời, một lời khích lệ:",
+  "en": "a command, an order or an invitation, an exhortation:"
+ },
+ "Stia zitto!": {
+  "vi": "Ông im đi!",
+  "en": "Be quiet!"
+ },
+ "Parli più lentamente, per favore!": {
+  "vi": "Xin ông nói chậm hơn!",
+  "en": "Please speak more slowly!"
+ },
+ "Proviamo!": {
+  "vi": "Chúng ta thử xem!",
+  "en": "Let's try!"
+ },
+ "Usiamo il congiuntivo al posto dell'imperativo nella terza persona singolare e nella prima persona plurale (guarda la GRAMMATICA dell'Unità 5).": {
+  "vi": "Ta dùng thức giả định thay cho thức mệnh lệnh ở ngôi thứ ba số ít và ngôi thứ nhất số nhiều (xem phần NGỮ PHÁP của Unità 5).",
+  "en": "We use the subjunctive instead of the imperative in the third person singular and the first person plural (see the GRAMMAR of Unit 5)."
+ },
+ "Scriviamo: completiamo le frasi con i verbi al congiuntivo presente.": {
+  "vi": "Cùng viết: hoàn thành câu với động từ ở thức giả định hiện tại.",
+  "en": "Let's write: complete the sentences with the verbs in the present subjunctive."
+ },
+ "partecipare • mangiare • leggere • trascorrere • arrivare • guarire • completare • avere • essere • finire": {
+  "vi": "tham gia • ăn • đọc • trải qua • đến • khỏi bệnh • hoàn thành • có • là • kết thúc",
+  "en": "take part • eat • read • spend • arrive • recover • complete • have • be • finish"
+ },
+ "1. Abbiamo paura che loro non … in tempo il lavoro.": {
+  "vi": "1. Chúng tôi sợ là họ không … công việc kịp thời hạn.",
+  "en": "1. We're afraid they won't … the work in time."
+ },
+ "2. Non sono sicuri che Marco … alla conferenza.": {
+  "vi": "2. Họ không chắc là Marco … hội nghị.",
+  "en": "2. They're not sure Marco will … in the conference."
+ },
+ "3. Spero che i miei amici … quella notizia sul giornale.": {
+  "vi": "3. Tôi hy vọng các bạn tôi … tin đó trên báo.",
+  "en": "3. I hope my friends … that news in the paper."
+ },
+ "4. Bisogna che il treno non … in ritardo.": {
+  "vi": "4. Tàu không được … muộn.",
+  "en": "4. The train mustn't … late."
+ },
+ "5. Credo che … già tardi per telefonare a Roberto.": {
+  "vi": "5. Tôi nghĩ là … đã muộn để gọi cho Roberto.",
+  "en": "5. I think it … already too late to phone Roberto."
+ },
+ "6. Mia madre si augura che io … i miei studi prima possibile.": {
+  "vi": "6. Mẹ tôi mong tôi … việc học càng sớm càng tốt.",
+  "en": "6. My mother hopes I … my studies as soon as possible."
+ },
+ "7. Ci dispiace che Pietro … l'influenza: speriamo che … presto.": {
+  "vi": "7. Chúng tôi tiếc là Pietro … cúm: hy vọng anh ấy … sớm.",
+  "en": "7. We're sorry Pietro … the flu: we hope he … soon."
+ },
+ "8. Per dimagrire bisogna che tu … meno.": {
+  "vi": "8. Để giảm cân bạn cần … ít hơn.",
+  "en": "8. To lose weight you need to … less."
+ },
+ "9. Francesca vuole che sua figlia … le vacanze in Inghilterra l'anno prossimo.": {
+  "vi": "9. Francesca muốn con gái … kỳ nghỉ ở Anh vào năm sau.",
+  "en": "9. Francesca wants her daughter to … her holidays in England next year."
+ },
+ "1. Desidero che (voi, venire) … a trovarmi.": {
+  "vi": "1. Tôi mong các bạn (venire) … thăm tôi.",
+  "en": "1. I'd like you (come) … and see me."
+ },
+ "2. È probabile che Luigi (sapere) … questa notizia.": {
+  "vi": "2. Có lẽ Luigi (sapere) … tin này.",
+  "en": "2. Luigi probably (know) … this news."
+ },
+ "3. Immaginiamo che (loro, andare) … via presto.": {
+  "vi": "3. Chúng tôi đoán là họ (andare) … về sớm.",
+  "en": "3. We imagine they (go) … away early."
+ },
+ "4. È meglio che tu (dire) … la verità subito.": {
+  "vi": "4. Tốt hơn là bạn (dire) … sự thật ngay.",
+  "en": "4. It's better that you (tell) … the truth at once."
+ },
+ "5. Mi sembra che tu (bere) … troppi caffè.": {
+  "vi": "5. Tôi thấy hình như bạn (bere) … quá nhiều cà phê.",
+  "en": "5. It seems to me you (drink) … too much coffee."
+ },
+ "6. Pare che oggi gli studenti (uscire) … prima da scuola.": {
+  "vi": "6. Hình như hôm nay học sinh (uscire) … khỏi trường sớm.",
+  "en": "6. It seems the students (leave) … school early today."
+ },
+ "7. Dubito che Maurizio (scegliere) … quella macchina.": {
+  "vi": "7. Tôi nghi là Maurizio (scegliere) … chiếc xe đó.",
+  "en": "7. I doubt Maurizio (choose) … that car."
+ },
+ "8. Pensi che (io, dovere) … lavorare a quelle condizioni?": {
+  "vi": "8. Bạn nghĩ là tôi (dovere) … làm việc trong những điều kiện đó sao?",
+  "en": "8. Do you think I (have to) … work in those conditions?"
+ },
+ "9. Abbiamo paura che non (loro, potere) … fare quel lavoro.": {
+  "vi": "9. Chúng tôi sợ là họ không (potere) … làm công việc đó.",
+  "en": "9. We're afraid they (can) … not do that job."
+ },
+ "10. Credi che (loro, fare) … bene questi compiti?": {
+  "vi": "10. Bạn có nghĩ là họ (fare) … tốt những bài tập này không?",
+  "en": "10. Do you think they (do) … these exercises well?"
+ },
+ "1. Credo che voi (lavorare) … bene in quell'ufficio.": {
+  "vi": "1. Tôi nghĩ các bạn (lavorare) … tốt ở văn phòng đó.",
+  "en": "1. I think you (work) … well in that office."
+ },
+ "2. È probabile che io (vedere) … Gianni domani.": {
+  "vi": "2. Có lẽ ngày mai tôi (vedere) … Gianni.",
+  "en": "2. I'll probably (see) … Gianni tomorrow."
+ },
+ "3. Bisogna che tu (prendere) … in fretta una decisione.": {
+  "vi": "3. Bạn cần nhanh chóng (prendere) … một quyết định.",
+  "en": "3. You need to (make) … a decision quickly."
+ },
+ "4. È meglio che tu (telefonare) … al medico.": {
+  "vi": "4. Tốt hơn là bạn (telefonare) … cho bác sĩ.",
+  "en": "4. You'd better (phone) … the doctor."
+ },
+ "1. Immagino che (tu, andare) … in vacanza a giugno.": {
+  "vi": "1. Tôi đoán bạn (andare) … nghỉ vào tháng Sáu.",
+  "en": "1. I imagine you (go) … on holiday in June."
+ },
+ "2. Ho paura che (essere) … tardi.": {
+  "vi": "2. Tôi sợ (essere) … muộn rồi.",
+  "en": "2. I'm afraid it (be) … late."
+ },
+ "3. Siamo felici che (voi, venire) … a trovarci.": {
+  "vi": "3. Chúng tôi vui vì các bạn (venire) … thăm chúng tôi.",
+  "en": "3. We're happy you (come) … to see us."
+ },
+ "4. Sembra che domani (dovere) … piovere.": {
+  "vi": "4. Có vẻ ngày mai (dovere) … mưa.",
+  "en": "4. It seems it (should) … rain tomorrow."
+ },
+ "Il Corriere della Sera": {
+  "vi": "Corriere della Sera",
+  "en": "The Corriere della Sera"
+ },
+ "“Pubblico, vogliamo parlarti chiaro: questo giornale vuole esprimere la sua opinione, anche se non piace a chi sta in alto o a chi sta in basso”. Così il Corriere della Sera si presentava ai suoi lettori 130 anni fa, nel primo numero in edicola a Milano il 5 marzo 1876: quattro pagine al costo di cinque centesimi di lira. Tiratura iniziale: 15.000 copie. Eugenio Torelli Viollier dirige per primo il quotidiano, per più di ventidue anni; ma è con Luigi Alberini, una firma storica del giornalismo italiano, che il Corriere raggiungerà livelli di diffusione e di prestigio notevolissimi. Nelle sue intenzioni iniziali il giornale si definisce conservatore e moderato, ma vuole anche mantenere la sua indipendenza dal governo ed essere, se possibile, obiettivo.": {
+  "vi": "“Thưa công chúng, chúng tôi muốn nói thẳng với các bạn: tờ báo này muốn bày tỏ ý kiến của mình, dù điều đó không làm vừa lòng người ở trên hay người ở dưới”. Corriere della Sera đã tự giới thiệu với độc giả như vậy cách đây 130 năm, trong số báo đầu tiên phát hành ở Milano ngày 5 tháng 3 năm 1876: bốn trang với giá năm xu. Số lượng phát hành ban đầu: 15.000 bản. Eugenio Torelli Viollier là người đầu tiên điều hành tờ nhật báo, trong hơn hai mươi hai năm; nhưng chính với Luigi Alberini, một cây bút lịch sử của báo chí Ý, Corriere đạt được mức phát hành và uy tín rất đáng kể. Theo ý định ban đầu, tờ báo tự nhận là bảo thủ và ôn hòa, nhưng cũng muốn giữ sự độc lập với chính phủ và, nếu có thể, khách quan.",
+  "en": "“Public, we want to speak plainly to you: this newspaper wants to express its opinion, even if it doesn't please those at the top or those at the bottom”. This is how the Corriere della Sera introduced itself to its readers 130 years ago, in the first issue on sale in Milan on 5th March 1876: four pages costing five cents of a lira. Initial circulation: 15,000 copies. Eugenio Torelli Viollier was the first to run the daily, for more than twenty-two years; but it was with Luigi Alberini, a historic name in Italian journalism, that the Corriere would reach remarkable levels of circulation and prestige. In its initial intentions the paper defined itself as conservative and moderate, but also wanted to keep its independence from the government and be, if possible, objective."
+ },
+ "Il Corriere attraversa praticamente tutta la storia dell'Italia unita; cambia varie sedi fino a quando, nel 1904, si stabilisce nel palazzo storico di Via Solferino, a Milano. Nel corso del tempo ha avuto molte iniziative editoriali: la Domenica del Corriere, La Lettura, il Corriere dei Piccoli. Le firme più prestigiose del giornalismo italiano (come Indro Montanelli ed Enzo Biagi) hanno scritto e curato molte pagine importanti del giornale. Al suo successo hanno contribuito grandi intellettuali e letterati, come lo scrittore e drammaturgo Luigi Pirandello, il poeta Eugenio Montale, lo scrittore e poeta Pier Paolo Pasolini.": {
+  "vi": "Corriere đi qua gần như toàn bộ lịch sử nước Ý thống nhất; nó đổi trụ sở nhiều lần cho đến khi, năm 1904, đặt tại tòa nhà lịch sử trên phố Solferino ở Milano. Theo thời gian, tờ báo có nhiều sáng kiến xuất bản: Domenica del Corriere, La Lettura, Corriere dei Piccoli. Những cây bút danh giá nhất của báo chí Ý (như Indro Montanelli và Enzo Biagi) đã viết và biên tập nhiều trang quan trọng của tờ báo. Góp phần vào thành công của nó có những trí thức và nhà văn lớn, như nhà văn và nhà soạn kịch Luigi Pirandello, nhà thơ Eugenio Montale, nhà văn và nhà thơ Pier Paolo Pasolini.",
+  "en": "The Corriere spans practically the whole history of united Italy; it changed offices several times until, in 1904, it settled in the historic building in Via Solferino, in Milan. Over time it had many publishing initiatives: the Domenica del Corriere, La Lettura, the Corriere dei Piccoli. The most prestigious names in Italian journalism (like Indro Montanelli and Enzo Biagi) wrote and edited many important pages of the paper. Great intellectuals and writers contributed to its success, such as the writer and playwright Luigi Pirandello, the poet Eugenio Montale, and the writer and poet Pier Paolo Pasolini."
+ },
+ "Avete mai letto un articolo del Corriere della Sera?": {
+  "vi": "Các bạn đã bao giờ đọc một bài báo của Corriere della Sera chưa?",
+  "en": "Have you ever read an article in the Corriere della Sera?"
+ },
+ "Visitate il sito del Corriere (www.corriere.it): che cosa vi piace di più? Provate a leggere un articolo e presentatelo alla classe.": {
+  "vi": "Hãy vào trang web của Corriere (www.corriere.it): các bạn thích gì nhất? Hãy thử đọc một bài và trình bày trước lớp.",
+  "en": "Visit the Corriere website (www.corriere.it): what do you like most? Try reading an article and present it to the class."
+ },
+ "Qual è il giornale più antico nel vostro paese? E quello più autorevole?": {
+  "vi": "Tờ báo lâu đời nhất ở nước các bạn là tờ nào? Còn tờ có uy tín nhất?",
+  "en": "Which is the oldest newspaper in your country? And the most authoritative?"
+ },
+ "Gli italiani leggono poco i giornali… eppure li comprano! Che uso ne fanno?": {
+  "vi": "Người Ý ít đọc báo… vậy mà vẫn mua báo! Họ dùng báo vào việc gì?",
+  "en": "Italians read newspapers very little… and yet they buy them! What do they use them for?"
+ },
+ "Enzo Biagi": {
+  "vi": "Enzo Biagi",
+  "en": "Enzo Biagi"
+ },
+ "– Nome: Enzo Biagi. – Nasce a Lizzano in Belvedere (provincia di Bologna) il 9 agosto 1920. – Muore il 6 novembre 2007. – Chi è? È stato un grande giornalista e uno scrittore. Enzo Biagi era di umili origini: il padre lavorava in una fabbrica di zucchero, la madre era una semplice casalinga. Fin da bambino dimostra di avere un particolare talento per la scrittura: quando compie diciotto anni si dedica al giornalismo. Lavora come cronista al Resto del Carlino e, a soli ventuno anni, diventa professionista.": {
+  "vi": "– Tên: Enzo Biagi. – Sinh tại Lizzano in Belvedere (tỉnh Bologna) ngày 9 tháng 8 năm 1920. – Mất ngày 6 tháng 11 năm 2007. – Ông là ai? Ông là một nhà báo và nhà văn lớn. Enzo Biagi xuất thân khiêm tốn: cha làm việc trong một nhà máy đường, mẹ là một bà nội trợ bình thường. Ngay từ nhỏ ông đã cho thấy tài năng đặc biệt về viết lách: năm mười tám tuổi ông dấn thân vào nghề báo. Ông làm phóng viên cho tờ Resto del Carlino và mới hai mươi mốt tuổi đã trở thành nhà báo chuyên nghiệp.",
+  "en": "– Name: Enzo Biagi. – Born in Lizzano in Belvedere (province of Bologna) on 9th August 1920. – Died on 6th November 2007. – Who is he? He was a great journalist and writer. Enzo Biagi came from a humble background: his father worked in a sugar factory, his mother was a simple housewife. As a child he showed a particular talent for writing: when he turned eighteen he devoted himself to journalism. He worked as a reporter for the Resto del Carlino and, at only twenty-one, became a professional."
+ },
+ "Dopo la guerra Biagi prende numerose iniziative: fonda un settimanale, Cronache, e un quotidiano, Cronache sera. Da questo momento inizia la grande carriera di uno dei giornalisti italiani più amati. Fin da subito Enzo Biagi stabilisce un rapporto molto stretto con il mezzo televisivo: ciò ha contribuito ad aumentare la sua popolarità. Il suo ingresso in Rai (la rete televisiva pubblica) è nel 1961: comincia un periodo di intenso lavoro e di grandi soddisfazioni. Biagi è richiestissimo e la sua firma compare su La Stampa, la Repubblica, il Corriere della Sera e Panorama.": {
+  "vi": "Sau chiến tranh Biagi khởi xướng nhiều việc: ông sáng lập một tuần báo, Cronache, và một nhật báo, Cronache sera. Từ đó bắt đầu sự nghiệp lớn của một trong những nhà báo Ý được yêu mến nhất. Ngay từ đầu Enzo Biagi đã gắn bó chặt chẽ với truyền hình: điều này góp phần làm tăng sự nổi tiếng của ông. Ông vào Rai (đài truyền hình công) năm 1961: bắt đầu một thời kỳ làm việc miệt mài và nhiều thành tựu. Biagi rất được săn đón và tên ông xuất hiện trên La Stampa, la Repubblica, Corriere della Sera và Panorama.",
+  "en": "After the war Biagi took many initiatives: he founded a weekly, Cronache, and a daily, Cronache sera. From that moment began the great career of one of the most loved Italian journalists. From the start Enzo Biagi established a very close relationship with television: this helped increase his popularity. He joined Rai (the public broadcaster) in 1961: a period of intense work and great satisfaction began. Biagi was in great demand and his byline appeared in La Stampa, la Repubblica, the Corriere della Sera and Panorama."
+ },
+ "Importante è anche la sua attività di scrittore: i suoi libri vendono alcuni milioni di copie. Fra le sue pubblicazioni ricordiamo: Cara Italia (2000), Lettera d'amore a una ragazza di una volta (2003), Era ieri (2005). Nel 1995 conduce in televisione Il Fatto, programma giornaliero di cinque minuti su avvenimenti e personaggi italiani. Enzo Biagi ha intervistato i grandi protagonisti della politica, della letteratura, dell'attualità e dello spettacolo: Woody Allen, il Dalai Lama, Federico Fellini, Robert Kennedy, Henry Kissinger, François Mitterand, Margareth Thatcher e moltissimi altri.": {
+  "vi": "Quan trọng không kém là sự nghiệp viết văn của ông: sách của ông bán được vài triệu bản. Trong số các ấn phẩm của ông có: Cara Italia (2000), Lettera d'amore a una ragazza di una volta (2003), Era ieri (2005). Năm 1995 ông dẫn chương trình truyền hình Il Fatto, chương trình hằng ngày dài năm phút về các sự kiện và nhân vật Ý. Enzo Biagi đã phỏng vấn những nhân vật lớn của chính trị, văn học, thời sự và giải trí: Woody Allen, Đạt Lai Lạt Ma, Federico Fellini, Robert Kennedy, Henry Kissinger, François Mitterrand, Margaret Thatcher và rất nhiều người khác.",
+  "en": "His work as a writer is also important: his books sell several million copies. Among his publications: Cara Italia (2000), Lettera d'amore a una ragazza di una volta (2003), Era ieri (2005). In 1995 he presented Il Fatto on television, a five-minute daily programme on Italian events and personalities. Enzo Biagi interviewed the great figures of politics, literature, current affairs and entertainment: Woody Allen, the Dalai Lama, Federico Fellini, Robert Kennedy, Henry Kissinger, François Mitterrand, Margaret Thatcher and many others."
+ },
+ "Leggiamo due frasi famose di Enzo Biagi.": {
+  "vi": "Đọc hai câu nói nổi tiếng của Enzo Biagi.",
+  "en": "Let's read two famous sayings by Enzo Biagi."
+ },
+ "“Le verità che contano, i grandi principi, alla fine, restano sempre due o tre. Sono quelli che ti ha insegnato tua madre da bambino.”": {
+  "vi": "“Những sự thật có giá trị, những nguyên tắc lớn, rốt cuộc cũng chỉ có hai hay ba. Đó là những điều mẹ đã dạy ta khi còn nhỏ.”",
+  "en": "“The truths that matter, the great principles, in the end are always just two or three. They are the ones your mother taught you as a child.”"
+ },
+ "“La democrazia è fragile e a piantarci sopra troppe bandiere si sgretola.”": {
+  "vi": "“Nền dân chủ thật mong manh, cắm lên đó quá nhiều lá cờ thì nó sẽ vỡ vụn.”",
+  "en": "“Democracy is fragile, and if you plant too many flags on it, it crumbles.”"
+ },
+ "Che cosa pensate di queste frasi? Esprimete le vostre opinioni.": {
+  "vi": "Các bạn nghĩ gì về những câu này? Hãy bày tỏ ý kiến của mình.",
+  "en": "What do you think of these sayings? Express your opinions."
  }
 }
