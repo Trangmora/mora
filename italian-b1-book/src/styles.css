@@ -5024,3 +5024,6 @@ input::placeholder {
   color: var(--blue);
   background: rgba(255, 255, 255, 0.85);
 }
+
+.ex-items li.self-num { list-style: none; }
+.ex-items li.self-num::marker { content: ""; }
