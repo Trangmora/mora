@@ -13,10 +13,14 @@ const page: BookPage = {
   blocks: [
     {
       type: "columns",
-      widths: [1, 1],
+      widths: [1, 2],
+      align: "center",
       cols: [
-        [{ type: "photo", src: "images/u10/p191-corsa.jpg", alt: "I cavalli corrono in Piazza del Campo" }],
-        [{ type: "photo", src: "images/u10/p191-piazza.jpg", alt: "Un fantino in Piazza del Campo piena di gente" }],
+        [{ type: "photo", src: "images/u10/p191-contrada.jpg", alt: "Un figurante di spalle con la bandiera di una contrada di Siena" }],
+        [
+          { type: "photo", src: "images/u10/p191-corsa.jpg", alt: "I cavalli corrono in Piazza del Campo" },
+          { type: "photo", src: "images/u10/p191-piazza.jpg", alt: "Un fantino in Piazza del Campo piena di gente" },
+        ],
       ],
     },
     {
