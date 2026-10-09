@@ -16,7 +16,7 @@ export function Cover({ onOpen }: { onOpen: () => void }) {
       </svg>
       <div className="cover-content">
         <div className="cover-top">
-          <span className="cover-level">B1</span>
+          <span className="cover-level">{bookInfo.level}</span>
           <span className="cover-tricolore" aria-hidden>
             <i /><i /><i />
           </span>

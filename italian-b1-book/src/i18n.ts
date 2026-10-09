@@ -1,7 +1,7 @@
 import type { L10n, Lang } from "./types";
 
 const strings = {
-  bookTitle: { vi: "Il Mio Libro · Tiếng Ý B1", en: "Il Mio Libro · Italian B1" },
+  bookTitle: { vi: "Sách mới", en: "New book" },
   contents: { vi: "Mục lục", en: "Contents" },
   indice: { vi: "Indice", en: "Indice" },
   showAnswers: { vi: "Hiện đáp án", en: "Show answers" },

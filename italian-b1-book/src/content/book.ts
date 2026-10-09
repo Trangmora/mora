@@ -10,7 +10,9 @@ export const pages: BookPage[] = Object.values(modules)
   .map((m) => m.default)
   .sort((a, b) => a.number - b.number);
 
+/** Thông tin bìa sách — đổi ở đây khi đặt tên sách mới. */
 export const bookInfo = {
-  title: "Il Mio Libro",
-  subtitle: "Italiano · Livello B1",
+  title: "Sách mới",
+  subtitle: "Tên môn · Trình độ",
+  level: "A1",
 };
