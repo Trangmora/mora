@@ -1,1 +1,194 @@
-{}
+{
+ "Parliamo: presentiamoci al compagno di banco.": {
+  "vi": "Cùng nói: giới thiệu bản thân với bạn ngồi cạnh.",
+  "en": "Let's talk: introduce ourselves to our deskmate."
+ },
+ "Scegliete cinque parole che vi descrivono (per esempio: città, lavoro, famiglia, sport, cibo) e usatele per presentarvi.": {
+  "vi": "Chọn năm từ mô tả bạn (ví dụ: thành phố, công việc, gia đình, thể thao, món ăn) và dùng chúng để giới thiệu bản thân.",
+  "en": "Choose five words that describe you (e.g. city, job, family, sport, food) and use them to introduce yourself."
+ },
+ "Le mie cinque parole: …": {
+  "vi": "Năm từ của tôi: …",
+  "en": "My five words: …"
+ },
+ "Leggiamo il dialogo.": {
+  "vi": "Đọc đoạn hội thoại.",
+  "en": "Let's read the dialogue."
+ },
+ "Il primo giorno alla scuola “Parola Viva” di Bologna": {
+  "vi": "Ngày đầu tiên ở trường “Parola Viva” tại Bologna",
+  "en": "The first day at the “Parola Viva” school in Bologna"
+ },
+ "Scusa, è questa l'aula del corso intermedio?": {
+  "vi": "Xin lỗi, đây là phòng học của lớp trung cấp phải không?",
+  "en": "Excuse me, is this the classroom for the intermediate course?"
+ },
+ "Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.": {
+  "vi": "Ừ, mình nghĩ vậy. Mình cũng mới đến. Mình tên là Tomás, rất vui được gặp.",
+  "en": "Yes, I think so. I'm new too. My name's Tomás, nice to meet you."
+ },
+ "Piacere, io sono Hoa. Di dove sei?": {
+  "vi": "Rất vui được gặp, mình là Hoa. Bạn từ đâu đến?",
+  "en": "Nice to meet you, I'm Hoa. Where are you from?"
+ },
+ "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?": {
+  "vi": "Mình là người Argentina, ở Rosario. Mình làm đầu bếp và đến đây thực tập ở một nhà hàng. Còn bạn?",
+  "en": "I'm Argentinian, from Rosario. I'm a cook and I'm here for an internship in a restaurant. And you?"
+ },
+ "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.": {
+  "vi": "Mình là người Việt, ở Huế. Mình học kiến trúc và tháng Hai sẽ bắt đầu một học kỳ ở trường đại học Bologna.",
+  "en": "I'm Vietnamese, from Huế. I study architecture and in February I start a semester at the University of Bologna."
+ },
+ "Che bello! Ti piace la città?": {
+  "vi": "Hay quá! Bạn có thích thành phố này không?",
+  "en": "How lovely! Do you like the city?"
+ },
+ "Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.": {
+  "vi": "Thích lắm: những dãy hành lang có mái vòm, xe đạp, các khu chợ… Và lúc rảnh mình luôn ra Quảng trường Santo Stefano để vẽ.",
+  "en": "Very much: the porticoes, the bicycles, the markets… And in my free time I always go and draw in Piazza Santo Stefano."
+ },
+ "Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!": {
+  "vi": "Còn mình, khi không đi làm, mình đá bóng mini với đồng nghiệp. À, cô giáo đến rồi kìa!",
+  "en": "As for me, when I'm not working, I play five-a-side football with my colleagues. Oh, here's the teacher!"
+ },
+ "Leggiamo di nuovo: vero o falso?": {
+  "vi": "Đọc lại: đúng hay sai?",
+  "en": "Let's read again: true or false?"
+ },
+ "Hoa e Tomás si conoscono già.": {
+  "vi": "Hoa và Tomás đã quen nhau từ trước.",
+  "en": "Hoa and Tomás already know each other."
+ },
+ "Tomás lavora in cucina.": {
+  "vi": "Tomás làm việc trong bếp.",
+  "en": "Tomás works in a kitchen."
+ },
+ "Hoa studia medicina.": {
+  "vi": "Hoa học y.",
+  "en": "Hoa studies medicine."
+ },
+ "A Hoa piace disegnare all'aperto.": {
+  "vi": "Hoa thích vẽ ngoài trời.",
+  "en": "Hoa likes drawing outdoors."
+ },
+ "Nel tempo libero Tomás va in bicicletta.": {
+  "vi": "Lúc rảnh Tomás đi xe đạp.",
+  "en": "In his free time Tomás goes cycling."
+ },
+ "Abbiniamo le domande alle risposte di Tomás.": {
+  "vi": "Nối các câu hỏi với câu trả lời của Tomás.",
+  "en": "Let's match the questions to Tomás's answers."
+ },
+ "Come ti chiami?": {
+  "vi": "Bạn tên là gì?",
+  "en": "What's your name?"
+ },
+ "Quanti anni hai?": {
+  "vi": "Bạn bao nhiêu tuổi?",
+  "en": "How old are you?"
+ },
+ "Che lavoro fai?": {
+  "vi": "Bạn làm nghề gì?",
+  "en": "What do you do for a living?"
+ },
+ "Perché studi l'italiano?": {
+  "vi": "Tại sao bạn học tiếng Ý?",
+  "en": "Why are you studying Italian?"
+ },
+ "Che cosa fai nel tempo libero?": {
+  "vi": "Lúc rảnh bạn làm gì?",
+  "en": "What do you do in your free time?"
+ },
+ "Faccio il cuoco.": {
+  "vi": "Mình làm đầu bếp.",
+  "en": "I'm a cook."
+ },
+ "Gioco a calcetto e guardo vecchi film.": {
+  "vi": "Mình đá bóng mini và xem phim cũ.",
+  "en": "I play five-a-side football and watch old films."
+ },
+ "Tomás Herrera.": {
+  "vi": "Tomás Herrera.",
+  "en": "Tomás Herrera."
+ },
+ "Ne ho ventotto.": {
+  "vi": "Mình hai mươi tám tuổi.",
+  "en": "I'm twenty-eight."
+ },
+ "Perché voglio lavorare in un ristorante italiano.": {
+  "vi": "Vì mình muốn làm việc ở một nhà hàng Ý.",
+  "en": "Because I want to work in an Italian restaurant."
+ },
+ "Scriviamo: compiliamo la scheda con i nostri dati.": {
+  "vi": "Cùng viết: điền phiếu với thông tin của bạn.",
+  "en": "Let's write: fill in the form with our details."
+ },
+ "Nome e cognome:": {
+  "vi": "Họ và tên:",
+  "en": "Full name:"
+ },
+ "Nato/a a … il …:": {
+  "vi": "Sinh tại … ngày …:",
+  "en": "Born in … on …:"
+ },
+ "Paese di provenienza:": {
+  "vi": "Nước:",
+  "en": "Country of origin:"
+ },
+ "Studio / lavoro:": {
+  "vi": "Học / làm việc:",
+  "en": "Study / work:"
+ },
+ "Lingue che parlo:": {
+  "vi": "Ngôn ngữ tôi nói được:",
+  "en": "Languages I speak:"
+ },
+ "Da quanto tempo studi l'italiano?": {
+  "vi": "Bạn học tiếng Ý được bao lâu rồi?",
+  "en": "How long have you been studying Italian?"
+ },
+ "Che cosa vuoi migliorare di più? (parlare, ascoltare, scrivere, leggere…)": {
+  "vi": "Bạn muốn cải thiện điều gì nhất? (nói, nghe, viết, đọc…)",
+  "en": "What do you most want to improve? (speaking, listening, writing, reading…)"
+ },
+ "Una cosa dell'Italia che ami e una che non capisci ancora:": {
+  "vi": "Một điều ở Ý bạn yêu thích và một điều bạn vẫn chưa hiểu:",
+  "en": "One thing about Italy you love and one you still don't understand:"
+ },
+ "Corso scelto:": {
+  "vi": "Lớp đã chọn:",
+  "en": "Course chosen:"
+ },
+ "Completiamo con i verbi chiamarsi, essere, avere, fare al presente.": {
+  "vi": "Hoàn thành câu với các động từ chiamarsi, essere, avere, fare ở thì hiện tại.",
+  "en": "Let's complete with the verbs chiamarsi, essere, avere, fare in the present."
+ },
+ "2. Tomás (essere) … argentino e (fare) … il cuoco.": {
+  "vi": "2. Tomás (là) … người Argentina và (làm) … đầu bếp.",
+  "en": "2. Tomás (be) … Argentinian and (do) … the job of cook."
+ },
+ "3. Noi (avere) … lezione tutte le mattine alle nove.": {
+  "vi": "3. Chúng tôi (có) … giờ học mỗi sáng lúc chín giờ.",
+  "en": "3. We (have) … lessons every morning at nine."
+ },
+ "4. Come (chiamarsi) … la vostra insegnante?": {
+  "vi": "4. Cô giáo của các bạn (tên là) … gì?",
+  "en": "4. What (be called) … your teacher?"
+ },
+ "5. Voi di dove (essere) …?": {
+  "vi": "5. Các bạn (là) … người ở đâu?",
+  "en": "5. Where (be) … you from?"
+ },
+ "6. Hoa e Tomás (avere) … quasi la stessa età.": {
+  "vi": "6. Hoa và Tomás (có) … gần bằng tuổi nhau.",
+  "en": "6. Hoa and Tomás (have) … almost the same age."
+ },
+ "Ciao, come ti chiami? — Di dove sei?": {
+  "vi": "Với bạn bè: Chào, bạn tên gì? — Bạn từ đâu đến?",
+  "en": "With a friend: Hi, what's your name? — Where are you from?"
+ },
+ "Buongiorno, come si chiama? — Di dov'è?": {
+  "vi": "Với người chưa quen: Xin chào, ông/bà tên là gì? — Ông/bà từ đâu đến?",
+  "en": "With someone we don't know: Good morning, what's your name? — Where are you from? (formal)"
+ }
+}

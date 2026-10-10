@@ -13,6 +13,6 @@ export const pages: BookPage[] = Object.values(modules)
 /** Thông tin bìa sách — đổi ở đây khi đặt tên sách mới. */
 export const bookInfo = {
   title: "Sách mới",
-  subtitle: "Tên môn · Trình độ",
-  level: "A1",
+  subtitle: "Italiano · Livello B1",
+  level: "B1",
 };
