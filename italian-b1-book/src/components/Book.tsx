@@ -14,6 +14,7 @@ import { NonnaSays } from "./Nonna";
 import { blankQuip, factFor } from "../lib/humor";
 import { emitFun } from "../lib/fun";
 import { tr } from "../i18n";
+import { StudyPanel } from "./StudyPanel";
 
 /** Một trang trên màn hình (vừa đúng một khung, không cuộn): một phần của trang sách. */
 export type Sheet = { page: BookPage; units: Unit[]; part: number; parts: number; zoom: Record<string, number> };
@@ -236,6 +237,7 @@ export function Book({ apiRef }: { apiRef: React.MutableRefObject<BookApi | null
         </div>
       )}
       <button className="turn next" onClick={() => go(1)} disabled={atEnd} aria-label={t(lang, "next")} title="Avanti!"><Icon name="right" size={26} /></button>
+      <StudyPanel />
     </div>
   );
 }

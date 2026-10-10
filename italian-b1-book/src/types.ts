@@ -237,6 +237,10 @@ export type Exercise = ExerciseBody & {
   noKey?: boolean;
   /** "capace": khung nét đứt "ORA SONO CAPACE DI…" cuối bài Verifica. */
   variant?: "capace" | "twoCol";
+  /** Khung "Vì sao?": giải thích ngữ pháp cho từng câu (itemId → lời giải + quy tắc trong kho kiến thức). */
+  why?: Record<string, { tr: L10n; rule?: string }>;
+  /** Các quy tắc trong kho kiến thức mà bài này luyện (đánh dấu "đã gặp" khi chấm bài). */
+  rules?: string[];
 };
 
 export type BadgeIcon = "speak" | "look" | "read" | "write" | "listen" | "match" | "check";

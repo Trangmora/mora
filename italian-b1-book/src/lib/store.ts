@@ -53,6 +53,8 @@ type Progress = {
   history: Attempt[];
   /** Cấp bậc espresso cao nhất đã ăn mừng (để biết khi nào lên cấp). */
   lastLevel?: number;
+  /** Các quy tắc trong kho kiến thức đã gặp khi chấm bài. */
+  learned: string[];
 };
 
 /** Cài đặt chung của máy. */
@@ -69,9 +71,9 @@ type Settings = {
 
 type State = Settings & Progress;
 
-const SETTINGS_KEY = "italian-b1-book:v2:settings";
-const userKey = (id: string) => `italian-b1-book:v2:user:${id}`;
-const LEGACY_KEY = "italian-b1-book:v1";
+const SETTINGS_KEY = "sach-moi:v1:settings";
+const userKey = (id: string) => `sach-moi:v1:user:${id}`;
+const LEGACY_KEY = "sach-moi:v0";
 
 const emptyProgress: Progress = {
   position: 0,
@@ -80,6 +82,7 @@ const emptyProgress: Progress = {
   mistakes: [],
   notes: "",
   history: [],
+  learned: [],
 };
 
 function read<T>(key: string): T | null {
@@ -237,4 +240,10 @@ export function saveResult(
 /** Ghi lại một lần luyện đọc/phát âm. */
 export function logAttempt(a: Attempt) {
   setState((s) => ({ history: [...s.history, a].slice(-500) }));
+}
+
+/** Đánh dấu các quy tắc trong kho kiến thức là đã gặp. */
+export function learnRules(ids: string[]) {
+  if (!ids.length) return;
+  setState((s) => ({ learned: [...new Set([...(s.learned ?? []), ...ids])] }));
 }

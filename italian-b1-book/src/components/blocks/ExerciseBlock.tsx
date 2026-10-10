@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Icon } from "../Icon";
 import { skillOf } from "../../lib/skills";
 import { t, tr } from "../../i18n";
 import type { BadgeIcon, BookPage, ClozeExercise, Exercise, FormExercise } from "../../types";
 import { parseCloze } from "../../lib/cloze";
 import { Photo } from "../Photo";
-import { resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
+import { learnRules, resetExercise, saveResult, setResponse, useStore, type ItemResult } from "../../lib/store";
 import { blanksOf, gradeByKey, gradeWithAI, isAIAvailable, needsAI, SEP, toMistakes } from "../../lib/grading";
 import { speak, speechRecognitionSupported, useItalianRecorder } from "../../lib/speech";
 import { thinkingQuip } from "../../lib/humor";
@@ -13,6 +13,10 @@ import { emitFun } from "../../lib/fun";
 import { useMeasuring } from "../../lib/measure";
 import { inline } from "./Theory";
 import { TrIcon } from "../TrIcon";
+import { focusWhy, useStudy } from "../../lib/study";
+
+/** Bài tập đang vẽ — để dấu ✓/✗ biết câu nào có lời giải "Vì sao?". */
+const ExCtx = createContext<Exercise | null>(null);
 
 const EMPTY: Record<string, string> = {};
 /** Câu đã tự ghi số như sách ("2. …") thì không vẽ thêm số tự động. */
@@ -121,6 +125,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
   if (part.kind === "foot") return <ExerciseFoot ex={ex} page={page} context={context} />;
   return (
     <div className={`exercise kind-${ex.kind} ex-part-body ${ex.variant ?? ""}`}>
+      <ExCtx.Provider value={ex}>
       <Body
         ex={ex}
         only={part.kind === "item" ? part.index : undefined}
@@ -130,6 +135,7 @@ export function ExercisePart({ ex, page, context, part }: { ex: Exercise; page: 
         results={byId}
         radioPrefix={measuring ? "m-" : ""}
       />
+      </ExCtx.Provider>
     </div>
   );
 }
@@ -144,6 +150,11 @@ function ExerciseFoot({ ex, page, context }: { ex: Exercise; page: BookPage; con
     const r = gradeByKey(ex, responses, lang);
     saveResult(ex.id, r, toMistakes(page, ex, r), { skill: skillOf(ex, page), pageId: page.id, counts: !needsAI(ex) });
     if (!needsAI(ex)) emitFun({ type: "graded", score: r.score, wrong: r.items.filter((i) => !i.correct).length });
+    // Kho kiến thức: ghi nhận quy tắc đã gặp; mở ngay lời giải câu sai đầu tiên.
+    const ruleIds = [...(ex.rules ?? []), ...Object.values(ex.why ?? {}).flatMap((w) => (w.rule ? [w.rule] : []))];
+    learnRules(ruleIds);
+    const firstWrong = r.items.find((i) => !i.correct && ex.why?.[i.id]);
+    if (firstWrong) focusWhy(ex, firstWrong.id);
   }
 
   async function checkWithAI() {
@@ -214,8 +225,28 @@ type BodyProps = {
 };
 
 function Mark({ r }: { r?: ItemResult }) {
+  const ex = useContext(ExCtx);
+  const active = useStudy((s) => !!r && s.focus?.ex.id === ex?.id && s.focus?.itemId === r.id);
   if (!r) return null;
-  return <span className={`mark ${r.correct ? "ok" : "ko"}`}>{r.correct ? "✓" : "✗"}</span>;
+  const why = ex?.why?.[r.id];
+  return (
+    <>
+      <span className={`mark ${r.correct ? "ok" : "ko"}`}>{r.correct ? "✓" : "✗"}</span>
+      {why && ex && (
+        <button
+          className={`why-btn ${active ? "on" : ""}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            focusWhy(ex, r.id);
+          }}
+          title="Perché?"
+          aria-label="Perché?"
+        >
+          ?
+        </button>
+      )}
+    </>
+  );
 }
 
 /** Ghi chú bút đỏ bên lề: đáp án đúng + giải thích. */
