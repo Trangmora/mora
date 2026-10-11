@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="Figtree, Segoe UI, sans-serif">
+  <rect width="400" height="260" rx="14" fill="#eef4ef"/>
+  <!-- piastrelle -->
+  <g fill="none" stroke="#d3e2d7" stroke-width="2"><path d="M0 40h400M0 80h400M0 120h400M40 0v170M80 0v170M120 0v170M160 0v170M200 0v170M240 0v170M280 0v170M320 0v170M360 0v170"/></g>
+  <!-- mensola -->
+  <rect x="236" y="56" width="150" height="8" rx="2" fill="#8a5a36"/>
+  <g><rect x="248" y="22" width="22" height="34" rx="4" fill="#008c45"/><rect x="252" y="16" width="14" height="8" fill="#1d2126"/>
+     <rect x="280" y="30" width="30" height="26" rx="4" fill="#fff" stroke="#c8553d" stroke-width="2"/><text x="295" y="47" font-size="8" text-anchor="middle" fill="#c8553d" font-weight="800">SALE</text>
+     <circle cx="336" cy="44" r="12" fill="#ce2b37"/><circle cx="360" cy="46" r="10" fill="#ce2b37"/><path d="M336 32l3-5M360 36l2-4" stroke="#008c45" stroke-width="3"/></g>
+  <!-- bancone -->
+  <rect x="0" y="170" width="400" height="90" fill="#9aa5a0"/><rect x="0" y="170" width="400" height="10" fill="#c9d1cc"/>
+  <!-- pentola -->
+  <g><path d="M268 140h96v34a10 10 0 0 1-10 10h-76a10 10 0 0 1-10-10z" fill="#4b5563"/><rect x="262" y="134" width="108" height="10" rx="5" fill="#6b7280"/>
+    <path d="M292 124c-6-10 6-14 0-26M316 124c-6-10 6-14 0-26M340 124c-6-10 6-14 0-26" stroke="#aab4ae" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+  <!-- cuoco -->
+  <g transform="translate(140 0)">
+    <path d="M-62 260c4-56 26-84 62-84s58 28 62 84z" fill="#fff" stroke="#d0d5d2" stroke-width="2"/>
+    <g fill="#ce2b37"><circle cx="-10" cy="206" r="4"/><circle cx="10" cy="206" r="4"/><circle cx="-10" cy="230" r="4"/><circle cx="10" cy="230" r="4"/></g>
+    <path d="M-20 176l20 18 20-18" fill="#008c45"/>
+    <rect x="-11" y="148" width="22" height="30" rx="9" fill="#b97f57"/>
+    <ellipse cx="0" cy="128" rx="30" ry="34" fill="#c98d64"/>
+    <path d="M-28 110c0-8 6-14 14-14h28c8 0 14 6 14 14v6h-56z" fill="#3b2516"/>
+    <path d="M-30 104h60v-10c14 0 22-12 18-24-4-12-18-14-26-8-4-12-14-18-22-18s-18 6-22 18c-8-6-22-4-26 8-4 12 4 24 18 24z" fill="#fff" stroke="#d0d5d2" stroke-width="2"/>
+    <circle cx="-11" cy="128" r="3" fill="#1d2126"/><circle cx="11" cy="128" r="3" fill="#1d2126"/>
+    <path d="M-16 142q16-8 32 0q-16 4-32 0z" fill="#3b2516"/>
+    <path d="M-8 150q8 6 16 0" stroke="#7a3b2a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- cucchiaio -->
+    <g transform="rotate(-30 60 196)"><rect x="56" y="150" width="7" height="70" rx="3" fill="#8a5a36"/><ellipse cx="59.5" cy="146" rx="12" ry="16" fill="#8a5a36"/></g>
+  </g>
+  <rect x="22" y="18" width="150" height="30" rx="15" fill="#ce2b37"/>
+  <text x="97" y="38" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">Faccio il cuoco!</text>
+</svg>

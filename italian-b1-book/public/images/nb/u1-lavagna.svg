@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="Comic Sans MS, Chalkboard SE, Segoe Print, sans-serif">
+  <rect width="400" height="260" rx="14" fill="#efe7d8"/>
+  <rect x="20" y="18" width="360" height="206" rx="8" fill="#8a5a36"/>
+  <rect x="32" y="30" width="336" height="182" rx="4" fill="#1f4d36"/>
+  <rect x="60" y="222" width="280" height="10" rx="3" fill="#a37548"/>
+  <rect x="90" y="216" width="24" height="8" rx="2" fill="#fff"/><rect x="122" y="216" width="18" height="8" rx="2" fill="#ce2b37"/>
+  <g fill="#f4f1e8" font-size="18" font-weight="700">
+    <text x="56" y="66" fill="#f4a3a8">essere</text><text x="56" y="92">sono · sei · è</text>
+    <text x="216" y="66" fill="#9fe0b8">avere</text><text x="216" y="92">ho · hai · ha</text>
+    <text x="56" y="136" fill="#f4a3a8">fare</text><text x="56" y="162">faccio · fai · fa</text>
+    <text x="216" y="136" fill="#9fe0b8">chiamarsi</text><g font-size="16"><text x="216" y="160">mi chiamo</text><text x="216" y="180">ti chiami</text><text x="216" y="200">si chiama</text></g>
+  </g>
+  <path d="M200 46v150" stroke="#f4f1e8" stroke-width="1.5" opacity=".35" stroke-dasharray="4 6"/>
+  <path d="M56 186q60 10 120 0" stroke="#f4a3a8" stroke-width="2" fill="none" opacity=".8"/>
+</svg>

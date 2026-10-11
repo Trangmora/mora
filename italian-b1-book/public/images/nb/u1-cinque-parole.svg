@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="Figtree, Segoe UI, sans-serif">
+  <rect width="400" height="260" rx="14" fill="#f3f7f2"/>
+  <circle cx="200" cy="150" r="92" fill="#e1f2e7"/>
+  <!-- persona -->
+  <path d="M138 260c4-46 30-70 62-70s58 24 62 70z" fill="#008c45"/>
+  <path d="M182 192l18 22 18-22" fill="#fff"/>
+  <rect x="189" y="160" width="22" height="34" rx="9" fill="#d9a07a"/>
+  <ellipse cx="200" cy="138" rx="33" ry="38" fill="#e9b48f"/>
+  <path d="M166 136c-2-30 14-48 36-48s38 16 34 48c-6-16-18-26-34-26-14 0-28 8-36 26z" fill="#2b1d16"/>
+  <circle cx="226" cy="92" r="14" fill="#2b1d16"/>
+  <circle cx="188" cy="140" r="3.2" fill="#2b1d16"/><circle cx="212" cy="140" r="3.2" fill="#2b1d16"/>
+  <path d="M190 157q10 8 20 0" stroke="#a5523e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <circle cx="181" cy="151" r="5" fill="#f2a08f" opacity=".5"/><circle cx="219" cy="151" r="5" fill="#f2a08f" opacity=".5"/>
+  <!-- cinque parole -->
+  <g font-size="15" font-weight="700" text-anchor="middle">
+    <g transform="translate(70 52)"><rect x="-52" y="-20" width="104" height="38" rx="19" fill="#fff" stroke="#008c45" stroke-width="2"/><text y="5" fill="#008c45">città</text></g>
+    <g transform="translate(330 52)"><rect x="-56" y="-20" width="112" height="38" rx="19" fill="#fff" stroke="#ce2b37" stroke-width="2"/><text y="5" fill="#ce2b37">lavoro</text></g>
+    <g transform="translate(62 135)"><rect x="-56" y="-20" width="112" height="38" rx="19" fill="#ce2b37"/><text y="5" fill="#fff">famiglia</text></g>
+    <g transform="translate(338 135)"><rect x="-48" y="-20" width="96" height="38" rx="19" fill="#008c45"/><text y="5" fill="#fff">sport</text></g>
+    <g transform="translate(200 28)"><rect x="-44" y="-18" width="88" height="34" rx="17" fill="#fff" stroke="#1d2126" stroke-width="1.6" stroke-dasharray="4 3"/><text y="5" fill="#1d2126">cibo</text></g>
+  </g>
+  <g stroke="#9bb5a4" stroke-width="1.5" stroke-dasharray="3 4" fill="none">
+    <path d="M118 62q30 18 52 50"/><path d="M282 62q-30 18-52 50"/><path d="M118 138h48"/><path d="M290 138h-56"/><path d="M200 46v40"/>
+  </g>
+</svg>

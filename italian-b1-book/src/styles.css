@@ -2,27 +2,27 @@
    Bố cục: một cuốn sách mở nằm giữa bàn sáng, menu nổi dạng viên thuốc phía trên. */
 :root {
   /* Màu */
-  --desk: #eef2e7;
-  --desk-2: #dde6d3;
+  --desk: #f3f5f1;
+  --desk-2: #e2e9e0;
   --paper: #fffdf9;
   --paper-edge: #ebe5d8;
   --ink: #1d2126;
   --ink-soft: #626a74;
   --line: #e6e1d6;
-  --accent: #ec7012; /* arancia */
-  --accent-soft: #fdebd9;
-  --green: #1f7a4d; /* foglia */
-  --green-soft: #e3f3e8;
-  --blue: #2f8a52;
-  --blue-soft: #e6f4ea;
-  --saffron: #f5a623;
+  --accent: #ce2b37; /* rosso tricolore */
+  --accent-soft: #fbe4e6;
+  --green: #008c45; /* verde tricolore */
+  --green-soft: #e1f2e7;
+  --blue: #0a7d3e;
+  --blue-soft: #e5f3ea;
+  --saffron: #e4606b;
   --pen: #e0332b;
   --ui: rgba(255, 255, 255, 0.78);
   /* Bìa */
-  --c-deep: #1b5e3a;
-  --c-sun: #f7b267;
-  --c-tomato: #ec7012;
-  --c-sage: #8cc084;
+  --c-deep: #005c2e;
+  --c-sun: #f4a3a8;
+  --c-tomato: #ce2b37;
+  --c-sage: #7cc49a;
   /* Chữ */
   --font-ui: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -2324,10 +2324,10 @@ button.advice-card .advice-kicker {
    Trang sách in — dựng y như sách (Unità 1 trở đi)
    ========================================================= */
 :root {
-  --book-blue: #1f7a4d;
-  --book-red: #ec7012;
-  --book-teal: #3a9a5b;
-  --book-lime: #f7b267;
+  --book-blue: #008c45;
+  --book-red: #ce2b37;
+  --book-teal: #2ea05f;
+  --book-lime: #f4a3a8;
   --book-sans: "Figtree", "Gill Sans", "Segoe UI", sans-serif;
   --book-serif: "Source Serif 4", "Garamond", Georgia, serif;
 }
@@ -2615,9 +2615,9 @@ button.advice-card .advice-kicker {
   display: inline-block;
   transform: rotate(12deg);
   font: 700 38px/1 var(--font-hand);
-  color: #2b3b8f;
+  color: #008c45;
   padding: 0 6px 8px;
-  background: linear-gradient(170deg, transparent 72%, rgba(217, 38, 43, 0.85) 72%, rgba(217, 38, 43, 0.85) 84%, transparent 84%);
+  background: linear-gradient(170deg, transparent 72%, rgba(206, 43, 55, 0.85) 72%, rgba(206, 43, 55, 0.85) 84%, transparent 84%);
 }
 
 /* Mẫu đơn như sách */
@@ -2659,7 +2659,7 @@ button.advice-card .advice-kicker {
   border-bottom: 1px solid #888;
   background: transparent;
   font: 600 19px/1.15 var(--font-hand);
-  color: #2f8a52;
+  color: #0a7d3e;
   padding: 0 4px;
   outline: none;
 }
@@ -2712,7 +2712,7 @@ textarea.form-input {
   height: 15px;
   border: 1.3px solid #444;
   font: 700 15px/1 var(--font-hand);
-  color: #2f8a52;
+  color: #0a7d3e;
 }
 .form-check.is-answer .box {
   box-shadow: 0 0 0 2px var(--pen);
@@ -3275,7 +3275,7 @@ textarea.form-input {
   font: italic 700 25px/1 var(--book-sans);
   letter-spacing: 0.02em;
   color: #23387e;
-  background: linear-gradient(176deg, transparent 74%, rgba(217, 38, 43, 0.85) 74%, rgba(217, 38, 43, 0.85) 84%, transparent 84%);
+  background: linear-gradient(176deg, transparent 74%, rgba(206, 43, 55, 0.85) 74%, rgba(206, 43, 55, 0.85) 84%, transparent 84%);
 }
 
 /* ---- Đoạn văn có chỗ trống ---- */
@@ -3495,7 +3495,7 @@ textarea.form-input {
   width: 24px;
   height: 24px;
   color: var(--book-red);
-  border: 1px solid rgba(217, 38, 43, 0.35);
+  border: 1px solid rgba(206, 43, 55, 0.35);
 }
 .speak-mini.on {
   background: var(--book-red);
@@ -3687,7 +3687,7 @@ textarea.form-input {
 .ex-subtitle {
   margin: 2px 0 6px 76px;
   font: italic 600 22px/1.2 var(--book-sans);
-  color: #2f8a52;
+  color: #0a7d3e;
 }
 .ex-intro p {
   margin: 0;
@@ -3730,7 +3730,7 @@ textarea.form-input {
   grid-area: 1 / 3 / 2 / 5;
   margin: 0;
   font: italic 600 17px/1.3 var(--book-sans);
-  color: #ec7012;
+  color: #ce2b37;
 }
 .board-tile {
   position: relative;
@@ -3813,7 +3813,7 @@ textarea.form-input {
   opacity: 0.85;
 }
 .board-mic.on {
-  background: #ec7012;
+  background: #ce2b37;
   color: white;
   opacity: 1;
   animation: pulse-rec 1s infinite;
@@ -3843,7 +3843,7 @@ textarea.form-input {
 }
 .board-sample {
   border: none;
-  color: #ec7012;
+  color: #ce2b37;
   font-family: "Caveat", cursive;
   font-size: 16px;
   font-style: normal;
@@ -3853,7 +3853,7 @@ textarea.form-input {
   box-shadow: 0 0 0 3px #2e9d57;
 }
 .board-tile.ko {
-  box-shadow: 0 0 0 3px #ec7012;
+  box-shadow: 0 0 0 3px #ce2b37;
 }
 .board-tile.done::after {
   content: "✓";
@@ -3962,8 +3962,8 @@ textarea.form-input {
   background: var(--blue-soft);
 }
 .book-page .kind-choice .opt.sel .opt-letter {
-  background: #2f8a52;
-  border-color: #2f8a52;
+  background: #0a7d3e;
+  border-color: #0a7d3e;
   color: white;
 }
 
@@ -3998,7 +3998,7 @@ textarea.form-input {
   background: transparent;
   text-align: center;
   font: 600 16px/1.2 var(--book-sans);
-  color: #1b5e3a;
+  color: #005c2e;
   outline: none;
 }
 .board-cmd.pattern input::placeholder {
@@ -4035,9 +4035,9 @@ textarea.form-input {
   display: inline-block;
   margin: 4px 0 6px;
   padding-bottom: 1px;
-  border-bottom: 2.5px solid #2f8a52;
+  border-bottom: 2.5px solid #0a7d3e;
   font: 700 16px/1.2 var(--book-sans);
-  color: #ec7012;
+  color: #ce2b37;
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
@@ -4114,7 +4114,7 @@ textarea.form-input {
 .th-table td {
   background: white;
   text-align: center;
-  color: #ec7012;
+  color: #ce2b37;
   border-bottom: 2px solid #ef8a3a;
   border-left: 2px solid #ef8a3a;
   cursor: pointer;
@@ -4141,7 +4141,7 @@ textarea.form-input {
 .th-center {
   text-align: center;
   font: 15.5px var(--book-serif);
-  color: #2f8a52;
+  color: #0a7d3e;
 }
 .th-dl {
   display: flex;
@@ -4216,7 +4216,7 @@ textarea.form-input {
 }
 .ex-part-head.capace .ex-instr {
   font: italic 700 25px/1.2 var(--book-sans);
-  color: #2f8a52;
+  color: #0a7d3e;
   text-transform: uppercase;
 }
 .ex-part-body.capace {
@@ -4244,7 +4244,7 @@ textarea.form-input {
 .ex-lead::before {
   content: "▶ ";
   font-style: normal;
-  color: #2f8a52;
+  color: #0a7d3e;
 }
 .ex-item.has-lead .line {
   display: block;
@@ -4394,7 +4394,7 @@ textarea.form-input {
   outline: 3px solid #2e9d57;
 }
 .match-pic.ko img {
-  outline: 3px solid #ec7012;
+  outline: 3px solid #ce2b37;
 }
 .match-pic-box {
   position: absolute;
@@ -4413,7 +4413,7 @@ textarea.form-input {
   border: none;
   background: none;
   font: 700 15px var(--book-sans);
-  color: #1b5e3a;
+  color: #005c2e;
 }
 .match-pic-key {
   position: absolute;
@@ -4423,7 +4423,7 @@ textarea.form-input {
   border-radius: 4px;
   background: white;
   font: 700 18px "Caveat", cursive;
-  color: #ec7012;
+  color: #ce2b37;
 }
 
 /* ---------------- Mục lục gọn trong 1 trang ---------------- */
@@ -4455,7 +4455,7 @@ textarea.form-input {
   flex: none;
   padding: 3px 8px;
   border-radius: 6px;
-  background: var(--book-blue, #2f8a52);
+  background: var(--book-blue, #0a7d3e);
   color: white;
   font: 800 13px var(--font-ui);
 }
@@ -4477,7 +4477,7 @@ textarea.form-input {
 }
 .toc-u-score.t-good { color: #2e9d57; }
 .toc-u-score.t-warn { color: #c98a12; }
-.toc-u-score.t-bad { color: #ec7012; }
+.toc-u-score.t-bad { color: #ce2b37; }
 .toc-u-score.t-none { color: var(--ink-soft); }
 .toc-u-bar {
   height: 6px;
@@ -4613,7 +4613,7 @@ textarea.form-input {
 }
 .ds-score.t-good .ds-score-num { color: #2e9d57; }
 .ds-score.t-warn .ds-score-num { color: #c98a12; }
-.ds-score.t-bad .ds-score-num { color: #ec7012; }
+.ds-score.t-bad .ds-score-num { color: #ce2b37; }
 .ds-score.t-none .ds-score-num { color: #b9b2a3; }
 .ds-facts {
   grid-area: facts;
@@ -4704,7 +4704,7 @@ textarea.form-input {
 }
 .ds-skill-bar > span.t-good { background: #2e9d57; }
 .ds-skill-bar > span.t-warn { background: #e6b23a; }
-.ds-skill-bar > span.t-bad { background: #ec7012; }
+.ds-skill-bar > span.t-bad { background: #ce2b37; }
 .ds-skill-bar i {
   position: absolute;
   top: 0;
@@ -4719,7 +4719,7 @@ textarea.form-input {
 }
 .ds-skill-score.t-good { color: #2e9d57; }
 .ds-skill-score.t-warn { color: #c98a12; }
-.ds-skill-score.t-bad { color: #ec7012; }
+.ds-skill-score.t-bad { color: #ce2b37; }
 .ds-skill-score.t-none { color: #b9b2a3; }
 .ds-skill-count {
   font: 500 12px var(--font-ui);
@@ -4733,7 +4733,7 @@ textarea.form-input {
 }
 .ds-scale .t-good { color: #2e9d57; }
 .ds-scale .t-warn { color: #e6b23a; }
-.ds-scale .t-bad { color: #ec7012; }
+.ds-scale .t-bad { color: #ce2b37; }
 .ds-next {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4858,7 +4858,7 @@ button.ds-card {
 .tr-icon:focus-visible,
 .tr-icon.on {
   opacity: 1;
-  color: #2f8a52;
+  color: #0a7d3e;
   background: #e8eef9;
   border-color: #c9d6ef;
 }
@@ -4866,19 +4866,19 @@ button.ds-card {
   display: block;
   margin: 2px 0 4px;
   padding: 3px 9px;
-  border-left: 3px solid #2f8a52;
+  border-left: 3px solid #0a7d3e;
   border-radius: 0 6px 6px 0;
   background: #eef3fb;
   font: 500 13.5px/1.4 var(--font-ui);
   font-style: normal;
-  color: #1b5e3a;
+  color: #005c2e;
   text-align: left;
   white-space: normal;
   letter-spacing: 0;
   text-transform: none;
 }
 .tr-pop a {
-  color: #1b5e3a;
+  color: #005c2e;
   font-weight: 600;
 }
 .board-cmd .tr-icon {
@@ -4927,7 +4927,7 @@ button.ds-card {
 .grid-table.first-col td {
   text-align: center;
   font-weight: 700;
-  color: #ec7012;
+  color: #ce2b37;
   padding: 3px 8px;
 }
 .grid-table.first-col td.label {
@@ -4950,10 +4950,10 @@ button.ds-card {
   color: #333;
 }
 .gt-red {
-  color: #ec7012;
+  color: #ce2b37;
 }
 .gt-blue {
-  color: #2f8a52;
+  color: #0a7d3e;
 }
 .book-page.phone .grid-table {
   display: block;
@@ -5194,7 +5194,7 @@ input::placeholder {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f7b267;
+  color: #f4a3a8;
 }
 .rule-card {
   background: white;
@@ -5296,7 +5296,7 @@ input::placeholder {
   margin: 0;
   padding: 8px 10px;
   border-radius: 10px;
-  background: #fff6e8;
+  background: #fdf0f1;
   font-size: 12.5px;
 }
 .rule-tip b {
@@ -5355,7 +5355,28 @@ input::placeholder {
     background: var(--accent);
     color: white;
     font: 800 15px var(--font-ui);
-    box-shadow: 0 8px 20px rgba(236, 112, 18, 0.4);
+    box-shadow: 0 8px 20px rgba(206, 43, 55, 0.4);
     cursor: pointer;
   }
+}
+
+/* Dải tricolore (xanh – trắng – đỏ) như cờ Ý. */
+.why-box {
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+}
+.why-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #008c45 0 33.3%, #f4f5f0 33.3% 66.6%, #ce2b37 66.6%);
+}
+.nb-illu {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
