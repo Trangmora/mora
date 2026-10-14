@@ -326,6 +326,11 @@ export type Block =
   | { type: "gridTable"; head: string[]; rows: string[][]; firstCol?: boolean; split?: number[] }
   /** Biểu đồ cột ngang như sách (trang 20). */
   | { type: "barChart"; bars: { label: string; value: number; color: string }[]; max: number; step: number; caption?: L10n }
+  /**
+   * Video YouTube: ảnh bìa (tải sẵn về public/images/yt/<id>.jpg) + bấm để phát ngay trong trang,
+   * luôn kèm link mở trên YouTube (nơi không cho nhúng khung YouTube thì vẫn xem được).
+   */
+  | { type: "video"; youtube: string; title: string; channel: string; duration?: string; thumb: string; tr?: L10n }
   | { type: "exercise"; ex: Exercise };
 
 export type BookPage = {

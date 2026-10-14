@@ -1,0 +1,41 @@
+{
+  "id": "u2-telefonata",
+  "title": "Pronto? Ci vediamo ai saldi!",
+  "out": "public/audio/nb-u2-telefonata.mp3",
+  "model": "eleven_v4",
+  "fallbackModel": "eleven_v3",
+  "seed": 5203,
+  "note": "Nghe từ phía Tomás (trong bếp nhà hàng): chuông điện thoại reo, Tomás nghe máy; giọng Hoa qua điện thoại (lọc 300–3400 Hz + rè); bếp nhỏ đi khi Tomás bước ra ngoài, to lại khi bếp trưởng gọi.",
+  "voices": {
+    "Hoa": { "name": "Ginevra - Rich, Cheerful and Grounded", "id": "QITiGyM4owEZrBEf0QV8", "fx": "phone" },
+    "Tomás": { "name": "Marco - Charismatic & friendly", "id": "V9xYP1XwBnhCPPMDk06A" },
+    "Chef": { "name": "Felice - Positive, Expressive and Clear", "id": "YWXroL1TL4NDznxN5Cy4", "fx": "far" }
+  },
+  "lines": [
+    { "speaker": "Tomás", "tags": "[slightly out of breath]", "text": "Pronto? Hoa! Ciao!" },
+    { "speaker": "Hoa", "tags": "[cheerful]", "text": "Ciao Tomás! Ti disturbo? Sei al lavoro?" },
+    { "speaker": "Tomás", "tags": "[raising his voice over the noise]", "text": "Sì, ma sono in pausa… Aspetta, qui c'è troppo rumore, esco un attimo. [pause] Ecco, adesso ti sento.", "after": "outside" },
+    { "speaker": "Hoa", "tags": "[excited]", "text": "Senti, sabato cominciano i saldi! Ti va di venire con me in Via dell'Indipendenza?" },
+    { "speaker": "Tomás", "tags": "[interested]", "text": "Volentieri! Devo comprare una giacca per l'inverno: la mia è vecchissima." },
+    { "speaker": "Hoa", "tags": "[laughing]", "text": "E io cerco un paio di scarpe comode per andare in bici. A che ora ci vediamo?" },
+    { "speaker": "Tomás", "tags": "[thinking]", "text": "Alle dieci va bene? Davanti alla libreria, sotto i portici." },
+    { "speaker": "Hoa", "tags": "[playful]", "text": "Perfetto! Però non spendiamo troppo, eh!" },
+    { "speaker": "Tomás", "tags": "[laughs]", "text": "Promesso… forse!" },
+    { "speaker": "Chef", "tags": "[shouting from far away]", "text": "Tomás! Il risotto!", "before": "inside" },
+    { "speaker": "Tomás", "tags": "[hurried]", "text": "Arrivo! Scusa Hoa, devo scappare. Ci sentiamo, ciao!" },
+    { "speaker": "Hoa", "tags": "[warm]", "text": "A sabato, ciao ciao!" }
+  ],
+  "sfx": {
+    "kitchen": {
+      "prompt": "Busy professional restaurant kitchen ambience, pans sizzling, clattering plates and cutlery, cooks talking in Italian in the background, extractor fan hum",
+      "duration": 30,
+      "promptInfluence": 0.4
+    },
+    "ringtone": {
+      "prompt": "Modern smartphone ringtone, bright marimba melody ringing loudly, phone vibrating on a steel kitchen counter",
+      "duration": 5,
+      "promptInfluence": 0.6
+    }
+  },
+  "mix": { "kitchenDb": -17, "outsideDb": -31, "ringStart": 0.6, "ringLength": 4.6, "voiceStart": 5.6, "tail": 2.5 }
+}

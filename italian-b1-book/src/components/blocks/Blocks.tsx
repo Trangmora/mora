@@ -8,6 +8,7 @@ import { Photo } from "../Photo";
 import { AudioBlock } from "./AudioBlock";
 import { Theory } from "./Theory";
 import { GridTable } from "./GridTable";
+import { VideoBlock } from "./VideoBlock";
 import { flatBlocks } from "../../lib/skills";
 
 /** Đoạn văn / hội thoại / bài nghe của trang — gửi kèm khi AI chấm bài có tham chiếu. */
@@ -200,6 +201,9 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
           {showTr && block.caption && <p className="translation">{tr(lang, block.caption)}</p>}
         </figure>
       );
+
+    case "video":
+      return <VideoBlock block={block} />;
 
     case "theory":
       return <Theory text={block.text} note={block.tr} />;
