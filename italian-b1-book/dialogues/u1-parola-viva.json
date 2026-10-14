@@ -6,18 +6,58 @@
   "fallbackModel": "eleven_v3",
   "seed": 4127,
   "voices": {
-    "Hoa": { "name": "Giulia - Sweet, Soothing and Gentle", "gender": "female" },
-    "Tomás": { "name": "Marco - Charismatic & friendly", "gender": "male" }
+    "Hoa": {
+      "name": "Ginevra - Rich, Cheerful and Grounded",
+      "id": "QITiGyM4owEZrBEf0QV8",
+      "gender": "female"
+    },
+    "Tomás": {
+      "name": "Marco - Charismatic & friendly",
+      "id": "V9xYP1XwBnhCPPMDk06A",
+      "gender": "male"
+    }
   },
   "lines": [
-    { "speaker": "Hoa", "tags": "[curious] [a little shy]", "text": "Scusa, è questa l'aula del corso intermedio?" },
-    { "speaker": "Tomás", "tags": "[friendly]", "text": "Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere." },
-    { "speaker": "Hoa", "tags": "[relieved] [smiling]", "text": "Piacere, io sono Hoa. Di dove sei?" },
-    { "speaker": "Tomás", "tags": "[cheerful]", "text": "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?" },
-    { "speaker": "Hoa", "tags": "[warm]", "text": "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna." },
-    { "speaker": "Tomás", "tags": "[impressed]", "text": "Che bello! Ti piace la città?" },
-    { "speaker": "Hoa", "tags": "[enthusiastic]", "text": "Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano." },
-    { "speaker": "Tomás", "tags": "[playful]", "text": "Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!" }
+    {
+      "speaker": "Hoa",
+      "tags": "[curious] [a little shy]",
+      "text": "Scusa, è questa l'aula del corso intermedio?"
+    },
+    {
+      "speaker": "Tomás",
+      "tags": "[friendly]",
+      "text": "Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere."
+    },
+    {
+      "speaker": "Hoa",
+      "tags": "[relieved] [smiling]",
+      "text": "Piacere, io sono Hoa. Di dove sei?"
+    },
+    {
+      "speaker": "Tomás",
+      "tags": "[cheerful]",
+      "text": "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?"
+    },
+    {
+      "speaker": "Hoa",
+      "tags": "[warm]",
+      "text": "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna."
+    },
+    {
+      "speaker": "Tomás",
+      "tags": "[impressed]",
+      "text": "Che bello! Ti piace la città?"
+    },
+    {
+      "speaker": "Hoa",
+      "tags": "[enthusiastic]",
+      "text": "Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano."
+    },
+    {
+      "speaker": "Tomás",
+      "tags": "[playful]",
+      "text": "Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!"
+    }
   ],
   "scene": {
     "prompt": "Indoor corridor of a small language school in an old Italian building, distant muffled students chatting in Italian, soft footsteps on tiles, a door closing far away, calm room tone",

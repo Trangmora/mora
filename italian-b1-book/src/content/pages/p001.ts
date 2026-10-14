@@ -113,6 +113,7 @@ const page: BookPage = {
     {
       type: "audio",
       track: "1.01",
+      src: "audio/nb-u1-dialogo.mp3",
       title: "Il primo giorno alla scuola “Parola Viva”",
       transcript:
         "Hoa: Scusa, è questa l'aula del corso intermedio?\nTomás: Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.\nHoa: Piacere, io sono Hoa. Di dove sei?\nTomás: Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?\nHoa: Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.\nTomás: Che bello! Ti piace la città?\nHoa: Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.\nTomás: Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!",

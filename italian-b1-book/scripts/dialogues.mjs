@@ -2,7 +2,8 @@
  * Tạo file nghe hội thoại nhiều giọng (ElevenLabs text-to-dialogue) + tiếng nền cảnh, trộn bằng ffmpeg.
  *   node scripts/dialogues.mjs dialogues/u1-parola-viva.json        → tạo (dùng cache nếu có)
  *   node scripts/dialogues.mjs dialogues/u1-parola-viva.json --dry  → chỉ đếm ký tự, không gọi API
- * Key ElevenLabs: ELEVENLABS_API_KEY trong .env/môi trường, hoặc do proxy của môi trường tự gắn header.
+ * Key ElevenLabs: ELEVENLABS_API_KEY trong .env/môi trường, hoặc do proxy của môi trường tự gắn header
+ *   (khi dùng proxy: NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=<ca-bundle> để fetch của Node đi qua proxy).
  * Cache (dialogues/cache/) theo nội dung + giọng + model + seed: chạy lại không tốn thêm ký tự.
  */
 import { createHash } from "node:crypto";
