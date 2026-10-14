@@ -13,7 +13,7 @@
     <path d="M96 84h118" stroke="#ce2b37" stroke-width="2"/>
     <g font-size="8" fill="#626a74"><text x="96" y="102">Nome:</text><text x="96" y="122">Paese:</text><text x="96" y="142">Lavoro:</text><text x="96" y="162">Lingue:</text></g>
     <g stroke="#cbd5e1" stroke-width="1.2"><path d="M128 102h86M128 122h86M128 142h86M128 162h86"/></g>
-    <g font-size="10" fill="#1f3f8f" font-style="italic"><text x="132" y="100">Hoa Nguyen</text><text x="132" y="120">Vietnam</text></g>
+    <g font-size="10" fill="#1f3f8f" font-style="italic"><text x="132" y="100">Giulia Ferreira</text><text x="132" y="120">Brasile</text></g>
     <g fill="none" stroke="#1d2126" stroke-width="1.2"><rect x="96" y="178" width="9" height="9"/><rect x="140" y="178" width="9" height="9"/><rect x="184" y="178" width="9" height="9"/></g>
     <path d="M141 182l3 4 6-8" stroke="#ce2b37" stroke-width="2" fill="none"/>
   </g>

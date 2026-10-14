@@ -6,7 +6,7 @@
   "fallbackModel": "eleven_v3",
   "seed": 4127,
   "voices": {
-    "Hoa": {
+    "Giulia": {
       "name": "Ginevra - Rich, Cheerful and Grounded",
       "id": "QITiGyM4owEZrBEf0QV8",
       "gender": "female"
@@ -19,7 +19,7 @@
   },
   "lines": [
     {
-      "speaker": "Hoa",
+      "speaker": "Giulia",
       "tags": "[curious] [a little shy]",
       "text": "Scusa, è questa l'aula del corso intermedio?"
     },
@@ -29,9 +29,9 @@
       "text": "Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere."
     },
     {
-      "speaker": "Hoa",
+      "speaker": "Giulia",
       "tags": "[relieved] [smiling]",
-      "text": "Piacere, io sono Hoa. Di dove sei?"
+      "text": "Piacere, io sono Giulia. Di dove sei?"
     },
     {
       "speaker": "Tomás",
@@ -39,9 +39,9 @@
       "text": "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?"
     },
     {
-      "speaker": "Hoa",
+      "speaker": "Giulia",
       "tags": "[warm]",
-      "text": "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna."
+      "text": "Io sono brasiliana, di Curitiba. Studio architettura e a febbraio comincio un semestre all'università di Bologna."
     },
     {
       "speaker": "Tomás",
@@ -49,7 +49,7 @@
       "text": "Che bello! Ti piace la città?"
     },
     {
-      "speaker": "Hoa",
+      "speaker": "Giulia",
       "tags": "[enthusiastic]",
       "text": "Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano."
     },

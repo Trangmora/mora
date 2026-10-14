@@ -99,8 +99,8 @@ const page: BookPage = {
               instruction:
                 "Completiamo con i verbi chiamarsi, essere, avere, fare al presente.",
               example: {
-                q: "1. Io (chiamarsi) ___ Hoa.",
-                a: "Io ***mi chiamo*** Hoa.",
+                q: "1. Io (chiamarsi) ___ Giulia.",
+                a: "Io ***mi chiamo*** Giulia.",
               },
               tr: {
                 vi: "Hoàn thành câu với các động từ chiamarsi, essere, avere, fare ở thì hiện tại.",
@@ -131,7 +131,7 @@ const page: BookPage = {
                 },
                 {
                   id: "6",
-                  prompt: "6. Hoa e Tomás (avere) ___ quasi la stessa età.",
+                  prompt: "6. Giulia e Tomás (avere) ___ quasi la stessa età.",
                   answers: ["hanno"],
                 },
               ],
@@ -168,8 +168,8 @@ const page: BookPage = {
                 "6": {
                   rule: "avere",
                   tr: {
-                    vi: "**Hoa e Tomás** = hai người → loro → «**hanno**». Nói về tuổi (età) tiếng Ý dùng *avere*, không dùng essere.",
-                    en: "**Hoa e Tomás** = two people → loro → «**hanno**». Age (età) in Italian takes *avere*, not essere.",
+                    vi: "**Giulia e Tomás** = hai người → loro → «**hanno**». Nói về tuổi (età) tiếng Ý dùng *avere*, không dùng essere.",
+                    en: "**Giulia e Tomás** = two people → loro → «**hanno**». Age (età) in Italian takes *avere*, not essere.",
                   },
                 },
               },

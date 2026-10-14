@@ -97,7 +97,7 @@ export const rules: Rule[] = [
     ],
     examples: [
       { it: "Che lavoro fai? — Faccio il cuoco.", tr: { vi: "Bạn làm nghề gì? — Tôi là đầu bếp.", en: "What do you do? — I'm a cook." } },
-      { it: "Hoa fa l'architetta? No, studia architettura.", tr: { vi: "Hoa làm kiến trúc sư à? Không, cô ấy học kiến trúc.", en: "Is Hoa an architect? No, she studies architecture." } },
+      { it: "Giulia fa l'architetta? No, studia architettura.", tr: { vi: "Giulia làm kiến trúc sư à? Không, cô ấy học kiến trúc.", en: "Is Giulia an architect? No, she studies architecture." } },
     ],
   },
   {

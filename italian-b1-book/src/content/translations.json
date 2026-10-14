@@ -27,17 +27,17 @@
   "vi": "Ừ, mình nghĩ vậy. Mình cũng mới đến. Mình tên là Tomás, rất vui được gặp.",
   "en": "Yes, I think so. I'm new too. My name's Tomás, nice to meet you."
  },
- "Piacere, io sono Hoa. Di dove sei?": {
-  "vi": "Rất vui được gặp, mình là Hoa. Bạn từ đâu đến?",
-  "en": "Nice to meet you, I'm Hoa. Where are you from?"
+ "Piacere, io sono Giulia. Di dove sei?": {
+  "vi": "Rất vui được gặp, mình là Giulia. Bạn từ đâu đến?",
+  "en": "Nice to meet you, I'm Giulia. Where are you from?"
  },
  "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?": {
   "vi": "Mình là người Argentina, ở Rosario. Mình làm đầu bếp và đến đây thực tập ở một nhà hàng. Còn bạn?",
   "en": "I'm Argentinian, from Rosario. I'm a cook and I'm here for an internship in a restaurant. And you?"
  },
- "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.": {
-  "vi": "Mình là người Việt, ở Huế. Mình học kiến trúc và tháng Hai sẽ bắt đầu một học kỳ ở trường đại học Bologna.",
-  "en": "I'm Vietnamese, from Huế. I study architecture and in February I start a semester at the University of Bologna."
+ "Io sono brasiliana, di Curitiba. Studio architettura e a febbraio comincio un semestre all'università di Bologna.": {
+  "vi": "Mình là người Brazil, ở Curitiba. Mình học kiến trúc và tháng Hai sẽ bắt đầu một học kỳ ở trường đại học Bologna.",
+  "en": "I'm Brazilian, from Curitiba. I study architecture and in February I start a semester at the University of Bologna."
  },
  "Che bello! Ti piace la città?": {
   "vi": "Hay quá! Bạn có thích thành phố này không?",
@@ -55,21 +55,21 @@
   "vi": "Đọc lại: đúng hay sai?",
   "en": "Let's read again: true or false?"
  },
- "Hoa e Tomás si conoscono già.": {
-  "vi": "Hoa và Tomás đã quen nhau từ trước.",
-  "en": "Hoa and Tomás already know each other."
+ "Giulia e Tomás si conoscono già.": {
+  "vi": "Giulia và Tomás đã quen nhau từ trước.",
+  "en": "Giulia and Tomás already know each other."
  },
  "Tomás lavora in cucina.": {
   "vi": "Tomás làm việc trong bếp.",
   "en": "Tomás works in a kitchen."
  },
- "Hoa studia medicina.": {
-  "vi": "Hoa học y.",
-  "en": "Hoa studies medicine."
+ "Giulia studia medicina.": {
+  "vi": "Giulia học y.",
+  "en": "Giulia studies medicine."
  },
- "A Hoa piace disegnare all'aperto.": {
-  "vi": "Hoa thích vẽ ngoài trời.",
-  "en": "Hoa likes drawing outdoors."
+ "A Giulia piace disegnare all'aperto.": {
+  "vi": "Giulia thích vẽ ngoài trời.",
+  "en": "Giulia likes drawing outdoors."
  },
  "Nel tempo libero Tomás va in bicicletta.": {
   "vi": "Lúc rảnh Tomás đi xe đạp.",
@@ -179,9 +179,9 @@
   "vi": "5. Các bạn (là) … người ở đâu?",
   "en": "5. Where (be) … you from?"
  },
- "6. Hoa e Tomás (avere) … quasi la stessa età.": {
-  "vi": "6. Hoa và Tomás (có) … gần bằng tuổi nhau.",
-  "en": "6. Hoa and Tomás (have) … almost the same age."
+ "6. Giulia e Tomás (avere) … quasi la stessa età.": {
+  "vi": "6. Giulia và Tomás (có) … gần bằng tuổi nhau.",
+  "en": "6. Giulia and Tomás (have) … almost the same age."
  },
  "Ciao, come ti chiami? — Di dove sei?": {
   "vi": "Với bạn bè: Chào, bạn tên gì? — Bạn từ đâu đến?",

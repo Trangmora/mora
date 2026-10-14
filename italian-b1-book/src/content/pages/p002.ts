@@ -34,14 +34,14 @@ const page: BookPage = {
               items: [
                 {
                   id: "1",
-                  prompt: "Hoa e Tomás si conoscono già.",
+                  prompt: "Giulia e Tomás si conoscono già.",
                   answer: false,
                 },
                 { id: "2", prompt: "Tomás lavora in cucina.", answer: true },
-                { id: "3", prompt: "Hoa studia medicina.", answer: false },
+                { id: "3", prompt: "Giulia studia medicina.", answer: false },
                 {
                   id: "4",
-                  prompt: "A Hoa piace disegnare all'aperto.",
+                  prompt: "A Giulia piace disegnare all'aperto.",
                   answer: true,
                 },
                 {
@@ -67,8 +67,8 @@ const page: BookPage = {
                 },
                 "3": {
                   tr: {
-                    vi: "**Falso.** Hoa nói «Studio **architettura**» (kiến trúc), không phải medicina (y khoa).",
-                    en: "**False.** Hoa says «Studio **architettura**», not medicina.",
+                    vi: "**Falso.** Giulia nói «Studio **architettura**» (kiến trúc), không phải medicina (y khoa).",
+                    en: "**False.** Giulia says «Studio **architettura**», not medicina.",
                   },
                 },
                 "4": {
@@ -79,8 +79,8 @@ const page: BookPage = {
                 },
                 "5": {
                   tr: {
-                    vi: "**Falso.** Hoa nhắc đến «le biciclette» của thành phố, còn Tomás thì «gioco a **calcetto**» (đá bóng 5 người).",
-                    en: "**False.** Hoa mentions the city's «biciclette»; Tomás «gioca a **calcetto**» (five-a-side football).",
+                    vi: "**Falso.** Giulia nhắc đến «le biciclette» của thành phố, còn Tomás thì «gioco a **calcetto**» (đá bóng 5 người).",
+                    en: "**False.** Giulia mentions the city's «biciclette»; Tomás «gioca a **calcetto**» (five-a-side football).",
                   },
                 },
               },
@@ -91,7 +91,7 @@ const page: BookPage = {
           {
             type: "photo",
             src: "images/nb/u1-santo-stefano.jpg",
-            alt: "Piazza Santo Stefano a Bologna, dove Hoa va a disegnare",
+            alt: "Piazza Santo Stefano a Bologna, dove Giulia va a disegnare",
             credit: "Foto: MenkinAlRire · CC BY-SA 4.0 · Wikimedia Commons",
             href: "https://commons.wikimedia.org/wiki/File:Bologna,_Piazza_Santo_Stefano_(se).jpg",
           },

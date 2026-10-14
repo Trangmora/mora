@@ -17,7 +17,7 @@
   <text x="200" y="137" font-size="9.5" font-weight="800" text-anchor="middle" fill="#ce2b37">PAROLA VIVA</text>
   <rect x="0" y="228" width="400" height="32" fill="#d8cdb8"/>
   <path d="M0 236h400M0 248h400" stroke="#c4b79e" stroke-width="1.5"/>
-  <!-- Hoa -->
+  <!-- Giulia -->
   <g transform="translate(120 160)">
     <path d="M-20 80c2-30 8-44 20-44s18 14 20 44z" fill="#ce2b37"/>
     <ellipse cx="0" cy="18" rx="15" ry="17" fill="#e9b48f"/>

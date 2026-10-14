@@ -16,12 +16,12 @@ const page: BookPage = {
       type: "audio",
       track: "2.01",
       src: "audio/nb-u2-telefonata.mp3",
-      title: "Pronto? Hoa chiama Tomás",
+      title: "Pronto? Giulia chiama Tomás",
       transcript:
-        "Tomás: Pronto? Hoa! Ciao!\nHoa: Ciao Tomás! Ti disturbo? Sei al lavoro?\nTomás: Sì, ma sono in pausa… Aspetta, qui c'è troppo rumore, esco un attimo. Ecco, adesso ti sento.\nHoa: Senti, sabato cominciano i saldi! Ti va di venire con me in Via dell'Indipendenza?\nTomás: Volentieri! Devo comprare una giacca per l'inverno: la mia è vecchissima.\nHoa: E io cerco un paio di scarpe comode per andare in bici. A che ora ci vediamo?\nTomás: Alle dieci va bene? Davanti alla libreria, sotto i portici.\nHoa: Perfetto! Però non spendiamo troppo, eh!\nTomás: Promesso… forse!\nChef: Tomás! Il risotto!\nTomás: Arrivo! Scusa Hoa, devo scappare. Ci sentiamo, ciao!\nHoa: A sabato, ciao ciao!",
+        "Tomás: Pronto? Giulia! Ciao!\nGiulia: Ciao Tomás! Ti disturbo? Sei al lavoro?\nTomás: Sì, ma sono in pausa… Aspetta, qui c'è troppo rumore, esco un attimo. Ecco, adesso ti sento.\nGiulia: Senti, sabato cominciano i saldi! Ti va di venire con me in Via dell'Indipendenza?\nTomás: Volentieri! Devo comprare una giacca per l'inverno: la mia è vecchissima.\nGiulia: E io cerco un paio di scarpe comode per andare in bici. A che ora ci vediamo?\nTomás: Alle dieci va bene? Davanti alla libreria, sotto i portici.\nGiulia: Perfetto! Però non spendiamo troppo, eh!\nTomás: Promesso… forse!\nChef: Tomás! Il risotto!\nTomás: Arrivo! Scusa Giulia, devo scappare. Ci sentiamo, ciao!\nGiulia: A sabato, ciao ciao!",
       tr: {
-        vi: "Nghe cuộc gọi: Hoa gọi cho Tomás đang làm trong bếp nhà hàng.",
-        en: "Listen to the phone call: Hoa calls Tomás, who is at work in a restaurant kitchen.",
+        vi: "Nghe cuộc gọi: Giulia gọi cho Tomás đang làm trong bếp nhà hàng.",
+        en: "Listen to the phone call: Giulia calls Tomás, who is at work in a restaurant kitchen.",
       },
     },
     {
@@ -39,11 +39,11 @@ const page: BookPage = {
           en: "Listen to the phone call: true or false?",
         },
         items: [
-          { id: "1", prompt: "Quando Hoa chiama, Tomás è a casa.", answer: false },
+          { id: "1", prompt: "Quando Giulia chiama, Tomás è a casa.", answer: false },
           { id: "2", prompt: "Tomás esce perché in cucina c'è troppo rumore.", answer: true },
           { id: "3", prompt: "I saldi cominciano domenica.", answer: false },
           { id: "4", prompt: "Tomás vuole comprare una giacca nuova.", answer: true },
-          { id: "5", prompt: "Hoa e Tomás si vedono alle dieci davanti alla libreria.", answer: true },
+          { id: "5", prompt: "Giulia e Tomás si vedono alle dieci davanti alla libreria.", answer: true },
         ],
         why: {
           "1": {

@@ -116,10 +116,10 @@ const page: BookPage = {
       src: "audio/nb-u1-dialogo.mp3",
       title: "Il primo giorno alla scuola “Parola Viva”",
       transcript:
-        "Hoa: Scusa, è questa l'aula del corso intermedio?\nTomás: Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.\nHoa: Piacere, io sono Hoa. Di dove sei?\nTomás: Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?\nHoa: Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.\nTomás: Che bello! Ti piace la città?\nHoa: Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.\nTomás: Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!",
+        "Giulia: Scusa, è questa l'aula del corso intermedio?\nTomás: Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.\nGiulia: Piacere, io sono Giulia. Di dove sei?\nTomás: Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?\nGiulia: Io sono brasiliana, di Curitiba. Studio architettura e a febbraio comincio un semestre all'università di Bologna.\nTomás: Che bello! Ti piace la città?\nGiulia: Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.\nTomás: Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!",
       tr: {
-        vi: "Nghe đoạn hội thoại giữa Hoa và Tomás.",
-        en: "Listen to the dialogue between Hoa and Tomás.",
+        vi: "Nghe đoạn hội thoại giữa Giulia và Tomás.",
+        en: "Listen to the dialogue between Giulia and Tomás.",
       },
     },
     {
@@ -132,25 +132,25 @@ const page: BookPage = {
             type: "dialogue",
             lines: [
               {
-                speaker: "Hoa",
+                speaker: "Giulia",
                 it: "Scusa, è questa l'aula del corso intermedio?",
               },
               {
                 speaker: "Tomás",
                 it: "Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.",
               },
-              { speaker: "Hoa", it: "Piacere, io sono Hoa. Di dove sei?" },
+              { speaker: "Giulia", it: "Piacere, io sono Giulia. Di dove sei?" },
               {
                 speaker: "Tomás",
                 it: "Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?",
               },
               {
-                speaker: "Hoa",
-                it: "Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.",
+                speaker: "Giulia",
+                it: "Io sono brasiliana, di Curitiba. Studio architettura e a febbraio comincio un semestre all'università di Bologna.",
               },
               { speaker: "Tomás", it: "Che bello! Ti piace la città?" },
               {
-                speaker: "Hoa",
+                speaker: "Giulia",
                 it: "Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.",
               },
               {

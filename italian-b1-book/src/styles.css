@@ -5407,20 +5407,13 @@ input::placeholder {
   border-radius: 6px;
   overflow: hidden;
 }
-.video-frame iframe,
 .video-poster {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.video-poster {
-  padding: 0;
-  background: #111;
+  display: block;
   cursor: pointer;
 }
 .video-poster img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -5436,6 +5429,16 @@ input::placeholder {
 }
 .video-poster:hover .video-play {
   transform: translate(-50%, -50%) scale(1.08);
+}
+.video-open {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font: 600 11.5px var(--font-ui);
+  padding: 2px 7px;
+  border-radius: 4px;
 }
 .video-dur {
   position: absolute;
@@ -5462,10 +5465,6 @@ input::placeholder {
 .video-meta {
   font-size: 11.5px;
   color: var(--ink-soft);
-}
-.video-meta a {
-  color: var(--accent);
-  font-weight: 600;
 }
 .video-block .translation {
   font-size: 12.5px;
