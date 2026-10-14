@@ -65,6 +65,17 @@ export function BlockView({ block, page }: { block: Block; page: BookPage }) {
         <figure className="book-photo">
           <img src={block.src} alt={block.alt} loading="lazy" />
           {showTr && block.caption && <figcaption>{tr(lang, block.caption)}</figcaption>}
+          {block.credit && (
+            <small className="photo-credit">
+              {block.href ? (
+                <a href={block.href} target="_blank" rel="noreferrer">
+                  {block.credit}
+                </a>
+              ) : (
+                block.credit
+              )}
+            </small>
+          )}
         </figure>
       );
 

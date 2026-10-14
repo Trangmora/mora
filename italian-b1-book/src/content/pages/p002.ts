@@ -90,8 +90,10 @@ const page: BookPage = {
         [
           {
             type: "photo",
-            src: "images/nb/u1-tempo-libero.svg",
-            alt: "Un album con il disegno di Santo Stefano e un pallone da calcetto",
+            src: "images/nb/u1-santo-stefano.jpg",
+            alt: "Piazza Santo Stefano a Bologna, dove Hoa va a disegnare",
+            credit: "Foto: MenkinAlRire · CC BY-SA 4.0 · Wikimedia Commons",
+            href: "https://commons.wikimedia.org/wiki/File:Bologna,_Piazza_Santo_Stefano_(se).jpg",
           },
         ],
       ],
@@ -171,8 +173,10 @@ const page: BookPage = {
         [
           {
             type: "photo",
-            src: "images/nb/u1-cuoco.svg",
-            alt: "Tomás, cuoco, nella cucina del ristorante",
+            src: "images/nb/u1-cuoco.jpg",
+            alt: "Cuochi al lavoro nella cucina di un ristorante",
+            credit: "Foto: Matthias Ripp · CC BY 2.0 · Wikimedia Commons",
+            href: "https://commons.wikimedia.org/wiki/File:Cooking,_2015.jpg",
           },
         ],
       ],

@@ -2579,6 +2579,20 @@ button.advice-card .advice-kicker {
   width: 100%;
   display: block;
 }
+.book-photo .photo-credit {
+  display: block;
+  margin-top: 3px;
+  font: 10px/1.3 var(--font-ui);
+  color: #6b7280;
+  text-align: right;
+}
+.book-photo .photo-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+.book-photo .photo-credit a:hover {
+  text-decoration: underline;
+}
 .book-photo figcaption,
 .collage-item figcaption {
   font: 12px var(--font-ui);

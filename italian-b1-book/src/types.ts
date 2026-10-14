@@ -290,8 +290,8 @@ export type Block =
   | { type: "sectionTitle"; text: string; banner?: string }
   /** Chia cột như trong sách; widths là tỉ lệ mỗi cột (ví dụ [3, 5, 2]). */
   | { type: "columns"; cols: Block[][]; widths?: number[]; align?: "start" | "center" | "end" }
-  /** Ảnh cắt từ trang sách (public/images/…). */
-  | { type: "photo"; src: string; alt: string; caption?: L10n }
+  /** Ảnh cắt từ trang sách (public/images/…). credit: dòng ghi công luôn hiện dưới ảnh, ví dụ "Foto: Tên · CC BY-SA 4.0 · Wikimedia Commons". */
+  | { type: "photo"; src: string; alt: string; caption?: L10n; credit?: string; href?: string }
   /** Ảnh ghép đặt tự do như trang sách: x, y, w tính theo % khung; height tính theo % chiều rộng. */
   | { type: "collage"; height: number; items: { src: string; alt: string; x: number; y: number; w: number; caption?: L10n }[] }
   /** Chữ "dán" trang trí như trong sách, ví dụ "CIAO!". */

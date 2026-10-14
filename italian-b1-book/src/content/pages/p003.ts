@@ -74,8 +74,10 @@ const page: BookPage = {
         [
           {
             type: "photo",
-            src: "images/nb/u1-iscrizione.svg",
-            alt: "Una scheda di iscrizione su una cartellina, con la bandiera italiana",
+            src: "images/nb/u1-aula.jpg",
+            alt: "Studenti in un'aula durante un corso di lingua",
+            credit: "Foto: Rexdanato · CC BY-SA 4.0 · Wikimedia Commons",
+            href: "https://commons.wikimedia.org/wiki/File:Japanese_course.jpg",
           },
         ],
       ],

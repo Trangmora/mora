@@ -111,6 +111,17 @@ const page: BookPage = {
       },
     },
     {
+      type: "audio",
+      track: "1.01",
+      title: "Il primo giorno alla scuola “Parola Viva”",
+      transcript:
+        "Hoa: Scusa, è questa l'aula del corso intermedio?\nTomás: Sì, credo di sì. Anch'io sono nuovo. Mi chiamo Tomás, piacere.\nHoa: Piacere, io sono Hoa. Di dove sei?\nTomás: Sono argentino, di Rosario. Faccio il cuoco e sono qui per un tirocinio in un ristorante. E tu?\nHoa: Io sono vietnamita, di Hué. Studio architettura e a febbraio comincio un semestre all'università di Bologna.\nTomás: Che bello! Ti piace la città?\nHoa: Moltissimo: i portici, le biciclette, i mercati… E nel tempo libero vado sempre a disegnare in Piazza Santo Stefano.\nTomás: Io invece, quando non lavoro, gioco a calcetto con i colleghi. Ah, ecco l'insegnante!",
+      tr: {
+        vi: "Nghe đoạn hội thoại giữa Hoa và Tomás.",
+        en: "Listen to the dialogue between Hoa and Tomás.",
+      },
+    },
+    {
       type: "columns",
       widths: [3, 1.6],
       align: "center",
@@ -151,8 +162,10 @@ const page: BookPage = {
         [
           {
             type: "photo",
-            src: "images/nb/u1-portici.svg",
-            alt: "Hoa e Tomás si presentano sotto i portici di Bologna, davanti alla scuola Parola Viva",
+            src: "images/nb/u1-portici.jpg",
+            alt: "I portici di Bologna: una lunga fila di archi arancioni",
+            credit: "Foto: Isabella.Mileti · CC BY-SA 4.0 · Wikimedia Commons",
+            href: "https://commons.wikimedia.org/wiki/File:Portici_di_Bologna_2019.jpg",
           },
         ],
       ],
