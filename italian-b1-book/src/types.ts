@@ -327,8 +327,8 @@ export type Block =
   /** Biểu đồ cột ngang như sách (trang 20). */
   | { type: "barChart"; bars: { label: string; value: number; color: string }[]; max: number; step: number; caption?: L10n }
   /**
-   * Video YouTube: ảnh bìa (tải sẵn về public/images/yt/<id>.jpg); bấm vào để mở video ở tab mới trên YouTube
-   * (không nhúng khung YouTube vì trang sách đăng trên Claude chặn khung nhúng).
+   * Video YouTube: ảnh bìa (tải sẵn về public/images/yt/<id>.jpg). Bản web (npm run pages) phát ngay trong trang;
+   * bản đăng trên Claude chặn khung nhúng nên bấm vào sẽ mở YouTube ở tab mới.
    */
   | { type: "video"; youtube: string; title: string; channel: string; duration?: string; thumb: string; tr?: L10n }
   | { type: "exercise"; ex: Exercise };

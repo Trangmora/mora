@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production tsx server/index.ts",
     "typecheck": "tsc --noEmit -p .",
     "voices": "tsx scripts/voices.ts",
-    "site": "vite build --base=./ --outDir site/book --emptyOutDir"
+    "site": "vite build --base=./ --outDir site/book --emptyOutDir",
+    "pages": "VITE_EMBED_VIDEO=1 vite build --base=./ --outDir ../docs --emptyOutDir && touch ../docs/.nojekyll"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
