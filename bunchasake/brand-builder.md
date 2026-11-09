@@ -7,7 +7,7 @@ Bản tóm tắt hướng đi đã chốt sau buổi brainstorm.
 > **"You have the story. I turn it into a brand."**
 > Bạn có câu chuyện. Mình biến nó thành thương hiệu.
 
-- Trang là gương mặt thương hiệu, Bunchasake là studio.
+- Thương hiệu đứng tên Bunchasake, xưng "chúng tôi".
 - Chỉ làm **một việc: xây thương hiệu**, cho doanh nghiệp vừa và nhỏ ở mọi ngành.
 - Thương hiệu xây từ **câu chuyện của người sáng lập**, nên mỗi thương hiệu có chất riêng.
 - AI giúp làm nhanh (mục tiêu: thương hiệu hoàn chỉnh trong khoảng 2–3 tuần, cần team xác nhận làm được), Trang quyết định và giữ chất riêng.

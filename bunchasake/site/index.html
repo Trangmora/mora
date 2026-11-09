@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bunchasake</title>
-<meta name="description" content="Bunchasake – Trang, brand builder. Bạn có câu chuyện, mình biến nó thành thương hiệu.">
+<meta name="description" content="Bunchasake – brand builder. Bạn có câu chuyện, chúng tôi biến nó thành thương hiệu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
@@ -66,7 +66,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 
 /* Ảnh tràn viền */
 .cover { position: relative; height: clamp(280px, 52vw, 680px); overflow: hidden; }
-.cover img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.05) brightness(.6); }
+.cover img { width: 100%; height: 100%; object-fit: cover; display: block; } /* ảnh đã xử lý sẵn: đen trắng, một bông hoa đỏ */
 .cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, var(--bg)); }
 .cover .over { position: absolute; left: var(--gutter); right: var(--gutter); bottom: clamp(20px, 4vw, 48px); z-index: 1; display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; }
 .cover .over p { font-size: clamp(22px, 3.4vw, 44px); font-weight: 500; letter-spacing: -0.045em; line-height: 1.05; max-width: 14em; }
@@ -152,7 +152,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .pillars p { font-size: 14px; color: var(--muted); font-weight: 300; max-width: 34ch; }
 @media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
 
-/* Về Trang */
+/* Về Bunchasake */
 .about { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 80px); align-items: end; padding-top: 28px; }
 .portrait { aspect-ratio: 4 / 5; max-width: 100%; border: 1px dashed var(--line-strong); display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; background: #121211; }
 .portrait b { display: block; font-size: 72px; font-weight: 500; letter-spacing: -0.06em; color: var(--ink); line-height: 1; margin-bottom: 12px; }
@@ -220,14 +220,14 @@ footer h2 span { color: var(--muted); }
 
 <main id="top">
   <section class="hero">
-    <p class="who cap">Trang · Brand builder</p>
-    <h1>You have the story. <span>I turn it into a brand.</span></h1>
-    <p class="lede">Bạn có câu chuyện, mình biến nó thành thương hiệu. Mình là <b>Trang</b>. Mình lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu rõ ràng, nhất quán và có chất riêng. AI giúp làm nhanh hơn, phần quyết định luôn là con người.</p>
+    <p class="who cap">Bunchasake · Brand builder</p>
+    <h1>You have the story. <span>We turn it into a brand.</span></h1>
+    <p class="lede">Bạn có câu chuyện, chúng tôi biến nó thành thương hiệu. <b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu rõ ràng, nhất quán và có chất riêng. AI giúp làm nhanh hơn, phần quyết định luôn là con người.</p>
     <span class="scroll cap">[ Cuộn ]</span>
   </section>
 
   <div class="cover bleed">
-    <img src="work/canasto-de-flores.jpg" alt="Hình ảnh từ dự án Canasto de Flores" width="1600" height="900">
+    <img src="work/cover-red-flower.jpg" alt="Cắm hoa đen trắng, chỉ một bông hoa màu đỏ" width="900" height="600">
     <div class="over">
       <p>Mỗi thương hiệu bắt đầu từ một câu chuyện.</p>
       <a class="cap" href="#lien-he">Kể câu chuyện của bạn ↗</a>
@@ -236,7 +236,7 @@ footer h2 span { color: var(--muted); }
 
   <section class="sec" id="cach-lam">
     <div class="sec-head">
-      <h2>Cách mình làm</h2>
+      <h2>Cách chúng tôi làm</h2>
       <p>Bốn bước. Bạn duyệt sau mỗi bước, nên không có bất ngờ ở cuối dự án.</p>
     </div>
     <div id="steps"></div>
@@ -277,7 +277,7 @@ footer h2 span { color: var(--muted); }
         </ul>
       </article>
     </div>
-    <p class="pkgs-note">Bunchasake chỉ làm thương hiệu. Nếu bạn cần chụp ảnh, quay phim hay chạy quảng cáo, mình giới thiệu đối tác phù hợp.</p>
+    <p class="pkgs-note">Bunchasake chỉ làm thương hiệu. Nếu bạn cần chụp ảnh, quay phim hay chạy quảng cáo, chúng tôi giới thiệu đối tác phù hợp.</p>
   </section>
 
   <section class="sec" id="du-an">
@@ -289,28 +289,28 @@ footer h2 span { color: var(--muted); }
   </section>
 
   <section class="manifesto">
-    <h2>AI làm phần nhanh. <span>Trang làm phần có hồn.</span></h2>
+    <h2>AI làm phần nhanh. <span>Chúng tôi làm phần có hồn.</span></h2>
     <div class="pillars">
       <div><b>Lắng nghe trước</b><p>Mọi thương hiệu bắt đầu từ một buổi trò chuyện với người sáng lập, không phải từ một mẫu có sẵn.</p></div>
       <div><b>Nhanh hơn nhờ AI</b><p>Nghiên cứu, phác thảo và viết nháp được rút ngắn, nên bạn thấy phương án sớm hơn.</p></div>
-      <div><b>Một người chịu trách nhiệm</b><p>Trang trực tiếp làm việc với bạn từ buổi đầu tiên đến ngày bàn giao.</p></div>
+      <div><b>Một đầu mối duy nhất</b><p>Một người của Bunchasake làm việc với bạn từ buổi đầu tiên đến ngày bàn giao.</p></div>
     </div>
   </section>
 
   <section class="sec" id="trang">
     <div class="sec-head">
-      <h2>Về Trang</h2>
-      <p>Người lắng nghe câu chuyện của bạn.</p>
+      <h2>Về Bunchasake</h2>
+      <p>Những người lắng nghe câu chuyện của bạn.</p>
     </div>
     <div class="about">
-      <div class="portrait" role="img" aria-label="Chỗ đặt ảnh chân dung của Trang"><div><b>T.</b><span class="cap">Ảnh chân dung của Trang</span></div></div>
+      <div class="portrait" role="img" aria-label="Chỗ đặt ảnh đội ngũ Bunchasake"><div><b>B.</b><span class="cap">Ảnh đội ngũ Bunchasake</span></div></div>
       <div>
         <blockquote>Khách hàng không nhớ logo đẹp. <span>Họ nhớ cảm giác mà thương hiệu để lại.</span></blockquote>
         <div class="copy">
-          <p>Mình đã đồng hành cùng <b>hơn 10 thương hiệu</b>, từ quán ăn ở Hà Nội đến quỹ đầu tư ở Ý.</p>
-          <p>Mình dùng AI cho những phần tốn thời gian như nghiên cứu, phác thảo, viết nháp, để dành thời gian cho việc quan trọng nhất: <b>lắng nghe bạn</b>.</p>
+          <p>Chúng tôi đã đồng hành cùng <b>hơn 10 thương hiệu</b>, từ quán ăn ở Hà Nội đến quỹ đầu tư ở Ý.</p>
+          <p>Chúng tôi dùng AI cho những phần tốn thời gian như nghiên cứu, phác thảo, viết nháp, để dành thời gian cho việc quan trọng nhất: <b>lắng nghe bạn</b>.</p>
         </div>
-        <p class="sig cap">— Trang, Bunchasake</p>
+        <p class="sig cap">— Đội ngũ Bunchasake</p>
       </div>
     </div>
   </section>
@@ -326,7 +326,7 @@ footer h2 span { color: var(--muted); }
 
 <footer id="lien-he">
   <div>
-    <h2>Kể mình nghe câu chuyện của bạn. <span>Vài dòng là đủ.</span></h2>
+    <h2>Kể chúng tôi nghe câu chuyện của bạn. <span>Vài dòng là đủ.</span></h2>
     <div class="fcols cap">
       <div><span class="t">Menu</span><a href="#top">Trang chủ</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#du-an">Dự án</a></div>
       <div><span class="t">Gói</span><span>Start</span><span>Build</span><span>Refresh</span></div>
@@ -361,7 +361,7 @@ const steps = [
     ai: "Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ." },
   { name: "Định vị", desc: "Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.",
     items: ["Tuyên bố định vị", "Câu chuyện thương hiệu", "Thông điệp chính và slogan"],
-    ai: "Đưa ra nhiều phương án để Trang chọn và chỉnh." },
+    ai: "Đưa ra nhiều phương án để chúng tôi chọn và chỉnh." },
   { name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.",
     items: ["Logo và các biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn thương hiệu"],
     ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
@@ -371,10 +371,10 @@ const steps = [
 ];
 const faqs = [
   ["Mất bao lâu để có thương hiệu?", "Thường khoảng 2–3 tuần cho gói Build, tuỳ tốc độ duyệt của bạn. Gói Start nhanh hơn."],
-  ["AI làm thương hiệu thay người à?", "Không. AI giúp nghiên cứu, phác thảo và viết nháp nhanh hơn. Mọi quyết định về định vị, hình ảnh và giọng văn do Trang làm cùng bạn."],
-  ["Mình cần chuẩn bị gì?", "Chỉ cần một buổi trò chuyện khoảng 60 phút về doanh nghiệp và lý do bạn bắt đầu. Nếu có logo, ảnh hay tài liệu cũ thì mang theo."],
-  ["Bunchasake có chạy fanpage hay quảng cáo không?", "Không. Bunchasake chỉ làm thương hiệu. Sau khi bàn giao, mình giới thiệu đối tác nếu bạn cần người vận hành."],
-  ["Mình ở nước ngoài thì có làm được không?", "Được. Mọi buổi làm việc đều có thể online, bằng tiếng Việt hoặc tiếng Anh."],
+  ["AI làm thương hiệu thay người à?", "Không. AI giúp nghiên cứu, phác thảo và viết nháp nhanh hơn. Mọi quyết định về định vị, hình ảnh và giọng văn do đội ngũ Bunchasake làm cùng bạn."],
+  ["Tôi cần chuẩn bị gì?", "Chỉ cần một buổi trò chuyện khoảng 60 phút về doanh nghiệp và lý do bạn bắt đầu. Nếu có logo, ảnh hay tài liệu cũ thì mang theo."],
+  ["Bunchasake có chạy fanpage hay quảng cáo không?", "Không. Bunchasake chỉ làm thương hiệu. Sau khi bàn giao, chúng tôi giới thiệu đối tác nếu bạn cần người vận hành."],
+  ["Tôi ở nước ngoài thì có làm được không?", "Được. Mọi buổi làm việc đều có thể online, bằng tiếng Việt hoặc tiếng Anh."],
 ];
 const projects = [
   { name: "Chop Chop", sector: "Nhà hàng", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook" },
