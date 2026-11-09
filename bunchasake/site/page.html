@@ -61,7 +61,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 
 /* Ảnh tràn viền */
 .cover { position: relative; height: clamp(280px, 52vw, 680px); overflow: hidden; }
-.cover img { width: 100%; height: 100%; object-fit: cover; display: block; } /* ảnh đã xử lý sẵn: đen trắng, một bông hoa đỏ */
+.cover img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.05) brightness(.6); }
 .cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, var(--bg)); }
 .cover .over { position: absolute; left: var(--gutter); right: var(--gutter); bottom: clamp(20px, 4vw, 48px); z-index: 1; display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; }
 .cover .over p { font-size: clamp(22px, 3.4vw, 44px); font-weight: 500; letter-spacing: -0.045em; line-height: 1.05; max-width: 14em; }
@@ -220,7 +220,7 @@ footer h2 span { color: var(--muted); }
   </section>
 
   <div class="cover bleed">
-    <img src="work/cover-red-flower.jpg" alt="Cắm hoa đen trắng, chỉ một bông hoa màu đỏ" width="900" height="600">
+    <img src="work/canasto-de-flores.jpg" alt="Hình ảnh từ dự án Canasto de Flores" width="1600" height="900">
     <div class="over">
       <p>Mỗi thương hiệu bắt đầu từ một câu chuyện.</p>
       <a class="cap" href="#lien-he">Kể câu chuyện của bạn ↗</a>
