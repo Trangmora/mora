@@ -1,0 +1,1290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bunchasake</title>
+<meta name="description" content="Bunchasake – brand builder. You have the story. We turn it into a brand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Playfair+Display:wght@500&family=Anton&family=Baloo+2:wght@800&family=Be+Vietnam+Pro:wght@500;700&display=swap">
+<style>
+/* Layout: studio nền đen. Hero chữ lớn ghép serif nghiêng; ngay dưới là Brand Lab tương tác (form trái, bảng thương hiệu phải) làm khoảnh khắc chính; sau đó vấn đề → quy trình dính (sticky) → gói → automation → dự án → đội ngũ → FAQ → thẻ liên hệ trắng */
+:root {
+  --bg: #0A0A0A;
+  --raise: #131312;
+  --ink: #F7F7F4;
+  --muted: #9A9A95;
+  --dim: #66665F;
+  --line: #262624;
+  --line-strong: #44443F;
+  --mark: #FF4A2E;       /* đỏ – điểm nhấn duy nhất */
+  --card: #F7F7F4;
+  --card-ink: #0A0A0A;
+  --card-line: #BDBDB8;
+  --sans: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --gutter: clamp(16px, 2.8vw, 44px);
+  --ease: cubic-bezier(.2, .7, .1, 1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 16px/1.55 var(--sans);
+  padding-inline: var(--gutter);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--mark); color: #0A0A0A; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-weight: 500; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--mark); outline-offset: 4px; }
+.cap { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+.it { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+.bleed { margin-inline: calc(var(--gutter) * -1); }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--mark); }
+
+/* Thanh tiến độ cuộn */
+.progress { position: fixed; top: 0; left: 0; height: 2px; width: 100%; background: var(--mark); transform-origin: 0 50%; transform: scaleX(0); z-index: 40; }
+
+/* Nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding-block: 16px; background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter);
+  border-bottom: 1px solid transparent; transition: border-color .3s;
+}
+.nav.scrolled { border-bottom-color: var(--line); }
+.logo { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.logo i { font-style: normal; color: var(--muted); font-weight: 400; letter-spacing: .02em; }
+.nav ul { display: flex; gap: clamp(18px, 3.4vw, 48px); list-style: none; margin: 0; padding: 0; }
+.nav ul a { color: var(--muted); transition: color .2s; }
+.nav ul a:hover { color: var(--ink); }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 600; white-space: nowrap; transition: background .25s, color .25s, transform .25s var(--ease); }
+.pill:hover { background: var(--mark); color: #0A0A0A; transform: translateY(-1px); }
+.pill.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.pill.ghost:hover { box-shadow: inset 0 0 0 1px var(--ink); background: transparent; color: var(--ink); }
+@media (max-width: 860px) { .nav ul { display: none; } }
+@media (max-width: 480px) { .logo i { display: none; } .nav .pill { padding: 10px 14px; font-size: 12px; } }
+
+/* Hero */
+.hero { padding-block: clamp(56px, 9vw, 120px) clamp(40px, 6vw, 72px); }
+.hero .kicker { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.hero h1 { margin-top: clamp(22px, 3vw, 36px); font-size: clamp(46px, 9.2vw, 152px); line-height: .92; letter-spacing: -0.06em; font-weight: 500; }
+.hero h1 .row { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .row > span { display: inline-block; animation: rise 1s var(--ease) both; }
+.hero h1 .row:nth-child(2) > span { animation-delay: .12s; }
+.hero h1 .it { font-weight: 400; letter-spacing: -0.04em; }
+.hero h1 .muted { color: var(--dim); }
+.hero h1 .brand { position: relative; }
+.hero h1 .brand::after { content: ""; position: absolute; left: 0; right: 0; bottom: .06em; height: .07em; background: var(--mark); transform-origin: 0 50%; animation: draw .9s .7s var(--ease) both; }
+.hero-foot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px 48px; align-items: end; margin-top: clamp(28px, 4vw, 56px); animation: fade 1s .4s var(--ease) both; }
+.hero-foot p { max-width: 50ch; font-size: clamp(16px, 1.35vw, 19px); font-weight: 300; color: var(--muted); }
+.hero-foot p b { color: var(--ink); font-weight: 500; }
+.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+.promise { margin-top: clamp(22px, 3vw, 36px); font: 400 clamp(22px, 2.6vw, 38px)/1.15 var(--serif); font-style: italic; letter-spacing: -0.02em; color: var(--ink); animation: fade 1s .3s var(--ease) both; }
+.promise span { color: var(--mark); }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (max-width: 760px) { .hero-foot { grid-template-columns: 1fr; } }
+
+/* Marquee */
+.marquee { overflow: hidden; border-block: 1px solid var(--line); }
+.marquee-track { display: flex; width: max-content; animation: slide 48s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee span { font: 400 clamp(22px, 2.6vw, 34px)/1 var(--serif); font-style: italic; padding: 22px 0; white-space: nowrap; color: var(--muted); }
+.marquee span::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--mark); margin-inline: 28px; vertical-align: middle; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* Section */
+.sec { padding-block: clamp(80px, 11vw, 160px) 0; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px 48px; align-items: end; padding-bottom: clamp(24px, 3vw, 36px); border-bottom: 1px solid var(--line-strong); }
+.sec-head .lab { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.sec-head h2 { font-size: clamp(34px, 4.6vw, 68px); line-height: 1; letter-spacing: -0.05em; }
+.sec-head h2 .it { color: var(--muted); }
+.sec-head p { color: var(--muted); max-width: 46ch; font-size: 15px; font-weight: 300; justify-self: end; }
+@media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; } .sec-head p { justify-self: start; } }
+
+/* ===== Brand Lab ===== */
+.lab-wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); gap: clamp(20px, 3vw, 40px); padding-top: clamp(28px, 4vw, 48px); align-items: start; }
+.lab-form { position: sticky; top: 92px; display: grid; gap: 22px; background: var(--raise); border: 1px solid var(--line); border-radius: 20px; padding: clamp(20px, 2.4vw, 32px); min-width: 0; }
+.lab-form .field { display: grid; gap: 10px; }
+.lab-form label, .lab-form legend { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding: 0; }
+.lab-form input[type="text"] { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line-strong); color: var(--ink); font: 500 clamp(24px, 2.4vw, 32px)/1.2 var(--sans); letter-spacing: -0.03em; padding: 6px 0 10px; border-radius: 0; }
+.lab-form input[type="text"]:focus { outline: none; border-bottom-color: var(--mark); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { margin-bottom: 10px; }
+.chips label { position: relative; cursor: pointer; text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 400; color: var(--ink); }
+.chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chips span { display: inline-block; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line-strong); transition: background .2s, color .2s, border-color .2s; }
+.chips label:hover span { border-color: var(--ink); }
+.chips input:checked + span { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chips input:focus-visible + span { outline: 2px solid var(--mark); outline-offset: 3px; }
+.build-btn { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--mark); color: #0A0A0A; font-weight: 600; font-size: 15px; padding: 16px 20px; border-radius: 14px; transition: transform .25s var(--ease), filter .2s; }
+.build-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.build-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.build-btn kbd { font: inherit; font-size: 12px; opacity: .7; }
+.lab-note { font-size: 12px; color: var(--dim); line-height: 1.5; }
+
+.status { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; min-height: 26px; }
+.status span { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; padding: 5px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); transition: all .25s; }
+.status span.on { color: #0A0A0A; background: var(--ink); border-color: var(--ink); }
+.status span.done { color: var(--ink); border-color: var(--line-strong); }
+
+.board { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; min-width: 0; }
+.tile { border-radius: 16px; background: var(--raise); border: 1px solid var(--line); padding: 18px; min-width: 0; overflow: hidden; position: relative; }
+.tile .t { position: absolute; top: 14px; left: 16px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; opacity: .65; }
+.board.building .tile { animation: tileIn .7s var(--ease) both; }
+.board.building .tile:nth-child(2) { animation-delay: .08s; }
+.board.building .tile:nth-child(3) { animation-delay: .16s; }
+.board.building .tile:nth-child(4) { animation-delay: .24s; }
+.board.building .tile:nth-child(5) { animation-delay: .32s; }
+.board.building .tile:nth-child(6) { animation-delay: .40s; }
+.board.building .tile:nth-child(7) { animation-delay: .48s; }
+.board.building .tile:nth-child(8) { animation-delay: .56s; }
+@keyframes tileIn { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+
+.t-logo { grid-column: span 4; min-height: 260px; display: grid; place-items: center; text-align: center; gap: 14px; transition: background .5s; }
+.t-logo .mark { width: 72px; height: 72px; }
+.t-logo .word { font-size: clamp(30px, 3.6vw, 56px); line-height: 1; word-break: break-word; }
+.t-pal { grid-column: span 2; display: grid; grid-template-rows: repeat(4, 1fr); gap: 0; padding: 0; min-height: 260px; }
+.t-pal div { display: flex; align-items: flex-end; justify-content: space-between; padding: 8px 12px; font-size: 11px; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: .02em; transition: background .5s; }
+.t-type { grid-column: span 2; display: grid; gap: 6px; align-content: end; min-height: 170px; }
+.t-type .aa { font-size: 64px; line-height: 1; }
+.t-type .pair { font-size: 13px; color: var(--muted); }
+.t-pos { grid-column: span 2; display: grid; align-content: end; min-height: 170px; }
+.t-pos p { font: 400 clamp(16px, 1.3vw, 19px)/1.3 var(--serif); }
+.t-voice { grid-column: span 2; display: grid; align-content: end; gap: 8px; min-height: 170px; }
+.t-voice .w { display: flex; flex-wrap: wrap; gap: 6px; }
+.t-voice .w span { font-size: 13px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line-strong); }
+.t-card, .t-post, .t-web { grid-column: span 2; min-height: 190px; padding: 40px 14px 18px; display: grid; place-items: center; background: #1B1B1A; }
+.mini-card { width: 78%; aspect-ratio: 1.75; border-radius: 6px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.45); transform: rotate(-4deg); transition: background .5s; }
+.mini-card svg { width: 30px; height: 30px; }
+.mini-card b { font-size: 13px; line-height: 1.1; display: block; }
+.mini-card small { font-size: 8px; opacity: .7; display: block; margin-top: 4px; font-family: var(--sans); }
+.mini-post { width: 62%; aspect-ratio: 1; border-radius: 8px; padding: 12px; display: grid; align-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,.45); transform: rotate(3deg); transition: background .5s; }
+.mini-post p { font-size: 13px; line-height: 1.15; }
+.mini-post i { width: 14px; height: 14px; border-radius: 50%; display: block; }
+.mini-web { width: 84%; aspect-ratio: 1.5; border-radius: 6px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.45); display: grid; grid-template-rows: 14px 1fr; transition: background .5s; }
+.mini-web .bar { display: flex; gap: 3px; align-items: center; padding-inline: 6px; background: rgba(0,0,0,.18); }
+.mini-web .bar i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.6); }
+.mini-web .body { padding: 10px; display: grid; align-content: center; gap: 6px; }
+.mini-web .body b { font-size: 13px; line-height: 1.1; }
+.mini-web .body span { width: 40%; height: 8px; border-radius: 99px; display: block; }
+.lab-cta { margin-top: 18px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--line); }
+.lab-cta p { color: var(--muted); font-size: 14px; max-width: 46ch; }
+@media (max-width: 980px) {
+  .lab-wrap { grid-template-columns: 1fr; }
+  .lab-form { position: static; }
+}
+@media (max-width: 620px) {
+  .board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .t-logo { grid-column: span 2; min-height: 220px; }
+  .t-pal { grid-column: span 2; grid-template-rows: none; grid-template-columns: repeat(4, 1fr); min-height: 90px; }
+  .t-pal div { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+  .t-type { grid-column: span 1; min-height: 140px; }
+  .t-pos { grid-column: span 2; min-height: 140px; order: -1; }
+  .t-logo, .t-pal { order: -2; }
+  .t-voice { grid-column: span 1; min-height: 140px; }
+  .t-card, .t-post { grid-column: span 1; min-height: 150px; }
+  .t-web { grid-column: span 2; min-height: 170px; }
+  .mini-web { width: 60%; }
+}
+
+/* ===== Vấn đề ===== */
+.pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pain { padding: clamp(24px, 3vw, 40px) clamp(16px, 2.4vw, 32px) 8px 0; display: grid; gap: 18px; align-content: start; min-width: 0; }
+.pain + .pain { padding-left: clamp(16px, 2.4vw, 32px); border-left: 1px solid var(--line); }
+.pain q { font: 400 clamp(22px, 2.2vw, 30px)/1.2 var(--serif); font-style: italic; quotes: "“" "”"; }
+.pain p { color: var(--muted); font-size: 15px; font-weight: 300; }
+.pain p b { color: var(--ink); font-weight: 500; }
+@media (max-width: 820px) { .pains { grid-template-columns: 1fr; } .pain + .pain { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+
+/* ===== Quy trình (cột trái dính) ===== */
+.process { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: clamp(24px, 5vw, 80px); padding-top: clamp(28px, 4vw, 48px); }
+.process-side { position: sticky; top: 100px; align-self: start; display: grid; gap: 22px; }
+.bignum { font: 400 clamp(110px, 16vw, 220px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--ink); }
+.bignum small { font-size: .28em; color: var(--dim); font-style: normal; font-family: var(--sans); letter-spacing: 0; margin-left: 8px; }
+.track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.track i { height: 3px; border-radius: 9px; background: var(--line-strong); transition: background .4s; }
+.track i.on { background: var(--mark); }
+.process-side p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 34ch; }
+.steps { display: grid; }
+.step { padding-block: clamp(24px, 3vw, 40px); border-bottom: 1px solid var(--line); display: grid; gap: 14px; min-width: 0; opacity: .55; transition: opacity .4s; }
+.step.active, .no-io .step { opacity: 1; }
+.step:first-child { padding-top: 0; }
+.step .n { color: var(--mark); }
+.step h3 { font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.05em; line-height: 1; }
+.step p { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 52ch; }
+.step ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.step li { font-size: 13px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line-strong); }
+.step .ai { font-size: 14px; color: var(--muted); display: flex; gap: 10px; align-items: baseline; }
+.step .ai b { color: var(--ink); font-weight: 600; font-size: 11px; letter-spacing: .06em; padding: 3px 7px; border-radius: 6px; background: #1F1F1D; }
+@media (max-width: 860px) { .process { grid-template-columns: 1fr; } .process-side { position: static; } .bignum { display: none; } .step { opacity: 1; } }
+
+/* ===== Gói ===== */
+.pkgs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: clamp(28px, 4vw, 48px); }
+.pkg { border: 1px solid var(--line); border-radius: 20px; padding: clamp(22px, 2.4vw, 32px); display: grid; gap: 16px; align-content: start; min-width: 0; background: var(--raise); transition: border-color .3s, transform .4s var(--ease); }
+.pkg:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+.pkg.feature { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.pkg .for { color: var(--muted); }
+.pkg.feature .for { color: #55554F; }
+.pkg h3 { font-size: clamp(40px, 4.4vw, 64px); letter-spacing: -0.06em; line-height: .95; }
+.pkg h3 .it { font-size: .9em; }
+.pkg .tag { justify-self: start; background: var(--mark); color: #0A0A0A; padding: 5px 9px; border-radius: 999px; }
+.pkg ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; }
+.pkg li { padding-block: 11px; border-top: 1px solid var(--line); font-size: 14.5px; font-weight: 300; display: flex; gap: 12px; }
+.pkg.feature li { border-top-color: #D3D3CE; }
+.pkg li::before { content: "↳"; color: var(--mark); }
+.pkgs-note { margin-top: 22px; font-size: 14px; color: var(--muted); max-width: 66ch; }
+@media (max-width: 900px) { .pkgs { grid-template-columns: 1fr; } }
+
+/* ===== Automation ===== */
+.auto { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding-top: clamp(28px, 4vw, 48px); position: relative; }
+.auto div { background: var(--raise); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; position: relative; }
+.auto div:not(:last-child)::after { content: "→"; position: absolute; right: -9px; top: 22px; width: 18px; height: 18px; display: grid; place-items: center; font-size: 11px; background: var(--bg); color: var(--mark); border-radius: 50%; z-index: 1; }
+.auto .n { color: var(--mark); }
+.auto b { font-size: 16px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; }
+.auto p { font-size: 13.5px; color: var(--muted); font-weight: 300; }
+.auto-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
+.auto-foot p { font-size: 14px; color: var(--muted); max-width: 62ch; }
+@media (max-width: 1000px) { .auto { grid-template-columns: repeat(2, minmax(0, 1fr)); } .auto div::after { display: none; } }
+@media (max-width: 540px) { .auto { grid-template-columns: 1fr; } }
+
+/* ===== Dự án ===== */
+.grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px) clamp(12px, 1.4vw, 20px); padding-top: clamp(28px, 4vw, 48px); }
+.card { grid-column: span 2; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.card.big { grid-column: span 3; }
+.card .img { display: block; aspect-ratio: 4 / 3; max-width: 100%; overflow: hidden; background: #161615; border-radius: 14px; position: relative; }
+.card.big .img { aspect-ratio: 16 / 11; }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) brightness(.82); transition: filter .6s ease, transform .9s var(--ease); }
+.card:hover img, .card a:focus-visible img { filter: none; transform: scale(1.04); }
+.card .img .view { position: absolute; right: 12px; bottom: 12px; background: var(--ink); color: var(--bg); padding: 7px 11px; border-radius: 999px; opacity: 0; transform: translateY(8px); transition: all .35s var(--ease); }
+.card:hover .img .view { opacity: 1; transform: none; }
+.card .top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.card h3 { font-size: clamp(18px, 1.5vw, 22px); letter-spacing: -0.03em; }
+.card .ch { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.card .ch:hover { color: var(--ink); }
+.card p { font-size: 14px; color: var(--muted); }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card, .card.big { grid-column: span 1; } .card.big .img { aspect-ratio: 4 / 3; } }
+@media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
+
+/* ===== Tuyên ngôn + Đội ngũ ===== */
+.manifesto { padding-block: clamp(110px, 15vw, 220px) 0; }
+.manifesto h2 { font-size: clamp(36px, 6vw, 96px); line-height: .98; letter-spacing: -0.06em; max-width: 14em; }
+.manifesto h2 .it { color: var(--muted); }
+.about { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 80px); align-items: end; padding-top: clamp(28px, 4vw, 48px); }
+.portrait { aspect-ratio: 4 / 5; max-width: 100%; border: 1px dashed var(--line-strong); border-radius: 20px; display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; background: var(--raise); }
+.portrait b { display: block; font: 400 88px/1 var(--serif); font-style: italic; color: var(--ink); margin-bottom: 12px; }
+.pillars { display: grid; gap: 0; }
+.pillars div { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding-block: 18px; border-top: 1px solid var(--line); }
+.pillars b { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+.pillars p { font-size: 15px; color: var(--muted); font-weight: 300; }
+.about .sig { margin-top: 20px; color: var(--muted); }
+@media (max-width: 820px) { .about { grid-template-columns: 1fr; } .portrait { max-width: 340px; } .pillars div { grid-template-columns: 1fr; gap: 6px; } }
+
+/* ===== FAQ ===== */
+.faq .row { border-bottom: 1px solid var(--line); }
+.faq button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) 24px; gap: 16px; align-items: center; padding-block: clamp(20px, 2.6vw, 30px); font-size: clamp(18px, 1.7vw, 24px); letter-spacing: -0.03em; font-weight: 500; }
+.faq button:focus-visible { outline: 2px solid var(--mark); outline-offset: -2px; }
+.plus { justify-self: end; width: 16px; height: 16px; position: relative; }
+.plus::before, .plus::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; background: var(--ink); transition: transform .35s var(--ease); }
+.plus::after { transform: rotate(90deg); }
+.faq button[aria-expanded="true"] .plus::after { transform: rotate(0deg); }
+.faq .panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease); }
+.faq .panel > div { overflow: hidden; }
+.faq .row.open .panel { grid-template-rows: 1fr; }
+.faq .panel p { padding-bottom: 26px; font-size: 16px; font-weight: 300; color: var(--muted); max-width: 64ch; }
+
+/* ===== Footer + thẻ liên hệ ===== */
+footer { margin-top: clamp(110px, 14vw, 180px); border-top: 1px solid var(--line-strong); padding-block: clamp(56px, 8vw, 110px) 32px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px clamp(32px, 6vw, 96px); align-items: end; }
+footer h2 { font-size: clamp(40px, 6vw, 96px); line-height: .95; letter-spacing: -0.06em; }
+footer h2 .it { color: var(--muted); }
+.fcols { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 20px clamp(24px, 4vw, 56px); margin-top: clamp(40px, 6vw, 72px); }
+.fcols div { display: grid; gap: 4px; align-content: start; color: var(--muted); }
+.fcols .t { color: var(--ink); margin-bottom: 6px; }
+.fcols a:hover { color: var(--ink); }
+.legal { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--dim); padding-top: 24px; border-top: 1px solid var(--line); }
+@media (max-width: 860px) { footer { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .fcols { grid-template-columns: repeat(2, auto); } }
+.card-form { background: var(--card); color: var(--card-ink); padding: clamp(24px, 3vw, 40px); display: grid; gap: 16px; border-radius: 20px; }
+.card-form h3 { font-size: clamp(26px, 2.6vw, 34px); letter-spacing: -0.05em; font-weight: 600; }
+.card-form .sub { font-size: 13px; color: #55554F; margin-top: -8px; }
+.card-form label { display: block; }
+.card-form label > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.card-form input, .card-form textarea { width: 100%; font: 400 15px/1.4 var(--sans); color: var(--card-ink); background: transparent; border: 0; border-bottom: 1px solid var(--card-line); padding: 12px 0; border-radius: 0; }
+.card-form input::placeholder, .card-form textarea::placeholder { color: #6B6B66; }
+.card-form input:focus, .card-form textarea:focus { outline: none; border-bottom-color: var(--card-ink); }
+.card-form textarea { resize: vertical; min-height: 80px; }
+.pick { display: flex; flex-wrap: wrap; gap: 6px; border: 0; padding: 0; margin: 4px 0 0; }
+.pick legend { font-size: 12px; color: #55554F; margin-bottom: 8px; padding: 0; }
+.pick label { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 7px 12px; border: 1px solid var(--card-line); border-radius: 999px; cursor: pointer; }
+.pick label:has(input:checked) { background: var(--card-ink); color: var(--card); border-color: var(--card-ink); }
+.pick input { accent-color: var(--card-ink); margin: 0; }
+.submit { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--card-ink); color: var(--card); font-size: 14px; font-weight: 600; padding: 16px 20px; border-radius: 14px; margin-top: 6px; transition: background .2s, color .2s; }
+.submit:hover { background: var(--mark); color: #0A0A0A; }
+.submit:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
+.note { font-size: 13px; }
+
+/* ===== Bổ sung chuyên nghiệp ===== */
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; }
+.skip:focus { left: 12px; }
+.nav ul a.active { color: var(--ink); }
+.nav-r { display: flex; align-items: center; gap: 10px; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); }
+.lang button { all: unset; cursor: pointer; font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 7px 10px; border-radius: 999px; color: var(--muted); }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.lang button:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(36px, 5vw, 64px); border-top: 1px solid var(--line); animation: fade 1s .55s var(--ease) both; }
+.stats div { padding: 18px 20px 0 0; display: grid; gap: 4px; min-width: 0; }
+.stats div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.stats b { font-size: clamp(28px, 3vw, 40px); font-weight: 500; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) { .stats div { padding-right: 8px; } .stats div + div { padding-left: 10px; } .stats span { font-size: 12px; } }
+.pkg .fit { font-size: 14px; color: var(--muted); font-weight: 300; }
+.pkg.feature .fit { color: #55554F; }
+.pkg .choose { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-top: 6px; padding: 13px 16px; border-radius: 12px; font-size: 14px; font-weight: 600; box-shadow: inset 0 0 0 1px var(--line-strong); transition: background .2s, color .2s, box-shadow .2s; }
+.pkg .choose:hover { background: var(--ink); color: var(--bg); box-shadow: none; }
+.pkg.feature .choose { background: var(--bg); color: var(--ink); box-shadow: none; }
+.pkg.feature .choose:hover { background: var(--mark); color: #0A0A0A; }
+.pkg .choose:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.contact-side { display: grid; gap: clamp(28px, 4vw, 44px); align-content: end; }
+.reach { display: grid; gap: 0; max-width: 520px; }
+.reach div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); align-items: center; }
+.reach dt { color: var(--muted); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+.reach dd { font-size: 15px; }
+.reach dd { margin: 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.copy { all: unset; cursor: pointer; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; padding: 4px 8px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); color: var(--muted); }
+.copy:hover { color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.copy:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.next { display: grid; gap: 0; counter-reset: n; }
+.next li { list-style: none; display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding-block: 10px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.next li::before { counter-increment: n; content: counter(n); color: var(--mark); font-weight: 600; }
+.next li b { color: var(--ink); font-weight: 500; }
+.next { margin: 0; padding: 0; max-width: 520px; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; background: #E8E8E4; border-radius: 12px; padding: 4px; gap: 4px; }
+.tabs button { all: unset; cursor: pointer; text-align: center; font-size: 13px; font-weight: 600; padding: 10px; border-radius: 9px; color: #55554F; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--card-ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.tabs button:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 2px; }
+.card-form .err { display: block; font-size: 12px; color: #C2321F; margin-top: 6px; min-height: 0; }
+.card-form [aria-invalid="true"] { border-bottom-color: #C2321F; }
+.privacy { font-size: 12px; color: #6B6B66; line-height: 1.5; }
+.privacy button { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; color: var(--card-ink); }
+.slots { display: grid; gap: 14px; }
+.slots .lbl { font-size: 12px; color: #55554F; }
+.days, .times { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+.days button, .times button { all: unset; cursor: pointer; flex: none; text-align: center; border: 1px solid var(--card-line); border-radius: 12px; padding: 9px 12px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.days button small { display: block; font-size: 10px; color: #6B6B66; text-transform: uppercase; }
+.days button[aria-pressed="true"], .times button[aria-pressed="true"] { background: var(--card-ink); color: var(--card); border-color: var(--card-ink); }
+.days button[aria-pressed="true"] small { color: #BDBDB8; }
+.days button:focus-visible, .times button:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 2px; }
+.sum { font-size: 13px; padding: 10px 12px; border-radius: 10px; background: #EDEDE9; }
+.done { display: grid; gap: 14px; text-align: left; }
+.done h3 { font-size: 26px; }
+.done .tick { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--mark); color: #0A0A0A; font-weight: 700; }
+.done ol { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: #3A3A36; }
+.done .again { all: unset; cursor: pointer; justify-self: start; font-size: 13px; text-decoration: underline; text-underline-offset: 2px; }
+.foot-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot-nav a { color: var(--muted); } .foot-nav a:hover { color: var(--ink); }
+.legal button { all: unset; cursor: pointer; color: var(--dim); text-decoration: underline; text-underline-offset: 3px; }
+.legal button:hover { color: var(--ink); }
+.legal .r { display: flex; gap: 18px; flex-wrap: wrap; }
+dialog.policy { max-width: min(560px, calc(100vw - 32px)); border: 1px solid var(--line-strong); border-radius: 18px; background: var(--raise); color: var(--ink); padding: 28px; }
+dialog.policy::backdrop { background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
+dialog.policy h3 { font-size: 22px; margin-bottom: 14px; letter-spacing: -0.03em; }
+dialog.policy p, dialog.policy li { font-size: 14px; color: var(--muted); font-weight: 300; }
+dialog.policy ul { padding-left: 18px; margin: 12px 0; display: grid; gap: 6px; }
+dialog.policy form { margin-top: 18px; }
+.mobile-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; display: none; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .35s var(--ease); }
+.mobile-cta.show { transform: none; }
+.mobile-cta a { flex: 1; justify-content: center; }
+@media (max-width: 760px) { .mobile-cta { display: flex; } footer { padding-bottom: 96px; } }
+
+/* ===== 3D ===== */
+.hero { position: relative; }
+.hero > *:not(.hero3d) { position: relative; z-index: 1; }
+.hero3d { position: absolute; top: 40%; right: calc(var(--gutter) * -1); width: min(46%, 720px); height: 54%; z-index: 0; pointer-events: none; display: block; }
+.hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+.hero-foot p { max-width: 46ch; }
+@media (max-width: 1100px) { .hero3d { opacity: .45; } }
+@media (max-width: 760px) { .hero3d { top: 30%; width: 100%; height: 50%; opacity: .25; } }
+.t-logo .box3d { position: absolute; inset: 0; width: 100%; height: 100%; display: none; cursor: grab; touch-action: pan-y; }
+.t-logo .box3d:active { cursor: grabbing; }
+.t-logo.has3d .box3d { display: block; }
+.t-logo.has3d #b-mark, .t-logo.has3d .word { visibility: hidden; }
+.t-logo .drag-hint { position: absolute; right: 14px; bottom: 12px; font-size: 10px; opacity: .6; display: none; }
+.t-logo.has3d .drag-hint { display: block; }
+.t-logo .t { z-index: 1; }
+.t-logo.has3d { background: #1B1B1A !important; border-color: var(--line) !important; }
+.t-logo.has3d .t { color: var(--muted) !important; }
+.t-logo.has3d .drag-hint { color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Brand-building studio that turns founders' stories into brands.","availableLanguage":["en","vi"],"areaServed":["VN","IT"]}</script>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder</i></a>
+  <ul class="cap">
+    <li><a href="#lab">Brand Lab</a></li>
+    <li><a href="#cach-lam">Cách làm</a></li>
+    <li><a href="#goi">Gói</a></li>
+    <li><a href="#automation">Automation</a></li>
+    <li><a href="#du-an">Dự án</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="vi" aria-pressed="false" lang="vi">VI</button>
+    </div>
+    <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas class="hero3d" id="hero3d" aria-hidden="true"></canvas>
+    <p class="kicker cap"><span class="dot" aria-hidden="true"></span>Studio xây thương hiệu · Việt Nam &amp; Ý</p>
+    <h1>
+      <span class="row"><span>You have the <span class="it">story.</span></span></span>
+      <span class="row"><span><span class="muted">We turn it into a</span> <span class="brand">brand.</span></span></span>
+    </h1>
+    <p class="promise">Bạn lo vận hành. <span>Chúng tôi lo thương hiệu.</span></p>
+    <div class="hero-foot">
+      <p><b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu có chất riêng. AI làm nhanh, con người quyết định.</p>
+      <div class="hero-cta">
+        <a class="pill" href="#lab">Thử Brand Lab <span aria-hidden="true">↓</span></a>
+        <a class="pill ghost" href="#du-an">Xem dự án</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b>11</b><span>thương hiệu đã đồng hành</span></div>
+      <div><b>2</b><span>quốc gia: Việt Nam, Ý</span></div>
+      <div><b>4</b><span>bước, bạn duyệt từng bước</span></div>
+    </div>
+  </section>
+
+  <div class="marquee bleed" aria-label="Những thương hiệu đã đồng hành">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <!-- Brand Lab -->
+  <section class="sec" id="lab">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Brand Lab</span>
+      <h2>Thử xây một thương hiệu. <span class="it">Ngay bây giờ.</span></h2>
+      <p>Nhập tên, chọn ngành và tính cách. Xem thử thương hiệu của bạn trong vài giây.</p>
+    </div>
+    <div class="lab-wrap">
+      <form class="lab-form" id="labForm" autocomplete="off">
+        <div class="field">
+          <label for="l-name">Tên thương hiệu</label>
+          <input type="text" id="l-name" maxlength="28" value="Mây Coffee" aria-describedby="l-hint">
+        </div>
+        <fieldset class="chips" id="l-ind">
+          <legend>Ngành</legend>
+        </fieldset>
+        <fieldset class="chips" id="l-per">
+          <legend>Tính cách</legend>
+        </fieldset>
+        <button class="build-btn" type="submit">Xây thương hiệu <kbd aria-hidden="true">↵ Enter</kbd></button>
+        <p class="lab-note" id="l-hint">Bản phác thảo tự động, chỉ để minh hoạ.</p>
+      </form>
+
+      <div>
+        <div class="status" id="status" aria-live="polite">
+          <span data-s="0">Lắng nghe</span><span data-s="1">Định vị</span><span data-s="2">Nhận diện</span><span data-s="3">Điểm chạm</span>
+        </div>
+        <div class="board" id="board">
+          <div class="tile t-logo" id="b-logo"><canvas class="box3d" id="box3d" role="img" aria-label="Hộp sản phẩm 3D của thương hiệu"></canvas><span class="drag-hint cap">Kéo để xoay</span><span class="t">Logo</span><div id="b-mark"></div><div class="word" id="b-word"></div></div>
+          <div class="tile t-pal" id="b-pal" aria-label="Bảng màu"></div>
+          <div class="tile t-type"><span class="t">Kiểu chữ</span><div class="aa" id="b-aa">Aa</div><div class="pair" id="b-pair"></div></div>
+          <div class="tile t-pos"><span class="t">Định vị</span><p id="b-pos"></p></div>
+          <div class="tile t-voice"><span class="t">Giọng văn</span><div class="w" id="b-voice"></div></div>
+          <div class="tile t-card"><span class="t">Danh thiếp</span><div class="mini-card" id="b-card"></div></div>
+          <div class="tile t-post"><span class="t">Bài đăng</span><div class="mini-post" id="b-post"></div></div>
+          <div class="tile t-web"><span class="t">Website</span><div class="mini-web" id="b-web"></div></div>
+        </div>
+        <div class="lab-cta">
+          <p>Thích hướng này? Chúng tôi xây bản thật cho bạn.</p>
+          <a class="pill" href="#lien-he" id="labToForm">Xây bản thật <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quy trình -->
+  <section class="sec" id="cach-lam">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
+      <h2>Bốn bước. <span class="it">Một thương hiệu.</span></h2>
+      <p>Bạn duyệt sau mỗi bước.</p>
+    </div>
+    <div class="process">
+      <div class="process-side">
+        <div class="bignum" id="bignum">1<small>/ 4</small></div>
+        <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="steps" id="steps"></div>
+    </div>
+  </section>
+
+  <!-- Gói -->
+  <section class="sec" id="goi">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Gói</span>
+      <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
+      <p>Báo giá sau buổi trò chuyện đầu tiên.</p>
+    </div>
+    <div class="pkgs">
+      <article class="pkg">
+        <span class="for cap">Doanh nghiệp mới mở</span>
+        <h3>Start</h3>
+        <p class="fit">Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.</p>
+        <ul>
+          <li>Lắng nghe và định vị bản gọn</li>
+          <li>Logo, màu sắc, kiểu chữ</li>
+          <li>Danh thiếp, ảnh đại diện, mẫu bài đăng</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="start">Chọn Start <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="pkg feature">
+        <span class="tag cap">Đầy đủ nhất</span>
+        <span class="for cap">Cần thương hiệu bài bản</span>
+        <h3>Build</h3>
+        <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
+        <ul>
+          <li>Đủ 4 bước</li>
+          <li>Câu chuyện thương hiệu và giọng văn</li>
+          <li>Bộ quy chuẩn thương hiệu</li>
+          <li>Website và các điểm chạm chính</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="pkg">
+        <span class="for cap">Thương hiệu đã cũ</span>
+        <h3>Refresh</h3>
+        <p class="fit">Phù hợp nếu khách nói thương hiệu của bạn "nhìn cũ".</p>
+        <ul>
+          <li>Đánh giá thương hiệu hiện tại</li>
+          <li>Định vị lại, làm mới nhận diện</li>
+          <li>Cập nhật các điểm chạm đang dùng</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="refresh">Chọn Refresh <span aria-hidden="true">→</span></button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Automation -->
+  <section class="sec" id="automation">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Thêm vào bất kỳ gói nào</span>
+      <h2>Automation Social Media <span class="it">cho bạn.</span></h2>
+      <p>Chúng tôi dựng sẵn hệ thống, team của bạn tự vận hành Facebook, TikTok, Instagram.</p>
+    </div>
+    <div class="auto">
+      <div><span class="n cap">01</span><b>Trợ lý AI riêng</b></div>
+      <div><span class="n cap">02</span><b>Lịch nội dung 30 ngày</b></div>
+      <div><span class="n cap">03</span><b>AI viết, bạn duyệt</b></div>
+      <div><span class="n cap">04</span><b>Tự lên lịch đăng</b></div>
+      <div><span class="n cap">05</span><b>Trả lời inbox tự động</b></div>
+    </div>
+    <div class="auto-foot" style="justify-content:flex-end">
+      <a class="pill ghost" href="#lien-he">Thêm Automation <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <!-- Dự án -->
+  <section class="sec" id="du-an">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dự án</span>
+      <h2>Những câu chuyện <span class="it">đã thành thương hiệu.</span></h2>
+      <p>Mỗi nơi một câu chuyện, một thương hiệu.</p>
+    </div>
+    <div class="grid" id="work"></div>
+  </section>
+
+</main>
+
+<footer id="lien-he">
+  <div class="contact-side">
+    <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
+    <ol class="next" aria-label="Sau khi bạn gửi">
+      <li><span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span></li>
+      <li><span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span></li>
+      <li><span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span></li>
+    </ol>
+    <dl class="reach">
+      <div><dt>Email</dt><dd><a href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a><button class="copy" type="button" id="copyMail">Sao chép</button></dd></div>
+      <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
+      <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
+    </dl>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#lab">Brand Lab</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
+  </div>
+
+  <div class="card-form" id="contactCard">
+    <div class="tabs" role="tablist" aria-label="Cách liên hệ">
+      <button type="button" role="tab" id="tab-story" aria-selected="true" aria-controls="form">Gửi câu chuyện</button>
+      <button type="button" role="tab" id="tab-call" aria-selected="false" aria-controls="callForm">Đặt lịch gọi 30 phút</button>
+    </div>
+
+    <form id="form" role="tabpanel" aria-labelledby="tab-story" novalidate style="display:grid;gap:16px">
+      <label for="f-name"><span>Tên của bạn</span><input id="f-name" name="name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-name"><em class="err" id="e-name" hidden></em></label>
+      <label for="f-biz"><span>Doanh nghiệp / website</span><input id="f-biz" name="biz" autocomplete="organization" placeholder="Doanh nghiệp / website" required aria-describedby="e-biz"><em class="err" id="e-biz" hidden></em></label>
+      <label for="f-contact"><span>Email hoặc số điện thoại</span><input id="f-contact" name="contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-contact"><em class="err" id="e-contact" hidden></em></label>
+      <fieldset class="pick">
+        <legend>Bạn đang ở giai đoạn nào?</legend>
+        <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> <span>Sắp mở</span></label>
+        <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> <span>Cần làm bài bản</span></label>
+        <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> <span>Muốn làm mới</span></label>
+        <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
+      </fieldset>
+      <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu? Vài dòng là đủ."></textarea></label>
+      <button class="submit" type="submit">Gửi câu chuyện <span aria-hidden="true">↗</span></button>
+      <p class="privacy">Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
+    </form>
+
+    <form id="callForm" role="tabpanel" aria-labelledby="tab-call" novalidate hidden style="gap:16px">
+      <div class="slots">
+        <span class="lbl">Chọn ngày</span>
+        <div class="days" id="days"></div>
+        <span class="lbl">Chọn giờ (giờ Việt Nam)</span>
+        <div class="times" id="times"></div>
+        <p class="sum" id="sum">Chọn ngày và giờ phù hợp với bạn.</p>
+      </div>
+      <label for="c-name"><span>Tên của bạn</span><input id="c-name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-cname"><em class="err" id="e-cname" hidden></em></label>
+      <label for="c-contact"><span>Email hoặc số điện thoại</span><input id="c-contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-ccontact"><em class="err" id="e-ccontact" hidden></em></label>
+      <button class="submit" type="submit">Giữ lịch này <span aria-hidden="true">↗</span></button>
+      <p class="privacy">Bạn sẽ nhận lời mời họp qua email. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
+    </form>
+
+    <div class="done" id="done" hidden aria-live="polite"></div>
+  </div>
+
+  <div class="legal cap">
+    <span>© 2026 Bunchasake · Brand Builder</span>
+    <span class="r"><button type="button" class="open-policy">Chính sách bảo mật</button><a href="#top">Lên đầu trang ↑</a></span>
+  </div>
+</footer>
+
+<dialog class="policy" id="policy" aria-labelledby="policy-h">
+  <h3 id="policy-h">Chính sách bảo mật</h3>
+  <p>Bunchasake chỉ thu thập những gì bạn tự điền vào form.</p>
+  <ul>
+    <li>Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.</li>
+    <li>Không bán hay chia sẻ cho bên thứ ba.</li>
+    <li>Bạn có thể yêu cầu xoá thông tin bất cứ lúc nào qua email.</li>
+  </ul>
+  <form method="dialog"><button class="pill" value="close">Đã hiểu</button></form>
+</dialog>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="pill" href="#lien-he" data-tab="story">Kể câu chuyện</a>
+  <a class="pill ghost" href="#lien-he" data-tab="call">Đặt lịch gọi</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- Ngôn ngữ (VI / EN) ---------- */
+const EN = {
+"Kéo để xoay": "Drag to rotate",
+"Bỏ qua, tới Brand Lab": "Skip to Brand Lab",
+"Cách làm": "How we work",
+"Gói": "Packages",
+"Dự án": "Work",
+"Kể câu chuyện <span aria-hidden=\"true\">↗</span>": "Tell your story <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Studio xây thương hiệu · Việt Nam &amp; Ý": "<span class=\"dot\" aria-hidden=\"true\"></span>Brand-building studio · Vietnam &amp; Italy",
+"Bạn lo vận hành. <span>Chúng tôi lo thương hiệu.</span>": "You run the business. <span>We grow the brand.</span>",
+"<b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu có chất riêng. AI làm nhanh, con người quyết định.": "<b>Bunchasake</b> listens to why you started, then builds a brand that is unmistakably yours. AI makes it fast; people make the calls.",
+"Thử Brand Lab <span aria-hidden=\"true\">↓</span>": "Try Brand Lab <span aria-hidden=\"true\">↓</span>",
+"Xem dự án": "See our work",
+"thương hiệu đã đồng hành": "brands we have worked with",
+"quốc gia: Việt Nam, Ý": "countries: Vietnam, Italy",
+"bước, bạn duyệt từng bước": "steps, you approve each one",
+"Thử xây một thương hiệu. <span class=\"it\">Ngay bây giờ.</span>": "Build a brand. <span class=\"it\">Right now.</span>",
+"Nhập tên, chọn ngành và tính cách. Xem thử thương hiệu của bạn trong vài giây.": "Type a name, pick an industry and a personality. See your brand in seconds.",
+"Tên thương hiệu": "Brand name",
+"Ngành": "Industry",
+"Tính cách": "Personality",
+"Xây thương hiệu <kbd aria-hidden=\"true\">↵ Enter</kbd>": "Build my brand <kbd aria-hidden=\"true\">↵ Enter</kbd>",
+"Bản phác thảo tự động, chỉ để minh hoạ.": "An automatic sketch, for illustration only.",
+"Lắng nghe": "Listening",
+"Định vị": "Positioning",
+"Nhận diện": "Identity",
+"Điểm chạm": "Touchpoints",
+"Kiểu chữ": "Typography",
+"Giọng văn": "Voice",
+"Danh thiếp": "Business card",
+"Bài đăng": "Social post",
+"Thích hướng này? Chúng tôi xây bản thật cho bạn.": "Like this direction? We will build the real one.",
+"Xây bản thật <span aria-hidden=\"true\">↗</span>": "Build the real one <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Cách chúng tôi làm": "<span class=\"dot\" aria-hidden=\"true\"></span>How we work",
+"Bốn bước. <span class=\"it\">Một thương hiệu.</span>": "Four steps. <span class=\"it\">One brand.</span>",
+"Bạn duyệt sau mỗi bước.": "You approve every step.",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Gói": "<span class=\"dot\" aria-hidden=\"true\"></span>Packages",
+"Chọn điểm <span class=\"it\">bắt đầu.</span>": "Choose where <span class=\"it\">to start.</span>",
+"Báo giá sau buổi trò chuyện đầu tiên.": "Quoted after our first conversation.",
+"Doanh nghiệp mới mở": "New businesses",
+"Cần thương hiệu bài bản": "Need a complete brand",
+"Thương hiệu đã cũ": "Brand feels dated",
+"Đầy đủ nhất": "Most complete",
+"Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.": "Right for you if you are about to open and need to look ready fast.",
+"Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.": "Right for you if you want a brand that lasts for years.",
+"Phù hợp nếu khách nói thương hiệu của bạn \"nhìn cũ\".": "Right for you if customers say your brand \"looks old\".",
+"Lắng nghe và định vị bản gọn": "Short listening and positioning",
+"Logo, màu sắc, kiểu chữ": "Logo, colours, typography",
+"Danh thiếp, ảnh đại diện, mẫu bài đăng": "Business card, profile image, post templates",
+"Đủ 4 bước": "All 4 steps",
+"Câu chuyện thương hiệu và giọng văn": "Brand story and voice",
+"Bộ quy chuẩn thương hiệu": "Brand guidelines",
+"Website và các điểm chạm chính": "Website and key touchpoints",
+"Đánh giá thương hiệu hiện tại": "Review of your current brand",
+"Định vị lại, làm mới nhận diện": "Repositioning and a refreshed identity",
+"Cập nhật các điểm chạm đang dùng": "Updated touchpoints you already use",
+"Chọn Start <span aria-hidden=\"true\">→</span>": "Choose Start <span aria-hidden=\"true\">→</span>",
+"Chọn Build <span aria-hidden=\"true\">→</span>": "Choose Build <span aria-hidden=\"true\">→</span>",
+"Chọn Refresh <span aria-hidden=\"true\">→</span>": "Choose Refresh <span aria-hidden=\"true\">→</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Thêm vào bất kỳ gói nào": "<span class=\"dot\" aria-hidden=\"true\"></span>Add to any package",
+"Automation Social Media <span class=\"it\">cho bạn.</span>": "Social Media Automation, <span class=\"it\">built for you.</span>",
+"Chúng tôi dựng sẵn hệ thống, team của bạn tự vận hành Facebook, TikTok, Instagram.": "We set up the system; your team runs Facebook, TikTok and Instagram.",
+"Trợ lý AI riêng": "Your own AI assistant",
+"Lịch nội dung 30 ngày": "30-day content calendar",
+"AI viết, bạn duyệt": "AI drafts, you approve",
+"Tự lên lịch đăng": "Auto-scheduled posts",
+"Trả lời inbox tự động": "Automatic inbox replies",
+"Thêm Automation <span aria-hidden=\"true\">↗</span>": "Add Automation <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Dự án": "<span class=\"dot\" aria-hidden=\"true\"></span>Work",
+"Những câu chuyện <span class=\"it\">đã thành thương hiệu.</span>": "Stories <span class=\"it\">that became brands.</span>",
+"Mỗi nơi một câu chuyện, một thương hiệu.": "Every place has a story, and its own brand.",
+"Kể chúng tôi nghe <span class=\"it\">câu chuyện của bạn.</span>": "Tell us <span class=\"it\">your story.</span>",
+"<span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span>": "<span><b>We read your story</b> and prepare questions just for you.</span>",
+"<span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span>": "<span><b>A 60-minute conversation</b>, online or in person.</span>",
+"<span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span>": "<span><b>A proposal and quote</b> for exactly what you need.</span>",
+"Làm việc": "Based in",
+"Ngôn ngữ": "Languages",
+"Việt Nam · Ý · Online": "Vietnam · Italy · Online",
+"Tiếng Việt · English": "Vietnamese · English",
+"Sao chép": "Copy",
+"Gửi câu chuyện": "Send your story",
+"Đặt lịch gọi 30 phút": "Book a 30-min call",
+"Tên của bạn": "Your name",
+"Doanh nghiệp / website": "Business / website",
+"Email hoặc số điện thoại": "Email or phone",
+"Vì sao bạn bắt đầu?": "Why did you start?",
+"Bạn đang ở giai đoạn nào?": "Where are you right now?",
+"Sắp mở": "Opening soon",
+"Cần làm bài bản": "Need the full brand",
+"Muốn làm mới": "Want a refresh",
+"Gửi câu chuyện <span aria-hidden=\"true\">↗</span>": "Send your story <span aria-hidden=\"true\">↗</span>",
+"Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type=\"button\" class=\"open-policy\">Chính sách bảo mật</button>": "We only use this to get back to you about your project. <button type=\"button\" class=\"open-policy\">Privacy policy</button>",
+"Bạn sẽ nhận lời mời họp qua email. <button type=\"button\" class=\"open-policy\">Chính sách bảo mật</button>": "You will get a meeting invite by email. <button type=\"button\" class=\"open-policy\">Privacy policy</button>",
+"Chọn ngày": "Pick a day",
+"Chọn giờ (giờ Việt Nam)": "Pick a time (Vietnam time)",
+"Giữ lịch này <span aria-hidden=\"true\">↗</span>": "Hold this slot <span aria-hidden=\"true\">↗</span>",
+"Chính sách bảo mật": "Privacy policy",
+"Lên đầu trang ↑": "Back to top ↑",
+"Bunchasake chỉ thu thập những gì bạn tự điền vào form.": "Bunchasake only collects what you type into the form.",
+"Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.": "It is used to get back to you and prepare for your project.",
+"Không bán hay chia sẻ cho bên thứ ba.": "It is never sold or shared with third parties.",
+"Bạn có thể yêu cầu xoá thông tin bất cứ lúc nào qua email.": "You can ask us to delete it at any time by email.",
+"Đã hiểu": "Got it",
+"Kể câu chuyện": "Tell your story",
+"Đặt lịch gọi": "Book a call"
+};
+const EN_ATTR = {
+"Hộp sản phẩm 3D của thương hiệu": "3D product box of the brand",
+"Những thương hiệu đã đồng hành": "Brands we have worked with",
+"Bảng màu": "Palette",
+"Sau khi bạn gửi": "After you send it",
+"Chân trang": "Footer",
+"Cách liên hệ": "How to reach us",
+"Tên của bạn": "Your name",
+"Doanh nghiệp / website": "Business / website",
+"Email hoặc số điện thoại": "Email or phone",
+"Vì sao bạn bắt đầu? Vài dòng là đủ.": "Why did you start? A few lines is enough."
+};
+const norm = h => h.replace(/\s+/g, " ").trim();
+let LANG = "en";
+try { LANG = localStorage.getItem("bsk-lang") === "vi" ? "vi" : "en"; } catch {}
+const t = (vi, en) => LANG === "en" ? en : vi;
+const tr = o => LANG === "en" && o.en ? { ...o, ...o.en } : o;
+const ENN = {}; for (const k in EN) ENN[norm(k)] = EN[k];
+let staticEls = null;
+function applyStatic() {
+  if (!staticEls) {
+    staticEls = [];
+    document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
+      const k = norm(el.innerHTML);
+      if (ENN[k] !== undefined) staticEls.push({ el, vi: el.innerHTML, en: ENN[k] });
+      for (const a of ["placeholder", "aria-label"]) { const v = el.getAttribute(a); if (v && EN_ATTR[v]) staticEls.push({ el, attr: a, vi: v, en: EN_ATTR[v] }); }
+    });
+  }
+  staticEls.forEach(x => { if (!x.el.isConnected) return; const v = LANG === "en" ? x.en : x.vi; if (x.attr) x.el.setAttribute(x.attr, v); else if (x.el.innerHTML !== v) x.el.innerHTML = v; });
+  document.documentElement.lang = LANG;
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+}
+
+/* ---------- Dữ liệu ---------- */
+const projects = [
+  { name: "Chop Chop", sector: "Nhà hàng", sectorEn: "Restaurant", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook", big: true },
+  { name: "Borgo Villa Nemec", sector: "Villa · Ý", sectorEn: "Villa · Italy", img: "work/borgo-villa-nemec.svg", url: "https://borgovillanemec.it/", ch: "Website", big: true },
+  { name: "Impact Investments", sector: "Đầu tư · Ý", sectorEn: "Investment · Italy", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", ch: "Website" },
+  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình · Hà Nội", sectorEn: "Home services · Hanoi", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", ch: "Facebook" },
+  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", sectorEn: "Healthcare · Personal brand", img: "work/bac-si-anh.jpg", url: "https://www.facebook.com/profile.php?id=61596245068595", ch: "Facebook" },
+  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", sectorEn: "Flowers · Landscaping", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", ch: "Instagram" },
+  { name: "Lạc Hồng", sector: "Máy xây dựng", sectorEn: "Construction machinery", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", ch: "Website" },
+  { name: "Talk2TheTop", sector: "Podcast", sectorEn: "Podcast", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", ch: "YouTube" },
+  { name: "NA-VI Living", sector: "Lưu trú", sectorEn: "Hospitality", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", ch: "Website" },
+  { name: "Vestra Place", sector: "Coworking", sectorEn: "Coworking", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
+  { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
+];
+const steps = [
+  { en: { name: "Listening", desc: "We talk with the founder: why you started and what you believe in. We study your customers and competitors to see where the brand stands." }, name: "Lắng nghe", desc: "Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ để biết thương hiệu đang đứng ở đâu.", items: ["Buổi trò chuyện 60 phút", "Khảo sát khách hàng", "Bản đồ đối thủ"], ai: "Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ." },
+  { en: { name: "Positioning", desc: "Who the brand is, who it is for, how it is different. From there we write the brand story every channel will tell." }, name: "Định vị", desc: "Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.", items: ["Tuyên bố định vị", "Câu chuyện thương hiệu", "Thông điệp và slogan"], ai: "Đưa ra nhiều phương án để chúng tôi chọn và chỉnh." },
+  { en: { name: "Identity", desc: "We give the story a shape: a name if needed, logo, colours, typography and voice, packed into easy-to-use guidelines." }, name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
+  { en: { name: "Touchpoints", desc: "We bring the brand to every place customers see it, so your website and your business card speak with one voice." }, name: "Điểm chạm", desc: "Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.", items: ["Website", "Bao bì, biển hiệu", "Danh thiếp, profile", "Mạng xã hội"], ai: "Dựng mockup nhanh, viết nội dung song ngữ." },
+];
+/* ---------- Brand Lab ---------- */
+const industries = {
+  cafe: { en: { label: "Café", noun: "café", aud: "people who need a slow corner in a busy day" }, label: "Cà phê",     noun: "quán cà phê",          aud: "người cần một góc chậm lại giữa ngày" },
+  food: { en: { label: "Restaurant", noun: "restaurant", aud: "meals worth coming back for" }, label: "Nhà hàng",   noun: "nhà hàng",             aud: "những bữa ăn đáng để quay lại" },
+  stay: { en: { label: "Hospitality", noun: "place to stay", aud: "guests who want to feel at home" }, label: "Lưu trú",    noun: "nơi lưu trú",          aud: "người muốn ở như ở nhà" },
+  beauty: { en: { label: "Beauty", noun: "beauty brand", aud: "people who want to take better care of themselves" }, label: "Làm đẹp",    noun: "thương hiệu làm đẹp",  aud: "người muốn chăm mình kỹ hơn" },
+  fashion: { en: { label: "Fashion", noun: "fashion brand", aud: "people who dress to say who they are" }, label: "Thời trang", noun: "thương hiệu thời trang", aud: "người mặc để nói về mình" },
+  tech: { en: { label: "Tech", noun: "tech company", aud: "businesses that want to move faster" }, label: "Công nghệ",  noun: "công ty công nghệ",    aud: "doanh nghiệp muốn làm nhanh hơn" },
+};
+const personas = {
+  warm:   { en: {"label": "Warm", "adj": "warm and welcoming", "voice": ["Friendly", "Sincere", "Honest"], "lines": ["Home flavour, every day.", "As warm as a first hello.", "Slow down a little, stay a little longer."]}, label: "Ấm áp",     font: "'Fraunces', serif", weight: 600, transform: "none", spacing: "-0.02em", pair: "Fraunces + Inter",
+            pals: [["#7A2E1F","#E9A23B","#F4EBDD","#2B2420"], ["#8C4A2F","#D8B26E","#F6EFE4","#33291F"]],
+            adj: "ấm áp và gần gũi", voice: ["Gần gũi", "Chân thành", "Mộc"],
+            lines: ["Vị nhà, mỗi ngày.", "Ấm như lời chào đầu tiên.", "Chậm lại một chút, ở lại lâu hơn."] },
+  minimal:{ en: {"label": "Minimal", "adj": "clean and clear", "voice": ["Concise", "Clear", "Calm"], "lines": ["Less, but better.", "Only what matters.", "Simple. Clear. Trusted."]}, label: "Tối giản",  font: "'Be Vietnam Pro', sans-serif", weight: 500, transform: "none", spacing: "-0.04em", pair: "Be Vietnam Pro + Inter",
+            pals: [["#111111","#F2F2EF","#B8B8B2","#3D5AFE"], ["#1C1F22","#EDEBE6","#A7AAA4","#E85D3F"]],
+            adj: "gọn gàng và rõ ràng", voice: ["Ngắn gọn", "Rõ ràng", "Bình tĩnh"],
+            lines: ["Ít hơn, nhưng đúng hơn.", "Chỉ giữ lại điều cần thiết.", "Gọn. Rõ. Đáng tin."] },
+  luxe:   { en: {"label": "Luxury", "adj": "refined and selective", "voice": ["Refined", "Composed", "Selective"], "lines": ["For those who know.", "Refined in every detail.", "No need to say more."]}, label: "Sang trọng", font: "'Playfair Display', serif", weight: 500, transform: "uppercase", spacing: "0.12em", pair: "Playfair Display + Inter",
+            pals: [["#0F2A2A","#C8A96A","#F3EEE4","#1A1A1A"], ["#2A0F1E","#C9A46B","#F4EEE6","#151515"]],
+            adj: "tinh tế và chọn lọc", voice: ["Tinh tế", "Điềm đạm", "Chọn lọc"],
+            lines: ["Dành cho người biết chọn.", "Tinh tế trong từng chi tiết.", "Không cần nói nhiều."] },
+  bold:   { en: {"label": "Bold", "adj": "bold and different", "voice": ["Direct", "Confident", "Energetic"], "lines": ["Never follow the crowd.", "Say what you believe, loudly.", "Different by default."]}, label: "Táo bạo",   font: "'Anton', sans-serif", weight: 400, transform: "uppercase", spacing: "0.01em", pair: "Anton + Inter",
+            pals: [["#FF3D2E","#111111","#FFE14D","#F5F5F0"], ["#1E3BFF","#0E0E0E","#C6FF3D","#F4F4EF"]],
+            adj: "táo bạo và khác biệt", voice: ["Thẳng thắn", "Tự tin", "Năng lượng"],
+            lines: ["Không làm theo đám đông.", "Nói to điều bạn tin.", "Khác biệt là mặc định."] },
+  playful:{ en: {"label": "Playful", "adj": "playful and charming", "voice": ["Cheerful", "Friendly", "Surprising"], "lines": ["Joy at first sight.", "A small joy every day.", "Don't take it too seriously!"]}, label: "Vui tươi",  font: "'Baloo 2', sans-serif", weight: 800, transform: "none", spacing: "-0.01em", pair: "Baloo 2 + Inter",
+            pals: [["#FF7AA2","#2D2A6E","#FFF4C2","#3DDC97"], ["#FF8A3D","#1F3A5F","#FFF1DD","#7BD3EA"]],
+            adj: "vui tươi và dễ thương", voice: ["Vui vẻ", "Thân thiện", "Bất ngờ"],
+            lines: ["Vui từ cái nhìn đầu tiên.", "Mỗi ngày một niềm vui nhỏ.", "Đừng nghiêm túc quá nhé!"] },
+};
+
+const hash = s => { let h = 2166136261; for (const c of s) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const lum = hex => { const n = parseInt(hex.slice(1), 16); const ch = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * ch[0] + .7152 * ch[1] + .0722 * ch[2]; };
+const on = hex => lum(hex) > .4 ? "#111111" : "#FFFFFF";
+
+function markSVG(shape, letter, fg, bg, font, weight) {
+  const shapes = {
+    warm: `<circle cx="50" cy="50" r="46" fill="${bg}"/>`,
+    minimal: `<rect x="6" y="6" width="88" height="88" fill="none" stroke="${bg}" stroke-width="6"/>`,
+    luxe: `<rect x="14" y="14" width="72" height="72" transform="rotate(45 50 50)" fill="none" stroke="${bg}" stroke-width="3"/><rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)" fill="none" stroke="${bg}" stroke-width="1.5"/>`,
+    bold: `<path d="M18 6 H94 L82 94 H6 Z" fill="${bg}"/>`,
+    playful: `<path d="M50 4 C78 4 96 22 96 48 C96 78 76 96 48 96 C20 96 4 78 4 50 C4 24 22 4 50 4 Z" fill="${bg}"/>`,
+  };
+  const textFill = shape === "minimal" || shape === "luxe" ? bg : fg;
+  return `<svg viewBox="0 0 100 100" aria-hidden="true">${shapes[shape]}<text x="50" y="52" text-anchor="middle" dominant-baseline="central" font-family="${font.replace(/"/g, "'")}" font-weight="${weight}" font-size="${shape === "luxe" ? 34 : 48}" fill="${textFill}">${esc(letter)}</text></svg>`;
+}
+
+function buildChips(el, map, name, def) {
+  el.insertAdjacentHTML("beforeend", Object.entries(map).map(([k, v]) =>
+    `<label><input type="radio" name="${name}" value="${k}" ${k === def ? "checked" : ""}><span>${tr(v).label}</span></label>`).join(""));
+}
+buildChips(document.getElementById("l-ind"), industries, "ind", "cafe");
+buildChips(document.getElementById("l-per"), personas, "per", "warm");
+
+function renderBrand() {
+  const name = (document.getElementById("l-name").value.trim() || t("Thương hiệu của bạn", "Your brand")).slice(0, 28);
+  const ind = tr(industries[document.querySelector('input[name="ind"]:checked').value]);
+  const pk = document.querySelector('input[name="per"]:checked').value;
+  const p = tr(personas[pk]);
+  const h = hash(name + pk);
+  const pal = p.pals[h % p.pals.length];
+  const [c1, c2, c3, c4] = pal;
+  const line = p.lines[h % p.lines.length];
+  const letter = [...name][0].toUpperCase();
+  const fontCss = `font-family:${p.font};font-weight:${p.weight};text-transform:${p.transform};letter-spacing:${p.spacing}`;
+
+  const logo = document.getElementById("b-logo");
+  logo.style.background = c3; logo.style.color = c1; logo.style.borderColor = c3;
+  logo.querySelector(".t").style.color = on(c3);
+  document.getElementById("b-mark").innerHTML = `<div class="mark">${markSVG(pk, letter, on(c1), c1, p.font, p.weight)}</div>`;
+  const word = document.getElementById("b-word");
+  word.textContent = name; word.setAttribute("style", fontCss);
+
+  document.getElementById("b-pal").innerHTML = pal.map((c, i) =>
+    `<div style="background:${c};color:${on(c)}"><span>${(LANG === "en" ? ["Primary", "Accent", "Base", "Support"] : ["Chính", "Nhấn", "Nền", "Phụ"])[i]}</span><span>${c}</span></div>`).join("");
+
+  const aaColor = [c2, c1, c3, c4].sort((a, b) => lum(b) - lum(a)).find(c => lum(c) > .12 && lum(c) < .9) || c3;
+  const aa = document.getElementById("b-aa"); aa.setAttribute("style", fontCss + ";color:" + aaColor);
+  aa.textContent = p.transform === "uppercase" ? "AA" : "Aa";
+  document.getElementById("b-pair").textContent = p.pair;
+
+  document.getElementById("b-pos").innerHTML = LANG === "en" ? `<b>${esc(name)}</b> is a ${p.adj} ${ind.noun} for ${ind.aud}.` : `<b>${esc(name)}</b> là ${ind.noun} ${p.adj}, dành cho ${ind.aud}.`;
+  document.getElementById("b-voice").innerHTML = p.voice.map(v => `<span>${v}</span>`).join("");
+
+  document.getElementById("b-card").style.background = c3;
+  document.getElementById("b-card").style.color = c1;
+  document.getElementById("b-card").innerHTML = `${markSVG(pk, letter, on(c1), c1, p.font, p.weight)}<div><b style="${fontCss}">${esc(name)}</b><small style="color:${on(c3)}">${ind.label} · bunchasake.com</small></div>`;
+
+  const post = document.getElementById("b-post");
+  post.style.background = c1; post.style.color = on(c1);
+  post.innerHTML = `<i style="background:${c2}"></i><p style="${fontCss};font-size:${p.transform === "uppercase" ? 12 : 14}px">${esc(line)}</p>`;
+
+  const web = document.getElementById("b-web");
+  const webBg = lum(c4) > .5 ? c1 : c4;
+  web.style.background = webBg; web.style.color = on(webBg);
+  web.innerHTML = `<div class="bar"><i></i><i></i><i></i></div><div class="body"><b style="${fontCss}">${esc(line)}</b><span style="background:${c2}"></span></div>`;
+  if (window.drawBox3D) window.drawBox3D({ name, letter, pk, p, pal, line, ind });
+}
+
+const board = document.getElementById("board");
+const statusEls = [...document.querySelectorAll("#status span")];
+let timer = [];
+function build(animate) {
+  timer.forEach(clearTimeout); timer = [];
+  renderBrand();
+  if (!animate || reduce) { statusEls.forEach(s => { s.className = "done"; }); return; }
+  board.classList.remove("building"); void board.offsetWidth; board.classList.add("building");
+  statusEls.forEach(s => { s.className = ""; });
+  statusEls.forEach((s, i) => {
+    timer.push(setTimeout(() => { statusEls.forEach((x, j) => { x.className = j < i ? "done" : j === i ? "on" : ""; }); }, i * 220));
+  });
+  timer.push(setTimeout(() => statusEls.forEach(s => { s.className = "done"; }), 4 * 220 + 200));
+}
+document.getElementById("labForm").addEventListener("submit", e => { e.preventDefault(); build(true); });
+document.querySelectorAll('#labForm input[type="radio"]').forEach(r => r.addEventListener("change", () => build(true)));
+let typeT; document.getElementById("l-name").addEventListener("input", () => { clearTimeout(typeT); typeT = setTimeout(() => build(false), 160); });
+document.getElementById("labToForm").addEventListener("click", () => {
+  const n = document.getElementById("l-name").value.trim();
+  const biz = document.getElementById("f-biz"); if (n && !biz.value) biz.value = n;
+});
+build(false);
+
+/* ---------- Marquee ---------- */
+const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
+document.getElementById("marquee").innerHTML = names + names;
+
+/* ---------- Quy trình ---------- */
+const stepsEl = document.getElementById("steps");
+stepsEl.innerHTML = steps.map((s, i) => `
+  <article class="step${i === 0 ? " active" : ""}" data-i="${i}">
+    <span class="n cap"></span>
+    <h3></h3>
+    <p></p>
+  </article>`).join("");
+function renderSteps() {
+  stepsEl.querySelectorAll(".step").forEach((el, i) => {
+    const s = tr(steps[i]);
+    el.querySelector(".n").textContent = t("Bước ", "Step ") + (i + 1);
+    el.querySelector("h3").textContent = s.name;
+    el.querySelector("p").textContent = s.desc;
+  });
+}
+renderSteps();
+const bignum = document.getElementById("bignum"), trackI = [...document.querySelectorAll("#track i")];
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const i = +en.target.dataset.i;
+      stepsEl.querySelectorAll(".step").forEach((s, j) => s.classList.toggle("active", j === i));
+      bignum.innerHTML = `${i + 1}<small>/ 4</small>`;
+      trackI.forEach((t, j) => t.classList.toggle("on", j <= i));
+    });
+  }, { rootMargin: "-45% 0px -45% 0px" });
+  stepsEl.querySelectorAll(".step").forEach(s => io.observe(s));
+} else { stepsEl.classList.add("no-io"); }
+
+/* ---------- Dự án ---------- */
+function renderWork() { document.getElementById("work").innerHTML = projects.map(p => `
+  <div class="card${p.big ? " big" : ""}">
+    <a class="img" href="${p.url}" target="_blank" rel="noopener" aria-label="${esc(p.name)}"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"><span class="view cap">${t("Xem", "View")} ↗</span></a>
+    <div class="top"><h3>${esc(p.name)}</h3><a class="ch" href="${p.url}" target="_blank" rel="noopener">${p.ch} ↗</a></div>
+    <p>${esc(LANG === "en" ? p.sectorEn : p.sector)}</p>
+  </div>`).join(""); }
+renderWork();
+
+/* ---------- Thanh cuộn + nav ---------- */
+const prog = document.getElementById("progress"), nav = document.getElementById("nav");
+function onScroll() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  prog.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  nav.classList.toggle("scrolled", scrollY > 10);
+}
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+/* ---------- Scrollspy ---------- */
+const navLinks = [...document.querySelectorAll('.nav ul a')];
+if ("IntersectionObserver" in window) {
+  const spy = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+  }), { rootMargin: "-40% 0px -55% 0px" });
+  ["lab", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
+}
+
+/* ---------- Thanh CTA trên điện thoại ---------- */
+const mcta = document.getElementById("mobileCta"), heroEl = document.querySelector(".hero"), contactEl = document.getElementById("lien-he");
+addEventListener("scroll", () => {
+  const past = heroEl.getBoundingClientRect().bottom < 0;
+  const atContact = contactEl.getBoundingClientRect().top < innerHeight * .8;
+  mcta.classList.toggle("show", past && !atContact);
+}, { passive: true });
+
+/* ---------- Liên hệ: tab ---------- */
+const tabStory = document.getElementById("tab-story"), tabCall = document.getElementById("tab-call");
+const storyForm = document.getElementById("form"), callForm = document.getElementById("callForm"), doneEl = document.getElementById("done");
+function showTab(which) {
+  const call = which === "call";
+  tabStory.setAttribute("aria-selected", !call); tabCall.setAttribute("aria-selected", call);
+  storyForm.hidden = call; callForm.hidden = !call; doneEl.hidden = true;
+  storyForm.style.display = call ? "none" : "grid"; callForm.style.display = call ? "grid" : "none";
+}
+tabStory.addEventListener("click", () => showTab("story"));
+tabCall.addEventListener("click", () => showTab("call"));
+document.querySelectorAll("[data-tab]").forEach(a => a.addEventListener("click", () => showTab(a.dataset.tab)));
+
+/* Chọn gói → điền sẵn form */
+document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", () => {
+  showTab("story");
+  const r = document.getElementById("p-" + b.dataset.pkg); if (r) r.checked = true;
+  document.getElementById("lien-he").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), reduce ? 0 : 600);
+}));
+
+/* Kiểm tra từng ô */
+const rules = {
+  "f-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
+  "f-biz": v => v ? "" : t("Tên doanh nghiệp hoặc website giúp chúng tôi chuẩn bị trước.", "Your business or website helps us prepare."),
+  "f-contact": v => !v ? t("Cần email hoặc số điện thoại để liên hệ lại.", "We need an email or phone number to reply.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
+  "c-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
+  "c-contact": v => !v ? t("Cần email hoặc số điện thoại để gửi lời mời.", "We need an email or phone number to send the invite.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
+};
+const errIds = { "f-name": "e-name", "f-biz": "e-biz", "f-contact": "e-contact", "c-name": "e-cname", "c-contact": "e-ccontact" };
+function check(id) {
+  const el = document.getElementById(id), msg = rules[id](el.value.trim()), er = document.getElementById(errIds[id]);
+  el.setAttribute("aria-invalid", !!msg); er.hidden = !msg; er.textContent = msg; return !msg;
+}
+Object.keys(rules).forEach(id => document.getElementById(id).addEventListener("blur", e => { if (e.target.value) check(id); }));
+
+function finish(title, lines) {
+  storyForm.style.display = "none"; callForm.style.display = "none"; storyForm.hidden = callForm.hidden = true;
+  doneEl.hidden = false;
+  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol><p class="privacy">${t("Đây là bản demo nên thông tin chưa được gửi đi.", "This is a demo, so nothing has been sent yet.")}</p><button class="again" type="button">${t("Quay lại form", "Back to the form")}</button>`;
+  doneEl.querySelector(".again").addEventListener("click", () => showTab(tabCall.getAttribute("aria-selected") === "true" ? "call" : "story"));
+  doneEl.querySelector("h3").setAttribute("tabindex", "-1"); doneEl.querySelector("h3").focus();
+}
+storyForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const ok = ["f-name", "f-biz", "f-contact"].map(check).every(Boolean);
+  if (!ok) { storyForm.querySelector('[aria-invalid="true"]').focus(); return; }
+  const n = esc(document.getElementById("f-name").value.trim());
+  finish(t(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, `Thank you, ${n}. We have your story.`), LANG === "en" ? ["We read it and prepare questions just for you.", "We get in touch to set up a 60-minute conversation.", "We send a proposal and quote."] : ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
+});
+
+/* Đặt lịch */
+const daysEl = document.getElementById("days"), timesEl = document.getElementById("times"), sumEl = document.getElementById("sum");
+const wdVi = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], wdEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wd = i => (LANG === "en" ? wdEn : wdVi)[i], slots = ["09:00", "10:30", "14:00", "15:30", "17:00"];
+const days = []; for (let d = new Date(), k = 0; days.length < 6 && k < 14; k++) { d = new Date(Date.now() + (k + 1) * 864e5); if (d.getDay() % 6) days.push(d); }
+let pickDay = null, pickTime = null;
+function renderDays() { daysEl.innerHTML = days.map((d, i) => `<button type="button" aria-pressed="${i === pickDay}" data-i="${i}"><small>${wd(d.getDay())}</small>${d.getDate()}/${d.getMonth() + 1}</button>`).join(""); }
+renderDays();
+timesEl.innerHTML = slots.map(t => `<button type="button" aria-pressed="false" data-t="${t}">${t}</button>`).join("");
+function updSum() {
+  sumEl.textContent = pickDay !== null && pickTime ? `${t("Cuộc gọi 30 phút", "30-min call")} · ${wd(days[pickDay].getDay())}, ${days[pickDay].getDate()}/${days[pickDay].getMonth() + 1} · ${pickTime}` : t("Chọn ngày và giờ phù hợp với bạn.", "Pick a day and time that suits you.");
+}
+daysEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickDay = +b.dataset.i; daysEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
+timesEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickTime = b.dataset.t; timesEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
+callForm.addEventListener("submit", e => {
+  e.preventDefault();
+  if (pickDay === null || !pickTime) { sumEl.textContent = t("Vui lòng chọn ngày và giờ trước.", "Please pick a day and time first."); sumEl.focus?.(); return; }
+  const ok = ["c-name", "c-contact"].map(check).every(Boolean);
+  if (!ok) { callForm.querySelector('[aria-invalid="true"]').focus(); return; }
+  finish(t("Đã giữ lịch cho bạn.", "Your slot is held."), [esc(sumEl.textContent), t("Lời mời họp sẽ được gửi tới ", "The meeting invite will go to ") + esc(document.getElementById("c-contact").value.trim()) + ".", t("Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo.", "Bring your story; we will take care of the rest.")]);
+});
+
+/* Sao chép email + chính sách */
+document.getElementById("copyMail").addEventListener("click", async e => {
+  const b = e.currentTarget, mail = document.getElementById("mail").textContent;
+  try { await navigator.clipboard.writeText(mail); b.textContent = t("Đã chép", "Copied"); }
+  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = t("Đã chọn", "Selected"); }
+  setTimeout(() => { b.textContent = t("Sao chép", "Copy"); }, 1800);
+});
+const policy = document.getElementById("policy");
+document.addEventListener("click", e => { if (e.target.closest(".open-policy")) policy.showModal ? policy.showModal() : policy.setAttribute("open", ""); });
+
+/* ---------- Chuyển ngôn ngữ ---------- */
+function setLang(l) {
+  LANG = l; try { localStorage.setItem("bsk-lang", l); } catch {}
+  applyStatic();
+  document.querySelectorAll("#l-ind label, #l-per label").forEach(lb => {
+    const inp = lb.querySelector("input"), map = inp.name === "ind" ? industries : personas;
+    lb.querySelector("span").textContent = tr(map[inp.value]).label;
+  });
+  renderSteps(); renderWork(); renderDays(); updSum(); build(false);
+  Object.keys(rules).forEach(id => { if (document.getElementById(id).getAttribute("aria-invalid") === "true") check(id); });
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+if (LANG !== "vi") setLang(LANG); else applyStatic();
+
+/* ---------- 3D ---------- */
+const has3D = (() => { try { const c = document.createElement("canvas"); return !!(window.THREE && (c.getContext("webgl") || c.getContext("experimental-webgl"))); } catch { return false; } })();
+
+function initHero3D() {
+  const canvas = document.getElementById("hero3d");
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, .1, 100);
+  camera.position.set(8.5, 7.2, 10.5); camera.lookAt(0, 1.2, 0);
+  scene.add(new THREE.AmbientLight(0xffffff, .35));
+  const key = new THREE.DirectionalLight(0xffffff, 1.15); key.position.set(5, 10, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0xff4a2e, .35); rim.position.set(-7, 3, -5); scene.add(rim);
+  const group = new THREE.Group(); scene.add(group);
+  const geo = new THREE.BoxGeometry(.92, .92, .92), edges = new THREE.EdgesGeometry(geo);
+  const mats = [new THREE.MeshStandardMaterial({ color: 0x1b1b19, roughness: .6, metalness: .1 }), new THREE.MeshStandardMaterial({ color: 0x2b2b28, roughness: .5, metalness: .1 })];
+  const matRed = new THREE.MeshStandardMaterial({ color: 0xff4a2e, roughness: .35, emissive: 0x3a0a04 });
+  const lineMat = new THREE.LineBasicMaterial({ color: 0x55554f });
+  const blocks = [];
+  [4, 3, 2, 1].forEach((n, y) => {
+    const off = (n - 1) / 2;
+    for (let x = 0; x < n; x++) for (let z = 0; z < n; z++) {
+      const top = n === 1;
+      const m = new THREE.Mesh(geo, top ? matRed : mats[(x + z + y) % 2]);
+      if (!top) m.add(new THREE.LineSegments(edges, lineMat));
+      const target = new THREE.Vector3(x - off, y + .46, z - off);
+      const start = new THREE.Vector3((Math.random() - .5) * 20, 9 + Math.random() * 9, (Math.random() - .5) * 20);
+      const rot = new THREE.Euler(Math.random() * 6, Math.random() * 6, Math.random() * 6);
+      group.add(m); blocks.push({ m, target, start, rot, delay: y * .4 + Math.random() * .35 });
+    }
+  });
+  const red = blocks[blocks.length - 1];
+  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / Math.max(r.height, 1); camera.updateProjectionMatrix(); frame(performance.now()); }
+  let mx = 0, my = 0, visible = true, raf = 0;
+  const t0 = performance.now(), ease = k => 1 - Math.pow(1 - k, 3);
+  function frame(now) {
+    const t = (now - t0) / 1000;
+    blocks.forEach(b => {
+      const e = reduce ? 1 : ease(Math.min(1, Math.max(0, (t - b.delay) / 1.15)));
+      b.m.position.lerpVectors(b.start, b.target, e);
+      b.m.rotation.set(b.rot.x * (1 - e), b.rot.y * (1 - e), b.rot.z * (1 - e));
+    });
+    if (!reduce && t > 2.6) red.m.position.y = red.target.y + .14 + Math.sin(t * 1.6) * .12;
+    const ry = .55 + (reduce ? 0 : Math.sin(t * .2) * .2) + mx * .7;
+    group.rotation.y += (ry - group.rotation.y) * (reduce ? 1 : .05);
+    group.rotation.x += (my * .14 - group.rotation.x) * (reduce ? 1 : .05);
+    renderer.render(scene, camera);
+  }
+  function loop() { cancelAnimationFrame(raf); const tick = now => { frame(now); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
+  addEventListener("pointermove", e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+  addEventListener("resize", size);
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) loop(); }).observe(canvas);
+  size(); loop();
+}
+
+function initBox3D() {
+  const tile = document.getElementById("b-logo"), canvas = document.getElementById("box3d");
+  tile.classList.add("has3d");
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, 1, .1, 50);
+  camera.position.set(0, .6, 5.1); camera.lookAt(0, -.05, 0);
+  scene.add(new THREE.AmbientLight(0xffffff, .6));
+  const d1 = new THREE.DirectionalLight(0xffffff, .85); d1.position.set(3, 5, 4); scene.add(d1);
+  const d2 = new THREE.DirectionalLight(0xffffff, .25); d2.position.set(-4, -1, 2); scene.add(d2);
+  const W = 1.5, H = 1.9, D = .9, PX = 300;
+  const dims = [[D, H], [D, H], [W, D], [W, D], [W, H], [W, H]]; // +x -x +y -y +z -z
+  const faces = dims.map(([w, h]) => {
+    const c = document.createElement("canvas"); c.width = Math.round(w * PX); c.height = Math.round(h * PX);
+    const tx = new THREE.CanvasTexture(c); tx.anisotropy = 4;
+    return { c, tx, mat: new THREE.MeshStandardMaterial({ map: tx, roughness: .62 }) };
+  });
+  const box = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), faces.map(f => f.mat));
+  scene.add(box);
+  const sh = new THREE.Mesh(new THREE.CircleGeometry(1.15, 48), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .22 }));
+  sh.rotation.x = -Math.PI / 2; sh.position.y = -H / 2 - .18; sh.scale.set(1, .5, 1); scene.add(sh);
+
+  const fam = f => f.replace(/"/g, "'");
+  function fit(ctx, text, maxW, size, weight, family) {
+    let s = size; do { ctx.font = `${weight} ${s}px ${family}`; s -= 2; } while (ctx.measureText(text).width > maxW && s > 10); return s + 2;
+  }
+  function shape(ctx, pk, cx, cy, r, color) {
+    ctx.save(); ctx.fillStyle = color; ctx.strokeStyle = color; ctx.lineWidth = r * .12;
+    if (pk === "warm" || pk === "playful") { ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill(); }
+    else if (pk === "minimal") { ctx.strokeRect(cx - r, cy - r, r * 2, r * 2); }
+    else if (pk === "luxe") { ctx.translate(cx, cy); ctx.rotate(Math.PI / 4); ctx.lineWidth = r * .06; ctx.strokeRect(-r * .75, -r * .75, r * 1.5, r * 1.5); }
+    else { ctx.beginPath(); ctx.moveTo(cx - r * .7, cy - r); ctx.lineTo(cx + r, cy - r); ctx.lineTo(cx + r * .7, cy + r); ctx.lineTo(cx - r, cy + r); ctx.closePath(); ctx.fill(); }
+    ctx.restore();
+  }
+  let last = null;
+  function draw(d) {
+    last = d;
+    const { name, letter, pk, p, pal, line, ind } = d, [c1, c2, c3, c4] = pal, family = fam(p.font), up = s => p.transform === "uppercase" ? s.toUpperCase() : s;
+    const markIn = pk === "minimal" || pk === "luxe";
+    const paint = (i, bg, fn) => { const { c, tx } = faces[i], ctx = c.getContext("2d"); ctx.fillStyle = bg; ctx.fillRect(0, 0, c.width, c.height); ctx.textAlign = "center"; ctx.textBaseline = "middle"; fn(ctx, c.width, c.height); tx.needsUpdate = true; };
+    // mặt trước
+    paint(4, c3, (ctx, w, h) => {
+      const r = w * .17, cy = h * .36;
+      shape(ctx, pk, w / 2, cy, r, c1);
+      ctx.fillStyle = markIn ? c1 : on(c1); ctx.font = `${p.weight} ${r * (pk === "luxe" ? .8 : 1.1)}px ${family}`; ctx.fillText(letter, w / 2, cy + r * .04);
+      ctx.fillStyle = c1; fit(ctx, up(name), w * .82, w * .14, p.weight, family); ctx.fillText(up(name), w / 2, h * .66);
+      ctx.fillStyle = on(c3); ctx.globalAlpha = .7; ctx.font = `500 ${w * .045}px Inter Tight, sans-serif`; ctx.fillText(ind.label.toUpperCase(), w / 2, h * .9); ctx.globalAlpha = 1;
+    });
+    // mặt sau
+    paint(5, c1, (ctx, w, h) => {
+      ctx.fillStyle = on(c1); fit(ctx, up(line), w * .8, w * .09, p.weight, family); ctx.fillText(up(line), w / 2, h / 2);
+      ctx.globalAlpha = .6; ctx.font = `500 ${w * .04}px Inter Tight, sans-serif`; ctx.fillText("bunchasake.com", w / 2, h * .9); ctx.globalAlpha = 1;
+    });
+    // hai mặt bên
+    [0, 1].forEach(i => paint(i, c1, (ctx, w, h) => {
+      ctx.save(); ctx.translate(w / 2, h / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = on(c1);
+      fit(ctx, up(i === 0 ? line : name), h * .8, w * .2, p.weight, family); ctx.fillText(up(i === 0 ? line : name), 0, 0); ctx.restore();
+    }));
+    // nắp và đáy
+    paint(2, c2, (ctx, w, h) => { shape(ctx, pk, w / 2, h / 2, h * .26, on(c2)); ctx.fillStyle = markIn ? on(c2) : c2; ctx.font = `${p.weight} ${h * .3}px ${family}`; ctx.fillText(letter, w / 2, h / 2 + h * .01); });
+    paint(3, c4, () => {});
+    render();
+  }
+  window.drawBox3D = d => { tile.classList.add("has3d"); draw(d); };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => last && draw(last));
+
+  let rotY = -.5, rotX = .12, vel = 0, dragging = false, px = 0, py = 0, visible = true, raf = 0;
+  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / Math.max(r.height, 1); camera.updateProjectionMatrix(); render(); }
+  function render() { box.rotation.set(rotX, rotY, 0); renderer.render(scene, camera); }
+  canvas.addEventListener("pointerdown", e => { dragging = true; px = e.clientX; py = e.clientY; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener("pointermove", e => { if (!dragging) return; vel = (e.clientX - px) * .01; rotY += vel; rotX = Math.max(-.5, Math.min(.6, rotX + (e.clientY - py) * .006)); px = e.clientX; py = e.clientY; render(); });
+  ["pointerup", "pointercancel"].forEach(ev => canvas.addEventListener(ev, () => { dragging = false; }));
+  function loop() { cancelAnimationFrame(raf); const tick = () => { if (!dragging) { vel *= .95; rotY += .006 + vel; } render(); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) loop(); }).observe(canvas);
+  addEventListener("resize", size);
+  size(); loop();
+}
+
+if (has3D) { try { initHero3D(); initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
+</script>
+</body>
+</html>
