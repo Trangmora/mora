@@ -312,7 +312,7 @@ footer h2 .it { color: var(--muted); }
 .card-form h3 { font-size: clamp(26px, 2.6vw, 34px); letter-spacing: -0.05em; font-weight: 600; }
 .card-form .sub { font-size: 13px; color: #55554F; margin-top: -8px; }
 .card-form label { display: block; }
-.card-form label span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.card-form label > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .card-form input, .card-form textarea { width: 100%; font: 400 15px/1.4 var(--sans); color: var(--card-ink); background: transparent; border: 0; border-bottom: 1px solid var(--card-line); padding: 12px 0; border-radius: 0; }
 .card-form input::placeholder, .card-form textarea::placeholder { color: #6B6B66; }
 .card-form input:focus, .card-form textarea:focus { outline: none; border-bottom-color: var(--card-ink); }
@@ -331,6 +331,11 @@ footer h2 .it { color: var(--muted); }
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; }
 .skip:focus { left: 12px; }
 .nav ul a.active { color: var(--ink); }
+.nav-r { display: flex; align-items: center; gap: 10px; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); }
+.lang button { all: unset; cursor: pointer; font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 7px 10px; border-radius: 999px; color: var(--muted); }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.lang button:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(36px, 5vw, 64px); border-top: 1px solid var(--line); animation: fade 1s .55s var(--ease) both; }
 .stats div { padding: 18px 20px 0 0; display: grid; gap: 4px; min-width: 0; }
 .stats div + div { padding-left: 20px; border-left: 1px solid var(--line); }
@@ -415,7 +420,13 @@ dialog.policy form { margin-top: 18px; }
     <li><a href="#automation">Automation</a></li>
     <li><a href="#du-an">Dự án</a></li>
   </ul>
-  <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+  <div class="nav-r">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="vi" aria-pressed="true" lang="vi">VI</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+  </div>
 </header>
 
 <main id="top">
@@ -610,9 +621,9 @@ dialog.policy form { margin-top: 18px; }
       <label for="f-contact"><span>Email hoặc số điện thoại</span><input id="f-contact" name="contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-contact"><em class="err" id="e-contact" hidden></em></label>
       <fieldset class="pick">
         <legend>Bạn đang ở giai đoạn nào?</legend>
-        <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> Sắp mở</label>
-        <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> Cần làm bài bản</label>
-        <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> Muốn làm mới</label>
+        <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> <span>Sắp mở</span></label>
+        <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> <span>Cần làm bài bản</span></label>
+        <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> <span>Muốn làm mới</span></label>
         <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
       </fieldset>
       <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu? Vài dòng là đủ."></textarea></label>
@@ -663,53 +674,190 @@ dialog.policy form { margin-top: 18px; }
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/* ---------- Ngôn ngữ (VI / EN) ---------- */
+const EN = {
+"Bỏ qua, tới Brand Lab": "Skip to Brand Lab",
+"Cách làm": "How we work",
+"Gói": "Packages",
+"Dự án": "Work",
+"Kể câu chuyện <span aria-hidden=\"true\">↗</span>": "Tell your story <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Studio xây thương hiệu · Việt Nam &amp; Ý": "<span class=\"dot\" aria-hidden=\"true\"></span>Brand-building studio · Vietnam &amp; Italy",
+"Bạn lo vận hành, <span>chúng tôi lo marketing.</span>": "You run the business. <span>We run the marketing.</span>",
+"<b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu có chất riêng. AI làm nhanh, con người quyết định.": "<b>Bunchasake</b> listens to why you started, then builds a brand that is unmistakably yours. AI makes it fast; people make the calls.",
+"Thử Brand Lab <span aria-hidden=\"true\">↓</span>": "Try Brand Lab <span aria-hidden=\"true\">↓</span>",
+"Xem dự án": "See our work",
+"thương hiệu đã đồng hành": "brands we have worked with",
+"quốc gia: Việt Nam, Ý": "countries: Vietnam, Italy",
+"bước, bạn duyệt từng bước": "steps, you approve each one",
+"Thử xây một thương hiệu. <span class=\"it\">Ngay bây giờ.</span>": "Build a brand. <span class=\"it\">Right now.</span>",
+"Nhập tên, chọn ngành và tính cách. Xem thử thương hiệu của bạn trong vài giây.": "Type a name, pick an industry and a personality. See your brand in seconds.",
+"Tên thương hiệu": "Brand name",
+"Ngành": "Industry",
+"Tính cách": "Personality",
+"Xây thương hiệu <kbd aria-hidden=\"true\">↵ Enter</kbd>": "Build my brand <kbd aria-hidden=\"true\">↵ Enter</kbd>",
+"Bản phác thảo tự động, chỉ để minh hoạ.": "An automatic sketch, for illustration only.",
+"Lắng nghe": "Listening",
+"Định vị": "Positioning",
+"Nhận diện": "Identity",
+"Điểm chạm": "Touchpoints",
+"Kiểu chữ": "Typography",
+"Giọng văn": "Voice",
+"Danh thiếp": "Business card",
+"Bài đăng": "Social post",
+"Thích hướng này? Chúng tôi xây bản thật cho bạn.": "Like this direction? We will build the real one.",
+"Xây bản thật <span aria-hidden=\"true\">↗</span>": "Build the real one <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Cách chúng tôi làm": "<span class=\"dot\" aria-hidden=\"true\"></span>How we work",
+"Bốn bước. <span class=\"it\">Một thương hiệu.</span>": "Four steps. <span class=\"it\">One brand.</span>",
+"Bạn duyệt sau mỗi bước.": "You approve every step.",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Gói": "<span class=\"dot\" aria-hidden=\"true\"></span>Packages",
+"Chọn điểm <span class=\"it\">bắt đầu.</span>": "Choose where <span class=\"it\">to start.</span>",
+"Báo giá sau buổi trò chuyện đầu tiên.": "Quoted after our first conversation.",
+"Doanh nghiệp mới mở": "New businesses",
+"Cần thương hiệu bài bản": "Need a complete brand",
+"Thương hiệu đã cũ": "Brand feels dated",
+"Đầy đủ nhất": "Most complete",
+"Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.": "Right for you if you are about to open and need to look ready fast.",
+"Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.": "Right for you if you want a brand that lasts for years.",
+"Phù hợp nếu khách nói thương hiệu của bạn \"nhìn cũ\".": "Right for you if customers say your brand \"looks old\".",
+"Lắng nghe và định vị bản gọn": "Short listening and positioning",
+"Logo, màu sắc, kiểu chữ": "Logo, colours, typography",
+"Danh thiếp, ảnh đại diện, mẫu bài đăng": "Business card, profile image, post templates",
+"Đủ 4 bước": "All 4 steps",
+"Câu chuyện thương hiệu và giọng văn": "Brand story and voice",
+"Bộ quy chuẩn thương hiệu": "Brand guidelines",
+"Website và các điểm chạm chính": "Website and key touchpoints",
+"Đánh giá thương hiệu hiện tại": "Review of your current brand",
+"Định vị lại, làm mới nhận diện": "Repositioning and a refreshed identity",
+"Cập nhật các điểm chạm đang dùng": "Updated touchpoints you already use",
+"Chọn Start <span aria-hidden=\"true\">→</span>": "Choose Start <span aria-hidden=\"true\">→</span>",
+"Chọn Build <span aria-hidden=\"true\">→</span>": "Choose Build <span aria-hidden=\"true\">→</span>",
+"Chọn Refresh <span aria-hidden=\"true\">→</span>": "Choose Refresh <span aria-hidden=\"true\">→</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Thêm vào bất kỳ gói nào": "<span class=\"dot\" aria-hidden=\"true\"></span>Add to any package",
+"Automation Social Media <span class=\"it\">cho bạn.</span>": "Social Media Automation, <span class=\"it\">built for you.</span>",
+"Chúng tôi dựng sẵn hệ thống, team của bạn tự vận hành Facebook, TikTok, Instagram.": "We set up the system; your team runs Facebook, TikTok and Instagram.",
+"Trợ lý AI riêng": "Your own AI assistant",
+"Lịch nội dung 30 ngày": "30-day content calendar",
+"AI viết, bạn duyệt": "AI drafts, you approve",
+"Tự lên lịch đăng": "Auto-scheduled posts",
+"Trả lời inbox tự động": "Automatic inbox replies",
+"Thêm Automation <span aria-hidden=\"true\">↗</span>": "Add Automation <span aria-hidden=\"true\">↗</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Dự án": "<span class=\"dot\" aria-hidden=\"true\"></span>Work",
+"Những câu chuyện <span class=\"it\">đã thành thương hiệu.</span>": "Stories <span class=\"it\">that became brands.</span>",
+"Mỗi nơi một câu chuyện, một thương hiệu.": "Every place has a story, and its own brand.",
+"Kể chúng tôi nghe <span class=\"it\">câu chuyện của bạn.</span>": "Tell us <span class=\"it\">your story.</span>",
+"<span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span>": "<span><b>We read your story</b> and prepare questions just for you.</span>",
+"<span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span>": "<span><b>A 60-minute conversation</b>, online or in person.</span>",
+"<span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span>": "<span><b>A proposal and quote</b> for exactly what you need.</span>",
+"Làm việc": "Based in",
+"Ngôn ngữ": "Languages",
+"Việt Nam · Ý · Online": "Vietnam · Italy · Online",
+"Tiếng Việt · English": "Vietnamese · English",
+"Sao chép": "Copy",
+"Gửi câu chuyện": "Send your story",
+"Đặt lịch gọi 30 phút": "Book a 30-min call",
+"Tên của bạn": "Your name",
+"Doanh nghiệp / website": "Business / website",
+"Email hoặc số điện thoại": "Email or phone",
+"Vì sao bạn bắt đầu?": "Why did you start?",
+"Bạn đang ở giai đoạn nào?": "Where are you right now?",
+"Sắp mở": "Opening soon",
+"Cần làm bài bản": "Need the full brand",
+"Muốn làm mới": "Want a refresh",
+"Gửi câu chuyện <span aria-hidden=\"true\">↗</span>": "Send your story <span aria-hidden=\"true\">↗</span>",
+"Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type=\"button\" class=\"open-policy\">Chính sách bảo mật</button>": "We only use this to get back to you about your project. <button type=\"button\" class=\"open-policy\">Privacy policy</button>",
+"Bạn sẽ nhận lời mời họp qua email. <button type=\"button\" class=\"open-policy\">Chính sách bảo mật</button>": "You will get a meeting invite by email. <button type=\"button\" class=\"open-policy\">Privacy policy</button>",
+"Chọn ngày": "Pick a day",
+"Chọn giờ (giờ Việt Nam)": "Pick a time (Vietnam time)",
+"Giữ lịch này <span aria-hidden=\"true\">↗</span>": "Hold this slot <span aria-hidden=\"true\">↗</span>",
+"Chính sách bảo mật": "Privacy policy",
+"Lên đầu trang ↑": "Back to top ↑",
+"Bunchasake chỉ thu thập những gì bạn tự điền vào form.": "Bunchasake only collects what you type into the form.",
+"Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.": "It is used to get back to you and prepare for your project.",
+"Không bán hay chia sẻ cho bên thứ ba.": "It is never sold or shared with third parties.",
+"Bạn có thể yêu cầu xoá thông tin bất cứ lúc nào qua email.": "You can ask us to delete it at any time by email.",
+"Đã hiểu": "Got it",
+"Kể câu chuyện": "Tell your story",
+"Đặt lịch gọi": "Book a call"
+};
+const EN_ATTR = {
+"Những thương hiệu đã đồng hành": "Brands we have worked with",
+"Bảng màu": "Palette",
+"Sau khi bạn gửi": "After you send it",
+"Chân trang": "Footer",
+"Cách liên hệ": "How to reach us",
+"Tên của bạn": "Your name",
+"Doanh nghiệp / website": "Business / website",
+"Email hoặc số điện thoại": "Email or phone",
+"Vì sao bạn bắt đầu? Vài dòng là đủ.": "Why did you start? A few lines is enough."
+};
+const norm = h => h.replace(/\s+/g, " ").trim();
+let LANG = "vi";
+try { LANG = localStorage.getItem("bsk-lang") === "en" ? "en" : "vi"; } catch {}
+const t = (vi, en) => LANG === "en" ? en : vi;
+const tr = o => LANG === "en" && o.en ? { ...o, ...o.en } : o;
+const ENN = {}; for (const k in EN) ENN[norm(k)] = EN[k];
+let staticEls = null;
+function applyStatic() {
+  if (!staticEls) {
+    staticEls = [];
+    document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
+      const k = norm(el.innerHTML);
+      if (ENN[k] !== undefined) staticEls.push({ el, vi: el.innerHTML, en: ENN[k] });
+      for (const a of ["placeholder", "aria-label"]) { const v = el.getAttribute(a); if (v && EN_ATTR[v]) staticEls.push({ el, attr: a, vi: v, en: EN_ATTR[v] }); }
+    });
+  }
+  staticEls.forEach(x => { if (!x.el.isConnected) return; const v = LANG === "en" ? x.en : x.vi; if (x.attr) x.el.setAttribute(x.attr, v); else if (x.el.innerHTML !== v) x.el.innerHTML = v; });
+  document.documentElement.lang = LANG;
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+}
+
 /* ---------- Dữ liệu ---------- */
 const projects = [
-  { name: "Chop Chop", sector: "Nhà hàng", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook", big: true },
-  { name: "Borgo Villa Nemec", sector: "Villa · Ý", img: "work/borgo-villa-nemec.svg", url: "https://borgovillanemec.it/", ch: "Website", big: true },
-  { name: "Impact Investments", sector: "Đầu tư · Ý", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", ch: "Website" },
-  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình · Hà Nội", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", ch: "Facebook" },
-  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", img: "work/bac-si-anh.jpg", url: "https://www.facebook.com/profile.php?id=61596245068595", ch: "Facebook" },
-  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", ch: "Instagram" },
-  { name: "Lạc Hồng", sector: "Máy xây dựng", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", ch: "Website" },
-  { name: "Talk2TheTop", sector: "Podcast", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", ch: "YouTube" },
-  { name: "NA-VI Living", sector: "Lưu trú", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", ch: "Website" },
-  { name: "Vestra Place", sector: "Coworking", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
-  { name: "Vina KTV", sector: "Thiết bị âm thanh", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
+  { name: "Chop Chop", sector: "Nhà hàng", sectorEn: "Restaurant", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook", big: true },
+  { name: "Borgo Villa Nemec", sector: "Villa · Ý", sectorEn: "Villa · Italy", img: "work/borgo-villa-nemec.svg", url: "https://borgovillanemec.it/", ch: "Website", big: true },
+  { name: "Impact Investments", sector: "Đầu tư · Ý", sectorEn: "Investment · Italy", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", ch: "Website" },
+  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình · Hà Nội", sectorEn: "Home services · Hanoi", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", ch: "Facebook" },
+  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", sectorEn: "Healthcare · Personal brand", img: "work/bac-si-anh.jpg", url: "https://www.facebook.com/profile.php?id=61596245068595", ch: "Facebook" },
+  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", sectorEn: "Flowers · Landscaping", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", ch: "Instagram" },
+  { name: "Lạc Hồng", sector: "Máy xây dựng", sectorEn: "Construction machinery", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", ch: "Website" },
+  { name: "Talk2TheTop", sector: "Podcast", sectorEn: "Podcast", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", ch: "YouTube" },
+  { name: "NA-VI Living", sector: "Lưu trú", sectorEn: "Hospitality", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", ch: "Website" },
+  { name: "Vestra Place", sector: "Coworking", sectorEn: "Coworking", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
+  { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
-  { name: "Lắng nghe", desc: "Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ để biết thương hiệu đang đứng ở đâu.", items: ["Buổi trò chuyện 60 phút", "Khảo sát khách hàng", "Bản đồ đối thủ"], ai: "Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ." },
-  { name: "Định vị", desc: "Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.", items: ["Tuyên bố định vị", "Câu chuyện thương hiệu", "Thông điệp và slogan"], ai: "Đưa ra nhiều phương án để chúng tôi chọn và chỉnh." },
-  { name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
-  { name: "Điểm chạm", desc: "Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.", items: ["Website", "Bao bì, biển hiệu", "Danh thiếp, profile", "Mạng xã hội"], ai: "Dựng mockup nhanh, viết nội dung song ngữ." },
+  { en: { name: "Listening", desc: "We talk with the founder: why you started and what you believe in. We study your customers and competitors to see where the brand stands." }, name: "Lắng nghe", desc: "Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ để biết thương hiệu đang đứng ở đâu.", items: ["Buổi trò chuyện 60 phút", "Khảo sát khách hàng", "Bản đồ đối thủ"], ai: "Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ." },
+  { en: { name: "Positioning", desc: "Who the brand is, who it is for, how it is different. From there we write the brand story every channel will tell." }, name: "Định vị", desc: "Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.", items: ["Tuyên bố định vị", "Câu chuyện thương hiệu", "Thông điệp và slogan"], ai: "Đưa ra nhiều phương án để chúng tôi chọn và chỉnh." },
+  { en: { name: "Identity", desc: "We give the story a shape: a name if needed, logo, colours, typography and voice, packed into easy-to-use guidelines." }, name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
+  { en: { name: "Touchpoints", desc: "We bring the brand to every place customers see it, so your website and your business card speak with one voice." }, name: "Điểm chạm", desc: "Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.", items: ["Website", "Bao bì, biển hiệu", "Danh thiếp, profile", "Mạng xã hội"], ai: "Dựng mockup nhanh, viết nội dung song ngữ." },
 ];
 /* ---------- Brand Lab ---------- */
 const industries = {
-  cafe:    { label: "Cà phê",     noun: "quán cà phê",          aud: "người cần một góc chậm lại giữa ngày" },
-  food:    { label: "Nhà hàng",   noun: "nhà hàng",             aud: "những bữa ăn đáng để quay lại" },
-  stay:    { label: "Lưu trú",    noun: "nơi lưu trú",          aud: "người muốn ở như ở nhà" },
-  beauty:  { label: "Làm đẹp",    noun: "thương hiệu làm đẹp",  aud: "người muốn chăm mình kỹ hơn" },
-  fashion: { label: "Thời trang", noun: "thương hiệu thời trang", aud: "người mặc để nói về mình" },
-  tech:    { label: "Công nghệ",  noun: "công ty công nghệ",    aud: "doanh nghiệp muốn làm nhanh hơn" },
+  cafe: { en: { label: "Café", noun: "café", aud: "people who need a slow corner in a busy day" }, label: "Cà phê",     noun: "quán cà phê",          aud: "người cần một góc chậm lại giữa ngày" },
+  food: { en: { label: "Restaurant", noun: "restaurant", aud: "meals worth coming back for" }, label: "Nhà hàng",   noun: "nhà hàng",             aud: "những bữa ăn đáng để quay lại" },
+  stay: { en: { label: "Hospitality", noun: "place to stay", aud: "guests who want to feel at home" }, label: "Lưu trú",    noun: "nơi lưu trú",          aud: "người muốn ở như ở nhà" },
+  beauty: { en: { label: "Beauty", noun: "beauty brand", aud: "people who want to take better care of themselves" }, label: "Làm đẹp",    noun: "thương hiệu làm đẹp",  aud: "người muốn chăm mình kỹ hơn" },
+  fashion: { en: { label: "Fashion", noun: "fashion brand", aud: "people who dress to say who they are" }, label: "Thời trang", noun: "thương hiệu thời trang", aud: "người mặc để nói về mình" },
+  tech: { en: { label: "Tech", noun: "tech company", aud: "businesses that want to move faster" }, label: "Công nghệ",  noun: "công ty công nghệ",    aud: "doanh nghiệp muốn làm nhanh hơn" },
 };
 const personas = {
-  warm:   { label: "Ấm áp",     font: "'Fraunces', serif", weight: 600, transform: "none", spacing: "-0.02em", pair: "Fraunces + Inter",
+  warm:   { en: {"label": "Warm", "adj": "warm and welcoming", "voice": ["Friendly", "Sincere", "Honest"], "lines": ["Home flavour, every day.", "As warm as a first hello.", "Slow down a little, stay a little longer."]}, label: "Ấm áp",     font: "'Fraunces', serif", weight: 600, transform: "none", spacing: "-0.02em", pair: "Fraunces + Inter",
             pals: [["#7A2E1F","#E9A23B","#F4EBDD","#2B2420"], ["#8C4A2F","#D8B26E","#F6EFE4","#33291F"]],
             adj: "ấm áp và gần gũi", voice: ["Gần gũi", "Chân thành", "Mộc"],
             lines: ["Vị nhà, mỗi ngày.", "Ấm như lời chào đầu tiên.", "Chậm lại một chút, ở lại lâu hơn."] },
-  minimal:{ label: "Tối giản",  font: "'Be Vietnam Pro', sans-serif", weight: 500, transform: "none", spacing: "-0.04em", pair: "Be Vietnam Pro + Inter",
+  minimal:{ en: {"label": "Minimal", "adj": "clean and clear", "voice": ["Concise", "Clear", "Calm"], "lines": ["Less, but better.", "Only what matters.", "Simple. Clear. Trusted."]}, label: "Tối giản",  font: "'Be Vietnam Pro', sans-serif", weight: 500, transform: "none", spacing: "-0.04em", pair: "Be Vietnam Pro + Inter",
             pals: [["#111111","#F2F2EF","#B8B8B2","#3D5AFE"], ["#1C1F22","#EDEBE6","#A7AAA4","#E85D3F"]],
             adj: "gọn gàng và rõ ràng", voice: ["Ngắn gọn", "Rõ ràng", "Bình tĩnh"],
             lines: ["Ít hơn, nhưng đúng hơn.", "Chỉ giữ lại điều cần thiết.", "Gọn. Rõ. Đáng tin."] },
-  luxe:   { label: "Sang trọng", font: "'Playfair Display', serif", weight: 500, transform: "uppercase", spacing: "0.12em", pair: "Playfair Display + Inter",
+  luxe:   { en: {"label": "Luxury", "adj": "refined and selective", "voice": ["Refined", "Composed", "Selective"], "lines": ["For those who know.", "Refined in every detail.", "No need to say more."]}, label: "Sang trọng", font: "'Playfair Display', serif", weight: 500, transform: "uppercase", spacing: "0.12em", pair: "Playfair Display + Inter",
             pals: [["#0F2A2A","#C8A96A","#F3EEE4","#1A1A1A"], ["#2A0F1E","#C9A46B","#F4EEE6","#151515"]],
             adj: "tinh tế và chọn lọc", voice: ["Tinh tế", "Điềm đạm", "Chọn lọc"],
             lines: ["Dành cho người biết chọn.", "Tinh tế trong từng chi tiết.", "Không cần nói nhiều."] },
-  bold:   { label: "Táo bạo",   font: "'Anton', sans-serif", weight: 400, transform: "uppercase", spacing: "0.01em", pair: "Anton + Inter",
+  bold:   { en: {"label": "Bold", "adj": "bold and different", "voice": ["Direct", "Confident", "Energetic"], "lines": ["Never follow the crowd.", "Say what you believe, loudly.", "Different by default."]}, label: "Táo bạo",   font: "'Anton', sans-serif", weight: 400, transform: "uppercase", spacing: "0.01em", pair: "Anton + Inter",
             pals: [["#FF3D2E","#111111","#FFE14D","#F5F5F0"], ["#1E3BFF","#0E0E0E","#C6FF3D","#F4F4EF"]],
             adj: "táo bạo và khác biệt", voice: ["Thẳng thắn", "Tự tin", "Năng lượng"],
             lines: ["Không làm theo đám đông.", "Nói to điều bạn tin.", "Khác biệt là mặc định."] },
-  playful:{ label: "Vui tươi",  font: "'Baloo 2', sans-serif", weight: 800, transform: "none", spacing: "-0.01em", pair: "Baloo 2 + Inter",
+  playful:{ en: {"label": "Playful", "adj": "playful and charming", "voice": ["Cheerful", "Friendly", "Surprising"], "lines": ["Joy at first sight.", "A small joy every day.", "Don't take it too seriously!"]}, label: "Vui tươi",  font: "'Baloo 2', sans-serif", weight: 800, transform: "none", spacing: "-0.01em", pair: "Baloo 2 + Inter",
             pals: [["#FF7AA2","#2D2A6E","#FFF4C2","#3DDC97"], ["#FF8A3D","#1F3A5F","#FFF1DD","#7BD3EA"]],
             adj: "vui tươi và dễ thương", voice: ["Vui vẻ", "Thân thiện", "Bất ngờ"],
             lines: ["Vui từ cái nhìn đầu tiên.", "Mỗi ngày một niềm vui nhỏ.", "Đừng nghiêm túc quá nhé!"] },
@@ -733,16 +881,16 @@ function markSVG(shape, letter, fg, bg, font, weight) {
 
 function buildChips(el, map, name, def) {
   el.insertAdjacentHTML("beforeend", Object.entries(map).map(([k, v]) =>
-    `<label><input type="radio" name="${name}" value="${k}" ${k === def ? "checked" : ""}><span>${v.label}</span></label>`).join(""));
+    `<label><input type="radio" name="${name}" value="${k}" ${k === def ? "checked" : ""}><span>${tr(v).label}</span></label>`).join(""));
 }
 buildChips(document.getElementById("l-ind"), industries, "ind", "cafe");
 buildChips(document.getElementById("l-per"), personas, "per", "warm");
 
 function renderBrand() {
-  const name = (document.getElementById("l-name").value.trim() || "Thương hiệu của bạn").slice(0, 28);
-  const ind = industries[document.querySelector('input[name="ind"]:checked').value];
+  const name = (document.getElementById("l-name").value.trim() || t("Thương hiệu của bạn", "Your brand")).slice(0, 28);
+  const ind = tr(industries[document.querySelector('input[name="ind"]:checked').value]);
   const pk = document.querySelector('input[name="per"]:checked').value;
-  const p = personas[pk];
+  const p = tr(personas[pk]);
   const h = hash(name + pk);
   const pal = p.pals[h % p.pals.length];
   const [c1, c2, c3, c4] = pal;
@@ -758,14 +906,14 @@ function renderBrand() {
   word.textContent = name; word.setAttribute("style", fontCss);
 
   document.getElementById("b-pal").innerHTML = pal.map((c, i) =>
-    `<div style="background:${c};color:${on(c)}"><span>${["Chính", "Nhấn", "Nền", "Phụ"][i]}</span><span>${c}</span></div>`).join("");
+    `<div style="background:${c};color:${on(c)}"><span>${(LANG === "en" ? ["Primary", "Accent", "Base", "Support"] : ["Chính", "Nhấn", "Nền", "Phụ"])[i]}</span><span>${c}</span></div>`).join("");
 
   const aaColor = [c2, c1, c3, c4].sort((a, b) => lum(b) - lum(a)).find(c => lum(c) > .12 && lum(c) < .9) || c3;
   const aa = document.getElementById("b-aa"); aa.setAttribute("style", fontCss + ";color:" + aaColor);
   aa.textContent = p.transform === "uppercase" ? "AA" : "Aa";
   document.getElementById("b-pair").textContent = p.pair;
 
-  document.getElementById("b-pos").innerHTML = `<b>${esc(name)}</b> là ${ind.noun} ${p.adj}, dành cho ${ind.aud}.`;
+  document.getElementById("b-pos").innerHTML = LANG === "en" ? `<b>${esc(name)}</b> is a ${p.adj} ${ind.noun} for ${ind.aud}.` : `<b>${esc(name)}</b> là ${ind.noun} ${p.adj}, dành cho ${ind.aud}.`;
   document.getElementById("b-voice").innerHTML = p.voice.map(v => `<span>${v}</span>`).join("");
 
   document.getElementById("b-card").style.background = c3;
@@ -813,10 +961,19 @@ document.getElementById("marquee").innerHTML = names + names;
 const stepsEl = document.getElementById("steps");
 stepsEl.innerHTML = steps.map((s, i) => `
   <article class="step${i === 0 ? " active" : ""}" data-i="${i}">
-    <span class="n cap">Bước ${i + 1}</span>
-    <h3>${esc(s.name)}</h3>
-    <p>${esc(s.desc)}</p>
+    <span class="n cap"></span>
+    <h3></h3>
+    <p></p>
   </article>`).join("");
+function renderSteps() {
+  stepsEl.querySelectorAll(".step").forEach((el, i) => {
+    const s = tr(steps[i]);
+    el.querySelector(".n").textContent = t("Bước ", "Step ") + (i + 1);
+    el.querySelector("h3").textContent = s.name;
+    el.querySelector("p").textContent = s.desc;
+  });
+}
+renderSteps();
 const bignum = document.getElementById("bignum"), trackI = [...document.querySelectorAll("#track i")];
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(entries => {
@@ -832,12 +989,13 @@ if ("IntersectionObserver" in window) {
 } else { stepsEl.classList.add("no-io"); }
 
 /* ---------- Dự án ---------- */
-document.getElementById("work").innerHTML = projects.map(p => `
+function renderWork() { document.getElementById("work").innerHTML = projects.map(p => `
   <div class="card${p.big ? " big" : ""}">
-    <a class="img" href="${p.url}" target="_blank" rel="noopener" aria-label="${esc(p.name)}"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <a class="img" href="${p.url}" target="_blank" rel="noopener" aria-label="${esc(p.name)}"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"><span class="view cap">${t("Xem", "View")} ↗</span></a>
     <div class="top"><h3>${esc(p.name)}</h3><a class="ch" href="${p.url}" target="_blank" rel="noopener">${p.ch} ↗</a></div>
-    <p>${esc(p.sector)}</p>
-  </div>`).join("");
+    <p>${esc(LANG === "en" ? p.sectorEn : p.sector)}</p>
+  </div>`).join(""); }
+renderWork();
 
 /* ---------- Thanh cuộn + nav ---------- */
 const prog = document.getElementById("progress"), nav = document.getElementById("nav");
@@ -888,11 +1046,11 @@ document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", ()
 
 /* Kiểm tra từng ô */
 const rules = {
-  "f-name": v => v ? "" : "Cho chúng tôi biết tên của bạn.",
-  "f-biz": v => v ? "" : "Tên doanh nghiệp hoặc website giúp chúng tôi chuẩn bị trước.",
-  "f-contact": v => !v ? "Cần email hoặc số điện thoại để liên hệ lại." : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : "Email hoặc số điện thoại chưa đúng định dạng.",
-  "c-name": v => v ? "" : "Cho chúng tôi biết tên của bạn.",
-  "c-contact": v => !v ? "Cần email hoặc số điện thoại để gửi lời mời." : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : "Email hoặc số điện thoại chưa đúng định dạng.",
+  "f-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
+  "f-biz": v => v ? "" : t("Tên doanh nghiệp hoặc website giúp chúng tôi chuẩn bị trước.", "Your business or website helps us prepare."),
+  "f-contact": v => !v ? t("Cần email hoặc số điện thoại để liên hệ lại.", "We need an email or phone number to reply.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
+  "c-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
+  "c-contact": v => !v ? t("Cần email hoặc số điện thoại để gửi lời mời.", "We need an email or phone number to send the invite.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
 };
 const errIds = { "f-name": "e-name", "f-biz": "e-biz", "f-contact": "e-contact", "c-name": "e-cname", "c-contact": "e-ccontact" };
 function check(id) {
@@ -904,7 +1062,7 @@ Object.keys(rules).forEach(id => document.getElementById(id).addEventListener("b
 function finish(title, lines) {
   storyForm.style.display = "none"; callForm.style.display = "none"; storyForm.hidden = callForm.hidden = true;
   doneEl.hidden = false;
-  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol><p class="privacy">Đây là bản demo nên thông tin chưa được gửi đi.</p><button class="again" type="button">Quay lại form</button>`;
+  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol><p class="privacy">${t("Đây là bản demo nên thông tin chưa được gửi đi.", "This is a demo, so nothing has been sent yet.")}</p><button class="again" type="button">${t("Quay lại form", "Back to the form")}</button>`;
   doneEl.querySelector(".again").addEventListener("click", () => showTab(tabCall.getAttribute("aria-selected") === "true" ? "call" : "story"));
   doneEl.querySelector("h3").setAttribute("tabindex", "-1"); doneEl.querySelector("h3").focus();
 }
@@ -913,36 +1071,51 @@ storyForm.addEventListener("submit", e => {
   const ok = ["f-name", "f-biz", "f-contact"].map(check).every(Boolean);
   if (!ok) { storyForm.querySelector('[aria-invalid="true"]').focus(); return; }
   const n = esc(document.getElementById("f-name").value.trim());
-  finish(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
+  finish(t(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, `Thank you, ${n}. We have your story.`), LANG === "en" ? ["We read it and prepare questions just for you.", "We get in touch to set up a 60-minute conversation.", "We send a proposal and quote."] : ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
 });
 
 /* Đặt lịch */
 const daysEl = document.getElementById("days"), timesEl = document.getElementById("times"), sumEl = document.getElementById("sum");
-const wd = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], slots = ["09:00", "10:30", "14:00", "15:30", "17:00"];
+const wdVi = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], wdEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wd = i => (LANG === "en" ? wdEn : wdVi)[i], slots = ["09:00", "10:30", "14:00", "15:30", "17:00"];
 const days = []; for (let d = new Date(), k = 0; days.length < 6 && k < 14; k++) { d = new Date(Date.now() + (k + 1) * 864e5); if (d.getDay() % 6) days.push(d); }
 let pickDay = null, pickTime = null;
-daysEl.innerHTML = days.map((d, i) => `<button type="button" aria-pressed="false" data-i="${i}"><small>${wd[d.getDay()]}</small>${d.getDate()}/${d.getMonth() + 1}</button>`).join("");
+function renderDays() { daysEl.innerHTML = days.map((d, i) => `<button type="button" aria-pressed="${i === pickDay}" data-i="${i}"><small>${wd(d.getDay())}</small>${d.getDate()}/${d.getMonth() + 1}</button>`).join(""); }
+renderDays();
 timesEl.innerHTML = slots.map(t => `<button type="button" aria-pressed="false" data-t="${t}">${t}</button>`).join("");
 function updSum() {
-  sumEl.textContent = pickDay !== null && pickTime ? `Cuộc gọi 30 phút · ${wd[days[pickDay].getDay()]}, ${days[pickDay].getDate()}/${days[pickDay].getMonth() + 1} · ${pickTime}` : "Chọn ngày và giờ phù hợp với bạn.";
+  sumEl.textContent = pickDay !== null && pickTime ? `${t("Cuộc gọi 30 phút", "30-min call")} · ${wd(days[pickDay].getDay())}, ${days[pickDay].getDate()}/${days[pickDay].getMonth() + 1} · ${pickTime}` : t("Chọn ngày và giờ phù hợp với bạn.", "Pick a day and time that suits you.");
 }
 daysEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickDay = +b.dataset.i; daysEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
 timesEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickTime = b.dataset.t; timesEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
 callForm.addEventListener("submit", e => {
   e.preventDefault();
-  if (pickDay === null || !pickTime) { sumEl.textContent = "Vui lòng chọn ngày và giờ trước."; sumEl.focus?.(); return; }
+  if (pickDay === null || !pickTime) { sumEl.textContent = t("Vui lòng chọn ngày và giờ trước.", "Please pick a day and time first."); sumEl.focus?.(); return; }
   const ok = ["c-name", "c-contact"].map(check).every(Boolean);
   if (!ok) { callForm.querySelector('[aria-invalid="true"]').focus(); return; }
-  finish("Đã giữ lịch cho bạn.", [esc(sumEl.textContent), "Lời mời họp sẽ được gửi tới " + esc(document.getElementById("c-contact").value.trim()) + ".", "Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo."]);
+  finish(t("Đã giữ lịch cho bạn.", "Your slot is held."), [esc(sumEl.textContent), t("Lời mời họp sẽ được gửi tới ", "The meeting invite will go to ") + esc(document.getElementById("c-contact").value.trim()) + ".", t("Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo.", "Bring your story; we will take care of the rest.")]);
 });
 
 /* Sao chép email + chính sách */
 document.getElementById("copyMail").addEventListener("click", async e => {
   const b = e.currentTarget, mail = document.getElementById("mail").textContent;
-  try { await navigator.clipboard.writeText(mail); b.textContent = "Đã chép"; }
-  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = "Đã chọn"; }
-  setTimeout(() => { b.textContent = "Sao chép"; }, 1800);
+  try { await navigator.clipboard.writeText(mail); b.textContent = t("Đã chép", "Copied"); }
+  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = t("Đã chọn", "Selected"); }
+  setTimeout(() => { b.textContent = t("Sao chép", "Copy"); }, 1800);
 });
 const policy = document.getElementById("policy");
-document.querySelectorAll(".open-policy").forEach(b => b.addEventListener("click", () => policy.showModal ? policy.showModal() : policy.setAttribute("open", "")));
+document.addEventListener("click", e => { if (e.target.closest(".open-policy")) policy.showModal ? policy.showModal() : policy.setAttribute("open", ""); });
+
+/* ---------- Chuyển ngôn ngữ ---------- */
+function setLang(l) {
+  LANG = l; try { localStorage.setItem("bsk-lang", l); } catch {}
+  applyStatic();
+  document.querySelectorAll("#l-ind label, #l-per label").forEach(lb => {
+    const inp = lb.querySelector("input"), map = inp.name === "ind" ? industries : personas;
+    lb.querySelector("span").textContent = tr(map[inp.value]).label;
+  });
+  renderSteps(); renderWork(); renderDays(); updSum(); build(false);
+  Object.keys(rules).forEach(id => { if (document.getElementById(id).getAttribute("aria-invalid") === "true") check(id); });
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+if (LANG !== "vi") setLang(LANG); else applyStatic();
 </script>
