@@ -4,202 +4,211 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bunchasake</title>
-<meta name="description" content="Bunchasake – team marketing dùng AI: Branding, Social Media, SEO, KOL/KOC booking cho doanh nghiệp vừa và nhỏ.">
+<meta name="description" content="Bunchasake – Trang, brand builder. Bạn có câu chuyện, mình biến nó thành thương hiệu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Be+Vietnam+Pro:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: một cột biên tập rộng, hero chữ lớn, băng chạy tên khách, lưới dịch vụ 2x2, lưới dự án có bộ lọc */
+/* Layout: một cột biên tập; hero chữ lớn ghép serif nghiêng ("story") với grotesk đậm ("brand"); các phần xen kẽ nền sáng và một khối mực đậm */
 :root {
-  --bg: #F1F4EC;        /* trắng bún, ngả xanh rau thơm */
+  --paper: #F2F3F7;     /* giấy hơi ngả xanh lạnh */
   --surface: #FFFFFF;
-  --ink: #15201A;       /* than nướng */
-  --muted: #5A665E;
-  --line: #CDD6CB;
-  --herb: #22704A;      /* xanh rau thơm – accent */
-  --herb-ink: #FFFFFF;
-  --amber: #F0B030;     /* vàng nước mắm – điểm nhấn hiếm */
+  --ink: #17172B;       /* mực chàm đêm */
+  --muted: #5B5D72;
+  --line: #D3D5E0;
+  --cobalt: #3046F0;    /* accent */
+  --cobalt-ink: #FFFFFF;
+  --butter: #FFE17A;    /* highlight hiếm */
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
   --display: "Bricolage Grotesque", "Be Vietnam Pro", system-ui, sans-serif;
   --body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --gutter: clamp(16px, 4vw, 48px);
-  --max: 1180px;
+  --max: 1160px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0F1512; --surface: #18201B; --ink: #E8EEE6; --muted: #9AA79E; --line: #2C3830;
-    --herb: #63C58C; --herb-ink: #0C1610; --amber: #F2B53A; color-scheme: dark;
+    --paper: #101020; --surface: #1A1A2E; --ink: #ECECF4; --muted: #A2A4BA; --line: #2E2F47;
+    --cobalt: #8A97FF; --cobalt-ink: #0E0F22; --butter: #F5D35E; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0F1512; --surface: #18201B; --ink: #E8EEE6; --muted: #9AA79E; --line: #2C3830;
-  --herb: #63C58C; --herb-ink: #0C1610; --amber: #F2B53A; color-scheme: dark;
+  --paper: #101020; --surface: #1A1A2E; --ink: #ECECF4; --muted: #A2A4BA; --line: #2E2F47;
+  --cobalt: #8A97FF; --cobalt-ink: #0E0F22; --butter: #F5D35E; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg); color: var(--ink);
-  font: 400 17px/1.6 var(--body);
+  background: var(--paper); color: var(--ink);
+  font: 400 17px/1.65 var(--body);
   padding-inline: var(--gutter);
   -webkit-font-smoothing: antialiased;
 }
 .wrap { max-width: var(--max); margin-inline: auto; }
 a { color: inherit; }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-  outline: 3px solid var(--herb); outline-offset: 3px; border-radius: 4px;
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 4px;
 }
-h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.025em; }
 p { margin: 0; }
-.label {
-  font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
-}
+.eyebrow { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
 
 /* Nav */
 .nav {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
   margin-inline: calc(var(--gutter) * -1); padding: 14px var(--gutter);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
 .nav .wrap { display: flex; align-items: center; gap: 24px; }
-.logo { font: 800 24px/1 var(--display); text-decoration: none; letter-spacing: -0.03em; }
-.logo span { color: var(--herb); }
-.nav ul { display: flex; gap: 22px; list-style: none; margin: 0 0 0 auto; padding: 0; font-weight: 500; font-size: 15px; }
+.logo { font: 800 23px/1 var(--display); text-decoration: none; letter-spacing: -0.03em; }
+.logo span { color: var(--cobalt); }
+.nav ul { display: flex; gap: 24px; list-style: none; margin: 0 0 0 auto; padding: 0; font-weight: 500; font-size: 15px; }
 .nav ul a { text-decoration: none; }
-.nav ul a:hover { color: var(--herb); }
+.nav ul a:hover { color: var(--cobalt); }
 .btn {
   display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer;
-  background: var(--ink); color: var(--bg); font: 600 15px/1 var(--body);
-  padding: 13px 20px; border-radius: 999px; text-decoration: none; white-space: nowrap;
-  transition: transform .2s ease, background .2s ease;
+  background: var(--ink); color: var(--paper); font: 600 15px/1 var(--body);
+  padding: 14px 22px; border-radius: 999px; text-decoration: none; white-space: nowrap;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
 }
-.btn:hover { background: var(--herb); color: var(--herb-ink); transform: translateY(-1px); }
+.btn:hover { background: var(--cobalt); color: var(--cobalt-ink); transform: translateY(-1px); }
 .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
-.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+.btn.ghost:hover { background: var(--ink); color: var(--paper); }
 @media (max-width: 760px) { .nav ul { display: none; } .nav .btn { margin-left: auto; padding: 11px 16px; font-size: 14px; } }
 
 /* Hero */
-.hero { padding-block: clamp(48px, 9vw, 110px) clamp(40px, 6vw, 72px); }
-.hero h1 {
-  font-size: clamp(44px, 8.6vw, 116px); line-height: 0.95; font-weight: 800; max-width: 12ch;
-}
-.hero h1 em { font-style: normal; color: var(--herb); }
-.hero h1 .mark { background: linear-gradient(transparent 62%, var(--amber) 62% 90%, transparent 90%); padding-inline: .04em; }
-.hero-foot { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; margin-top: clamp(28px, 4vw, 48px); }
-.hero-foot p { font-size: clamp(17px, 1.6vw, 20px); max-width: 52ch; color: var(--muted); }
+.hero { padding-block: clamp(56px, 10vw, 128px) clamp(48px, 7vw, 88px); }
+.hero h1 { font-size: clamp(46px, 8.8vw, 124px); line-height: .96; font-weight: 800; }
+.hero h1 .serif { font-size: 1.08em; color: var(--muted); }
+.hero h1 .brand { color: var(--cobalt); }
+.hero h1 .line { display: block; }
+.hero-foot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px 48px; align-items: end; margin-top: clamp(28px, 4vw, 52px); }
+.hero-foot p { font-size: clamp(17px, 1.6vw, 20px); color: var(--muted); max-width: 54ch; }
 .hero-foot p strong { color: var(--ink); font-weight: 600; }
-.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
 @media (max-width: 760px) { .hero-foot { grid-template-columns: 1fr; } }
 
 /* Marquee */
-.marquee {
-  margin-inline: calc(var(--gutter) * -1); overflow: hidden;
-  border-block: 1.5px solid var(--ink); background: var(--ink); color: var(--bg);
-}
-.marquee-track { display: flex; width: max-content; animation: slide 38s linear infinite; }
-.marquee span { font: 600 clamp(18px, 2.2vw, 26px)/1 var(--display); padding: 18px 0; white-space: nowrap; }
-.marquee span::after { content: "✱"; color: var(--amber); padding-inline: 28px; font-size: .8em; }
+.marquee { margin-inline: calc(var(--gutter) * -1); overflow: hidden; border-block: 1px solid var(--line); }
+.marquee-track { display: flex; width: max-content; animation: slide 42s linear infinite; }
+.marquee span { font: 400 clamp(20px, 2.4vw, 30px)/1 var(--serif); font-style: italic; padding: 20px 0; white-space: nowrap; color: var(--muted); }
+.marquee span::after { content: "·"; padding-inline: 26px; color: var(--cobalt); font-style: normal; }
 @keyframes slide { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } html { scroll-behavior: auto; } }
 
-/* Section */
 section.block { padding-block: clamp(64px, 9vw, 120px); }
-.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; margin-bottom: clamp(32px, 5vw, 56px); }
-.head h2 { font-size: clamp(34px, 5vw, 62px); line-height: 1; font-weight: 800; }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 48px; align-items: end; margin-bottom: clamp(32px, 5vw, 56px); }
+.head h2 { font-size: clamp(34px, 5vw, 60px); line-height: 1.02; font-weight: 800; }
+.head h2 .serif { font-weight: 400; color: var(--cobalt); }
 .head p { color: var(--muted); max-width: 48ch; }
 @media (max-width: 760px) { .head { grid-template-columns: 1fr; } }
 
-/* Services */
-.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1.5px solid var(--ink); }
-.svc { padding: clamp(24px, 3vw, 40px) clamp(0px, 2vw, 32px) clamp(28px, 3vw, 44px) 0; border-bottom: 1px solid var(--line); display: grid; gap: 14px; align-content: start; min-width: 0; }
-.svc:nth-child(odd) { border-right: 1px solid var(--line); }
-.svc:nth-child(even) { padding-left: clamp(20px, 3vw, 40px); }
-.svc h3 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; line-height: 1.05; }
-.svc .tag { display: inline-block; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--herb); }
-.svc > p { color: var(--muted); max-width: 46ch; }
-.svc ul { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 8px; font-size: 15.5px; }
-.svc li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
-.svc li::before { content: "→"; color: var(--herb); font-weight: 600; }
-.svc .ai { margin-top: 6px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font-size: 14.5px; }
-.svc .ai b { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--herb); display: block; margin-bottom: 6px; }
-@media (max-width: 760px) {
-  .services { grid-template-columns: 1fr; }
-  .svc:nth-child(odd) { border-right: 0; }
-  .svc:nth-child(even) { padding-left: 0; }
-}
+/* Story -> Brand */
+.transform { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 28px; align-items: stretch; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 3vw, 36px); display: grid; gap: 16px; align-content: start; min-width: 0; }
+.panel .quote { font: 400 clamp(22px, 2.4vw, 30px)/1.3 var(--serif); font-style: italic; }
+.panel .who { font-size: 14px; color: var(--muted); }
+.arrow { align-self: center; font: 800 44px/1 var(--display); color: var(--cobalt); }
+.brandcard { display: grid; gap: 14px; }
+.brandcard .name { font: 800 clamp(26px, 3vw, 34px)/1 var(--display); letter-spacing: -0.03em; }
+.brandcard .line2 { font-weight: 600; }
+.swatches { display: flex; gap: 8px; }
+.swatches i { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); display: block; }
+.kv { display: grid; grid-template-columns: 110px 1fr; gap: 6px 12px; font-size: 15px; }
+.kv dt { font: 500 11px/1.9 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.kv dd { margin: 0; }
+.note-ex { font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 14px; }
+@media (max-width: 820px) { .transform { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); justify-self: center; } }
 
-/* Work */
-.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.chip {
-  font: 500 14px/1 var(--body); padding: 10px 16px; border-radius: 999px; cursor: pointer;
-  background: transparent; color: var(--ink); border: 1.5px solid var(--line);
-}
-.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.chip:hover { border-color: var(--ink); }
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
-@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
-.card { display: grid; gap: 12px; align-content: start; text-decoration: none; min-width: 0; }
-.card .img { aspect-ratio: 3 / 2; max-width: 100%; border-radius: 12px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
-.card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
-.card:hover img { transform: scale(1.04); }
-.card .placeholder { width: 100%; height: 100%; display: grid; place-items: center; background: var(--herb); color: var(--herb-ink); font: 800 clamp(26px, 3vw, 34px)/1 var(--display); text-align: center; padding: 20px; }
-.card .meta { display: flex; gap: 8px; flex-wrap: wrap; }
-.card .meta span { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 6px 8px; border-radius: 6px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
-.card h3 { font-size: 22px; font-weight: 600; line-height: 1.15; }
-.card p { color: var(--muted); font-size: 15px; }
-.card .go { font-weight: 600; font-size: 14px; color: var(--herb); }
-
-/* Process */
-.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: s; border-top: 1.5px solid var(--ink); }
-.step { padding: 24px 24px 8px 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1.5px solid var(--ink); }
+.step { padding: 26px 24px 8px 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .step + .step { padding-left: 24px; border-left: 1px solid var(--line); }
-.step .n { font: 800 44px/1 var(--display); color: var(--herb); }
-.step h3 { font-size: 21px; font-weight: 600; }
-.step p { color: var(--muted); font-size: 15px; }
-@media (max-width: 860px) {
+.step .n { font: 400 54px/1 var(--serif); font-style: italic; color: var(--cobalt); }
+.step h3 { font-size: 22px; font-weight: 700; }
+.step p { color: var(--muted); font-size: 15.5px; }
+.step .ai { font-size: 14px; color: var(--ink); border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 4px; }
+.step .ai b { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--cobalt); margin-right: 6px; }
+@media (max-width: 900px) {
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .step:nth-child(3) { padding-left: 0; border-left: 0; }
   .step:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 16px; }
 }
-@media (max-width: 520px) {
+@media (max-width: 540px) {
   .steps { grid-template-columns: 1fr; }
   .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 8px; }
 }
 
-/* AI band */
-.band {
-  background: var(--herb); color: var(--herb-ink); border-radius: 20px;
-  padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px 56px;
-}
-.band h2 { font-size: clamp(30px, 4.2vw, 52px); line-height: 1.02; font-weight: 800; }
-.band dl { margin: 0; display: grid; gap: 18px; }
-.band dt { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; opacity: .8; margin-bottom: 6px; }
-.band dd { margin: 0; font-size: 16.5px; }
-@media (max-width: 820px) { .band { grid-template-columns: 1fr; } }
+/* Packages (dark block) */
+.dark { background: var(--ink); color: var(--paper); border-radius: 24px; padding: clamp(28px, 5vw, 64px); }
+.dark .head h2 { color: var(--paper); }
+.dark .head h2 .serif { color: var(--butter); }
+.dark .head p { color: color-mix(in srgb, var(--paper) 72%, var(--ink)); }
+.pkgs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.pkg { border: 1px solid color-mix(in srgb, var(--paper) 22%, var(--ink)); border-radius: 16px; padding: 26px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.pkg.feature { background: color-mix(in srgb, var(--paper) 8%, var(--ink)); border-color: var(--butter); }
+.pkg .for { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: color-mix(in srgb, var(--paper) 65%, var(--ink)); }
+.pkg h3 { font-size: 30px; font-weight: 800; }
+.pkg ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; font-size: 15.5px; }
+.pkg li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
+.pkg li::before { content: "✓"; color: var(--butter); font-weight: 600; }
+.pkg .tag { justify-self: start; font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; background: var(--butter); color: #17172B; padding: 6px 8px; border-radius: 6px; }
+.dark .foot { margin-top: 24px; font-size: 15px; color: color-mix(in srgb, var(--paper) 72%, var(--ink)); }
+@media (max-width: 880px) { .pkgs { grid-template-columns: 1fr; } }
+
+/* Work */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2vw, 28px); }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.card { display: grid; gap: 10px; align-content: start; text-decoration: none; min-width: 0; }
+.card .img { aspect-ratio: 3 / 2; max-width: 100%; border-radius: 14px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.card:hover img { transform: scale(1.04); }
+.card .placeholder { width: 100%; height: 100%; display: grid; place-items: center; background: var(--cobalt); color: var(--cobalt-ink); font: 400 clamp(28px, 3vw, 36px)/1.1 var(--serif); font-style: italic; text-align: center; padding: 20px; }
+.card .sector { font: 500 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.card h3 { font-size: 22px; font-weight: 700; line-height: 1.15; }
+.card p { color: var(--muted); font-size: 15px; }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.portrait { aspect-ratio: 4 / 5; max-width: 100%; border-radius: 20px; background: var(--surface); border: 1.5px dashed var(--line); display: grid; place-items: center; text-align: center; color: var(--muted); padding: 24px; }
+.portrait b { display: block; font: 400 64px/1 var(--serif); font-style: italic; color: var(--cobalt); margin-bottom: 10px; }
+.about h2 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.04; font-weight: 800; }
+.about h2 .serif { font-weight: 400; color: var(--cobalt); }
+.about .copy { display: grid; gap: 16px; margin-top: 22px; color: var(--muted); max-width: 56ch; }
+.about .copy strong { color: var(--ink); font-weight: 600; }
+.sign { font: 400 30px/1 var(--serif); font-style: italic; color: var(--ink); margin-top: 8px; }
+@media (max-width: 820px) { .about { grid-template-columns: 1fr; } .portrait { max-width: 360px; } }
+
+/* FAQ */
+.faq { border-top: 1.5px solid var(--ink); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 28px; gap: 16px; align-items: center; padding: 22px 0; font: 600 clamp(18px, 2vw, 22px)/1.35 var(--display); letter-spacing: -0.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 400 30px/1 var(--display); color: var(--cobalt); justify-self: end; transition: transform .2s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 22px; color: var(--muted); max-width: 70ch; }
 
 /* Contact */
 .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 64px; align-items: start; }
-.contact h2 { font-size: clamp(40px, 6.4vw, 84px); line-height: .95; font-weight: 800; }
-.contact h2 em { font-style: normal; color: var(--herb); }
+.contact h2 { font-size: clamp(40px, 6.2vw, 84px); line-height: .98; font-weight: 800; }
+.contact h2 .serif { font-weight: 400; color: var(--cobalt); }
 .contact .lead { margin-top: 20px; color: var(--muted); max-width: 42ch; }
-form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: clamp(20px, 3vw, 32px); }
+form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(20px, 3vw, 32px); }
 form label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
-input, textarea, select {
-  font: 400 16px/1.4 var(--body); color: var(--ink); background: var(--bg);
+input, textarea {
+  font: 400 16px/1.45 var(--body); color: var(--ink); background: var(--paper);
   border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
 }
-textarea { min-height: 110px; resize: vertical; }
-.checks { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
-.checks legend { font-size: 14px; font-weight: 500; margin-bottom: 8px; padding: 0; }
-.checks label { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; padding: 8px 12px; border: 1.5px solid var(--line); border-radius: 999px; cursor: pointer; }
-.checks input { width: auto; accent-color: var(--herb); }
-.note { font-size: 14px; color: var(--herb); font-weight: 500; }
+textarea { min-height: 130px; resize: vertical; }
+.note { font-size: 14px; color: var(--cobalt); font-weight: 500; }
 @media (max-width: 820px) { .contact { grid-template-columns: 1fr; } }
 
-footer { border-top: 1.5px solid var(--ink); padding-block: 28px 40px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; color: var(--muted); font-size: 14px; }
+footer { border-top: 1px solid var(--line); padding-block: 28px 40px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; color: var(--muted); font-size: 14px; }
 footer .logo { font-size: 20px; color: var(--ink); }
 </style>
 </head>
@@ -209,136 +218,196 @@ footer .logo { font-size: 20px; color: var(--ink); }
   <div class="wrap">
     <a class="logo" href="#top">bunchasake<span>.</span></a>
     <ul>
-      <li><a href="#dich-vu">Dịch vụ</a></li>
+      <li><a href="#cach-lam">Cách làm</a></li>
+      <li><a href="#goi">Gói</a></li>
       <li><a href="#du-an">Dự án</a></li>
-      <li><a href="#quy-trinh">Quy trình</a></li>
+      <li><a href="#trang">Về Trang</a></li>
     </ul>
-    <a class="btn" href="#lien-he">Đặt lịch tư vấn</a>
+    <a class="btn" href="#lien-he">Kể câu chuyện của bạn</a>
   </div>
 </header>
 
 <main id="top">
   <section class="hero wrap">
-    <p class="label">Team marketing dùng AI</p>
-    <h1 style="margin-top:18px">Làm cho thương hiệu của bạn <em>được nhắc tên</em> <span class="mark">mỗi ngày.</span></h1>
+    <p class="eyebrow">Trang · Brand builder · bunchasake.com</p>
+    <h1 style="margin-top:20px">
+      <span class="line">You have the <span class="serif">story.</span></span>
+      <span class="line">I turn it into a <span class="brand">brand.</span></span>
+    </h1>
     <div class="hero-foot">
-      <p><strong>Bunchasake</strong> lo trọn phần marketing cho doanh nghiệp vừa và nhỏ: xây thương hiệu, chạy fanpage, lên top Google và kết nối KOL/KOC. AI làm phần lặp lại, con người làm phần sáng tạo.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#lien-he">Nhận audit miễn phí</a>
+      <p>Bạn có câu chuyện, mình biến nó thành thương hiệu. Mình là <strong>Trang</strong>. Mình lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu rõ ràng, nhất quán và có chất riêng. AI giúp mình làm nhanh hơn; phần quyết định luôn là con người.</p>
+      <div class="cta-row">
+        <a class="btn" href="#lien-he">Đặt buổi trò chuyện</a>
         <a class="btn ghost" href="#du-an">Xem dự án</a>
       </div>
     </div>
   </section>
 
-  <div class="marquee" aria-label="Một số khách hàng">
+  <div class="marquee" aria-label="Những thương hiệu đã đồng hành">
     <div class="marquee-track" id="marquee"></div>
   </div>
 
-  <section class="block wrap" id="dich-vu">
+  <section class="block wrap">
     <div class="head">
-      <h2>Bốn việc chúng tôi làm tốt.</h2>
-      <p>Bạn có thể thuê lẻ từng dịch vụ, hoặc gộp lại thành một kế hoạch hằng tháng với một đầu mối duy nhất.</p>
+      <h2>Từ một câu chuyện <span class="serif">đến một thương hiệu.</span></h2>
+      <p>Mỗi thương hiệu tốt bắt đầu từ lý do người sáng lập mở cửa hàng, mở xưởng, mở công ty. Việc của mình là tìm ra lý do đó và cho nó một hình hài.</p>
     </div>
-    <div class="services">
-      <article class="svc">
-        <span class="tag">Branding</span>
-        <h3>Thương hiệu rõ ràng ngay từ đầu</h3>
-        <p>Định vị, tên gọi, giọng văn và bộ nhận diện để mọi kênh nói cùng một ngôn ngữ.</p>
-        <ul>
-          <li>Định vị và thông điệp chính</li>
-          <li>Logo, màu sắc, font chữ, bộ quy chuẩn thương hiệu</li>
-          <li>Hướng dẫn giọng văn cho đội nội dung</li>
-        </ul>
-        <div class="ai"><b>Phần AI</b>Phân tích đối thủ và gợi ý hàng chục phương án tên, slogan trong vài giờ thay vì vài tuần.</div>
-      </article>
-      <article class="svc">
-        <span class="tag">Social Media</span>
-        <h3>Fanpage đăng đều, có người tương tác</h3>
-        <p>Quản lý trọn Facebook, Instagram, TikTok theo gói cố định mỗi tháng.</p>
-        <ul>
-          <li>Lịch nội dung, thiết kế, video ngắn</li>
-          <li>Viết caption tiếng Việt và tiếng Anh</li>
-          <li>Báo cáo reach, tương tác, inbox hằng tháng</li>
-        </ul>
-        <div class="ai"><b>Phần AI</b>Lên ý tưởng, viết nháp và lên lịch tự động, nên team dành thời gian cho hình ảnh và chiến lược.</div>
-      </article>
-      <article class="svc">
-        <span class="tag">SEO</span>
-        <h3>Khách tìm là thấy bạn</h3>
-        <p>Đưa website lên Google và xuất hiện trong câu trả lời của ChatGPT, Gemini.</p>
-        <ul>
-          <li>Audit kỹ thuật và tối ưu tốc độ</li>
-          <li>Nghiên cứu từ khoá, bài viết chuẩn SEO</li>
-          <li>SEO địa phương với Google Maps</li>
-        </ul>
-        <div class="ai"><b>Phần AI</b>Gom nhóm từ khoá, viết dàn ý và kiểm tra thương hiệu có được AI nhắc tới hay không.</div>
-      </article>
-      <article class="svc">
-        <span class="tag">KOL · KOC</span>
-        <h3>Người thật nói về sản phẩm thật</h3>
-        <p>Tìm, booking và quản lý KOL/KOC phù hợp với ngân sách và tệp khách của bạn.</p>
-        <ul>
-          <li>Lọc danh sách KOL/KOC theo ngành và khu vực</li>
-          <li>Đàm phán, brief, duyệt nội dung</li>
-          <li>Theo dõi hiệu quả từng người</li>
-        </ul>
-        <div class="ai"><b>Phần AI</b>Quét và chấm điểm KOC theo mức tương tác thật, phát hiện tài khoản có follower ảo.</div>
-      </article>
+    <div class="transform">
+      <div class="panel">
+        <span class="eyebrow">Câu chuyện</span>
+        <p class="quote">"Mẹ tôi nấu món này suốt 30 năm. Tôi chỉ muốn người ở xa cũng được ăn đúng vị đó."</p>
+        <p class="who">Một người sáng lập kể trong buổi trò chuyện đầu tiên</p>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="panel brandcard">
+        <span class="eyebrow">Thương hiệu</span>
+        <p class="name">Bếp Ba Mươi Năm</p>
+        <p class="line2">"Vị nhà, đi xa."</p>
+        <div class="swatches" aria-label="Bảng màu"><i style="background:#7A2E1F"></i><i style="background:#E9C46A"></i><i style="background:#F4EFE6"></i><i style="background:#22313F"></i></div>
+        <dl class="kv">
+          <dt>Định vị</dt><dd>Món nhà làm cho người xa quê</dd>
+          <dt>Giọng văn</dt><dd>Ấm, mộc, như lời mẹ dặn</dd>
+          <dt>Điểm chạm</dt><dd>Logo, bao bì, menu, website</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="note-ex">Ví dụ minh hoạ</p>
+  </section>
+
+  <section class="block wrap" id="cach-lam" style="padding-top:0">
+    <div class="head">
+      <h2>Bốn bước. <span class="serif">Một thương hiệu.</span></h2>
+      <p>Bạn duyệt sau mỗi bước, nên không có bất ngờ ở cuối dự án.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span><h3>Lắng nghe</h3>
+        <p>Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ.</p>
+        <p class="ai"><b>AI</b>Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ.</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span><h3>Định vị</h3>
+        <p>Thương hiệu là ai, cho ai, khác ai. Viết câu chuyện thương hiệu.</p>
+        <p class="ai"><b>AI</b>Đưa ra nhiều phương án để Trang chọn và chỉnh.</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span><h3>Nhận diện</h3>
+        <p>Tên (nếu cần), logo, màu sắc, kiểu chữ, giọng văn và bộ quy chuẩn thương hiệu.</p>
+        <p class="ai"><b>AI</b>Phác nhanh nhiều hướng hình ảnh để chọn.</p>
+      </div>
+      <div class="step">
+        <span class="n">4</span><h3>Điểm chạm</h3>
+        <p>Đưa thương hiệu vào mọi nơi khách nhìn thấy: website, bao bì, biển hiệu, profile, mạng xã hội.</p>
+        <p class="ai"><b>AI</b>Dựng mockup nhanh, viết nội dung song ngữ.</p>
+      </div>
     </div>
   </section>
 
-  <section class="block wrap" id="du-an" style="padding-top:0">
-    <div class="head">
-      <h2>Dự án đã thực hiện.</h2>
-      <p>Từ quán ăn ở Hà Nội đến quỹ đầu tư ở Ý. Bấm vào từng dự án để xem kênh thật của khách hàng.</p>
+  <section class="wrap" id="goi">
+    <div class="dark">
+      <div class="head">
+        <h2>Chọn điểm <span class="serif">bắt đầu.</span></h2>
+        <p>Mỗi gói được báo giá sau buổi trò chuyện đầu tiên, theo đúng việc bạn cần.</p>
+      </div>
+      <div class="pkgs">
+        <article class="pkg">
+          <span class="for">Doanh nghiệp mới mở</span>
+          <h3>Start</h3>
+          <ul>
+            <li>Lắng nghe và định vị bản gọn</li>
+            <li>Logo, màu sắc, kiểu chữ</li>
+            <li>Điểm chạm thiết yếu: danh thiếp, ảnh đại diện, mẫu bài đăng</li>
+          </ul>
+        </article>
+        <article class="pkg feature">
+          <span class="tag">Đầy đủ nhất</span>
+          <span class="for">Cần thương hiệu bài bản</span>
+          <h3>Build</h3>
+          <ul>
+            <li>Đủ 4 bước</li>
+            <li>Câu chuyện thương hiệu và giọng văn</li>
+            <li>Bộ quy chuẩn thương hiệu</li>
+            <li>Website và các điểm chạm chính</li>
+          </ul>
+        </article>
+        <article class="pkg">
+          <span class="for">Thương hiệu đã cũ</span>
+          <h3>Refresh</h3>
+          <ul>
+            <li>Đánh giá thương hiệu hiện tại</li>
+            <li>Định vị lại và làm mới nhận diện</li>
+            <li>Cập nhật các điểm chạm đang dùng</li>
+          </ul>
+        </article>
+      </div>
+      <p class="foot">Bunchasake chỉ làm thương hiệu. Nếu bạn cần chụp ảnh, quay phim hay chạy quảng cáo, mình giới thiệu đối tác phù hợp.</p>
     </div>
-    <div class="filters" role="group" aria-label="Lọc dự án theo dịch vụ" id="filters"></div>
+  </section>
+
+  <section class="block wrap" id="du-an">
+    <div class="head">
+      <h2>Những câu chuyện <span class="serif">đã thành thương hiệu.</span></h2>
+      <p>Nhà hàng, villa, phòng khám, podcast, nhà máy. Mỗi nơi một câu chuyện, mỗi nơi một thương hiệu khác nhau.</p>
+    </div>
     <div class="grid" id="work"></div>
   </section>
 
-  <section class="block wrap" id="quy-trinh" style="padding-top:0">
+  <section class="block wrap" id="trang" style="padding-top:0">
+    <div class="about">
+      <div class="portrait" role="img" aria-label="Chỗ đặt ảnh chân dung của Trang"><div><b>T</b>Ảnh chân dung của Trang</div></div>
+      <div>
+        <p class="eyebrow">Về Trang</p>
+        <h2 style="margin-top:14px">Mình tin mỗi doanh nghiệp đều có <span class="serif">một câu chuyện đáng kể.</span></h2>
+        <div class="copy">
+          <p>Mình đã đồng hành cùng <strong>hơn 10 thương hiệu</strong>, từ quán ăn ở Hà Nội đến quỹ đầu tư ở Ý. Điều mình học được: khách hàng không nhớ logo đẹp, họ nhớ cảm giác mà thương hiệu để lại.</p>
+          <p>Mình dùng AI cho những phần tốn thời gian như nghiên cứu, phác thảo, viết nháp, để dành thời gian cho việc quan trọng nhất: <strong>lắng nghe bạn</strong>.</p>
+        </div>
+        <p class="sign">Trang</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" style="padding-top:0">
     <div class="head">
-      <h2>Làm việc với chúng tôi.</h2>
-      <p>Bốn bước, mỗi bước có đầu ra cụ thể để bạn duyệt trước khi đi tiếp.</p>
+      <h2>Câu hỏi <span class="serif">thường gặp.</span></h2>
+      <p>Chưa thấy câu trả lời bạn cần? Cứ hỏi trong buổi trò chuyện đầu tiên.</p>
     </div>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><h3>Audit miễn phí</h3><p>Xem kênh, website và đối thủ của bạn. Gửi lại 5 điểm cần sửa ngay.</p></div>
-      <div class="step"><span class="n">2</span><h3>Kế hoạch 90 ngày</h3><p>Chọn dịch vụ, chỉ số cần đạt và ngân sách. Không ràng buộc dài hạn.</p></div>
-      <div class="step"><span class="n">3</span><h3>Triển khai</h3><p>Một đầu mối duy nhất, nhóm chat riêng, lịch nội dung được duyệt trước.</p></div>
-      <div class="step"><span class="n">4</span><h3>Báo cáo hằng tháng</h3><p>Số liệu thật, việc đã làm, việc tháng sau. Đọc trong 5 phút.</p></div>
+    <div class="faq">
+      <details>
+        <summary>Mất bao lâu để có thương hiệu?</summary>
+        <p>Thường khoảng 2–3 tuần cho gói Build, tuỳ tốc độ duyệt của bạn. Gói Start nhanh hơn.</p>
+      </details>
+      <details>
+        <summary>AI làm thương hiệu thay người à?</summary>
+        <p>Không. AI giúp nghiên cứu, phác thảo và viết nháp nhanh hơn. Mọi quyết định về định vị, hình ảnh và giọng văn do Trang làm cùng bạn.</p>
+      </details>
+      <details>
+        <summary>Mình cần chuẩn bị gì?</summary>
+        <p>Chỉ cần một buổi trò chuyện khoảng 60 phút về doanh nghiệp và lý do bạn bắt đầu. Nếu có logo, ảnh hay tài liệu cũ thì mang theo.</p>
+      </details>
+      <details>
+        <summary>Bunchasake có chạy fanpage hay quảng cáo không?</summary>
+        <p>Không. Bunchasake chỉ làm thương hiệu. Sau khi bàn giao, mình giới thiệu đối tác nếu bạn cần người vận hành.</p>
+      </details>
+      <details>
+        <summary>Mình ở nước ngoài thì có làm được không?</summary>
+        <p>Được. Mọi buổi làm việc đều có thể online, bằng tiếng Việt hoặc tiếng Anh.</p>
+      </details>
     </div>
   </section>
 
-  <section class="wrap">
-    <div class="band">
-      <h2>AI làm phần lặp lại. Con người làm phần đáng nhớ.</h2>
-      <dl>
-        <div><dt>Nhanh hơn</dt><dd>Nghiên cứu, viết nháp và báo cáo chạy tự động, nên nội dung lên sóng sớm hơn.</dd></div>
-        <div><dt>Rẻ hơn</dt><dd>Bớt giờ làm thủ công, bạn trả cho chiến lược và sáng tạo.</dd></div>
-        <div><dt>Có người chịu trách nhiệm</dt><dd>Mọi bài đăng, mọi booking đều được người trong team duyệt trước khi ra ngoài.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="block wrap" id="lien-he">
+  <section class="block wrap" id="lien-he" style="padding-top:0">
     <div class="contact">
       <div>
-        <h2>Kể cho chúng tôi nghe về <em>thương hiệu của bạn.</em></h2>
-        <p class="lead">Để lại thông tin, team sẽ liên hệ và gửi bạn bản audit miễn phí.</p>
+        <h2>Kể mình nghe <span class="serif">câu chuyện của bạn.</span></h2>
+        <p class="lead">Vài dòng là đủ. Trang sẽ đọc và hẹn bạn một buổi trò chuyện.</p>
       </div>
       <form id="form" novalidate>
         <label for="f-name">Tên của bạn<input id="f-name" name="name" autocomplete="name" required></label>
-        <label for="f-brand">Thương hiệu / website<input id="f-brand" name="brand" placeholder="vd: chopchop.vn" required></label>
+        <label for="f-biz">Doanh nghiệp / website<input id="f-biz" name="biz" placeholder="vd: Bếp Ba Mươi Năm" required></label>
         <label for="f-contact">Email hoặc số điện thoại<input id="f-contact" name="contact" required></label>
-        <fieldset class="checks">
-          <legend>Bạn quan tâm dịch vụ nào?</legend>
-          <label for="c-brand"><input type="checkbox" id="c-brand" name="svc" value="branding"> Branding</label>
-          <label for="c-social"><input type="checkbox" id="c-social" name="svc" value="social"> Social Media</label>
-          <label for="c-seo"><input type="checkbox" id="c-seo" name="svc" value="seo"> SEO</label>
-          <label for="c-kol"><input type="checkbox" id="c-kol" name="svc" value="kol"> KOL/KOC</label>
-        </fieldset>
-        <label for="f-msg">Bạn đang gặp khó ở đâu?<textarea id="f-msg" name="msg" placeholder="vd: fanpage có 5.000 follower nhưng ít inbox"></textarea></label>
-        <button class="btn" type="submit" style="justify-self:start">Gửi yêu cầu audit</button>
+        <label for="f-story">Vì sao bạn bắt đầu?<textarea id="f-story" name="story" placeholder="Kể ngắn thôi, mình sẽ hỏi thêm khi gặp."></textarea></label>
+        <button class="btn" type="submit" style="justify-self:start">Gửi câu chuyện</button>
         <p class="note" id="form-note" hidden></p>
       </form>
     </div>
@@ -346,62 +415,46 @@ footer .logo { font-size: 20px; color: var(--ink); }
 </main>
 
 <footer class="wrap">
-  <a class="logo" href="#top">bunchasake<span style="color:var(--herb)">.</span></a>
-  <span>Branding · Social Media · SEO · KOL/KOC</span>
+  <a class="logo" href="#top">bunchasake<span style="color:var(--cobalt)">.</span></a>
+  <span>Brand builder · bunchasake.com</span>
   <span>© 2026 Bunchasake</span>
 </footer>
 
 <script>
 const projects = [
-  { name: "Chop Chop", sector: "Nhà hàng Trung Hoa", desc: "Nhà hàng ẩm thực Trung Hoa đậm đà hương vị.", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", svc: ["social"], ch: "Facebook" },
-  { name: "Viet My Clean Home", sector: "Dịch vụ dọn nhà · Hà Nội", desc: "Dịch vụ dọn nhà chuẩn Mỹ tại Hà Nội.", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", svc: ["social"], ch: "Facebook" },
-  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", desc: "Kênh thông tin y tế chuyên nghiệp.", img: "work/bac-si-anh.jpg", url: "https://www.youtube.com/@onlybrainspodcast", svc: ["kol"], ch: "YouTube" },
-  { name: "Impact Investments", sector: "Đầu tư bất động sản · Ý", desc: "Đầu tư nhà cửa với tác động tích cực.", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", svc: ["branding", "seo"], ch: "Website" },
-  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", desc: "Hoa tươi và thiết kế cảnh quan.", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", svc: ["social"], ch: "Instagram" },
-  { name: "Talk2TheTop", sector: "Podcast", desc: "Sản xuất podcast chuyên nghiệp.", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", svc: ["kol"], ch: "YouTube" },
-  { name: "Lạc Hồng", sector: "Máy xây dựng · B2B", desc: "Giải pháp toàn diện về máy xây dựng.", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", svc: ["branding", "seo"], ch: "Website" },
-  { name: "Vestra Place", sector: "Coworking · Thể thao", desc: "Không gian làm việc chung cho doanh nhân và người sáng tạo.", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", svc: ["social"], ch: "Instagram" },
-  { name: "Vina KTV", sector: "Thiết bị âm thanh · B2B", desc: "Sản xuất và phân phối thiết bị âm thanh.", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", svc: ["branding", "seo"], ch: "Website" },
-  { name: "NA-VI Living", sector: "Nhà ở cho người mới đến", desc: "Quality living for new comers.", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", svc: ["branding", "seo"], ch: "Website" },
-  { name: "Borgo Villa Nemec", sector: "Ý", desc: "Đang cập nhật mô tả dự án.", img: "", url: "https://borgovillanemec.it/", svc: ["branding", "seo"], ch: "Website" },
+  { name: "Chop Chop", sector: "Nhà hàng", desc: "Nhà hàng ẩm thực Trung Hoa đậm đà hương vị.", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop" },
+  { name: "Borgo Villa Nemec", sector: "Villa · Ý", desc: "Đang cập nhật câu chuyện dự án.", img: "", url: "https://borgovillanemec.it/" },
+  { name: "Impact Investments", sector: "Đầu tư · Ý", desc: "Đầu tư nhà cửa với tác động tích cực.", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/" },
+  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình", desc: "Dịch vụ dọn nhà chuẩn Mỹ tại Hà Nội.", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi" },
+  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", desc: "Kênh thông tin y tế chuyên nghiệp.", img: "work/bac-si-anh.jpg", url: "https://www.youtube.com/@onlybrainspodcast" },
+  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", desc: "Hoa tươi và thiết kế cảnh quan.", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/" },
+  { name: "Lạc Hồng", sector: "Máy xây dựng", desc: "Giải pháp toàn diện về máy xây dựng.", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/" },
+  { name: "Talk2TheTop", sector: "Podcast", desc: "Sản xuất podcast chuyên nghiệp.", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop" },
+  { name: "NA-VI Living", sector: "Lưu trú", desc: "Quality living for new comers.", img: "work/navi-living.jpg", url: "https://www.naviliving.com/" },
+  { name: "Vestra Place", sector: "Coworking", desc: "Không gian làm việc chung cho người sáng tạo.", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/" },
+  { name: "Vina KTV", sector: "Thiết bị âm thanh", desc: "Sản xuất và phân phối thiết bị âm thanh.", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/" },
 ];
-const labels = { all: "Tất cả", branding: "Branding", social: "Social Media", seo: "SEO", kol: "KOL · KOC" };
-
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-// Marquee: lặp danh sách 2 lần để chạy liền mạch
 const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
 document.getElementById("marquee").innerHTML = names + names;
 
-const work = document.getElementById("work");
-function render(filter) {
-  work.innerHTML = projects.filter(p => filter === "all" || p.svc.includes(filter)).map(p => `
-    <a class="card" href="${p.url}" target="_blank" rel="noopener">
-      <div class="img">${p.img ? `<img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="600">` : `<div class="placeholder">${esc(p.name)}</div>`}</div>
-      <div class="meta">${p.svc.map(s => `<span>${labels[s]}</span>`).join("")}<span>${p.ch}</span></div>
-      <h3>${esc(p.name)}</h3>
-      <p>${esc(p.sector)}. ${esc(p.desc)}</p>
-      <span class="go">Xem kênh ↗</span>
-    </a>`).join("");
-}
-const filters = document.getElementById("filters");
-filters.innerHTML = Object.entries(labels).map(([k, v]) =>
-  `<button class="chip" type="button" data-f="${k}" aria-pressed="${k === "all"}">${v}</button>`).join("");
-filters.addEventListener("click", e => {
-  const b = e.target.closest(".chip"); if (!b) return;
-  filters.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b));
-  render(b.dataset.f);
-});
-render("all");
+document.getElementById("work").innerHTML = projects.map(p => `
+  <a class="card" href="${p.url}" target="_blank" rel="noopener">
+    <div class="img">${p.img ? `<img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="600">` : `<div class="placeholder">${esc(p.name)}</div>`}</div>
+    <span class="sector">${esc(p.sector)}</span>
+    <h3>${esc(p.name)}</h3>
+    <p>${esc(p.desc)}</p>
+  </a>`).join("");
 
 document.getElementById("form").addEventListener("submit", e => {
   e.preventDefault();
   const f = e.target, note = document.getElementById("form-note");
-  const missing = ["f-name", "f-brand", "f-contact"].filter(id => !f.querySelector("#" + id).value.trim());
+  const missing = ["f-name", "f-biz", "f-contact"].filter(id => !f.querySelector("#" + id).value.trim());
   note.hidden = false;
   note.textContent = missing.length
-    ? "Vui lòng điền tên, thương hiệu và cách liên hệ."
-    : "Đã ghi nhận. Đây là bản demo nên form chưa gửi đi đâu.";
+    ? "Vui lòng điền tên, doanh nghiệp và cách liên hệ."
+    : "Đã ghi nhận câu chuyện của bạn. Đây là bản demo nên form chưa gửi đi đâu.";
 });
 </script>
 </body>

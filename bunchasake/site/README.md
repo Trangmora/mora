@@ -1,6 +1,6 @@
 # Bunchasake – website demo
 
-- `index.html`: trang hoàn chỉnh, mở thẳng bằng trình duyệt (không cần build).
+- `index.html`: trang hoàn chỉnh (hướng Brand Builder), mở thẳng bằng trình duyệt, không cần build.
 - `page.html`: cùng nội dung, bản dùng để đăng xem trước (không có thẻ html/head/body).
 - `work/`: ảnh dự án, lấy từ repo `Trangmora/ai-agency-for-bussiness` và đã nén lại.
 
