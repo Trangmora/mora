@@ -33,9 +33,19 @@ Chọn theo từng doanh nghiệp, ví dụ: website, danh thiếp, bao bì, bi�
 | Build | Doanh nghiệp cần thương hiệu bài bản | Đủ 4 bước, có website |
 | Refresh | Thương hiệu đã có nhưng lỗi thời | Đánh giá thương hiệu hiện tại, rồi bước 2–4 |
 
+## Thêm: Automation Social Media cho bạn
+
+Thêm được vào bất kỳ gói nào. Bunchasake dựng sẵn hệ thống và hướng dẫn team của khách tự vận hành (2–4 buổi), không chạy fanpage thay khách.
+
+1. Trợ lý AI riêng, nạp sẵn định vị và giọng văn thương hiệu
+2. Lịch nội dung 30 ngày
+3. AI viết nháp, khách duyệt
+4. Tự lên lịch đăng trên Facebook, TikTok, Instagram
+5. Trả lời inbox tự động cho câu hỏi thường gặp
+
 ## Không làm
 
-Quản lý social media, KOL/KOC, SEO/GEO, chạy quảng cáo, AI sales/chatbot, coaching, chụp ảnh / quay phim (có thể giới thiệu đối tác).
+Chạy social media thay khách, KOL/KOC, SEO/GEO, chạy quảng cáo, AI sales/chatbot, coaching, chụp ảnh / quay phim (có thể giới thiệu đối tác).
 
 ## Bằng chứng
 
