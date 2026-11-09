@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bunchasake</title>
-<meta name="description" content="Bunchasake – brand builder. Bạn có câu chuyện, chúng tôi biến nó thành thương hiệu.">
+<meta name="description" content="Bunchasake – brand builder. You have the story. We turn it into a brand.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Playfair+Display:wght@500&family=Anton&family=Baloo+2:wght@800&family=Be+Vietnam+Pro:wght@500;700&display=swap">
@@ -416,7 +416,7 @@ dialog.policy form { margin-top: 18px; }
 
 <a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Studio xây thương hiệu: biến câu chuyện của người sáng lập thành thương hiệu.","areaServed":["VN","IT"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Brand-building studio that turns founders' stories into brands.","availableLanguage":["en","vi"],"areaServed":["VN","IT"]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder</i></a>
@@ -429,8 +429,8 @@ dialog.policy form { margin-top: 18px; }
   </ul>
   <div class="nav-r">
     <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="vi" aria-pressed="true" lang="vi">VI</button>
-      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="vi" aria-pressed="false" lang="vi">VI</button>
     </div>
     <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
   </div>
@@ -798,8 +798,8 @@ const EN_ATTR = {
 "Vì sao bạn bắt đầu? Vài dòng là đủ.": "Why did you start? A few lines is enough."
 };
 const norm = h => h.replace(/\s+/g, " ").trim();
-let LANG = "vi";
-try { LANG = localStorage.getItem("bsk-lang") === "en" ? "en" : "vi"; } catch {}
+let LANG = "en";
+try { LANG = localStorage.getItem("bsk-lang") === "vi" ? "vi" : "en"; } catch {}
 const t = (vi, en) => LANG === "en" ? en : vi;
 const tr = o => LANG === "en" && o.en ? { ...o, ...o.en } : o;
 const ENN = {}; for (const k in EN) ENN[norm(k)] = EN[k];
