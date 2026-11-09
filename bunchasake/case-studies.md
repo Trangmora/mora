@@ -15,7 +15,7 @@ Dịch vụ chốt: Social Media Management · SEO · Branding · KOL/KOC bookin
 | 2 | Viet My Clean Home | Dịch vụ dọn nhà, Hà Nội | Dịch vụ dọn nhà tại Hà Nội | https://www.facebook.com/Dichvudonnhataihanoi | d76e2cce-c7d7-4953-9dd0-d105ef475476.png | ? | ? |
 | 3 | Canasto de Flores | Hoa tươi, cảnh quan | Dịch vụ cung cấp hoa tươi và thiết kế cảnh quan | https://www.instagram.com/canastodeflores/ | 4c45f774-b3af-444d-970d-21d24034bee6.png | ? | ? |
 | 4 | Talk2TheTop Podcast | Podcast | Sản xuất Podcast chuyên nghiệp | https://youtube.com/@Talk2TheTop | 7112c0b3-3fb5-40de-9ff5-3e747d0d4135.png | ? | ? |
-| 5 | Bác Sĩ Ánh (Only Brains Podcast) | Y tế / personal brand | Kênh thông tin y tế chuyên nghiệp | https://www.youtube.com/@onlybrainspodcast | 7c1a9c18-3490-441b-9a7f-ea0d03b40a00.png | ? | ? |
+| 5 | Bác Sĩ Ánh (Only Brains Podcast) | Y tế / personal brand | Kênh thông tin y tế chuyên nghiệp | https://www.youtube.com/@onlybrainspodcast · Facebook: https://www.facebook.com/profile.php?id=61596245068595 | 7c1a9c18-3490-441b-9a7f-ea0d03b40a00.png | ? | ? |
 | 6 | Vestra_Place | Coworking / startup thể thao | Không gian làm việc chung cho doanh nhân và người sáng tạo | https://www.instagram.com/vestra_place/ | 88f3a147-d0df-48e0-89a5-2263472cca2a.png | ? | ? |
 | 7 | Chop Chop – Chinese Cuisine | F&B | Nhà hàng ẩm thực Trung Hoa | https://www.facebook.com/thaichopchop | 480e57ba-6f32-4a43-8908-68c76e63fa4e.png | ? | ? |
 | 8 | Lạc Hồng Company | Máy xây dựng (B2B) | Giải pháp toàn diện về máy xây dựng | https://www.lachongshop.com/ | lac-hong-company.png | ? | ? |
