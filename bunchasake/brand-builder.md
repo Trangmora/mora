@@ -45,7 +45,7 @@ Thêm được vào bất kỳ gói nào. Bunchasake dựng sẵn hệ thống v
 
 ## Không làm
 
-Chạy social media thay khách, KOL/KOC, SEO/GEO, chạy quảng cáo, AI sales/chatbot, coaching, chụp ảnh / quay phim (có thể giới thiệu đối tác).
+Chạy social media thay khách, KOL/KOC, SEO/GEO, chạy quảng cáo, AI sales (tìm khách, gọi điện), chụp ảnh / quay phim (có thể giới thiệu đối tác).
 
 ## Bằng chứng
 
