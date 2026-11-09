@@ -29,6 +29,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg); color: var(--ink);
@@ -321,13 +322,82 @@ footer h2 .it { color: var(--muted); }
 .card-form textarea { resize: vertical; min-height: 80px; }
 .pick { display: flex; flex-wrap: wrap; gap: 6px; border: 0; padding: 0; margin: 4px 0 0; }
 .pick legend { font-size: 12px; color: #55554F; margin-bottom: 8px; padding: 0; }
-.pick label { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 7px 12px; border: 1px solid var(--card-line); border-radius: 999px; cursor: pointer; }
+.pick label { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 7px 12px; border: 1px solid var(--card-line); border-radius: 999px; cursor: pointer; }
 .pick label:has(input:checked) { background: var(--card-ink); color: var(--card); border-color: var(--card-ink); }
 .pick input { accent-color: var(--card-ink); margin: 0; }
 .submit { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--card-ink); color: var(--card); font-size: 14px; font-weight: 600; padding: 16px 20px; border-radius: 14px; margin-top: 6px; transition: background .2s, color .2s; }
 .submit:hover { background: var(--mark); color: #0A0A0A; }
 .submit:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 .note { font-size: 13px; }
+
+/* ===== Bổ sung chuyên nghiệp ===== */
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; }
+.skip:focus { left: 12px; }
+.nav ul a.active { color: var(--ink); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(36px, 5vw, 64px); border-top: 1px solid var(--line); animation: fade 1s .55s var(--ease) both; }
+.stats div { padding: 18px 20px 0 0; display: grid; gap: 4px; min-width: 0; }
+.stats div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.stats b { font-size: clamp(28px, 3vw, 40px); font-weight: 500; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) { .stats div { padding-right: 8px; } .stats div + div { padding-left: 10px; } .stats span { font-size: 12px; } }
+.pkg .fit { font-size: 14px; color: var(--muted); font-weight: 300; }
+.pkg.feature .fit { color: #55554F; }
+.pkg .choose { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-top: 6px; padding: 13px 16px; border-radius: 12px; font-size: 14px; font-weight: 600; box-shadow: inset 0 0 0 1px var(--line-strong); transition: background .2s, color .2s, box-shadow .2s; }
+.pkg .choose:hover { background: var(--ink); color: var(--bg); box-shadow: none; }
+.pkg.feature .choose { background: var(--bg); color: var(--ink); box-shadow: none; }
+.pkg.feature .choose:hover { background: var(--mark); color: #0A0A0A; }
+.pkg .choose:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.contact-side { display: grid; gap: clamp(28px, 4vw, 44px); align-content: end; }
+.reach { display: grid; gap: 0; max-width: 520px; }
+.reach div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); align-items: center; }
+.reach dt { color: var(--muted); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+.reach dd { font-size: 15px; }
+.reach dd { margin: 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.copy { all: unset; cursor: pointer; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; padding: 4px 8px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); color: var(--muted); }
+.copy:hover { color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.copy:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.next { display: grid; gap: 0; counter-reset: n; }
+.next li { list-style: none; display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding-block: 10px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.next li::before { counter-increment: n; content: counter(n); color: var(--mark); font-weight: 600; }
+.next li b { color: var(--ink); font-weight: 500; }
+.next { margin: 0; padding: 0; max-width: 520px; }
+.tabs { display: grid; grid-template-columns: 1fr 1fr; background: #E8E8E4; border-radius: 12px; padding: 4px; gap: 4px; }
+.tabs button { all: unset; cursor: pointer; text-align: center; font-size: 13px; font-weight: 600; padding: 10px; border-radius: 9px; color: #55554F; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--card-ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.tabs button:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 2px; }
+.card-form .err { display: block; font-size: 12px; color: #C2321F; margin-top: 6px; min-height: 0; }
+.card-form [aria-invalid="true"] { border-bottom-color: #C2321F; }
+.privacy { font-size: 12px; color: #6B6B66; line-height: 1.5; }
+.privacy button { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; color: var(--card-ink); }
+.slots { display: grid; gap: 14px; }
+.slots .lbl { font-size: 12px; color: #55554F; }
+.days, .times { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+.days button, .times button { all: unset; cursor: pointer; flex: none; text-align: center; border: 1px solid var(--card-line); border-radius: 12px; padding: 9px 12px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.days button small { display: block; font-size: 10px; color: #6B6B66; text-transform: uppercase; }
+.days button[aria-pressed="true"], .times button[aria-pressed="true"] { background: var(--card-ink); color: var(--card); border-color: var(--card-ink); }
+.days button[aria-pressed="true"] small { color: #BDBDB8; }
+.days button:focus-visible, .times button:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 2px; }
+.sum { font-size: 13px; padding: 10px 12px; border-radius: 10px; background: #EDEDE9; }
+.done { display: grid; gap: 14px; text-align: left; }
+.done h3 { font-size: 26px; }
+.done .tick { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--mark); color: #0A0A0A; font-weight: 700; }
+.done ol { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: #3A3A36; }
+.done .again { all: unset; cursor: pointer; justify-self: start; font-size: 13px; text-decoration: underline; text-underline-offset: 2px; }
+.foot-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.foot-nav a { color: var(--muted); } .foot-nav a:hover { color: var(--ink); }
+.legal button { all: unset; cursor: pointer; color: var(--dim); text-decoration: underline; text-underline-offset: 3px; }
+.legal button:hover { color: var(--ink); }
+.legal .r { display: flex; gap: 18px; flex-wrap: wrap; }
+dialog.policy { max-width: min(560px, calc(100vw - 32px)); border: 1px solid var(--line-strong); border-radius: 18px; background: var(--raise); color: var(--ink); padding: 28px; }
+dialog.policy::backdrop { background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
+dialog.policy h3 { font-size: 22px; margin-bottom: 14px; letter-spacing: -0.03em; }
+dialog.policy p, dialog.policy li { font-size: 14px; color: var(--muted); font-weight: 300; }
+dialog.policy ul { padding-left: 18px; margin: 12px 0; display: grid; gap: 6px; }
+dialog.policy form { margin-top: 18px; }
+.mobile-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; display: none; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .35s var(--ease); }
+.mobile-cta.show { transform: none; }
+.mobile-cta a { flex: 1; justify-content: center; }
+@media (max-width: 760px) { .mobile-cta { display: flex; } footer { padding-bottom: 96px; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -337,7 +407,9 @@ footer h2 .it { color: var(--muted); }
 </head>
 <body>
 
+<a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
 <div class="progress" id="progress" aria-hidden="true"></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Studio xây thương hiệu: biến câu chuyện của người sáng lập thành thương hiệu.","areaServed":["VN","IT"]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder</i></a>
@@ -364,6 +436,11 @@ footer h2 .it { color: var(--muted); }
         <a class="pill" href="#lab">Thử Brand Lab <span aria-hidden="true">↓</span></a>
         <a class="pill ghost" href="#du-an">Xem dự án</a>
       </div>
+    </div>
+    <div class="stats">
+      <div><b>11</b><span>thương hiệu đã đồng hành</span></div>
+      <div><b>2</b><span>quốc gia: Việt Nam, Ý</span></div>
+      <div><b>4</b><span>bước, bạn duyệt từng bước</span></div>
     </div>
   </section>
 
@@ -443,31 +520,37 @@ footer h2 .it { color: var(--muted); }
       <article class="pkg">
         <span class="for cap">Doanh nghiệp mới mở</span>
         <h3>Start</h3>
+        <p class="fit">Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.</p>
         <ul>
           <li>Lắng nghe và định vị bản gọn</li>
           <li>Logo, màu sắc, kiểu chữ</li>
           <li>Danh thiếp, ảnh đại diện, mẫu bài đăng</li>
         </ul>
+        <button class="choose" type="button" data-pkg="start">Chọn Start <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
         <span class="tag cap">Đầy đủ nhất</span>
         <span class="for cap">Cần thương hiệu bài bản</span>
         <h3>Build</h3>
+        <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
         <ul>
           <li>Đủ 4 bước</li>
           <li>Câu chuyện thương hiệu và giọng văn</li>
           <li>Bộ quy chuẩn thương hiệu</li>
           <li>Website và các điểm chạm chính</li>
         </ul>
+        <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
         <span class="for cap">Thương hiệu đã cũ</span>
         <h3>Refresh</h3>
+        <p class="fit">Phù hợp nếu khách nói thương hiệu của bạn "nhìn cũ".</p>
         <ul>
           <li>Đánh giá thương hiệu hiện tại</li>
           <li>Định vị lại, làm mới nhận diện</li>
           <li>Cập nhật các điểm chạm đang dùng</li>
         </ul>
+        <button class="choose" type="button" data-pkg="refresh">Chọn Refresh <span aria-hidden="true">→</span></button>
       </article>
     </div>
   </section>
@@ -504,29 +587,81 @@ footer h2 .it { color: var(--muted); }
 </main>
 
 <footer id="lien-he">
-  <div>
+  <div class="contact-side">
     <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
+    <ol class="next" aria-label="Sau khi bạn gửi">
+      <li><span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span></li>
+      <li><span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span></li>
+      <li><span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span></li>
+    </ol>
+    <dl class="reach">
+      <div><dt>Email</dt><dd><a href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a><button class="copy" type="button" id="copyMail">Sao chép</button></dd></div>
+      <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
+      <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
+    </dl>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#lab">Brand Lab</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
   </div>
 
-  <form class="card-form" id="form" novalidate>
-    <h3>Kể câu chuyện</h3>
-    <label for="f-name"><span>Tên của bạn</span><input id="f-name" name="name" autocomplete="name" placeholder="Tên của bạn" required></label>
-    <label for="f-biz"><span>Doanh nghiệp / website</span><input id="f-biz" name="biz" placeholder="Doanh nghiệp / website" required></label>
-    <label for="f-contact"><span>Email hoặc số điện thoại</span><input id="f-contact" name="contact" placeholder="Email hoặc số điện thoại" required></label>
-    <fieldset class="pick">
-      <legend>Bạn đang ở giai đoạn nào?</legend>
-      <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> Sắp mở</label>
-      <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> Cần làm bài bản</label>
-      <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> Muốn làm mới</label>
-      <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
-    </fieldset>
-    <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu?"></textarea></label>
-    <button class="submit" type="submit">Gửi câu chuyện <span aria-hidden="true">↗</span></button>
-    <p class="note" id="form-note" hidden></p>
-  </form>
+  <div class="card-form" id="contactCard">
+    <div class="tabs" role="tablist" aria-label="Cách liên hệ">
+      <button type="button" role="tab" id="tab-story" aria-selected="true" aria-controls="form">Gửi câu chuyện</button>
+      <button type="button" role="tab" id="tab-call" aria-selected="false" aria-controls="callForm">Đặt lịch gọi 30 phút</button>
+    </div>
 
-  <div class="legal cap"><span>© 2026 Bunchasake</span><span>bunchasake.com</span></div>
+    <form id="form" role="tabpanel" aria-labelledby="tab-story" novalidate style="display:grid;gap:16px">
+      <label for="f-name"><span>Tên của bạn</span><input id="f-name" name="name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-name"><em class="err" id="e-name" hidden></em></label>
+      <label for="f-biz"><span>Doanh nghiệp / website</span><input id="f-biz" name="biz" autocomplete="organization" placeholder="Doanh nghiệp / website" required aria-describedby="e-biz"><em class="err" id="e-biz" hidden></em></label>
+      <label for="f-contact"><span>Email hoặc số điện thoại</span><input id="f-contact" name="contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-contact"><em class="err" id="e-contact" hidden></em></label>
+      <fieldset class="pick">
+        <legend>Bạn đang ở giai đoạn nào?</legend>
+        <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> Sắp mở</label>
+        <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> Cần làm bài bản</label>
+        <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> Muốn làm mới</label>
+        <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
+      </fieldset>
+      <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu? Vài dòng là đủ."></textarea></label>
+      <button class="submit" type="submit">Gửi câu chuyện <span aria-hidden="true">↗</span></button>
+      <p class="privacy">Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
+    </form>
+
+    <form id="callForm" role="tabpanel" aria-labelledby="tab-call" novalidate hidden style="gap:16px">
+      <div class="slots">
+        <span class="lbl">Chọn ngày</span>
+        <div class="days" id="days"></div>
+        <span class="lbl">Chọn giờ (giờ Việt Nam)</span>
+        <div class="times" id="times"></div>
+        <p class="sum" id="sum">Chọn ngày và giờ phù hợp với bạn.</p>
+      </div>
+      <label for="c-name"><span>Tên của bạn</span><input id="c-name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-cname"><em class="err" id="e-cname" hidden></em></label>
+      <label for="c-contact"><span>Email hoặc số điện thoại</span><input id="c-contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-ccontact"><em class="err" id="e-ccontact" hidden></em></label>
+      <button class="submit" type="submit">Giữ lịch này <span aria-hidden="true">↗</span></button>
+      <p class="privacy">Bạn sẽ nhận lời mời họp qua email. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
+    </form>
+
+    <div class="done" id="done" hidden aria-live="polite"></div>
+  </div>
+
+  <div class="legal cap">
+    <span>© 2026 Bunchasake · Brand Builder</span>
+    <span class="r"><button type="button" class="open-policy">Chính sách bảo mật</button><a href="#top">Lên đầu trang ↑</a></span>
+  </div>
 </footer>
+
+<dialog class="policy" id="policy" aria-labelledby="policy-h">
+  <h3 id="policy-h">Chính sách bảo mật</h3>
+  <p>Bunchasake chỉ thu thập những gì bạn tự điền vào form.</p>
+  <ul>
+    <li>Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.</li>
+    <li>Không bán hay chia sẻ cho bên thứ ba.</li>
+    <li>Bạn có thể yêu cầu xoá thông tin bất cứ lúc nào qua email.</li>
+  </ul>
+  <form method="dialog"><button class="pill" value="close">Đã hiểu</button></form>
+</dialog>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="pill" href="#lien-he" data-tab="story">Kể câu chuyện</a>
+  <a class="pill ghost" href="#lien-he" data-tab="call">Đặt lịch gọi</a>
+</div>
 
 <script>
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -717,16 +852,103 @@ function onScroll() {
 }
 addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-/* ---------- Form ---------- */
-document.getElementById("form").addEventListener("submit", e => {
+/* ---------- Scrollspy ---------- */
+const navLinks = [...document.querySelectorAll('.nav ul a')];
+if ("IntersectionObserver" in window) {
+  const spy = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+  }), { rootMargin: "-40% 0px -55% 0px" });
+  ["lab", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
+}
+
+/* ---------- Thanh CTA trên điện thoại ---------- */
+const mcta = document.getElementById("mobileCta"), heroEl = document.querySelector(".hero"), contactEl = document.getElementById("lien-he");
+addEventListener("scroll", () => {
+  const past = heroEl.getBoundingClientRect().bottom < 0;
+  const atContact = contactEl.getBoundingClientRect().top < innerHeight * .8;
+  mcta.classList.toggle("show", past && !atContact);
+}, { passive: true });
+
+/* ---------- Liên hệ: tab ---------- */
+const tabStory = document.getElementById("tab-story"), tabCall = document.getElementById("tab-call");
+const storyForm = document.getElementById("form"), callForm = document.getElementById("callForm"), doneEl = document.getElementById("done");
+function showTab(which) {
+  const call = which === "call";
+  tabStory.setAttribute("aria-selected", !call); tabCall.setAttribute("aria-selected", call);
+  storyForm.hidden = call; callForm.hidden = !call; doneEl.hidden = true;
+  storyForm.style.display = call ? "none" : "grid"; callForm.style.display = call ? "grid" : "none";
+}
+tabStory.addEventListener("click", () => showTab("story"));
+tabCall.addEventListener("click", () => showTab("call"));
+document.querySelectorAll("[data-tab]").forEach(a => a.addEventListener("click", () => showTab(a.dataset.tab)));
+
+/* Chọn gói → điền sẵn form */
+document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", () => {
+  showTab("story");
+  const r = document.getElementById("p-" + b.dataset.pkg); if (r) r.checked = true;
+  document.getElementById("lien-he").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), reduce ? 0 : 600);
+}));
+
+/* Kiểm tra từng ô */
+const rules = {
+  "f-name": v => v ? "" : "Cho chúng tôi biết tên của bạn.",
+  "f-biz": v => v ? "" : "Tên doanh nghiệp hoặc website giúp chúng tôi chuẩn bị trước.",
+  "f-contact": v => !v ? "Cần email hoặc số điện thoại để liên hệ lại." : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : "Email hoặc số điện thoại chưa đúng định dạng.",
+  "c-name": v => v ? "" : "Cho chúng tôi biết tên của bạn.",
+  "c-contact": v => !v ? "Cần email hoặc số điện thoại để gửi lời mời." : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : "Email hoặc số điện thoại chưa đúng định dạng.",
+};
+const errIds = { "f-name": "e-name", "f-biz": "e-biz", "f-contact": "e-contact", "c-name": "e-cname", "c-contact": "e-ccontact" };
+function check(id) {
+  const el = document.getElementById(id), msg = rules[id](el.value.trim()), er = document.getElementById(errIds[id]);
+  el.setAttribute("aria-invalid", !!msg); er.hidden = !msg; er.textContent = msg; return !msg;
+}
+Object.keys(rules).forEach(id => document.getElementById(id).addEventListener("blur", e => { if (e.target.value) check(id); }));
+
+function finish(title, lines) {
+  storyForm.style.display = "none"; callForm.style.display = "none"; storyForm.hidden = callForm.hidden = true;
+  doneEl.hidden = false;
+  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol><p class="privacy">Đây là bản demo nên thông tin chưa được gửi đi.</p><button class="again" type="button">Quay lại form</button>`;
+  doneEl.querySelector(".again").addEventListener("click", () => showTab(tabCall.getAttribute("aria-selected") === "true" ? "call" : "story"));
+  doneEl.querySelector("h3").setAttribute("tabindex", "-1"); doneEl.querySelector("h3").focus();
+}
+storyForm.addEventListener("submit", e => {
   e.preventDefault();
-  const f = e.target, note = document.getElementById("form-note");
-  const missing = ["f-name", "f-biz", "f-contact"].filter(id => !f.querySelector("#" + id).value.trim());
-  note.hidden = false;
-  note.textContent = missing.length
-    ? "Vui lòng điền tên, doanh nghiệp và cách liên hệ."
-    : "Đã ghi nhận câu chuyện của bạn. Đây là bản demo nên form chưa gửi đi đâu.";
+  const ok = ["f-name", "f-biz", "f-contact"].map(check).every(Boolean);
+  if (!ok) { storyForm.querySelector('[aria-invalid="true"]').focus(); return; }
+  const n = esc(document.getElementById("f-name").value.trim());
+  finish(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
 });
+
+/* Đặt lịch */
+const daysEl = document.getElementById("days"), timesEl = document.getElementById("times"), sumEl = document.getElementById("sum");
+const wd = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], slots = ["09:00", "10:30", "14:00", "15:30", "17:00"];
+const days = []; for (let d = new Date(), k = 0; days.length < 6 && k < 14; k++) { d = new Date(Date.now() + (k + 1) * 864e5); if (d.getDay() % 6) days.push(d); }
+let pickDay = null, pickTime = null;
+daysEl.innerHTML = days.map((d, i) => `<button type="button" aria-pressed="false" data-i="${i}"><small>${wd[d.getDay()]}</small>${d.getDate()}/${d.getMonth() + 1}</button>`).join("");
+timesEl.innerHTML = slots.map(t => `<button type="button" aria-pressed="false" data-t="${t}">${t}</button>`).join("");
+function updSum() {
+  sumEl.textContent = pickDay !== null && pickTime ? `Cuộc gọi 30 phút · ${wd[days[pickDay].getDay()]}, ${days[pickDay].getDate()}/${days[pickDay].getMonth() + 1} · ${pickTime}` : "Chọn ngày và giờ phù hợp với bạn.";
+}
+daysEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickDay = +b.dataset.i; daysEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
+timesEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickTime = b.dataset.t; timesEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
+callForm.addEventListener("submit", e => {
+  e.preventDefault();
+  if (pickDay === null || !pickTime) { sumEl.textContent = "Vui lòng chọn ngày và giờ trước."; sumEl.focus?.(); return; }
+  const ok = ["c-name", "c-contact"].map(check).every(Boolean);
+  if (!ok) { callForm.querySelector('[aria-invalid="true"]').focus(); return; }
+  finish("Đã giữ lịch cho bạn.", [esc(sumEl.textContent), "Lời mời họp sẽ được gửi tới " + esc(document.getElementById("c-contact").value.trim()) + ".", "Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo."]);
+});
+
+/* Sao chép email + chính sách */
+document.getElementById("copyMail").addEventListener("click", async e => {
+  const b = e.currentTarget, mail = document.getElementById("mail").textContent;
+  try { await navigator.clipboard.writeText(mail); b.textContent = "Đã chép"; }
+  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = "Đã chọn"; }
+  setTimeout(() => { b.textContent = "Sao chép"; }, 1800);
+});
+const policy = document.getElementById("policy");
+document.querySelectorAll(".open-policy").forEach(b => b.addEventListener("click", () => policy.showModal ? policy.showModal() : policy.setAttribute("open", "")));
 </script>
 </body>
 </html>
