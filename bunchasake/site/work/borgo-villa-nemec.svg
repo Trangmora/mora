@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Minh hoạ villa kiểu Ý">
+  <rect width="400" height="300" fill="#161615"/>
+  <g fill="none" stroke="#CFCFCB" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- mặt đất -->
+    <path d="M24 236 H376"/>
+    <!-- khối nhà chính -->
+    <path d="M118 236 V150 H262 V236"/>
+    <path d="M108 152 L190 118 L272 152"/>
+    <!-- tháp -->
+    <path d="M222 150 V92 H258 V150"/>
+    <path d="M216 94 L240 76 L264 94"/>
+    <path d="M233 120 V108 a7 7 0 0 1 14 0 V120 Z"/>
+    <!-- cửa vòm tầng trệt -->
+    <path d="M178 236 V204 a12 12 0 0 1 24 0 V236"/>
+    <!-- cửa sổ -->
+    <path d="M134 214 V196 a8 8 0 0 1 16 0 V214 Z"/>
+    <path d="M230 214 V196 a8 8 0 0 1 16 0 V214 Z"/>
+    <path d="M134 178 H150 V164 H134 Z"/>
+    <path d="M182 178 H198 V164 H182 Z"/>
+    <path d="M230 178 H246 V164 H230 Z"/>
+    <!-- nhà phụ -->
+    <path d="M262 236 V188 H318 V236"/>
+    <path d="M256 190 L290 172 L324 190"/>
+    <path d="M280 214 V200 H298 V214 Z"/>
+  </g>
+  <!-- cây bách -->
+  <g fill="#3A3A37" stroke="#CFCFCB" stroke-width="1.4">
+    <path d="M70 236 C58 206 60 166 70 134 C80 166 82 206 70 236 Z"/>
+    <path d="M94 236 C86 214 87 186 94 164 C101 186 102 214 94 236 Z"/>
+    <path d="M344 236 C334 210 336 176 344 148 C352 176 354 210 344 236 Z"/>
+  </g>
+  <!-- đồi -->
+  <path d="M24 236 C90 222 140 230 200 226 C270 222 320 214 376 226" fill="none" stroke="#6B6B66" stroke-width="1.2"/>
+</svg>
