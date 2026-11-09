@@ -4,20 +4,20 @@ Bản tóm tắt hướng đi đã chốt sau buổi brainstorm.
 
 ## Định vị
 
-> **"You have the story. I turn it into a brand."**
-> Bạn có câu chuyện. Mình biến nó thành thương hiệu.
+> **"You have the story. We turn it into a brand."**
+> Bạn có câu chuyện. Chúng tôi biến nó thành thương hiệu.
 
 - Thương hiệu đứng tên Bunchasake, xưng "chúng tôi".
 - Chỉ làm **một việc: xây thương hiệu**, cho doanh nghiệp vừa và nhỏ ở mọi ngành.
 - Thương hiệu xây từ **câu chuyện của người sáng lập**, nên mỗi thương hiệu có chất riêng.
-- AI giúp làm nhanh (mục tiêu: thương hiệu hoàn chỉnh trong khoảng 2–3 tuần, cần team xác nhận làm được), Trang quyết định và giữ chất riêng.
+- AI giúp làm nhanh (mục tiêu: thương hiệu hoàn chỉnh trong khoảng 2–3 tuần, cần team xác nhận làm được), con người quyết định và giữ chất riêng.
 
 ## Dịch vụ: 4 bước
 
 | Bước | Làm gì | AI giúp gì |
 |---|---|---|
 | 1. Lắng nghe | Phỏng vấn người sáng lập: vì sao bắt đầu, tin vào điều gì; khảo sát khách hàng và đối thủ | Tổng hợp review, nội dung của đối thủ trong vài giờ |
-| 2. Định vị | Thương hiệu là ai, cho ai, khác ai; câu chuyện thương hiệu | Đưa ra nhiều phương án để Trang chọn và chỉnh |
+| 2. Định vị | Thương hiệu là ai, cho ai, khác ai; câu chuyện thương hiệu | Đưa ra nhiều phương án để chúng tôi chọn và chỉnh |
 | 3. Nhận diện | Tên (nếu cần), logo, màu, giọng văn, bộ quy chuẩn | Phác nhanh nhiều hướng hình ảnh |
 | 4. Điểm chạm | Đưa thương hiệu vào mọi nơi khách nhìn thấy | Dựng mockup nhanh, viết nội dung song ngữ |
 
