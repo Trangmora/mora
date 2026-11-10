@@ -429,7 +429,7 @@ dialog.policy form { margin-top: 18px; }
 .t-logo .drag-hint { position: absolute; right: 14px; bottom: 12px; font-size: 10px; opacity: .6; display: none; }
 .t-logo.has3d .drag-hint { display: block; }
 .t-logo .t { z-index: 1; }
-.t-logo.has3d { background: #1B1B1A !important; border-color: var(--line) !important; }
+.t-logo.has3d { background: radial-gradient(ellipse 60% 70% at 50% 45%, #34342f 0%, #1c1c1a 55%, #121211 100%) !important; border-color: var(--line) !important; min-height: 340px; }
 .t-logo.has3d .t { color: var(--muted) !important; }
 .t-logo.has3d .drag-hint { color: var(--muted); }
 
@@ -1277,10 +1277,11 @@ function initBox3D() {
   renderer.outputEncoding = THREE.sRGBEncoding;
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(30, 1, .1, 50);
-  camera.position.set(0, .6, 5.1); camera.lookAt(0, -.05, 0);
-  scene.add(new THREE.AmbientLight(0xffffff, .6));
-  const d1 = new THREE.DirectionalLight(0xffffff, .85); d1.position.set(3, 5, 4); scene.add(d1);
-  const d2 = new THREE.DirectionalLight(0xffffff, .25); d2.position.set(-4, -1, 2); scene.add(d2);
+  camera.position.set(0, .9, 5.6); camera.lookAt(0, -.12, 0);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x404040, .55));
+  const d1 = new THREE.DirectionalLight(0xffffff, 1.1); d1.position.set(-3, 5, 4); scene.add(d1);
+  const d2 = new THREE.DirectionalLight(0xffffff, .35); d2.position.set(4, 1, 3); scene.add(d2);
+  const d3 = new THREE.DirectionalLight(0xff8a70, .45); d3.position.set(0, 3, -5); scene.add(d3);
   const W = 1.5, H = 1.9, D = .9, PX = 300;
   const dims = [[D, H], [D, H], [W, D], [W, D], [W, H], [W, H]]; // +x -x +y -y +z -z
   const faces = dims.map(([w, h]) => {
@@ -1290,7 +1291,7 @@ function initBox3D() {
   });
   const box = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), faces.map(f => f.mat));
   scene.add(box);
-  const sh = new THREE.Mesh(new THREE.CircleGeometry(1.15, 48), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .22 }));
+  const sh = new THREE.Mesh(new THREE.CircleGeometry(1.15, 48), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .4 }));
   sh.rotation.x = -Math.PI / 2; sh.position.y = -H / 2 - .18; sh.scale.set(1, .5, 1); scene.add(sh);
 
   const fam = f => f.replace(/"/g, "'");
@@ -1317,7 +1318,7 @@ function initBox3D() {
       shape(ctx, pk, w / 2, cy, r, c1);
       ctx.fillStyle = markIn ? c1 : on(c1); ctx.font = `${p.weight} ${r * (pk === "luxe" ? .8 : 1.1)}px ${family}`; ctx.fillText(letter, w / 2, cy + r * .04);
       ctx.fillStyle = c1; fit(ctx, up(name), w * .82, w * .14, p.weight, family); ctx.fillText(up(name), w / 2, h * .66);
-      ctx.fillStyle = on(c3); ctx.globalAlpha = .7; ctx.font = `500 ${w * .045}px Inter Tight, sans-serif`; ctx.fillText(ind.label.toUpperCase(), w / 2, h * .9); ctx.globalAlpha = 1;
+      ctx.fillStyle = on(c3); ctx.globalAlpha = .7; ctx.font = `600 ${w * .062}px Inter Tight, sans-serif`; ctx.fillText(ind.label.toUpperCase(), w / 2, h * .88); ctx.globalAlpha = 1;
     });
     // mặt sau
     paint(5, c1, (ctx, w, h) => {
@@ -1338,13 +1339,13 @@ function initBox3D() {
   window.drawBox3D = d => { tile.classList.add("has3d"); draw(d); if (drawn && !reduce) spin = 1; drawn = true; };
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => last && draw(last));
 
-  let rotY = -.5, rotX = .12, vel = 0, dragging = false, px = 0, py = 0, visible = true, raf = 0;
+  let rotY = -.62, rotX = .1, vel = 0, dragging = false, px = 0, py = 0, visible = true, raf = 0;
   function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / Math.max(r.height, 1); camera.updateProjectionMatrix(); render(); }
   function render() { box.rotation.set(rotX, rotY, 0); renderer.render(scene, camera); }
   canvas.addEventListener("pointerdown", e => { dragging = true; px = e.clientX; py = e.clientY; canvas.setPointerCapture(e.pointerId); });
   canvas.addEventListener("pointermove", e => { if (!dragging) return; vel = (e.clientX - px) * .01; rotY += vel; rotX = Math.max(-.5, Math.min(.6, rotX + (e.clientY - py) * .006)); px = e.clientX; py = e.clientY; render(); });
   ["pointerup", "pointercancel"].forEach(ev => canvas.addEventListener(ev, () => { dragging = false; }));
-  function loop() { cancelAnimationFrame(raf); const tick = now => { if (!dragging) { vel *= .95; rotY += .006 + vel + spin * .32; spin *= .9; if (spin < .01) spin = 0; } box.position.y = Math.sin(now / 800) * .06; sh.scale.set(1 - box.position.y * .8, .5 - box.position.y * .4, 1); render(); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
+  function loop() { cancelAnimationFrame(raf); const tick = now => { if (!dragging) { vel *= .95; rotY += .0035 + vel + spin * .32; spin *= .9; if (spin < .01) spin = 0; } box.position.y = Math.sin(now / 800) * .06; sh.scale.set(1 - box.position.y * .8, .5 - box.position.y * .4, 1); render(); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
   new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) loop(); }).observe(canvas);
   addEventListener("resize", size);
   size(); loop();
