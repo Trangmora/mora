@@ -442,6 +442,7 @@ dialog.policy form { margin-top: 18px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
 </style>
 
 <a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
@@ -664,6 +665,7 @@ dialog.policy form { margin-top: 18px; }
         <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
       </fieldset>
       <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu? Vài dòng là đủ."></textarea></label>
+      <input type="text" name="website" class="hp" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="submit" type="submit">Gửi câu chuyện <span aria-hidden="true">↗</span></button>
       <p class="privacy">Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
     </form>
@@ -678,6 +680,7 @@ dialog.policy form { margin-top: 18px; }
       </div>
       <label for="c-name"><span>Tên của bạn</span><input id="c-name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-cname"><em class="err" id="e-cname" hidden></em></label>
       <label for="c-contact"><span>Email hoặc số điện thoại</span><input id="c-contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-ccontact"><em class="err" id="e-ccontact" hidden></em></label>
+      <input type="text" name="website" class="hp" id="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="submit" type="submit">Giữ lịch này <span aria-hidden="true">↗</span></button>
       <p class="privacy">Bạn sẽ nhận lời mời họp qua email. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
     </form>
@@ -1100,10 +1103,18 @@ function check(id) {
 }
 Object.keys(rules).forEach(id => document.getElementById(id).addEventListener("blur", e => { if (e.target.value) check(id); }));
 
+/* Gửi thông tin về Google Sheet + email (xem backend/README.md). Để trống = chế độ demo. */
+const FORM_ENDPOINT = "";
+function sendLead(type, data, hpId) {
+  if (!FORM_ENDPOINT || document.getElementById(hpId).value) return;
+  const payload = Object.assign({ type, lang: LANG, page: location.href, submittedAt: new Date().toISOString() }, data);
+  fetch(FORM_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) }).catch(() => {});
+}
+const val = id => document.getElementById(id).value.trim();
 function finish(title, lines) {
   storyForm.style.display = "none"; callForm.style.display = "none"; storyForm.hidden = callForm.hidden = true;
   doneEl.hidden = false;
-  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol><p class="privacy">${t("Đây là bản demo nên thông tin chưa được gửi đi.", "This is a demo, so nothing has been sent yet.")}</p><button class="again" type="button">${t("Quay lại form", "Back to the form")}</button>`;
+  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol>${FORM_ENDPOINT ? "" : `<p class="privacy">${t("Đây là bản demo nên thông tin chưa được gửi đi.", "This is a demo, so nothing has been sent yet.")}</p>`}<button class="again" type="button">${t("Quay lại form", "Back to the form")}</button>`;
   doneEl.querySelector(".again").addEventListener("click", () => showTab(tabCall.getAttribute("aria-selected") === "true" ? "call" : "story"));
   doneEl.querySelector("h3").setAttribute("tabindex", "-1"); doneEl.querySelector("h3").focus();
 }
@@ -1112,6 +1123,8 @@ storyForm.addEventListener("submit", e => {
   const ok = ["f-name", "f-biz", "f-contact"].map(check).every(Boolean);
   if (!ok) { storyForm.querySelector('[aria-invalid="true"]').focus(); return; }
   const n = esc(document.getElementById("f-name").value.trim());
+  const pk = storyForm.querySelector('input[name="pkg"]:checked');
+  sendLead("story", { name: val("f-name"), business: val("f-biz"), contact: val("f-contact"), stage: pk ? pk.value : "", automation: document.getElementById("p-auto").checked, story: val("f-story") }, "f-hp");
   finish(t(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, `Thank you, ${n}. We have your story.`), LANG === "en" ? ["We read it and prepare questions just for you.", "We get in touch to set up a 60-minute conversation.", "We send a proposal and quote."] : ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
 });
 
@@ -1133,6 +1146,8 @@ callForm.addEventListener("submit", e => {
   if (pickDay === null || !pickTime) { sumEl.textContent = t("Vui lòng chọn ngày và giờ trước.", "Please pick a day and time first."); sumEl.focus?.(); return; }
   const ok = ["c-name", "c-contact"].map(check).every(Boolean);
   if (!ok) { callForm.querySelector('[aria-invalid="true"]').focus(); return; }
+  const d = days[pickDay], iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  sendLead("call", { name: val("c-name"), contact: val("c-contact"), slot: `${iso} ${pickTime} (GMT+7)` }, "c-hp");
   finish(t("Đã giữ lịch cho bạn.", "Your slot is held."), [esc(sumEl.textContent), t("Lời mời họp sẽ được gửi tới ", "The meeting invite will go to ") + esc(document.getElementById("c-contact").value.trim()) + ".", t("Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo.", "Bring your story; we will take care of the rest.")]);
 });
 
