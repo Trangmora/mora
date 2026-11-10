@@ -13,8 +13,10 @@ rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: lighten; transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(1.04); transition: transform .6s var(--ease); }
 .hero-art .glow { position: absolute; left: 51%; top: 20%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,74,46,.35), transparent 65%); mix-blend-mode: screen; animation: pulse 3.2s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .45; transform: scale(.9); } }
-@media (max-width: 1100px) { .hero-art { opacity: .55; } }
-@media (max-width: 760px) { .hero-art { width: 100%; top: 26%; opacity: .3; } }
+@media (max-width: 1100px) {
+  .hero-art { position: relative; top: auto; right: auto; width: 100%; max-width: 620px; margin: 36px auto 0; display: block; }
+  .hero-art img { transform: none !important; }
+}
 .hero3d-old { position: absolute; top: 40%; right: calc(var(--gutter) * -1); width: min(46%, 720px); height: 54%; z-index: 0; display: block; }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
 .hero-foot p { max-width: 46ch; }
@@ -36,7 +38,7 @@ rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 @media (prefers-reduced-motion: reduce) {''')
 
 # HTML
-rep('  <section class="hero">\n', '  <section class="hero">\n    <figure class="hero-art" id="heroArt" aria-hidden="true"><img src="work/hero-build.jpg" alt="" width="1600" height="1200" fetchpriority="high"><span class="glow"></span></figure>\n')
+rep('    <div class="stats">', '    <figure class="hero-art" id="heroArt" aria-hidden="true"><img src="work/hero-build.jpg" alt="" width="1600" height="1200" fetchpriority="high"><span class="glow"></span></figure>\n    <div class="stats">')
 rep('<div class="tile t-logo" id="b-logo"><span class="t">Logo</span>',
     '<div class="tile t-logo" id="b-logo"><canvas class="box3d" id="box3d" role="img" aria-label="Hộp sản phẩm 3D của thương hiệu"></canvas><span class="drag-hint cap">Kéo để xoay</span><span class="t">Logo</span>')
 rep('<script>\nconst esc', '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script>\nconst esc')
