@@ -38,7 +38,6 @@ rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 @media (prefers-reduced-motion: reduce) {''')
 
 # HTML
-rep('    <div class="stats">', '    <figure class="hero-art" id="heroArt" aria-hidden="true"><img src="work/hero-build.jpg" alt="" width="1600" height="1200" fetchpriority="high"><span class="glow"></span></figure>\n    <div class="stats">')
 rep('<div class="tile t-logo" id="b-logo"><span class="t">Logo</span>',
     '<div class="tile t-logo" id="b-logo"><canvas class="box3d" id="box3d" role="img" aria-label="Hộp sản phẩm 3D của thương hiệu"></canvas><span class="drag-hint cap">Kéo để xoay</span><span class="t">Logo</span>')
 rep('<script>\nconst esc', '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script>\nconst esc')
