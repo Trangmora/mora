@@ -7,8 +7,16 @@ def rep(a,b):
 
 # CSS
 rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
+.t-logo.has-video { padding: 0; background: #111 !important; border-color: var(--line) !important; min-height: 340px; }
+.t-logo.has-video .logo-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.t-logo.has-video #b-mark, .t-logo.has-video .word { visibility: hidden; }
+.t-logo.has-video .t { color: #111 !important; background: rgba(255,255,255,.85); padding: 4px 8px; border-radius: 999px; opacity: 1; }
+.hero-video { position: absolute; right: 0; top: 44%; width: min(19vw, 270px); aspect-ratio: 3 / 4; max-width: 100%; margin: 0; z-index: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px var(--line); animation: fade 1.2s .3s var(--ease) both; }
+.hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-video::after { content: ""; position: absolute; right: 14px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--mark); box-shadow: 0 0 0 4px rgba(255,74,46,.25); }
+@media (max-width: 1100px) { .hero-video { position: relative; top: auto; right: auto; width: min(100%, 360px); margin: 36px 0 0; } }
 .hero { position: relative; }
-.hero > *:not(.hero-art) { position: relative; z-index: 1; }
+.hero > *:not(.hero-art):not(.hero-video) { position: relative; z-index: 1; }
 .hero-art { position: absolute; right: 0; top: 41%; width: min(44%, 660px); aspect-ratio: 4 / 3; max-width: 100%; margin: 0; z-index: 0; pointer-events: none; perspective: 1200px; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); animation: fade 1.4s .2s var(--ease) both; }
 .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: lighten; transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(1.04); transition: transform .6s var(--ease); }
 .hero-art .glow { position: absolute; left: 51%; top: 20%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,74,46,.35), transparent 65%); mix-blend-mode: screen; animation: pulse 3.2s ease-in-out infinite; }
@@ -39,8 +47,7 @@ rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 
 # HTML
 rep('<div class="tile t-logo" id="b-logo"><span class="t">Logo</span>',
-    '<div class="tile t-logo" id="b-logo"><canvas class="box3d" id="box3d" role="img" aria-label="Hộp sản phẩm 3D của thương hiệu"></canvas><span class="drag-hint cap">Kéo để xoay</span><span class="t">Logo</span>')
-rep('<script>\nconst esc', '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script>\nconst esc')
+    '<div class="tile t-logo has-video" id="b-logo"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video><span class="t">Logo</span>')
 
 # i18n entries
 rep('const EN = {', 'const EN = {\n"Kéo để xoay": "Drag to rotate",\n"Bấm vào khối để xây lại": "Click a block to rebuild",')
@@ -246,7 +253,8 @@ function initBox3D() {
 }
 
 (() => { const art = document.getElementById("heroArt"); if (!art || reduce) return; addEventListener("pointermove", e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5; art.style.setProperty("--ry", (x * 6).toFixed(2) + "deg"); art.style.setProperty("--rx", (-y * 4).toFixed(2) + "deg"); }, { passive: true }); })();
-if (has3D) { try { initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
+if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+if (false) { try { initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
 '''
 i = s.rindex('</script>')
 s = s[:i] + js + s[i:]
