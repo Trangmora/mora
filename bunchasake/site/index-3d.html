@@ -406,6 +406,19 @@ dialog.policy form { margin-top: 18px; }
 .mobile-cta a { flex: 1; justify-content: center; }
 @media (max-width: 760px) { .mobile-cta { display: flex; } footer { padding-bottom: 96px; } }
 
+/* ===== Vì sao là câu chuyện ===== */
+.why .sec-head { border-bottom: 0; padding-bottom: 0; }
+.why-lead { margin-top: clamp(20px, 3vw, 32px); font-size: clamp(32px, 4.8vw, 72px); line-height: 1.02; letter-spacing: -0.05em; max-width: 18em; }
+.why-lead .it { color: var(--mark); }
+.why-sub { margin-top: clamp(18px, 2.4vw, 28px); max-width: 52ch; font-size: clamp(16px, 1.35vw, 19px); font-weight: 300; color: var(--muted); padding-bottom: clamp(28px, 4vw, 48px); }
+.why .pains { border-top: 1px solid var(--line-strong); }
+.why-sub b { color: var(--ink); font-weight: 500; }
+.why-close { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px clamp(32px, 6vw, 96px); align-items: end; margin-top: clamp(40px, 6vw, 80px); padding-top: clamp(28px, 4vw, 48px); border-top: 1px solid var(--line); }
+.why-pull { font-size: clamp(26px, 3vw, 44px); line-height: 1.1; letter-spacing: -0.04em; font-weight: 500; }
+.why-pull .it { color: var(--mark); }
+.why-body { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 54ch; }
+@media (max-width: 820px) { .why-close { grid-template-columns: 1fr; } }
+
 /* ===== 3D ===== */
 .t-logo.has-video { padding: 0; background: #111 !important; border-color: var(--line) !important; min-height: 340px; }
 .t-logo.has-video .logo-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -499,6 +512,24 @@ dialog.policy form { margin-top: 18px; }
   <div class="marquee bleed" aria-label="Những thương hiệu đã đồng hành">
     <div class="marquee-track" id="marquee"></div>
   </div>
+
+  <!-- Vì sao là câu chuyện -->
+  <section class="sec why" id="cau-chuyen">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Vì sao là câu chuyện</span>
+    </div>
+    <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
+    <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
+    <div class="pains">
+      <div class="pain"><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
+      <div class="pain"><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
+      <div class="pain"><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
+    </div>
+    <div class="why-close">
+      <p class="why-pull">Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class="it">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.</p>
+      <p class="why-body">Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.</p>
+    </div>
+  </section>
 
   <!-- Brand Lab -->
   <section class="sec" id="lab">
@@ -725,6 +756,17 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const EN = {
 "Kéo để xoay": "Drag to rotate",
 "Bấm vào khối để xây lại": "Click a block to rebuild",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Vì sao là câu chuyện": "<span class=\"dot\" aria-hidden=\"true\"></span>Why the story",
+"Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class=\"it\">Ở câu chuyện tạo nên nó.</span>": "What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class=\"it\">The story behind it.</span>",
+"Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b>": "People don't really buy a product or a service. <b>They buy the story behind it.</b>",
+"Một chiếc túi không chỉ là một chiếc túi.": "A bag is never just a bag.",
+"Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.": "It tells a story about the taste, style and personality of the person carrying it.",
+"Một tách cà phê không chỉ là cà phê.": "A cup of coffee is never just coffee.",
+"Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.": "It is a moment of calm, time for yourself, or a meeting worth remembering.",
+"Một thương hiệu không chỉ là sản phẩm tốt.": "A brand is more than a good product.",
+"Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.": "It is built from the values, feelings, trust and story it gives its customers.",
+"Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class=\"it\">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.": "A product earns attention. A <span class=\"it\">story</span> is what moves people, stays with them and makes them stay.",
+"Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.": "Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.",
 "Bỏ qua, tới Brand Lab": "Skip to Brand Lab",
 "Cách làm": "How we work",
 "Gói": "Packages",
