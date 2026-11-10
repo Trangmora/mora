@@ -8,8 +8,14 @@ def rep(a,b):
 # CSS
 rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 .hero { position: relative; }
-.hero > *:not(.hero3d) { position: relative; z-index: 1; }
-.hero3d { position: absolute; top: 40%; right: calc(var(--gutter) * -1); width: min(46%, 720px); height: 54%; z-index: 0; display: block; }
+.hero > *:not(.hero-art) { position: relative; z-index: 1; }
+.hero-art { position: absolute; right: 0; top: 41%; width: min(44%, 660px); aspect-ratio: 4 / 3; max-width: 100%; margin: 0; z-index: 0; pointer-events: none; perspective: 1200px; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); animation: fade 1.4s .2s var(--ease) both; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: lighten; transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(1.04); transition: transform .6s var(--ease); }
+.hero-art .glow { position: absolute; left: 51%; top: 20%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,74,46,.35), transparent 65%); mix-blend-mode: screen; animation: pulse 3.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .45; transform: scale(.9); } }
+@media (max-width: 1100px) { .hero-art { opacity: .55; } }
+@media (max-width: 760px) { .hero-art { width: 100%; top: 26%; opacity: .3; } }
+.hero3d-old { position: absolute; top: 40%; right: calc(var(--gutter) * -1); width: min(46%, 720px); height: 54%; z-index: 0; display: block; }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
 .hero-foot p { max-width: 46ch; }
 @media (max-width: 1100px) { .hero3d { opacity: .45; } }
@@ -30,7 +36,7 @@ rep('@media (prefers-reduced-motion: reduce) {', '''/* ===== 3D ===== */
 @media (prefers-reduced-motion: reduce) {''')
 
 # HTML
-rep('  <section class="hero">\n', '  <section class="hero">\n    <canvas class="hero3d" id="hero3d" aria-hidden="true"></canvas><span class="hero3d-hint cap" aria-hidden="true">Bấm vào khối để xây lại</span>\n')
+rep('  <section class="hero">\n', '  <section class="hero">\n    <figure class="hero-art" id="heroArt" aria-hidden="true"><img src="work/hero-build.jpg" alt="" width="1600" height="1200" fetchpriority="high"><span class="glow"></span></figure>\n')
 rep('<div class="tile t-logo" id="b-logo"><span class="t">Logo</span>',
     '<div class="tile t-logo" id="b-logo"><canvas class="box3d" id="box3d" role="img" aria-label="Hộp sản phẩm 3D của thương hiệu"></canvas><span class="drag-hint cap">Kéo để xoay</span><span class="t">Logo</span>')
 rep('<script>\nconst esc', '<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>\n<script>\nconst esc')
@@ -237,7 +243,8 @@ function initBox3D() {
   size(); loop();
 }
 
-if (has3D) { try { initHero3D(); initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
+(() => { const art = document.getElementById("heroArt"); if (!art || reduce) return; addEventListener("pointermove", e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5; art.style.setProperty("--ry", (x * 6).toFixed(2) + "deg"); art.style.setProperty("--rx", (-y * 4).toFixed(2) + "deg"); }, { passive: true }); })();
+if (has3D) { try { initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
 '''
 i = s.rindex('</script>')
 s = s[:i] + js + s[i:]
