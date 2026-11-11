@@ -18,7 +18,7 @@
       },
       {
         "q": "Tên và bao bì chỉ người Việt mới hiểu.",
-        "p": "Tên khó đọc, thiết kế đầy chi tiết chỉ người trong nước hiểu, đều bắt người mua bỏ thêm công."
+        "p": "Tên khó đọc, thiết kế chỉ người trong nước hiểu, đều bắt người mua bỏ thêm công."
       }
     ]
   },
@@ -51,7 +51,7 @@
   "sections": [
     {
       "h2": "Vì sao chọn agency đưa thương hiệu Việt ra thị trường quốc tế",
-      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý. Chúng tôi hiểu cách nhà sáng lập ở Việt Nam kể chuyện, và thấy người mua ở châu Âu nghe ra sao. Góc nhìn hai phía ấy là thứ marketing xuyên biên giới từ Việt Nam hay thiếu.</p><p>Trước khi thiết kế, chúng tôi nhìn thương hiệu như một người mua nước ngoài:</p><ul><li>Họ có đọc được và nhớ được cái tên không?</li><li>Câu chuyện có trả lời: vì sao nên mua của một công ty chưa từng nghe tên?</li><li>Bộ nhận diện có đứng được cạnh các thương hiệu trên kệ ở đó không?</li><li>Website có trả lời những câu hỏi đầu tiên bằng tiếng Anh rõ ràng không?</li></ul><p>Muốn đưa thương hiệu Việt vào châu Âu, hãy có các câu trả lời này trước hội chợ đầu tiên. Bài <a href=\"{{blog:how-vietnamese-brands-can-enter-european-markets}}\">thương hiệu Việt vào thị trường châu Âu</a> đi qua từng bước.</p>"
+      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý. Chúng tôi hiểu cách nhà sáng lập ở Việt Nam kể chuyện, và thấy người mua ở châu Âu nghe ra sao. Góc nhìn hai phía ấy là thứ marketing xuyên biên giới từ Việt Nam hay thiếu.</p><p>Trước khi thiết kế, chúng tôi nhìn thương hiệu như một người mua nước ngoài:</p><ul><li>Họ có đọc được và nhớ được cái tên không?</li><li>Câu chuyện có trả lời: vì sao nên mua của một cái tên lạ?</li><li>Bộ nhận diện có đứng được cạnh các thương hiệu trên kệ ở đó không?</li><li>Website có trả lời những câu hỏi đầu tiên bằng tiếng Anh rõ ràng không?</li></ul><p>Muốn vào châu Âu, hãy có các câu trả lời này trước hội chợ đầu tiên. Xem bài <a href=\"{{blog:how-vietnamese-brands-can-enter-european-markets}}\">thương hiệu Việt vào thị trường châu Âu</a>.</p>"
     },
     {
       "h2": "Nội dung tiếng Anh cho thương hiệu Việt, viết cho người mua",
@@ -63,7 +63,7 @@
     "items": [
       {
         "t": "Lắng nghe",
-        "p": "Trò chuyện 60 phút với nhà sáng lập, rồi tìm hiểu khách hàng và đối thủ ở thị trường mới."
+        "p": "Trò chuyện 60 phút với nhà sáng lập, tìm hiểu khách hàng và đối thủ ở thị trường mới."
       },
       {
         "t": "Định vị",
@@ -71,11 +71,11 @@
       },
       {
         "t": "Nhận diện",
-        "p": "Tên nếu cần, logo, màu sắc, kiểu chữ, giọng nói, gói trong bộ hướng dẫn dễ dùng."
+        "p": "Tên nếu cần, logo, màu, kiểu chữ, giọng nói, trong bộ hướng dẫn dễ dùng."
       },
       {
         "t": "Điểm chạm",
-        "p": "Website, bao bì, hồ sơ công ty, mẫu bài đăng, tất cả cùng một tiếng nói."
+        "p": "Website, bao bì, hồ sơ công ty, mẫu bài đăng cùng một tiếng nói."
       }
     ]
   },
@@ -87,19 +87,19 @@
   "faq": [
     {
       "q": "Chúng tôi ở Việt Nam, làm việc thế nào?",
-      "a": "Online, hoặc gặp trực tiếp khi có thể. Bạn gửi email, hai bên trò chuyện 60 phút, rồi bạn nhận đề xuất và báo giá."
+      "a": "Online hoặc gặp trực tiếp. Bạn gửi email, hai bên trò chuyện 60 phút, rồi bạn nhận đề xuất và báo giá."
     },
     {
       "q": "Các bạn viết tiếng Anh hay tiếng Việt?",
-      "a": "Cả hai. Chúng tôi nghe nhà sáng lập bằng tiếng Việt và viết giọng thương hiệu cho người mua bằng tiếng Anh."
+      "a": "Cả hai: nghe nhà sáng lập bằng tiếng Việt, viết giọng thương hiệu cho người mua bằng tiếng Anh."
     },
     {
-      "q": "Các bạn có phải agency marketing quốc tế ở Việt Nam, nhận chạy quảng cáo ở nước ngoài không?",
-      "a": "Không. Chúng tôi không chạy quảng cáo, không book KOL, không lo phân phối. Chúng tôi xây thương hiệu để những việc đó có chỗ dựa."
+      "q": "Các bạn có chạy quảng cáo như một agency marketing quốc tế ở Việt Nam không?",
+      "a": "Không. Chúng tôi không chạy quảng cáo, book KOL hay lo phân phối, mà xây thương hiệu để những việc đó có chỗ dựa."
     },
     {
       "q": "Có logo và bao bì rồi, phải làm lại không?",
-      "a": "Không nhất thiết. Gói Refresh rà lại thương hiệu hiện có, định vị lại cho thị trường mới, làm mới nhận diện và các điểm chạm đang dùng."
+      "a": "Không nhất thiết. Gói Refresh rà lại thương hiệu hiện có, định vị lại cho thị trường mới, làm mới nhận diện và điểm chạm."
     },
     {
       "q": "Chi phí bao nhiêu?",

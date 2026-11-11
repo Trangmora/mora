@@ -18,7 +18,7 @@
       },
       {
         "q": "We post only in Vietnamese, or in English that sounds stiff.",
-        "p": "Older customers search in Vietnamese and trust word of mouth. Younger and local customers search in English and read reviews. One language misses half of them."
+        "p": "One language misses half your customers: older ones search in Vietnamese, younger and local ones search in English."
       }
     ]
   },
@@ -40,7 +40,7 @@
       },
       {
         "t": "Website and touchpoints",
-        "p": "Website, signage or packaging, business cards and post templates, all speaking with one voice."
+        "p": "Everywhere a customer meets you: website, signage or packaging, business cards, post templates."
       },
       {
         "t": "Social Media Automation, built for you",
@@ -55,7 +55,7 @@
     },
     {
       "h2": "What bilingual Vietnamese English marketing means in practice",
-      "html": "<p>Vietnamese diaspora businesses often serve two groups at once. Older Vietnamese customers search in Vietnamese and ask people they know. Younger and local customers search in English, look at photos and read reviews before they book. The brand has to work for both.</p><p>Bilingual does not mean translating line by line. Each language is written naturally, with the same name, the same promise and the same look. Along the way we decide with you:</p><ul><li>Which language leads on the sign, the menu or price list, and the website.</li><li>Which words stay in Vietnamese, and which need a short explanation.</li><li>How the brand answers messages and reviews in each language.</li></ul><p>Once the voice is clear, a <a href=\"{{landing:social-media-automation}}\">social media automation system</a> helps your team post every week without starting from zero.</p>"
+      "html": "<p>Vietnamese diaspora businesses often serve two groups at once. Older Vietnamese customers search in Vietnamese and trust word of mouth. Younger and local customers search in English, look at photos and read reviews before they come. The brand has to work for both.</p><p>Bilingual does not mean translating line by line. Each language is written naturally, with the same name, the same promise and the same look. Along the way we decide with you:</p><ul><li>Which language leads on the sign, the menu or price list, and the website.</li><li>Which words stay in Vietnamese, and which need a short explanation.</li><li>How the brand answers messages and reviews in each language.</li></ul><p>Once the voice is clear, a <a href=\"{{landing:social-media-automation}}\">social media automation system</a> helps your team post every week without starting from zero.</p>"
     }
   ],
   "process": {
@@ -103,7 +103,7 @@
     },
     {
       "q": "I already have a logo and a sign. Do I start over?",
-      "a": "Not necessarily. The Refresh package audits the current brand, repositions it, refreshes the identity and updates the touchpoints in use."
+      "a": "Not necessarily. The Refresh package audits and refreshes the brand you already have, so you do not start from zero."
     }
   ],
   "cta": {

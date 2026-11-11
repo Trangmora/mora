@@ -4,7 +4,7 @@
   "description": "Social media automation for restaurants: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. Your team runs it.",
   "kicker": "An add-on for restaurants, cafés and food businesses",
   "h1": "Social media automation for restaurants, <em>run by your own team</em>",
-  "lead": "Social media automation for restaurants means a month of posts is planned, drafted and scheduled without pulling you out of the kitchen. We build the system in your brand voice, and your team runs it on Facebook, Instagram and TikTok.",
+  "lead": "Social media automation for restaurants means a month of posts is planned, drafted and scheduled while you stay in the kitchen. We build the system in your brand voice, and your team runs it on Facebook, Instagram and TikTok.",
   "problems": {
     "title": "Why restaurant pages go quiet",
     "items": [
@@ -24,7 +24,7 @@
   },
   "services": {
     "title": "The five parts of social media automation for restaurants",
-    "intro": "It is the system we build for any small business, set up around your menu and your working day.",
+    "intro": "The same system we build for any small business, set up around your menu and your working day.",
     "items": [
       {
         "t": "An AI assistant that knows your restaurant",
@@ -51,11 +51,11 @@
   "sections": [
     {
       "h2": "What a restaurant content calendar looks like over 30 days",
-      "html": "<p>A calendar only helps if your team can follow it with a phone and a few spare minutes. So we plan it around what already happens in your restaurant, in a weekly rhythm:</p><ul><li><strong>Signature dishes:</strong> the plate guests come back for, and where it comes from.</li><li><strong>Kitchen moments:</strong> broth going on in the morning, herbs being washed, spring rolls being rolled.</li><li><strong>The people:</strong> the owner, the cook, the server regulars ask for by name.</li><li><strong>Specials:</strong> a weekend dish, a seasonal menu, a Tết or Mid-Autumn offer.</li><li><strong>Customer questions:</strong> is it spicy, is there a vegetarian option, how do you eat it.</li></ul><p>Each slot says what to film and what the caption should cover. Your team supplies the photos and videos, because we do not do shoots. For the method, read about an <a href=\"{{blog:ai-content-calendar-for-small-business}}\">AI content calendar for small business</a>.</p>"
+      "html": "<p>A calendar only helps if your team can follow it with a phone and a few spare minutes. So we plan it around what already happens in your restaurant, in a weekly rhythm:</p><ul><li><strong>Signature dishes:</strong> the plate guests come back for, and where it comes from.</li><li><strong>Kitchen moments:</strong> broth going on in the morning, herbs being washed, spring rolls being rolled.</li><li><strong>The people:</strong> the owner, the cook, the server regulars ask for by name.</li><li><strong>Specials:</strong> a weekend dish, a seasonal menu, a Tết or Mid-Autumn offer.</li><li><strong>Customer questions:</strong> is it spicy, is there a vegetarian option, how do you eat it.</li></ul><p>Each slot says what to film and what the caption should cover. Your team supplies the photos and videos, because we do not do shoots. For more, read our <a href=\"{{blog:restaurant-instagram-content-ideas}}\">restaurant Instagram content ideas</a> and the guide to an <a href=\"{{blog:ai-content-calendar-for-small-business}}\">AI content calendar for small business</a>.</p>"
     },
     {
       "h2": "Restaurant social media management: we build it, your team runs it",
-      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently and say so up front: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. We do not promise a connection to reservation or delivery software. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
+      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently and say so up front: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
     }
   ],
   "process": {
@@ -67,7 +67,7 @@
       },
       {
         "t": "Positioning",
-        "p": "The story and key messages the assistant works from: who the restaurant is, who it is for, how it is different."
+        "p": "The story and key messages the assistant works from: who you are, who you serve, how you differ."
       },
       {
         "t": "Identity",
@@ -91,7 +91,7 @@
   "faq": [
     {
       "q": "Do you manage our Facebook and Instagram pages for us?",
-      "a": "No. We build the system and your team runs it: they take the photos, approve the drafts and answer the messages that need a person. For what to film, see our <a href=\"{{blog:restaurant-instagram-content-ideas}}\">restaurant Instagram content ideas</a>."
+      "a": "No. We build the system and your team runs it: they take the photos, approve the drafts and answer the messages that need a person."
     },
     {
       "q": "Does it connect to our reservation or delivery software?",
