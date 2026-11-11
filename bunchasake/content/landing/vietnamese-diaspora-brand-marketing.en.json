@@ -51,7 +51,7 @@
   "sections": [
     {
       "h2": "How a Vietnamese marketing agency for overseas businesses works with you",
-      "html": "<p>We are a Vietnamese studio working between Vietnam and Italy, online with clients anywhere. The first conversation, 60 minutes long, can be in Vietnamese or English. You tell the story the way you would tell a friend. As a Vietnamese brand agency, our job is to turn it into a brand your local customers understand too.</p><p>There are three packages:</p><ul><li><strong>Start</strong>, for a new business: lean positioning, logo, colours and type, business card, avatar and post templates.</li><li><strong>Build</strong>: all four steps, with brand story and voice, brand guidelines, website and key touchpoints.</li><li><strong>Refresh</strong>: we audit the current brand, reposition it, refresh the identity and update the touchpoints in use.</li></ul><p>We also have pages on <a href=\"{{landing:nail-salon-brand-marketing}}\">brand and marketing for nail salons</a> and <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>.</p>"
+      "html": "<p>We are a Vietnamese studio working between Vietnam and Italy, online with clients anywhere. The first conversation, 60 minutes long, can be in Vietnamese or English. You tell the story the way you would tell a friend. As a Vietnamese brand agency, our job is to turn it into a brand your local customers understand too.</p><p>There are three packages:</p><ul><li><strong>Start</strong>, for a new business: lean positioning, logo, colours and type, business card, avatar and post templates.</li><li><strong>Build</strong>: all five steps, with brand story and voice, brand guidelines, website and key touchpoints.</li><li><strong>Refresh</strong>: we audit the current brand, reposition it, refresh the identity and update the touchpoints in use.</li></ul><p>We also have pages on <a href=\"{{landing:nail-salon-brand-marketing}}\">brand and marketing for nail salons</a> and <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>.</p>"
     },
     {
       "h2": "What bilingual Vietnamese English marketing means in practice",
@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Four steps, and you approve after each",
+    "title": "Five steps, and you approve after each",
     "items": [
       {
         "t": "Listening",
@@ -76,13 +76,21 @@
       {
         "t": "Touchpoints",
         "p": "Website, signage or packaging, business cards and post templates, all speaking with one voice."
+      },
+      {
+        "t": "Community",
+        "p": "We build a community for you: the people who follow the brand, come back, and recommend you to others."
       }
     ]
   },
   "work": {
     "title": "Brands we have worked with",
     "intro": "Three of the brands we have worked with: a restaurant, a home services company in Hanoi and a personal brand in healthcare.",
-    "items": ["chop-chop", "viet-my-clean-home", "bac-si-anh"]
+    "items": [
+      "chop-chop",
+      "viet-my-clean-home",
+      "bac-si-anh"
+    ]
   },
   "faq": [
     {

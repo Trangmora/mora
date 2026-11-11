@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "How the setup follows our four steps",
+    "title": "How the setup follows our five steps",
     "items": [
       {
         "t": "Listening",
@@ -76,6 +76,10 @@
       {
         "t": "Touchpoints",
         "p": "The system itself, set up on your Facebook, Instagram and TikTok accounts."
+      },
+      {
+        "t": "Community",
+        "p": "We build a community for you: the people who follow the brand, come back, and recommend you to others."
       }
     ]
   },

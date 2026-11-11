@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Bốn bước, bạn duyệt sau mỗi bước",
+    "title": "Năm bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -76,13 +76,21 @@
       {
         "t": "Điểm chạm",
         "p": "Website, bao bì, hồ sơ công ty, mẫu bài đăng cùng một tiếng nói."
+      },
+      {
+        "t": "Cộng đồng",
+        "p": "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác."
       }
     ]
   },
   "work": {
     "title": "Thương hiệu đã làm ở Ý và ngành hospitality",
     "intro": "Ba trong các thương hiệu chúng tôi đã làm: Borgo Villa Nemec, villa ở Ý; Impact Investments, công ty đầu tư ở Ý; NA-VI Living, thương hiệu ngành hospitality.",
-    "items": ["borgo-villa-nemec", "impact-investments", "navi-living"]
+    "items": [
+      "borgo-villa-nemec",
+      "impact-investments",
+      "navi-living"
+    ]
   },
   "faq": [
     {

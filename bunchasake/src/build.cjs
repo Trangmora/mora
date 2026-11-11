@@ -222,7 +222,7 @@ function renderLanding(k, l) {
   for (const s of d.sections || []) h += `  <section class="sec block"><div class="split"><h2>${R(s.h2)}</h2><div class="prose">${R(s.html)}</div></div></section>
 `;
   if (d.process?.items?.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.process.title)}</h2></div>
-    <div class="steps4">${d.process.items.map((x, i) => `<div><span class="n cap">${t.step} ${i + 1}</span><h3>${R(x.t)}</h3><p>${R(x.p)}</p></div>`).join("")}</div></section>
+    <div class="steps4 n${d.process.items.length}">${d.process.items.map((x, i) => `<div><span class="n cap">${t.step} ${i + 1}</span><h3>${R(x.t)}</h3><p>${R(x.p)}</p></div>`).join("")}</div></section>
 `;
   if (work.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.work.title)}</h2>${d.work.intro ? `<p>${R(d.work.intro)}</p>` : ""}</div>
     <div class="work n${Math.min(work.length, 4)}">${work.map(id => { const p = PROJECTS[id]; return `<a class="wcard" href="${p.url}" target="_blank" rel="noopener"><span class="img"><img src="/work/${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"></span><h3>${esc(p.name)}</h3><p>${esc(p[l])}</p></a>`; }).join("")}</div></section>
@@ -364,9 +364,9 @@ Promise: "You run the business. We grow the brand."
 - Vietnamese brands that want to enter international markets
 
 ## How we work
-Four steps, and the client approves after each one: Listening (a 60-minute conversation with the founder, customer and competitor research), Positioning (who the brand is, who it is for, how it is different, the brand story), Identity (name if needed, logo, colours, typography, voice, guidelines), Touchpoints (website, signage, cards, social media templates).
+Five steps, and the client approves after each one: Listening (a 60-minute conversation with the founder, customer and competitor research), Positioning (who the brand is, who it is for, how it is different, the brand story), Identity (name if needed, logo, colours, typography, voice, guidelines), Touchpoints (website, signage, cards, social media templates), Community (we build a community around the brand: people who follow it, come back and recommend it).
 
-Packages: Start (new businesses), Build (the full four steps), Refresh (an existing brand that feels dated). The quote comes after the first conversation.
+Packages: Start (new businesses), Build (the full five steps), Refresh (an existing brand that feels dated). The quote comes after the first conversation.
 
 Add-on, Social Media Automation: your own AI assistant trained on the brand voice, a 30-day content calendar, AI drafts that you approve, automatic scheduling on Facebook, Instagram and TikTok, and automatic inbox replies. We set up the system; your team runs it.
 

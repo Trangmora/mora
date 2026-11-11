@@ -11,12 +11,13 @@ file format below must be followed exactly. Write only the files you were assign
 - Promise: "You run the business. We grow the brand." / "Bạn lo vận hành. Chúng tôi lo thương hiệu."
 - Belief: people do not buy a product, they buy the story behind it. "You have the story. We turn it into a brand."
 - Who we work with: (1) Vietnamese business owners abroad (nail salons, restaurants, other owner-run businesses), (2) Vietnamese brands that want to go international.
-- **Process, four steps, the client approves after each step:**
+- **Process, five steps, the client approves after each step:**
   1. Listening / Lắng nghe: we talk with the founder (a 60-minute conversation), study customers and competitors.
   2. Positioning / Định vị: who the brand is, who it is for, how it is different; the brand story and key messages.
   3. Identity / Nhận diện: name if needed, logo, colours, typography, voice, packed into easy-to-use guidelines.
   4. Touchpoints / Điểm chạm: website, signage/packaging, business cards/profile, social media templates, so everything speaks with one voice.
-- **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all four steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
+  5. Community / Cộng đồng: we build a community for the client, the people who follow the brand, come back and recommend it.
+- **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all five steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
 - **Add-on: Social Media Automation, built for you.** We set up the system; the client's own team runs Facebook, TikTok and Instagram with it. Five parts: (1) your own AI assistant trained on the brand voice, (2) a 30-day content calendar, (3) AI drafts, you approve, (4) posts scheduled automatically, (5) automatic inbox replies to common questions.
 - How a project starts: the client emails **hello@bunchasake.com**, we read their story and prepare questions, a 60-minute conversation online or in person, then a proposal and quote.
 - AI does the fast work, people make the decisions.
@@ -163,7 +164,7 @@ Two files per page: `content/landing/KEY.en.json` and `content/landing/KEY.vi.js
 ```
 
 - In the `.vi.json` file, `slug` is the Vietnamese slug from the table. All other keys stay in English, values in Vietnamese.
-- `problems.items`: exactly 3. `services.items`: 4 to 6. `process.items`: exactly 4 (the four steps, named Listening/Positioning/Identity/Touchpoints or Lắng nghe/Định vị/Nhận diện/Điểm chạm). `faq`: 5 or 6. `related`: 2 to 4 blog KEYs.
+- `problems.items`: exactly 3. `services.items`: 4 to 6. `process.items`: exactly 5 (the five steps, named Listening/Positioning/Identity/Touchpoints/Community or Lắng nghe/Định vị/Nhận diện/Điểm chạm/Cộng đồng). `faq`: 5 or 6. `related`: 2 to 4 blog KEYs.
 - `sections`: 2 or 3 blocks of real explanatory copy, 120 to 220 words each, HTML limited to `<p> <ul> <ol> <li> <strong> <em> <a>`. This is where the page earns its ranking: explain how it works for this audience, what bilingual content means in practice, what the owner gets.
 - `work.items`: 2 to 4 ids from: `chop-chop`, `borgo-villa-nemec`, `impact-investments`, `viet-my-clean-home`, `bac-si-anh`, `canasto-de-flores`, `lac-hong`, `talk2thetop`, `navi-living`, `vestra-place`, `vina-ktv`. Pick the closest sectors and say honestly in `intro` what they are (do not imply they are nail salons etc.).
 - Whole page: roughly 650 to 950 words per language.

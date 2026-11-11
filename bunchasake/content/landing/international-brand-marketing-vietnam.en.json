@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Four steps, and you approve after each",
+    "title": "Five steps, and you approve after each",
     "items": [
       {
         "t": "Listening",
@@ -76,13 +76,21 @@
       {
         "t": "Touchpoints",
         "p": "Website, packaging, company profile and post templates, all speaking with one voice."
+      },
+      {
+        "t": "Community",
+        "p": "We build a community for you: the people who follow the brand, come back, and recommend you to others."
       }
     ]
   },
   "work": {
     "title": "Brands we have worked with in Italy and in hospitality",
     "intro": "Three of the brands we have worked with: Borgo Villa Nemec, a villa in Italy; Impact Investments, an investment company in Italy; NA-VI Living, a hospitality brand.",
-    "items": ["borgo-villa-nemec", "impact-investments", "navi-living"]
+    "items": [
+      "borgo-villa-nemec",
+      "impact-investments",
+      "navi-living"
+    ]
   },
   "faq": [
     {

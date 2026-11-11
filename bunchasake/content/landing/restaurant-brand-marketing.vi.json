@@ -55,7 +55,7 @@
     }
   ],
   "process": {
-    "title": "Bốn bước, bạn duyệt sau mỗi bước",
+    "title": "Năm bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -72,13 +72,22 @@
       {
         "t": "Điểm chạm",
         "p": "Menu, biển hiệu, website và mẫu bài đăng, tất cả cùng một giọng."
+      },
+      {
+        "t": "Cộng đồng",
+        "p": "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác."
       }
     ]
   },
   "work": {
     "title": "Thương hiệu chúng tôi đã làm cùng",
     "intro": "Chop Chop là thương hiệu nhà hàng; NA-VI Living thuộc ngành lưu trú, Borgo Villa Nemec là villa ở Ý, Canasto de Flores làm hoa tươi và cảnh quan.",
-    "items": ["chop-chop", "navi-living", "borgo-villa-nemec", "canasto-de-flores"]
+    "items": [
+      "chop-chop",
+      "navi-living",
+      "borgo-villa-nemec",
+      "canasto-de-flores"
+    ]
   },
   "faq": [
     {

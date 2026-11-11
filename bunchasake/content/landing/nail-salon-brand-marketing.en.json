@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Four steps, and you approve after each one",
+    "title": "Five steps, and you approve after each one",
     "items": [
       {
         "t": "Listening",
@@ -76,6 +76,10 @@
       {
         "t": "Touchpoints",
         "p": "Menu, signage, cards, website and post templates, all speaking with one voice."
+      },
+      {
+        "t": "Community",
+        "p": "We build a community for you: the people who follow the brand, come back, and recommend you to others."
       }
     ]
   },

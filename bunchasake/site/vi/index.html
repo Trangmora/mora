@@ -142,7 +142,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .process-side { position: sticky; top: 100px; align-self: start; display: grid; gap: 22px; }
 .bignum { font: 400 clamp(110px, 16vw, 220px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--ink); }
 .bignum small { font-size: .28em; color: var(--dim); font-style: normal; font-family: var(--sans); letter-spacing: 0; margin-left: 8px; }
-.track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
 .track i { height: 3px; border-radius: 9px; background: var(--line-strong); transition: background .4s; }
 .track i.on { background: var(--mark); }
 .process-side p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 34ch; }
@@ -430,7 +430,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="stats">
       <div><b>11</b><span>thương hiệu đã đồng hành</span></div>
       <div><b>2</b><span>quốc gia: Việt Nam, Ý</span></div>
-      <div><b>4</b><span>bước, bạn duyệt từng bước</span></div>
+      <div><b>5</b><span>bước, bạn duyệt từng bước</span></div>
     </div>
   </section>
 
@@ -470,13 +470,13 @@ dialog.policy form { margin-top: 18px; }
   <section class="sec" id="cach-lam">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
-      <h2>Bốn bước. <span class="it">Một thương hiệu.</span></h2>
+      <h2>Năm bước. <span class="it">Một thương hiệu.</span></h2>
       <p>Bạn duyệt sau mỗi bước.</p>
     </div>
     <div class="process">
       <div class="process-side">
-        <div class="bignum" id="bignum">1<small>/ 4</small></div>
-        <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i></div>
+        <div class="bignum" id="bignum">1<small>/ 5</small></div>
+        <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="steps" id="steps">
   <article class="step active" data-i="0">
@@ -498,6 +498,11 @@ dialog.policy form { margin-top: 18px; }
     <span class="n cap">Bước 4</span>
     <h3>Điểm chạm</h3>
     <p>Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.</p>
+  </article>
+  <article class="step" data-i="4">
+    <span class="n cap">Bước 5</span>
+    <h3>Cộng đồng</h3>
+    <p>Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác.</p>
   </article></div>
     </div>
   </section>
@@ -527,7 +532,7 @@ dialog.policy form { margin-top: 18px; }
         <h3>Build</h3>
         <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
         <ul>
-          <li>Đủ 4 bước</li>
+          <li>Đủ 5 bước</li>
           <li>Câu chuyện thương hiệu và giọng văn</li>
           <li>Bộ quy chuẩn thương hiệu</li>
           <li>Website và các điểm chạm chính</li>
@@ -745,7 +750,7 @@ const EN = {
 "Thích hướng này? Chúng tôi xây bản thật cho bạn.": "Like this direction? We will build the real one.",
 "Xây bản thật <span aria-hidden=\"true\">↗</span>": "Build the real one <span aria-hidden=\"true\">↗</span>",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Cách chúng tôi làm": "<span class=\"dot\" aria-hidden=\"true\"></span>How we work",
-"Bốn bước. <span class=\"it\">Một thương hiệu.</span>": "Four steps. <span class=\"it\">One brand.</span>",
+"Năm bước. <span class=\"it\">Một thương hiệu.</span>": "Five steps. <span class=\"it\">One brand.</span>",
 "Bạn duyệt sau mỗi bước.": "You approve every step.",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Gói": "<span class=\"dot\" aria-hidden=\"true\"></span>Packages",
 "Chọn điểm <span class=\"it\">bắt đầu.</span>": "Choose where <span class=\"it\">to start.</span>",
@@ -760,7 +765,7 @@ const EN = {
 "Lắng nghe và định vị bản gọn": "Short listening and positioning",
 "Logo, màu sắc, kiểu chữ": "Logo, colours, typography",
 "Danh thiếp, ảnh đại diện, mẫu bài đăng": "Business card, profile image, post templates",
-"Đủ 4 bước": "All 4 steps",
+"Đủ 5 bước": "All 5 steps",
 "Câu chuyện thương hiệu và giọng văn": "Brand story and voice",
 "Bộ quy chuẩn thương hiệu": "Brand guidelines",
 "Website và các điểm chạm chính": "Website and key touchpoints",
@@ -874,6 +879,7 @@ const steps = [
   { en: { name: "Positioning", desc: "Who the brand is, who it is for, how it is different. From there we write the brand story every channel will tell." }, name: "Định vị", desc: "Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.", items: ["Tuyên bố định vị", "Câu chuyện thương hiệu", "Thông điệp và slogan"], ai: "Đưa ra nhiều phương án để chúng tôi chọn và chỉnh." },
   { en: { name: "Identity", desc: "We give the story a shape: a name if needed, logo, colours, typography and voice, packed into easy-to-use guidelines." }, name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
   { en: { name: "Touchpoints", desc: "We bring the brand to every place customers see it, so your website and your business card speak with one voice." }, name: "Điểm chạm", desc: "Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.", items: ["Website", "Bao bì, biển hiệu", "Danh thiếp, profile", "Mạng xã hội"], ai: "Dựng mockup nhanh, viết nội dung song ngữ." },
+  { en: { name: "Community", desc: "We build a community for you: the people who follow the brand, come back, and recommend you to others." }, name: "Cộng đồng", desc: "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác.", items: [], ai: "" },
 ];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
@@ -905,7 +911,7 @@ if ("IntersectionObserver" in window) {
       if (!en.isIntersecting) return;
       const i = +en.target.dataset.i;
       stepsEl.querySelectorAll(".step").forEach((s, j) => s.classList.toggle("active", j === i));
-      bignum.innerHTML = `${i + 1}<small>/ 4</small>`;
+      bignum.innerHTML = `${i + 1}<small>/ ${steps.length}</small>`;
       trackI.forEach((t, j) => t.classList.toggle("on", j <= i));
     });
   }, { rootMargin: "-45% 0px -45% 0px" });

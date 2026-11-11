@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Bốn bước, bạn duyệt sau mỗi bước",
+    "title": "Năm bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -76,13 +76,21 @@
       {
         "t": "Điểm chạm",
         "p": "Website, bảng hiệu, danh thiếp, mẫu bài đăng. Tự động hoá được gắn vào đây, để bài nào cũng nói cùng một giọng."
+      },
+      {
+        "t": "Cộng đồng",
+        "p": "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác."
       }
     ]
   },
   "work": {
     "title": "Thương hiệu chúng tôi đã làm",
     "intro": "Các dự án thương hiệu, phần nền của mọi hệ thống tự động hoá: một nhà hàng, một công ty dịch vụ nhà cửa ở Hà Nội và một thương hiệu hospitality.",
-    "items": ["chop-chop", "viet-my-clean-home", "navi-living"]
+    "items": [
+      "chop-chop",
+      "viet-my-clean-home",
+      "navi-living"
+    ]
   },
   "faq": [
     {

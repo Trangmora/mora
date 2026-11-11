@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Bốn bước, bạn duyệt sau mỗi bước",
+    "title": "Năm bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -76,6 +76,10 @@
       {
         "t": "Điểm chạm",
         "p": "Menu, bảng hiệu, danh thiếp, website và mẫu bài đăng, cùng nói một giọng."
+      },
+      {
+        "t": "Cộng đồng",
+        "p": "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác."
       }
     ]
   },

@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Dựng hệ thống theo đúng bốn bước",
+    "title": "Dựng hệ thống theo đúng năm bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -76,6 +76,10 @@
       {
         "t": "Điểm chạm",
         "p": "Chính là hệ thống, cài trên tài khoản Facebook, Instagram, TikTok của quán."
+      },
+      {
+        "t": "Cộng đồng",
+        "p": "Chúng tôi xây dựng cộng đồng cho bạn: những người theo dõi thương hiệu, quay lại và giới thiệu bạn với người khác."
       }
     ]
   },
