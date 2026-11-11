@@ -168,7 +168,7 @@ function foot(l, cta) {
   </nav>
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
-    <p>Operated in Vietnam by MORA AI BUSINESS (household business) · Thần Lĩnh 3, Nghệ An, Vietnam</p>
+    <p>Operated by Mora AI Business (household business) · Vietnam</p>
     <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
@@ -308,12 +308,12 @@ function renderBlogIndex(l) {
 
 /* ---------- Trang pháp lý (chỉ tiếng Anh) ---------- */
 const COMPANY = "Impact Investments S.R.L., VAT ID IT01331310324, Via Guido Zanetti 1, 34133 Trieste (TS), Italy";
-const OPERATOR = "MORA AI BUSINESS (household business), Thần Lĩnh 3, Nghệ An, Vietnam";
+const OPERATOR = "Mora AI Business (household business), Vietnam";
 const LEGAL = {
   privacy: { slug: "/privacy/", title: "Privacy policy | Bunchasake", h1: "Privacy policy", desc: "How Bunchasake handles the information you send us: what we collect, why, who processes it and how to ask us to delete it.", body: `
 <p>This policy explains how Bunchasake handles personal information when you visit bunchasake.com or write to us.</p>
 <h2>Who we are</h2>
-<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}. You can reach us at <a href="mailto:${MAIL}">${MAIL}</a>.</p>
+<p>Bunchasake is built by ${COMPANY}, and operated by ${OPERATOR}. You can reach us at <a href="mailto:${MAIL}">${MAIL}</a>.</p>
 <h2>What we collect</h2>
 <ul><li><strong>What you send us.</strong> When you email us, we receive your name, email address and whatever you choose to tell us about your business.</li><li><strong>Technical data.</strong> The website has no contact forms, no advertising trackers and no analytics cookies. Like any website, the servers that deliver it receive technical data such as your IP address and browser type.</li></ul>
 <h2>Why we use it</h2>
@@ -330,7 +330,7 @@ const LEGAL = {
   terms: { slug: "/terms/", title: "Terms of service | Bunchasake", h1: "Terms of service", desc: "The basic terms for using bunchasake.com and for working with Bunchasake on a brand or automation project.", body: `
 <p>These terms apply to bunchasake.com and to how a project with Bunchasake is agreed.</p>
 <h2>Who we are</h2>
-<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}. Contact: <a href="mailto:${MAIL}">${MAIL}</a>.</p>
+<p>Bunchasake is built by ${COMPANY}, and operated by ${OPERATOR}. Contact: <a href="mailto:${MAIL}">${MAIL}</a>.</p>
 <h2>Using this website</h2>
 <p>The articles on this website are general information to help you run and grow your business. They are not legal, tax or financial advice. Questions about laws, permits, trade marks, tax or customs should go to a qualified adviser.</p>
 <p>The text, design and images on this website belong to Bunchasake or to the brands shown in our work, and may not be copied for commercial use without permission.</p>
@@ -349,7 +349,7 @@ const LEGAL = {
 <h2>After you accept a proposal</h2>
 <p>If you want to pause or cancel a project, email <a href="mailto:${MAIL}">${MAIL}</a>. We will reply, confirm what has been delivered so far and settle the account according to the terms in your accepted proposal.</p>
 <h2>Who we are</h2>
-<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}.</p>` },
+<p>Bunchasake is built by ${COMPANY}, and operated by ${OPERATOR}.</p>` },
 };
 function renderLegal(key) {
   const d = LEGAL[key], l = "en", urls = { en: d.slug }, t = T.en;
