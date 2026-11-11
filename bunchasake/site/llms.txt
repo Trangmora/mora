@@ -20,9 +20,9 @@ Add-on, Social Media Automation: your own AI assistant trained on the brand voic
 - [Restaurants & food](https://bunchasake.com/restaurant-brand-marketing/): A Vietnamese marketing agency for restaurants. We turn your food story into a brand, a menu and a social media system your own team runs.
 - [Vietnamese businesses abroad](https://bunchasake.com/vietnamese-diaspora-brand-marketing/): A Vietnamese studio that builds the brand and sets up social media for Vietnamese business owners abroad, in English and Vietnamese.
 - [Vietnamese brands going global](https://bunchasake.com/international-brand-marketing-vietnam/): We help Vietnamese brands enter Europe and the US: positioning for the new market, identity, English brand voice and a website buyers abroad understand.
-- [Social media automation](https://bunchasake.com/social-media-automation/): We build your social media system once: an AI assistant in your brand voice, a 30-day calendar, scheduling and inbox replies. Your own team runs it.
-- [Automation for nail salons](https://bunchasake.com/social-media-automation-for-nail-salons/): Social media automation for nail salons: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts, inbox replies. We set it up, you run it.
-- [Automation for restaurants](https://bunchasake.com/social-media-automation-for-restaurants/): Social media automation for restaurants: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. Your team runs it.
+- [AI social media automation](https://bunchasake.com/social-media-automation/): We build your social media system once: an AI assistant in your brand voice, a 30-day calendar, scheduling and inbox replies. Your own team runs it.
+- [AI automation for nail salons](https://bunchasake.com/social-media-automation-for-nail-salons/): Social media automation for nail salons: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts, inbox replies. We set it up, you run it.
+- [AI automation for restaurants](https://bunchasake.com/social-media-automation-for-restaurants/): Social media automation for restaurants: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. Your team runs it.
 
 ## Guides
 - [How to get more nail clients, starting with what people see first](https://bunchasake.com/blog/how-to-get-more-nail-clients/): How to get more nail clients, honestly. What people check before they book, a prioritised action list and a first 30 days checklist for salon owners.
@@ -71,9 +71,9 @@ Add-on, Social Media Automation: your own AI assistant trained on the brand voic
 - [Nhà hàng & F&B](https://bunchasake.com/vi/marketing-nha-hang/)
 - [Doanh nghiệp Việt ở nước ngoài](https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/)
 - [Thương hiệu Việt ra quốc tế](https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/)
-- [Tự động hoá social media](https://bunchasake.com/vi/tu-dong-hoa-social-media/)
-- [Automation cho tiệm nail](https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/)
-- [Automation cho nhà hàng](https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/)
+- [AI tự động hoá social media](https://bunchasake.com/vi/tu-dong-hoa-social-media/)
+- [AI Automation cho tiệm nail](https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/)
+- [AI Automation cho nhà hàng](https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/)
 - [Blog tiếng Việt](https://bunchasake.com/vi/blog/)
 
 ## Work
