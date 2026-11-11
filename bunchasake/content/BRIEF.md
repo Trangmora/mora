@@ -26,6 +26,10 @@ file format below must be followed exactly. Write only the files you were assign
   Bác Sĩ Ánh (healthcare, personal brand), Canasto de Flores (flowers, landscaping), Lạc Hồng (construction machinery), Talk2TheTop (podcast),
   NA-VI Living (hospitality), Vestra Place (coworking), Vina KTV (audio equipment).
 
+## 1b. Audience framing for blog articles
+
+Blog articles speak generally to owners ("your salon", "your restaurant", "your brand"). Readers are mostly Vietnamese owners, but titles, H1, descriptions and keywords do not say "Vietnamese", and the body mentions it at most three times where it genuinely helps. See `REVISE-GENERAL.md`. Landing pages keep their current positioning.
+
 ## 2. Hard rules (a page that breaks these will be rejected)
 
 - **Never invent facts about Bunchasake:** no client results, numbers, percentages, testimonials, prices, timelines, team size, years of experience, awards, offices, or clients in a specific country/industry beyond the list above. We have **no nail salon client** to cite. Do not write "we helped X salons".
