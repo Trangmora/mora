@@ -63,27 +63,27 @@
     "items": [
       {
         "t": "Lắng nghe",
-        "p": "Buổi trò chuyện 60 phút với chủ quán, kèm xem menu, các trang đang có và những câu khách hay hỏi nhất."
+        "p": "Buổi trò chuyện 60 phút với chủ quán, kèm xem menu, các trang đang có và <b class=\"k\">những câu khách hay hỏi nhất</b>."
       },
       {
         "t": "Định vị",
-        "p": "Câu chuyện và thông điệp chính để trợ lý dựa vào."
+        "p": "<b class=\"k\">Câu chuyện và thông điệp chính</b> để trợ lý dựa vào."
       },
       {
         "t": "Nhận diện",
-        "p": "Giọng văn tiếng Anh và tiếng Việt, kèm mẫu bài đăng đúng màu của quán."
+        "p": "Giọng văn tiếng Anh và tiếng Việt, kèm <b class=\"k\">mẫu bài đăng đúng màu</b> của quán."
       },
       {
         "t": "Điểm chạm",
-        "p": "Chính là hệ thống, cài trên tài khoản Facebook, Instagram, TikTok của quán."
+        "p": "Chính là hệ thống, <b class=\"k\">cài trên tài khoản Facebook, Instagram, TikTok</b> của quán."
       },
       {
         "t": "Cộng đồng",
-        "p": "Thương hiệu lớn lên mà không <b class=\"k\">dựa trên cộng đồng</b> thì chưa thành công, và khách quay lại mua từ một cộng đồng tốt giúp <b class=\"k\">tiết kiệm rất nhiều chi phí</b> bán hàng, marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên nền tảng khách hàng mong muốn, để họ <b class=\"k\">trung thành</b> với thương hiệu."
+        "p": "Xây cộng đồng <b class=\"k\">khách hàng trung thành</b> trên nền tảng họ yêu thích, giúp bạn <b class=\"k\">tiết kiệm chi phí</b> bán hàng, marketing."
       },
       {
         "t": "Xử lý khủng hoảng",
-        "p": "Thương hiệu nào cũng có lúc gặp <b class=\"k\">khủng hoảng truyền thông</b>. Đội ngũ của chúng tôi chuyên nghiên cứu và xử lý khủng hoảng, <b class=\"k\">giảm tối đa tác động và rủi ro</b> cho thương hiệu, đồng thời <b class=\"k\">training cho đội của bạn</b> cách xử lý từ góc nhìn của người làm truyền thông chuyên nghiệp."
+        "p": "Khi <b class=\"k\">khủng hoảng truyền thông</b> đến, chúng tôi xử lý, giảm tối đa rủi ro và <b class=\"k\">training cho đội của bạn</b>."
       }
     ]
   },

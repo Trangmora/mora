@@ -8,7 +8,7 @@ file format below must be followed exactly. Write only the files you were assign
 
 - **Bunchasake** is a brand builder and growth partner. Voice is always "we" / "chúng tôi" (never "I", never a named person).
 - A Vietnamese studio working between **Vietnam and Italy**, online with clients anywhere. Working languages: **Vietnamese and English**.
-- Promise: "You run the business. We grow the brand." / "Bạn lo vận hành. Chúng tôi lo thương hiệu."
+- Promise: "You run the business. We grow the brand." / "Bạn lo vận hành. Chúng tôi tăng trưởng thương hiệu."
 - Belief: people do not buy a product, they buy the story behind it. "You have the story. We turn it into a brand."
 - Who we work with: (1) Vietnamese business owners abroad (nail salons, restaurants, other owner-run businesses), (2) Vietnamese brands that want to go international.
 - **Process, six steps, the client approves after each step:**

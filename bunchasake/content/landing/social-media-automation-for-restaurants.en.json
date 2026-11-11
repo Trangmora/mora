@@ -63,27 +63,27 @@
     "items": [
       {
         "t": "Listening",
-        "p": "A 60-minute conversation with the owner, plus a look at your menu, your pages and the questions guests ask most."
+        "p": "A 60-minute conversation with the owner, plus a look at your menu, your pages and <b class=\"k\">the questions guests ask most</b>."
       },
       {
         "t": "Positioning",
-        "p": "The story and key messages the assistant works from."
+        "p": "<b class=\"k\">The story and key messages</b> the assistant works from."
       },
       {
         "t": "Identity",
-        "p": "The voice in English and Vietnamese, plus post templates in your colours."
+        "p": "The voice in English and Vietnamese, plus <b class=\"k\">post templates in your colours</b>."
       },
       {
         "t": "Touchpoints",
-        "p": "The system itself, set up on your Facebook, Instagram and TikTok accounts."
+        "p": "The system itself, <b class=\"k\">set up on your Facebook, Instagram and TikTok</b> accounts."
       },
       {
         "t": "Community",
-        "p": "A brand that grows <b class=\"k\">without a community behind it</b> is not yet a successful brand, and repeat purchases from a good community <b class=\"k\">save a lot of sales and marketing spend</b>. We help you build your community on the platforms your customers prefer, so they <b class=\"k\">stay loyal</b>."
+        "p": "A community of <b class=\"k\">loyal customers</b> on the platforms they prefer, so you <b class=\"k\">save on sales and marketing</b>."
       },
       {
         "t": "Crisis communication",
-        "p": "Every brand meets a <b class=\"k\">communication crisis</b> at some point. Our team specialises in studying and handling crises, keeps the impact and risk to your brand <b class=\"k\">as small as possible</b>, and <b class=\"k\">trains your team</b> to respond the way communication professionals do."
+        "p": "When a <b class=\"k\">communication crisis</b> hits, we handle it, minimise the risk and <b class=\"k\">train your team</b>."
       }
     ]
   },
