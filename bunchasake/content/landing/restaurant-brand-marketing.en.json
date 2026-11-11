@@ -13,8 +13,8 @@
         "p": "They find you by word of mouth. Local diners walk past, because nothing outside or online tells them why to come in."
       },
       {
-        "q": "The menu lists dishes but does not explain them.",
-        "p": "A first-time guest needs one line on what bún chả is, not only a name and a price."
+        "q": "The menu has only names and prices.",
+        "p": "A first-time guest needs one line on what bún chả is."
       },
       {
         "q": "I cook all day. When would I post?",
@@ -51,7 +51,7 @@
     },
     {
       "h2": "Restaurant social media your own team can run",
-      "html": "<p>To be clear about what we do not do: we do not run ads, post every day on your behalf or do food photo shoots. A page written by outsiders rarely sounds like the person behind the stove.</p><p>Instead, we set up a system that makes posting a small job between lunch and dinner service:</p><ul><li>post templates in your colours, ready for a photo from your phone</li><li>voice guidelines in English and Vietnamese, so captions sound the same whoever writes them</li><li>with the add-on, <a href=\"{{landing:social-media-automation-for-restaurants}}\">social media automation for restaurants</a>: a 30-day calendar, AI drafts you approve, scheduled posts and automatic replies</li></ul><p>To start this week, read our <a href=\"{{blog:restaurant-instagram-content-ideas}}\">restaurant Instagram content ideas</a> and <a href=\"{{blog:how-to-market-a-vietnamese-restaurant}}\">how to market a Vietnamese restaurant</a>. If your business is not a restaurant, see our page for <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">Vietnamese business owners abroad</a>.</p>"
+      "html": "<p>To be clear about what we do not do: we do not run ads, post every day on your behalf or do food photo shoots. A page written by outsiders rarely sounds like the person behind the stove.</p><p>Instead, we set up a system that makes posting a small job between lunch and dinner service:</p><ul><li>post templates in your colours, ready for a photo from your phone</li><li>voice guidelines in English and Vietnamese, so captions sound the same whoever writes them</li><li>with the add-on, <a href=\"{{landing:social-media-automation-for-restaurants}}\">social media automation for restaurants</a>: a 30-day calendar, AI drafts you approve, scheduled posts and automatic replies</li></ul><p>To start this week, read our <a href=\"{{blog:restaurant-instagram-content-ideas}}\">restaurant Instagram content ideas</a> and <a href=\"{{blog:how-to-market-a-vietnamese-restaurant}}\">how to market a Vietnamese restaurant</a>. If you run another kind of business, see our page for <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">Vietnamese business owners abroad</a>.</p>"
     }
   ],
   "process": {

@@ -74,6 +74,42 @@ Use descriptive anchor text (never "click here").
 | `how-vietnamese-brands-can-enter-european-markets` | how Vietnamese brands can enter European markets | international-brand-marketing-vietnam | `thuong-hieu-viet-vao-thi-truong-chau-au` |
 | `ai-content-calendar-for-small-business` | AI content calendar for small business | social-media-automation | `lich-noi-dung-ai-cho-doanh-nghiep-nho` |
 
+### Blog articles, batch 2 (KEY = English slug)
+
+| KEY | Primary keyword and scope | `landing:` value | Vietnamese slug |
+|---|---|---|---|
+| `how-to-reach-vietnamese-customers-overseas` | how to reach Vietnamese customers overseas / Vietnamese diaspora marketing strategy | vietnamese-diaspora-brand-marketing | `cach-tiep-can-khach-viet-o-nuoc-ngoai` |
+| `working-with-a-vietnam-based-marketing-team` | how to work with a Vietnam-based marketing team while running a business abroad (time zones, briefs, approvals) | vietnamese-diaspora-brand-marketing | `lam-viec-voi-doi-marketing-o-viet-nam` |
+| `marketing-for-vietnamese-business-owners-in-the-usa` | marketing for Vietnamese business owners in the USA (how to market a salon or shop without hiring a local agency) | vietnamese-diaspora-brand-marketing | `marketing-cho-chu-doanh-nghiep-viet-o-my` |
+| `marketing-checklist-for-vietnamese-businesses-in-australia` | marketing checklist for Vietnamese-owned businesses in Australia | vietnamese-diaspora-brand-marketing | `checklist-marketing-doanh-nghiep-viet-o-uc` |
+| `marketing-for-vietnamese-businesses-in-europe` | marketing for Vietnamese business owners in Europe incl. Italy (restaurants, shops: Instagram and Google Maps visibility, local language) | vietnamese-diaspora-brand-marketing | `marketing-doanh-nghiep-viet-o-chau-au` |
+| `nail-salon-tiktok-content-ideas` | nail salon TikTok content ideas (and turning views into bookings) | nail-salon-brand-marketing | `y-tuong-video-tiktok-tiem-nail` |
+| `nail-salon-content-calendar` | nail salon content calendar (a monthly plan the reader can copy) | social-media-automation-for-nail-salons | `lich-dang-bai-tiem-nail` |
+| `before-and-after-nail-content` | before and after nail content that turns viewers into bookings | nail-salon-brand-marketing | `content-truoc-va-sau-tiem-nail` |
+| `nail-salon-review-response-examples` | nail salon review response examples (templates for every kind of review) | nail-salon-brand-marketing | `mau-tra-loi-review-tiem-nail` |
+| `nail-salon-advertising-ideas` | nail salon advertising ideas (do-it-yourself: local, low-cost, when paid ads make sense) | nail-salon-brand-marketing | `y-tuong-quang-cao-tiem-nail` |
+| `nail-salon-marketing-budget` | nail salon marketing budget (how to plan it: what to spend on first, no invented benchmarks) | nail-salon-brand-marketing | `ngan-sach-marketing-tiem-nail` |
+| `nail-salon-logo-and-branding` | nail salon logo and branding (name, logo, colours, menu, signage) | nail-salon-brand-marketing | `logo-va-thuong-hieu-tiem-nail` |
+| `how-to-photograph-nails` | how to take nail photos with a phone (chụp ảnh nail đẹp) | nail-salon-brand-marketing | `cach-chup-anh-nail-dep` |
+| `restaurant-tiktok-content-ideas` | restaurant TikTok content ideas (for Vietnamese and Asian restaurants) | restaurant-brand-marketing | `y-tuong-content-tiktok-nha-hang` |
+| `restaurant-content-calendar` | restaurant content calendar (a monthly plan the reader can copy) | social-media-automation-for-restaurants | `lich-noi-dung-nha-hang` |
+| `restaurant-menu-photography-tips` | restaurant menu photography tips and short videos with a phone (chụp ảnh món ăn) | restaurant-brand-marketing | `cach-chup-anh-mon-an` |
+| `google-business-profile-for-restaurants` | restaurant Google Business Profile optimization / Google Maps for Vietnamese restaurants | restaurant-brand-marketing | `toi-uu-google-maps-nha-hang` |
+| `restaurant-local-seo-checklist` | restaurant local SEO checklist (do-it-yourself) | restaurant-brand-marketing | `checklist-local-seo-nha-hang` |
+| `local-ads-for-vietnamese-restaurants` | how to run local ads for a Vietnamese restaurant (do-it-yourself basics, when it is worth it) | restaurant-brand-marketing | `quang-cao-nha-hang-viet-o-nuoc-ngoai` |
+| `restaurant-branding-guide` | restaurant branding: name, story, menu, signage (xây thương hiệu nhà hàng) | restaurant-brand-marketing | `xay-thuong-hieu-nha-hang` |
+| `how-vietnamese-brands-can-enter-the-us-market` | how Vietnamese brands can enter the US market (brand and content side only) | international-brand-marketing-vietnam | `thuong-hieu-viet-vao-thi-truong-my` |
+| `cross-border-marketing-localization-checklist` | cross-border marketing: what Vietnamese companies must localize before going global | international-brand-marketing-vietnam | `checklist-ban-dia-hoa-khi-ra-quoc-te` |
+| `english-content-strategy-for-vietnamese-brands` | English content strategy for Vietnamese SaaS and e-commerce brands | international-brand-marketing-vietnam | `chien-luoc-content-tieng-anh-cho-thuong-hieu-viet` |
+| `how-to-choose-a-vietnam-agency-for-international-marketing` | how to choose a Vietnam-based agency for international marketing (honest criteria, questions to ask) | international-brand-marketing-vietnam | `cach-chon-agency-viet-nam-lam-marketing-quoc-te` |
+| `b2b-content-marketing-for-vietnamese-companies` | B2B content marketing and lead generation for Vietnamese companies targeting Europe and North America (do-it-yourself) | international-brand-marketing-vietnam | `content-b2b-cho-doanh-nghiep-viet` |
+| `social-media-automation-for-brands-expanding-overseas` | social media automation for Vietnamese brands expanding overseas | social-media-automation | `tu-dong-hoa-social-media-khi-ra-nuoc-ngoai` |
+| `social-media-inbox-automation` | social media inbox automation for small business (what to automate, what never to) | social-media-automation | `tu-dong-tra-loi-inbox` |
+| `multichannel-social-media-posting` | Facebook Instagram TikTok automation: multichannel posting from one plan | social-media-automation | `dang-bai-da-kenh-facebook-instagram-tiktok` |
+| `ai-marketing-assistant-for-small-business` | AI marketing assistant for small business (what it can and cannot do, how to brief it) | social-media-automation | `tro-ly-ai-marketing-cho-doanh-nghiep-nho` |
+
+Batch 2 rules: every article must be clearly different from the batch 1 articles and from its neighbours (link to them instead of repeating them). Articles about ads, SEO, Google Business Profile, photography or budgets are **do-it-yourself guides**: say once, plainly, that Bunchasake does not sell that service, and never invent prices, benchmarks or percentages (teach the method for deciding instead). Legal, tax, customs and certification questions are outside every guide; tell the reader to ask a qualified adviser.
+
 Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.
 
 ### External links (blog articles only)

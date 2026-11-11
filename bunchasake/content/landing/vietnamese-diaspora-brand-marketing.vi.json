@@ -18,7 +18,7 @@
       },
       {
         "q": "Bài đăng toàn tiếng Việt, hoặc tiếng Anh nghe gượng.",
-        "p": "Chỉ một thứ tiếng là bỏ sót một nửa khách: người lớn tuổi tìm bằng tiếng Việt, người trẻ và khách bản xứ tìm bằng tiếng Anh."
+        "p": "Chỉ một thứ tiếng là bỏ sót một nhóm khách: người lớn tuổi tìm bằng tiếng Việt, người trẻ và khách bản xứ tìm bằng tiếng Anh."
       }
     ]
   },
@@ -81,7 +81,7 @@
   },
   "work": {
     "title": "Thương hiệu chúng tôi đã làm",
-    "intro": "Ba thương hiệu chúng tôi đã làm: một nhà hàng, một công ty dịch vụ gia đình ở Hà Nội và một thương hiệu cá nhân ngành y tế.",
+    "intro": "Ba trong các thương hiệu chúng tôi đã làm: một nhà hàng, một công ty dịch vụ gia đình ở Hà Nội và một thương hiệu cá nhân ngành y tế.",
     "items": ["chop-chop", "viet-my-clean-home", "bac-si-anh"]
   },
   "faq": [
@@ -103,13 +103,13 @@
     },
     {
       "q": "Có logo và bảng hiệu rồi, phải làm lại từ đầu không?",
-      "a": "Không nhất thiết. Gói Refresh rà lại và làm mới thương hiệu bạn đang có, không làm lại từ đầu."
+      "a": "Không cần. Gói Refresh rà lại và làm mới thương hiệu bạn đang có, không làm lại từ đầu."
     }
   ],
   "cta": {
     "h2": "Bạn có câu chuyện. Chúng tôi biến nó thành thương hiệu.",
     "p": "Gửi vài dòng về doanh nghiệp của bạn, chúng tôi sẽ chuẩn bị câu hỏi cho buổi trò chuyện đầu tiên.",
-    "subject": "Thương hiệu cho doanh nghiệp của tôi"
+    "subject": "Thương hiệu cho doanh nghiệp của tôi ở nước ngoài"
   },
   "related": [
     "bilingual-marketing-for-vietnamese-businesses-abroad",

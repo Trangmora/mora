@@ -35,12 +35,12 @@
         "p": "Tên nếu cần, logo, màu sắc, kiểu chữ, gói trong bộ hướng dẫn dễ dùng."
       },
       {
-        "t": "Giọng thương hiệu Anh và Việt",
+        "t": "Giọng thương hiệu song ngữ Anh Việt",
         "p": "Thương hiệu nói tiếng Anh thế nào mà vẫn giữ được chất Việt."
       },
       {
         "t": "Website và các điểm chạm chính",
-        "p": "Website, bao bì, hồ sơ công ty, danh thiếp để người mua nước ngoài đọc hiểu và tin."
+        "p": "Website, bao bì, hồ sơ công ty, danh thiếp để người mua nước ngoài đọc hiểu và tin tưởng."
       },
       {
         "t": "Social Media Automation, dựng sẵn cho bạn",
@@ -81,12 +81,12 @@
   },
   "work": {
     "title": "Thương hiệu đã làm ở Ý và ngành hospitality",
-    "intro": "Ba thương hiệu chúng tôi đã làm cùng: Borgo Villa Nemec, villa ở Ý; Impact Investments, công ty đầu tư ở Ý; NA-VI Living, thương hiệu ngành hospitality.",
+    "intro": "Ba trong các thương hiệu chúng tôi đã làm: Borgo Villa Nemec, villa ở Ý; Impact Investments, công ty đầu tư ở Ý; NA-VI Living, thương hiệu ngành hospitality.",
     "items": ["borgo-villa-nemec", "impact-investments", "navi-living"]
   },
   "faq": [
     {
-      "q": "Chúng tôi ở Việt Nam, làm việc thế nào?",
+      "q": "Chúng tôi ở Việt Nam, làm việc với các bạn thế nào?",
       "a": "Online hoặc gặp trực tiếp. Bạn gửi email, hai bên trò chuyện 60 phút, rồi bạn nhận đề xuất và báo giá."
     },
     {

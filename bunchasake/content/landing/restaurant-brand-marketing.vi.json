@@ -2,19 +2,19 @@
   "slug": "marketing-nha-hang",
   "title": "Dịch vụ marketing nhà hàng và xây thương hiệu | Bunchasake",
   "description": "Dịch vụ marketing nhà hàng cho quán Việt trong và ngoài nước: từ câu chuyện món ăn đến thương hiệu, menu và hệ thống social media do team bạn vận hành.",
-  "kicker": "Cho nhà hàng, quán cà phê, tiệm ăn uống của người Việt",
+  "kicker": "Cho nhà hàng, quán cà phê, tiệm ăn uống người Việt",
   "h1": "Dịch vụ marketing nhà hàng, bắt đầu từ <em>câu chuyện sau món ăn</em>",
-  "lead": "Dịch vụ marketing nhà hàng của Bunchasake dành cho nhà hàng, quán cà phê, tiệm ăn uống của người Việt ở nước ngoài và tại Việt Nam. Bạn lo gian bếp, chúng tôi biến câu chuyện sau món ăn thành thương hiệu khách bản xứ hiểu được.",
+  "lead": "Dịch vụ marketing nhà hàng của Bunchasake dành cho nhà hàng, quán cà phê, tiệm ăn uống người Việt ở nước ngoài và tại Việt Nam. Bạn lo gian bếp, chúng tôi biến câu chuyện sau món ăn thành thương hiệu khách bản xứ hiểu được.",
   "problems": {
     "title": "Món ngon, nhưng mới chỉ người Việt biết đến",
     "items": [
       {
         "q": "Khách quen gần như toàn người Việt.",
-        "p": "Bà con tìm đến nhờ truyền miệng. Khách bản xứ đi ngang rồi đi tiếp, vì biển hiệu lẫn trang online chưa cho họ lý do để bước vào."
+        "p": "Bà con tìm đến nhờ truyền miệng. Khách bản xứ đi ngang rồi đi tiếp, vì biển hiệu lẫn trang online chưa cho họ lý do bước vào."
       },
       {
         "q": "Menu chỉ có tên món và giá.",
-        "p": "Khách đến lần đầu cần thêm một dòng cho biết bún chả là món gì, chứ tên và giá thì chưa đủ."
+        "p": "Khách đến lần đầu cần thêm một dòng cho biết bún chả là món gì."
       },
       {
         "q": "Đứng bếp cả ngày, lấy đâu thời gian làm content?",
@@ -24,11 +24,11 @@
   },
   "services": {
     "title": "Dịch vụ marketing nhà hàng của chúng tôi gồm những gì",
-    "intro": "Bắt đầu từ câu chuyện của bạn, rồi đưa nó lên mọi thứ khách nhìn thấy.",
+    "intro": "Bắt đầu từ câu chuyện của bạn, rồi đưa lên mọi thứ khách nhìn thấy.",
     "items": [
       {
         "t": "Câu chuyện và định vị",
-        "p": "Quán là ai, phục vụ ai, khác gì quán khác, viết thành một câu chuyện ngắn mà nhân viên kể lại được."
+        "p": "Quán là ai, phục vụ ai, khác gì quán khác, viết thành câu chuyện ngắn nhân viên kể lại được."
       },
       {
         "t": "Tên, logo và giọng văn",
@@ -36,22 +36,22 @@
       },
       {
         "t": "Menu, biển hiệu và website",
-        "p": "Menu giải thích từng món cho khách đến lần đầu, biển hiệu cho biết quán bán gì, website và mẫu bài đăng nói cùng một giọng."
+        "p": "Menu giải thích từng món cho khách mới, biển hiệu cho biết quán bán gì, website và mẫu bài đăng nói cùng một giọng."
       },
       {
-        "t": "Tự động hóa social media, dựng sẵn cho bạn",
-        "p": "Phần thêm: trợ lý AI, lịch nội dung 30 ngày, bài nháp để bạn duyệt, tự lên lịch đăng và tự trả lời inbox, do team của bạn vận hành."
+        "t": "Tự động hóa social media cho bạn",
+        "p": "Phần thêm: trợ lý AI, lịch nội dung 30 ngày, bài nháp để bạn duyệt, tự lên lịch đăng, tự trả lời inbox, do team của bạn vận hành."
       }
     ]
   },
   "sections": [
     {
       "h2": "Xây thương hiệu nhà hàng bắt đầu từ câu chuyện",
-      "html": "<p>Nhiều chủ quán nghĩ đến logo trước tiên. Chúng tôi bắt đầu từ câu hỏi: vì sao quán này có mặt. Thử hình dung một quán phở gia đình: nước dùng nấu theo công thức của bà ngoại ở Nam Định, và cả nhà mở quán nơi xứ người để con cái lớn lên vẫn nhớ vị ấy. Những điều đó chưa hề có trên biển hiệu, menu hay bio Instagram.</p><p>Câu chuyện ấy trở thành thương hiệu. Nó quyết định cái tên trên cửa, màu sắc và cách menu mô tả từng món:</p><ul><li><strong>Trước:</strong> <em>Phở bò. Beef noodle soup.</em></li><li><strong>Sau:</strong> <em>Phở bò Nam Định. Our family's broth, simmered overnight with beef bones, ginger and star anise.</em></li></ul><p>Giọng văn được viết bằng hai thứ tiếng: tiếng Anh giúp khách bản xứ hiểu mình sắp ăn gì, tiếng Việt giữ sự gần gũi bà con vốn quen. Nhà hàng ở Việt Nam muốn khách nước ngoài hiểu menu cũng cần đúng việc này.</p>"
+      "html": "<p>Nhiều chủ quán nghĩ đến logo trước. Chúng tôi bắt đầu từ lý do quán có mặt. Thử hình dung một quán phở gia đình: nước dùng nấu theo công thức của bà ngoại ở Nam Định, và cả nhà mở quán nơi xứ người để con cái lớn lên vẫn nhớ vị ấy. Những điều đó chưa có trên biển hiệu, menu hay bio Instagram.</p><p>Câu chuyện ấy trở thành thương hiệu. Nó quyết định cái tên trên cửa, màu sắc và cách menu mô tả từng món:</p><ul><li><strong>Trước:</strong> <em>Phở bò. Beef noodle soup.</em></li><li><strong>Sau:</strong> <em>Phở bò Nam Định. Our family's broth, simmered overnight with beef bones, ginger and star anise.</em></li></ul><p>Giọng văn được viết bằng hai thứ tiếng: tiếng Anh giúp khách bản xứ hiểu mình sắp ăn gì, tiếng Việt giữ sự gần gũi bà con vốn quen. Nhà hàng ở Việt Nam muốn khách nước ngoài hiểu menu cũng cần đúng việc này.</p>"
     },
     {
       "h2": "Content nhà hàng Việt ở nước ngoài: team của bạn tự làm được",
-      "html": "<p>Nói rõ những việc chúng tôi không làm: không chạy quảng cáo, không đăng bài hằng ngày thay bạn, không chụp ảnh hay quay phim món ăn. Trang do người ngoài viết thay thường không ra giọng của người đứng bếp.</p><p>Thay vào đó, chúng tôi dựng sẵn một hệ thống để việc làm content nhà hàng gói gọn trong lúc vắng khách giữa ca trưa và ca tối:</p><ul><li>mẫu bài đăng đúng màu của quán, chỉ cần thêm ảnh chụp bằng điện thoại</li><li>quy chuẩn giọng văn tiếng Anh và tiếng Việt, để ai viết caption cũng ra cùng một giọng</li><li>nếu chọn phần thêm <a href=\"{{landing:social-media-automation-for-restaurants}}\">tự động hóa social media cho nhà hàng</a>: lịch nội dung 30 ngày, AI viết nháp để bạn duyệt, tự lên lịch đăng và tự trả lời tin nhắn</li></ul><p>Muốn bắt tay vào ngay tuần này, mời đọc <a href=\"{{blog:restaurant-instagram-content-ideas}}\">ý tưởng content Instagram cho nhà hàng</a> và <a href=\"{{blog:how-to-market-a-vietnamese-restaurant}}\">cách marketing nhà hàng Việt ở nước ngoài</a>. Nếu bạn kinh doanh ngành khác, xem trang dành cho <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">chủ doanh nghiệp Việt ở nước ngoài</a>.</p>"
+      "html": "<p>Nói rõ những việc chúng tôi không làm: không chạy quảng cáo, không đăng bài hằng ngày thay bạn, không chụp ảnh hay quay phim món ăn. Trang do người ngoài viết thay khó ra giọng của người đứng bếp.</p><p>Thay vào đó, chúng tôi dựng một hệ thống để việc làm content nhà hàng gói gọn trong lúc vắng khách giữa hai ca:</p><ul><li>mẫu bài đăng đúng màu của quán, chỉ cần thêm ảnh chụp bằng điện thoại</li><li>quy chuẩn giọng văn tiếng Anh và tiếng Việt, để ai viết caption cũng ra một giọng</li><li>phần thêm <a href=\"{{landing:social-media-automation-for-restaurants}}\">tự động hóa social media cho nhà hàng</a>: lịch 30 ngày, AI viết nháp để bạn duyệt, tự lên lịch đăng, tự trả lời tin nhắn</li></ul><p>Muốn bắt tay vào ngay, mời đọc <a href=\"{{blog:restaurant-instagram-content-ideas}}\">ý tưởng content Instagram cho nhà hàng</a> và <a href=\"{{blog:how-to-market-a-vietnamese-restaurant}}\">cách marketing nhà hàng Việt ở nước ngoài</a>. Nếu bạn kinh doanh ngành khác, mời xem trang dành cho <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">chủ doanh nghiệp Việt ở nước ngoài</a>.</p>"
     }
   ],
   "process": {
@@ -59,7 +59,7 @@
     "items": [
       {
         "t": "Lắng nghe",
-        "p": "Buổi trò chuyện 60 phút về công thức, vùng quê của món ăn và lý do bạn mở quán, kèm tìm hiểu khách và các quán xung quanh."
+        "p": "Buổi trò chuyện 60 phút về công thức, vùng quê món ăn và lý do bạn mở quán, kèm tìm hiểu khách và các quán xung quanh."
       },
       {
         "t": "Định vị",
@@ -67,44 +67,44 @@
       },
       {
         "t": "Nhận diện",
-        "p": "Tên nếu cần, logo, màu sắc, kiểu chữ và giọng văn, gói trong bộ quy chuẩn."
+        "p": "Tên nếu cần, logo, màu sắc, kiểu chữ, giọng văn, gói trong bộ quy chuẩn."
       },
       {
         "t": "Điểm chạm",
-        "p": "Menu, biển hiệu, website và mẫu bài đăng, tất cả nói cùng một giọng."
+        "p": "Menu, biển hiệu, website và mẫu bài đăng, tất cả cùng một giọng."
       }
     ]
   },
   "work": {
     "title": "Thương hiệu chúng tôi đã làm cùng",
-    "intro": "Chop Chop là thương hiệu nhà hàng; NA-VI Living thuộc ngành lưu trú, Borgo Villa Nemec là villa ở Ý, còn Canasto de Flores làm hoa tươi và cảnh quan.",
+    "intro": "Chop Chop là thương hiệu nhà hàng; NA-VI Living thuộc ngành lưu trú, Borgo Villa Nemec là villa ở Ý, Canasto de Flores làm hoa tươi và cảnh quan.",
     "items": ["chop-chop", "navi-living", "borgo-villa-nemec", "canasto-de-flores"]
   },
   "faq": [
     {
-      "q": "Vì sao nên chọn đơn vị marketing nhà hàng là người Việt?",
-      "a": "Vì bạn không phải giải thích món ăn cho chúng tôi. Chúng tôi làm việc bằng tiếng Việt và tiếng Anh, nên câu chuyện đến được với khách bản xứ mà không mất chất."
+      "q": "Vì sao nên chọn đơn vị marketing nhà hàng người Việt?",
+      "a": "Vì bạn không phải giải thích món ăn cho chúng tôi. Chúng tôi làm việc bằng tiếng Việt và tiếng Anh, nên câu chuyện đến được khách bản xứ mà không mất chất."
     },
     {
       "q": "Bunchasake có đăng bài thay quán, chạy quảng cáo hay chụp ảnh món không?",
-      "a": "Không. Chúng tôi xây thương hiệu, mẫu bài đăng và, nếu bạn chọn phần thêm, hệ thống tự động hóa. Team của bạn tự chụp ảnh và đăng bài."
+      "a": "Không. Chúng tôi xây thương hiệu, mẫu bài đăng và hệ thống tự động hóa nếu bạn chọn thêm. Team của bạn tự chụp ảnh và đăng bài."
     },
     {
       "q": "Lệch múi giờ thì làm việc thế nào?",
-      "a": "Chúng tôi làm việc online giữa Việt Nam và Ý, với khách ở bất kỳ đâu. Sau buổi trò chuyện 60 phút đầu tiên, bạn duyệt xong từng bước thì chúng tôi mới làm tiếp."
+      "a": "Chúng tôi làm online giữa Việt Nam và Ý, với khách ở bất kỳ đâu. Sau buổi trò chuyện 60 phút đầu tiên, bạn duyệt xong từng bước thì chúng tôi mới làm tiếp."
     },
     {
-      "q": "Quán đã có tên và logo, có giữ lại được không?",
+      "q": "Quán đã có tên và logo, có giữ được không?",
       "a": "Được. Gói Refresh đánh giá thương hiệu hiện tại, rồi định vị lại, làm mới nhận diện và cập nhật những điểm chạm đang dùng."
     },
     {
-      "q": "Chi phí bao nhiêu, tôi cần chuẩn bị gì?",
+      "q": "Chi phí bao nhiêu, cần chuẩn bị gì?",
       "a": "Báo giá có sau buổi trò chuyện đầu tiên, tùy gói Start, Build hay Refresh. Để bắt đầu, bạn gửi câu chuyện của quán và menu hiện tại về <a href=\"{{mail}}\">hello@bunchasake.com</a>."
     }
   ],
   "cta": {
     "h2": "Kể chúng tôi nghe câu chuyện sau gian bếp của bạn",
-    "p": "Viết cho chúng tôi vài dòng về quán, chúng tôi sẽ chuẩn bị câu hỏi cho buổi trò chuyện 60 phút.",
+    "p": "Viết vài dòng về quán, chúng tôi sẽ chuẩn bị câu hỏi cho buổi trò chuyện 60 phút.",
     "subject": "Thương hiệu cho nhà hàng của tôi"
   },
   "related": [

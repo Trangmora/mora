@@ -1,16 +1,16 @@
 {
   "slug": "tu-dong-hoa-social-media-tiem-nail",
   "title": "Tự động hóa social media cho tiệm nail | Bunchasake",
-  "description": "Tự động hóa social media cho tiệm nail: trợ lý AI, lịch đăng bài 30 ngày, bài nháp để duyệt, tự đăng đúng giờ, tự trả lời tin nhắn. Chúng tôi dựng, bạn chạy.",
+  "description": "Tự động hóa social media cho tiệm nail: trợ lý AI, lịch đăng bài 30 ngày, bài nháp để duyệt, tự đăng, tự trả lời tin nhắn. Chúng tôi dựng, bạn chạy.",
   "kicker": "Dịch vụ thêm cho tiệm nail người Việt",
   "h1": "Tự động hóa social media cho tiệm nail: <em>dựng sẵn cho bạn</em>, nhân viên tiệm tự chạy",
-  "lead": "Tự động hóa social media cho tiệm nail nghĩa là bài đăng được lên kế hoạch, viết nháp và hẹn giờ trong lúc tay bạn đang bận. Chúng tôi dựng hệ thống. Nhân viên của tiệm dùng nó để chạy Facebook, Instagram và TikTok.",
+  "lead": "Tự động hóa social media cho tiệm nail nghĩa là bài đăng được lên kế hoạch, viết nháp và hẹn giờ trong lúc tay bạn đang bận. Chúng tôi dựng hệ thống, nhân viên tiệm dùng nó để chạy Facebook, Instagram và TikTok.",
   "problems": {
     "title": "Tiệm càng đông khách, trang càng im",
     "items": [
       {
         "q": "Tuần nào kín lịch là không ai đăng bài.",
-        "p": "Tuần đông nhất làm ra những bộ móng đẹp nhất, mà trang lại im nhất. Tới tuần vắng thì trên mạng chẳng có gì kéo khách tới."
+        "p": "Tuần đông nhất có những bộ móng đẹp nhất, mà trang lại im nhất."
       },
       {
         "q": "Tôi không biết hôm nay đăng gì.",
@@ -18,13 +18,13 @@
       },
       {
         "q": "Đang làm cho khách thì tin nhắn dồn lại.",
-        "p": "Khách hỏi giá lúc trưa, tối mới có người trả lời. Lúc đó có khi họ đã đặt tiệm khác."
+        "p": "Khách hỏi giá lúc trưa, tối mới được trả lời. Lúc đó có khi họ đã đặt tiệm khác."
       }
     ]
   },
   "services": {
     "title": "Tự động hóa social media cho tiệm nail gồm năm phần",
-    "intro": "Một hệ thống, chúng tôi dựng, nhân viên của tiệm tự vận hành.",
+    "intro": "Một hệ thống: chúng tôi dựng, nhân viên tiệm vận hành.",
     "items": [
       {
         "t": "Trợ lý AI riêng của tiệm",
@@ -36,7 +36,7 @@
       },
       {
         "t": "AI viết nháp, bạn duyệt",
-        "p": "Caption viết nháp bằng tiếng Anh và tiếng Việt. Bạn duyệt ngay trên điện thoại."
+        "p": "Caption nháp bằng tiếng Anh và tiếng Việt, bạn duyệt trên điện thoại."
       },
       {
         "t": "Tự lên lịch đăng",
@@ -51,11 +51,11 @@
   "sections": [
     {
       "h2": "Lịch đăng bài tiệm nail mà nhân viên làm theo được",
-      "html": "<p>Lịch đăng bài tiệm nail cho biết ngày nào đăng gì và ai lo hình. Lịch của chúng tôi xoay vòng năm loại bài, để trang không thành ba chục tấm hình cùng một kiểu French tip:</p><ul><li><strong>Mẫu nail</strong>: bộ móng bạn ưng nhất trong tuần.</li><li><strong>Trước và sau</strong>: một ca sửa móng, một lần fill, một bộ pedicure.</li><li><strong>Khuyến mãi</strong>: ưu đãi ngày vắng khách, màu mới theo mùa.</li><li><strong>Giới thiệu thợ</strong>: ai giỏi món gì, để khách biết tên mà hẹn.</li><li><strong>Chăm sóc khách</strong>: cách giữ bộ móng bền lâu.</li></ul><p>Thợ chụp hình bằng điện thoại. Trợ lý AI viết nháp caption bằng tiếng Anh và tiếng Việt, đúng giọng của tiệm. Giữa hai lượt khách, bạn sửa hoặc duyệt, bài tự vào lịch. Không bài nào được đăng khi bạn chưa xem.</p><p>Cần ý tưởng thì xem <a href=\"{{blog:nail-salon-social-media-content-ideas}}\">ý tưởng content cho tiệm nail</a>.</p>"
+      "html": "<p>Lịch đăng bài tiệm nail cho biết ngày nào đăng gì và ai lo hình. Lịch xoay vòng năm loại bài, để trang không thành ba chục tấm hình cùng một kiểu French tip:</p><ul><li><strong>Mẫu nail</strong>: bộ móng bạn ưng nhất trong tuần.</li><li><strong>Trước và sau</strong>: sửa móng, fill, pedicure.</li><li><strong>Khuyến mãi</strong>: ưu đãi ngày vắng khách, màu mới theo mùa.</li><li><strong>Giới thiệu thợ</strong>: ai giỏi món gì, để khách hẹn đúng người.</li><li><strong>Chăm sóc khách</strong>: cách giữ bộ móng bền lâu.</li></ul><p>Thợ chụp hình bằng điện thoại. Trợ lý AI viết nháp caption bằng tiếng Anh và tiếng Việt, đúng giọng của tiệm. Giữa hai lượt khách, bạn sửa hoặc duyệt, bài tự vào lịch.</p><p>Xem thêm <a href=\"{{blog:nail-salon-social-media-content-ideas}}\">ý tưởng content cho tiệm nail</a>.</p>"
     },
     {
       "h2": "Quản lý fanpage tiệm nail: chúng tôi dựng hệ thống, tiệm tự chạy",
-      "html": "<p>Nhiều chủ tiệm tìm dịch vụ quản lý fanpage tiệm nail và nghĩ sẽ có người đăng bài thay mình mỗi ngày. Chúng tôi không làm vậy, cũng không chạy quảng cáo hay chụp hình quay phim. Chúng tôi dựng hệ thống, nhân viên của tiệm tự chạy, nên tài khoản và giọng nói vẫn là của bạn.</p><p>Tin nhắn cũng theo cách đó. Chúng tôi soạn sẵn câu trả lời tự động cho những câu bạn phải trả lời cả ngày: giờ mở cửa, bảng giá, cách đặt lịch. Câu trả lời dẫn khách tới link booking hoặc số điện thoại tiệm đang dùng. Chúng tôi không hứa kết nối với phần mềm booking nào, và chuyện gì khác thường thì chuyển cho người thật.</p><p>Mỗi nền tảng cho phép hẹn giờ đăng và trả lời tự động khác nhau, lại hay thay đổi, nên chúng tôi cài theo đúng những gì tài khoản của tiệm hỗ trợ.</p><p>Hệ thống chạy tốt nhất khi tiệm đã có thương hiệu rõ ràng: xem <a href=\"{{landing:nail-salon-brand-marketing}}\">dịch vụ marketing cho tiệm nail</a> và trang chung về <a href=\"{{landing:social-media-automation}}\">tự động hóa social media</a>.</p>"
+      "html": "<p>Nhiều chủ tiệm tìm dịch vụ quản lý fanpage tiệm nail vì muốn có người đăng bài thay mình mỗi ngày. Chúng tôi không làm vậy, không chạy quảng cáo, không chụp hình quay phim. Chúng tôi dựng hệ thống, nhân viên tiệm tự chạy, tài khoản vẫn là của bạn.</p><p>Tin nhắn cũng vậy. Chúng tôi soạn sẵn câu trả lời tự động cho những câu ngày nào cũng gặp: giờ mở cửa, bảng giá, cách đặt lịch. Câu trả lời dẫn khách tới link booking hoặc số điện thoại tiệm đang dùng, chuyện khác thường thì chuyển cho người thật.</p><p>Mỗi nền tảng cho phép hẹn giờ và trả lời tự động khác nhau, lại hay thay đổi, nên chúng tôi cài theo những gì tài khoản tiệm hỗ trợ.</p><p>Hệ thống chạy tốt nhất khi thương hiệu đã rõ: xem <a href=\"{{landing:nail-salon-brand-marketing}}\">dịch vụ marketing cho tiệm nail</a> và trang chung về <a href=\"{{landing:social-media-automation}}\">tự động hóa social media</a>.</p>"
     }
   ],
   "process": {
@@ -63,19 +63,19 @@
     "items": [
       {
         "t": "Lắng nghe",
-        "p": "Buổi trò chuyện 60 phút về dịch vụ, quy định của tiệm và những câu khách hay hỏi nhất."
+        "p": "Buổi trò chuyện 60 phút về dịch vụ, quy định của tiệm và những câu khách hay hỏi."
       },
       {
         "t": "Định vị",
-        "p": "Tiệm dành cho ai và các thông điệp chính, cũng là chủ đề cho lịch nội dung."
+        "p": "Tiệm dành cho ai và thông điệp chính, cũng là chủ đề cho lịch nội dung."
       },
       {
         "t": "Nhận diện",
-        "p": "Giọng văn, màu sắc, kiểu chữ: thứ trợ lý AI học để bài nháp nghe đúng là bạn."
+        "p": "Giọng văn, màu sắc, kiểu chữ: thứ trợ lý AI học để bài nháp đúng giọng tiệm."
       },
       {
         "t": "Điểm chạm",
-        "p": "Mẫu bài đăng và chính hệ thống, cài trên Facebook, Instagram và TikTok của tiệm."
+        "p": "Mẫu bài đăng và chính hệ thống, cài trên Facebook, Instagram, TikTok của tiệm."
       }
     ]
   },
@@ -92,7 +92,7 @@
   "faq": [
     {
       "q": "Bên bạn có quản lý fanpage thay tiệm không?",
-      "a": "Không. Chúng tôi dựng hệ thống, nhân viên của tiệm tự chạy. Chúng tôi không đăng bài hằng ngày thay bạn."
+      "a": "Không. Chúng tôi dựng hệ thống, nhân viên tiệm tự chạy."
     },
     {
       "q": "AI có tự đăng mà không hỏi tôi không?",
@@ -103,8 +103,8 @@
       "a": "Chúng tôi không hứa điều đó. Tin trả lời tự động dẫn khách tới link booking hoặc số điện thoại tiệm đang dùng."
     },
     {
-      "q": "Tôi chỉ lấy phần tự động hóa, không làm thương hiệu được không?",
-      "a": "Đây là dịch vụ thêm vào gói Start, Build hoặc Refresh, vì trợ lý AI cần một giọng văn thương hiệu rõ ràng để học. Nếu tiệm đã có thương hiệu, gói Refresh bắt đầu từ những gì bạn đang có."
+      "q": "Chỉ làm phần tự động hóa, không làm thương hiệu được không?",
+      "a": "Đây là dịch vụ thêm vào gói Start, Build hoặc Refresh, vì trợ lý AI cần giọng văn thương hiệu rõ ràng để học. Tiệm đã có thương hiệu thì Refresh bắt đầu từ cái đang có."
     },
     {
       "q": "Chi phí bao nhiêu, bắt đầu thế nào?",
@@ -112,8 +112,8 @@
     }
   ],
   "cta": {
-    "h2": "Để trang vẫn sống trong lúc bạn làm móng",
-    "p": "Kể cho chúng tôi về tiệm và cách bạn đang đăng bài. Chúng tôi chuẩn bị câu hỏi rồi hẹn một buổi trò chuyện 60 phút.",
+    "h2": "Giữ trang luôn sống trong lúc bạn làm móng",
+    "p": "Kể về tiệm và cách bạn đang đăng bài. Chúng tôi chuẩn bị câu hỏi rồi hẹn buổi trò chuyện 60 phút.",
     "subject": "Tự động hóa social media cho tiệm nail"
   },
   "related": [
