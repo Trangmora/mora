@@ -55,7 +55,7 @@
     },
     {
       "h2": "Restaurant social media management: we build it, your team runs it",
-      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
+      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently: we do not post every day on your behalf, run ads or answer messages for you. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
     }
   ],
   "process": {
@@ -79,7 +79,7 @@
       },
       {
         "t": "Community",
-        "p": "We build a community for you: the people who follow the brand, come back, and recommend you to others."
+        "p": "A brand that cannot keep a community is not a successful brand, and repeat purchases from a good community save a lot of sales and marketing spend. We help you build your community on the platforms your customers prefer, so they stay loyal."
       }
     ]
   },

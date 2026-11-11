@@ -12,11 +12,11 @@ file format below must be followed exactly. Write only the files you were assign
 - Belief: people do not buy a product, they buy the story behind it. "You have the story. We turn it into a brand."
 - Who we work with: (1) Vietnamese business owners abroad (nail salons, restaurants, other owner-run businesses), (2) Vietnamese brands that want to go international.
 - **Process, five steps, the client approves after each step:**
-  1. Listening / Lắng nghe: we talk with the founder (a 60-minute conversation), study customers and competitors.
-  2. Positioning / Định vị: who the brand is, who it is for, how it is different; the brand story and key messages.
-  3. Identity / Nhận diện: name if needed, logo, colours, typography, voice, packed into easy-to-use guidelines.
-  4. Touchpoints / Điểm chạm: website, every social media channel (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest), signage/packaging, business cards/profile, so everything speaks with one voice.
-  5. Community / Cộng đồng: we build a community for the client, the people who follow the brand, come back and recommend it.
+  1. Listening / Lắng nghe: a 60-minute conversation with the founder (why they started, what they believe in), plus listening to their customers.
+  2. Positioning / Định vị: who the brand is, who it is for, how it differs; in-depth competitor analysis to see where the client stands; the brand story.
+  3. Identity / Nhận diện: we work directly with the founder or the person in charge of the brand to shape the brand they want (logo, colours, type, voice), agree on each part together, and pack it into guidelines for the long term.
+  4. Touchpoints / Điểm chạm: once customers start to recognise the brand, we take it where customers already go: website, social media (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If the client already has channels, we read the channel data, customer behaviour and past campaign results, then advise on rolling out new campaigns.
+  5. Community / Cộng đồng: a brand that cannot keep a community is not a successful brand; repeat purchases from a good community save sales and marketing spend. We help the client build their community on the platforms their customers prefer, for a loyal customer base.
 - **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all five steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
 - **Add-on: Social Media Automation, built for you.** We set up the system; the client's own team runs Facebook, TikTok and Instagram with it. Five parts: (1) your own AI assistant trained on the brand voice, (2) a 30-day content calendar, (3) AI drafts, you approve, (4) posts scheduled automatically, (5) automatic inbox replies to common questions.
 - How a project starts: the client emails **hello@bunchasake.com**, we read their story and prepare questions, a 60-minute conversation online or in person, then a proposal and quote.
