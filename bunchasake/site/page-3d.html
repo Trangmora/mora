@@ -455,7 +455,15 @@ dialog.policy form { margin-top: 18px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.mail-card { align-content: center; gap: 18px; }
+.mail-lab { color: #55554F; }
+.mail-big { font-size: clamp(24px, 2.6vw, 38px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.1; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: 3px; text-underline-offset: 8px; }
+.mail-note { font-size: 15px; color: #55554F; max-width: 40ch; }
+.mail-act { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: stretch; margin-top: 6px; }
+.mail-act .submit { margin-top: 0; }
+.mail-copy { all: unset; box-sizing: border-box; cursor: pointer; display: grid; place-items: center; padding: 0 18px; border-radius: 14px; border: 1px solid var(--card-line); font-size: 14px; font-weight: 600; }
+.mail-copy:hover { border-color: var(--card-ink); }
+.mail-copy:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 </style>
 
 <a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
@@ -665,58 +673,26 @@ dialog.policy form { margin-top: 18px; }
 <footer id="lien-he">
   <div class="contact-side">
     <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
-    <ol class="next" aria-label="Sau khi bạn gửi">
+    <ol class="next" aria-label="Sau khi bạn gửi email">
       <li><span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span></li>
       <li><span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span></li>
       <li><span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span></li>
     </ol>
     <dl class="reach">
-      <div><dt>Email</dt><dd><a href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a><button class="copy" type="button" id="copyMail">Sao chép</button></dd></div>
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
     <nav class="foot-nav cap" aria-label="Chân trang"><a href="#lab">Brand Lab</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
   </div>
 
-  <div class="card-form" id="contactCard">
-    <div class="tabs" role="tablist" aria-label="Cách liên hệ">
-      <button type="button" role="tab" id="tab-story" aria-selected="true" aria-controls="form">Gửi câu chuyện</button>
-      <button type="button" role="tab" id="tab-call" aria-selected="false" aria-controls="callForm">Đặt lịch gọi 30 phút</button>
+  <div class="card-form mail-card" id="contactCard">
+    <span class="cap mail-lab">Liên hệ email</span>
+    <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
+    <p class="mail-note">Viết cho chúng tôi vài dòng về doanh nghiệp và câu chuyện của bạn.</p>
+    <div class="mail-act">
+      <a class="submit" href="mailto:hello@bunchasake.com" id="mailBtn">Viết email <span aria-hidden="true">↗</span></a>
+      <button class="mail-copy" type="button" id="copyMail">Sao chép</button>
     </div>
-
-    <form id="form" role="tabpanel" aria-labelledby="tab-story" novalidate style="display:grid;gap:16px">
-      <label for="f-name"><span>Tên của bạn</span><input id="f-name" name="name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-name"><em class="err" id="e-name" hidden></em></label>
-      <label for="f-biz"><span>Doanh nghiệp / website</span><input id="f-biz" name="biz" autocomplete="organization" placeholder="Doanh nghiệp / website" required aria-describedby="e-biz"><em class="err" id="e-biz" hidden></em></label>
-      <label for="f-contact"><span>Email hoặc số điện thoại</span><input id="f-contact" name="contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-contact"><em class="err" id="e-contact" hidden></em></label>
-      <fieldset class="pick">
-        <legend>Bạn đang ở giai đoạn nào?</legend>
-        <label for="p-start"><input type="radio" id="p-start" name="pkg" value="start"> <span>Sắp mở</span></label>
-        <label for="p-build"><input type="radio" id="p-build" name="pkg" value="build"> <span>Cần làm bài bản</span></label>
-        <label for="p-refresh"><input type="radio" id="p-refresh" name="pkg" value="refresh"> <span>Muốn làm mới</span></label>
-        <label for="p-auto"><input type="checkbox" id="p-auto" name="auto" value="automation"> + Automation</label>
-      </fieldset>
-      <label for="f-story"><span>Vì sao bạn bắt đầu?</span><textarea id="f-story" name="story" placeholder="Vì sao bạn bắt đầu? Vài dòng là đủ."></textarea></label>
-      <input type="text" name="website" class="hp" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="submit" type="submit">Gửi câu chuyện <span aria-hidden="true">↗</span></button>
-      <p class="privacy">Thông tin chỉ dùng để liên hệ về dự án của bạn. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
-    </form>
-
-    <form id="callForm" role="tabpanel" aria-labelledby="tab-call" novalidate hidden style="gap:16px">
-      <div class="slots">
-        <span class="lbl">Chọn ngày</span>
-        <div class="days" id="days"></div>
-        <span class="lbl">Chọn giờ (giờ Việt Nam)</span>
-        <div class="times" id="times"></div>
-        <p class="sum" id="sum">Chọn ngày và giờ phù hợp với bạn.</p>
-      </div>
-      <label for="c-name"><span>Tên của bạn</span><input id="c-name" autocomplete="name" placeholder="Tên của bạn" required aria-describedby="e-cname"><em class="err" id="e-cname" hidden></em></label>
-      <label for="c-contact"><span>Email hoặc số điện thoại</span><input id="c-contact" autocomplete="email" placeholder="Email hoặc số điện thoại" required aria-describedby="e-ccontact"><em class="err" id="e-ccontact" hidden></em></label>
-      <input type="text" name="website" class="hp" id="c-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="submit" type="submit">Giữ lịch này <span aria-hidden="true">↗</span></button>
-      <p class="privacy">Bạn sẽ nhận lời mời họp qua email. <button type="button" class="open-policy">Chính sách bảo mật</button></p>
-    </form>
-
-    <div class="done" id="done" hidden aria-live="polite"></div>
   </div>
 
   <div class="legal cap">
@@ -727,7 +703,7 @@ dialog.policy form { margin-top: 18px; }
 
 <dialog class="policy" id="policy" aria-labelledby="policy-h">
   <h3 id="policy-h">Chính sách bảo mật</h3>
-  <p>Bunchasake chỉ thu thập những gì bạn tự điền vào form.</p>
+  <p>Bunchasake chỉ thu thập những gì bạn gửi cho chúng tôi qua email.</p>
   <ul>
     <li>Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.</li>
     <li>Không bán hay chia sẻ cho bên thứ ba.</li>
@@ -737,8 +713,8 @@ dialog.policy form { margin-top: 18px; }
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#lien-he" data-tab="story">Kể câu chuyện</a>
-  <a class="pill ghost" href="#lien-he" data-tab="call">Đặt lịch gọi</a>
+  <a class="pill" href="mailto:hello@bunchasake.com">Gửi email</a>
+  <a class="pill ghost" href="#lien-he">Liên hệ</a>
 </div>
 
 <script>
@@ -855,13 +831,17 @@ const EN = {
 "Giữ lịch này <span aria-hidden=\"true\">↗</span>": "Hold this slot <span aria-hidden=\"true\">↗</span>",
 "Chính sách bảo mật": "Privacy policy",
 "Lên đầu trang ↑": "Back to top ↑",
-"Bunchasake chỉ thu thập những gì bạn tự điền vào form.": "Bunchasake only collects what you type into the form.",
+"Bunchasake chỉ thu thập những gì bạn gửi cho chúng tôi qua email.": "Bunchasake only collects what you send us by email.",
 "Dùng để liên hệ lại và chuẩn bị cho dự án của bạn.": "It is used to get back to you and prepare for your project.",
 "Không bán hay chia sẻ cho bên thứ ba.": "It is never sold or shared with third parties.",
 "Bạn có thể yêu cầu xoá thông tin bất cứ lúc nào qua email.": "You can ask us to delete it at any time by email.",
 "Đã hiểu": "Got it",
 "Kể câu chuyện": "Tell your story",
-"Đặt lịch gọi": "Book a call"
+"Gửi email": "Email us",
+"Liên hệ": "Contact",
+"Liên hệ email": "Contact by email",
+"Viết cho chúng tôi vài dòng về doanh nghiệp và câu chuyện của bạn.": "Write us a few lines about your business and your story.",
+"Viết email <span aria-hidden=\"true\">↗</span>": "Write an email <span aria-hidden=\"true\">↗</span>"
 };
 const EN_ATTR = {
 "Hộp sản phẩm 3D của thương hiệu": "3D product box of the brand",
@@ -1033,10 +1013,6 @@ function build(animate) {
 document.getElementById("labForm").addEventListener("submit", e => { e.preventDefault(); build(true); });
 document.querySelectorAll('#labForm input[type="radio"]').forEach(r => r.addEventListener("change", () => build(true)));
 let typeT; document.getElementById("l-name").addEventListener("input", () => { clearTimeout(typeT); typeT = setTimeout(() => build(false), 160); });
-document.getElementById("labToForm").addEventListener("click", () => {
-  const n = document.getElementById("l-name").value.trim();
-  const biz = document.getElementById("f-biz"); if (n && !biz.value) biz.value = n;
-});
 build(false);
 
 /* ---------- Marquee ---------- */
@@ -1109,89 +1085,14 @@ addEventListener("scroll", () => {
   mcta.classList.toggle("show", past && !atContact);
 }, { passive: true });
 
-/* ---------- Liên hệ: tab ---------- */
-const tabStory = document.getElementById("tab-story"), tabCall = document.getElementById("tab-call");
-const storyForm = document.getElementById("form"), callForm = document.getElementById("callForm"), doneEl = document.getElementById("done");
-function showTab(which) {
-  const call = which === "call";
-  tabStory.setAttribute("aria-selected", !call); tabCall.setAttribute("aria-selected", call);
-  storyForm.hidden = call; callForm.hidden = !call; doneEl.hidden = true;
-  storyForm.style.display = call ? "none" : "grid"; callForm.style.display = call ? "grid" : "none";
-}
-tabStory.addEventListener("click", () => showTab("story"));
-tabCall.addEventListener("click", () => showTab("call"));
-document.querySelectorAll("[data-tab]").forEach(a => a.addEventListener("click", () => showTab(a.dataset.tab)));
-
-/* Chọn gói → điền sẵn form */
+/* ---------- Liên hệ: chọn gói → email có sẵn tiêu đề ---------- */
+const MAIL = "hello@bunchasake.com";
 document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", () => {
-  showTab("story");
-  const r = document.getElementById("p-" + b.dataset.pkg); if (r) r.checked = true;
+  const pk = b.dataset.pkg[0].toUpperCase() + b.dataset.pkg.slice(1);
+  document.getElementById("mailBtn").href = `mailto:${MAIL}?subject=${encodeURIComponent("Bunchasake – " + pk)}`;
   document.getElementById("lien-he").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
-  setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), reduce ? 0 : 600);
+  setTimeout(() => document.getElementById("mailBtn").focus({ preventScroll: true }), reduce ? 0 : 600);
 }));
-
-/* Kiểm tra từng ô */
-const rules = {
-  "f-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
-  "f-biz": v => v ? "" : t("Tên doanh nghiệp hoặc website giúp chúng tôi chuẩn bị trước.", "Your business or website helps us prepare."),
-  "f-contact": v => !v ? t("Cần email hoặc số điện thoại để liên hệ lại.", "We need an email or phone number to reply.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
-  "c-name": v => v ? "" : t("Cho chúng tôi biết tên của bạn.", "Please tell us your name."),
-  "c-contact": v => !v ? t("Cần email hoặc số điện thoại để gửi lời mời.", "We need an email or phone number to send the invite.") : (/@/.test(v) ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[+\d][\d\s.-]{7,}$/.test(v)) ? "" : t("Email hoặc số điện thoại chưa đúng định dạng.", "That email or phone number does not look right."),
-};
-const errIds = { "f-name": "e-name", "f-biz": "e-biz", "f-contact": "e-contact", "c-name": "e-cname", "c-contact": "e-ccontact" };
-function check(id) {
-  const el = document.getElementById(id), msg = rules[id](el.value.trim()), er = document.getElementById(errIds[id]);
-  el.setAttribute("aria-invalid", !!msg); er.hidden = !msg; er.textContent = msg; return !msg;
-}
-Object.keys(rules).forEach(id => document.getElementById(id).addEventListener("blur", e => { if (e.target.value) check(id); }));
-
-/* Gửi thông tin về Google Sheet + email (xem backend/README.md). Để trống = chế độ demo. */
-const FORM_ENDPOINT = "";
-function sendLead(type, data, hpId) {
-  if (!FORM_ENDPOINT || document.getElementById(hpId).value) return;
-  const payload = Object.assign({ type, lang: LANG, page: location.href, submittedAt: new Date().toISOString() }, data);
-  fetch(FORM_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) }).catch(() => {});
-}
-const val = id => document.getElementById(id).value.trim();
-function finish(title, lines) {
-  storyForm.style.display = "none"; callForm.style.display = "none"; storyForm.hidden = callForm.hidden = true;
-  doneEl.hidden = false;
-  doneEl.innerHTML = `<span class="tick" aria-hidden="true">✓</span><h3>${title}</h3><ol>${lines.map(l => `<li>${l}</li>`).join("")}</ol>${FORM_ENDPOINT ? "" : `<p class="privacy">${t("Đây là bản demo nên thông tin chưa được gửi đi.", "This is a demo, so nothing has been sent yet.")}</p>`}<button class="again" type="button">${t("Quay lại form", "Back to the form")}</button>`;
-  doneEl.querySelector(".again").addEventListener("click", () => showTab(tabCall.getAttribute("aria-selected") === "true" ? "call" : "story"));
-  doneEl.querySelector("h3").setAttribute("tabindex", "-1"); doneEl.querySelector("h3").focus();
-}
-storyForm.addEventListener("submit", e => {
-  e.preventDefault();
-  const ok = ["f-name", "f-biz", "f-contact"].map(check).every(Boolean);
-  if (!ok) { storyForm.querySelector('[aria-invalid="true"]').focus(); return; }
-  const n = esc(document.getElementById("f-name").value.trim());
-  const pk = storyForm.querySelector('input[name="pkg"]:checked');
-  sendLead("story", { name: val("f-name"), business: val("f-biz"), contact: val("f-contact"), stage: pk ? pk.value : "", automation: document.getElementById("p-auto").checked, story: val("f-story") }, "f-hp");
-  finish(t(`Cảm ơn ${n}, chúng tôi đã nhận câu chuyện.`, `Thank you, ${n}. We have your story.`), LANG === "en" ? ["We read it and prepare questions just for you.", "We get in touch to set up a 60-minute conversation.", "We send a proposal and quote."] : ["Chúng tôi đọc và chuẩn bị câu hỏi riêng cho bạn.", "Liên hệ để hẹn buổi trò chuyện 60 phút.", "Gửi đề xuất và báo giá."]);
-});
-
-/* Đặt lịch */
-const daysEl = document.getElementById("days"), timesEl = document.getElementById("times"), sumEl = document.getElementById("sum");
-const wdVi = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], wdEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wd = i => (LANG === "en" ? wdEn : wdVi)[i], slots = ["09:00", "10:30", "14:00", "15:30", "17:00"];
-const days = []; for (let d = new Date(), k = 0; days.length < 6 && k < 14; k++) { d = new Date(Date.now() + (k + 1) * 864e5); if (d.getDay() % 6) days.push(d); }
-let pickDay = null, pickTime = null;
-function renderDays() { daysEl.innerHTML = days.map((d, i) => `<button type="button" aria-pressed="${i === pickDay}" data-i="${i}"><small>${wd(d.getDay())}</small>${d.getDate()}/${d.getMonth() + 1}</button>`).join(""); }
-renderDays();
-timesEl.innerHTML = slots.map(t => `<button type="button" aria-pressed="false" data-t="${t}">${t}</button>`).join("");
-function updSum() {
-  sumEl.textContent = pickDay !== null && pickTime ? `${t("Cuộc gọi 30 phút", "30-min call")} · ${wd(days[pickDay].getDay())}, ${days[pickDay].getDate()}/${days[pickDay].getMonth() + 1} · ${pickTime}` : t("Chọn ngày và giờ phù hợp với bạn.", "Pick a day and time that suits you.");
-}
-daysEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickDay = +b.dataset.i; daysEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
-timesEl.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; pickTime = b.dataset.t; timesEl.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); updSum(); });
-callForm.addEventListener("submit", e => {
-  e.preventDefault();
-  if (pickDay === null || !pickTime) { sumEl.textContent = t("Vui lòng chọn ngày và giờ trước.", "Please pick a day and time first."); sumEl.focus?.(); return; }
-  const ok = ["c-name", "c-contact"].map(check).every(Boolean);
-  if (!ok) { callForm.querySelector('[aria-invalid="true"]').focus(); return; }
-  const d = days[pickDay], iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-  sendLead("call", { name: val("c-name"), contact: val("c-contact"), slot: `${iso} ${pickTime} (GMT+7)` }, "c-hp");
-  finish(t("Đã giữ lịch cho bạn.", "Your slot is held."), [esc(sumEl.textContent), t("Lời mời họp sẽ được gửi tới ", "The meeting invite will go to ") + esc(document.getElementById("c-contact").value.trim()) + ".", t("Mang theo câu chuyện của bạn, phần còn lại để chúng tôi lo.", "Bring your story; we will take care of the rest.")]);
-});
 
 /* Sao chép email + chính sách */
 document.getElementById("copyMail").addEventListener("click", async e => {
@@ -1211,8 +1112,7 @@ function setLang(l) {
     const inp = lb.querySelector("input"), map = inp.name === "ind" ? industries : personas;
     lb.querySelector("span").textContent = tr(map[inp.value]).label;
   });
-  renderSteps(); renderWork(); renderDays(); updSum(); build(false);
-  Object.keys(rules).forEach(id => { if (document.getElementById(id).getAttribute("aria-invalid") === "true") check(id); });
+  renderSteps(); renderWork(); build(false);
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
 if (LANG !== "vi") setLang(LANG); else applyStatic();
