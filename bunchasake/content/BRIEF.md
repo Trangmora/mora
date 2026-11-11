@@ -15,7 +15,7 @@ file format below must be followed exactly. Write only the files you were assign
   1. Listening / Lắng nghe: we talk with the founder (a 60-minute conversation), study customers and competitors.
   2. Positioning / Định vị: who the brand is, who it is for, how it is different; the brand story and key messages.
   3. Identity / Nhận diện: name if needed, logo, colours, typography, voice, packed into easy-to-use guidelines.
-  4. Touchpoints / Điểm chạm: website, signage/packaging, business cards/profile, social media templates, so everything speaks with one voice.
+  4. Touchpoints / Điểm chạm: website, every social media channel (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest), signage/packaging, business cards/profile, so everything speaks with one voice.
   5. Community / Cộng đồng: we build a community for the client, the people who follow the brand, come back and recommend it.
 - **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all five steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
 - **Add-on: Social Media Automation, built for you.** We set up the system; the client's own team runs Facebook, TikTok and Instagram with it. Five parts: (1) your own AI assistant trained on the brand voice, (2) a 30-day content calendar, (3) AI drafts, you approve, (4) posts scheduled automatically, (5) automatic inbox replies to common questions.
