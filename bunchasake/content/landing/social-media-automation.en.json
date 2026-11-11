@@ -63,27 +63,27 @@
     "items": [
       {
         "t": "Listening",
-        "p": "A 60-minute conversation about <b class=\"k\">your story</b>. We also note <b class=\"k\">the words you use</b>."
+        "p": "A 60-minute conversation about <b class=\"k\">your story</b>. We also note the words you use."
       },
       {
         "t": "Positioning",
-        "p": "Who you are for and how you differ. <b class=\"k\">In-depth competitor analysis</b>, then key messages that become <b class=\"k\">calendar themes</b>."
+        "p": "Who you are for and how you differ. <b class=\"k\">In-depth competitor analysis</b>, then key messages that become calendar themes."
       },
       {
         "t": "Identity",
-        "p": "Logo, colours, typography and voice, <b class=\"k\">agreed with you part by part</b>. <b class=\"k\">The AI assistant learns this voice</b>."
+        "p": "Logo, colours, typography and voice, <b class=\"k\">agreed with you part by part</b>. The AI assistant learns this voice."
       },
       {
         "t": "Touchpoints",
-        "p": "Website, signage and social media. We <b class=\"k\">read your channel data</b>, advise on new campaigns, then <b class=\"k\">add the automation</b> here."
+        "p": "Website, signage and social media. We <b class=\"k\">read your channel data</b>, advise on new campaigns, then add the automation here."
       },
       {
         "t": "Community",
-        "p": "A community of <b class=\"k\">loyal customers</b> on the platforms they prefer, so you <b class=\"k\">save on sales and marketing</b>."
+        "p": "A community of <b class=\"k\">loyal customers</b> on the platforms they prefer, so you save on sales and marketing."
       },
       {
         "t": "Crisis communication",
-        "p": "When a <b class=\"k\">communication crisis</b> hits, we handle it, minimise the risk and <b class=\"k\">train your team</b>."
+        "p": "When a <b class=\"k\">communication crisis</b> hits, we handle it, minimise the risk and train your team."
       }
     ]
   },
