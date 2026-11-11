@@ -294,7 +294,7 @@ body.blog .prose { font-weight: 400; }
 .steps4.n6 .n { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .steps4.n6 h3 { font-size: clamp(24px, 2.2vw, 32px); }
 .steps4.n6 p { grid-column: 1 / -1; font-size: 15px; line-height: 1.55; max-width: 42ch; text-wrap: pretty; }
-@media (min-width: 521px) { .steps4.n6 p .k { white-space: nowrap; } }
+
 @media (max-width: 520px) { .steps4.n6 p { font-size: 16px; } }
 
 /* Thanh chủ đề blog */
