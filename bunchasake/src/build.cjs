@@ -265,7 +265,7 @@ U.cat = (c, l) => l === "vi" ? `/vi/blog/${BCAT[c].sv}/` : `/blog/${BCAT[c].se}/
 const usedCats = l => BCATS.filter(c => blogKeys.some(k => blog[k][l] && catOf(blog[k][l]) === c.id));
 function catbar(l, current) {
   const t = T[l];
-  return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in"><a href="${U.blogindex(l)}"${current === "all" ? ' aria-current="page"' : ""}>${l === "vi" ? "Tất cả" : "All"}</a>${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav>`;
+  return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in"><a href="${U.blogindex(l)}"${current === "all" ? ' aria-current="page"' : ""}>${l === "vi" ? "Tất cả" : "All"}</a>${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav><script>(function(){var b=document.currentScript.previousElementSibling.firstChild,a=b.querySelector("[aria-current]");if(a&&b.scrollWidth>b.clientWidth)b.scrollLeft=a.offsetLeft-b.offsetLeft-(b.clientWidth-a.offsetWidth)/2;})()</script>`;
 }
 const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; };
 function renderCategory(c, l) {
