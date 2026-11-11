@@ -140,12 +140,12 @@ ${ldjson.map(ld).join("\n")}
 <body${cls ? ` class="${cls}"` : ""}>
 <a class="skip" href="#main">${T[l].skip}</a>`;
 }
-function nav(l, urls, current) {
+function nav(l, urls, current, blogCur) {
   const t = T[l], a = (k, label) => U.landing(k, l) ? `<li><a href="${U.landing(k, l)}"${current === k ? ' aria-current="page"' : ""}>${label}</a></li>` : "";
   const lang = LANGS.map(x => urls[x] ? `<a href="${urls[x]}" hreflang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ""}>${x.toUpperCase()}</a>` : `<span>${x.toUpperCase()}</span>`).join("");
   return `<header class="nav" id="nav">
   <a class="logo" href="${U.home(l)}"><span class="dot" aria-hidden="true"></span>Bunchasake <i>${t.tagline}</i></a>
-  <ul class="cap">${a("nail-salon-brand-marketing", t.navNail)}${a("restaurant-brand-marketing", t.navRest)}${a("social-media-automation", t.automation)}<li><a href="${U.blogindex(l)}"${current === "blog" ? ' aria-current="page"' : ""}>${t.blog}</a></li></ul>
+  <ul class="cap">${blogCur ? `<li><a href="${U.cat("automation", l)}"${blogCur === "automation" ? ' aria-current="page"' : ""}>${t.automation}</a></li><li><a href="${U.blogindex(l)}"${blogCur !== "automation" ? ' aria-current="page"' : ""}>${t.blog}</a></li>` : `${a("nail-salon-brand-marketing", t.navNail)}${a("restaurant-brand-marketing", t.navRest)}${a("social-media-automation", t.automation)}<li><a href="${U.blogindex(l)}"${current === "blog" ? ' aria-current="page"' : ""}>${t.blog}</a></li>`}</ul>
   <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="${mailto()}">${t.emailUs} <span aria-hidden="true">↗</span></a></div>
 </header>`;
 }
@@ -245,7 +245,7 @@ function renderLanding(k, l) {
 }
 
 /* ---------- Blog ---------- */
-const CTA_LABEL = { "nail-salon-brand-marketing": { en: "Branding for nail salons", vi: "Thương hiệu cho tiệm nail" }, "restaurant-brand-marketing": { en: "Branding for restaurants", vi: "Thương hiệu cho nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Branding for small businesses", vi: "Thương hiệu cho doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "For brands going global", vi: "Cho thương hiệu ra quốc tế" }, "social-media-automation": { en: "Social media automation", vi: "Tự động hoá social media" } };
+const CTA_LABEL = { "nail-salon-brand-marketing": { en: "Branding for nail salons", vi: "Thương hiệu cho tiệm nail" }, "restaurant-brand-marketing": { en: "Branding for restaurants", vi: "Thương hiệu cho nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Branding for small businesses", vi: "Thương hiệu cho doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "For brands going global", vi: "Cho thương hiệu ra quốc tế" }, "social-media-automation": { en: "AI social media automation", vi: "AI tự động hoá social media" } };
 const CAT = { "nail-salon-brand-marketing": { en: "Nail salons", vi: "Tiệm nail" }, "restaurant-brand-marketing": { en: "Restaurants", vi: "Nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Small business", vi: "Doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "Going international", vi: "Ra quốc tế" }, "social-media-automation": { en: "Automation", vi: "Automation" } };
 const BCATS = [
   { id: "nail-salons", en: "Nail salons", vi: "Tiệm nail", se: "nail-salons", sv: "tiem-nail", de: "Guides on branding, content, social media and bookings for nail salon owners.", dv: "Hướng dẫn về thương hiệu, content, social media và lượng khách cho chủ tiệm nail." },
@@ -265,7 +265,7 @@ U.cat = (c, l) => l === "vi" ? `/vi/blog/${BCAT[c].sv}/` : `/blog/${BCAT[c].se}/
 const usedCats = l => BCATS.filter(c => blogKeys.some(k => blog[k][l] && catOf(blog[k][l]) === c.id));
 function catbar(l, current) {
   const t = T[l];
-  return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in"><a href="${U.blogindex(l)}"${current === "all" ? ' aria-current="page"' : ""}>${l === "vi" ? "Tất cả" : "All"}</a>${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav><script>(function(){var b=document.currentScript.previousElementSibling.firstChild,a=b.querySelector("[aria-current]");if(a&&b.scrollWidth>b.clientWidth)b.scrollLeft=a.offsetLeft-b.offsetLeft-(b.clientWidth-a.offsetWidth)/2;})()</script>`;
+  return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in">${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}${c.id === "automation" ? ' class="m-only"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav><script>(function(){var b=document.currentScript.previousElementSibling.firstChild,a=b.querySelector("[aria-current]");if(a&&b.scrollWidth>b.clientWidth)b.scrollLeft=a.offsetLeft-b.offsetLeft-(b.clientWidth-a.offsetWidth)/2;})()</script>`;
 }
 const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; };
 function renderCategory(c, l) {
@@ -273,10 +273,11 @@ function renderCategory(c, l) {
   if (!list.length) return;
   const name = C[l], title = l === "vi" ? `${name}: hướng dẫn thương hiệu & marketing | Bunchasake` : `${name}: branding & marketing guides | Bunchasake`;
   const desc = l === "vi" ? C.dv : C.de;
+  const svc = [...Object.entries(LANDING_CAT), ["social-media-automation", "automation"]].find(([lk, cc]) => cc === c && U.landing(lk, l))?.[0];
   const ldjson = [{ "@context": "https://schema.org", "@type": "CollectionPage", name: `${name} | Bunchasake Blog`, url: ORIGIN + urls[l], inLanguage: l, description: desc, hasPart: list.map(k => ({ "@type": "BlogPosting", headline: blog[k][l].h1, url: ORIGIN + U.blog(k, l) })) }, crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, urls[l]]])];
-  const h = head({ l, title: title.length > 65 ? `${name} | Bunchasake Blog` : title, desc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, c) + `
+  const h = head({ l, title: title.length > 65 ? `${name} | Bunchasake Blog` : title, desc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog", c) + "\n" + catbar(l, c) + `
 <main id="main">
-  <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, null]])}<section class="blog-head"><h1>${esc(name)}</h1><p class="lead">${esc(desc)}</p></section>
+  <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, null]])}<section class="blog-head"><h1>${esc(name)}</h1><p class="lead">${esc(desc)}</p>${svc ? `<p class="cat-svc"><a href="${U.landing(svc, l)}">${t.related}: ${esc(CTA_LABEL[svc]?.[l] || LABEL[svc][l])} <span aria-hidden="true">→</span></a></p>` : ""}</section>
   <section class="plist">${list.map(k => prow(k, l)).join("")}</section>
   </div>
 </main>
@@ -303,7 +304,7 @@ function renderPost(k, l) {
     ...(faq.length ? [faqLd(faq)] : []),
   ];
   const others = blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) === ck).concat(blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) !== ck)).slice(0, 4);
-  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, ck) + `
+  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog", ck) + "\n" + catbar(l, ck) + `
 <main id="main">
   <article class="post-page">
     ${crumbs(l, bc)}
@@ -332,7 +333,7 @@ function renderPost(k, l) {
 function renderBlogIndex(l) {
   const t = T[l], urls = { en: U.blogindex("en"), vi: U.blogindex("vi") }, list = blogKeys.filter(k => blog[k][l]);
   const ldjson = [{ "@context": "https://schema.org", "@type": "Blog", name: "Bunchasake Blog", url: ORIGIN + urls[l], inLanguage: l, publisher: ORG, blogPost: list.map(k => ({ "@type": "BlogPosting", headline: blog[k][l].h1, url: ORIGIN + U.blog(k, l) })) }, crumbLd([[t.home, U.home(l)], [t.blog, urls[l]]])];
-  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, "all") + `
+  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog", "index") + "\n" + catbar(l, null) + `
 <main id="main">
   <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, null]])}<section class="blog-head"><h1>Blog</h1><p class="lead">${t.blogLead}</p></section>
   ${usedCats(l).map(C => { const g = list.filter(k => catOf(blog[k][l]) === C.id); return `<section class="plist" id="${C.se}"><h2><a href="${U.cat(C.id, l)}">${esc(C[l])}</a></h2>${g.slice(0, 6).map(k => prow(k, l)).join("")}${g.length > 6 ? `<a class="more-cat" href="${U.cat(C.id, l)}">${l === "vi" ? `Xem tất cả ${g.length} bài` : `See all ${g.length} articles`} →</a>` : ""}</section>`; }).join("")}
