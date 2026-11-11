@@ -91,6 +91,7 @@ const EXT = {   // liên kết ngoài được phép dùng trong bài (chỉ tra
   "eu-access2markets": "https://trade.ec.europa.eu/access-to-markets/", "eu-youreurope": "https://europa.eu/youreurope/business/",
   "euipo": "https://www.euipo.europa.eu/", "wipo-madrid": "https://www.wipo.int/madrid/en/", "vietrade": "https://www.vietrade.gov.vn/",
   "sba": "https://www.sba.gov/", "ftc-business": "https://www.ftc.gov/business-guidance",
+  "fda-cosmetics": "https://www.fda.gov/cosmetics", "eu-cosmetics": "https://single-market-economy.ec.europa.eu/sectors/cosmetics_en", "linkedin-help": "https://www.linkedin.com/help/linkedin", "wcag": "https://www.w3.org/WAI/standards-guidelines/wcag/", "pagespeed": "https://pagespeed.web.dev/", "etsy-sellers": "https://www.etsy.com/seller-handbook",
 };
 const mailto = subj => `mailto:${MAIL}${subj ? "?subject=" + encodeURIComponent(subj) : ""}`;
 function resolve(html, l, where) {
@@ -246,6 +247,43 @@ function renderLanding(k, l) {
 /* ---------- Blog ---------- */
 const CTA_LABEL = { "nail-salon-brand-marketing": { en: "Branding for nail salons", vi: "Thương hiệu cho tiệm nail" }, "restaurant-brand-marketing": { en: "Branding for restaurants", vi: "Thương hiệu cho nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Branding for small businesses", vi: "Thương hiệu cho doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "For brands going global", vi: "Cho thương hiệu ra quốc tế" }, "social-media-automation": { en: "Social media automation", vi: "Tự động hoá social media" } };
 const CAT = { "nail-salon-brand-marketing": { en: "Nail salons", vi: "Tiệm nail" }, "restaurant-brand-marketing": { en: "Restaurants", vi: "Nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Small business", vi: "Doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "Going international", vi: "Ra quốc tế" }, "social-media-automation": { en: "Automation", vi: "Automation" } };
+const BCATS = [
+  { id: "nail-salons", en: "Nail salons", vi: "Tiệm nail", se: "nail-salons", sv: "tiem-nail", de: "Guides on branding, content, social media and bookings for nail salon owners.", dv: "Hướng dẫn về thương hiệu, content, social media và lượng khách cho chủ tiệm nail." },
+  { id: "restaurants", en: "Restaurants", vi: "Nhà hàng", se: "restaurants", sv: "nha-hang", de: "Guides on branding, menus, content and local marketing for restaurants, cafés and food businesses.", dv: "Hướng dẫn về thương hiệu, menu, content và marketing địa phương cho nhà hàng, quán cà phê." },
+  { id: "fashion", en: "Fashion", vi: "Thời trang", se: "fashion", sv: "thoi-trang", de: "Guides on identity, storytelling, launches and content for fashion and clothing brands.", dv: "Hướng dẫn về nhận diện, câu chuyện, ra mắt và content cho thương hiệu thời trang." },
+  { id: "retail", en: "Retail & e-commerce", vi: "Bán lẻ & TMĐT", se: "retail", sv: "ban-le", de: "Guides on store branding, packaging, online shops and content for retail brands.", dv: "Hướng dẫn về thương hiệu cửa hàng, bao bì, bán hàng online và content cho thương hiệu bán lẻ." },
+  { id: "beauty", en: "Beauty & spa", vi: "Làm đẹp & spa", se: "beauty", sv: "lam-dep-spa", de: "Guides on branding and marketing for spas, hair and beauty salons and skincare brands.", dv: "Hướng dẫn về thương hiệu và marketing cho spa, salon tóc, tiệm làm đẹp và thương hiệu mỹ phẩm." },
+  { id: "startups", en: "Startups & tech", vi: "Startup & công nghệ", se: "startups", sv: "startup-cong-nghe", de: "Guides on branding, positioning, websites and founder content for startups and tech companies.", dv: "Hướng dẫn về thương hiệu, định vị, website và content của nhà sáng lập cho startup và công ty công nghệ." },
+  { id: "small-business", en: "Small business", vi: "Doanh nghiệp nhỏ", se: "small-business", sv: "doanh-nghiep-nho", de: "Guides on building a brand and marketing a small business, at home or abroad.", dv: "Hướng dẫn xây thương hiệu và làm marketing cho doanh nghiệp nhỏ, trong nước hay ở nước ngoài." },
+  { id: "international", en: "Going international", vi: "Ra quốc tế", se: "international", sv: "ra-quoc-te", de: "Guides for brands entering new markets: positioning, localization and content.", dv: "Hướng dẫn cho thương hiệu bước vào thị trường mới: định vị, bản địa hoá và content." },
+  { id: "automation", en: "AI Automation", vi: "AI Automation", se: "ai-automation", sv: "ai-automation", de: "Guides on AI content calendars, social media automation and AI assistants for small businesses.", dv: "Hướng dẫn về lịch nội dung AI, tự động hoá social media và trợ lý AI cho doanh nghiệp nhỏ." },
+];
+const BCAT = Object.fromEntries(BCATS.map(c => [c.id, c]));
+const LANDING_CAT = { "nail-salon-brand-marketing": "nail-salons", "restaurant-brand-marketing": "restaurants", "vietnamese-diaspora-brand-marketing": "small-business", "international-brand-marketing-vietnam": "international" };
+const catOf = d => (d.category && BCAT[d.category]) ? d.category : (LANDING_CAT[d.landing] || (String(d.landing).startsWith("social-media-automation") ? "automation" : "small-business"));
+U.cat = (c, l) => l === "vi" ? `/vi/blog/${BCAT[c].sv}/` : `/blog/${BCAT[c].se}/`;
+const usedCats = l => BCATS.filter(c => blogKeys.some(k => blog[k][l] && catOf(blog[k][l]) === c.id));
+function catbar(l, current) {
+  const t = T[l];
+  return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in"><a href="${U.blogindex(l)}"${current === "all" ? ' aria-current="page"' : ""}>${l === "vi" ? "Tất cả" : "All"}</a>${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav>`;
+}
+const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; };
+function renderCategory(c, l) {
+  const t = T[l], C = BCAT[c], urls = { en: U.cat(c, "en"), vi: U.cat(c, "vi") }, list = blogKeys.filter(k => blog[k][l] && catOf(blog[k][l]) === c);
+  if (!list.length) return;
+  const name = C[l], title = l === "vi" ? `${name}: hướng dẫn thương hiệu & marketing | Bunchasake` : `${name}: branding & marketing guides | Bunchasake`;
+  const desc = l === "vi" ? C.dv : C.de;
+  const ldjson = [{ "@context": "https://schema.org", "@type": "CollectionPage", name: `${name} | Bunchasake Blog`, url: ORIGIN + urls[l], inLanguage: l, description: desc, hasPart: list.map(k => ({ "@type": "BlogPosting", headline: blog[k][l].h1, url: ORIGIN + U.blog(k, l) })) }, crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, urls[l]]])];
+  const h = head({ l, title: title.length > 65 ? `${name} | Bunchasake Blog` : title, desc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, c) + `
+<main id="main">
+  <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, null]])}<section class="blog-head"><h1>${esc(name)}</h1><p class="lead">${esc(desc)}</p></section>
+  <section class="plist">${list.map(k => prow(k, l)).join("")}</section>
+  </div>
+</main>
+` + foot(l, null);
+  write(urls[l] + "index.html", h);
+  if (l === "en") pages.push({ urls, lastmod: TODAY, priority: "0.6" });
+}
 const fmtDate = (l, iso) => { const [y, m, d] = iso.split("-").map(Number); return l === "vi" ? `${d}/${m}/${y}` : `${d} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][m - 1]} ${y}`; };
 function renderPost(k, l) {
   const d = blog[k][l], t = T[l], where = `blog/${k}.${l}`;
@@ -257,15 +295,15 @@ function renderPost(k, l) {
   const faq = [...body.matchAll(/<details>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)].map(m => ({ q: m[1], a: m[2] }));
   body = body.replace(/<details>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g, "<h3>$1</h3>$2");
   const lk = d.landing && landing[d.landing]?.[l] ? d.landing : null; if (d.landing && !lk) W(`${where}: landing "${d.landing}" không có`);
-  const cat = CAT[d.landing]?.[l] || t.blog, wc = words(body), mins = Math.max(3, Math.round(wc / (l === "vi" ? 260 : 220)));
-  const bc = [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [d.h1, null]];
+  const ck = catOf(d), cat = BCAT[ck][l], wc = words(body), mins = Math.max(3, Math.round(wc / (l === "vi" ? 260 : 220)));
+  const bc = [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, null]];
   const ldjson = [
     { "@context": "https://schema.org", "@type": "BlogPosting", headline: d.h1, description: d.description, inLanguage: l, datePublished: PUBLISHED, dateModified: TODAY, mainEntityOfPage: ORIGIN + urls[l], image: ORIGIN + "/og.png", author: { "@type": "Organization", name: "Bunchasake", url: ORIGIN + "/" }, publisher: ORG, keywords: d.keyword, wordCount: wc },
-    crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [d.h1, urls[l]]]),
+    crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, urls[l]]]),
     ...(faq.length ? [faqLd(faq)] : []),
   ];
-  const others = blogKeys.filter(x => x !== k && blog[x][l] && blog[x][l].landing === d.landing).concat(blogKeys.filter(x => x !== k && blog[x][l] && blog[x][l].landing !== d.landing)).slice(0, 4);
-  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + `
+  const others = blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) === ck).concat(blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) !== ck)).slice(0, 4);
+  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, ck) + `
 <main id="main">
   <article class="post-page">
     ${crumbs(l, bc)}
@@ -294,10 +332,10 @@ function renderPost(k, l) {
 function renderBlogIndex(l) {
   const t = T[l], urls = { en: U.blogindex("en"), vi: U.blogindex("vi") }, list = blogKeys.filter(k => blog[k][l]);
   const ldjson = [{ "@context": "https://schema.org", "@type": "Blog", name: "Bunchasake Blog", url: ORIGIN + urls[l], inLanguage: l, publisher: ORG, blogPost: list.map(k => ({ "@type": "BlogPosting", headline: blog[k][l].h1, url: ORIGIN + U.blog(k, l) })) }, crumbLd([[t.home, U.home(l)], [t.blog, urls[l]]])];
-  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + `
+  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + "\n" + catbar(l, "all") + `
 <main id="main">
   <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, null]])}<section class="blog-head"><h1>Blog</h1><p class="lead">${t.blogLead}</p></section>
-  ${Object.keys(CAT).map(c => { const g = list.filter(k => blog[k][l].landing === c || (c === "social-media-automation" && String(blog[k][l].landing).startsWith("social-media-automation"))); return g.length ? `<section class="plist"><h2>${esc(CAT[c][l])}</h2>${g.map(k => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; }).join("")}</section>` : ""; }).join("")}
+  ${usedCats(l).map(C => { const g = list.filter(k => catOf(blog[k][l]) === C.id); return `<section class="plist" id="${C.se}"><h2><a href="${U.cat(C.id, l)}">${esc(C[l])}</a></h2>${g.slice(0, 6).map(k => prow(k, l)).join("")}${g.length > 6 ? `<a class="more-cat" href="${U.cat(C.id, l)}">${l === "vi" ? `Xem tất cả ${g.length} bài` : `See all ${g.length} articles`} →</a>` : ""}</section>`; }).join("")}
   </div>
   <section class="sec"><div class="sec-head"><h2>${t.moreServices}</h2></div><div class="links">${landingKeys.filter(k => landing[k][l]).map(k => `<a href="${U.landing(k, l)}"><span style="color:inherit;transform:none">${esc(LABEL[k]?.[l] || landing[k][l].kicker)}<small>${esc(landing[k][l].description)}</small></span><span aria-hidden="true">→</span></a>`).join("")}</div></section>
 </main>
@@ -463,6 +501,7 @@ Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.e
   for (const k of landingKeys) for (const l of LANGS) if (landing[k][l]) report.push([`landing ${k}.${l}`, renderLanding(k, l)]);
   for (const k of blogKeys) for (const l of LANGS) if (blog[k][l]) report.push([`blog ${k}.${l}`, renderPost(k, l)]);
   for (const l of LANGS) renderBlogIndex(l);
+  for (const c of BCATS) for (const l of LANGS) renderCategory(c.id, l);
   render404();
   for (const k of Object.keys(LEGAL)) renderLegal(k);
   const { chromium } = require("playwright"); const browser = await chromium.launch();

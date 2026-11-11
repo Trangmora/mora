@@ -280,3 +280,14 @@ body.blog .prose { font-weight: 400; }
 .steps4.n5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 @media (max-width: 1100px) { .steps4.n5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps4.n5 div:nth-child(odd) { padding-left: 0; border-left: 0; } .steps4.n5 div:nth-child(n+3) { border-top: 1px solid var(--line); } }
 @media (max-width: 520px) { .steps4.n5 { grid-template-columns: 1fr; } }
+
+/* Thanh chủ đề blog */
+.catbar { position: sticky; top: 74px; z-index: 29; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.catbar-in { display: flex; gap: 6px; overflow-x: auto; padding-block: 12px; scrollbar-width: none; max-width: 1100px; margin-inline: auto; justify-content: center; flex-wrap: wrap; }
+.catbar-in::-webkit-scrollbar { display: none; }
+.catbar a { flex: none; font-size: 14px; padding: 7px 14px; border-radius: 999px; color: var(--muted); border: 1px solid var(--line); background: var(--raise); white-space: nowrap; transition: color .2s, border-color .2s, background .2s; }
+.catbar a:hover { color: var(--ink); border-color: var(--line-strong); }
+.catbar a[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+@media (max-width: 760px) { .catbar { top: 71px; } .catbar-in { flex-wrap: nowrap; justify-content: flex-start; } }
+.plist h2 a:hover { color: var(--mark); }
+.more-cat { justify-self: start; margin-top: 4px; font-size: 15px; color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }

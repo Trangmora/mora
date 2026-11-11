@@ -115,6 +115,31 @@ Use descriptive anchor text (never "click here").
 
 Batch 2 rules: every article must be clearly different from the batch 1 articles and from its neighbours (link to them instead of repeating them). Articles about ads, SEO, Google Business Profile, photography or budgets are **do-it-yourself guides**: say once, plainly, that Bunchasake does not sell that service, and never invent prices, benchmarks or percentages (teach the method for deciding instead). Legal, tax, customs and certification questions are outside every guide; tell the reader to ask a qualified adviser.
 
+### Blog articles, batch 3 (new industries)
+
+Each batch 3 article has an extra frontmatter line `category: <value>` placed right after `landing:`. All batch 3 articles use `landing: vietnamese-diaspora-brand-marketing` (the general brand-building service page). Write for owners in general, following section 1b (no "Vietnamese" in title, h1, description, keyword; at most 3 light mentions in the body).
+
+| category | KEY | Primary keyword and scope | Vietnamese slug |
+|---|---|---|---|
+| fashion | `fashion-brand-identity` | how to build a fashion brand identity (name, logo, colours, type, look of the photos, labels and tags) | `nhan-dien-thuong-hieu-thoi-trang` |
+| fashion | `clothing-brand-instagram-content-ideas` | clothing brand Instagram content ideas (drops, styling, behind the scenes, fit and fabric) | `y-tuong-content-instagram-thuong-hieu-thoi-trang` |
+| fashion | `how-to-launch-a-clothing-brand` | how to launch a clothing brand, brand side only (positioning, story, first collection message, launch content); production, legal and tax go to advisers | `cach-ra-mat-thuong-hieu-quan-ao` |
+| fashion | `fashion-brand-storytelling` | fashion brand storytelling (why people buy the story behind a garment, how to tell it on labels, site and social) | `ke-chuyen-thuong-hieu-thoi-trang` |
+| retail | `retail-store-branding` | retail store branding (signage, window, interior, staff, bags and receipts) | `xay-thuong-hieu-cua-hang-ban-le` |
+| retail | `ecommerce-brand-building` | how to build an e-commerce brand, not just an online store (positioning, product pages, unboxing, reviews, email) | `xay-thuong-hieu-thuong-mai-dien-tu` |
+| retail | `packaging-design-for-small-brands` | packaging design tips for small brands (what the pack must say, materials, unboxing, consistency); legal labelling goes to advisers | `thiet-ke-bao-bi-cho-thuong-hieu-nho` |
+| retail | `retail-social-media-content-ideas` | social media content ideas for retail stores and small shops | `y-tuong-content-cho-cua-hang-ban-le` |
+| beauty | `spa-branding-guide` | spa branding (name, mood, treatment menu, rooms, voice, booking experience) | `xay-thuong-hieu-spa` |
+| beauty | `hair-salon-social-media-content-ideas` | hair salon social media content ideas (transformations, education, stylists, booking) | `y-tuong-content-salon-toc` |
+| beauty | `how-to-market-a-skincare-brand` | how to market a skincare brand (positioning, ingredients story, honest claims, content, community); product claims and regulations go to advisers | `cach-marketing-thuong-hieu-my-pham` |
+| beauty | `beauty-salon-marketing-ideas` | beauty salon marketing ideas (lash, brow, waxing, makeup studios): local, low-cost, do-it-yourself | `y-tuong-marketing-tiem-lam-dep` |
+| startups | `startup-branding-guide` | startup branding: what to do before your first launch (name check, positioning, minimum brand kit, landing page, voice) | `xay-thuong-hieu-cho-startup` |
+| startups | `how-to-position-a-saas-product` | how to position a SaaS or software product (category, who it is for, alternatives, the one-line pitch, homepage message) | `dinh-vi-san-pham-saas` |
+| startups | `startup-website-checklist` | startup website checklist (pages, message, proof, pricing page basics, speed, accessibility) | `checklist-website-startup` |
+| startups | `founder-led-content-on-linkedin` | founder-led content on LinkedIn (post types, voice, rhythm, turning posts into conversations) | `content-nha-sang-lap-tren-linkedin` |
+
+Extra outbound link keys for batch 3 (use like the others, `{{ext:KEY}}`): `fda-cosmetics` (U.S. FDA cosmetics guidance), `eu-cosmetics` (European Commission cosmetics rules), `linkedin-help` (LinkedIn Help), `wcag` (W3C Web Content Accessibility Guidelines), `pagespeed` (Google PageSpeed Insights), `etsy-sellers` (Etsy Seller Handbook), Only the keys listed in this file are valid.
+
 Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.
 
 ### External links (blog articles only)
