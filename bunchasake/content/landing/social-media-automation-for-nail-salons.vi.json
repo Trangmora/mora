@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "Năm bước, bạn duyệt sau mỗi bước",
+    "title": "Sáu bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
@@ -79,7 +79,11 @@
       },
       {
         "t": "Cộng đồng",
-        "p": "Thương hiệu không giữ chân được cộng đồng thì chưa thành công, và khách quay lại mua từ một cộng đồng tốt giúp tiết kiệm rất nhiều chi phí bán hàng, marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên nền tảng khách hàng mong muốn, để họ trung thành với thương hiệu."
+        "p": "Thương hiệu lớn lên mà không <b class=\"k\">dựa trên cộng đồng</b> thì chưa thành công, và khách quay lại mua từ một cộng đồng tốt giúp <b class=\"k\">tiết kiệm rất nhiều chi phí</b> bán hàng, marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên nền tảng khách hàng mong muốn, để họ <b class=\"k\">trung thành</b> với thương hiệu."
+      },
+      {
+        "t": "Xử lý khủng hoảng",
+        "p": "Thương hiệu nào cũng có lúc gặp <b class=\"k\">khủng hoảng truyền thông</b>. Đội ngũ của chúng tôi chuyên nghiên cứu và xử lý khủng hoảng, <b class=\"k\">giảm tối đa tác động và rủi ro</b> cho thương hiệu, đồng thời <b class=\"k\">training cho đội của bạn</b> cách xử lý từ góc nhìn của người làm truyền thông chuyên nghiệp."
       }
     ]
   },

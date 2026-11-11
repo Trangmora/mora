@@ -51,7 +51,7 @@
   "sections": [
     {
       "h2": "How a Vietnamese marketing agency for overseas businesses works with you",
-      "html": "<p>We are a Vietnamese studio working between Vietnam and Italy, online with clients anywhere. The first conversation, 60 minutes long, can be in Vietnamese or English. You tell the story the way you would tell a friend. As a Vietnamese brand agency, our job is to turn it into a brand your local customers understand too.</p><p>There are three packages:</p><ul><li><strong>Start</strong>, for a new business: lean positioning, logo, colours and type, business card, avatar and post templates.</li><li><strong>Build</strong>: all five steps, with brand story and voice, brand guidelines, website and key touchpoints.</li><li><strong>Refresh</strong>: we audit the current brand, reposition it, refresh the identity and update the touchpoints in use.</li></ul><p>We also have pages on <a href=\"{{landing:nail-salon-brand-marketing}}\">brand and marketing for nail salons</a> and <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>.</p>"
+      "html": "<p>We are a Vietnamese studio working between Vietnam and Italy, online with clients anywhere. The first conversation, 60 minutes long, can be in Vietnamese or English. You tell the story the way you would tell a friend. As a Vietnamese brand agency, our job is to turn it into a brand your local customers understand too.</p><p>There are three packages:</p><ul><li><strong>Start</strong>, for a new business: lean positioning, logo, colours and type, business card, avatar and post templates.</li><li><strong>Build</strong>: all six steps, with brand story and voice, brand guidelines, website and key touchpoints.</li><li><strong>Refresh</strong>: we audit the current brand, reposition it, refresh the identity and update the touchpoints in use.</li></ul><p>We also have pages on <a href=\"{{landing:nail-salon-brand-marketing}}\">brand and marketing for nail salons</a> and <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>.</p>"
     },
     {
       "h2": "What bilingual Vietnamese English marketing means in practice",
@@ -59,27 +59,31 @@
     }
   ],
   "process": {
-    "title": "Five steps, and you approve after each",
+    "title": "Six steps, and you approve after each",
     "items": [
       {
         "t": "Listening",
-        "p": "A 60-minute conversation with you, plus listening to your customers."
+        "p": "A 60-minute conversation. We listen to <b class=\"k\">the founder's story</b>: why you started, what you believe in, <b class=\"k\">which customers you want to reach</b> and what you want from the business."
       },
       {
         "t": "Positioning",
-        "p": "Who the brand is, who it is for and how it is different. We analyse the competitors around you in depth to see where you stand, then write the story and key messages."
+        "p": "Who the brand is, who it is for and how it is different. We analyse the competitors around you <b class=\"k\">in depth</b> to see where you stand and which direction to take next, based on <b class=\"k\">what the founder wants</b>, then write the story and key messages."
       },
       {
         "t": "Identity",
-        "p": "We work directly with the founder or the person in charge of the brand: a name if needed, logo, colours, typography and voice. We agree on every part together and pack it into guidelines, so the brand can be built over the long term."
+        "p": "We <b class=\"k\">work directly with the founder</b> and the person in charge of the brand: a name if needed, logo, colours, typography and voice. We <b class=\"k\">agree on every part together</b> and pack it into guidelines, so the brand can be built over the long term."
       },
       {
         "t": "Touchpoints",
-        "p": "Once customers start to recognise the brand, we take it where they already go: website, signage or packaging, business cards, social media (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If you already have channels, we read their data and the results of past campaigns, then advise you on new campaigns."
+        "p": "Once customers start to recognise the brand, we take it where they already go: website, signage or packaging, business cards, <b class=\"k\">social media</b> (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If you already have channels, we <b class=\"k\">read their data</b>, customer behaviour and past campaign results, then advise you on <b class=\"k\">a strategy for new campaigns</b>."
       },
       {
         "t": "Community",
-        "p": "A brand that cannot keep a community is not a successful brand, and repeat purchases from a good community save a lot of sales and marketing spend. We help you build your community on the platforms your customers prefer, so they stay loyal."
+        "p": "A brand that grows <b class=\"k\">without a community behind it</b> is not yet a successful brand, and repeat purchases from a good community <b class=\"k\">save a lot of sales and marketing spend</b>. We help you build your community on the platforms your customers prefer, so they <b class=\"k\">stay loyal</b>."
+      },
+      {
+        "t": "Crisis communication",
+        "p": "Every brand meets a <b class=\"k\">communication crisis</b> at some point. Our team specialises in studying and handling crises, keeps the impact and risk to your brand <b class=\"k\">as small as possible</b>, and <b class=\"k\">trains your team</b> to respond the way communication professionals do."
       }
     ]
   },

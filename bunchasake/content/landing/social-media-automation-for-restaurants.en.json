@@ -59,7 +59,7 @@
     }
   ],
   "process": {
-    "title": "How the setup follows our five steps",
+    "title": "How the setup follows our six steps",
     "items": [
       {
         "t": "Listening",
@@ -79,7 +79,11 @@
       },
       {
         "t": "Community",
-        "p": "A brand that cannot keep a community is not a successful brand, and repeat purchases from a good community save a lot of sales and marketing spend. We help you build your community on the platforms your customers prefer, so they stay loyal."
+        "p": "A brand that grows <b class=\"k\">without a community behind it</b> is not yet a successful brand, and repeat purchases from a good community <b class=\"k\">save a lot of sales and marketing spend</b>. We help you build your community on the platforms your customers prefer, so they <b class=\"k\">stay loyal</b>."
+      },
+      {
+        "t": "Crisis communication",
+        "p": "Every brand meets a <b class=\"k\">communication crisis</b> at some point. Our team specialises in studying and handling crises, keeps the impact and risk to your brand <b class=\"k\">as small as possible</b>, and <b class=\"k\">trains your team</b> to respond the way communication professionals do."
       }
     ]
   },

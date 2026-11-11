@@ -126,7 +126,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .process-side { position: sticky; top: 100px; align-self: start; display: grid; gap: 22px; }
 .bignum { font: 400 clamp(110px, 16vw, 220px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--ink); }
 .bignum small { font-size: .28em; color: var(--dim); font-style: normal; font-family: var(--sans); letter-spacing: 0; margin-left: 8px; }
-.track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.track { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
 .track i { height: 3px; border-radius: 9px; background: var(--line-strong); transition: background .4s; }
 .track i.on { background: var(--mark); }
 .process-side p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 34ch; }
@@ -137,6 +137,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .step .n { color: var(--mark); }
 .step h3 { font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.05em; line-height: 1; }
 .step p { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 52ch; }
+.step p .k { color: var(--mark); font-weight: 400; }
 .step ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .step li { font-size: 13px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line-strong); }
 .step .ai { font-size: 14px; color: var(--muted); display: flex; gap: 10px; align-items: baseline; }
@@ -462,13 +463,13 @@ dialog.policy form { margin-top: 18px; }
   <section class="sec" id="cach-lam">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
-      <h2>Năm bước. <span class="it">Một thương hiệu.</span></h2>
+      <h2>Sáu bước. <span class="it">Một thương hiệu.</span></h2>
       <p>Bạn duyệt sau mỗi bước.</p>
     </div>
     <div class="process">
       <div class="process-side">
-        <div class="bignum" id="bignum">1<small>/ 5</small></div>
-        <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div class="bignum" id="bignum">1<small>/ 6</small></div>
+        <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="steps" id="steps"></div>
     </div>
@@ -499,7 +500,7 @@ dialog.policy form { margin-top: 18px; }
         <h3>Build</h3>
         <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
         <ul>
-          <li>Đủ 5 bước</li>
+          <li>Đủ 6 bước</li>
           <li>Câu chuyện thương hiệu và giọng văn</li>
           <li>Bộ quy chuẩn thương hiệu</li>
           <li>Website và các điểm chạm chính</li>
@@ -663,7 +664,7 @@ const EN = {
 "Thích hướng này? Chúng tôi xây bản thật cho bạn.": "Like this direction? We will build the real one.",
 "Xây bản thật <span aria-hidden=\"true\">↗</span>": "Build the real one <span aria-hidden=\"true\">↗</span>",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Cách chúng tôi làm": "<span class=\"dot\" aria-hidden=\"true\"></span>How we work",
-"Năm bước. <span class=\"it\">Một thương hiệu.</span>": "Five steps. <span class=\"it\">One brand.</span>",
+"Sáu bước. <span class=\"it\">Một thương hiệu.</span>": "Six steps. <span class=\"it\">One brand.</span>",
 "Bạn duyệt sau mỗi bước.": "You approve every step.",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Gói": "<span class=\"dot\" aria-hidden=\"true\"></span>Packages",
 "Chọn điểm <span class=\"it\">bắt đầu.</span>": "Choose where <span class=\"it\">to start.</span>",
@@ -678,7 +679,7 @@ const EN = {
 "Lắng nghe và định vị bản gọn": "Short listening and positioning",
 "Logo, màu sắc, kiểu chữ": "Logo, colours, typography",
 "Danh thiếp, ảnh đại diện, mẫu bài đăng": "Business card, profile image, post templates",
-"Đủ 5 bước": "All 5 steps",
+"Đủ 6 bước": "All 6 steps",
 "Câu chuyện thương hiệu và giọng văn": "Brand story and voice",
 "Bộ quy chuẩn thương hiệu": "Brand guidelines",
 "Website và các điểm chạm chính": "Website and key touchpoints",
@@ -788,11 +789,12 @@ const projects = [
   { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
-  { en: { name: "Listening", desc: "We talk with the founder: why you started and what you believe in. We listen to your customers too, to understand what they need from you." }, name: "Lắng nghe", desc: "Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Chúng tôi lắng nghe cả khách hàng của bạn để hiểu họ cần gì.", items: ["Buổi trò chuyện 60 phút", "Lắng nghe khách hàng"], ai: "" },
-  { en: { name: "Positioning", desc: "Who the brand is, who it is for, and how it is different. We analyse your competitors in depth to see where you stand, then write the brand story every channel will tell." }, name: "Định vị", desc: "Thương hiệu là ai, dành cho ai, khác ai và khác như thế nào. Chúng tôi phân tích chuyên sâu các đối thủ của bạn để thấy bạn đang đứng ở đâu, rồi viết câu chuyện thương hiệu mà mọi kênh sau này đều kể lại.", items: ["Phân tích đối thủ chuyên sâu", "Tuyên bố định vị", "Câu chuyện thương hiệu"], ai: "" },
-  { en: { name: "Identity", desc: "We work directly with the founder or the person in charge of the brand to shape the brand you want: logo, colours, typography and voice. We agree on every part together and pack it into guidelines, so the brand can be built over the long term." }, name: "Nhận diện", desc: "Chúng tôi làm việc trực tiếp với người sáng lập hoặc người phụ trách thương hiệu để định hình lại thương hiệu mà bạn mong muốn: logo, màu sắc, kiểu chữ, giọng văn. Hai bên thống nhất từng phần, gói trong một bộ quy chuẩn, để cùng xây thương hiệu trong thời gian dài.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "" },
-  { en: { name: "Touchpoints", desc: "Once customers start to recognise the brand, we take it to the places your customers already go: your website, social media (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If you already have channels, we read their data, study customer behaviour and the results of past campaigns, then advise you on rolling out new campaigns." }, name: "Điểm chạm", desc: "Khi khách hàng bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến những nơi khách của bạn thường tìm đến: website, các mạng xã hội (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi đọc dữ liệu kênh, nghiên cứu hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn triển khai các chiến dịch mới cho bạn.", items: ["Website", "Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest", "Đọc dữ liệu kênh", "Tư vấn chiến dịch mới"], ai: "" },
-  { en: { name: "Community", desc: "A brand that grows but cannot keep a community is not a successful brand. Repeat purchases from a good community save a great deal of sales and marketing spend. So we help you build your community on the platforms your customers prefer, and together we build a brand people stay loyal to." }, name: "Cộng đồng", desc: "Thương hiệu lớn lên mà không giữ chân được cộng đồng thì chưa phải là thương hiệu thành công. Khách quay lại mua từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Vì thế chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng của bạn mong muốn, để cùng xây một thương hiệu có khách hàng trung thành.", items: [], ai: "" },
+  { en: { name: "Listening", desc: "We listen to <b class='k'>the founder's story</b>: why you started, what you believe in, <b class='k'>which customers the brand wants to reach</b> and what they believe in. We also listen to how you feel about your business, to understand <b class='k'>what you really want</b> from it." }, name: "Lắng nghe", desc: "Chúng tôi lắng nghe <b class='k'>câu chuyện của người sáng lập</b>: vì sao bắt đầu, bạn tin vào điều gì, thương hiệu muốn hướng tới <b class='k'>tệp khách hàng</b> nào và họ tin vào điều gì. Chúng tôi lắng nghe cả <b class='k'>những tâm tư của bạn</b> trong việc kinh doanh, để hiểu bạn thật sự mong muốn điều gì.", items: [], ai: "" },
+  { en: { name: "Positioning", desc: "Who the brand is, who it is for, and how it is different. We <b class='k'>analyse your competitors in depth</b> to see where you stand and which direction the brand should take next, always based on <b class='k'>what the founder wants</b>. Then we write the brand story every channel will tell." }, name: "Định vị", desc: "Thương hiệu là ai, dành cho ai, khác ai và khác như thế nào. Chúng tôi <b class='k'>phân tích chuyên sâu các đối thủ</b> để thấy bạn đang đứng ở đâu và thương hiệu nên đi theo hướng nào tiếp theo, luôn dựa trên <b class='k'>mong muốn của người sáng lập</b>. Rồi chúng tôi viết câu chuyện thương hiệu mà mọi kênh sau này đều kể lại.", items: [], ai: "" },
+  { en: { name: "Identity", desc: "We <b class='k'>work directly with the founder</b> and the person in charge of the brand to shape the brand you want: logo, colours, typography and voice. We <b class='k'>agree on every part together</b> and pack it into guidelines, so the brand can be built over the long term." }, name: "Nhận diện", desc: "Chúng tôi <b class='k'>làm việc trực tiếp</b> với người sáng lập và người phụ trách thương hiệu để định hình thương hiệu mà bạn mong muốn: logo, màu sắc, kiểu chữ, giọng văn. Hai bên <b class='k'>thống nhất từng phần</b>, gói trong một bộ quy chuẩn, để cùng xây thương hiệu trong thời gian dài.", items: [], ai: "" },
+  { en: { name: "Touchpoints", desc: "Once customers start to recognise the brand, we take it to the places your customers already go: your website, <b class='k'>social media</b> (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If you already have channels, we <b class='k'>read their data</b>, study customer behaviour and the results of past campaigns, then advise you on <b class='k'>a strategy for new campaigns</b>." }, name: "Điểm chạm", desc: "Khi khách hàng bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến những nơi khách của bạn thường tìm đến: website, <b class='k'>các mạng xã hội</b> (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi <b class='k'>đọc dữ liệu kênh</b>, nghiên cứu hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn <b class='k'>chiến lược triển khai các chiến dịch mới</b> cho bạn.", items: [], ai: "" },
+  { en: { name: "Community", desc: "A brand that grows <b class='k'>without a community behind it</b> is not yet a successful brand. Repeat purchases from a good community <b class='k'>save a great deal of sales and marketing spend</b>. So we help you build your community on the platforms your customers prefer, and together we build a brand people <b class='k'>stay loyal</b> to." }, name: "Cộng đồng", desc: "Thương hiệu lớn lên mà không <b class='k'>dựa trên cộng đồng</b> thì chưa phải là thương hiệu thành công. Khách quay lại mua từ một cộng đồng tốt giúp bạn <b class='k'>tiết kiệm rất nhiều chi phí</b> bán hàng và marketing. Vì thế chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng của bạn mong muốn, để cùng xây một thương hiệu có <b class='k'>khách hàng trung thành</b>.", items: [], ai: "" },
+  { en: { name: "Crisis communication", desc: "Every brand faces a <b class='k'>communication crisis</b> at some point, because running a business always brings things no one can foresee. Our team specialises in studying and handling communication crises for brands, keeping the impact and the risk to your brand <b class='k'>as small as possible</b>. We also <b class='k'>train your team</b> to handle these situations, from the point of view of communication professionals." }, name: "Xử lý khủng hoảng", desc: "Thương hiệu nào cũng có lúc đối mặt với <b class='k'>khủng hoảng truyền thông</b>, vì khi vận hành kinh doanh không thể tránh khỏi những điều không lường trước. Chúng tôi có đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông cho thương hiệu, giúp <b class='k'>giảm tối đa tác động và rủi ro</b> mà khủng hoảng có thể mang tới. Chúng tôi cũng <b class='k'>training cho đội của bạn</b> cách xử lý những tình huống này, từ góc nhìn của người làm truyền thông chuyên nghiệp.", items: [], ai: "" },
 ];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
@@ -813,7 +815,7 @@ function renderSteps() {
     const s = tr(steps[i]);
     el.querySelector(".n").textContent = t("Bước ", "Step ") + (i + 1);
     el.querySelector("h3").textContent = s.name;
-    el.querySelector("p").textContent = s.desc;
+    el.querySelector("p").innerHTML = s.desc;
   });
 }
 renderSteps();

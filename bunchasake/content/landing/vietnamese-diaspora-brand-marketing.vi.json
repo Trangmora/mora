@@ -51,7 +51,7 @@
   "sections": [
     {
       "h2": "Agency marketing cho doanh nghiệp Việt ở nước ngoài làm việc ra sao",
-      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý, online với khách ở bất cứ đâu. Buổi trò chuyện 60 phút đầu tiên bằng tiếng Việt hay tiếng Anh đều được. Bạn kể chuyện tiệm như kể với người quen. Là agency thương hiệu người Việt, chúng tôi biến câu chuyện đó thành thương hiệu mà khách bản xứ cũng hiểu.</p><p>Có ba gói:</p><ul><li><strong>Start</strong> cho cơ sở mới: định vị gọn, logo, màu, kiểu chữ, danh thiếp, avatar và mẫu bài đăng.</li><li><strong>Build</strong>: đủ năm bước, có câu chuyện và giọng thương hiệu, bộ hướng dẫn, website và các điểm chạm chính.</li><li><strong>Refresh</strong>: rà lại thương hiệu hiện có, định vị lại, làm mới nhận diện, cập nhật các điểm chạm đang dùng.</li></ul><p>Xem thêm trang <a href=\"{{landing:nail-salon-brand-marketing}}\">marketing cho tiệm nail</a> và <a href=\"{{landing:restaurant-brand-marketing}}\">marketing cho nhà hàng</a>.</p>"
+      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý, online với khách ở bất cứ đâu. Buổi trò chuyện 60 phút đầu tiên bằng tiếng Việt hay tiếng Anh đều được. Bạn kể chuyện tiệm như kể với người quen. Là agency thương hiệu người Việt, chúng tôi biến câu chuyện đó thành thương hiệu mà khách bản xứ cũng hiểu.</p><p>Có ba gói:</p><ul><li><strong>Start</strong> cho cơ sở mới: định vị gọn, logo, màu, kiểu chữ, danh thiếp, avatar và mẫu bài đăng.</li><li><strong>Build</strong>: đủ sáu bước, có câu chuyện và giọng thương hiệu, bộ hướng dẫn, website và các điểm chạm chính.</li><li><strong>Refresh</strong>: rà lại thương hiệu hiện có, định vị lại, làm mới nhận diện, cập nhật các điểm chạm đang dùng.</li></ul><p>Xem thêm trang <a href=\"{{landing:nail-salon-brand-marketing}}\">marketing cho tiệm nail</a> và <a href=\"{{landing:restaurant-brand-marketing}}\">marketing cho nhà hàng</a>.</p>"
     },
     {
       "h2": "Marketing song ngữ Việt Anh nghĩa là gì trong thực tế",
@@ -59,27 +59,31 @@
     }
   ],
   "process": {
-    "title": "Năm bước, bạn duyệt sau mỗi bước",
+    "title": "Sáu bước, bạn duyệt sau mỗi bước",
     "items": [
       {
         "t": "Lắng nghe",
-        "p": "Trò chuyện 60 phút với bạn, kèm lắng nghe khách hàng của bạn."
+        "p": "Buổi trò chuyện 60 phút. Lắng nghe <b class=\"k\">câu chuyện của người sáng lập</b>: vì sao bắt đầu, tin vào điều gì, muốn hướng tới <b class=\"k\">tệp khách</b> nào và mong muốn gì với việc kinh doanh."
       },
       {
         "t": "Định vị",
-        "p": "Thương hiệu là ai, cho ai, khác ở đâu. Chúng tôi phân tích chuyên sâu các đối thủ quanh bạn để biết bạn đang đứng ở đâu, rồi viết câu chuyện và thông điệp chính."
+        "p": "Thương hiệu là ai, cho ai, khác ở đâu. Chúng tôi <b class=\"k\">phân tích chuyên sâu</b> các đối thủ quanh bạn để thấy bạn đang đứng ở đâu và nên đi hướng nào tiếp theo, dựa trên <b class=\"k\">mong muốn của người sáng lập</b>, rồi viết câu chuyện và thông điệp chính."
       },
       {
         "t": "Nhận diện",
-        "p": "Làm việc trực tiếp với người sáng lập hoặc người phụ trách thương hiệu: tên nếu cần, logo, màu sắc, kiểu chữ, giọng văn. Hai bên thống nhất từng phần, gói trong bộ quy chuẩn để xây thương hiệu lâu dài."
+        "p": "<b class=\"k\">Làm việc trực tiếp</b> với người sáng lập và người phụ trách thương hiệu: tên nếu cần, logo, màu sắc, kiểu chữ, giọng văn. Hai bên <b class=\"k\">thống nhất từng phần</b>, gói trong bộ quy chuẩn để xây thương hiệu lâu dài."
       },
       {
         "t": "Điểm chạm",
-        "p": "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến nơi họ thường tìm đến: website, bảng hiệu hoặc bao bì, danh thiếp, mạng xã hội (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi đọc dữ liệu kênh và kết quả các chiến dịch trước, rồi tư vấn triển khai chiến dịch mới."
+        "p": "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến nơi họ thường tìm đến: website, bảng hiệu hoặc bao bì, danh thiếp, <b class=\"k\">mạng xã hội</b> (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi <b class=\"k\">đọc dữ liệu kênh</b>, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn <b class=\"k\">chiến lược triển khai chiến dịch mới</b>."
       },
       {
         "t": "Cộng đồng",
-        "p": "Thương hiệu không giữ chân được cộng đồng thì chưa thành công, và khách quay lại mua từ một cộng đồng tốt giúp tiết kiệm rất nhiều chi phí bán hàng, marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên nền tảng khách hàng mong muốn, để họ trung thành với thương hiệu."
+        "p": "Thương hiệu lớn lên mà không <b class=\"k\">dựa trên cộng đồng</b> thì chưa thành công, và khách quay lại mua từ một cộng đồng tốt giúp <b class=\"k\">tiết kiệm rất nhiều chi phí</b> bán hàng, marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên nền tảng khách hàng mong muốn, để họ <b class=\"k\">trung thành</b> với thương hiệu."
+      },
+      {
+        "t": "Xử lý khủng hoảng",
+        "p": "Thương hiệu nào cũng có lúc gặp <b class=\"k\">khủng hoảng truyền thông</b>. Đội ngũ của chúng tôi chuyên nghiên cứu và xử lý khủng hoảng, <b class=\"k\">giảm tối đa tác động và rủi ro</b> cho thương hiệu, đồng thời <b class=\"k\">training cho đội của bạn</b> cách xử lý từ góc nhìn của người làm truyền thông chuyên nghiệp."
       }
     ]
   },
