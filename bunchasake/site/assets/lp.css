@@ -82,7 +82,7 @@ img { max-width: 100%; }
 .sec.block { padding-top: clamp(56px, 7vw, 96px); }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
-.prose { font-size: 17px; line-height: 1.65; color: #CFCFCA; font-weight: 300; max-width: 68ch; }
+.prose { font-size: 17px; line-height: 1.65; color: var(--prose, #CFCFCA); font-weight: 300; max-width: 68ch; }
 .prose > * + * { margin-top: 1.05em; }
 .prose h2 { font-size: clamp(26px, 2.8vw, 38px); line-height: 1.1; letter-spacing: -0.04em; color: var(--ink); font-weight: 500; margin-top: 1.9em; scroll-margin-top: 90px; }
 .prose h3 { font-size: clamp(20px, 1.8vw, 24px); letter-spacing: -0.03em; color: var(--ink); font-weight: 500; margin-top: 1.6em; }
@@ -247,3 +247,27 @@ p.byline { display: block; margin-top: 18px; color: var(--dim); font-size: 14px;
 .author { display: block; }
 .author p { font-size: 14.5px; }
 .back a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }
+
+/* Blog: nền sáng trung tính, dễ đọc */
+body.blog { --bg: #FBFAF7; --raise: #FFFFFF; --ink: #1C1B19; --muted: #5F5C55; --dim: #8B877E; --line: #E4DFD5; --line-strong: #CFC9BC; --prose: #33312D; --card: #1C1B19; --card-ink: #F7F5F0; --card-line: #5A5750; color-scheme: light; }
+body.blog .cta-box small, body.blog .mail-card .cap { color: #A9A59B; }
+body.blog .prow, body.blog .takeaways, body.blog .author, body.blog details.toc { box-shadow: 0 1px 2px rgba(28, 27, 25, .04); }
+body.blog .prose th { background: #EFEBE3; }
+body.blog .table { background: #FFFFFF; }
+/* Cột bài nằm giữa trang, chữ căn trái trong cột (theo mẫu) */
+.post-page, .blog-wrap { max-width: 880px; }
+.post-head { text-align: left; padding-top: 8px; }
+.post-head .kicker { display: none; }
+.post-head h1 { margin-top: 0; font-size: clamp(34px, 4.6vw, 60px); text-wrap: pretty; }
+.post-head .lead { display: none; }
+p.byline { text-align: left; font-size: 15px; margin-top: 22px; }
+.post-body { padding-top: clamp(20px, 3vw, 32px); }
+.post-body .prose { font-size: 19px; }
+.post-body .prose > p:first-child { font-size: 1em; color: var(--prose, #CFCFCA); }
+.crumbs li:last-child { color: var(--muted); }
+body.blog .crumbs a { text-decoration: underline; text-underline-offset: 3px; }
+.blog-head { text-align: left; }
+.blog-head .lead { margin-inline: 0; }
+.plist h2 { text-align: left; }
+body.blog .prose { font-weight: 400; }
+.post-page .crumbs { padding-bottom: 22px; }

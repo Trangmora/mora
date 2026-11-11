@@ -107,7 +107,7 @@ const pages = [];   // { url:{en,vi}, lastmod, priority }
 const alt = urls => LANGS.filter(l => urls[l]).map(l => `<link rel="alternate" hreflang="${l}" href="${ORIGIN}${urls[l]}">`).join("\n") + (urls.en ? `\n<link rel="alternate" hreflang="x-default" href="${ORIGIN}${urls.en}">` : "");
 
 /* ---------- Khung trang ---------- */
-function head({ l, title, desc, urls, type = "website", ldjson = [] }) {
+function head({ l, title, desc, urls, type = "website", ldjson = [], cls = "" }) {
   return `<!doctype html>
 <html lang="${l}">
 <head>
@@ -135,7 +135,7 @@ ${alt(urls)}
 <link rel="stylesheet" href="/assets/lp.css">
 ${ldjson.map(ld).join("\n")}
 </head>
-<body>
+<body${cls ? ` class="${cls}"` : ""}>
 <a class="skip" href="#main">${T[l].skip}</a>`;
 }
 function nav(l, urls, current) {
@@ -260,10 +260,10 @@ function renderPost(k, l) {
     ...(faq.length ? [faqLd(faq)] : []),
   ];
   const others = blogKeys.filter(x => x !== k && blog[x][l] && blog[x][l].landing === d.landing).concat(blogKeys.filter(x => x !== k && blog[x][l] && blog[x][l].landing !== d.landing)).slice(0, 4);
-  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson }) + "\n" + nav(l, urls, "blog") + `
+  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + `
 <main id="main">
-  ${crumbs(l, bc)}
   <article class="post-page">
+    ${crumbs(l, bc)}
     <header class="post-head">
       <p class="kicker cap"><span class="dot" aria-hidden="true"></span>${esc(cat)}</p>
       <h1>${esc(d.h1)}</h1>
@@ -289,10 +289,9 @@ function renderPost(k, l) {
 function renderBlogIndex(l) {
   const t = T[l], urls = { en: U.blogindex("en"), vi: U.blogindex("vi") }, list = blogKeys.filter(k => blog[k][l]);
   const ldjson = [{ "@context": "https://schema.org", "@type": "Blog", name: "Bunchasake Blog", url: ORIGIN + urls[l], inLanguage: l, publisher: ORG, blogPost: list.map(k => ({ "@type": "BlogPosting", headline: blog[k][l].h1, url: ORIGIN + U.blog(k, l) })) }, crumbLd([[t.home, U.home(l)], [t.blog, urls[l]]])];
-  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson }) + "\n" + nav(l, urls, "blog") + `
+  const h = head({ l, title: t.blogTitle, desc: t.blogDesc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog") + `
 <main id="main">
-  ${crumbs(l, [[t.home, U.home(l)], [t.blog, null]])}
-  <div class="blog-wrap"><section class="blog-head"><h1>Blog</h1><p class="lead">${t.blogLead}</p></section>
+  <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, null]])}<section class="blog-head"><h1>Blog</h1><p class="lead">${t.blogLead}</p></section>
   ${Object.keys(CAT).map(c => { const g = list.filter(k => blog[k][l].landing === c || (c === "social-media-automation" && String(blog[k][l].landing).startsWith("social-media-automation"))); return g.length ? `<section class="plist"><h2>${esc(CAT[c][l])}</h2>${g.map(k => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; }).join("")}</section>` : ""; }).join("")}
   </div>
   <section class="sec"><div class="sec-head"><h2>${t.moreServices}</h2></div><div class="links">${landingKeys.filter(k => landing[k][l]).map(k => `<a href="${U.landing(k, l)}"><span style="color:inherit;transform:none">${esc(LABEL[k]?.[l] || landing[k][l].kicker)}<small>${esc(landing[k][l].description)}</small></span><span aria-hidden="true">→</span></a>`).join("")}</div></section>
