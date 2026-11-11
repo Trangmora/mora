@@ -10,7 +10,7 @@
     "items": [
       {
         "q": "Trong nước bán tốt, ra nước ngoài không ai trả lời.",
-        "p": "Người mua ở châu Âu chưa nghe tên bạn. Thiếu câu chuyện rõ và hình ảnh đáng tin, email bị bỏ qua."
+        "p": "Người mua ở châu Âu hay Mỹ chưa nghe tên bạn. Thiếu câu chuyện rõ và hình ảnh đáng tin, email bị bỏ qua."
       },
       {
         "q": "Tài liệu tiếng Anh toàn dịch từng chữ.",
@@ -35,12 +35,12 @@
         "p": "Tên nếu cần, logo, màu sắc, kiểu chữ, gói trong bộ hướng dẫn dễ dùng."
       },
       {
-        "t": "Giọng thương hiệu tiếng Anh và tiếng Việt",
+        "t": "Giọng thương hiệu Anh và Việt",
         "p": "Thương hiệu nói tiếng Anh thế nào mà vẫn giữ được chất Việt."
       },
       {
         "t": "Website và các điểm chạm chính",
-        "p": "Website, bao bì, hồ sơ công ty, danh thiếp mà người mua nước ngoài đọc hiểu và tin được."
+        "p": "Website, bao bì, hồ sơ công ty, danh thiếp để người mua nước ngoài đọc hiểu và tin."
       },
       {
         "t": "Social Media Automation, dựng sẵn cho bạn",
@@ -51,7 +51,7 @@
   "sections": [
     {
       "h2": "Vì sao chọn agency đưa thương hiệu Việt ra thị trường quốc tế",
-      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý. Chúng tôi hiểu cách nhà sáng lập ở Việt Nam kể chuyện, và thấy người mua ở châu Âu nghe ra sao. Góc nhìn hai phía ấy là thứ marketing xuyên biên giới từ Việt Nam hay thiếu.</p><p>Trước khi thiết kế, chúng tôi nhìn thương hiệu như một người mua nước ngoài:</p><ul><li>Họ có đọc được và nhớ được cái tên không?</li><li>Câu chuyện có trả lời: vì sao nên mua của một cái tên lạ?</li><li>Bộ nhận diện có đứng được cạnh các thương hiệu trên kệ ở đó không?</li><li>Website có trả lời những câu hỏi đầu tiên bằng tiếng Anh rõ ràng không?</li></ul><p>Muốn vào châu Âu, hãy có các câu trả lời này trước hội chợ đầu tiên. Xem bài <a href=\"{{blog:how-vietnamese-brands-can-enter-european-markets}}\">thương hiệu Việt vào thị trường châu Âu</a>.</p>"
+      "html": "<p>Chúng tôi là studio người Việt, làm việc giữa Việt Nam và Ý. Chúng tôi hiểu cách nhà sáng lập ở Việt Nam kể chuyện và thấy người mua ở châu Âu nghe ra sao. Góc nhìn hai phía ấy là thứ marketing xuyên biên giới từ Việt Nam hay thiếu.</p><p>Trước khi thiết kế, chúng tôi nhìn thương hiệu như một người mua nước ngoài:</p><ul><li>Họ có đọc được và nhớ được cái tên không?</li><li>Câu chuyện có trả lời: vì sao nên mua của một cái tên lạ?</li><li>Bộ nhận diện có đứng được cạnh các thương hiệu trên kệ ở đó không?</li><li>Website có trả lời những câu hỏi đầu tiên bằng tiếng Anh rõ ràng không?</li></ul><p>Muốn vào châu Âu, hãy có các câu trả lời này trước hội chợ đầu tiên. Xem bài <a href=\"{{blog:how-vietnamese-brands-can-enter-european-markets}}\">thương hiệu Việt vào thị trường châu Âu</a>.</p>"
     },
     {
       "h2": "Nội dung tiếng Anh cho thương hiệu Việt, viết cho người mua",

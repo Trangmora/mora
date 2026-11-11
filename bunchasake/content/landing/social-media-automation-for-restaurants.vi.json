@@ -2,15 +2,15 @@
   "slug": "tu-dong-hoa-social-media-nha-hang",
   "title": "Tự động hóa social media cho nhà hàng | Bunchasake",
   "description": "Tự động hóa social media cho nhà hàng: trợ lý AI, lịch nội dung 30 ngày, bài nháp để bạn duyệt, tự đăng bài, tự trả lời tin nhắn. Team của bạn vận hành.",
-  "kicker": "Phần thêm cho nhà hàng, quán cà phê và tiệm ăn uống",
+  "kicker": "Phần thêm cho nhà hàng, quán cà phê, tiệm ăn uống",
   "h1": "Tự động hóa social media cho nhà hàng, <em>team của bạn tự vận hành</em>",
-  "lead": "Tự động hóa social media cho nhà hàng nghĩa là bài đăng cả tháng được lên kế hoạch, viết nháp và hẹn giờ sẵn mà bạn không phải rời gian bếp. Chúng tôi dựng hệ thống theo đúng giọng của quán, team của bạn vận hành trên Facebook, Instagram và TikTok.",
+  "lead": "Tự động hóa social media cho nhà hàng nghĩa là bài đăng cả tháng được lên kế hoạch, viết nháp và hẹn giờ sẵn trong lúc bạn vẫn đứng bếp. Chúng tôi dựng hệ thống theo đúng giọng của quán, team của bạn vận hành trên Facebook, Instagram và TikTok.",
   "problems": {
     "title": "Vì sao trang của quán hay bị bỏ trống",
     "items": [
       {
         "q": "Nhớ thì đăng, bận thì thôi.",
-        "p": "Cuối tuần đông khách là không có bài nào, rồi một đêm đăng liền ba bài. Khách xem trang trước khi chọn chỗ ăn chỉ thấy bài từ tháng trước."
+        "p": "Cuối tuần đông khách thì không có bài nào, rồi một đêm đăng liền ba bài. Khách xem trang trước khi chọn chỗ ăn chỉ thấy bài từ tháng trước."
       },
       {
         "q": "Viết một caption mất cả nửa tiếng.",
@@ -51,11 +51,11 @@
   "sections": [
     {
       "h2": "Lịch nội dung nhà hàng trong 30 ngày trông ra sao",
-      "html": "<p>Lịch chỉ có ích khi team của bạn làm theo được bằng một chiếc điện thoại và vài phút rảnh. Vì vậy chúng tôi xếp lịch quanh những việc vốn diễn ra trong quán, theo nhịp hằng tuần:</p><ul><li><strong>Món tủ:</strong> món khách quay lại để ăn, và gốc gác của món.</li><li><strong>Khoảnh khắc trong bếp:</strong> nồi nước dùng bắc lên từ sáng, rổ rau thơm vừa rửa, mẻ chả giò đang cuốn.</li><li><strong>Con người:</strong> chủ quán, đầu bếp, bạn phục vụ mà khách quen nhớ tên.</li><li><strong>Món đặc biệt:</strong> món cuối tuần, thực đơn theo mùa, dịp Tết hay Trung thu.</li><li><strong>Câu hỏi của khách:</strong> có cay không, có món chay không, ăn thế nào cho đúng.</li></ul><p>Mỗi ô trong lịch ghi rõ cần quay gì và caption nói về điều gì. Ảnh và video do team của bạn tự làm, vì chúng tôi không nhận chụp ảnh hay quay phim. Về cách làm chung, mời đọc bài <a href=\"{{blog:ai-content-calendar-for-small-business}}\">lịch nội dung AI cho doanh nghiệp nhỏ</a>.</p>"
+      "html": "<p>Lịch chỉ có ích khi team của bạn làm theo được bằng một chiếc điện thoại và vài phút rảnh. Vì vậy chúng tôi xếp lịch quanh những việc vốn diễn ra trong quán, theo nhịp hằng tuần:</p><ul><li><strong>Món tủ:</strong> món khách quay lại để ăn, và gốc gác của món.</li><li><strong>Khoảnh khắc trong bếp:</strong> nồi nước dùng bắc lên từ sáng, rổ rau thơm vừa rửa, mẻ chả giò đang cuốn.</li><li><strong>Con người:</strong> chủ quán, đầu bếp, bạn phục vụ mà khách quen nhớ tên.</li><li><strong>Món đặc biệt:</strong> món cuối tuần, thực đơn theo mùa, dịp Tết hay Trung thu.</li><li><strong>Câu hỏi của khách:</strong> có cay không, có món chay không, ăn thế nào cho đúng.</li></ul><p>Mỗi ô trong lịch ghi rõ cần quay gì và caption nói về điều gì. Ảnh và video do team của bạn tự làm, vì chúng tôi không nhận chụp ảnh hay quay phim. Mời đọc thêm <a href=\"{{blog:restaurant-instagram-content-ideas}}\">ý tưởng content Instagram cho nhà hàng</a> và bài về <a href=\"{{blog:ai-content-calendar-for-small-business}}\">lịch nội dung AI cho doanh nghiệp nhỏ</a>.</p>"
     },
     {
       "h2": "Quản lý fanpage nhà hàng: chúng tôi dựng hệ thống, bạn vận hành",
-      "html": "<p>Nhiều chủ quán tìm người quản lý fanpage nhà hàng trọn gói. Chúng tôi làm khác và nói rõ ngay từ đầu: không đăng bài hằng ngày thay bạn, không chạy quảng cáo, không trực trang thay quán. Chúng tôi dựng hệ thống, team của bạn vận hành, vì người biết mẻ bột bánh xèo vừa pha xong đang đứng trong bếp của bạn chứ không ngồi ở studio của chúng tôi.</p><p>Phần inbox cũng theo nguyên tắc đó. Tin nhắn tự động lo những câu có đáp án cố định như giờ mở cửa hay cách đặt bàn, rồi dẫn khách tới số điện thoại hoặc link đặt bàn quán đang dùng. Chúng tôi không hứa kết nối với phần mềm đặt bàn hay giao đồ ăn. Mỗi nền tảng cho phép trả lời tự động một kiểu và có thể thay đổi, nên chúng tôi cài theo những gì tài khoản của bạn đang có.</p><p>Đây là phần thêm đi cùng <a href=\"{{landing:restaurant-brand-marketing}}\">dịch vụ marketing nhà hàng</a>, vì trợ lý cần một câu chuyện và giọng văn rõ ràng để học theo. Xem thêm trang chung về <a href=\"{{landing:social-media-automation}}\">tự động hóa social media</a>.</p>"
+      "html": "<p>Nhiều chủ quán tìm người quản lý fanpage nhà hàng trọn gói. Chúng tôi làm khác và nói rõ ngay từ đầu: không đăng bài hằng ngày thay bạn, không chạy quảng cáo, không trực trang thay quán. Chúng tôi dựng hệ thống, team của bạn vận hành, vì người biết mẻ bột bánh xèo vừa pha xong đang đứng trong bếp của bạn chứ không ngồi ở studio của chúng tôi.</p><p>Phần inbox cũng theo nguyên tắc đó. Tin nhắn tự động lo những câu có đáp án cố định như giờ mở cửa hay cách đặt bàn, rồi dẫn khách tới số điện thoại hoặc link đặt bàn quán đang dùng. Mỗi nền tảng cho phép trả lời tự động một kiểu và có thể thay đổi, nên chúng tôi cài theo những gì tài khoản của bạn đang có.</p><p>Đây là phần thêm đi cùng <a href=\"{{landing:restaurant-brand-marketing}}\">dịch vụ marketing nhà hàng</a>, vì trợ lý cần một câu chuyện và giọng văn rõ ràng để học theo. Xem thêm trang chung về <a href=\"{{landing:social-media-automation}}\">tự động hóa social media</a>.</p>"
     }
   ],
   "process": {
@@ -91,7 +91,7 @@
   "faq": [
     {
       "q": "Bunchasake có quản lý fanpage thay quán không?",
-      "a": "Không. Chúng tôi dựng hệ thống, team của bạn vận hành: tự chụp ảnh, duyệt bài nháp và trả lời những tin nhắn cần người thật. Chưa biết quay gì, mời xem <a href=\"{{blog:restaurant-instagram-content-ideas}}\">ý tưởng content Instagram cho nhà hàng</a>."
+      "a": "Không. Chúng tôi dựng hệ thống, team của bạn vận hành: tự chụp ảnh, duyệt bài nháp và trả lời những tin nhắn cần người thật."
     },
     {
       "q": "Hệ thống có kết nối với phần mềm đặt bàn hay giao đồ ăn không?",
