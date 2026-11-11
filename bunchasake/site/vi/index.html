@@ -375,6 +375,13 @@ dialog.policy form { margin-top: 18px; }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
 .hero-foot p { max-width: 46ch; }
 
+.legal { display: grid; gap: 10px; justify-content: stretch; color: var(--dim); font-size: 13px; line-height: 1.55; text-transform: none; letter-spacing: 0; }
+.legal p { margin: 0; }
+.legal-links { display: flex; flex-wrap: wrap; gap: 4px 0; margin-top: 4px; }
+.legal-links a { color: var(--muted); }
+.legal-links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.legal-links a + a::before { content: "·"; color: var(--dim); margin: 0 10px; display: inline-block; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -394,7 +401,7 @@ dialog.policy form { margin-top: 18px; }
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
 <div class="progress" id="progress" aria-hidden="true" style=""></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bunchasake.com/#org","name":"Bunchasake","url":"https://bunchasake.com/","logo":"https://bunchasake.com/apple-touch-icon.png","image":"https://bunchasake.com/og.png","email":"hello@bunchasake.com","slogan":"You run the business. We grow the brand.","description":"Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.","knowsLanguage":["vi","en"],"areaServed":["Vietnam","Italy","Worldwide (online)"],"knowsAbout":["Brand strategy","Brand identity","Bilingual Vietnamese and English content","Social media automation","Nail salon branding","Restaurant branding"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Dịch vụ","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiệm nail","url":"https://bunchasake.com/vi/marketing-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nhà hàng & F&B","url":"https://bunchasake.com/vi/marketing-nha-hang/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Doanh nghiệp Việt ở nước ngoài","url":"https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thương hiệu Việt ra quốc tế","url":"https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI tự động hoá social media","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho tiệm nail","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho nhà hàng","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/"}}]}},{"@type":"WebSite","@id":"https://bunchasake.com/#website","url":"https://bunchasake.com/","name":"Bunchasake","inLanguage":["en","vi"],"publisher":{"@id":"https://bunchasake.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bunchasake.com/#org","name":"Bunchasake","url":"https://bunchasake.com/","logo":"https://bunchasake.com/apple-touch-icon.png","image":"https://bunchasake.com/og.png","email":"hello@bunchasake.com","slogan":"You run the business. We grow the brand.","description":"Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.","knowsLanguage":["vi","en"],"areaServed":["Vietnam","Italy","Worldwide (online)"],"parentOrganization":{"@type":"Organization","name":"Impact Investments S.R.L.","vatID":"IT01331310324","address":{"@type":"PostalAddress","streetAddress":"Via Guido Zanetti 1","postalCode":"34133","addressLocality":"Trieste","addressRegion":"TS","addressCountry":"IT"}},"knowsAbout":["Brand strategy","Brand identity","Bilingual Vietnamese and English content","Social media automation","Nail salon branding","Restaurant branding"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Dịch vụ","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiệm nail","url":"https://bunchasake.com/vi/marketing-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nhà hàng & F&B","url":"https://bunchasake.com/vi/marketing-nha-hang/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Doanh nghiệp Việt ở nước ngoài","url":"https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thương hiệu Việt ra quốc tế","url":"https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI tự động hoá social media","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho tiệm nail","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho nhà hàng","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/"}}]}},{"@type":"WebSite","@id":"https://bunchasake.com/#website","url":"https://bunchasake.com/","name":"Bunchasake","inLanguage":["en","vi"],"publisher":{"@id":"https://bunchasake.com/#org"}}]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder · Growth Partner</i></a>
@@ -665,9 +672,10 @@ dialog.policy form { margin-top: 18px; }
     </div>
   </div>
 
-  <div class="legal cap">
-    <span>© 2026 Bunchasake · Brand Builder · Growth Partner</span>
-    <span class="r"><button type="button" class="open-policy">Chính sách bảo mật</button><a href="#top">Lên đầu trang ↑</a></span>
+  <div class="legal">
+    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
+    <p>Operated in Vietnam by MORA AI BUSINESS (household business) · Thần Lĩnh 3, Nghệ An, Vietnam</p>
+    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="/vi/blog/">Blog</a><a href="#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 

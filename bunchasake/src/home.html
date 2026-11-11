@@ -359,6 +359,13 @@ dialog.policy form { margin-top: 18px; }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
 .hero-foot p { max-width: 46ch; }
 
+.legal { display: grid; gap: 10px; justify-content: stretch; color: var(--dim); font-size: 13px; line-height: 1.55; text-transform: none; letter-spacing: 0; }
+.legal p { margin: 0; }
+.legal-links { display: flex; flex-wrap: wrap; gap: 4px 0; margin-top: 4px; }
+.legal-links a { color: var(--muted); }
+.legal-links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.legal-links a + a::before { content: "·"; color: var(--dim); margin: 0 10px; display: inline-block; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -570,9 +577,10 @@ dialog.policy form { margin-top: 18px; }
     </div>
   </div>
 
-  <div class="legal cap">
-    <span>© 2026 Bunchasake · Brand Builder · Growth Partner</span>
-    <span class="r"><button type="button" class="open-policy">Chính sách bảo mật</button><a href="#top">Lên đầu trang ↑</a></span>
+  <div class="legal">
+    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
+    <p>Operated in Vietnam by MORA AI BUSINESS (household business) · Thần Lĩnh 3, Nghệ An, Vietnam</p>
+    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="#goi">Pricing</a><a href="https://bunchasake.com/privacy/">Privacy policy</a><a href="https://bunchasake.com/terms/">Terms of service</a><a href="https://bunchasake.com/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 

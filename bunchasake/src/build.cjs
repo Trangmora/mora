@@ -53,7 +53,7 @@ const HOME = {
   en: { title: "Bunchasake | Brand & Growth Partner for Vietnamese Businesses", desc: "Brand studio for Vietnamese-owned businesses abroad and Vietnamese brands going global. Branding and social media automation, in English and Vietnamese." },
   vi: { title: "Bunchasake | Xây thương hiệu & tăng trưởng cho doanh nghiệp Việt", desc: "Bunchasake xây thương hiệu và tự động hoá social media cho chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt ra quốc tế. Song ngữ Việt – Anh." },
 };
-const ORG = { "@type": "Organization", "@id": ORIGIN + "/#org", name: "Bunchasake", url: ORIGIN + "/", logo: ORIGIN + "/apple-touch-icon.png", image: ORIGIN + "/og.png", email: MAIL, slogan: "You run the business. We grow the brand.", description: "Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.", knowsLanguage: ["vi", "en"], areaServed: ["Vietnam", "Italy", "Worldwide (online)"], knowsAbout: ["Brand strategy", "Brand identity", "Bilingual Vietnamese and English content", "Social media automation", "Nail salon branding", "Restaurant branding"] };
+const ORG = { "@type": "Organization", "@id": ORIGIN + "/#org", name: "Bunchasake", url: ORIGIN + "/", logo: ORIGIN + "/apple-touch-icon.png", image: ORIGIN + "/og.png", email: MAIL, slogan: "You run the business. We grow the brand.", description: "Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.", knowsLanguage: ["vi", "en"], areaServed: ["Vietnam", "Italy", "Worldwide (online)"], parentOrganization: { "@type": "Organization", name: "Impact Investments S.R.L.", vatID: "IT01331310324", address: { "@type": "PostalAddress", streetAddress: "Via Guido Zanetti 1", postalCode: "34133", addressLocality: "Trieste", addressRegion: "TS", addressCountry: "IT" } }, knowsAbout: ["Brand strategy", "Brand identity", "Bilingual Vietnamese and English content", "Social media automation", "Nail salon branding", "Restaurant branding"] };
 
 /* ---------- Đọc nội dung ---------- */
 const landing = {}, blog = {};   // key -> { en: {...}, vi: {...} }
@@ -166,7 +166,11 @@ function foot(l, cta) {
     <div><b class="cap">${t.blog}</b>${posts}<a href="${U.blogindex(l)}">${t.all} →</a></div>
     <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#du-an">${t.work}</a><a href="${mailto()}">${MAIL}</a></div>
   </nav>
-  <div class="legal cap"><span>© 2026 Bunchasake · ${t.tagline}</span><span>${t.based}</span></div>
+  <div class="legal">
+    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
+    <p>Operated in Vietnam by MORA AI BUSINESS (household business) · Thần Lĩnh 3, Nghệ An, Vietnam</p>
+    <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+  </div>
 </footer>
 <script>
 (function () {
@@ -301,6 +305,66 @@ function renderBlogIndex(l) {
   write(urls[l] + "index.html", h);
   if (l === "en") pages.push({ urls, lastmod: TODAY, priority: "0.7" });
 }
+
+/* ---------- Trang pháp lý (chỉ tiếng Anh) ---------- */
+const COMPANY = "Impact Investments S.R.L., VAT ID IT01331310324, Via Guido Zanetti 1, 34133 Trieste (TS), Italy";
+const OPERATOR = "MORA AI BUSINESS (household business), Thần Lĩnh 3, Nghệ An, Vietnam";
+const LEGAL = {
+  privacy: { slug: "/privacy/", title: "Privacy policy | Bunchasake", h1: "Privacy policy", desc: "How Bunchasake handles the information you send us: what we collect, why, who processes it and how to ask us to delete it.", body: `
+<p>This policy explains how Bunchasake handles personal information when you visit bunchasake.com or write to us.</p>
+<h2>Who we are</h2>
+<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}. You can reach us at <a href="mailto:${MAIL}">${MAIL}</a>.</p>
+<h2>What we collect</h2>
+<ul><li><strong>What you send us.</strong> When you email us, we receive your name, email address and whatever you choose to tell us about your business.</li><li><strong>Technical data.</strong> The website has no contact forms, no advertising trackers and no analytics cookies. Like any website, the servers that deliver it receive technical data such as your IP address and browser type.</li></ul>
+<h2>Why we use it</h2>
+<ul><li>To reply to you and prepare for a possible project with you.</li><li>To keep the website secure and working.</li></ul>
+<p>We do not sell your information or share it with third parties for their own marketing.</p>
+<h2>Services that process data for us</h2>
+<ul><li><strong>Cloudflare</strong> hosts the website, protects it and forwards emails sent to ${MAIL} to our mailbox.</li><li><strong>Google</strong> provides the mailbox where those emails arrive, and the web fonts used on the site, which means your browser requests the fonts from Google's servers.</li></ul>
+<h2>How long we keep it</h2>
+<p>We keep emails for as long as we need them to talk with you or to work on your project, and as required by law, for example for invoices.</p>
+<h2>Your rights</h2>
+<p>You can ask us at any time to see, correct or delete the information we hold about you, or to stop using it. Email <a href="mailto:${MAIL}">${MAIL}</a>. If you live in the European Union, you also have the right to complain to your data protection authority; in Italy that is the Garante per la protezione dei dati personali.</p>
+<h2>Changes</h2>
+<p>If we change this policy, we update this page and the date below.</p>` },
+  terms: { slug: "/terms/", title: "Terms of service | Bunchasake", h1: "Terms of service", desc: "The basic terms for using bunchasake.com and for working with Bunchasake on a brand or automation project.", body: `
+<p>These terms apply to bunchasake.com and to how a project with Bunchasake is agreed.</p>
+<h2>Who we are</h2>
+<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}. Contact: <a href="mailto:${MAIL}">${MAIL}</a>.</p>
+<h2>Using this website</h2>
+<p>The articles on this website are general information to help you run and grow your business. They are not legal, tax or financial advice. Questions about laws, permits, trade marks, tax or customs should go to a qualified adviser.</p>
+<p>The text, design and images on this website belong to Bunchasake or to the brands shown in our work, and may not be copied for commercial use without permission.</p>
+<h2>How a project is agreed</h2>
+<p>Every project starts with a conversation. After it, we send a written proposal and quote. The proposal describes the scope, the price, the timeline and the payment and cancellation terms for that project. Work starts only when you accept it, and the accepted proposal is what governs the project.</p>
+<h2>Your materials and the work we create</h2>
+<p>You keep the rights to everything you give us, such as your name, story, photos and existing logo. The proposal states how the rights to the work we create for you are transferred.</p>
+<h2>Liability</h2>
+<p>We work with care, but we cannot promise particular results such as a number of customers, followers or sales.</p>
+<h2>Changes</h2>
+<p>If we change these terms, we update this page and the date below.</p>` },
+  refund: { slug: "/refund-policy/", title: "Refunds and cancellations | Bunchasake", h1: "Refunds and cancellations", desc: "How cancellations and refunds work for a Bunchasake project: they follow the written proposal you accept before work starts.", body: `
+<p>Each Bunchasake project is quoted individually, so cancellation and refund terms are set out in the written proposal you accept before any work starts.</p>
+<h2>Before you accept a proposal</h2>
+<p>The first conversation and the proposal are free, and you are under no obligation to go ahead.</p>
+<h2>After you accept a proposal</h2>
+<p>If you want to pause or cancel a project, email <a href="mailto:${MAIL}">${MAIL}</a>. We will reply, confirm what has been delivered so far and settle the account according to the terms in your accepted proposal.</p>
+<h2>Who we are</h2>
+<p>Bunchasake is built by ${COMPANY}, and operated in Vietnam by ${OPERATOR}.</p>` },
+};
+function renderLegal(key) {
+  const d = LEGAL[key], l = "en", urls = { en: d.slug }, t = T.en;
+  const h = head({ l, title: d.title, desc: d.desc, urls, ldjson: [crumbLd([[t.home, "/"], [d.h1, d.slug]])], cls: "blog" }) + "\n" + nav(l, { en: d.slug }, "") + `
+<main id="main">
+  <article class="post-page">
+    ${crumbs(l, [[t.home, "/"], [d.h1, null]])}
+    <header class="post-head"><h1>${d.h1}</h1><p class="byline">Last updated <time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></p></header>
+    <div class="post-body"><div class="prose">${d.body}</div></div>
+  </article>
+</main>
+` + foot(l, null);
+  write(d.slug + "index.html", h);
+  pages.push({ urls, lastmod: TODAY, priority: "0.3" });
+}
 function render404() {
   const l = "en", t = T.en, urls = { en: "/404.html" };
   const h = head({ l, title: t.nfTitle, desc: "Page not found.", urls }).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<link rel="alternate"[^>]*>\n?/g, "") + "\n" + nav(l, { en: "/", vi: "/vi/" }, "") + `
@@ -400,6 +464,7 @@ Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.e
   for (const k of blogKeys) for (const l of LANGS) if (blog[k][l]) report.push([`blog ${k}.${l}`, renderPost(k, l)]);
   for (const l of LANGS) renderBlogIndex(l);
   render404();
+  for (const k of Object.keys(LEGAL)) renderLegal(k);
   const { chromium } = require("playwright"); const browser = await chromium.launch();
   for (const l of LANGS) await renderHome(browser, l);
   await browser.close();
