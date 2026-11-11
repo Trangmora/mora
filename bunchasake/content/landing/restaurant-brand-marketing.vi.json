@@ -2,9 +2,9 @@
   "slug": "marketing-nha-hang",
   "title": "Dịch vụ marketing nhà hàng và xây thương hiệu | Bunchasake",
   "description": "Dịch vụ marketing nhà hàng cho quán Việt trong và ngoài nước: từ câu chuyện món ăn đến thương hiệu, menu và hệ thống social media do team bạn vận hành.",
-  "kicker": "Cho nhà hàng, quán cà phê, tiệm ăn uống người Việt",
+  "kicker": "Cho nhà hàng, quán cà phê, tiệm ăn uống của người Việt",
   "h1": "Dịch vụ marketing nhà hàng, bắt đầu từ <em>câu chuyện sau món ăn</em>",
-  "lead": "Dịch vụ marketing nhà hàng của Bunchasake dành cho nhà hàng, quán cà phê, tiệm ăn uống người Việt ở nước ngoài và tại Việt Nam. Bạn lo gian bếp, chúng tôi biến câu chuyện sau món ăn thành thương hiệu khách bản xứ hiểu được.",
+  "lead": "Dịch vụ marketing nhà hàng của Bunchasake dành cho nhà hàng, quán cà phê, tiệm ăn uống của người Việt ở nước ngoài và tại Việt Nam. Bạn lo gian bếp, chúng tôi biến câu chuyện sau món ăn thành thương hiệu khách bản xứ hiểu được.",
   "problems": {
     "title": "Món ngon, nhưng mới chỉ người Việt biết đến",
     "items": [
@@ -14,11 +14,11 @@
       },
       {
         "q": "Menu chỉ có tên món và giá.",
-        "p": "Khách đến lần đầu cần thêm một dòng cho biết bún chả là món gì."
+        "p": "Người biết bún chả thì thấy đủ. Khách đến lần đầu cần thêm một dòng: món này là gì."
       },
       {
         "q": "Đứng bếp cả ngày, lấy đâu thời gian làm content?",
-        "p": "Bài hoặc viết lúc nửa đêm, hoặc không viết, nên trang im cả tháng."
+        "p": "Bài hoặc viết lúc nửa đêm, hoặc không viết, nên trang im mấy tuần liền."
       }
     ]
   },
@@ -39,7 +39,7 @@
         "p": "Menu giải thích từng món cho khách mới, biển hiệu cho biết quán bán gì, website và mẫu bài đăng nói cùng một giọng."
       },
       {
-        "t": "Tự động hóa social media cho bạn",
+        "t": "Tự động hóa social media, dựng sẵn cho bạn",
         "p": "Phần thêm: trợ lý AI, lịch nội dung 30 ngày, bài nháp để bạn duyệt, tự lên lịch đăng, tự trả lời inbox, do team của bạn vận hành."
       }
     ]
@@ -83,7 +83,7 @@
   "faq": [
     {
       "q": "Vì sao nên chọn đơn vị marketing nhà hàng người Việt?",
-      "a": "Vì bạn không phải giải thích món ăn cho chúng tôi. Chúng tôi làm việc bằng tiếng Việt và tiếng Anh, nên câu chuyện đến được khách bản xứ mà không mất chất."
+      "a": "Vì bạn không phải giải thích món ăn cho chúng tôi. Chúng tôi làm việc bằng tiếng Việt và tiếng Anh, nên câu chuyện đến được với khách bản xứ mà không mất chất."
     },
     {
       "q": "Bunchasake có đăng bài thay quán, chạy quảng cáo hay chụp ảnh món không?",
@@ -91,7 +91,7 @@
     },
     {
       "q": "Lệch múi giờ thì làm việc thế nào?",
-      "a": "Chúng tôi làm online giữa Việt Nam và Ý, với khách ở bất kỳ đâu. Sau buổi trò chuyện 60 phút đầu tiên, bạn duyệt xong từng bước thì chúng tôi mới làm tiếp."
+      "a": "Chúng tôi làm việc online giữa Việt Nam và Ý, với khách ở bất kỳ đâu. Sau buổi trò chuyện 60 phút đầu tiên, bạn duyệt xong từng bước thì chúng tôi mới làm tiếp."
     },
     {
       "q": "Quán đã có tên và logo, có giữ được không?",

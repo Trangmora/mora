@@ -24,7 +24,7 @@
   },
   "services": {
     "title": "The five parts of social media automation for restaurants",
-    "intro": "Our small-business system, set up around your menu and your working day.",
+    "intro": "The system we build for small businesses, set up around your menu and your working day.",
     "items": [
       {
         "t": "An AI assistant that knows your restaurant",
@@ -55,7 +55,7 @@
     },
     {
       "h2": "Restaurant social media management: we build it, your team runs it",
-      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in ours.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
+      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
     }
   ],
   "process": {
@@ -103,7 +103,7 @@
     },
     {
       "q": "What if the AI gets a dish wrong?",
-      "a": "Nothing is published without approval. AI does the fast work and people make the decisions: the owner or manager can edit or reject every draft."
+      "a": "Nothing is published without approval. AI does the fast work and people make the decisions: you can edit or reject every draft."
     },
     {
       "q": "What does it cost, and what do we prepare?",
