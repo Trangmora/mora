@@ -425,42 +425,17 @@ dialog.policy form { margin-top: 18px; }
 .why-body { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 54ch; }
 @media (max-width: 820px) { .why-close { grid-template-columns: 1fr; } }
 
-/* ===== 3D ===== */
-.t-logo.has-video { padding: 0; background: #111 !important; border-color: var(--line) !important; min-height: 340px; }
-.t-logo.has-video .logo-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.t-logo.has-video #b-mark, .t-logo.has-video .word { visibility: hidden; }
-.t-logo.has-video .t { color: #111 !important; background: rgba(255,255,255,.85); padding: 4px 8px; border-radius: 999px; opacity: 1; }
-.hero-video { position: absolute; right: 0; top: 44%; width: min(19vw, 270px); aspect-ratio: 3 / 4; max-width: 100%; margin: 0; z-index: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px var(--line); animation: fade 1.2s .3s var(--ease) both; }
-.hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.hero-video::after { content: ""; position: absolute; right: 14px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--mark); box-shadow: 0 0 0 4px rgba(255,74,46,.25); }
-@media (max-width: 1100px) { .hero-video { position: relative; top: auto; right: auto; width: min(100%, 360px); margin: 36px 0 0; } }
-.hero { position: relative; }
-.hero > *:not(.hero-art):not(.hero-video) { position: relative; z-index: 1; }
-.hero-art { position: absolute; right: 0; top: 41%; width: min(44%, 660px); aspect-ratio: 4 / 3; max-width: 100%; margin: 0; z-index: 0; pointer-events: none; perspective: 1200px; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); mask-image: radial-gradient(ellipse 58% 58% at 56% 54%, #000 45%, transparent 80%); animation: fade 1.4s .2s var(--ease) both; }
-.hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: lighten; transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg)) scale(1.04); transition: transform .6s var(--ease); }
-.hero-art .glow { position: absolute; left: 51%; top: 20%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,74,46,.35), transparent 65%); mix-blend-mode: screen; animation: pulse 3.2s ease-in-out infinite; }
-@keyframes pulse { 50% { opacity: .45; transform: scale(.9); } }
-@media (max-width: 1100px) {
-  .hero-art { position: relative; top: auto; right: auto; width: 100%; max-width: 620px; margin: 36px auto 0; display: block; }
-  .hero-art img { transform: none !important; }
-}
-.hero3d-old { position: absolute; top: 40%; right: calc(var(--gutter) * -1); width: min(46%, 720px); height: 54%; z-index: 0; display: block; }
+/* ===== Tăng trưởng (video) ===== */
+.grow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.grow-text { display: grid; gap: clamp(20px, 2.6vw, 32px); justify-items: start; }
+.grow-text .lab { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.grow-text h2 { font-size: clamp(32px, 4.2vw, 62px); line-height: 1.02; letter-spacing: -0.05em; }
+.grow-text h2 .it { color: var(--muted); }
+.grow-video { border-radius: 20px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; background: #111; border: 1px solid var(--line); }
+.grow-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 860px) { .grow { grid-template-columns: 1fr; } }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
 .hero-foot p { max-width: 46ch; }
-@media (max-width: 1100px) { .hero3d { opacity: .45; } }
-@media (max-width: 760px) { .hero3d { top: 30%; width: 100%; height: 50%; opacity: .25; } }
-.hero3d-hint { position: absolute !important; right: 0; bottom: 18%; font-size: 10px; color: var(--dim); letter-spacing: .06em; }
-@media (max-width: 860px) { .hero3d { pointer-events: none; } .hero3d-hint { display: none; } }
-.t-logo .box3d { position: absolute; inset: 0; width: 100%; height: 100%; display: none; cursor: grab; touch-action: pan-y; }
-.t-logo .box3d:active { cursor: grabbing; }
-.t-logo.has3d .box3d { display: block; }
-.t-logo.has3d #b-mark, .t-logo.has3d .word { visibility: hidden; }
-.t-logo .drag-hint { position: absolute; right: 14px; bottom: 12px; font-size: 10px; opacity: .6; display: none; }
-.t-logo.has3d .drag-hint { display: block; }
-.t-logo .t { z-index: 1; }
-.t-logo.has3d { background: radial-gradient(ellipse 60% 70% at 50% 45%, #34342f 0%, #1c1c1a 55%, #121211 100%) !important; border-color: var(--line) !important; min-height: 340px; }
-.t-logo.has3d .t { color: var(--muted) !important; }
-.t-logo.has3d .drag-hint { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -479,14 +454,14 @@ dialog.policy form { margin-top: 18px; }
 </head>
 <body>
 
-<a class="skip" href="#lab">Bỏ qua, tới Brand Lab</a>
+<a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
 <div class="progress" id="progress" aria-hidden="true"></div>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Brand-building studio that turns founders' stories into brands.","availableLanguage":["en","vi"],"areaServed":["VN","IT"]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder · Growth Partner</i></a>
   <ul class="cap">
-    <li><a href="#lab">Brand Lab</a></li>
+    <li><a href="#growth">Tăng trưởng</a></li>
     <li><a href="#cach-lam">Cách làm</a></li>
     <li><a href="#goi">Gói</a></li>
     <li><a href="#automation">Automation</a></li>
@@ -512,7 +487,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="hero-foot">
       <p><b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu có chất riêng. AI làm nhanh, con người quyết định.</p>
       <div class="hero-cta">
-        <a class="pill" href="#lab">Thử Brand Lab <span aria-hidden="true">↓</span></a>
+        <a class="pill" href="#cach-lam">Xem cách làm <span aria-hidden="true">↓</span></a>
         <a class="pill ghost" href="#du-an">Xem dự án</a>
       </div>
     </div>
@@ -545,49 +520,14 @@ dialog.policy form { margin-top: 18px; }
     </div>
   </section>
 
-  <!-- Brand Lab -->
-  <section class="sec" id="lab">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Brand Lab</span>
-      <h2>Thử xây một thương hiệu. <span class="it">Ngay bây giờ.</span></h2>
-      <p>Nhập tên, chọn ngành và tính cách. Xem thử thương hiệu của bạn trong vài giây.</p>
+  <!-- Tăng trưởng -->
+  <section class="sec grow" id="growth">
+    <div class="grow-text">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Growth Partner</span>
+      <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
+      <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="lab-wrap">
-      <form class="lab-form" id="labForm" autocomplete="off">
-        <div class="field">
-          <label for="l-name">Tên thương hiệu</label>
-          <input type="text" id="l-name" maxlength="28" value="Mây Coffee" aria-describedby="l-hint">
-        </div>
-        <fieldset class="chips" id="l-ind">
-          <legend>Ngành</legend>
-        </fieldset>
-        <fieldset class="chips" id="l-per">
-          <legend>Tính cách</legend>
-        </fieldset>
-        <button class="build-btn" type="submit">Xây thương hiệu <kbd aria-hidden="true">↵ Enter</kbd></button>
-        <p class="lab-note" id="l-hint">Bản phác thảo tự động, chỉ để minh hoạ.</p>
-      </form>
-
-      <div>
-        <div class="status" id="status" aria-live="polite">
-          <span data-s="0">Lắng nghe</span><span data-s="1">Định vị</span><span data-s="2">Nhận diện</span><span data-s="3">Điểm chạm</span>
-        </div>
-        <div class="board" id="board">
-          <div class="tile t-logo has-video" id="b-logo"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video><span class="t">Logo</span><div id="b-mark"></div><div class="word" id="b-word"></div></div>
-          <div class="tile t-pal" id="b-pal" aria-label="Bảng màu"></div>
-          <div class="tile t-type"><span class="t">Kiểu chữ</span><div class="aa" id="b-aa">Aa</div><div class="pair" id="b-pair"></div></div>
-          <div class="tile t-pos"><span class="t">Định vị</span><p id="b-pos"></p></div>
-          <div class="tile t-voice"><span class="t">Giọng văn</span><div class="w" id="b-voice"></div></div>
-          <div class="tile t-card"><span class="t">Danh thiếp</span><div class="mini-card" id="b-card"></div></div>
-          <div class="tile t-post"><span class="t">Bài đăng</span><div class="mini-post" id="b-post"></div></div>
-          <div class="tile t-web"><span class="t">Website</span><div class="mini-web" id="b-web"></div></div>
-        </div>
-        <div class="lab-cta">
-          <p>Thích hướng này? Chúng tôi xây bản thật cho bạn.</p>
-          <a class="pill" href="#lien-he" id="labToForm">Xây bản thật <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
+    <div class="grow-video"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
   </section>
 
   <!-- Quy trình -->
@@ -695,7 +635,7 @@ dialog.policy form { margin-top: 18px; }
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#lab">Brand Lab</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">Tăng trưởng</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -736,8 +676,6 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---------- Ngôn ngữ (VI / EN) ---------- */
 const EN = {
-"Kéo để xoay": "Drag to rotate",
-"Bấm vào khối để xây lại": "Click a block to rebuild",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Vì sao là câu chuyện": "<span class=\"dot\" aria-hidden=\"true\"></span>Why the story",
 "Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class=\"it\">Ở câu chuyện tạo nên nó.</span>": "What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class=\"it\">The story behind it.</span>",
 "Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b>": "People don't really buy a product or a service. <b>They buy the story behind it.</b>",
@@ -749,7 +687,9 @@ const EN = {
 "Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.": "It is built from the values, feelings, trust and story it gives its customers.",
 "Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class=\"it\">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.": "A product earns attention. A <span class=\"it\">story</span> is what moves people, stays with them and makes them stay.",
 "Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.": "Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.",
-"Bỏ qua, tới Brand Lab": "Skip to Brand Lab",
+"Bỏ qua, tới nội dung": "Skip to content",
+"Tăng trưởng": "Growth",
+"Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
 "Cách làm": "How we work",
 "Gói": "Packages",
 "Dự án": "Work",
@@ -757,7 +697,7 @@ const EN = {
 "<span class=\"dot\" aria-hidden=\"true\"></span>Studio xây thương hiệu · Việt Nam &amp; Ý": "<span class=\"dot\" aria-hidden=\"true\"></span>Brand-building studio · Vietnam &amp; Italy",
 "Bạn lo vận hành. <span>Chúng tôi lo thương hiệu.</span>": "You run the business. <span>We grow the brand.</span>",
 "<b>Bunchasake</b> lắng nghe vì sao bạn bắt đầu, rồi xây cho bạn một thương hiệu có chất riêng. AI làm nhanh, con người quyết định.": "<b>Bunchasake</b> listens to why you started, then builds a brand that is unmistakably yours. AI makes it fast; people make the calls.",
-"Thử Brand Lab <span aria-hidden=\"true\">↓</span>": "Try Brand Lab <span aria-hidden=\"true\">↓</span>",
+"Xem cách làm <span aria-hidden=\"true\">↓</span>": "See how we work <span aria-hidden=\"true\">↓</span>",
 "Xem dự án": "See our work",
 "thương hiệu đã đồng hành": "brands we have worked with",
 "quốc gia: Việt Nam, Ý": "countries: Vietnam, Italy",
@@ -857,7 +797,6 @@ const EN = {
 "Viết email <span aria-hidden=\"true\">↗</span>": "Write an email <span aria-hidden=\"true\">↗</span>"
 };
 const EN_ATTR = {
-"Hộp sản phẩm 3D của thương hiệu": "3D product box of the brand",
 "Những thương hiệu đã đồng hành": "Brands we have worked with",
 "Bảng màu": "Palette",
 "Sau khi bạn gửi": "After you send it",
@@ -909,124 +848,7 @@ const steps = [
   { en: { name: "Identity", desc: "We give the story a shape: a name if needed, logo, colours, typography and voice, packed into easy-to-use guidelines." }, name: "Nhận diện", desc: "Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.", items: ["Logo và biến thể", "Màu sắc, kiểu chữ", "Giọng văn", "Bộ quy chuẩn"], ai: "Phác nhanh nhiều hướng hình ảnh để chọn." },
   { en: { name: "Touchpoints", desc: "We bring the brand to every place customers see it, so your website and your business card speak with one voice." }, name: "Điểm chạm", desc: "Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.", items: ["Website", "Bao bì, biển hiệu", "Danh thiếp, profile", "Mạng xã hội"], ai: "Dựng mockup nhanh, viết nội dung song ngữ." },
 ];
-/* ---------- Brand Lab ---------- */
-const industries = {
-  cafe: { en: { label: "Café", noun: "café", aud: "people who need a slow corner in a busy day" }, label: "Cà phê",     noun: "quán cà phê",          aud: "người cần một góc chậm lại giữa ngày" },
-  food: { en: { label: "Restaurant", noun: "restaurant", aud: "meals worth coming back for" }, label: "Nhà hàng",   noun: "nhà hàng",             aud: "những bữa ăn đáng để quay lại" },
-  stay: { en: { label: "Hospitality", noun: "place to stay", aud: "guests who want to feel at home" }, label: "Lưu trú",    noun: "nơi lưu trú",          aud: "người muốn ở như ở nhà" },
-  beauty: { en: { label: "Beauty", noun: "beauty brand", aud: "people who want to take better care of themselves" }, label: "Làm đẹp",    noun: "thương hiệu làm đẹp",  aud: "người muốn chăm mình kỹ hơn" },
-  fashion: { en: { label: "Fashion", noun: "fashion brand", aud: "people who dress to say who they are" }, label: "Thời trang", noun: "thương hiệu thời trang", aud: "người mặc để nói về mình" },
-  tech: { en: { label: "Tech", noun: "tech company", aud: "businesses that want to move faster" }, label: "Công nghệ",  noun: "công ty công nghệ",    aud: "doanh nghiệp muốn làm nhanh hơn" },
-};
-const personas = {
-  warm:   { en: {"label": "Warm", "adj": "warm and welcoming", "voice": ["Friendly", "Sincere", "Honest"], "lines": ["Home flavour, every day.", "As warm as a first hello.", "Slow down a little, stay a little longer."]}, label: "Ấm áp",     font: "'Fraunces', serif", weight: 600, transform: "none", spacing: "-0.02em", pair: "Fraunces + Inter",
-            pals: [["#7A2E1F","#E9A23B","#F4EBDD","#2B2420"], ["#8C4A2F","#D8B26E","#F6EFE4","#33291F"]],
-            adj: "ấm áp và gần gũi", voice: ["Gần gũi", "Chân thành", "Mộc"],
-            lines: ["Vị nhà, mỗi ngày.", "Ấm như lời chào đầu tiên.", "Chậm lại một chút, ở lại lâu hơn."] },
-  minimal:{ en: {"label": "Minimal", "adj": "clean and clear", "voice": ["Concise", "Clear", "Calm"], "lines": ["Less, but better.", "Only what matters.", "Simple. Clear. Trusted."]}, label: "Tối giản",  font: "'Be Vietnam Pro', sans-serif", weight: 500, transform: "none", spacing: "-0.04em", pair: "Be Vietnam Pro + Inter",
-            pals: [["#111111","#F2F2EF","#B8B8B2","#3D5AFE"], ["#1C1F22","#EDEBE6","#A7AAA4","#E85D3F"]],
-            adj: "gọn gàng và rõ ràng", voice: ["Ngắn gọn", "Rõ ràng", "Bình tĩnh"],
-            lines: ["Ít hơn, nhưng đúng hơn.", "Chỉ giữ lại điều cần thiết.", "Gọn. Rõ. Đáng tin."] },
-  luxe:   { en: {"label": "Luxury", "adj": "refined and selective", "voice": ["Refined", "Composed", "Selective"], "lines": ["For those who know.", "Refined in every detail.", "No need to say more."]}, label: "Sang trọng", font: "'Playfair Display', serif", weight: 500, transform: "uppercase", spacing: "0.12em", pair: "Playfair Display + Inter",
-            pals: [["#0F2A2A","#C8A96A","#F3EEE4","#1A1A1A"], ["#2A0F1E","#C9A46B","#F4EEE6","#151515"]],
-            adj: "tinh tế và chọn lọc", voice: ["Tinh tế", "Điềm đạm", "Chọn lọc"],
-            lines: ["Dành cho người biết chọn.", "Tinh tế trong từng chi tiết.", "Không cần nói nhiều."] },
-  bold:   { en: {"label": "Bold", "adj": "bold and different", "voice": ["Direct", "Confident", "Energetic"], "lines": ["Never follow the crowd.", "Say what you believe, loudly.", "Different by default."]}, label: "Táo bạo",   font: "'Anton', sans-serif", weight: 400, transform: "uppercase", spacing: "0.01em", pair: "Anton + Inter",
-            pals: [["#FF3D2E","#111111","#FFE14D","#F5F5F0"], ["#1E3BFF","#0E0E0E","#C6FF3D","#F4F4EF"]],
-            adj: "táo bạo và khác biệt", voice: ["Thẳng thắn", "Tự tin", "Năng lượng"],
-            lines: ["Không làm theo đám đông.", "Nói to điều bạn tin.", "Khác biệt là mặc định."] },
-  playful:{ en: {"label": "Playful", "adj": "playful and charming", "voice": ["Cheerful", "Friendly", "Surprising"], "lines": ["Joy at first sight.", "A small joy every day.", "Don't take it too seriously!"]}, label: "Vui tươi",  font: "'Baloo 2', sans-serif", weight: 800, transform: "none", spacing: "-0.01em", pair: "Baloo 2 + Inter",
-            pals: [["#FF7AA2","#2D2A6E","#FFF4C2","#3DDC97"], ["#FF8A3D","#1F3A5F","#FFF1DD","#7BD3EA"]],
-            adj: "vui tươi và dễ thương", voice: ["Vui vẻ", "Thân thiện", "Bất ngờ"],
-            lines: ["Vui từ cái nhìn đầu tiên.", "Mỗi ngày một niềm vui nhỏ.", "Đừng nghiêm túc quá nhé!"] },
-};
-
-const hash = s => { let h = 2166136261; for (const c of s) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
-const lum = hex => { const n = parseInt(hex.slice(1), 16); const ch = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * ch[0] + .7152 * ch[1] + .0722 * ch[2]; };
-const on = hex => lum(hex) > .4 ? "#111111" : "#FFFFFF";
-
-function markSVG(shape, letter, fg, bg, font, weight) {
-  const shapes = {
-    warm: `<circle cx="50" cy="50" r="46" fill="${bg}"/>`,
-    minimal: `<rect x="6" y="6" width="88" height="88" fill="none" stroke="${bg}" stroke-width="6"/>`,
-    luxe: `<rect x="14" y="14" width="72" height="72" transform="rotate(45 50 50)" fill="none" stroke="${bg}" stroke-width="3"/><rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)" fill="none" stroke="${bg}" stroke-width="1.5"/>`,
-    bold: `<path d="M18 6 H94 L82 94 H6 Z" fill="${bg}"/>`,
-    playful: `<path d="M50 4 C78 4 96 22 96 48 C96 78 76 96 48 96 C20 96 4 78 4 50 C4 24 22 4 50 4 Z" fill="${bg}"/>`,
-  };
-  const textFill = shape === "minimal" || shape === "luxe" ? bg : fg;
-  return `<svg viewBox="0 0 100 100" aria-hidden="true">${shapes[shape]}<text x="50" y="52" text-anchor="middle" dominant-baseline="central" font-family="${font.replace(/"/g, "'")}" font-weight="${weight}" font-size="${shape === "luxe" ? 34 : 48}" fill="${textFill}">${esc(letter)}</text></svg>`;
-}
-
-function buildChips(el, map, name, def) {
-  el.insertAdjacentHTML("beforeend", Object.entries(map).map(([k, v]) =>
-    `<label><input type="radio" name="${name}" value="${k}" ${k === def ? "checked" : ""}><span>${tr(v).label}</span></label>`).join(""));
-}
-buildChips(document.getElementById("l-ind"), industries, "ind", "cafe");
-buildChips(document.getElementById("l-per"), personas, "per", "warm");
-
-function renderBrand() {
-  const name = (document.getElementById("l-name").value.trim() || t("Thương hiệu của bạn", "Your brand")).slice(0, 28);
-  const ind = tr(industries[document.querySelector('input[name="ind"]:checked').value]);
-  const pk = document.querySelector('input[name="per"]:checked').value;
-  const p = tr(personas[pk]);
-  const h = hash(name + pk);
-  const pal = p.pals[h % p.pals.length];
-  const [c1, c2, c3, c4] = pal;
-  const line = p.lines[h % p.lines.length];
-  const letter = [...name][0].toUpperCase();
-  const fontCss = `font-family:${p.font};font-weight:${p.weight};text-transform:${p.transform};letter-spacing:${p.spacing}`;
-
-  const logo = document.getElementById("b-logo");
-  logo.style.background = c3; logo.style.color = c1; logo.style.borderColor = c3;
-  logo.querySelector(".t").style.color = on(c3);
-  document.getElementById("b-mark").innerHTML = `<div class="mark">${markSVG(pk, letter, on(c1), c1, p.font, p.weight)}</div>`;
-  const word = document.getElementById("b-word");
-  word.textContent = name; word.setAttribute("style", fontCss);
-
-  document.getElementById("b-pal").innerHTML = pal.map((c, i) =>
-    `<div style="background:${c};color:${on(c)}"><span>${(LANG === "en" ? ["Primary", "Accent", "Base", "Support"] : ["Chính", "Nhấn", "Nền", "Phụ"])[i]}</span><span>${c}</span></div>`).join("");
-
-  const aaColor = [c2, c1, c3, c4].sort((a, b) => lum(b) - lum(a)).find(c => lum(c) > .12 && lum(c) < .9) || c3;
-  const aa = document.getElementById("b-aa"); aa.setAttribute("style", fontCss + ";color:" + aaColor);
-  aa.textContent = p.transform === "uppercase" ? "AA" : "Aa";
-  document.getElementById("b-pair").textContent = p.pair;
-
-  document.getElementById("b-pos").innerHTML = LANG === "en" ? `<b>${esc(name)}</b> is a ${p.adj} ${ind.noun} for ${ind.aud}.` : `<b>${esc(name)}</b> là ${ind.noun} ${p.adj}, dành cho ${ind.aud}.`;
-  document.getElementById("b-voice").innerHTML = p.voice.map(v => `<span>${v}</span>`).join("");
-
-  document.getElementById("b-card").style.background = c3;
-  document.getElementById("b-card").style.color = c1;
-  document.getElementById("b-card").innerHTML = `${markSVG(pk, letter, on(c1), c1, p.font, p.weight)}<div><b style="${fontCss}">${esc(name)}</b><small style="color:${on(c3)}">${ind.label} · bunchasake.com</small></div>`;
-
-  const post = document.getElementById("b-post");
-  post.style.background = c1; post.style.color = on(c1);
-  post.innerHTML = `<i style="background:${c2}"></i><p style="${fontCss};font-size:${p.transform === "uppercase" ? 12 : 14}px">${esc(line)}</p>`;
-
-  const web = document.getElementById("b-web");
-  const webBg = lum(c4) > .5 ? c1 : c4;
-  web.style.background = webBg; web.style.color = on(webBg);
-  web.innerHTML = `<div class="bar"><i></i><i></i><i></i></div><div class="body"><b style="${fontCss}">${esc(line)}</b><span style="background:${c2}"></span></div>`;
-  if (window.drawBox3D) window.drawBox3D({ name, letter, pk, p, pal, line, ind });
-}
-
-const board = document.getElementById("board");
-const statusEls = [...document.querySelectorAll("#status span")];
-let timer = [];
-function build(animate) {
-  timer.forEach(clearTimeout); timer = [];
-  renderBrand();
-  if (!animate || reduce) { statusEls.forEach(s => { s.className = "done"; }); return; }
-  board.classList.remove("building"); void board.offsetWidth; board.classList.add("building");
-  statusEls.forEach(s => { s.className = ""; });
-  statusEls.forEach((s, i) => {
-    timer.push(setTimeout(() => { statusEls.forEach((x, j) => { x.className = j < i ? "done" : j === i ? "on" : ""; }); }, i * 220));
-  });
-  timer.push(setTimeout(() => statusEls.forEach(s => { s.className = "done"; }), 4 * 220 + 200));
-}
-document.getElementById("labForm").addEventListener("submit", e => { e.preventDefault(); build(true); });
-document.querySelectorAll('#labForm input[type="radio"]').forEach(r => r.addEventListener("change", () => build(true)));
-let typeT; document.getElementById("l-name").addEventListener("input", () => { clearTimeout(typeT); typeT = setTimeout(() => build(false), 160); });
-build(false);
+if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
 /* ---------- Marquee ---------- */
 const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
@@ -1087,7 +909,7 @@ if ("IntersectionObserver" in window) {
   const spy = new IntersectionObserver(es => es.forEach(en => {
     if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
   }), { rootMargin: "-40% 0px -55% 0px" });
-  ["lab", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
+  ["growth", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
 }
 
 /* ---------- Thanh CTA trên điện thoại ---------- */
@@ -1121,210 +943,10 @@ document.addEventListener("click", e => { if (e.target.closest(".open-policy")) 
 function setLang(l) {
   LANG = l; try { localStorage.setItem("bsk-lang", l); } catch {}
   applyStatic();
-  document.querySelectorAll("#l-ind label, #l-per label").forEach(lb => {
-    const inp = lb.querySelector("input"), map = inp.name === "ind" ? industries : personas;
-    lb.querySelector("span").textContent = tr(map[inp.value]).label;
-  });
-  renderSteps(); renderWork(); build(false);
+  renderSteps(); renderWork();
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
 if (LANG !== "vi") setLang(LANG); else applyStatic();
-
-/* ---------- 3D ---------- */
-const has3D = (() => { try { const c = document.createElement("canvas"); return !!(window.THREE && (c.getContext("webgl") || c.getContext("experimental-webgl"))); } catch { return false; } })();
-
-function initHero3D() {
-  const canvas = document.getElementById("hero3d");
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-  const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x0a0a0a, 14, 30);
-  const camera = new THREE.PerspectiveCamera(32, 1, .1, 100);
-  camera.position.set(8.5, 7.2, 10.5); camera.lookAt(0, 1.2, 0);
-
-  scene.add(new THREE.HemisphereLight(0xfff4ec, 0x111111, .45));
-  const key = new THREE.DirectionalLight(0xffffff, 1.5); key.position.set(6, 12, 7); key.castShadow = true;
-  key.shadow.mapSize.set(1024, 1024); key.shadow.camera.left = -6; key.shadow.camera.right = 6; key.shadow.camera.top = 6; key.shadow.camera.bottom = -6; key.shadow.radius = 4; key.shadow.bias = -.0008;
-  scene.add(key);
-  const rim = new THREE.DirectionalLight(0xff4a2e, .45); rim.position.set(-7, 4, -6); scene.add(rim);
-  const glow = new THREE.PointLight(0xff4a2e, 2.2, 6, 2); scene.add(glow);
-
-  const floor = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.ShadowMaterial({ opacity: .45 }));
-  floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
-  const ring = new THREE.Mesh(new THREE.RingGeometry(2.9, 2.92, 96), new THREE.MeshBasicMaterial({ color: 0x3a3a36, transparent: true, opacity: .6 }));
-  ring.rotation.x = -Math.PI / 2; ring.position.y = .002; scene.add(ring);
-
-  const group = new THREE.Group(); scene.add(group);
-  const geo = new THREE.BoxGeometry(.92, .92, .92), edges = new THREE.EdgesGeometry(geo);
-  const mats = [new THREE.MeshStandardMaterial({ color: 0x1f1f1d, roughness: .45, metalness: .25 }), new THREE.MeshStandardMaterial({ color: 0x2e2e2b, roughness: .4, metalness: .25 })];
-  const matRed = new THREE.MeshStandardMaterial({ color: 0xff4a2e, roughness: .3, metalness: .1, emissive: 0xff2a10, emissiveIntensity: .35 });
-  const lineMat = new THREE.LineBasicMaterial({ color: 0x5a5a54, transparent: true, opacity: .8 });
-  const blocks = [];
-  [4, 3, 2, 1].forEach((n, y) => {
-    const off = (n - 1) / 2;
-    for (let x = 0; x < n; x++) for (let z = 0; z < n; z++) {
-      const top = n === 1;
-      const m = new THREE.Mesh(geo, top ? matRed : mats[(x + z + y) % 2]);
-      m.castShadow = true; m.receiveShadow = true;
-      if (!top) m.add(new THREE.LineSegments(edges, lineMat));
-      const target = new THREE.Vector3(x - off, y + .46, z - off);
-      const dir = target.clone().setY(0); if (dir.lengthSq() < .01) dir.set(0, 0, 0); else dir.normalize();
-      const b = { m, target, dir, y, lift: 0, start: new THREE.Vector3(), rot: new THREE.Euler(), delay: 0, born: 0 };
-      group.add(m); blocks.push(b);
-    }
-  });
-  const red = blocks[blocks.length - 1];
-
-  // bụi sáng lơ lửng
-  const N = 140, pos = new Float32Array(N * 3);
-  for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - .5) * 14; pos[i * 3 + 1] = Math.random() * 8; pos[i * 3 + 2] = (Math.random() - .5) * 14; }
-  const dustGeo = new THREE.BufferGeometry(); dustGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-  const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xffb8a8, size: .045, transparent: true, opacity: .55, depthWrite: false }));
-  scene.add(dust);
-
-  let t0 = performance.now();
-  function assemble() {
-    t0 = performance.now();
-    blocks.forEach(b => {
-      b.start.set((Math.random() - .5) * 20, 9 + Math.random() * 9, (Math.random() - .5) * 20);
-      b.rot.set(Math.random() * 6, Math.random() * 6, Math.random() * 6);
-      b.delay = b.y * .4 + Math.random() * .35;
-    });
-  }
-  assemble();
-
-  const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(-9, -9);
-  let mx = 0, my = 0, visible = true, raf = 0, explode = 0, hover = null;
-  const ease = k => 1 - Math.pow(1 - k, 3);
-  function frame(now) {
-    const t = (now - t0) / 1000, T = now / 1000;
-    // tách khối khi cuộn qua phần đầu trang
-    const hero = canvas.parentElement.getBoundingClientRect();
-    const ex = reduce ? 0 : Math.min(1, Math.max(0, -hero.top / (hero.height * .8)));
-    explode += (ex - explode) * .12;
-    // khối dưới con trỏ
-    ray.setFromCamera(ptr, camera);
-    const hit = ray.intersectObjects(blocks.map(b => b.m), false)[0];
-    hover = hit ? blocks.find(b => b.m === hit.object) : null;
-    canvas.style.cursor = hover ? "pointer" : "";
-    blocks.forEach(b => {
-      const e = reduce ? 1 : ease(Math.min(1, Math.max(0, (t - b.delay) / 1.15)));
-      b.lift += ((b === hover && e === 1 ? .35 : 0) - b.lift) * .18;
-      const spread = explode * (1.6 + b.y * .25);
-      const tx = b.target.x + b.dir.x * spread, tz = b.target.z + b.dir.z * spread, ty = b.target.y + b.lift + explode * b.y * .9;
-      b.m.position.set(b.start.x + (tx - b.start.x) * e, b.start.y + (ty - b.start.y) * e, b.start.z + (tz - b.start.z) * e);
-      b.m.rotation.set(b.rot.x * (1 - e) + explode * (b.dir.z * .5), b.rot.y * (1 - e) + explode * b.y * .3, b.rot.z * (1 - e) - explode * (b.dir.x * .5));
-    });
-    if (!reduce && t > 2.6) {
-      red.m.position.y += .14 + Math.sin(T * 1.6) * .12;
-      matRed.emissiveIntensity = .35 + Math.sin(T * 2) * .15;
-    }
-    glow.position.copy(red.m.position).add(new THREE.Vector3(0, .2, 0)).applyEuler(group.rotation);
-    const ry = .55 + (reduce ? 0 : T * .08 % (Math.PI * 2) * 0 + Math.sin(T * .2) * .25) + mx * .8;
-    group.rotation.y += (ry - group.rotation.y) * (reduce ? 1 : .05);
-    group.rotation.x += (my * .12 - group.rotation.x) * (reduce ? 1 : .05);
-    dust.rotation.y = T * .02; dust.position.y = Math.sin(T * .3) * .2;
-    renderer.render(scene, camera);
-  }
-  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / Math.max(r.height, 1); camera.updateProjectionMatrix(); frame(performance.now()); }
-  function loop() { cancelAnimationFrame(raf); const tick = now => { frame(now); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
-  addEventListener("pointermove", e => {
-    mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5;
-    const r = canvas.getBoundingClientRect();
-    ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
-  }, { passive: true });
-  canvas.addEventListener("click", () => { if (hover && !reduce) { assemble(); } });
-  addEventListener("resize", size);
-  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) loop(); }).observe(canvas);
-  size(); loop();
-}
-
-function initBox3D() {
-  const tile = document.getElementById("b-logo"), canvas = document.getElementById("box3d");
-  tile.classList.add("has3d");
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.outputEncoding = THREE.sRGBEncoding;
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(30, 1, .1, 50);
-  camera.position.set(0, .9, 5.6); camera.lookAt(0, -.12, 0);
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x404040, .55));
-  const d1 = new THREE.DirectionalLight(0xffffff, 1.1); d1.position.set(-3, 5, 4); scene.add(d1);
-  const d2 = new THREE.DirectionalLight(0xffffff, .35); d2.position.set(4, 1, 3); scene.add(d2);
-  const d3 = new THREE.DirectionalLight(0xff8a70, .45); d3.position.set(0, 3, -5); scene.add(d3);
-  const W = 1.5, H = 1.9, D = .9, PX = 300;
-  const dims = [[D, H], [D, H], [W, D], [W, D], [W, H], [W, H]]; // +x -x +y -y +z -z
-  const faces = dims.map(([w, h]) => {
-    const c = document.createElement("canvas"); c.width = Math.round(w * PX); c.height = Math.round(h * PX);
-    const tx = new THREE.CanvasTexture(c); tx.anisotropy = 4; tx.encoding = THREE.sRGBEncoding;
-    return { c, tx, mat: new THREE.MeshStandardMaterial({ map: tx, roughness: .62 }) };
-  });
-  const box = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), faces.map(f => f.mat));
-  scene.add(box);
-  const sh = new THREE.Mesh(new THREE.CircleGeometry(1.15, 48), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .4 }));
-  sh.rotation.x = -Math.PI / 2; sh.position.y = -H / 2 - .18; sh.scale.set(1, .5, 1); scene.add(sh);
-
-  const fam = f => f.replace(/"/g, "'");
-  function fit(ctx, text, maxW, size, weight, family) {
-    let s = size; do { ctx.font = `${weight} ${s}px ${family}`; s -= 2; } while (ctx.measureText(text).width > maxW && s > 10); return s + 2;
-  }
-  function shape(ctx, pk, cx, cy, r, color) {
-    ctx.save(); ctx.fillStyle = color; ctx.strokeStyle = color; ctx.lineWidth = r * .12;
-    if (pk === "warm" || pk === "playful") { ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill(); }
-    else if (pk === "minimal") { ctx.strokeRect(cx - r, cy - r, r * 2, r * 2); }
-    else if (pk === "luxe") { ctx.translate(cx, cy); ctx.rotate(Math.PI / 4); ctx.lineWidth = r * .06; ctx.strokeRect(-r * .75, -r * .75, r * 1.5, r * 1.5); }
-    else { ctx.beginPath(); ctx.moveTo(cx - r * .7, cy - r); ctx.lineTo(cx + r, cy - r); ctx.lineTo(cx + r * .7, cy + r); ctx.lineTo(cx - r, cy + r); ctx.closePath(); ctx.fill(); }
-    ctx.restore();
-  }
-  let last = null;
-  function draw(d) {
-    last = d;
-    const { name, letter, pk, p, pal, line, ind } = d, [c1, c2, c3, c4] = pal, family = fam(p.font), up = s => p.transform === "uppercase" ? s.toUpperCase() : s;
-    const markIn = pk === "minimal" || pk === "luxe";
-    const paint = (i, bg, fn) => { const { c, tx } = faces[i], ctx = c.getContext("2d"); ctx.fillStyle = bg; ctx.fillRect(0, 0, c.width, c.height); ctx.textAlign = "center"; ctx.textBaseline = "middle"; fn(ctx, c.width, c.height); tx.needsUpdate = true; };
-    // mặt trước
-    paint(4, c3, (ctx, w, h) => {
-      const r = w * .17, cy = h * .36;
-      shape(ctx, pk, w / 2, cy, r, c1);
-      ctx.fillStyle = markIn ? c1 : on(c1); ctx.font = `${p.weight} ${r * (pk === "luxe" ? .8 : 1.1)}px ${family}`; ctx.fillText(letter, w / 2, cy + r * .04);
-      ctx.fillStyle = c1; fit(ctx, up(name), w * .82, w * .14, p.weight, family); ctx.fillText(up(name), w / 2, h * .66);
-      ctx.fillStyle = on(c3); ctx.globalAlpha = .7; ctx.font = `600 ${w * .062}px Inter Tight, sans-serif`; ctx.fillText(ind.label.toUpperCase(), w / 2, h * .88); ctx.globalAlpha = 1;
-    });
-    // mặt sau
-    paint(5, c1, (ctx, w, h) => {
-      ctx.fillStyle = on(c1); fit(ctx, up(line), w * .8, w * .09, p.weight, family); ctx.fillText(up(line), w / 2, h / 2);
-      ctx.globalAlpha = .6; ctx.font = `500 ${w * .04}px Inter Tight, sans-serif`; ctx.fillText("bunchasake.com", w / 2, h * .9); ctx.globalAlpha = 1;
-    });
-    // hai mặt bên
-    [0, 1].forEach(i => paint(i, c1, (ctx, w, h) => {
-      ctx.save(); ctx.translate(w / 2, h / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = on(c1);
-      fit(ctx, up(i === 0 ? line : name), h * .8, w * .2, p.weight, family); ctx.fillText(up(i === 0 ? line : name), 0, 0); ctx.restore();
-    }));
-    // nắp và đáy
-    paint(2, c2, (ctx, w, h) => { shape(ctx, pk, w / 2, h / 2, h * .26, on(c2)); ctx.fillStyle = markIn ? on(c2) : c2; ctx.font = `${p.weight} ${h * .3}px ${family}`; ctx.fillText(letter, w / 2, h / 2 + h * .01); });
-    paint(3, c4, () => {});
-    render();
-  }
-  let spin = 0, drawn = false;
-  window.drawBox3D = d => { tile.classList.add("has3d"); draw(d); if (drawn && !reduce) spin = 1; drawn = true; };
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => last && draw(last));
-
-  let rotY = -.62, rotX = .1, vel = 0, dragging = false, px = 0, py = 0, visible = true, raf = 0;
-  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / Math.max(r.height, 1); camera.updateProjectionMatrix(); render(); }
-  function render() { box.rotation.set(rotX, rotY, 0); renderer.render(scene, camera); }
-  canvas.addEventListener("pointerdown", e => { dragging = true; px = e.clientX; py = e.clientY; canvas.setPointerCapture(e.pointerId); });
-  canvas.addEventListener("pointermove", e => { if (!dragging) return; vel = (e.clientX - px) * .01; rotY += vel; rotX = Math.max(-.5, Math.min(.6, rotX + (e.clientY - py) * .006)); px = e.clientX; py = e.clientY; render(); });
-  ["pointerup", "pointercancel"].forEach(ev => canvas.addEventListener(ev, () => { dragging = false; }));
-  function loop() { cancelAnimationFrame(raf); const tick = now => { if (!dragging) { vel *= .95; rotY += .0035 + vel + spin * .32; spin *= .9; if (spin < .01) spin = 0; } box.position.y = Math.sin(now / 800) * .06; sh.scale.set(1 - box.position.y * .8, .5 - box.position.y * .4, 1); render(); if (visible && !reduce) raf = requestAnimationFrame(tick); }; raf = requestAnimationFrame(tick); }
-  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) loop(); }).observe(canvas);
-  addEventListener("resize", size);
-  size(); loop();
-}
-
-(() => { const art = document.getElementById("heroArt"); if (!art || reduce) return; addEventListener("pointermove", e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5; art.style.setProperty("--ry", (x * 6).toFixed(2) + "deg"); art.style.setProperty("--rx", (-y * 4).toFixed(2) + "deg"); }, { passive: true }); })();
-if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
-if (false) { try { initBox3D(); build(false); } catch (err) { console.warn("3D tắt:", err); document.getElementById("b-logo").classList.remove("has3d"); } }
 </script>
 </body>
 </html>
