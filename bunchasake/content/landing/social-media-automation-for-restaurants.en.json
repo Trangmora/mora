@@ -1,0 +1,123 @@
+{
+  "slug": "social-media-automation-for-restaurants",
+  "title": "Social Media Automation for Restaurants | Bunchasake",
+  "description": "Social media automation for restaurants: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. Your team runs it.",
+  "kicker": "An add-on for restaurants, cafés and food businesses",
+  "h1": "Social media automation for restaurants, <em>run by your own team</em>",
+  "lead": "Social media automation for restaurants means a month of posts is planned, drafted and scheduled without pulling you out of the kitchen. We build the system in your brand voice, and your team runs it on Facebook, Instagram and TikTok.",
+  "problems": {
+    "title": "Why restaurant pages go quiet",
+    "items": [
+      {
+        "q": "We post when we remember.",
+        "p": "A busy weekend means no posts, then three in one night. Guests who check your page before choosing where to eat see dates from last month."
+      },
+      {
+        "q": "One caption takes me half an hour.",
+        "p": "You know the dish by heart, but writing about it in two languages after a twelve-hour shift is a different job."
+      },
+      {
+        "q": "The inbox asks the same things every day.",
+        "p": "Opening hours, address, menu, how to book. The answers never change, but someone still types them during service."
+      }
+    ]
+  },
+  "services": {
+    "title": "The five parts of social media automation for restaurants",
+    "intro": "It is the system we build for any small business, set up around your menu and your working day.",
+    "items": [
+      {
+        "t": "An AI assistant that knows your restaurant",
+        "p": "Trained on your menu, your story and your tone, so a draft about bún chả sounds like your kitchen, not a generic food page."
+      },
+      {
+        "t": "A 30-day content calendar",
+        "p": "A month of planned posts mixing signature dishes, kitchen moments, the people, specials and customer questions."
+      },
+      {
+        "t": "AI drafts, you approve",
+        "p": "The assistant drafts captions in English and Vietnamese. The owner reads them on the phone between services, edits if needed and approves."
+      },
+      {
+        "t": "Posts scheduled automatically",
+        "p": "Approved posts go out on schedule on Facebook, Instagram and TikTok, even on nights when nobody has a free hand."
+      },
+      {
+        "t": "Automatic inbox replies",
+        "p": "Common questions get an answer straight away: opening hours, address, menu and how to reserve. Anything else waits for a person."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "h2": "What a restaurant content calendar looks like over 30 days",
+      "html": "<p>A calendar only helps if your team can follow it with a phone and a few spare minutes. So we plan it around what already happens in your restaurant, in a weekly rhythm:</p><ul><li><strong>Signature dishes:</strong> the plate guests come back for, and where it comes from.</li><li><strong>Kitchen moments:</strong> broth going on in the morning, herbs being washed, spring rolls being rolled.</li><li><strong>The people:</strong> the owner, the cook, the server regulars ask for by name.</li><li><strong>Specials:</strong> a weekend dish, a seasonal menu, a Tết or Mid-Autumn offer.</li><li><strong>Customer questions:</strong> is it spicy, is there a vegetarian option, how do you eat it.</li></ul><p>Each slot says what to film and what the caption should cover. Your team supplies the photos and videos, because we do not do shoots. For the method, read about an <a href=\"{{blog:ai-content-calendar-for-small-business}}\">AI content calendar for small business</a>.</p>"
+    },
+    {
+      "h2": "Restaurant social media management: we build it, your team runs it",
+      "html": "<p>Many owners look for someone to take over the restaurant's pages. We work differently and say so up front: we do not post every day on your behalf, run ads or manage your community. We set up the system and your team runs it, because the person who knows the bánh xèo batter was just mixed is in your kitchen, not in our studio.</p><p>The inbox follows the same rule. Automatic replies to reservation and opening-hours questions cover what has a fixed answer, then point guests to the phone number or booking link you already use. We do not promise a connection to reservation or delivery software. What each platform allows differs and can change, so we set up what your accounts offer.</p><p>This is an add-on to our <a href=\"{{landing:restaurant-brand-marketing}}\">brand and marketing for restaurants</a>, because the assistant needs a clear story and voice to learn from. See also the general page on <a href=\"{{landing:social-media-automation}}\">social media automation</a>.</p>"
+    }
+  ],
+  "process": {
+    "title": "How the setup follows our four steps",
+    "items": [
+      {
+        "t": "Listening",
+        "p": "A 60-minute conversation with the owner, plus a look at your menu, your pages and the questions guests ask most."
+      },
+      {
+        "t": "Positioning",
+        "p": "The story and key messages the assistant works from: who the restaurant is, who it is for, how it is different."
+      },
+      {
+        "t": "Identity",
+        "p": "The voice in English and Vietnamese, plus post templates in your colours."
+      },
+      {
+        "t": "Touchpoints",
+        "p": "The system itself: assistant, calendar, scheduling and inbox replies on your Facebook, Instagram and TikTok accounts."
+      }
+    ]
+  },
+  "work": {
+    "title": "Brands we have worked with",
+    "intro": "Chop Chop is a restaurant, NA-VI Living is in hospitality and Canasto de Flores is a flower and landscaping brand.",
+    "items": [
+      "chop-chop",
+      "navi-living",
+      "canasto-de-flores"
+    ]
+  },
+  "faq": [
+    {
+      "q": "Do you manage our Facebook and Instagram pages for us?",
+      "a": "No. We build the system and your team runs it: they take the photos, approve the drafts and answer the messages that need a person. For what to film, see our <a href=\"{{blog:restaurant-instagram-content-ideas}}\">restaurant Instagram content ideas</a>."
+    },
+    {
+      "q": "Does it connect to our reservation or delivery software?",
+      "a": "We do not promise that. The inbox replies answer common questions and send guests to the phone number or booking link you already use."
+    },
+    {
+      "q": "Are the captions in English and Vietnamese?",
+      "a": "Yes. The assistant drafts in both, in the voice we define with you, and you choose which language each post uses."
+    },
+    {
+      "q": "What if the AI gets a dish wrong?",
+      "a": "Nothing is published without approval. AI does the fast work and people make the decisions: the owner or manager can edit or reject every draft."
+    },
+    {
+      "q": "What does it cost, and what do we prepare?",
+      "a": "The quote comes after the first conversation. Prepare your menu, opening hours and the questions guests ask most, then email <a href=\"{{mail}}\">hello@bunchasake.com</a>."
+    }
+  ],
+  "cta": {
+    "h2": "Let the calendar work while you cook",
+    "p": "Email us a few lines about your restaurant, and we will prepare questions for a 60-minute conversation.",
+    "subject": "Social media automation for my restaurant"
+  },
+  "related": [
+    "restaurant-instagram-content-ideas",
+    "how-to-market-a-vietnamese-restaurant",
+    "ai-content-calendar-for-small-business"
+  ]
+}

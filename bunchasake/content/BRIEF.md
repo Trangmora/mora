@@ -1,0 +1,172 @@
+# Bunchasake content brief (read fully before writing)
+
+You are writing pages for **bunchasake.com**. A build script turns your files into static HTML, so the
+file format below must be followed exactly. Write only the files you were assigned, in
+`/home/user/mora/bunchasake/content/`. Do not touch any other file. Do not run git.
+
+## 1. Who Bunchasake is (the only facts you may state about the company)
+
+- **Bunchasake** is a brand builder and growth partner. Voice is always "we" / "chúng tôi" (never "I", never a named person).
+- A Vietnamese studio working between **Vietnam and Italy**, online with clients anywhere. Working languages: **Vietnamese and English**.
+- Promise: "You run the business. We grow the brand." / "Bạn lo vận hành. Chúng tôi lo thương hiệu."
+- Belief: people do not buy a product, they buy the story behind it. "You have the story. We turn it into a brand."
+- Who we work with: (1) Vietnamese business owners abroad (nail salons, restaurants, other owner-run businesses), (2) Vietnamese brands that want to go international.
+- **Process, four steps, the client approves after each step:**
+  1. Listening / Lắng nghe: we talk with the founder (a 60-minute conversation), study customers and competitors.
+  2. Positioning / Định vị: who the brand is, who it is for, how it is different; the brand story and key messages.
+  3. Identity / Nhận diện: name if needed, logo, colours, typography, voice, packed into easy-to-use guidelines.
+  4. Touchpoints / Điểm chạm: website, signage/packaging, business cards/profile, social media templates, so everything speaks with one voice.
+- **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all four steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
+- **Add-on: Social Media Automation, built for you.** We set up the system; the client's own team runs Facebook, TikTok and Instagram with it. Five parts: (1) your own AI assistant trained on the brand voice, (2) a 30-day content calendar, (3) AI drafts, you approve, (4) posts scheduled automatically, (5) automatic inbox replies to common questions.
+- How a project starts: the client emails **hello@bunchasake.com**, we read their story and prepare questions, a 60-minute conversation online or in person, then a proposal and quote.
+- AI does the fast work, people make the decisions.
+- **Real work (11 brands, Vietnam and Italy).** You may name these as brands we have worked with, with their sector only:
+  Chop Chop (restaurant), Borgo Villa Nemec (villa, Italy), Impact Investments (investment, Italy), Viet My Clean Home (home services, Hanoi),
+  Bác Sĩ Ánh (healthcare, personal brand), Canasto de Flores (flowers, landscaping), Lạc Hồng (construction machinery), Talk2TheTop (podcast),
+  NA-VI Living (hospitality), Vestra Place (coworking), Vina KTV (audio equipment).
+
+## 2. Hard rules (a page that breaks these will be rejected)
+
+- **Never invent facts about Bunchasake:** no client results, numbers, percentages, testimonials, prices, timelines, team size, years of experience, awards, offices, or clients in a specific country/industry beyond the list above. We have **no nail salon client** to cite. Do not write "we helped X salons".
+- **Services we do NOT sell, so never promise them:** running ads, SEO/Google Business Profile management as a service, posting or community management done daily on the client's behalf, influencer/KOL booking, photo or video shoots. Articles may *teach* the reader how to do these things themselves; landing pages must only offer what section 1 lists.
+- **No fabricated statistics or sources.** No "studies show", no "X% of customers". If you need to support a point, use reasoning or a concrete everyday example. Do not cite statistics from, or type URLs of, external websites (see "External links" in section 3 for the only outbound links allowed).
+- Advice must be practical, specific and safe: correct for a small-business owner in the US, Canada, Australia or Europe. When platform features may vary or change, say so in plain words rather than guessing details.
+- No keyword stuffing. Use the primary keyword in the title, H1, first paragraph and one H2, then write naturally with related phrases.
+- Plain, warm, direct language. Short paragraphs. No hype words ("revolutionary", "game-changing", "unlock", "skyrocket"). No emoji. No em dashes; use commas, periods or colons.
+- **Vietnamese versions are written natively, not translated line by line.** Natural Vietnamese a salon or restaurant owner abroad would speak, "bạn" for the reader, "chúng tôi" for Bunchasake. Common industry English terms may stay in English (nail, booking, Instagram, Reels, Google Business Profile, content). The VI and EN versions must cover the same sections and facts.
+- Every file must be valid for its format (JSON must parse; frontmatter must follow the pattern).
+
+## 3. Internal links
+
+Never write URLs for our own pages. Use these placeholders; the build script resolves them per language:
+
+- `{{home}}` home page, `{{blogindex}}` blog index, `{{work}}` the work section on the home page
+- `{{mail}}` the address `mailto:hello@bunchasake.com`
+- `{{landing:KEY}}` and `{{blog:KEY}}` with a KEY from the tables below
+
+Example: `<a href="{{landing:nail-salon-brand-marketing}}">brand and marketing for nail salons</a>`.
+Use descriptive anchor text (never "click here").
+
+### Landing pages (KEY = English slug)
+
+| KEY | Audience / primary keyword | Vietnamese slug |
+|---|---|---|
+| `vietnamese-diaspora-brand-marketing` | Vietnamese marketing agency for overseas businesses (pillar page for Vietnamese business owners abroad) | `marketing-doanh-nghiep-viet-o-nuoc-ngoai` |
+| `nail-salon-brand-marketing` | Vietnamese marketing agency for nail salons | `marketing-tiem-nail` |
+| `restaurant-brand-marketing` | Vietnamese marketing agency for restaurants | `marketing-nha-hang` |
+| `international-brand-marketing-vietnam` | Vietnamese brand agency for international markets (Vietnamese brands going global) | `marketing-thuong-hieu-viet-ra-quoc-te` |
+| `social-media-automation` | social media automation for small business | `tu-dong-hoa-social-media` |
+| `social-media-automation-for-nail-salons` | social media automation for nail salons | `tu-dong-hoa-social-media-tiem-nail` |
+| `social-media-automation-for-restaurants` | social media automation for restaurants | `tu-dong-hoa-social-media-nha-hang` |
+
+### Blog articles (KEY = English slug)
+
+| KEY | Primary keyword | Links to landing | Vietnamese slug |
+|---|---|---|---|
+| `nail-salon-social-media-content-ideas` | nail salon social media content ideas (all platforms, content pillars, weekly rhythm) | nail-salon-brand-marketing | `y-tuong-content-tiem-nail` |
+| `nail-salon-instagram-content-ideas` | nail salon Instagram content ideas (Reels, carousels, Stories, highlights, bio) | nail-salon-brand-marketing | `y-tuong-content-instagram-tiem-nail` |
+| `how-to-get-more-nail-clients` | how to get more nail clients / more bookings | nail-salon-brand-marketing | `cach-co-nhieu-khach-tiem-nail` |
+| `google-business-profile-for-nail-salons` | Google Business Profile for nail salon | nail-salon-brand-marketing | `toi-uu-google-business-profile-tiem-nail` |
+| `restaurant-instagram-content-ideas` | restaurant Instagram content ideas | restaurant-brand-marketing | `y-tuong-content-instagram-nha-hang` |
+| `how-to-market-a-vietnamese-restaurant` | how to market a Vietnamese restaurant | restaurant-brand-marketing | `cach-marketing-nha-hang-viet-o-nuoc-ngoai` |
+| `bilingual-marketing-for-vietnamese-businesses-abroad` | bilingual Vietnamese English marketing | vietnamese-diaspora-brand-marketing | `marketing-song-ngu-cho-doanh-nghiep-viet-o-nuoc-ngoai` |
+| `how-vietnamese-business-owners-abroad-can-build-a-brand` | how to market / brand a Vietnamese business abroad | vietnamese-diaspora-brand-marketing | `xay-thuong-hieu-cho-chu-doanh-nghiep-viet-o-nuoc-ngoai` |
+| `how-vietnamese-brands-can-enter-european-markets` | how Vietnamese brands can enter European markets | international-brand-marketing-vietnam | `thuong-hieu-viet-vao-thi-truong-chau-au` |
+| `ai-content-calendar-for-small-business` | AI content calendar for small business | social-media-automation | `lich-noi-dung-ai-cho-doanh-nghiep-nho` |
+
+Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.
+
+### External links (blog articles only)
+
+Each blog article should include **2 to 4 outbound links to official resources**, placed where the reader would actually want the source (for example, when you tell them to claim their Google Business Profile, link the words "Google Business Profile" to it). Never type an external URL. Use only these placeholders, written as `<a href="{{ext:KEY}}">descriptive anchor text</a>`; the build adds the real URL and opens it in a new tab:
+
+| KEY | What it is |
+|---|---|
+| `gbp` | Google Business Profile (where owners claim and manage their listing) |
+| `gbp-help` | Google Business Profile Help Center |
+| `ig-business` | Instagram for Business |
+| `ig-help` | Instagram Help Center |
+| `meta-business` | Meta for Business (Facebook and Instagram business tools) |
+| `tiktok-business` | TikTok for Business |
+| `yelp-business` | Yelp for Business |
+| `tripadvisor-owners` | Tripadvisor for owners |
+| `whatsapp-business` | WhatsApp Business |
+| `google-seo-guide` | Google Search Central: SEO Starter Guide |
+| `google-helpful-content` | Google Search Central: creating helpful, reliable, people-first content |
+| `eu-access2markets` | European Commission Access2Markets portal (rules and requirements for products entering the EU) |
+| `eu-youreurope` | Your Europe Business portal (official EU guide to doing business in Europe) |
+| `euipo` | EU Intellectual Property Office (EU trade marks) |
+| `wipo-madrid` | WIPO Madrid System (international trade mark registration) |
+| `vietrade` | Vietnam Trade Promotion Agency (VIETRADE) |
+| `sba` | U.S. Small Business Administration |
+| `ftc-business` | U.S. Federal Trade Commission business guidance (advertising and reviews rules) |
+
+Do not attribute specific facts, numbers or quotes to these sources; link them as "the official place to do or read about this". Only use a link where it is genuinely relevant to the article.
+
+## 4. Format A: landing page
+
+Two files per page: `content/landing/KEY.en.json` and `content/landing/KEY.vi.json`. Strict JSON, UTF-8, this shape:
+
+```json
+{
+  "slug": "nail-salon-brand-marketing",
+  "title": "Max 60 characters, primary keyword near the front, ends with | Bunchasake",
+  "description": "Max 155 characters. What we do, for whom, in plain words.",
+  "kicker": "Short label above the headline, e.g. For Vietnamese-owned nail salons",
+  "h1": "Headline with the keyword idea. One part may be wrapped in <em>…</em> for the italic accent.",
+  "lead": "One or two sentences under the headline.",
+  "problems": { "title": "H2", "items": [ { "q": "A short line the owner would say out loud", "p": "One or two sentences that show we understand." } ] },
+  "services": { "title": "H2", "intro": "One sentence.", "items": [ { "t": "Service name", "p": "One or two sentences. Only things from section 1." } ] },
+  "sections": [ { "h2": "H2 with a related keyword phrase", "html": "<p>…</p><ul><li>…</li></ul>" } ],
+  "process": { "title": "H2", "items": [ { "t": "Listening", "p": "What this step means for this audience." } ] },
+  "work": { "title": "H2", "intro": "One honest sentence.", "items": ["chop-chop", "navi-living"] },
+  "faq": [ { "q": "Question a real owner would ask", "a": "Direct answer, 1 to 3 sentences. May contain <a href=\"{{…}}\">links</a>." } ],
+  "cta": { "h2": "Closing headline", "p": "One sentence.", "subject": "Email subject line" },
+  "related": ["blog-key-1", "blog-key-2", "blog-key-3"]
+}
+```
+
+- In the `.vi.json` file, `slug` is the Vietnamese slug from the table. All other keys stay in English, values in Vietnamese.
+- `problems.items`: exactly 3. `services.items`: 4 to 6. `process.items`: exactly 4 (the four steps, named Listening/Positioning/Identity/Touchpoints or Lắng nghe/Định vị/Nhận diện/Điểm chạm). `faq`: 5 or 6. `related`: 2 to 4 blog KEYs.
+- `sections`: 2 or 3 blocks of real explanatory copy, 120 to 220 words each, HTML limited to `<p> <ul> <ol> <li> <strong> <em> <a>`. This is where the page earns its ranking: explain how it works for this audience, what bilingual content means in practice, what the owner gets.
+- `work.items`: 2 to 4 ids from: `chop-chop`, `borgo-villa-nemec`, `impact-investments`, `viet-my-clean-home`, `bac-si-anh`, `canasto-de-flores`, `lac-hong`, `talk2thetop`, `navi-living`, `vestra-place`, `vina-ktv`. Pick the closest sectors and say honestly in `intro` what they are (do not imply they are nail salons etc.).
+- Whole page: roughly 650 to 950 words per language.
+- Good FAQ topics: how working with a team in another time zone works, whether content is in English and Vietnamese, who posts (the owner's team, using the system we build), what it costs (a quote after the first conversation), what the owner needs to prepare, whether an existing logo can be kept (Refresh).
+
+## 5. Format B: blog article
+
+Two files per article: `content/blog/KEY.en.html` and `content/blog/KEY.vi.html`. Frontmatter between `---` lines, one `key: value` per line (no quotes needed, no line breaks inside a value), then the HTML body:
+
+```
+---
+slug: nail-salon-social-media-content-ideas
+title: Max 60 characters with the primary keyword
+description: Max 155 characters, says what the reader will get
+h1: Article headline (may differ slightly from title)
+lead: One or two sentence standfirst that answers the search intent directly
+keyword: the primary keyword
+landing: nail-salon-brand-marketing
+cta: One line inviting the reader to the related service, e.g. Want a 30-day content calendar built for your salon?
+takeaway: First key point, one sentence
+takeaway: Second key point
+takeaway: Third key point
+---
+<p>Opening paragraph…</p>
+<h2>…</h2>
+…
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<details><summary>Question?</summary><p>Answer.</p></details>
+</section>
+```
+
+- In the `.vi.html` file, `slug` is the Vietnamese slug; `landing` stays the English KEY.
+- 3 to 5 `takeaway:` lines. They are shown as a "Key takeaways" box and should be quotable, self-contained sentences.
+- Body: **1,300 to 1,900 words** (per language). Allowed tags: `<p> <h2> <h3> <ul> <ol> <li> <strong> <em> <a> <table> <thead> <tbody> <tr> <th> <td> <blockquote>`, plus the FAQ `<section class="faq">` with `<details><summary>…</summary><p>…</p></details>` (4 to 6 questions, each answer one `<p>`). No `<h1>`, no images, no inline styles, no scripts.
+- Structure that works: a direct answer in the first paragraph; H2 sections that each answer one question; numbered or bulleted ideas with a concrete example each (what to film, what to write in the caption, in English and, where it helps, in Vietnamese); one table or checklist the reader can copy; a short "common mistakes" section; the FAQ. A reader should be able to act on the article the same day.
+- Write for the owner, not for marketers. Examples should feel real: a salon with four technicians in a strip mall, a family phở restaurant with a lunch crowd, a furniture maker in Bình Dương selling to Germany.
+- Mention Bunchasake at most twice in the body, naturally, with a `{{landing:…}}` link. The template adds the CTA box and the "key takeaways" box, so do not write those in the body.
+
+## 6. Before you finish
+
+Re-read each file and check: format valid, lengths within range, no forbidden claims (section 2), all links are placeholders with valid KEYs, VI reads like native Vietnamese. Then reply with a short list of the files you wrote and their word counts. Nothing else is needed.

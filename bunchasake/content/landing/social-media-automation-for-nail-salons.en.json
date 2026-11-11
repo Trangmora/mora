@@ -1,0 +1,125 @@
+{
+  "slug": "social-media-automation-for-nail-salons",
+  "title": "Social Media Automation for Nail Salons | Bunchasake",
+  "description": "Social media automation for nail salons: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. We set it up, you run it.",
+  "kicker": "Add-on for Vietnamese-owned nail salons",
+  "h1": "Social media automation for nail salons, <em>built for you</em>, run by your team",
+  "lead": "Social media automation for nail salons means posts get planned, drafted and scheduled while your hands are busy. We set up the system. Your own team runs Facebook, Instagram and TikTok with it.",
+  "problems": {
+    "title": "The busier the salon, the quieter the page",
+    "items": [
+      {
+        "q": "When we are fully booked, nobody posts.",
+        "p": "Your best weeks produce the best nails and the emptiest feed. When a slow week comes, there is nothing online to bring people in."
+      },
+      {
+        "q": "I never know what to post.",
+        "p": "Without a plan, every post starts from zero: find a photo, think of a caption, give up."
+      },
+      {
+        "q": "Messages pile up while I am with a customer.",
+        "p": "Someone asks about prices at lunch and gets an answer at night. By then they may have booked elsewhere."
+      }
+    ]
+  },
+  "services": {
+    "title": "Social media automation for nail salons: the five parts",
+    "intro": "One system, set up by us and run by your own team.",
+    "items": [
+      {
+        "t": "Your own AI assistant",
+        "p": "It learns your services, tone and policies, such as deposits, late arrivals and repairs."
+      },
+      {
+        "t": "30-day content calendar",
+        "p": "A month planned ahead: nail art, before and after, promotions, staff and customer care."
+      },
+      {
+        "t": "AI drafts, you approve",
+        "p": "Captions drafted in English and Vietnamese. You approve them on your phone."
+      },
+      {
+        "t": "Automatic scheduling",
+        "p": "Approved posts go out on time on Facebook, Instagram and TikTok."
+      },
+      {
+        "t": "Automatic inbox replies",
+        "p": "Instant answers to common questions: opening hours, price list, how to book."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "h2": "A nail salon content calendar your staff can follow",
+      "html": "<p>A nail salon content calendar says what goes out on which day and who supplies the photo. Ours rotates five kinds of post, so the feed is never thirty pictures of the same French tip:</p><ul><li><strong>Nail art</strong>: the set you were proudest of this week.</li><li><strong>Before and after</strong>: a repair, a fill, a pedicure.</li><li><strong>Promotions</strong>: a quiet-day offer, a seasonal colour.</li><li><strong>Staff</strong>: who does what, so customers can ask by name.</li><li><strong>Customer care</strong>: how to make a set last.</li></ul><p>Technicians take the photos on their phones. The assistant drafts each caption in English and Vietnamese, in your salon's voice. You edit or approve between customers, and the post is scheduled. Nothing goes out that you have not seen.</p><p>For ideas, see our <a href=\"{{blog:nail-salon-social-media-content-ideas}}\">nail salon social media content ideas</a>.</p>"
+    },
+    {
+      "h2": "Nail salon social media management: we build it, your team runs it",
+      "html": "<p>Owners who search for nail salon social media management often expect an agency that posts for them every day. We do not do that, run ads or do photo shoots. We set up the system and your team runs it, so the accounts and the voice stay yours.</p><p>The inbox follows the same idea. We write automatic replies to booking questions you answer all day: opening hours, the price list, how to book. Replies point to the booking link or phone number you already use. We do not promise a connection to any booking software, and anything unusual goes to a person.</p><p>What each platform allows for scheduling and replies differs and can change, so we set up what your accounts support.</p><p>The system works best on a clear brand: see <a href=\"{{landing:nail-salon-brand-marketing}}\">brand and marketing for nail salons</a> and <a href=\"{{landing:social-media-automation}}\">social media automation for small business</a>.</p>"
+    }
+  ],
+  "process": {
+    "title": "Four steps, and you approve after each one",
+    "items": [
+      {
+        "t": "Listening",
+        "p": "A 60-minute conversation about your services, policies and the questions customers ask most."
+      },
+      {
+        "t": "Positioning",
+        "p": "Who the salon is for and its key messages, which become the themes of the calendar."
+      },
+      {
+        "t": "Identity",
+        "p": "Voice, colours and type: what the assistant learns, so drafts sound like you."
+      },
+      {
+        "t": "Touchpoints",
+        "p": "Post templates and the system itself, set up on your Facebook, Instagram and TikTok."
+      }
+    ]
+  },
+  "work": {
+    "title": "Brands we have worked with",
+    "intro": "Consumer-facing brands we have worked with: a restaurant, a flower and landscaping business, a coworking space and a home services company in Hanoi.",
+    "items": [
+      "chop-chop",
+      "canasto-de-flores",
+      "vestra-place",
+      "viet-my-clean-home"
+    ]
+  },
+  "faq": [
+    {
+      "q": "Do you manage our Facebook and Instagram for us?",
+      "a": "No. We set up the system and your own team runs it. We do not post daily on your behalf."
+    },
+    {
+      "q": "Can the AI post without asking me?",
+      "a": "No. The AI drafts and a person approves. A post is scheduled only after approval."
+    },
+    {
+      "q": "Does it connect to my booking software?",
+      "a": "We do not promise that. The automatic reply sends customers to the booking link or phone number you already use."
+    },
+    {
+      "q": "Can we get the automation without a brand package?",
+      "a": "It is an add-on to our Start, Build or Refresh package, because the assistant needs a clear brand voice to learn. If you already have a brand, Refresh starts from what you have."
+    },
+    {
+      "q": "What does it cost, and how do we start?",
+      "a": "Email <a href=\"{{mail}}\">hello@bunchasake.com</a> about your salon. After a 60-minute conversation, we send a proposal and a quote."
+    }
+  ],
+  "cta": {
+    "h2": "Keep the page alive while you do nails",
+    "p": "Tell us about your salon and how you post today. We prepare our questions and set up a 60-minute conversation.",
+    "subject": "Social media automation for my nail salon"
+  },
+  "related": [
+    "nail-salon-social-media-content-ideas",
+    "nail-salon-instagram-content-ideas",
+    "how-to-get-more-nail-clients",
+    "ai-content-calendar-for-small-business"
+  ]
+}

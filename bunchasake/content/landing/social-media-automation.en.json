@@ -1,0 +1,120 @@
+{
+  "slug": "social-media-automation",
+  "title": "Social media automation for small business | Bunchasake",
+  "description": "We build your social media system once: an AI assistant in your brand voice, a 30-day calendar, scheduling and inbox replies. Your own team runs it.",
+  "kicker": "Add-on to any brand package",
+  "h1": "Social media automation for small business, <em>built for you</em>",
+  "lead": "Social media automation for small business works when it is built around your brand. We set it up once, then your own team runs Facebook, TikTok and Instagram with it.",
+  "problems": {
+    "title": "Does this sound like your week?",
+    "items": [
+      {
+        "q": "We know we should post. There is never time.",
+        "p": "You serve customers all day. By evening nobody wants to write a caption, and the page goes quiet."
+      },
+      {
+        "q": "I tried AI. It sounded like everyone else.",
+        "p": "Without a brief, AI writes generic posts. It has to know your story and the words you really use."
+      },
+      {
+        "q": "We answer the same five questions all day.",
+        "p": "Opening hours, address, how to book. A slow reply can send a customer to someone else."
+      }
+    ]
+  },
+  "services": {
+    "title": "What we set up for you",
+    "intro": "Five parts, built once, then run by your own team.",
+    "items": [
+      {
+        "t": "Your own AI assistant",
+        "p": "An AI marketing assistant for your small business, trained on your brand voice so drafts sound like you."
+      },
+      {
+        "t": "A 30-day content calendar",
+        "p": "An AI content calendar: a month of posts planned around your key messages."
+      },
+      {
+        "t": "AI drafts, you approve",
+        "p": "The assistant writes the AI social media content. A person on your team approves every post."
+      },
+      {
+        "t": "Automated social media posting",
+        "p": "Approved posts are scheduled automatically for Facebook, TikTok and Instagram."
+      },
+      {
+        "t": "Automatic inbox replies",
+        "p": "Social media inbox automation answers common questions, like opening hours or how to book."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "h2": "How social media automation for small business works",
+      "html": "<p>Most owners do not need someone to post for them forever. They need a system light enough to keep going. So we build this social media automation service once, around your brand, and then it is yours.</p><p>A normal week for your team:</p><ul><li>The 30-day calendar already says what this week's posts are about.</li><li>The AI assistant drafts them in your voice, in English, Vietnamese or both.</li><li>One person reads each draft and approves it. Nothing is published without that yes.</li><li>Approved posts are scheduled automatically. Common inbox questions get an automatic reply, and complaints still go to a person.</li></ul><p>What we do not do: post on your behalf every day, or run ads. Platform features vary by account and change over time, so we set up what your accounts support. See <a href=\"{{landing:social-media-automation-for-nail-salons}}\">social media automation for nail salons</a> and <a href=\"{{landing:social-media-automation-for-restaurants}}\">social media automation for restaurants</a>.</p>"
+    },
+    {
+      "h2": "Why Facebook, Instagram and TikTok automation starts with your brand",
+      "html": "<p>An AI assistant can only sound like you if it knows who you are. Without a clear brand voice it guesses, and your posts read like every other page in your industry.</p><p>That is why the automation is an add-on to the Start, Build or Refresh package. The brand work gives the AI what it needs:</p><ul><li><strong>Positioning:</strong> who you are for and how you are different. This shapes your calendar's themes.</li><li><strong>Story and key messages:</strong> the things worth repeating, in your own words.</li><li><strong>Voice and guidelines:</strong> how you speak and how your posts should look.</li></ul><p>For Vietnamese owners abroad, our page on <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">marketing for Vietnamese businesses overseas</a> explains the brand side. To plan a month yourself, read our guide to an <a href=\"{{blog:ai-content-calendar-for-small-business}}\">AI content calendar for small business</a>.</p>"
+    }
+  ],
+  "process": {
+    "title": "Four steps, and you approve each one",
+    "items": [
+      {
+        "t": "Listening",
+        "p": "A 60-minute conversation with you, then a study of your customers and competitors. We note the words you use."
+      },
+      {
+        "t": "Positioning",
+        "p": "Who the brand is, who it is for, how it is different. Key messages become calendar themes."
+      },
+      {
+        "t": "Identity",
+        "p": "Logo, colours, typography and voice, in easy guidelines. Your AI assistant is trained on this voice."
+      },
+      {
+        "t": "Touchpoints",
+        "p": "Website, signage, cards, social media templates. The automation is added here, so every post speaks with one voice."
+      }
+    ]
+  },
+  "work": {
+    "title": "Brands we have worked with",
+    "intro": "Brand projects, the base any automation stands on: a restaurant, a home services company in Hanoi and a hospitality brand.",
+    "items": ["chop-chop", "viet-my-clean-home", "navi-living"]
+  },
+  "faq": [
+    {
+      "q": "Do you post for us or run our ads?",
+      "a": "No. We build the system and your own team runs it, approving each draft before it is scheduled. We do not post on your behalf every day and we do not run ads."
+    },
+    {
+      "q": "Can I get the automation without a brand package?",
+      "a": "It is an add-on to Start, Build or Refresh, because the AI needs a clear brand voice to sound like you. Already have a logo you like? Refresh keeps what works."
+    },
+    {
+      "q": "Will the content be in English and Vietnamese?",
+      "a": "Yes, if your customers need both. We work in Vietnamese and English. See our guide to <a href=\"{{blog:bilingual-marketing-for-vietnamese-businesses-abroad}}\">bilingual marketing for Vietnamese businesses abroad</a>."
+    },
+    {
+      "q": "Which tools do you use?",
+      "a": "We do not name tools here: the right setup depends on your accounts and what your team finds easy. We only set up what your accounts support."
+    },
+    {
+      "q": "What does it cost?",
+      "a": "The quote comes after the first conversation: 60 minutes, online or in person. Email <a href=\"{{mail}}\">hello@bunchasake.com</a> to start."
+    }
+  ],
+  "cta": {
+    "h2": "Tell us your story. We build the system around it.",
+    "p": "Email us a few lines about your business. We will read them and prepare questions for a 60-minute conversation.",
+    "subject": "Social media automation for my business"
+  },
+  "related": [
+    "ai-content-calendar-for-small-business",
+    "nail-salon-social-media-content-ideas",
+    "restaurant-instagram-content-ideas",
+    "bilingual-marketing-for-vietnamese-businesses-abroad"
+  ]
+}

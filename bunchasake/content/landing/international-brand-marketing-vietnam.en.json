@@ -1,0 +1,119 @@
+{
+  "slug": "international-brand-marketing-vietnam",
+  "title": "Vietnam Brand Agency for International Markets | Bunchasake",
+  "description": "We help Vietnamese brands enter Europe and the US: positioning for the new market, identity, English brand voice and a website buyers abroad understand.",
+  "kicker": "For Vietnamese brands going international",
+  "h1": "A Vietnamese brand agency for international markets, <em>seen from both sides</em>",
+  "lead": "A good product is not enough abroad. As a Vietnamese brand agency for international markets, we shape your story, name, look and English voice for a buyer in Milan or Berlin.",
+  "problems": {
+    "title": "What holds a Vietnamese brand back abroad",
+    "items": [
+      {
+        "q": "It sells well at home. Abroad, nobody replies.",
+        "p": "A buyer in Europe has never heard of you. Without a clear story and a credible look, the email gets skipped."
+      },
+      {
+        "q": "Our English was translated word for word.",
+        "p": "The grammar may be right while the tone is not. What sounds respectful in Vietnamese can read as vague in English."
+      },
+      {
+        "q": "Our name and packaging only make sense in Vietnam.",
+        "p": "A name that is hard to say, or a design full of local references, asks the buyer to do extra work."
+      }
+    ]
+  },
+  "services": {
+    "title": "What we build for the new market",
+    "intro": "You approve each part before we move on.",
+    "items": [
+      {
+        "t": "Positioning for the new market",
+        "p": "Who the brand is for a buyer abroad, and how it differs from the names they already know."
+      },
+      {
+        "t": "Brand identity",
+        "p": "Name if needed, logo, colours and typography, packed into easy-to-use guidelines."
+      },
+      {
+        "t": "English and Vietnamese brand voice",
+        "p": "How the brand speaks English without losing what makes it Vietnamese."
+      },
+      {
+        "t": "Website and key touchpoints",
+        "p": "Website, packaging, company profile and business cards a buyer in another country can read and trust."
+      },
+      {
+        "t": "Social Media Automation, built for you",
+        "p": "An add-on: an AI assistant trained on your brand voice, a 30-day content calendar, scheduled posts and automatic inbox replies. Your own team runs it."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "h2": "Why work with a Vietnamese brand agency for international markets",
+      "html": "<p>We are a Vietnamese studio working between Vietnam and Italy. We know how a founder in Vietnam tells the story, and we see how a customer in Europe hears it. That view from both sides is what cross-border marketing from Vietnam often lacks.</p><p>Before any design work, we look at the brand the way a buyer abroad would:</p><ul><li>Can they say and remember the name?</li><li>Does the story answer: why buy from a company I have never heard of?</li><li>Does the identity hold up next to the brands already on that shelf?</li><li>Does the website answer their first questions in clear English?</li></ul><p>For a Vietnam to Europe market entry, have these answers ready before the first trade fair. Our article on <a href=\"{{blog:how-vietnamese-brands-can-enter-european-markets}}\">how Vietnamese brands can enter European markets</a> walks through the steps.</p>"
+    },
+    {
+      "h2": "English content for Vietnamese brands, written for the buyer",
+      "html": "<p>English content for Vietnamese brands usually starts as a translation. The words are correct, but the page still reads like a brochure for the home market.</p><p>Take a furniture maker in Bình Dương selling to Germany. <em>High quality, reasonable price, prestige</em> tells the buyer nothing. Which wood, who makes it, what they can count on: that is a voice a buyer remembers.</p><p>So we set the key messages during positioning, then write the brand voice in English and Vietnamese: how the brand introduces itself, which words it uses and avoids, how formal it is. Your team applies it on the website, company profile, packaging and in the <a href=\"{{landing:social-media-automation}}\">social media automation system</a>.</p><p>Already running a business abroad? See our page for <a href=\"{{landing:vietnamese-diaspora-brand-marketing}}\">Vietnamese business owners abroad</a>.</p>"
+    }
+  ],
+  "process": {
+    "title": "Four steps, and you approve after each",
+    "items": [
+      {
+        "t": "Listening",
+        "p": "A 60-minute conversation with the founder, then we study customers and competitors in the new market."
+      },
+      {
+        "t": "Positioning",
+        "p": "Who the brand is in that market, who it is for and how it is different, with the story and key messages."
+      },
+      {
+        "t": "Identity",
+        "p": "Name if needed, logo, colours, typography and voice, packed into easy-to-use guidelines."
+      },
+      {
+        "t": "Touchpoints",
+        "p": "Website, packaging, company profile and post templates, all speaking with one voice."
+      }
+    ]
+  },
+  "work": {
+    "title": "Brands we have worked with in Italy and in hospitality",
+    "intro": "Three of the brands we have worked with: Borgo Villa Nemec, a villa in Italy; Impact Investments, an investment company in Italy; NA-VI Living, a hospitality brand.",
+    "items": ["borgo-villa-nemec", "impact-investments", "navi-living"]
+  },
+  "faq": [
+    {
+      "q": "We are in Vietnam. How do we work with you?",
+      "a": "Online, or in person where possible. You email us, we have a 60-minute conversation, then you receive a proposal and quote."
+    },
+    {
+      "q": "Do you write in English or in Vietnamese?",
+      "a": "Both. We listen to the founder in Vietnamese and write the brand voice for buyers in English."
+    },
+    {
+      "q": "Are you an international marketing agency in Vietnam that runs ads abroad?",
+      "a": "No. We do not run ads, book influencers or arrange distribution. We build the brand those efforts rely on."
+    },
+    {
+      "q": "We already have a logo and packaging. Must we start again?",
+      "a": "Not necessarily. The Refresh package audits the current brand, repositions it for the new market, and refreshes the identity and the touchpoints in use."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "It depends on the package: Start, Build or Refresh. The quote comes after the first conversation."
+    }
+  ],
+  "cta": {
+    "h2": "Your story, understood in a new market.",
+    "p": "Email us about your brand and the market you have in mind, and we will prepare questions for a first conversation.",
+    "subject": "Taking our brand international"
+  },
+  "related": [
+    "how-vietnamese-brands-can-enter-european-markets",
+    "bilingual-marketing-for-vietnamese-businesses-abroad",
+    "ai-content-calendar-for-small-business"
+  ]
+}

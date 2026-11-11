@@ -1,12 +1,28 @@
-<title>Bunchasake</title>
-<meta name="description" content="Bunchasake – brand builder and growth partner. You have the story. We turn it into a brand.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!doctype html>
+<html lang="vi" data-lang="vi"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bunchasake | Xây thương hiệu &amp; tăng trưởng cho doanh nghiệp Việt</title>
+<meta name="description" content="Bunchasake xây thương hiệu và tự động hoá social media cho chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt ra quốc tế. Song ngữ Việt – Anh.">
+<link rel="canonical" href="https://bunchasake.com/vi/">
+<link rel="alternate" hreflang="en" href="https://bunchasake.com/">
+<link rel="alternate" hreflang="vi" href="https://bunchasake.com/vi/">
+<link rel="alternate" hreflang="x-default" href="https://bunchasake.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bunchasake">
+<meta property="og:title" content="Bunchasake | Xây thương hiệu &amp; tăng trưởng cho doanh nghiệp Việt">
+<meta property="og:description" content="Bunchasake xây thương hiệu và tự động hoá social media cho chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt ra quốc tế. Song ngữ Việt – Anh.">
+<meta property="og:url" content="https://bunchasake.com/vi/">
+<meta property="og:image" content="https://bunchasake.com/og.png">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Playfair+Display:wght@500&family=Anton&family=Baloo+2:wght@800&family=Be+Vietnam+Pro:wght@500;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;display=swap">
 <style>
 /* Layout: studio nền đen. Hero chữ lớn ghép serif nghiêng; ngay dưới là Brand Lab tương tác (form trái, bảng thương hiệu phải) làm khoảnh khắc chính; sau đó vấn đề → quy trình dính (sticky) → gói → automation → dự án → đội ngũ → FAQ → thẻ liên hệ trắng */
 :root {
@@ -111,92 +127,6 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .sec-head h2 .it { color: var(--muted); }
 .sec-head p { color: var(--muted); max-width: 46ch; font-size: 15px; font-weight: 300; justify-self: end; }
 @media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; } .sec-head p { justify-self: start; } }
-
-/* ===== Brand Lab ===== */
-.lab-wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); gap: clamp(20px, 3vw, 40px); padding-top: clamp(28px, 4vw, 48px); align-items: start; }
-.lab-form { position: sticky; top: 92px; display: grid; gap: 22px; background: var(--raise); border: 1px solid var(--line); border-radius: 20px; padding: clamp(20px, 2.4vw, 32px); min-width: 0; }
-.lab-form .field { display: grid; gap: 10px; }
-.lab-form label, .lab-form legend { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding: 0; }
-.lab-form input[type="text"] { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line-strong); color: var(--ink); font: 500 clamp(24px, 2.4vw, 32px)/1.2 var(--sans); letter-spacing: -0.03em; padding: 6px 0 10px; border-radius: 0; }
-.lab-form input[type="text"]:focus { outline: none; border-bottom-color: var(--mark); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
-.chips legend { margin-bottom: 10px; }
-.chips label { position: relative; cursor: pointer; text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 400; color: var(--ink); }
-.chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
-.chips span { display: inline-block; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line-strong); transition: background .2s, color .2s, border-color .2s; }
-.chips label:hover span { border-color: var(--ink); }
-.chips input:checked + span { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.chips input:focus-visible + span { outline: 2px solid var(--mark); outline-offset: 3px; }
-.build-btn { all: unset; box-sizing: border-box; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--mark); color: #0A0A0A; font-weight: 600; font-size: 15px; padding: 16px 20px; border-radius: 14px; transition: transform .25s var(--ease), filter .2s; }
-.build-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
-.build-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-.build-btn kbd { font: inherit; font-size: 12px; opacity: .7; }
-.lab-note { font-size: 12px; color: var(--dim); line-height: 1.5; }
-
-.status { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; min-height: 26px; }
-.status span { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; padding: 5px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); transition: all .25s; }
-.status span.on { color: #0A0A0A; background: var(--ink); border-color: var(--ink); }
-.status span.done { color: var(--ink); border-color: var(--line-strong); }
-
-.board { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; min-width: 0; }
-.tile { border-radius: 16px; background: var(--raise); border: 1px solid var(--line); padding: 18px; min-width: 0; overflow: hidden; position: relative; }
-.tile .t { position: absolute; top: 14px; left: 16px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; opacity: .65; }
-.board.building .tile { animation: tileIn .7s var(--ease) both; }
-.board.building .tile:nth-child(2) { animation-delay: .08s; }
-.board.building .tile:nth-child(3) { animation-delay: .16s; }
-.board.building .tile:nth-child(4) { animation-delay: .24s; }
-.board.building .tile:nth-child(5) { animation-delay: .32s; }
-.board.building .tile:nth-child(6) { animation-delay: .40s; }
-.board.building .tile:nth-child(7) { animation-delay: .48s; }
-.board.building .tile:nth-child(8) { animation-delay: .56s; }
-@keyframes tileIn { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
-
-.t-logo { grid-column: span 4; min-height: 260px; display: grid; place-items: center; text-align: center; gap: 14px; transition: background .5s; }
-.t-logo .mark { width: 72px; height: 72px; }
-.t-logo .word { font-size: clamp(30px, 3.6vw, 56px); line-height: 1; word-break: break-word; }
-.t-pal { grid-column: span 2; display: grid; grid-template-rows: repeat(4, 1fr); gap: 0; padding: 0; min-height: 260px; }
-.t-pal div { display: flex; align-items: flex-end; justify-content: space-between; padding: 8px 12px; font-size: 11px; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: .02em; transition: background .5s; }
-.t-type { grid-column: span 2; display: grid; gap: 6px; align-content: end; min-height: 170px; }
-.t-type .aa { font-size: 64px; line-height: 1; }
-.t-type .pair { font-size: 13px; color: var(--muted); }
-.t-pos { grid-column: span 2; display: grid; align-content: end; min-height: 170px; }
-.t-pos p { font: 400 clamp(16px, 1.3vw, 19px)/1.3 var(--serif); }
-.t-voice { grid-column: span 2; display: grid; align-content: end; gap: 8px; min-height: 170px; }
-.t-voice .w { display: flex; flex-wrap: wrap; gap: 6px; }
-.t-voice .w span { font-size: 13px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line-strong); }
-.t-card, .t-post, .t-web { grid-column: span 2; min-height: 190px; padding: 40px 14px 18px; display: grid; place-items: center; background: #1B1B1A; }
-.mini-card { width: 78%; aspect-ratio: 1.75; border-radius: 6px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px; padding: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.45); transform: rotate(-4deg); transition: background .5s; }
-.mini-card svg { width: 30px; height: 30px; }
-.mini-card b { font-size: 13px; line-height: 1.1; display: block; }
-.mini-card small { font-size: 8px; opacity: .7; display: block; margin-top: 4px; font-family: var(--sans); }
-.mini-post { width: 62%; aspect-ratio: 1; border-radius: 8px; padding: 12px; display: grid; align-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,.45); transform: rotate(3deg); transition: background .5s; }
-.mini-post p { font-size: 13px; line-height: 1.15; }
-.mini-post i { width: 14px; height: 14px; border-radius: 50%; display: block; }
-.mini-web { width: 84%; aspect-ratio: 1.5; border-radius: 6px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.45); display: grid; grid-template-rows: 14px 1fr; transition: background .5s; }
-.mini-web .bar { display: flex; gap: 3px; align-items: center; padding-inline: 6px; background: rgba(0,0,0,.18); }
-.mini-web .bar i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.6); }
-.mini-web .body { padding: 10px; display: grid; align-content: center; gap: 6px; }
-.mini-web .body b { font-size: 13px; line-height: 1.1; }
-.mini-web .body span { width: 40%; height: 8px; border-radius: 99px; display: block; }
-.lab-cta { margin-top: 18px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--line); }
-.lab-cta p { color: var(--muted); font-size: 14px; max-width: 46ch; }
-@media (max-width: 980px) {
-  .lab-wrap { grid-template-columns: 1fr; }
-  .lab-form { position: static; }
-}
-@media (max-width: 620px) {
-  .board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .t-logo { grid-column: span 2; min-height: 220px; }
-  .t-pal { grid-column: span 2; grid-template-rows: none; grid-template-columns: repeat(4, 1fr); min-height: 90px; }
-  .t-pal div { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
-  .t-type { grid-column: span 1; min-height: 140px; }
-  .t-pos { grid-column: span 2; min-height: 140px; order: -1; }
-  .t-logo, .t-pal { order: -2; }
-  .t-voice { grid-column: span 1; min-height: 140px; }
-  .t-card, .t-post { grid-column: span 1; min-height: 150px; }
-  .t-web { grid-column: span 2; min-height: 170px; }
-  .mini-web { width: 60%; }
-}
 
 /* ===== Vấn đề ===== */
 .pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -339,9 +269,9 @@ footer h2 .it { color: var(--muted); }
 .nav ul a.active { color: var(--ink); }
 .nav-r { display: flex; align-items: center; gap: 10px; }
 .lang { display: inline-flex; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); }
-.lang button { all: unset; cursor: pointer; font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 7px 10px; border-radius: 999px; color: var(--muted); }
-.lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
-.lang button:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
+.lang button, .lang a { all: unset; cursor: pointer; font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 7px 10px; border-radius: 999px; color: var(--muted); }
+.lang button[aria-pressed="true"], .lang a[aria-current="true"] { background: var(--ink); color: var(--bg); }
+.lang button:focus-visible, .lang a:focus-visible { outline: 2px solid var(--mark); outline-offset: 2px; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(36px, 5vw, 64px); border-top: 1px solid var(--line); animation: fade 1s .55s var(--ease) both; }
 .stats div { padding: 18px 20px 0 0; display: grid; gap: 4px; min-width: 0; }
 .stats div + div { padding-left: 20px; border-left: 1px solid var(--line); }
@@ -420,6 +350,19 @@ dialog.policy form { margin-top: 18px; }
 .why-body { font-size: 16px; font-weight: 300; color: var(--muted); max-width: 54ch; }
 @media (max-width: 820px) { .why-close { grid-template-columns: 1fr; } }
 
+/* ===== Dành cho ai ===== */
+.who { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; padding-top: clamp(28px, 4vw, 48px); }
+.who a { display: grid; gap: 10px; align-content: start; background: var(--raise); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px 20px; min-width: 0; transition: border-color .3s, transform .4s var(--ease); }
+.who a:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+.who b { font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; }
+.who span { font-size: 14px; color: var(--muted); font-weight: 300; }
+.who i { font-style: normal; color: var(--mark); margin-top: 6px; }
+.more { font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; }
+.more:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.who-foot { margin-top: 22px; display: flex; justify-content: flex-end; }
+@media (max-width: 1000px) { .who { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .who { grid-template-columns: 1fr; } }
+
 /* ===== Tăng trưởng (video) ===== */
 .grow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
 .grow-text { display: grid; gap: clamp(20px, 2.6vw, 32px); justify-items: start; }
@@ -446,10 +389,12 @@ dialog.policy form { margin-top: 18px; }
 .mail-copy:hover { border-color: var(--card-ink); }
 .mail-copy:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 </style>
+</head>
+<body>
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Brand-building studio that turns founders' stories into brands.","availableLanguage":["en","vi"],"areaServed":["VN","IT"]}</script>
+<div class="progress" id="progress" aria-hidden="true" style=""></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bunchasake.com/#org","name":"Bunchasake","url":"https://bunchasake.com/","logo":"https://bunchasake.com/apple-touch-icon.png","image":"https://bunchasake.com/og.png","email":"hello@bunchasake.com","slogan":"You run the business. We grow the brand.","description":"Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.","knowsLanguage":["vi","en"],"areaServed":["Vietnam","Italy","Worldwide (online)"],"knowsAbout":["Brand strategy","Brand identity","Bilingual Vietnamese and English content","Social media automation","Nail salon branding","Restaurant branding"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Dịch vụ","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiệm nail","url":"https://bunchasake.com/vi/marketing-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nhà hàng & F&B","url":"https://bunchasake.com/vi/marketing-nha-hang/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Doanh nghiệp Việt ở nước ngoài","url":"https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thương hiệu Việt ra quốc tế","url":"https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tự động hoá social media","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation cho tiệm nail","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation cho nhà hàng","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/"}}]}},{"@type":"WebSite","@id":"https://bunchasake.com/#website","url":"https://bunchasake.com/","name":"Bunchasake","inLanguage":["en","vi"],"publisher":{"@id":"https://bunchasake.com/#org"}}]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Bunchasake <i>Brand Builder · Growth Partner</i></a>
@@ -461,10 +406,7 @@ dialog.policy form { margin-top: 18px; }
     <li><a href="#du-an">Dự án</a></li>
   </ul>
   <div class="nav-r">
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
-      <button type="button" data-lang="vi" aria-pressed="false" lang="vi">VI</button>
-    </div>
+    <div class="lang" role="group" aria-label="Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/vi/" hreflang="vi" lang="vi" aria-current="true">VI</a></div>
     <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
   </div>
 </header>
@@ -492,7 +434,7 @@ dialog.policy form { margin-top: 18px; }
   </section>
 
   <div class="marquee bleed" aria-label="Những thương hiệu đã đồng hành">
-    <div class="marquee-track" id="marquee"></div>
+    <div class="marquee-track" id="marquee"><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span></div>
   </div>
 
   <!-- Vì sao là câu chuyện -->
@@ -520,7 +462,23 @@ dialog.policy form { margin-top: 18px; }
       <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
       <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="grow-video"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
+    <div class="grow-video"><video class="logo-video" src="/work/lab-video.mp4" poster="/work/lab-video-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
+  </section>
+
+  <!-- Dành cho ai -->
+  <section class="sec" id="danh-cho-ai">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dành cho ai</span>
+      <h2>Thương hiệu Việt, <span class="it">ở bất cứ đâu.</span></h2>
+      <p>Chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt muốn vươn ra quốc tế.</p>
+    </div>
+    <div class="who">
+      <a href="/vi/marketing-tiem-nail/"><b>Tiệm nail</b><span>Thương hiệu và social media cho tiệm nail của người Việt ở nước ngoài.</span><i aria-hidden="true">→</i></a>
+      <a href="/vi/marketing-nha-hang/"><b>Nhà hàng &amp; F&amp;B</b><span>Kể câu chuyện món ăn để khách bản địa cũng tìm đến.</span><i aria-hidden="true">→</i></a>
+      <a href="/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"><b>Doanh nghiệp Việt ở nước ngoài</b><span>Chúng tôi nói tiếng Việt và xây thương hiệu song ngữ Việt – Anh.</span><i aria-hidden="true">→</i></a>
+      <a href="/vi/marketing-thuong-hieu-viet-ra-quoc-te/"><b>Thương hiệu Việt ra quốc tế</b><span>Định vị và nhận diện để bước vào thị trường mới.</span><i aria-hidden="true">→</i></a>
+    </div>
+    <div class="who-foot"><a class="more" href="/vi/blog/">Đọc blog →</a></div>
   </section>
 
   <!-- Quy trình -->
@@ -535,7 +493,27 @@ dialog.policy form { margin-top: 18px; }
         <div class="bignum" id="bignum">1<small>/ 4</small></div>
         <div class="track" id="track"><i class="on"></i><i></i><i></i><i></i></div>
       </div>
-      <div class="steps" id="steps"></div>
+      <div class="steps" id="steps">
+  <article class="step active" data-i="0">
+    <span class="n cap">Bước 1</span>
+    <h3>Lắng nghe</h3>
+    <p>Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ để biết thương hiệu đang đứng ở đâu.</p>
+  </article>
+  <article class="step" data-i="1">
+    <span class="n cap">Bước 2</span>
+    <h3>Định vị</h3>
+    <p>Thương hiệu là ai, cho ai, khác ai. Từ đó viết câu chuyện thương hiệu, thứ mà mọi kênh sau này đều kể lại.</p>
+  </article>
+  <article class="step" data-i="2">
+    <span class="n cap">Bước 3</span>
+    <h3>Nhận diện</h3>
+    <p>Cho câu chuyện một hình hài: tên (nếu cần), logo, màu sắc, kiểu chữ và giọng văn, gói trong một bộ quy chuẩn dễ dùng.</p>
+  </article>
+  <article class="step" data-i="3">
+    <span class="n cap">Bước 4</span>
+    <h3>Điểm chạm</h3>
+    <p>Đưa thương hiệu vào mọi nơi khách nhìn thấy, để từ website đến tấm danh thiếp đều nói cùng một giọng.</p>
+  </article></div>
     </div>
   </section>
 
@@ -600,6 +578,7 @@ dialog.policy form { margin-top: 18px; }
       <div><span class="n cap">05</span><b>Trả lời inbox tự động</b></div>
     </div>
     <div class="auto-foot" style="justify-content:flex-end">
+      <a class="more" href="/vi/tu-dong-hoa-social-media/">Xem chi tiết Automation →</a>
       <a class="pill ghost" href="#lien-he">Thêm Automation <span aria-hidden="true">↗</span></a>
     </div>
   </section>
@@ -611,7 +590,62 @@ dialog.policy form { margin-top: 18px; }
       <h2>Những câu chuyện <span class="it">đã thành thương hiệu.</span></h2>
       <p>Mỗi nơi một câu chuyện, một thương hiệu.</p>
     </div>
-    <div class="grid" id="work"></div>
+    <div class="grid" id="work">
+  <div class="card big">
+    <a class="img" href="https://www.facebook.com/thaichopchop" target="_blank" rel="noopener" aria-label="Chop Chop"><img src="/work/chop-chop.jpg" alt="Chop Chop" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Chop Chop</h3><a class="ch" href="https://www.facebook.com/thaichopchop" target="_blank" rel="noopener">Facebook ↗</a></div>
+    <p>Nhà hàng</p>
+  </div>
+  <div class="card big">
+    <a class="img" href="https://borgovillanemec.it/" target="_blank" rel="noopener" aria-label="Borgo Villa Nemec"><img src="/work/borgo-villa-nemec.svg" alt="Borgo Villa Nemec" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Borgo Villa Nemec</h3><a class="ch" href="https://borgovillanemec.it/" target="_blank" rel="noopener">Website ↗</a></div>
+    <p>Villa · Ý</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://impactinvestments.it/en/" target="_blank" rel="noopener" aria-label="Impact Investments"><img src="/work/impact-investments.jpg" alt="Impact Investments" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Impact Investments</h3><a class="ch" href="https://impactinvestments.it/en/" target="_blank" rel="noopener">Website ↗</a></div>
+    <p>Đầu tư · Ý</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.facebook.com/Dichvudonnhataihanoi" target="_blank" rel="noopener" aria-label="Viet My Clean Home"><img src="/work/viet-my-clean-home.jpg" alt="Viet My Clean Home" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Viet My Clean Home</h3><a class="ch" href="https://www.facebook.com/Dichvudonnhataihanoi" target="_blank" rel="noopener">Facebook ↗</a></div>
+    <p>Dịch vụ gia đình · Hà Nội</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener" aria-label="Bác Sĩ Ánh"><img src="/work/bac-si-anh.jpg" alt="Bác Sĩ Ánh" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Bác Sĩ Ánh</h3><a class="ch" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook ↗</a></div>
+    <p>Y tế · Thương hiệu cá nhân</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.instagram.com/canastodeflores/" target="_blank" rel="noopener" aria-label="Canasto de Flores"><img src="/work/canasto-de-flores.jpg" alt="Canasto de Flores" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Canasto de Flores</h3><a class="ch" href="https://www.instagram.com/canastodeflores/" target="_blank" rel="noopener">Instagram ↗</a></div>
+    <p>Hoa tươi · Cảnh quan</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.lachongshop.com/" target="_blank" rel="noopener" aria-label="Lạc Hồng"><img src="/work/lac-hong.jpg" alt="Lạc Hồng" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Lạc Hồng</h3><a class="ch" href="https://www.lachongshop.com/" target="_blank" rel="noopener">Website ↗</a></div>
+    <p>Máy xây dựng</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://youtube.com/@Talk2TheTop" target="_blank" rel="noopener" aria-label="Talk2TheTop"><img src="/work/talk2thetop.jpg" alt="Talk2TheTop" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Talk2TheTop</h3><a class="ch" href="https://youtube.com/@Talk2TheTop" target="_blank" rel="noopener">YouTube ↗</a></div>
+    <p>Podcast</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.naviliving.com/" target="_blank" rel="noopener" aria-label="NA-VI Living"><img src="/work/navi-living.jpg" alt="NA-VI Living" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>NA-VI Living</h3><a class="ch" href="https://www.naviliving.com/" target="_blank" rel="noopener">Website ↗</a></div>
+    <p>Lưu trú</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://www.instagram.com/vestra_place/" target="_blank" rel="noopener" aria-label="Vestra Place"><img src="/work/vestra-place.jpg" alt="Vestra Place" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Vestra Place</h3><a class="ch" href="https://www.instagram.com/vestra_place/" target="_blank" rel="noopener">Instagram ↗</a></div>
+    <p>Coworking</p>
+  </div>
+  <div class="card">
+    <a class="img" href="https://vinaktv.com/" target="_blank" rel="noopener" aria-label="Vina KTV"><img src="/work/vina-ktv.jpg" alt="Vina KTV" loading="lazy" width="900" height="675"><span class="view cap">Xem ↗</span></a>
+    <div class="top"><h3>Vina KTV</h3><a class="ch" href="https://vinaktv.com/" target="_blank" rel="noopener">Website ↗</a></div>
+    <p>Thiết bị âm thanh</p>
+  </div></div>
   </section>
 
 </main>
@@ -628,7 +662,7 @@ dialog.policy form { margin-top: 18px; }
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">Tăng trưởng</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a></nav>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">Tăng trưởng</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -669,6 +703,19 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---------- Ngôn ngữ (VI / EN) ---------- */
 const EN = {
+"<span class=\"dot\" aria-hidden=\"true\"></span>Dành cho ai": "<span class=\"dot\" aria-hidden=\"true\"></span>Who we work with",
+"Thương hiệu Việt, <span class=\"it\">ở bất cứ đâu.</span>": "Vietnamese brands, <span class=\"it\">wherever they are.</span>",
+"Chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt muốn vươn ra quốc tế.": "Vietnamese business owners abroad, and Vietnamese brands going global.",
+"Tiệm nail": "Nail salons",
+"Thương hiệu và social media cho tiệm nail của người Việt ở nước ngoài.": "Brand and social media for Vietnamese-owned nail salons abroad.",
+"Nhà hàng &amp; F&amp;B": "Restaurants &amp; food",
+"Kể câu chuyện món ăn để khách bản địa cũng tìm đến.": "Tell the story of your food so local diners come too.",
+"Doanh nghiệp Việt ở nước ngoài": "Vietnamese businesses abroad",
+"Chúng tôi nói tiếng Việt và xây thương hiệu song ngữ Việt – Anh.": "We speak Vietnamese and build your brand in Vietnamese and English.",
+"Thương hiệu Việt ra quốc tế": "Vietnamese brands going global",
+"Định vị và nhận diện để bước vào thị trường mới.": "Positioning and identity for a new market.",
+"Đọc blog →": "Read the blog →",
+"Xem chi tiết Automation →": "More about Automation →",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Vì sao là câu chuyện": "<span class=\"dot\" aria-hidden=\"true\"></span>Why the story",
 "Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class=\"it\">Ở câu chuyện tạo nên nó.</span>": "What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class=\"it\">The story behind it.</span>",
 "Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b>": "People don't really buy a product or a service. <b>They buy the story behind it.</b>",
@@ -801,13 +848,15 @@ const EN_ATTR = {
 "Vì sao bạn bắt đầu? Vài dòng là đủ.": "Why did you start? A few lines is enough."
 };
 const norm = h => h.replace(/\s+/g, " ").trim();
-let LANG = "en";
-try { LANG = localStorage.getItem("bsk-lang") === "vi" ? "vi" : "en"; } catch {}
+const PRE = document.documentElement.dataset.lang; /* trang đã dựng sẵn theo ngôn ngữ (bunchasake.com) */
+let LANG = PRE || "en";
+if (!PRE) try { LANG = localStorage.getItem("bsk-lang") === "vi" ? "vi" : "en"; } catch {}
 const t = (vi, en) => LANG === "en" ? en : vi;
 const tr = o => LANG === "en" && o.en ? { ...o, ...o.en } : o;
 const ENN = {}; for (const k in EN) ENN[norm(k)] = EN[k];
 let staticEls = null;
 function applyStatic() {
+  if (PRE) return;
   if (!staticEls) {
     staticEls = [];
     document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
@@ -823,17 +872,17 @@ function applyStatic() {
 
 /* ---------- Dữ liệu ---------- */
 const projects = [
-  { name: "Chop Chop", sector: "Nhà hàng", sectorEn: "Restaurant", img: "work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook", big: true },
-  { name: "Borgo Villa Nemec", sector: "Villa · Ý", sectorEn: "Villa · Italy", img: "work/borgo-villa-nemec.svg", url: "https://borgovillanemec.it/", ch: "Website", big: true },
-  { name: "Impact Investments", sector: "Đầu tư · Ý", sectorEn: "Investment · Italy", img: "work/impact-investments.jpg", url: "https://impactinvestments.it/en/", ch: "Website" },
-  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình · Hà Nội", sectorEn: "Home services · Hanoi", img: "work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", ch: "Facebook" },
-  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", sectorEn: "Healthcare · Personal brand", img: "work/bac-si-anh.jpg", url: "https://www.facebook.com/profile.php?id=61596245068595", ch: "Facebook" },
-  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", sectorEn: "Flowers · Landscaping", img: "work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", ch: "Instagram" },
-  { name: "Lạc Hồng", sector: "Máy xây dựng", sectorEn: "Construction machinery", img: "work/lac-hong.jpg", url: "https://www.lachongshop.com/", ch: "Website" },
-  { name: "Talk2TheTop", sector: "Podcast", sectorEn: "Podcast", img: "work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", ch: "YouTube" },
-  { name: "NA-VI Living", sector: "Lưu trú", sectorEn: "Hospitality", img: "work/navi-living.jpg", url: "https://www.naviliving.com/", ch: "Website" },
-  { name: "Vestra Place", sector: "Coworking", sectorEn: "Coworking", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
-  { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
+  { name: "Chop Chop", sector: "Nhà hàng", sectorEn: "Restaurant", img: "/work/chop-chop.jpg", url: "https://www.facebook.com/thaichopchop", ch: "Facebook", big: true },
+  { name: "Borgo Villa Nemec", sector: "Villa · Ý", sectorEn: "Villa · Italy", img: "/work/borgo-villa-nemec.svg", url: "https://borgovillanemec.it/", ch: "Website", big: true },
+  { name: "Impact Investments", sector: "Đầu tư · Ý", sectorEn: "Investment · Italy", img: "/work/impact-investments.jpg", url: "https://impactinvestments.it/en/", ch: "Website" },
+  { name: "Viet My Clean Home", sector: "Dịch vụ gia đình · Hà Nội", sectorEn: "Home services · Hanoi", img: "/work/viet-my-clean-home.jpg", url: "https://www.facebook.com/Dichvudonnhataihanoi", ch: "Facebook" },
+  { name: "Bác Sĩ Ánh", sector: "Y tế · Thương hiệu cá nhân", sectorEn: "Healthcare · Personal brand", img: "/work/bac-si-anh.jpg", url: "https://www.facebook.com/profile.php?id=61596245068595", ch: "Facebook" },
+  { name: "Canasto de Flores", sector: "Hoa tươi · Cảnh quan", sectorEn: "Flowers · Landscaping", img: "/work/canasto-de-flores.jpg", url: "https://www.instagram.com/canastodeflores/", ch: "Instagram" },
+  { name: "Lạc Hồng", sector: "Máy xây dựng", sectorEn: "Construction machinery", img: "/work/lac-hong.jpg", url: "https://www.lachongshop.com/", ch: "Website" },
+  { name: "Talk2TheTop", sector: "Podcast", sectorEn: "Podcast", img: "/work/talk2thetop.jpg", url: "https://youtube.com/@Talk2TheTop", ch: "YouTube" },
+  { name: "NA-VI Living", sector: "Lưu trú", sectorEn: "Hospitality", img: "/work/navi-living.jpg", url: "https://www.naviliving.com/", ch: "Website" },
+  { name: "Vestra Place", sector: "Coworking", sectorEn: "Coworking", img: "/work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
+  { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "/work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
   { en: { name: "Listening", desc: "We talk with the founder: why you started and what you believe in. We study your customers and competitors to see where the brand stands." }, name: "Lắng nghe", desc: "Trò chuyện với người sáng lập: vì sao bắt đầu, tin vào điều gì. Tìm hiểu khách hàng và đối thủ để biết thương hiệu đang đứng ở đâu.", items: ["Buổi trò chuyện 60 phút", "Khảo sát khách hàng", "Bản đồ đối thủ"], ai: "Đọc và tổng hợp review, nội dung của đối thủ trong vài giờ." },
@@ -939,5 +988,9 @@ function setLang(l) {
   renderSteps(); renderWork();
 }
 document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
-if (LANG !== "vi") setLang(LANG); else applyStatic();
+if (!PRE) { if (LANG !== "vi") setLang(LANG); else applyStatic(); }
 </script>
+
+
+
+</body></html>

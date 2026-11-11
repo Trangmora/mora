@@ -1,0 +1,123 @@
+{
+  "slug": "tu-dong-hoa-social-media-nha-hang",
+  "title": "Tự động hóa social media cho nhà hàng | Bunchasake",
+  "description": "Tự động hóa social media cho nhà hàng: trợ lý AI, lịch nội dung 30 ngày, bài nháp để bạn duyệt, tự đăng bài, tự trả lời tin nhắn. Team của bạn vận hành.",
+  "kicker": "Phần thêm cho nhà hàng, quán cà phê và tiệm ăn uống",
+  "h1": "Tự động hóa social media cho nhà hàng, <em>team của bạn tự vận hành</em>",
+  "lead": "Tự động hóa social media cho nhà hàng nghĩa là bài đăng cả tháng được lên kế hoạch, viết nháp và hẹn giờ sẵn mà bạn không phải rời gian bếp. Chúng tôi dựng hệ thống theo đúng giọng của quán, team của bạn vận hành trên Facebook, Instagram và TikTok.",
+  "problems": {
+    "title": "Vì sao trang của quán hay bị bỏ trống",
+    "items": [
+      {
+        "q": "Nhớ thì đăng, bận thì thôi.",
+        "p": "Cuối tuần đông khách là không có bài nào, rồi một đêm đăng liền ba bài. Khách xem trang trước khi chọn chỗ ăn chỉ thấy bài từ tháng trước."
+      },
+      {
+        "q": "Viết một caption mất cả nửa tiếng.",
+        "p": "Món thì bạn thuộc lòng, nhưng viết về nó bằng hai thứ tiếng sau mười hai tiếng đứng bếp lại là chuyện khác."
+      },
+      {
+        "q": "Inbox ngày nào cũng hỏi mấy câu đó.",
+        "p": "Giờ mở cửa, địa chỉ, menu, cách đặt bàn. Câu trả lời không đổi, nhưng vẫn phải có người gõ lại giữa giờ đông khách."
+      }
+    ]
+  },
+  "services": {
+    "title": "Năm phần của tự động hóa social media cho nhà hàng",
+    "intro": "Vẫn là hệ thống chúng tôi dựng cho doanh nghiệp nhỏ, nhưng xoay quanh menu và một ngày làm việc của quán.",
+    "items": [
+      {
+        "t": "Trợ lý AI hiểu quán của bạn",
+        "p": "Được nạp sẵn menu, câu chuyện và giọng văn của quán, nên bài nháp về bún chả nghe ra gian bếp của bạn chứ không giống một trang ẩm thực chung chung."
+      },
+      {
+        "t": "Lịch nội dung 30 ngày",
+        "p": "Một tháng bài đăng lên sẵn, xen kẽ món tủ, khoảnh khắc trong bếp, con người của quán, món đặc biệt và câu hỏi của khách."
+      },
+      {
+        "t": "AI viết nháp, bạn duyệt",
+        "p": "Trợ lý viết nháp caption bằng tiếng Anh và tiếng Việt. Chủ quán đọc trên điện thoại lúc nghỉ giữa ca, sửa nếu cần rồi duyệt."
+      },
+      {
+        "t": "Tự lên lịch đăng bài",
+        "p": "Bài đã duyệt tự đăng đúng giờ trên Facebook, Instagram và TikTok, kể cả những tối không ai rảnh tay."
+      },
+      {
+        "t": "Tự động trả lời tin nhắn",
+        "p": "Câu hỏi thường gặp được trả lời ngay: giờ mở cửa, địa chỉ, menu, cách đặt bàn. Những câu khác chờ người thật trả lời."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "h2": "Lịch nội dung nhà hàng trong 30 ngày trông ra sao",
+      "html": "<p>Lịch chỉ có ích khi team của bạn làm theo được bằng một chiếc điện thoại và vài phút rảnh. Vì vậy chúng tôi xếp lịch quanh những việc vốn diễn ra trong quán, theo nhịp hằng tuần:</p><ul><li><strong>Món tủ:</strong> món khách quay lại để ăn, và gốc gác của món.</li><li><strong>Khoảnh khắc trong bếp:</strong> nồi nước dùng bắc lên từ sáng, rổ rau thơm vừa rửa, mẻ chả giò đang cuốn.</li><li><strong>Con người:</strong> chủ quán, đầu bếp, bạn phục vụ mà khách quen nhớ tên.</li><li><strong>Món đặc biệt:</strong> món cuối tuần, thực đơn theo mùa, dịp Tết hay Trung thu.</li><li><strong>Câu hỏi của khách:</strong> có cay không, có món chay không, ăn thế nào cho đúng.</li></ul><p>Mỗi ô trong lịch ghi rõ cần quay gì và caption nói về điều gì. Ảnh và video do team của bạn tự làm, vì chúng tôi không nhận chụp ảnh hay quay phim. Về cách làm chung, mời đọc bài <a href=\"{{blog:ai-content-calendar-for-small-business}}\">lịch nội dung AI cho doanh nghiệp nhỏ</a>.</p>"
+    },
+    {
+      "h2": "Quản lý fanpage nhà hàng: chúng tôi dựng hệ thống, bạn vận hành",
+      "html": "<p>Nhiều chủ quán tìm người quản lý fanpage nhà hàng trọn gói. Chúng tôi làm khác và nói rõ ngay từ đầu: không đăng bài hằng ngày thay bạn, không chạy quảng cáo, không trực trang thay quán. Chúng tôi dựng hệ thống, team của bạn vận hành, vì người biết mẻ bột bánh xèo vừa pha xong đang đứng trong bếp của bạn chứ không ngồi ở studio của chúng tôi.</p><p>Phần inbox cũng theo nguyên tắc đó. Tin nhắn tự động lo những câu có đáp án cố định như giờ mở cửa hay cách đặt bàn, rồi dẫn khách tới số điện thoại hoặc link đặt bàn quán đang dùng. Chúng tôi không hứa kết nối với phần mềm đặt bàn hay giao đồ ăn. Mỗi nền tảng cho phép trả lời tự động một kiểu và có thể thay đổi, nên chúng tôi cài theo những gì tài khoản của bạn đang có.</p><p>Đây là phần thêm đi cùng <a href=\"{{landing:restaurant-brand-marketing}}\">dịch vụ marketing nhà hàng</a>, vì trợ lý cần một câu chuyện và giọng văn rõ ràng để học theo. Xem thêm trang chung về <a href=\"{{landing:social-media-automation}}\">tự động hóa social media</a>.</p>"
+    }
+  ],
+  "process": {
+    "title": "Dựng hệ thống theo đúng bốn bước",
+    "items": [
+      {
+        "t": "Lắng nghe",
+        "p": "Buổi trò chuyện 60 phút với chủ quán, kèm việc xem menu, các trang đang có và những câu khách hay hỏi nhất."
+      },
+      {
+        "t": "Định vị",
+        "p": "Câu chuyện và thông điệp chính để trợ lý dựa vào: quán là ai, cho ai, khác ai."
+      },
+      {
+        "t": "Nhận diện",
+        "p": "Giọng văn tiếng Anh và tiếng Việt, kèm mẫu bài đăng đúng màu của quán."
+      },
+      {
+        "t": "Điểm chạm",
+        "p": "Chính là hệ thống: trợ lý, lịch nội dung, lịch đăng và tin nhắn tự động trên Facebook, Instagram, TikTok của quán."
+      }
+    ]
+  },
+  "work": {
+    "title": "Thương hiệu chúng tôi đã làm cùng",
+    "intro": "Chop Chop là nhà hàng, NA-VI Living thuộc ngành lưu trú, còn Canasto de Flores làm hoa tươi và cảnh quan.",
+    "items": [
+      "chop-chop",
+      "navi-living",
+      "canasto-de-flores"
+    ]
+  },
+  "faq": [
+    {
+      "q": "Bunchasake có quản lý fanpage thay quán không?",
+      "a": "Không. Chúng tôi dựng hệ thống, team của bạn vận hành: tự chụp ảnh, duyệt bài nháp và trả lời những tin nhắn cần người thật. Chưa biết quay gì, mời xem <a href=\"{{blog:restaurant-instagram-content-ideas}}\">ý tưởng content Instagram cho nhà hàng</a>."
+    },
+    {
+      "q": "Hệ thống có kết nối với phần mềm đặt bàn hay giao đồ ăn không?",
+      "a": "Chúng tôi không hứa điều đó. Tin nhắn tự động trả lời câu hỏi thường gặp và dẫn khách tới số điện thoại hoặc link đặt bàn quán đang dùng."
+    },
+    {
+      "q": "Caption có cả tiếng Anh và tiếng Việt không?",
+      "a": "Có. Trợ lý viết nháp cả hai thứ tiếng theo giọng văn đã thống nhất với bạn, còn mỗi bài dùng tiếng nào là do bạn chọn."
+    },
+    {
+      "q": "Lỡ AI viết sai về món ăn thì sao?",
+      "a": "Không bài nào được đăng khi chưa duyệt. AI làm phần nhanh, con người quyết định: chủ quán hoặc quản lý sửa hay bỏ bài nháp nào cũng được."
+    },
+    {
+      "q": "Chi phí bao nhiêu, tôi cần chuẩn bị gì?",
+      "a": "Báo giá có sau buổi trò chuyện đầu tiên. Bạn chuẩn bị menu, giờ mở cửa và những câu khách hay hỏi, rồi gửi email về <a href=\"{{mail}}\">hello@bunchasake.com</a>."
+    }
+  ],
+  "cta": {
+    "h2": "Để lịch đăng bài chạy trong lúc bạn đứng bếp",
+    "p": "Viết cho chúng tôi vài dòng về quán, chúng tôi sẽ chuẩn bị câu hỏi cho buổi trò chuyện 60 phút.",
+    "subject": "Tự động hóa social media cho nhà hàng của tôi"
+  },
+  "related": [
+    "restaurant-instagram-content-ideas",
+    "how-to-market-a-vietnamese-restaurant",
+    "ai-content-calendar-for-small-business"
+  ]
+}
