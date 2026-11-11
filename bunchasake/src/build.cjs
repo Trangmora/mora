@@ -12,6 +12,7 @@ const TODAY = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 const PUBLISHED = "2026-11-11";
 const INDEXNOW_KEY = "b7c1e0d94a6f4e2f9d3a58c06e1f72ab";
 const LANGS = ["en", "vi"];
+const CSS_V = require("crypto").createHash("md5").update(fs.readFileSync(path.join(__dirname, "lp.css"))).digest("hex").slice(0, 8);
 const warn = []; const W = m => { warn.push(m); };
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -132,7 +133,7 @@ ${alt(urls)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap">
-<link rel="stylesheet" href="/assets/lp.css">
+<link rel="stylesheet" href="/assets/lp.css?v=${CSS_V}">
 ${ldjson.map(ld).join("\n")}
 </head>
 <body${cls ? ` class="${cls}"` : ""}>
@@ -383,7 +384,7 @@ ${landingKeys.filter(k => landing[k].vi).map(k => `- [${LABEL[k]?.vi || k}](${OR
 ## Work
 Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.en})`).join(", ")}.
 `);
-  write("_headers", `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/work/*\n  Cache-Control: public, max-age=604800\n/assets/*\n  Cache-Control: public, max-age=86400\n`);
+  write("_headers", `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/work/*\n  Cache-Control: public, max-age=604800\n/assets/*\n  Cache-Control: public, max-age=300, must-revalidate\n`);
   write("_redirects", ["/index-3d", "/index-3d.html", "/page", "/page.html", "/admin", "/admin.html"].map(p => `${p} / 301`).join("\n") + "\n");
   write(INDEXNOW_KEY + ".txt", INDEXNOW_KEY + "\n");
 }
