@@ -388,6 +388,13 @@ dialog.policy form { margin-top: 18px; }
 .grow-text h2 { font-size: clamp(32px, 4.2vw, 62px); line-height: 1.02; letter-spacing: -0.05em; }
 .grow-text h2 .it { color: var(--muted); }
 .grow-video { border-radius: 20px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; background: #111; border: 1px solid var(--line); }
+.gp { grid-column: 1 / -1; list-style: none; margin: clamp(8px, 2vw, 24px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.gp li { padding: clamp(20px, 2.4vw, 32px) clamp(14px, 2vw, 28px) 0 0; display: grid; gap: 10px; align-content: start; }
+.gp li + li { padding-left: clamp(14px, 2vw, 28px); border-left: 1px solid var(--line); }
+.gp-n { font: 400 italic clamp(28px, 2.4vw, 38px)/.9 var(--serif); color: var(--mark); }
+.gp h3 { font-size: clamp(20px, 1.7vw, 26px); letter-spacing: -0.03em; font-weight: 500; }
+.gp p { color: var(--muted); font-weight: 300; font-size: 16px; line-height: 1.55; max-width: 36ch; }
+@media (max-width: 760px) { .gp { grid-template-columns: 1fr; } .gp li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 20px; } }
 .grow-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 860px) { .grow { grid-template-columns: 1fr; } }
 .hero-foot { grid-template-columns: minmax(0, 1fr); justify-items: start; }
@@ -424,7 +431,7 @@ dialog.policy form { margin-top: 18px; }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>Brand Builder · AI Growth Partner</i></a>
   <ul class="cap">
-    <li><a href="#growth">Tăng trưởng</a></li>
+    <li><a href="#growth">AI Growth</a></li>
     <li><a href="#cach-lam">Cách làm</a></li>
     <li><a href="#goi">Gói</a></li>
     <li><a href="#automation">AI Automation</a></li>
@@ -483,11 +490,12 @@ dialog.policy form { margin-top: 18px; }
   <!-- Tăng trưởng -->
   <section class="sec grow" id="growth">
     <div class="grow-text">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Growth Partner</span>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
       <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
       <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
     </div>
     <div class="grow-video"><video class="logo-video" src="/work/lab-video.mp4" poster="/work/lab-video-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
+      <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI đọc dữ liệu</h3><p>AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.</p></li><li><span class="gp-n">02</span><h3>AI làm việc hằng ngày</h3><p>Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.</p></li><li><span class="gp-n">03</span><h3>Người đồng hành</h3><p>Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.</p></li></ol>
   </section>
 
   <!-- Quy trình -->
@@ -699,7 +707,7 @@ dialog.policy form { margin-top: 18px; }
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">Tăng trưởng</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">AI Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a></nav>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">AI Growth</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">AI Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -766,6 +774,13 @@ const EN = {
 "Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.": "Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.",
 "Bỏ qua, tới nội dung": "Skip to content",
 "Tăng trưởng": "Growth",
+"AI đọc dữ liệu": "AI reads the data",
+"AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.": "AI analyses your channels, customers and competitors to show where the brand can grow.",
+"AI làm việc hằng ngày": "AI does the daily work",
+"Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.": "Drafts content, schedules posts and answers messages. You approve, the system runs.",
+"Người đồng hành": "A partner beside you",
+"Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.": "We track the results with you and adjust the strategy so the brand keeps growing.",
+
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
 "Cách làm": "How we work",
 "Gói": "Packages",
