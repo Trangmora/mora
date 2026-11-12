@@ -158,7 +158,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .step .line .k { color: var(--ink); font-weight: 500; }
 .step .ch { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; color: var(--muted); }
 .step .ch span { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-.step .ch span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); }
+.step .ch svg { width: 15px; height: 15px; flex: none; opacity: .85; }
 .step .pts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .step .pts .lead { font-size: 13px; color: var(--muted); }
 .step .pts .lead:empty { display: none; }
@@ -530,7 +530,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="body">
       <p class="hook">Be where your customers already are.</p>
       <p class="line">Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.</p>
-      <p class="ch"><span>Facebook</span><span>Instagram</span><span>TikTok</span><span>YouTube</span><span>Threads</span><span>LinkedIn</span><span>Zalo</span><span>Pinterest</span></p>
+      <p class="ch"><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9s-1.2 6.3-3.7 9c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"></path></svg>Website</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"></path></svg>Facebook</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"></circle></svg>Instagram</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.5 3c.3 2.1 1.6 3.6 3.8 3.9v2.9c-1.4 0-2.7-.4-3.8-1.1v5.9a5.6 5.6 0 1 1-5.6-5.6h.3v3a2.7 2.7 0 1 0 2.4 2.7V3z"></path></svg>TikTok</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M21.6 7.6c-.2-.9-.9-1.6-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9.2 2 12 2 12s0 2.8.4 4.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10 15V9l5.2 3z"></path></svg>YouTube</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"></path><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"></path></svg>Threads</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"></path></svg>LinkedIn</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.4-9 7.6 0 2.4 1.3 4.5 3.3 5.9l-.6 3.1 3.3-1.7c1 .3 2 .4 3 .4 5 0 9-3.4 9-7.7s-4-7.6-9-7.6z"></path><path d="M8.5 9h4l-4 5h4M15 9v5"></path></svg>Zalo</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"></path></svg>Pinterest</span></p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -927,7 +927,7 @@ const steps = [
   { en: { name: "Identity", hook: "We shape the brand together with the founder.", line: "We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.", pts: [] },
     name: "Nhận diện", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.", pts: [] },
   { en: { name: "Reach", hook: "Be where your customers already are.", line: "Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
-    name: "Phủ sóng", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
+    name: "Phủ sóng", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
   { en: { name: "Community", hook: "Strong brands grow on a community.", line: "Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.", pts: [] },
     name: "Cộng đồng", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
   { en: { name: "Crisis communication", hook: "Steady when a crisis hits.", line: "Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.", pts: [] },
@@ -940,6 +940,20 @@ const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
 document.getElementById("marquee").innerHTML = names + names;
 
 /* ---------- Quy trình ---------- */
+const CHI = (() => {
+  const S = (d, f) => `<svg viewBox="0 0 24 24" aria-hidden="true" ${f ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"'}>${d}</svg>`;
+  return {
+    Website: S('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9s-1.2 6.3-3.7 9c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"/>'),
+    Facebook: S('<path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/>', 1),
+    Instagram: S('<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/>'),
+    TikTok: S('<path d="M15.5 3c.3 2.1 1.6 3.6 3.8 3.9v2.9c-1.4 0-2.7-.4-3.8-1.1v5.9a5.6 5.6 0 1 1-5.6-5.6h.3v3a2.7 2.7 0 1 0 2.4 2.7V3z"/>', 1),
+    YouTube: S('<path d="M21.6 7.6c-.2-.9-.9-1.6-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9.2 2 12 2 12s0 2.8.4 4.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10 15V9l5.2 3z"/>', 1),
+    Threads: S('<path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"/><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"/>'),
+    LinkedIn: S('<path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"/>', 1),
+    Zalo: S('<path d="M12 3.5c-5 0-9 3.4-9 7.6 0 2.4 1.3 4.5 3.3 5.9l-.6 3.1 3.3-1.7c1 .3 2 .4 3 .4 5 0 9-3.4 9-7.7s-4-7.6-9-7.6z"/><path d="M8.5 9h4l-4 5h4M15 9v5"/>'),
+    Pinterest: S('<path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"/>', 1),
+  };
+})();
 const stepsEl = document.getElementById("steps");
 stepsEl.innerHTML = steps.map((s, i) => `
   <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
@@ -948,7 +962,7 @@ stepsEl.innerHTML = steps.map((s, i) => `
     <div class="body">
       <p class="hook"></p>
       <p class="line"></p>${s.ch ? `
-      <p class="ch">${s.ch.map(c => `<span>${c}</span>`).join("")}</p>` : ""}
+      <p class="ch">${s.ch.map(c => `<span>${CHI[c] || ""}${c}</span>`).join("")}</p>` : ""}
       <div class="pts"><span class="lead"></span><ul></ul></div>
     </div>
   </li>`).join("");
