@@ -154,6 +154,10 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .step .body { display: grid; gap: 12px; justify-items: start; min-width: 0; }
 .step .hook { font-size: clamp(20px, 1.65vw, 26px); line-height: 1.28; letter-spacing: -0.025em; font-weight: 400; color: var(--ink); max-width: 38ch; text-wrap: balance; }
 .step .hook:empty { display: none; }
+.step-more { justify-self: start; font-size: 15px; font-weight: 500; color: var(--ink); padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line-strong); transition: background .2s, color .2s, border-color .2s; }
+.step-more:hover { background: var(--mark); border-color: var(--mark); color: #0A0A0A; }
+.step-more span { color: var(--mark); }
+.step-more:hover span { color: #0A0A0A; }
 .step .line { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.55; font-weight: 300; color: var(--muted); max-width: 58ch; text-wrap: pretty; }
 .step .line .k { color: var(--ink); font-weight: 500; }
 .step .ch { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; color: var(--muted); }
@@ -512,6 +516,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="hook">Every brand begins with the founder’s story.</p>
       <p class="line">Why you started and what you believe in. We listen to your hopes and worries too, to understand what you really want.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/brand-discovery-founder-story/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li>
   <li class="step" data-i="1">
@@ -521,6 +526,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="hook">Know who you are, who you serve and how you differ.</p>
       <p class="line">We analyse your competitors in depth to see where you stand and which way to go, always guided by what you want. From there we write the brand story every channel will tell.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/brand-positioning-competitor-analysis/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li>
   <li class="step" data-i="2">
@@ -530,6 +536,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="hook">We shape the brand together with the founder.</p>
       <p class="line">We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/brand-identity-design-process/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li>
   <li class="step" data-i="3">
@@ -540,6 +547,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="line">Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.</p>
       <p class="ch"><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9s-1.2 6.3-3.7 9c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"></path></svg>Website</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"></path></svg>Facebook</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"></circle></svg>Instagram</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.5 3c.3 2.1 1.6 3.6 3.8 3.9v2.9c-1.4 0-2.7-.4-3.8-1.1v5.9a5.6 5.6 0 1 1-5.6-5.6h.3v3a2.7 2.7 0 1 0 2.4 2.7V3z"></path></svg>TikTok</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M21.6 7.6c-.2-.9-.9-1.6-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9.2 2 12 2 12s0 2.8.4 4.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10 15V9l5.2 3z"></path></svg>YouTube</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"></path><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"></path></svg>Threads</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"></path></svg>LinkedIn</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.4-9 7.6 0 2.4 1.3 4.5 3.3 5.9l-.6 3.1 3.3-1.7c1 .3 2 .4 3 .4 5 0 9-3.4 9-7.7s-4-7.6-9-7.6z"></path><path d="M8.5 9h4l-4 5h4M15 9v5"></path></svg>Zalo</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"></path></svg>Pinterest</span></p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/brand-reach-omnichannel-presence/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li>
   <li class="step" data-i="4">
@@ -549,6 +557,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="hook">Strong brands grow on a community.</p>
       <p class="line">Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/brand-community-building/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li>
   <li class="step" data-i="5">
@@ -558,6 +567,7 @@ dialog.policy form { margin-top: 18px; }
       <p class="hook">Steady when a crisis hits.</p>
       <p class="line">Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="/blog/crisis-communication-for-small-business/">Read more <span aria-hidden="true">→</span></a>
     </div>
   </li></ol>
   </section>
@@ -935,18 +945,18 @@ const projects = [
   { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "/work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
-  { en: { name: "Listening", hook: "Every brand begins with the founder’s story.", line: "Why you started and what you believe in. We listen to your hopes and worries too, to understand what you really want.", pts: [] },
-    name: "Lắng nghe", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Vì sao bạn bắt đầu và bạn tin vào điều gì. Chúng tôi lắng nghe cả những tâm tư của bạn, để hiểu điều bạn thật sự mong muốn.", pts: [] },
-  { en: { name: "Positioning", hook: "Know who you are, who you serve and how you differ.", line: "We analyse your competitors in depth to see where you stand and which way to go, always guided by what you want. From there we write the brand story every channel will tell.", pts: [] },
-    name: "Định vị", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi phân tích chuyên sâu đối thủ để thấy bạn đang đứng ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của bạn. Từ đó viết nên câu chuyện thương hiệu mà mọi kênh cùng kể.", pts: [] },
-  { en: { name: "Identity", hook: "We shape the brand together with the founder.", line: "We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.", pts: [] },
-    name: "Nhận diện", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.", pts: [] },
-  { en: { name: "Reach", hook: "Be where your customers already are.", line: "Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
-    name: "Phủ sóng", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
-  { en: { name: "Community", hook: "Strong brands grow on a community.", line: "Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.", pts: [] },
-    name: "Cộng đồng", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
-  { en: { name: "Crisis communication", hook: "Steady when a crisis hits.", line: "Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.", pts: [] },
-    name: "Xử lý khủng hoảng", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Kinh doanh luôn có những điều không lường trước. Đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông của chúng tôi giúp giảm tối đa tác động và rủi ro cho thương hiệu, đồng thời training cho đội của bạn cách xử lý như người làm truyền thông chuyên nghiệp.", pts: [] },
+  { en: { name: "Listening", more: "/blog/brand-discovery-founder-story/", hook: "Every brand begins with the founder’s story.", line: "Why you started and what you believe in. We listen to your hopes and worries too, to understand what you really want.", pts: [] },
+    name: "Lắng nghe", more: "/vi/blog/lang-nghe-cau-chuyen-nguoi-sang-lap/", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Vì sao bạn bắt đầu và bạn tin vào điều gì. Chúng tôi lắng nghe cả những tâm tư của bạn, để hiểu điều bạn thật sự mong muốn.", pts: [] },
+  { en: { name: "Positioning", more: "/blog/brand-positioning-competitor-analysis/", hook: "Know who you are, who you serve and how you differ.", line: "We analyse your competitors in depth to see where you stand and which way to go, always guided by what you want. From there we write the brand story every channel will tell.", pts: [] },
+    name: "Định vị", more: "/vi/blog/dinh-vi-thuong-hieu-phan-tich-doi-thu/", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi phân tích chuyên sâu đối thủ để thấy bạn đang đứng ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của bạn. Từ đó viết nên câu chuyện thương hiệu mà mọi kênh cùng kể.", pts: [] },
+  { en: { name: "Identity", more: "/blog/brand-identity-design-process/", hook: "We shape the brand together with the founder.", line: "We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.", pts: [] },
+    name: "Nhận diện", more: "/vi/blog/quy-trinh-thiet-ke-nhan-dien-thuong-hieu/", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.", pts: [] },
+  { en: { name: "Reach", more: "/blog/brand-reach-omnichannel-presence/", hook: "Be where your customers already are.", line: "Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
+    name: "Phủ sóng", more: "/vi/blog/phu-song-thuong-hieu-da-kenh/", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
+  { en: { name: "Community", more: "/blog/brand-community-building/", hook: "Strong brands grow on a community.", line: "Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.", pts: [] },
+    name: "Cộng đồng", more: "/vi/blog/xay-dung-cong-dong-thuong-hieu/", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
+  { en: { name: "Crisis communication", more: "/blog/crisis-communication-for-small-business/", hook: "Steady when a crisis hits.", line: "Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.", pts: [] },
+    name: "Xử lý khủng hoảng", more: "/vi/blog/xu-ly-khung-hoang-truyen-thong/", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Kinh doanh luôn có những điều không lường trước. Đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông của chúng tôi giúp giảm tối đa tác động và rủi ro cho thương hiệu, đồng thời training cho đội của bạn cách xử lý như người làm truyền thông chuyên nghiệp.", pts: [] },
 ];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
@@ -979,6 +989,7 @@ stepsEl.innerHTML = steps.map((s, i) => `
       <p class="line"></p>${s.ch ? `
       <p class="ch">${s.ch.map(c => `<span>${CHI[c] || ""}${c}</span>`).join("")}</p>` : ""}
       <div class="pts"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="#"></a>
     </div>
   </li>`).join("");
 function renderSteps() {
@@ -987,6 +998,7 @@ function renderSteps() {
     el.querySelector("h3").textContent = s.name;
     el.querySelector(".hook").textContent = s.hook || "";
     el.querySelector(".line").innerHTML = s.line;
+    const mo = el.querySelector(".step-more"); if (s.more) { mo.href = s.more; mo.innerHTML = (LANG === "en" ? "Read more" : "Xem thêm") + ' <span aria-hidden="true">→</span>'; } else mo.remove();
     el.querySelector(".lead").textContent = s.lead || "";
     el.querySelector(".pts ul").innerHTML = s.pts.map(p => `<li>${esc(p)}</li>`).join("");
     el.querySelector(".pts").style.display = s.pts.length || s.lead ? "" : "none";
