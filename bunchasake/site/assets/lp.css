@@ -315,3 +315,13 @@ body.blog .prose { font-weight: 400; }
 .cat-svc a:hover { text-decoration-color: var(--ink); }
 .plist h2 a:hover { color: var(--mark); }
 .more-cat { justify-self: start; margin-top: 4px; font-size: 15px; color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }
+
+/* Ảnh blog (Unsplash) */
+.post-hero { margin: clamp(18px, 2.4vw, 28px) 0 0; }
+.post-hero img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; background: var(--line); }
+.post-hero figcaption { margin-top: 8px; font-size: 13px; color: var(--dim); }
+.post-hero figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.prow.has-img { grid-template-columns: 200px minmax(0, 1fr); column-gap: 20px; align-items: center; }
+.prow .ptxt { display: grid; gap: 8px; min-width: 0; }
+.pthumb { width: 200px; height: 125px; object-fit: cover; border-radius: 10px; background: var(--line); }
+@media (max-width: 560px) { .prow.has-img { grid-template-columns: 1fr; } .pthumb { width: 100%; height: auto; aspect-ratio: 16 / 10; } }

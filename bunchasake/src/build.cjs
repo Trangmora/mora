@@ -109,7 +109,7 @@ const pages = [];   // { url:{en,vi}, lastmod, priority }
 const alt = urls => LANGS.filter(l => urls[l]).map(l => `<link rel="alternate" hreflang="${l}" href="${ORIGIN}${urls[l]}">`).join("\n") + (urls.en ? `\n<link rel="alternate" hreflang="x-default" href="${ORIGIN}${urls.en}">` : "");
 
 /* ---------- Khung trang ---------- */
-function head({ l, title, desc, urls, type = "website", ldjson = [], cls = "" }) {
+function head({ l, title, desc, urls, type = "website", ldjson = [], cls = "", image = "/og.png" }) {
   return `<!doctype html>
 <html lang="${l}">
 <head>
@@ -124,7 +124,7 @@ ${alt(urls)}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${ORIGIN}${urls[l]}">
-<meta property="og:image" content="${ORIGIN}/og.png">
+<meta property="og:image" content="${ORIGIN}${image}">
 <meta property="og:locale" content="${l === "vi" ? "vi_VN" : "en_US"}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -272,7 +272,10 @@ function catbar(l, current) {
   const t = T[l];
   return `<nav class="catbar" aria-label="${l === "vi" ? "Chủ đề blog" : "Blog topics"}"><div class="catbar-in">${usedCats(l).map(c => `<a href="${U.cat(c.id, l)}"${current === c.id ? ' aria-current="page"' : ""}${c.id === "automation" ? ' class="m-only"' : ""}>${esc(c[l])}</a>`).join("")}</div></nav><script>(function(){var b=document.currentScript.previousElementSibling.firstChild,a=b.querySelector("[aria-current]");if(a&&b.scrollWidth>b.clientWidth)b.scrollLeft=a.offsetLeft-b.offsetLeft-(b.clientWidth-a.offsetWidth)/2;})()</script>`;
 }
-const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow" href="${U.blog(k, l)}"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></a>`; };
+const BIMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, "../content/blog-images.json"), "utf8")); } catch { return {}; } })();
+const bimg = k => BIMG[k] && fs.existsSync(path.join(SITE, `img/blog/${k}.jpg`)) ? BIMG[k] : null;
+const credit = (k, l) => { const c = bimg(k); return c ? `${l === "vi" ? "Ảnh" : "Photo"}: <a href="${c.link}?utm_source=bunchasake&amp;utm_medium=referral" rel="noopener" target="_blank">${esc(c.user)}</a> / <a href="https://unsplash.com/?utm_source=bunchasake&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a>` : ""; };
+const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></span></a>`; };
 function renderCategory(c, l) {
   const t = T[l], C = BCAT[c], urls = { en: U.cat(c, "en"), vi: U.cat(c, "vi") }, list = blogKeys.filter(k => blog[k][l] && catOf(blog[k][l]) === c);
   if (!list.length) return;
@@ -304,12 +307,12 @@ function renderPost(k, l) {
   const ck = catOf(d), cat = BCAT[ck][l], wc = words(body), mins = Math.max(3, Math.round(wc / (l === "vi" ? 260 : 220)));
   const bc = [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, null]];
   const ldjson = [
-    { "@context": "https://schema.org", "@type": "BlogPosting", headline: d.h1, description: d.description, inLanguage: l, datePublished: PUBLISHED, dateModified: TODAY, mainEntityOfPage: ORIGIN + urls[l], image: ORIGIN + "/og.png", author: { "@type": "Organization", name: "Bunchasake", url: ORIGIN + "/" }, publisher: ORG, keywords: d.keyword, wordCount: wc },
+    { "@context": "https://schema.org", "@type": "BlogPosting", headline: d.h1, description: d.description, inLanguage: l, datePublished: PUBLISHED, dateModified: TODAY, mainEntityOfPage: ORIGIN + urls[l], image: ORIGIN + (bimg(k) ? `/img/blog/${k}.jpg` : "/og.png"), author: { "@type": "Organization", name: "Bunchasake", url: ORIGIN + "/" }, publisher: ORG, keywords: d.keyword, wordCount: wc },
     crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, urls[l]]]),
     ...(faq.length ? [faqLd(faq)] : []),
   ];
   const others = blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) === ck).concat(blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) !== ck)).slice(0, 4);
-  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog", ck) + "\n" + catbar(l, ck) + `
+  const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog", image: bimg(k) ? `/img/blog/${k}.jpg` : "/og.png" }) + "\n" + nav(l, urls, "blog", ck) + "\n" + catbar(l, ck) + `
 <main id="main">
   <article class="post-page">
     ${crumbs(l, bc)}
@@ -318,7 +321,8 @@ function renderPost(k, l) {
       <h1>${esc(d.h1)}</h1>
       ${d.lead ? `<p class="lead">${esc(d.lead)}</p>` : ""}
       <p class="byline">${t.byEd} · ${t.published} <time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time> · ${mins} ${t.minRead}</p>
-    </header>
+    </header>${bimg(k) ? `
+    <figure class="post-hero"><img src="/img/blog/${k}.jpg" width="1600" height="900" alt="${esc(d.h1)}" fetchpriority="high"><figcaption>${credit(k, l)}</figcaption></figure>` : ""}
     <div class="post-body">
       ${d.takeaways.length ? `<div class="takeaways"><b class="cap">${t.takeaways}</b><ul>${d.takeaways.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
       ${toc.length > 2 ? `<details class="toc"><summary class="cap">${t.toc}</summary><ol>${toc.map(([id, n]) => `<li><a href="#${id}">${esc(n)}</a></li>`).join("")}</ol></details>` : ""}
@@ -501,7 +505,7 @@ Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.e
 /* ---------- Chạy ---------- */
 (async () => {
   // dọn các trang đã dựng lần trước (giữ work/, favicon, og.png)
-  for (const e of fs.readdirSync(SITE, { withFileTypes: true })) if (e.isDirectory() && !["work"].includes(e.name)) fs.rmSync(path.join(SITE, e.name), { recursive: true });
+  for (const e of fs.readdirSync(SITE, { withFileTypes: true })) if (e.isDirectory() && !["work", "img"].includes(e.name)) fs.rmSync(path.join(SITE, e.name), { recursive: true });
   fs.mkdirSync(SITE + "/assets", { recursive: true });
   fs.copyFileSync(path.join(__dirname, "lp.css"), SITE + "/assets/lp.css");
   const report = [];
