@@ -144,7 +144,7 @@ function nav(l, urls, current, blogCur) {
   const t = T[l], a = (k, label) => U.landing(k, l) ? `<li><a href="${U.landing(k, l)}"${current === k ? ' aria-current="page"' : ""}>${label}</a></li>` : "";
   const lang = LANGS.map(x => urls[x] ? `<a href="${urls[x]}" hreflang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ""}>${x.toUpperCase()}</a>` : `<span>${x.toUpperCase()}</span>`).join("");
   return `<header class="nav" id="nav">
-  <a class="logo" href="${U.home(l)}"><span class="dot" aria-hidden="true"></span>Bunchasake <i>${t.tagline}</i></a>
+  <a class="logo" href="${U.home(l)}"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>${t.tagline}</i></a>
   <ul class="cap">${blogCur ? `<li><a href="${U.cat("automation", l)}"${blogCur === "automation" ? ' aria-current="page"' : ""}>${t.automation}</a></li><li><a href="${U.blogindex(l)}"${blogCur !== "automation" ? ' aria-current="page"' : ""}>${t.blog}</a></li>` : `${a("nail-salon-brand-marketing", t.navNail)}${a("restaurant-brand-marketing", t.navRest)}${a("social-media-automation", t.automation)}<li><a href="${U.blogindex(l)}"${current === "blog" ? ' aria-current="page"' : ""}>${t.blog}</a></li>`}</ul>
   <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="${mailto()}">${t.emailUs} <span aria-hidden="true">↗</span></a></div>
 </header>`;
