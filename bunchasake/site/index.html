@@ -139,10 +139,10 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 @media (max-width: 820px) { .pains { grid-template-columns: 1fr; } .pain + .pain { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
 
 /* ===== Quy trình: sáu hàng kiểu mục lục. Máy tính: số, tiêu đề và đoạn mô tả cùng treo trên một đường đầu hàng. Số nghiêng đổi màu theo tiến độ cuộn (xám tối → đỏ → xám), vạch đỏ chạy trên bước đang đọc; đỏ chỉ dùng ở đây ===== */
-#cach-lam { --cols: clamp(64px, 6.2vw, 112px) minmax(0, 3.6fr) minmax(0, 6.4fr); --colgap: clamp(16px, 2.4vw, 40px); }
-#cach-lam .sec-head p { font-size: 16px; text-wrap: balance; }
-#cach-lam .sec-head p b { display: block; margin-top: 2px; color: var(--ink); font-weight: 500; }
-@media (min-width: 1100px) { #cach-lam .sec-head { grid-template-columns: var(--cols); column-gap: var(--colgap); } #cach-lam .sec-head h2 { grid-column: 1 / 3; } #cach-lam .sec-head p { grid-column: 3; justify-self: start; max-width: 56ch; } }
+#how-we-work { --cols: clamp(64px, 6.2vw, 112px) minmax(0, 3.6fr) minmax(0, 6.4fr); --colgap: clamp(16px, 2.4vw, 40px); }
+#how-we-work .sec-head p { font-size: 16px; text-wrap: balance; }
+#how-we-work .sec-head p b { display: block; margin-top: 2px; color: var(--ink); font-weight: 500; }
+@media (min-width: 1100px) { #how-we-work .sec-head { grid-template-columns: var(--cols); column-gap: var(--colgap); } #how-we-work .sec-head h2 { grid-column: 1 / 3; } #how-we-work .sec-head p { grid-column: 3; justify-self: start; max-width: 56ch; } }
 .steps { list-style: none; margin: 0; padding: 0; }
 .step { position: relative; display: grid; grid-template-columns: var(--cols); column-gap: var(--colgap); align-items: start; padding-block: clamp(24px, 2.1vw, 32px); border-bottom: 1px solid var(--line); min-width: 0; }
 .step::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--mark); transform: scaleX(0); transform-origin: 0 50%; transition: transform 1s var(--ease); }
@@ -425,15 +425,15 @@ dialog.policy form { margin-top: 18px; }
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>Brand Builder · Growth Partner</i></a>
   <ul class="cap">
     <li><a href="#growth">Growth</a></li>
-    <li><a href="#cach-lam">How we work</a></li>
-    <li><a href="#goi">Packages</a></li>
+    <li><a href="#how-we-work">How we work</a></li>
+    <li><a href="#packages">Packages</a></li>
     <li><a href="#automation">AI Automation</a></li>
-    <li><a href="#du-an">Work</a></li>
+    <li><a href="#projects">Work</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
   <div class="nav-r">
     <div class="lang" role="group" aria-label="Language"><a href="/" hreflang="en" lang="en" aria-current="true">EN</a><a href="/vi/" hreflang="vi" lang="vi">VI</a></div>
-    <a class="pill" href="#lien-he">Tell your story <span aria-hidden="true">↗</span></a>
+    <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
   </div>
 </header>
 
@@ -447,8 +447,8 @@ dialog.policy form { margin-top: 18px; }
     <div class="hero-foot">
       <p><b>Bunchasake</b> listens to why you started, then builds a brand that is unmistakably yours. AI makes it fast; people make the calls.</p>
       <div class="hero-cta">
-        <a class="pill" href="#cach-lam">See how we work <span aria-hidden="true">↓</span></a>
-        <a class="pill ghost" href="#du-an">See our work</a>
+        <a class="pill" href="#how-we-work">See how we work <span aria-hidden="true">↓</span></a>
+        <a class="pill ghost" href="#projects">See our work</a>
       </div>
     </div>
     <div class="stats">
@@ -463,7 +463,7 @@ dialog.policy form { margin-top: 18px; }
   </div>
 
   <!-- Vì sao là câu chuyện -->
-  <section class="sec why" id="cau-chuyen">
+  <section class="sec why" id="story">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Why the story</span>
     </div>
@@ -485,13 +485,13 @@ dialog.policy form { margin-top: 18px; }
     <div class="grow-text">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Growth Partner</span>
       <h2>We help you automate <span class="it">and grow your brand awareness.</span></h2>
-      <a class="pill" href="#lien-he">Tell your story <span aria-hidden="true">↗</span></a>
+      <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
     </div>
     <div class="grow-video"><video class="logo-video" src="/work/lab-video.mp4" poster="/work/lab-video-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
   </section>
 
   <!-- Quy trình -->
-  <section class="sec" id="cach-lam">
+  <section class="sec" id="how-we-work">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>How we work</span>
       <h2>Six steps. <span class="it">Build it.</span></h2>
@@ -555,7 +555,7 @@ dialog.policy form { margin-top: 18px; }
   </section>
 
   <!-- Gói -->
-  <section class="sec" id="goi">
+  <section class="sec" id="packages">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
       <h2>Choose where <span class="it">to start.</span></h2>
@@ -616,12 +616,12 @@ dialog.policy form { margin-top: 18px; }
     </div>
     <div class="auto-foot" style="justify-content:flex-end">
       <a class="more" href="/social-media-automation/">More about AI Automation →</a>
-      <a class="pill ghost" href="#lien-he">Add AI Automation <span aria-hidden="true">↗</span></a>
+      <a class="pill ghost" href="#contact">Add AI Automation <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
   <!-- Dự án -->
-  <section class="sec" id="du-an">
+  <section class="sec" id="projects">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Work</span>
       <h2>Stories <span class="it">that became brands.</span></h2>
@@ -687,7 +687,7 @@ dialog.policy form { margin-top: 18px; }
 
 </main>
 
-<footer id="lien-he">
+<footer id="contact">
   <div class="contact-side">
     <h2>Tell us <span class="it">your story.</span></h2>
     <ol class="next" aria-label="Sau khi bạn gửi email">
@@ -699,7 +699,7 @@ dialog.policy form { margin-top: 18px; }
       <div><dt>Based in</dt><dd>Vietnam · Italy · Online</dd></div>
       <div><dt>Languages</dt><dd>Vietnamese · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Footer"><a href="#growth">Growth</a><a href="#cach-lam">How we work</a><a href="#goi">Packages</a><a href="#automation">AI Automation</a><a href="#du-an">Work</a><a href="/blog/">Blog</a></nav>
+    <nav class="foot-nav cap" aria-label="Footer"><a href="#growth">Growth</a><a href="#how-we-work">How we work</a><a href="#packages">Packages</a><a href="#automation">AI Automation</a><a href="#projects">Work</a><a href="/blog/">Blog</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -714,7 +714,7 @@ dialog.policy form { margin-top: 18px; }
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
     <p>Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="/blog/">Blog</a><a href="#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="/blog/">Blog</a><a href="#packages">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 
@@ -730,8 +730,8 @@ dialog.policy form { margin-top: 18px; }
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#lien-he">Email us</a>
-  <a class="pill ghost" href="#lien-he">Contact</a>
+  <a class="pill" href="#contact">Email us</a>
+  <a class="pill ghost" href="#contact">Contact</a>
 </div>
 
 <script>
@@ -1014,11 +1014,11 @@ if ("IntersectionObserver" in window) {
   const spy = new IntersectionObserver(es => es.forEach(en => {
     if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
   }), { rootMargin: "-40% 0px -55% 0px" });
-  ["growth", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
+  ["growth", "how-we-work", "packages", "automation", "projects"].forEach(id => spy.observe(document.getElementById(id)));
 }
 
 /* ---------- Thanh CTA trên điện thoại ---------- */
-const mcta = document.getElementById("mobileCta"), heroEl = document.querySelector(".hero"), contactEl = document.getElementById("lien-he");
+const mcta = document.getElementById("mobileCta"), heroEl = document.querySelector(".hero"), contactEl = document.getElementById("contact");
 addEventListener("scroll", () => {
   const past = heroEl.getBoundingClientRect().bottom < 0;
   const atContact = contactEl.getBoundingClientRect().top < innerHeight * .8;
@@ -1030,7 +1030,7 @@ const MAIL = "hello@bunchasake.com";
 document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", () => {
   const pk = b.dataset.pkg[0].toUpperCase() + b.dataset.pkg.slice(1);
   document.getElementById("mail").href = `mailto:${MAIL}?subject=${encodeURIComponent("Bunchasake – " + pk)}`;
-  document.getElementById("lien-he").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  document.getElementById("contact").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
   setTimeout(() => document.getElementById("mail").focus({ preventScroll: true }), reduce ? 0 : 600);
 }));
 

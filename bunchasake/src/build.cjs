@@ -99,7 +99,7 @@ function resolve(html, l, where) {
   return html.replace(/\{\{\s*([a-z]+)(?::([a-z0-9-]+))?\s*\}\}/g, (m, t, k) => {
     if (t === "home") return U.home(l);
     if (t === "blogindex") return U.blogindex(l);
-    if (t === "work") return U.home(l) + "#du-an";
+    if (t === "work") return U.home(l) + "#" + ANCH[l].work;
     if (t === "mail") return mailto();
     if (t === "landing" || t === "blog") { const u = U[t](k, l) || U[t](k, "en"); if (u) return u; W(`${where}: liên kết ${m} không có trang`); return t === "blog" ? U.blogindex(l) : U.home(l); }
     W(`${where}: placeholder lạ ${m}`); return U.home(l);
@@ -149,6 +149,11 @@ function nav(l, urls, current, blogCur) {
   <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a></div>
 </header>`;
 }
+const ANCH = { en: { work: "projects", pkg: "packages" }, vi: { work: "du-an", pkg: "goi" } };
+function enAnchors(h) {
+  for (const [a, b] of [["cach-lam", "how-we-work"], ["du-an", "projects"], ["lien-he", "contact"], ["cau-chuyen", "story"]]) h = h.replace(new RegExp(`(?<![\\w-])${a}(?![\\w-])`, "g"), b);
+  return h.replace(/id="goi"/g, 'id="packages"').replace(/#goi\b/g, "#packages").replace(/"goi"/g, '"packages"');
+}
 function foot(l, cta) {
   const t = T[l], link = (k) => U.landing(k, l) ? `<a href="${U.landing(k, l)}">${esc(LABEL[k]?.[l] || landing[k][l].kicker)}</a>` : "";
   const posts = blogKeys.filter(k => blog[k][l]).slice(0, 4).map(k => `<a href="${U.blog(k, l)}">${esc(blog[k][l].h1)}</a>`).join("");
@@ -165,12 +170,12 @@ function foot(l, cta) {
     <div><b class="cap">${t.who}</b>${["nail-salon-brand-marketing", "restaurant-brand-marketing", "vietnamese-diaspora-brand-marketing", "international-brand-marketing-vietnam"].map(link).join("")}</div>
     <div><b class="cap">${t.automation}</b>${["social-media-automation", "social-media-automation-for-nail-salons", "social-media-automation-for-restaurants"].map(link).join("")}</div>
     <div><b class="cap">${t.blog}</b>${posts}<a href="${U.blogindex(l)}">${t.all} →</a></div>
-    <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#du-an">${t.work}</a><a href="${mailto()}">${MAIL}</a></div>
+    <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#${ANCH[l].work}">${t.work}</a><a href="${mailto()}">${MAIL}</a></div>
   </nav>
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
     <p>Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#${ANCH[l].pkg}">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 <script>
@@ -215,7 +220,7 @@ function renderLanding(k, l) {
     <p class="kicker cap"><span class="dot" aria-hidden="true"></span>${esc(d.kicker)}</p>
     <h1>${R(d.h1)}</h1>
     <p class="lead">${R(d.lead)}</p>
-    <div class="hero-cta"><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a><a class="pill ghost" href="${U.home(l)}#du-an">${t.seeWork}</a></div>
+    <div class="hero-cta"><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a><a class="pill ghost" href="${U.home(l)}#${ANCH[l].work}">${t.seeWork}</a></div>
   </section>
 `;
   if (d.problems?.items?.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.problems.title)}</h2></div>
@@ -445,6 +450,7 @@ async function renderHome(browser, l) {
   const services = landingKeys.filter(k => landing[k][l]).map(k => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: LABEL[k]?.[l] || k, url: ORIGIN + U.landing(k, l) } }));
   const graph = { "@context": "https://schema.org", "@graph": [{ ...ORG, ...(services.length ? { hasOfferCatalog: { "@type": "OfferCatalog", name: l === "vi" ? "Dịch vụ" : "Services", itemListElement: services } } : {}) }, { "@type": "WebSite", "@id": ORIGIN + "/#website", url: ORIGIN + "/", name: "Bunchasake", inLanguage: ["en", "vi"], publisher: { "@id": ORIGIN + "/#org" } }] };
   html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, ld(graph));
+  if (l === "en") html = enAnchors(html);
   write(urls[l] + "index.html", html);
   if (l === "en") pages.unshift({ urls, lastmod: TODAY, priority: "1.0" });
 }
