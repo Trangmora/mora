@@ -227,7 +227,7 @@ function renderLanding(k, l) {
   for (const s of d.sections || []) h += `  <section class="sec block"><div class="split"><h2>${R(s.h2)}</h2><div class="prose">${R(s.html)}</div></div></section>
 `;
   if (d.process?.items?.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.process.title)}</h2></div>
-    <div class="steps4 n${d.process.items.length}">${d.process.items.map((x, i) => `<div><span class="n cap">${t.step} ${i + 1}</span><h3>${R(x.t)}</h3><p>${R(x.p)}</p></div>`).join("")}</div></section>
+    <div class="steps4 n${d.process.items.length}">${d.process.items.map((x, i) => `<div><span class="n cap">${t.step} ${i + 1}</span><h3>${R(x.t)}</h3><p>${R(x.p)}</p></div>`).join("")}</div><script>(function(){var g=document.currentScript.previousElementSibling;if(!g||!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){var c=e.target.classList;if(e.isIntersecting){c.add("on");c.remove("past")}else{c.remove("on");c.toggle("past",e.boundingClientRect.top<innerHeight/2)}})},{rootMargin:"-49.5% 0px -49.5% 0px"});[].forEach.call(g.children,function(c){io.observe(c)})})()</script></section>
 `;
   if (work.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.work.title)}</h2>${d.work.intro ? `<p>${R(d.work.intro)}</p>` : ""}</div>
     <div class="work n${Math.min(work.length, 4)}">${work.map(id => { const p = PROJECTS[id]; return `<a class="wcard" href="${p.url}" target="_blank" rel="noopener"><span class="img"><img src="/work/${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"></span><h3>${esc(p.name)}</h3><p>${esc(p[l])}</p></a>`; }).join("")}</div></section>

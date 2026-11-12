@@ -290,7 +290,8 @@ body.blog .prose { font-weight: 400; }
 .steps4.n6 { counter-reset: s; }
 .steps4.n6 > div { counter-increment: s; position: relative; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; row-gap: 14px; align-items: baseline; padding-top: clamp(24px, 2.6vw, 34px); padding-bottom: clamp(24px, 2.6vw, 34px); }
 .steps4.n6 > div::before { content: counter(s, decimal-leading-zero); font: 400 clamp(38px, 3.4vw, 52px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--dim); transition: color .4s; }
-.steps4.n6 > div:hover::before { color: var(--mark); }
+/* Một cột (điện thoại): số của bước đang xem chuyển đỏ như trang chủ. Lưới nhiều cột giữ số màu xám, không đỏ. */
+@media (max-width: 520px) { .steps4.n6 > div.past::before { color: var(--muted); } .steps4.n6 > div.on::before { color: var(--mark); } }
 .steps4.n6 .n { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .steps4.n6 h3 { font-size: clamp(24px, 2.2vw, 32px); }
 .steps4.n6 p { grid-column: 1 / -1; font-size: 15px; line-height: 1.55; max-width: 42ch; text-wrap: pretty; }
