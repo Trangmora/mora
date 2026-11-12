@@ -1,7 +1,7 @@
 /* Bunchasake – landing pages + blog. Cùng hệ màu/chữ với trang chủ. */
 :root {
-  --bg: #0A0A0A; --raise: #131312; --ink: #F7F7F4; --muted: #9A9A95; --dim: #66665F;
-  --line: #262624; --line-strong: #44443F; --mark: #FF4A2E;
+  --bg: #161615; --raise: #1E1E1C; --ink: #F7F7F4; --muted: #9A9A95; --dim: #66665F;
+  --line: #2E2E2B; --line-strong: #44443F; --mark: #FF4A2E;
   --card: #F7F7F4; --card-ink: #0A0A0A; --card-line: #BDBDB8;
   --sans: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
