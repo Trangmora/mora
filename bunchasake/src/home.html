@@ -392,7 +392,7 @@ dialog.policy form { margin-top: 18px; }
 .mail-lab { color: #55554F; }
 .mail-big { font-size: clamp(24px, 2.6vw, 38px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.1; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: 3px; text-underline-offset: 8px; }
 .mail-note { font-size: 15px; color: #55554F; max-width: 40ch; }
-.mail-act { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: stretch; margin-top: 6px; }
+.mail-act { display: grid; grid-template-columns: auto; justify-content: start; gap: 10px; align-items: stretch; margin-top: 6px; }
 .mail-act .submit { margin-top: 0; }
 .mail-copy { all: unset; box-sizing: border-box; cursor: pointer; display: grid; place-items: center; padding: 0 18px; border-radius: 14px; border: 1px solid var(--card-line); font-size: 14px; font-weight: 600; }
 .mail-copy:hover { border-color: var(--card-ink); }
@@ -582,7 +582,6 @@ dialog.policy form { margin-top: 18px; }
     <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
     <p class="mail-note">Viết cho chúng tôi vài dòng về doanh nghiệp và câu chuyện của bạn.</p>
     <div class="mail-act">
-      <a class="submit" href="mailto:hello@bunchasake.com" id="mailBtn">Viết email <span aria-hidden="true">↗</span></a>
       <button class="mail-copy" type="button" id="copyMail">Sao chép</button>
     </div>
   </div>
@@ -606,7 +605,7 @@ dialog.policy form { margin-top: 18px; }
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="mailto:hello@bunchasake.com">Gửi email</a>
+  <a class="pill" href="#lien-he">Gửi email</a>
   <a class="pill ghost" href="#lien-he">Liên hệ</a>
 </div>
 
@@ -891,9 +890,9 @@ addEventListener("scroll", () => {
 const MAIL = "hello@bunchasake.com";
 document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", () => {
   const pk = b.dataset.pkg[0].toUpperCase() + b.dataset.pkg.slice(1);
-  document.getElementById("mailBtn").href = `mailto:${MAIL}?subject=${encodeURIComponent("Bunchasake – " + pk)}`;
+  document.getElementById("mail").href = `mailto:${MAIL}?subject=${encodeURIComponent("Bunchasake – " + pk)}`;
   document.getElementById("lien-he").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
-  setTimeout(() => document.getElementById("mailBtn").focus({ preventScroll: true }), reduce ? 0 : 600);
+  setTimeout(() => document.getElementById("mail").focus({ preventScroll: true }), reduce ? 0 : 600);
 }));
 
 /* Sao chép email + chính sách */

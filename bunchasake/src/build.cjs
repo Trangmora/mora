@@ -146,7 +146,7 @@ function nav(l, urls, current, blogCur) {
   return `<header class="nav" id="nav">
   <a class="logo" href="${U.home(l)}"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>${t.tagline}</i></a>
   <ul class="cap">${blogCur ? `<li><a href="${U.cat("automation", l)}"${blogCur === "automation" ? ' aria-current="page"' : ""}>${t.automation}</a></li><li><a href="${U.blogindex(l)}"${blogCur !== "automation" ? ' aria-current="page"' : ""}>${t.blog}</a></li>` : `${a("nail-salon-brand-marketing", t.navNail)}${a("restaurant-brand-marketing", t.navRest)}${a("social-media-automation", t.automation)}<li><a href="${U.blogindex(l)}"${current === "blog" ? ' aria-current="page"' : ""}>${t.blog}</a></li>`}</ul>
-  <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="${mailto()}">${t.emailUs} <span aria-hidden="true">↗</span></a></div>
+  <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a></div>
 </header>`;
 }
 function foot(l, cta) {
@@ -158,7 +158,7 @@ function foot(l, cta) {
     <div class="mail-card">
       <span class="cap">${t.byMail}</span>
       <a class="mail-big" href="${mailto(cta?.subject)}" id="mail">${MAIL}</a>
-      <div class="mail-act"><a class="btn" href="${mailto(cta?.subject)}">${t.write} <span aria-hidden="true">↗</span></a><button class="mail-copy" type="button" id="copyMail" data-done="${t.copied}">${t.copy}</button></div>
+      <div class="mail-act"><button class="mail-copy" type="button" id="copyMail" data-done="${t.copied}">${t.copy}</button></div>
     </div>
   </div>
   <nav class="foot-cols" aria-label="Footer">
@@ -215,7 +215,7 @@ function renderLanding(k, l) {
     <p class="kicker cap"><span class="dot" aria-hidden="true"></span>${esc(d.kicker)}</p>
     <h1>${R(d.h1)}</h1>
     <p class="lead">${R(d.lead)}</p>
-    <div class="hero-cta"><a class="pill" href="${mailto(d.cta?.subject)}">${t.emailUs} <span aria-hidden="true">↗</span></a><a class="pill ghost" href="${U.home(l)}#du-an">${t.seeWork}</a></div>
+    <div class="hero-cta"><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a><a class="pill ghost" href="${U.home(l)}#du-an">${t.seeWork}</a></div>
   </section>
 `;
   if (d.problems?.items?.length) h += `  <section class="sec"><div class="sec-head"><h2>${R(d.problems.title)}</h2></div>
