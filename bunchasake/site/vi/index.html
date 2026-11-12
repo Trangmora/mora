@@ -151,7 +151,9 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .step.active .n, .no-io .step .n { color: var(--mark); }
 .step h3 { font-size: clamp(28px, 2.8vw, 44px); letter-spacing: -0.05em; line-height: 1.02; }
 .step .body { display: grid; gap: 12px; justify-items: start; min-width: 0; }
-.step .line { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.5; font-weight: 300; color: var(--muted); max-width: 60ch; text-wrap: pretty; }
+.step .hook { font-size: clamp(20px, 1.65vw, 26px); line-height: 1.28; letter-spacing: -0.025em; font-weight: 400; color: var(--ink); max-width: 38ch; text-wrap: balance; }
+.step .hook:empty { display: none; }
+.step .line { font-size: clamp(16px, 1.2vw, 19px); line-height: 1.55; font-weight: 300; color: var(--muted); max-width: 58ch; text-wrap: pretty; }
 .step .line .k { color: var(--ink); font-weight: 500; }
 .step .ch { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; color: var(--muted); }
 .step .ch span { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
@@ -167,6 +169,7 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
   .step .n { font-size: 40px; min-width: 1.15em; }
   .step h3 { font-size: 27px; }
   .step .body { grid-column: 1 / -1; gap: 12px; }
+  .step .hook { font-size: 20px; }
   .step .line { font-size: 16px; text-wrap: pretty; }
   .step .ch { font-size: 13px; gap: 4px 13px; }
   .step .pts ul { gap: 5px; }
@@ -499,7 +502,8 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">01</span>
     <h3>Lắng nghe</h3>
     <div class="body">
-      <p class="line">Chúng tôi lắng nghe <b class="k">câu chuyện của người sáng lập</b>: vì sao bắt đầu, bạn tin vào điều gì, thương hiệu hướng tới tệp khách hàng nào và họ tin vào điều gì. Lắng nghe cả những tâm tư của bạn, để hiểu bạn thật sự mong muốn gì.</p>
+      <p class="hook">Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.</p>
+      <p class="line">Vì sao bạn bắt đầu, bạn tin vào điều gì, thương hiệu muốn đến với ai và họ tin vào điều gì. Chúng tôi lắng nghe cả những tâm tư của bạn, để hiểu điều bạn thật sự mong muốn.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -507,7 +511,8 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">02</span>
     <h3>Định vị</h3>
     <div class="body">
-      <p class="line">Thương hiệu là ai, dành cho ai, khác ai và khác thế nào. Chúng tôi <b class="k">phân tích chuyên sâu các đối thủ</b> để thấy bạn đang ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của người sáng lập, rồi viết câu chuyện thương hiệu cho mọi kênh cùng kể.</p>
+      <p class="hook">Rõ mình là ai, dành cho ai và khác ai.</p>
+      <p class="line">Chúng tôi phân tích chuyên sâu đối thủ để thấy bạn đang đứng ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của bạn. Từ đó viết nên câu chuyện thương hiệu mà mọi kênh cùng kể.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -515,7 +520,8 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">03</span>
     <h3>Nhận diện</h3>
     <div class="body">
-      <p class="line">Chúng tôi <b class="k">làm việc trực tiếp</b> với người sáng lập và người phụ trách thương hiệu để định hình logo, màu sắc, kiểu chữ, giọng văn theo mong muốn của bạn. Hai bên thống nhất từng phần trong một bộ quy chuẩn, để xây thương hiệu lâu dài.</p>
+      <p class="hook">Cùng người sáng lập định hình thương hiệu.</p>
+      <p class="line">Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -523,7 +529,9 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">04</span>
     <h3>Điểm chạm</h3>
     <div class="body">
-      <p class="line">Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến nơi khách của bạn thường tìm đến: website, mạng xã hội (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi <b class="k">đọc dữ liệu kênh</b>, nghiên cứu hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.</p>
+      <p class="hook">Có mặt ở nơi khách hàng tìm đến.</p>
+      <p class="line">Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.</p>
+      <p class="ch"><span>Facebook</span><span>Instagram</span><span>TikTok</span><span>YouTube</span><span>Threads</span><span>LinkedIn</span><span>Zalo</span><span>Pinterest</span></p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -531,7 +539,8 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">05</span>
     <h3>Cộng đồng</h3>
     <div class="body">
-      <p class="line">Thương hiệu lớn lên mà không dựa trên cộng đồng thì chưa thành công. Khách quay lại từ một cộng đồng tốt giúp bạn <b class="k">tiết kiệm rất nhiều chi phí</b> bán hàng và marketing. Vì thế chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.</p>
+      <p class="hook">Thương hiệu lớn mạnh nhờ cộng đồng.</p>
+      <p class="line">Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li>
@@ -539,7 +548,8 @@ dialog.policy form { margin-top: 18px; }
     <span class="n">06</span>
     <h3>Xử lý khủng hoảng</h3>
     <div class="body">
-      <p class="line">Vận hành kinh doanh không thể tránh khỏi những điều không lường trước, kể cả khủng hoảng truyền thông. Đội ngũ của chúng tôi chuyên nghiên cứu và xử lý khủng hoảng, <b class="k">giảm tối đa tác động và rủi ro</b> cho thương hiệu, đồng thời training cho đội của bạn cách xử lý từ góc nhìn của người làm truyền thông chuyên nghiệp.</p>
+      <p class="hook">Vững vàng khi khủng hoảng ập đến.</p>
+      <p class="line">Kinh doanh luôn có những điều không lường trước. Đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông của chúng tôi giúp giảm tối đa tác động và rủi ro cho thương hiệu, đồng thời training cho đội của bạn cách xử lý như người làm truyền thông chuyên nghiệp.</p>
       <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
     </div>
   </li></ol>
@@ -914,18 +924,18 @@ const projects = [
   { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "/work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
-  { en: { name: "Listening", line: "We listen to <b class='k'>the founder’s story</b>: why you started, what you believe in, which customers the brand is for and what they believe in. We listen to your hopes and worries too, to understand what you really want.", pts: [] },
-    name: "Lắng nghe", line: "Chúng tôi lắng nghe <b class='k'>câu chuyện của người sáng lập</b>: vì sao bắt đầu, bạn tin vào điều gì, thương hiệu hướng tới tệp khách hàng nào và họ tin vào điều gì. Lắng nghe cả những tâm tư của bạn, để hiểu bạn thật sự mong muốn gì.", pts: [] },
-  { en: { name: "Positioning", line: "Who the brand is, who it is for and how it is different. We <b class='k'>analyse your competitors in depth</b> to see where you stand and which way to go, always guided by what the founder wants, then write the brand story every channel will tell.", pts: [] },
-    name: "Định vị", line: "Thương hiệu là ai, dành cho ai, khác ai và khác thế nào. Chúng tôi <b class='k'>phân tích chuyên sâu các đối thủ</b> để thấy bạn đang ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của người sáng lập, rồi viết câu chuyện thương hiệu cho mọi kênh cùng kể.", pts: [] },
-  { en: { name: "Identity", line: "We <b class='k'>work directly</b> with the founder and the person in charge of the brand to shape the logo, colours, typography and voice you want. We agree on every part together in one set of guidelines, to build the brand for the long term.", pts: [] },
-    name: "Nhận diện", line: "Chúng tôi <b class='k'>làm việc trực tiếp</b> với người sáng lập và người phụ trách thương hiệu để định hình logo, màu sắc, kiểu chữ, giọng văn theo mong muốn của bạn. Hai bên thống nhất từng phần trong một bộ quy chuẩn, để xây thương hiệu lâu dài.", pts: [] },
-  { en: { name: "Touchpoints", line: "Once customers start to recognise the brand, we take it where they already go: your website, social media (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media they follow. If you already have channels, we <b class='k'>read the channel data</b>, study customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
-    name: "Điểm chạm", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu đến nơi khách của bạn thường tìm đến: website, mạng xã hội (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) và các kênh truyền thông họ hay ghé. Nếu bạn đã có kênh, chúng tôi <b class='k'>đọc dữ liệu kênh</b>, nghiên cứu hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [] },
-  { en: { name: "Community", line: "A brand that grows without a community is not yet a success. Returning customers from a good community <b class='k'>save a great deal</b> of sales and marketing spend. That is why we help you build your community on the platforms your customers prefer, for customers who stay loyal.", pts: [] },
-    name: "Cộng đồng", line: "Thương hiệu lớn lên mà không dựa trên cộng đồng thì chưa thành công. Khách quay lại từ một cộng đồng tốt giúp bạn <b class='k'>tiết kiệm rất nhiều chi phí</b> bán hàng và marketing. Vì thế chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
-  { en: { name: "Crisis communication", line: "Running a business always brings the unexpected, communication crises included. Our team specialises in studying and handling crises, <b class='k'>minimising the impact and risk</b> to your brand, and trains your team to handle them like communication professionals.", pts: [] },
-    name: "Xử lý khủng hoảng", line: "Vận hành kinh doanh không thể tránh khỏi những điều không lường trước, kể cả khủng hoảng truyền thông. Đội ngũ của chúng tôi chuyên nghiên cứu và xử lý khủng hoảng, <b class='k'>giảm tối đa tác động và rủi ro</b> cho thương hiệu, đồng thời training cho đội của bạn cách xử lý từ góc nhìn của người làm truyền thông chuyên nghiệp.", pts: [] },
+  { en: { name: "Listening", hook: "Every brand begins with the founder’s story.", line: "Why you started, what you believe in, who the brand is for and what they believe in. We listen to your hopes and worries too, to understand what you really want.", pts: [] },
+    name: "Lắng nghe", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Vì sao bạn bắt đầu, bạn tin vào điều gì, thương hiệu muốn đến với ai và họ tin vào điều gì. Chúng tôi lắng nghe cả những tâm tư của bạn, để hiểu điều bạn thật sự mong muốn.", pts: [] },
+  { en: { name: "Positioning", hook: "Know who you are, who you serve and how you differ.", line: "We analyse your competitors in depth to see where you stand and which way to go, always guided by what you want. From there we write the brand story every channel will tell.", pts: [] },
+    name: "Định vị", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi phân tích chuyên sâu đối thủ để thấy bạn đang đứng ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của bạn. Từ đó viết nên câu chuyện thương hiệu mà mọi kênh cùng kể.", pts: [] },
+  { en: { name: "Identity", hook: "We shape the brand together with the founder.", line: "We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.", pts: [] },
+    name: "Nhận diện", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.", pts: [] },
+  { en: { name: "Touchpoints", hook: "Be where your customers already are.", line: "Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
+    name: "Điểm chạm", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
+  { en: { name: "Community", hook: "Strong brands grow on a community.", line: "Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.", pts: [] },
+    name: "Cộng đồng", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
+  { en: { name: "Crisis communication", hook: "Steady when a crisis hits.", line: "Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.", pts: [] },
+    name: "Xử lý khủng hoảng", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Kinh doanh luôn có những điều không lường trước. Đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông của chúng tôi giúp giảm tối đa tác động và rủi ro cho thương hiệu, đồng thời training cho đội của bạn cách xử lý như người làm truyền thông chuyên nghiệp.", pts: [] },
 ];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
@@ -940,6 +950,7 @@ stepsEl.innerHTML = steps.map((s, i) => `
     <span class="n">${String(i + 1).padStart(2, "0")}</span>
     <h3></h3>
     <div class="body">
+      <p class="hook"></p>
       <p class="line"></p>${s.ch ? `
       <p class="ch">${s.ch.map(c => `<span>${c}</span>`).join("")}</p>` : ""}
       <div class="pts"><span class="lead"></span><ul></ul></div>
@@ -949,6 +960,7 @@ function renderSteps() {
   stepsEl.querySelectorAll(".step").forEach((el, i) => {
     const s = tr(steps[i]);
     el.querySelector("h3").textContent = s.name;
+    el.querySelector(".hook").textContent = s.hook || "";
     el.querySelector(".line").innerHTML = s.line;
     el.querySelector(".lead").textContent = s.lead || "";
     el.querySelector(".pts ul").innerHTML = s.pts.map(p => `<li>${esc(p)}</li>`).join("");
