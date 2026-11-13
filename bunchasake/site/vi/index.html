@@ -133,10 +133,13 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .pain { padding: clamp(24px, 3vw, 40px) clamp(16px, 2.4vw, 32px) 8px 0; display: grid; gap: 18px; align-content: start; min-width: 0; }
 .pain + .pain { padding-left: clamp(16px, 2.4vw, 32px); border-left: 1px solid var(--line); }
-.pain-ph { width: 100%; max-width: 280px; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; margin-bottom: 18px; filter: grayscale(.35); border: 1px solid var(--line); }
+.pain-mk { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.pain-n { font: 400 clamp(44px, 4.4vw, 68px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--dim); }
+.pain:hover .pain-n { color: var(--mark); }
+.pain-mk svg { width: clamp(48px, 4.6vw, 64px); height: auto; fill: none; stroke: var(--mark); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .band { overflow: hidden; padding-block: clamp(8px, 1.4vw, 18px); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .band-in { display: flex; gap: 12px; width: max-content; animation: band 70s linear infinite; }
-.band img { width: clamp(110px, 11vw, 160px); aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 12px; filter: grayscale(.4) brightness(.92); }
+.band img { width: clamp(110px, 11vw, 160px); aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 12px; filter: grayscale(1) contrast(1.08) brightness(.82); }
 @keyframes band { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .band-in { animation: none; } }
 .pain q { font: 400 clamp(22px, 2.2vw, 30px)/1.2 var(--serif); font-style: italic; quotes: "“" "”"; }
@@ -236,21 +239,33 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 @media (max-width: 540px) { .auto { grid-template-columns: 1fr; } }
 
 /* ===== Dự án ===== */
-.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(22px, 2.6vw, 36px) clamp(12px, 1.4vw, 20px); padding-top: clamp(28px, 4vw, 48px); }
-.card { display: grid; gap: 12px; align-content: start; min-width: 0; }
-.card .img { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--raise); border-radius: 14px; position: relative; border: 1px solid var(--line); }
-.card img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(.55) brightness(.9); transition: filter .6s ease, transform .9s var(--ease); }
-.card:hover img, .card a:focus-visible img { filter: none; transform: scale(1.04); }
-.card .img .sec-tag { position: absolute; left: 10px; top: 10px; background: var(--mark); color: #fff; font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.card .img .view { position: absolute; right: 10px; bottom: 10px; background: var(--ink); color: var(--bg); padding: 6px 10px; border-radius: 999px; font-size: 11px; opacity: 0; transform: translateY(8px); transition: all .35s var(--ease); }
-.card:hover .img .view { opacity: 1; transform: none; }
-.card .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.card h3 { font-size: clamp(16px, 1.25vw, 19px); letter-spacing: -0.025em; font-weight: 500; }
-.card .ch { font-size: 12px; color: var(--muted); white-space: nowrap; }
-.card .ch:hover { color: var(--ink); }
-.card p { display: none; }
-@media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; } .card .top { flex-direction: column; gap: 2px; } }
+.wl { list-style: none; margin: 0; padding: 0; counter-reset: wl; }
+.wl li { border-bottom: 1px solid var(--line); }
+.wl a.row { position: relative; display: grid; grid-template-columns: clamp(56px, 6vw, 96px) minmax(0, 1fr) minmax(0, .9fr) auto; align-items: center; column-gap: clamp(14px, 2vw, 32px); padding-block: clamp(18px, 2vw, 28px); color: var(--ink); }
+.wl a.row::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--mark); transform: scaleX(0); transform-origin: 0 50%; transition: transform .7s var(--ease); }
+.wl a.row:hover::before, .wl a.row:focus-visible::before { transform: scaleX(1); }
+.wl .n { font: 400 clamp(30px, 3vw, 46px)/.8 var(--serif); font-style: italic; letter-spacing: -0.05em; color: var(--dim); transition: color .4s; }
+.wl .nm { font-size: clamp(26px, 3.4vw, 52px); line-height: 1; letter-spacing: -0.05em; font-weight: 500; transition: transform .5s var(--ease); }
+.wl .nm em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--mark); opacity: 0; margin-left: .25em; transition: opacity .4s; }
+.wl .sc { font-size: 14px; color: var(--muted); }
+.wl .ch { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; }
+.wl a.row:hover .n { color: var(--mark); }
+.wl a.row:hover .nm { transform: translateX(10px); }
+.wl a.row:hover .nm em { opacity: 1; }
+.wl .th { display: none; }
+.wl-prev { position: fixed; left: 0; top: 0; width: 300px; aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; pointer-events: none; z-index: 40; opacity: 0; transform: translate(-50%, -50%) scale(.9) rotate(-3deg); transition: opacity .25s, transform .35s var(--ease); box-shadow: 0 24px 60px rgba(0,0,0,.5); border: 1px solid var(--line-strong); }
+.wl-prev.on { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(-3deg); }
+.wl-prev img { width: 100%; height: 100%; object-fit: cover; }
+@media (hover: none), (max-width: 820px) {
+  .wl a.row { grid-template-columns: 64px minmax(0, 1fr) auto; row-gap: 4px; }
+  .wl .n { display: none; }
+  .wl .th { display: block; grid-row: span 2; width: 64px; height: 64px; border-radius: 10px; object-fit: cover; border: 1px solid var(--line); }
+  .wl .nm { font-size: 22px; }
+  .wl .sc { grid-column: 2; grid-row: 2; font-size: 13px; }
+  .wl .ch { display: none; }
+  .wl a.row { grid-template-columns: 64px minmax(0, 1fr); }
+  .wl-prev { display: none; }
+}
 
 /* ===== Tuyên ngôn + Đội ngũ ===== */
 .manifesto { padding-block: clamp(110px, 15vw, 220px) 0; }
@@ -446,12 +461,10 @@ dialog.policy form { margin-top: 18px; }
 .mail-act { display: grid; grid-template-columns: auto; justify-content: start; gap: 10px; align-items: stretch; margin-top: 6px; }
 .mail-act .submit { margin-top: 0; }
 .mail-copy { all: unset; box-sizing: border-box; cursor: pointer; display: grid; place-items: center; padding: 0 18px; border-radius: 14px; border: 1px solid var(--card-line); font-size: 14px; font-weight: 600; }
-.mail-fb { display: inline-flex; align-items: center; gap: 10px; justify-self: start; padding: 12px 18px; border-radius: 999px; background: var(--card-ink); color: var(--card); font-size: 14px; font-weight: 600; text-decoration: none; }
-.mail-fb:hover { background: #1877F2; color: #fff; }
-.mail-fb:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
-.mail-soc { display: flex; gap: 8px; justify-self: start; }
-.mail-soc a { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--card-line); color: var(--card-ink); transition: background .2s, color .2s, border-color .2s; }
-.mail-soc a:hover { background: var(--card-ink); color: var(--card); border-color: var(--card-ink); }
+.mail-soc { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; font-size: 14px; font-weight: 500; }
+.mail-soc a { color: var(--card-ink); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color .2s; }
+.mail-soc a:hover { text-decoration-color: var(--mark); }
+.mail-soc a + a::before { content: "·"; color: var(--mark); margin: 0 10px; display: inline-block; }
 .mail-copy:hover { border-color: var(--card-ink); }
 .mail-copy:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 </style>
@@ -511,9 +524,9 @@ dialog.policy form { margin-top: 18px; }
     <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
     <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
     <div class="pains">
-      <div class="pain"><img class="pain-ph" src="/img/home/pain-1.jpg" width="640" height="480" alt="" loading="lazy" decoding="async"><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
-      <div class="pain"><img class="pain-ph" src="/img/home/pain-2.jpg" width="640" height="480" alt="" loading="lazy" decoding="async"><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
-      <div class="pain"><img class="pain-ph" src="/img/home/pain-3.jpg" width="640" height="480" alt="" loading="lazy" decoding="async"><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
     </div>
     <div class="why-close">
       <p class="why-pull">Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class="it">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.</p>
@@ -678,62 +691,84 @@ dialog.policy form { margin-top: 18px; }
       <h2>Những câu chuyện <span class="it">đã thành thương hiệu.</span></h2>
       <p>Mỗi nơi một câu chuyện, một thương hiệu.</p>
     </div>
-    <div class="grid" id="work">
-  <div class="card">
-    <a class="img" href="https://www.facebook.com/thaichopchop" target="_blank" rel="noopener" aria-label="Chop Chop"><img src="/work/chop-chop.jpg" alt="Chop Chop" loading="lazy" width="900" height="675"><span class="sec-tag">Nhà hàng</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Chop Chop</h3><a class="ch" href="https://www.facebook.com/thaichopchop" target="_blank" rel="noopener">Facebook ↗</a></div>
-    <p>Nhà hàng</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://borgovillanemec.it/" target="_blank" rel="noopener" aria-label="Borgo Villa Nemec"><img src="/work/borgo-villa-nemec.svg" alt="Borgo Villa Nemec" loading="lazy" width="900" height="675"><span class="sec-tag">Villa · Ý</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Borgo Villa Nemec</h3><a class="ch" href="https://borgovillanemec.it/" target="_blank" rel="noopener">Website ↗</a></div>
-    <p>Villa · Ý</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://impactinvestments.it/en/" target="_blank" rel="noopener" aria-label="Impact Investments"><img src="/work/impact-investments.jpg" alt="Impact Investments" loading="lazy" width="900" height="675"><span class="sec-tag">Đầu tư · Ý</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Impact Investments</h3><a class="ch" href="https://impactinvestments.it/en/" target="_blank" rel="noopener">Website ↗</a></div>
-    <p>Đầu tư · Ý</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.facebook.com/Dichvudonnhataihanoi" target="_blank" rel="noopener" aria-label="Viet My Clean Home"><img src="/work/viet-my-clean-home.jpg" alt="Viet My Clean Home" loading="lazy" width="900" height="675"><span class="sec-tag">Dịch vụ gia đình · Hà Nội</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Viet My Clean Home</h3><a class="ch" href="https://www.facebook.com/Dichvudonnhataihanoi" target="_blank" rel="noopener">Facebook ↗</a></div>
-    <p>Dịch vụ gia đình · Hà Nội</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener" aria-label="Bác Sĩ Ánh"><img src="/work/bac-si-anh.jpg" alt="Bác Sĩ Ánh" loading="lazy" width="900" height="675"><span class="sec-tag">Y tế · Thương hiệu cá nhân</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Bác Sĩ Ánh</h3><a class="ch" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook ↗</a></div>
-    <p>Y tế · Thương hiệu cá nhân</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.instagram.com/canastodeflores/" target="_blank" rel="noopener" aria-label="Canasto de Flores"><img src="/work/canasto-de-flores.jpg" alt="Canasto de Flores" loading="lazy" width="900" height="675"><span class="sec-tag">Hoa tươi · Cảnh quan</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Canasto de Flores</h3><a class="ch" href="https://www.instagram.com/canastodeflores/" target="_blank" rel="noopener">Instagram ↗</a></div>
-    <p>Hoa tươi · Cảnh quan</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.lachongshop.com/" target="_blank" rel="noopener" aria-label="Lạc Hồng"><img src="/work/lac-hong.jpg" alt="Lạc Hồng" loading="lazy" width="900" height="675"><span class="sec-tag">Máy xây dựng</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Lạc Hồng</h3><a class="ch" href="https://www.lachongshop.com/" target="_blank" rel="noopener">Website ↗</a></div>
-    <p>Máy xây dựng</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://youtube.com/@Talk2TheTop" target="_blank" rel="noopener" aria-label="Talk2TheTop"><img src="/work/talk2thetop.jpg" alt="Talk2TheTop" loading="lazy" width="900" height="675"><span class="sec-tag">Podcast</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Talk2TheTop</h3><a class="ch" href="https://youtube.com/@Talk2TheTop" target="_blank" rel="noopener">YouTube ↗</a></div>
-    <p>Podcast</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.naviliving.com/" target="_blank" rel="noopener" aria-label="NA-VI Living"><img src="/work/navi-living.jpg" alt="NA-VI Living" loading="lazy" width="900" height="675"><span class="sec-tag">Lưu trú</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>NA-VI Living</h3><a class="ch" href="https://www.naviliving.com/" target="_blank" rel="noopener">Website ↗</a></div>
-    <p>Lưu trú</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://www.instagram.com/vestra_place/" target="_blank" rel="noopener" aria-label="Vestra Place"><img src="/work/vestra-place.jpg" alt="Vestra Place" loading="lazy" width="900" height="675"><span class="sec-tag">Coworking</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Vestra Place</h3><a class="ch" href="https://www.instagram.com/vestra_place/" target="_blank" rel="noopener">Instagram ↗</a></div>
-    <p>Coworking</p>
-  </div>
-  <div class="card">
-    <a class="img" href="https://vinaktv.com/" target="_blank" rel="noopener" aria-label="Vina KTV"><img src="/work/vina-ktv.jpg" alt="Vina KTV" loading="lazy" width="900" height="675"><span class="sec-tag">Thiết bị âm thanh</span><span class="view">Xem ↗</span></a>
-    <div class="top"><h3>Vina KTV</h3><a class="ch" href="https://vinaktv.com/" target="_blank" rel="noopener">Website ↗</a></div>
-    <p>Thiết bị âm thanh</p>
-  </div></div>
+    <ol class="wl" id="work" role="list">
+  <li><a class="row" href="https://www.facebook.com/thaichopchop" target="_blank" rel="noopener" data-img="/work/chop-chop.jpg">
+    <span class="n">01</span>
+    <img class="th" src="/work/chop-chop.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Chop Chop<em>↗</em></span>
+    <span class="sc">Nhà hàng</span>
+    <span class="ch">Facebook</span>
+  </a></li>
+  <li><a class="row" href="https://borgovillanemec.it/" target="_blank" rel="noopener" data-img="/work/borgo-villa-nemec.svg">
+    <span class="n">02</span>
+    <img class="th" src="/work/borgo-villa-nemec.svg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Borgo Villa Nemec<em>↗</em></span>
+    <span class="sc">Villa · Ý</span>
+    <span class="ch">Website</span>
+  </a></li>
+  <li><a class="row" href="https://impactinvestments.it/en/" target="_blank" rel="noopener" data-img="/work/impact-investments.jpg">
+    <span class="n">03</span>
+    <img class="th" src="/work/impact-investments.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Impact Investments<em>↗</em></span>
+    <span class="sc">Đầu tư · Ý</span>
+    <span class="ch">Website</span>
+  </a></li>
+  <li><a class="row" href="https://www.facebook.com/Dichvudonnhataihanoi" target="_blank" rel="noopener" data-img="/work/viet-my-clean-home.jpg">
+    <span class="n">04</span>
+    <img class="th" src="/work/viet-my-clean-home.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Viet My Clean Home<em>↗</em></span>
+    <span class="sc">Dịch vụ gia đình · Hà Nội</span>
+    <span class="ch">Facebook</span>
+  </a></li>
+  <li><a class="row" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener" data-img="/work/bac-si-anh.jpg">
+    <span class="n">05</span>
+    <img class="th" src="/work/bac-si-anh.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Bác Sĩ Ánh<em>↗</em></span>
+    <span class="sc">Y tế · Thương hiệu cá nhân</span>
+    <span class="ch">Facebook</span>
+  </a></li>
+  <li><a class="row" href="https://www.instagram.com/canastodeflores/" target="_blank" rel="noopener" data-img="/work/canasto-de-flores.jpg">
+    <span class="n">06</span>
+    <img class="th" src="/work/canasto-de-flores.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Canasto de Flores<em>↗</em></span>
+    <span class="sc">Hoa tươi · Cảnh quan</span>
+    <span class="ch">Instagram</span>
+  </a></li>
+  <li><a class="row" href="https://www.lachongshop.com/" target="_blank" rel="noopener" data-img="/work/lac-hong.jpg">
+    <span class="n">07</span>
+    <img class="th" src="/work/lac-hong.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Lạc Hồng<em>↗</em></span>
+    <span class="sc">Máy xây dựng</span>
+    <span class="ch">Website</span>
+  </a></li>
+  <li><a class="row" href="https://youtube.com/@Talk2TheTop" target="_blank" rel="noopener" data-img="/work/talk2thetop.jpg">
+    <span class="n">08</span>
+    <img class="th" src="/work/talk2thetop.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Talk2TheTop<em>↗</em></span>
+    <span class="sc">Podcast</span>
+    <span class="ch">YouTube</span>
+  </a></li>
+  <li><a class="row" href="https://www.naviliving.com/" target="_blank" rel="noopener" data-img="/work/navi-living.jpg">
+    <span class="n">09</span>
+    <img class="th" src="/work/navi-living.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">NA-VI Living<em>↗</em></span>
+    <span class="sc">Lưu trú</span>
+    <span class="ch">Website</span>
+  </a></li>
+  <li><a class="row" href="https://www.instagram.com/vestra_place/" target="_blank" rel="noopener" data-img="/work/vestra-place.jpg">
+    <span class="n">10</span>
+    <img class="th" src="/work/vestra-place.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Vestra Place<em>↗</em></span>
+    <span class="sc">Coworking</span>
+    <span class="ch">Instagram</span>
+  </a></li>
+  <li><a class="row" href="https://vinaktv.com/" target="_blank" rel="noopener" data-img="/work/vina-ktv.jpg">
+    <span class="n">11</span>
+    <img class="th" src="/work/vina-ktv.jpg" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">Vina KTV<em>↗</em></span>
+    <span class="sc">Thiết bị âm thanh</span>
+    <span class="ch">Website</span>
+  </a></li></ol><div class="wl-prev" id="wlPrev" aria-hidden="true"><img alt="" src="" decoding="async"></div>
   </section>
 
 <section class="sec" id="feed">
@@ -772,8 +807,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="mail-act">
       <button class="mail-copy" type="button" id="copyMail">Sao chép</button>
     </div>
-    <a class="mail-fb" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"></path></svg><span>Nhắn tin qua Facebook</span></a>
-    <div class="mail-soc"><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"></circle></svg></a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener" aria-label="Threads" title="Threads"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"></path><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"></path></svg></a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"></path></svg></a></div>
+    <nav class="mail-soc" aria-label="Mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
 
   <div class="legal">
@@ -1071,12 +1105,23 @@ if ("IntersectionObserver" in window) {
 } else { stepsEl.classList.add("no-io"); }
 
 /* ---------- Dự án ---------- */
-function renderWork() { document.getElementById("work").innerHTML = projects.map(p => `
-  <div class="card">
-    <a class="img" href="${p.url}" target="_blank" rel="noopener" aria-label="${esc(p.name)}"><img src="${p.img}" alt="${esc(p.name)}" loading="lazy" width="900" height="675"><span class="sec-tag">${esc(LANG === "en" ? p.sectorEn : p.sector)}</span><span class="view">${t("Xem", "View")} ↗</span></a>
-    <div class="top"><h3>${esc(p.name)}</h3><a class="ch" href="${p.url}" target="_blank" rel="noopener">${p.ch} ↗</a></div>
-    <p>${esc(LANG === "en" ? p.sectorEn : p.sector)}</p>
-  </div>`).join(""); }
+function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
+  <li><a class="row" href="${p.url}" target="_blank" rel="noopener" data-img="${p.img}">
+    <span class="n">${String(i + 1).padStart(2, "0")}</span>
+    <img class="th" src="${p.img}" alt="" loading="lazy" width="64" height="64">
+    <span class="nm">${esc(p.name)}<em>↗</em></span>
+    <span class="sc">${esc(LANG === "en" ? p.sectorEn : p.sector)}</span>
+    <span class="ch">${p.ch}</span>
+  </a></li>`).join(""); }
+(function () {
+  const prev = document.getElementById("wlPrev"), im = prev && prev.querySelector("img"), list = document.getElementById("work");
+  if (!prev || !matchMedia("(hover: hover)").matches) return;
+  let x = 0, y = 0, cx = 0, cy = 0, raf = 0;
+  const loop = () => { cx += (x - cx) * .18; cy += (y - cy) * .18; prev.style.left = cx + "px"; prev.style.top = cy + "px"; raf = requestAnimationFrame(loop); };
+  list.addEventListener("mousemove", e => { x = e.clientX + 230; y = e.clientY - 20; });
+  list.addEventListener("mouseover", e => { const a = e.target.closest("a.row"); if (!a) return; if (im.getAttribute("src") !== a.dataset.img) im.src = a.dataset.img; prev.classList.add("on"); if (!raf) { cx = x; cy = y; loop(); } });
+  list.addEventListener("mouseleave", () => { prev.classList.remove("on"); cancelAnimationFrame(raf); raf = 0; });
+})();
 renderWork();
 
 /* ---------- Thanh cuộn + nav ---------- */
