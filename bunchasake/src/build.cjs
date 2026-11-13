@@ -53,7 +53,7 @@ const HOME = {
   en: { title: "Bunchasake | Brand & Growth Partner for Vietnamese Businesses", desc: "Brand studio for Vietnamese-owned businesses abroad and Vietnamese brands going global. Branding and social media automation, in English and Vietnamese." },
   vi: { title: "Bunchasake | Xây thương hiệu & tăng trưởng cho doanh nghiệp Việt", desc: "Bunchasake xây thương hiệu và tự động hoá social media cho chủ doanh nghiệp Việt ở nước ngoài và thương hiệu Việt ra quốc tế. Song ngữ Việt – Anh." },
 };
-const ORG = { "@type": "Organization", "@id": ORIGIN + "/#org", name: "Bunchasake", url: ORIGIN + "/", logo: ORIGIN + "/apple-touch-icon.png", image: ORIGIN + "/og.png", email: MAIL, slogan: "You run the business. We grow the brand.", description: "Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.", knowsLanguage: ["vi", "en"], areaServed: ["Vietnam", "Italy", "Worldwide (online)"], parentOrganization: { "@type": "Organization", name: "Impact Investments S.R.L.", vatID: "IT01331310324", address: { "@type": "PostalAddress", streetAddress: "Via Guido Zanetti 1", postalCode: "34133", addressLocality: "Trieste", addressRegion: "TS", addressCountry: "IT" } }, knowsAbout: ["Brand strategy", "Brand identity", "Bilingual Vietnamese and English content", "Social media automation", "Nail salon branding", "Restaurant branding"] };
+const ORG = { "@type": "Organization", "@id": ORIGIN + "/#org", name: "Bunchasake", url: ORIGIN + "/", logo: ORIGIN + "/apple-touch-icon.png", image: ORIGIN + "/og.png", email: MAIL, sameAs: ["https://www.facebook.com/profile.php?id=61596245068595"], slogan: "You run the business. We grow the brand.", description: "Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.", knowsLanguage: ["vi", "en"], areaServed: ["Vietnam", "Italy", "Worldwide (online)"], parentOrganization: { "@type": "Organization", name: "Impact Investments S.R.L.", vatID: "IT01331310324", address: { "@type": "PostalAddress", streetAddress: "Via Guido Zanetti 1", postalCode: "34133", addressLocality: "Trieste", addressRegion: "TS", addressCountry: "IT" } }, knowsAbout: ["Brand strategy", "Brand identity", "Bilingual Vietnamese and English content", "Social media automation", "Nail salon branding", "Restaurant branding"] };
 
 /* ---------- Đọc nội dung ---------- */
 const landing = {}, blog = {};   // key -> { en: {...}, vi: {...} }
@@ -170,12 +170,12 @@ function foot(l, cta) {
     <div><b class="cap">${t.who}</b>${["nail-salon-brand-marketing", "restaurant-brand-marketing", "vietnamese-diaspora-brand-marketing", "international-brand-marketing-vietnam"].map(link).join("")}</div>
     <div><b class="cap">${t.automation}</b>${["social-media-automation", "social-media-automation-for-nail-salons", "social-media-automation-for-restaurants"].map(link).join("")}</div>
     <div><b class="cap">${t.blog}</b>${posts}<a href="${U.blogindex(l)}">${t.all} →</a></div>
-    <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#${ANCH[l].work}">${t.work}</a><a href="${mailto()}">${MAIL}</a></div>
+    <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#${ANCH[l].work}">${t.work}</a><a href="${mailto()}">${MAIL}</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a></div>
   </nav>
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
     <p>Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#${ANCH[l].pkg}">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#${ANCH[l].pkg}">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 <script>
