@@ -275,7 +275,6 @@ function catbar(l, current) {
 }
 const BIMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, "../content/blog-images.json"), "utf8")); } catch { return {}; } })();
 const bimg = k => BIMG[k] && fs.existsSync(path.join(SITE, `img/blog/${k}.jpg`)) ? BIMG[k] : null;
-const credit = (k, l) => { const c = bimg(k); return c ? `${l === "vi" ? "Ảnh" : "Photo"}: <a href="${c.link}?utm_source=bunchasake&amp;utm_medium=referral" rel="noopener" target="_blank">${esc(c.user)}</a> / <a href="https://unsplash.com/?utm_source=bunchasake&amp;utm_medium=referral" rel="noopener" target="_blank">Unsplash</a>` : ""; };
 const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></span></a>`; };
 function renderCategory(c, l) {
   const t = T[l], C = BCAT[c], urls = { en: U.cat(c, "en"), vi: U.cat(c, "vi") }, list = blogKeys.filter(k => blog[k][l] && catOf(blog[k][l]) === c);
@@ -323,7 +322,7 @@ function renderPost(k, l) {
       ${d.lead ? `<p class="lead">${esc(d.lead)}</p>` : ""}
       <p class="byline">${t.byEd} · ${t.published} <time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time> · ${mins} ${t.minRead}</p>
     </header>${bimg(k) ? `
-    <figure class="post-hero"><img src="/img/blog/${k}.jpg" width="1600" height="900" alt="${esc(d.h1)}" fetchpriority="high"><figcaption>${credit(k, l)}</figcaption></figure>` : ""}
+    <figure class="post-hero"><img src="/img/blog/${k}.jpg" width="1600" height="900" alt="${esc(d.h1)}" fetchpriority="high"></figure>` : ""}
     <div class="post-body">
       ${d.takeaways.length ? `<div class="takeaways"><b class="cap">${t.takeaways}</b><ul>${d.takeaways.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
       ${toc.length > 2 ? `<details class="toc"><summary class="cap">${t.toc}</summary><ol>${toc.map(([id, n]) => `<li><a href="#${id}">${esc(n)}</a></li>`).join("")}</ol></details>` : ""}
