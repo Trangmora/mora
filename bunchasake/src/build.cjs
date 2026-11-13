@@ -506,7 +506,7 @@ Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.e
 /* ---------- Chạy ---------- */
 (async () => {
   // dọn các trang đã dựng lần trước (giữ work/, favicon, og.png)
-  for (const e of fs.readdirSync(SITE, { withFileTypes: true })) if (e.isDirectory() && !["work", "img"].includes(e.name)) fs.rmSync(path.join(SITE, e.name), { recursive: true });
+  for (const e of fs.readdirSync(SITE, { withFileTypes: true })) if (e.isDirectory() && !["work", "img", "video"].includes(e.name)) fs.rmSync(path.join(SITE, e.name), { recursive: true });
   fs.mkdirSync(SITE + "/assets", { recursive: true });
   fs.copyFileSync(path.join(__dirname, "lp.css"), SITE + "/assets/lp.css");
   const report = [];
