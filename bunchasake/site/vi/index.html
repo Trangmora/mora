@@ -422,6 +422,9 @@ dialog.policy form { margin-top: 18px; }
 .mail-act { display: grid; grid-template-columns: auto; justify-content: start; gap: 10px; align-items: stretch; margin-top: 6px; }
 .mail-act .submit { margin-top: 0; }
 .mail-copy { all: unset; box-sizing: border-box; cursor: pointer; display: grid; place-items: center; padding: 0 18px; border-radius: 14px; border: 1px solid var(--card-line); font-size: 14px; font-weight: 600; }
+.mail-fb { display: inline-flex; align-items: center; gap: 10px; justify-self: start; padding: 12px 18px; border-radius: 999px; background: var(--card-ink); color: var(--card); font-size: 14px; font-weight: 600; text-decoration: none; }
+.mail-fb:hover { background: #1877F2; color: #fff; }
+.mail-fb:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 .mail-copy:hover { border-color: var(--card-ink); }
 .mail-copy:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 </style>
@@ -727,6 +730,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="mail-act">
       <button class="mail-copy" type="button" id="copyMail">Sao chép</button>
     </div>
+    <a class="mail-fb" href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"></path></svg><span>Nhắn tin qua Facebook</span></a>
   </div>
 
   <div class="legal">
@@ -866,6 +870,7 @@ const EN = {
 "Việt Nam · Ý · Online": "Vietnam · Italy · Online",
 "Tiếng Việt · English": "Vietnamese · English",
 "Sao chép": "Copy",
+"Nhắn tin qua Facebook": "Message us on Facebook",
 "Gửi câu chuyện": "Send your story",
 "Đặt lịch gọi 30 phút": "Book a 30-min call",
 "Tên của bạn": "Your name",
