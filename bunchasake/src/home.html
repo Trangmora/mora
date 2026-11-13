@@ -156,6 +156,9 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .scard .sc { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 1; display: grid; gap: 6px; }
 .scard .sc-n { justify-self: start; background: var(--mark); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .1em; padding: 4px 9px; border-radius: 999px; }
 .scard .sc-t { font-size: clamp(17px, 1.4vw, 22px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+@media (min-width: 1001px) { .scards.designed { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
+.scards.designed .scard::after { display: none; }
+.scards.designed .scard:hover img { transform: scale(1.03); }
 @media (max-width: 1000px) { .scards { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; } .scard { scroll-snap-align: start; } }
 @media (max-width: 560px) { .scards { grid-auto-columns: 62%; } }
 .feed { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-top: clamp(24px, 3vw, 36px); }
@@ -563,10 +566,10 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>Brand Builder · AI Growth Partner</i></a>
   <ul class="cap">
-    <li><a href="#growth">AI Growth</a></li>
-    <li><a href="#cach-lam">Cách làm</a></li>
-    <li><a href="#goi">Gói</a></li>
-    <li><a href="#automation">AI Automation</a></li>
+    <li><a href="#goi">Build</a></li>
+    <li><a href="#growth">Growth</a></li>
+    <li><a href="#automation">Automation</a></li>
+    <li><a href="#cach-lam">How we work</a></li>
     <li><a href="#du-an">Dự án</a></li>
     <li><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a></li>
   </ul>
@@ -640,6 +643,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
       <h2>Sáu bước. <span class="it">Xây dựng nó.</span></h2>
+      <p>Chúng tôi không chỉ hướng dẫn. Ở cả sáu bước, đội của chúng tôi bắt tay làm cùng bạn, và bạn duyệt từng bước.</p>
     </div>
     <div class="scards" id="scards"></div>
     <ol class="steps" id="steps" role="list"></ol>
@@ -655,19 +659,19 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <div class="pkgs">
       <article class="pkg">
         <span class="for cap">Doanh nghiệp mới mở</span>
-        <h3>Start</h3>
+        <h3>Build</h3>
         <p class="fit">Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.</p>
         <ul>
           <li>Lắng nghe và định vị bản gọn</li>
           <li>Logo, màu sắc, kiểu chữ</li>
           <li>Danh thiếp, ảnh đại diện, mẫu bài đăng</li>
         </ul>
-        <button class="choose" type="button" data-pkg="start">Chọn Start <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
         <span class="tag cap">Đầy đủ nhất</span>
         <span class="for cap">Cần thương hiệu bài bản</span>
-        <h3>Build</h3>
+        <h3>Growth</h3>
         <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
         <ul>
           <li>Đủ 6 bước</li>
@@ -675,7 +679,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
           <li>Bộ quy chuẩn thương hiệu</li>
           <li>Website và các điểm chạm chính</li>
         </ul>
-        <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="growth">Chọn Growth <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
         <span class="for cap">Thương hiệu đã cũ</span>
@@ -770,10 +774,6 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
   <div class="card-form mail-card" id="contactCard">
     <span class="cap mail-lab">Liên hệ email</span>
     <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
-    <p class="mail-note">Viết cho chúng tôi vài dòng về doanh nghiệp và câu chuyện của bạn.</p>
-    <div class="mail-act">
-      <button class="mail-copy" type="button" id="copyMail">Sao chép</button>
-    </div>
     <nav class="mail-soc" aria-label="Mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
 
@@ -870,6 +870,7 @@ const EN = {
 "Xây bản thật <span aria-hidden=\"true\">↗</span>": "Build the real one <span aria-hidden=\"true\">↗</span>",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Cách chúng tôi làm": "<span class=\"dot\" aria-hidden=\"true\"></span>How we work",
 "Sáu bước. <span class=\"it\">Xây dựng nó.</span>": "Six steps. <span class=\"it\">Build it.</span>",
+"Chúng tôi không chỉ hướng dẫn. Ở cả sáu bước, đội của chúng tôi bắt tay làm cùng bạn, và bạn duyệt từng bước.": "We don’t just advise. At all six steps our team does the work with you, and you approve each step.",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Gói": "<span class=\"dot\" aria-hidden=\"true\"></span>Packages",
 "Chọn điểm <span class=\"it\">bắt đầu.</span>": "Choose where <span class=\"it\">to start.</span>",
 "Báo giá sau buổi trò chuyện đầu tiên.": "Quoted after our first conversation.",
@@ -890,7 +891,7 @@ const EN = {
 "Đánh giá thương hiệu hiện tại": "Review of your current brand",
 "Định vị lại, làm mới nhận diện": "Repositioning and a refreshed identity",
 "Cập nhật các điểm chạm đang dùng": "Updated touchpoints you already use",
-"Chọn Start <span aria-hidden=\"true\">→</span>": "Choose Start <span aria-hidden=\"true\">→</span>",
+"Chọn Growth <span aria-hidden=\"true\">→</span>": "Choose Growth <span aria-hidden=\"true\">→</span>",
 "Chọn Build <span aria-hidden=\"true\">→</span>": "Choose Build <span aria-hidden=\"true\">→</span>",
 "Chọn Refresh <span aria-hidden=\"true\">→</span>": "Choose Refresh <span aria-hidden=\"true\">→</span>",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Thêm vào bất kỳ gói nào": "<span class=\"dot\" aria-hidden=\"true\"></span>Add to any package",
@@ -1005,18 +1006,18 @@ const projects = [
   { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
 const steps = [
-  { en: { name: "Listening", more: "/blog/brand-discovery-founder-story/", hook: "Every brand begins with the founder’s story.", line: "Why you started and what you believe in. We listen to your hopes and worries too, to understand what you really want.", pts: [] },
-    name: "Lắng nghe", more: "/vi/blog/lang-nghe-cau-chuyen-nguoi-sang-lap/", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Vì sao bạn bắt đầu và bạn tin vào điều gì. Chúng tôi lắng nghe cả những tâm tư của bạn, để hiểu điều bạn thật sự mong muốn.", pts: [] },
-  { en: { name: "Positioning", more: "/blog/brand-positioning-competitor-analysis/", hook: "Know who you are, who you serve and how you differ.", line: "We analyse your competitors in depth to see where you stand and which way to go, always guided by what you want. From there we write the brand story every channel will tell.", pts: [] },
-    name: "Định vị", more: "/vi/blog/dinh-vi-thuong-hieu-phan-tich-doi-thu/", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi phân tích chuyên sâu đối thủ để thấy bạn đang đứng ở đâu và nên đi hướng nào, luôn dựa trên mong muốn của bạn. Từ đó viết nên câu chuyện thương hiệu mà mọi kênh cùng kể.", pts: [] },
-  { en: { name: "Identity", more: "/blog/brand-identity-design-process/", hook: "We shape the brand together with the founder.", line: "We work directly with you and the person in charge of the brand: logo, colours, typography and voice. Every part is agreed in one set of guidelines, so the brand can go the distance.", pts: [] },
-    name: "Nhận diện", more: "/vi/blog/quy-trinh-thiet-ke-nhan-dien-thuong-hieu/", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Chúng tôi làm việc trực tiếp với bạn và người phụ trách thương hiệu: logo, màu sắc, kiểu chữ, giọng văn. Thống nhất từng phần trong một bộ quy chuẩn, để thương hiệu đi đường dài.", pts: [] },
-  { en: { name: "Reach", more: "/blog/brand-reach-omnichannel-presence/", hook: "Be where your customers already are.", line: "Once customers start to recognise the brand, we take it to your website, social media and the media they follow. Already have channels? We read the data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.", pts: [] },
-    name: "Phủ sóng", more: "/vi/blog/phu-song-thuong-hieu-da-kenh/", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Khi khách bắt đầu nhận ra thương hiệu, chúng tôi đưa thương hiệu lên website, mạng xã hội và các kênh truyền thông họ hay ghé. Đã có kênh? Chúng tôi đọc dữ liệu kênh, hành vi khách hàng và kết quả các chiến dịch trước, rồi tư vấn chiến lược cho chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
-  { en: { name: "Community", more: "/blog/brand-community-building/", hook: "Strong brands grow on a community.", line: "Without a community, a brand is not yet a success. Returning customers from a good community save you a great deal of sales and marketing spend. We help you build that community on the platforms your customers prefer, so they stay loyal.", pts: [] },
-    name: "Cộng đồng", more: "/vi/blog/xay-dung-cong-dong-thuong-hieu/", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Không có cộng đồng, thương hiệu chưa thể thành công. Khách quay lại từ một cộng đồng tốt giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi hỗ trợ bạn xây cộng đồng trên những nền tảng khách hàng mong muốn, để có những khách hàng trung thành.", pts: [] },
-  { en: { name: "Crisis communication", more: "/blog/crisis-communication-for-small-business/", hook: "Steady when a crisis hits.", line: "Business always brings the unexpected. Our team, specialised in studying and handling communication crises, keeps the impact and risk to your brand to a minimum, and trains your team to respond like communication professionals.", pts: [] },
-    name: "Xử lý khủng hoảng", more: "/vi/blog/xu-ly-khung-hoang-truyen-thong/", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Kinh doanh luôn có những điều không lường trước. Đội ngũ chuyên nghiên cứu và xử lý khủng hoảng truyền thông của chúng tôi giúp giảm tối đa tác động và rủi ro cho thương hiệu, đồng thời training cho đội của bạn cách xử lý như người làm truyền thông chuyên nghiệp.", pts: [] },
+  { en: { name: "Listening", more: "/blog/brand-discovery-founder-story/", hook: "Every brand begins with the founder’s story.", line: "We sit down with you for 60 minutes: why you started, what you believe in, what keeps you up at night. We take the notes, write them up and send you a summary to confirm. Nothing moves on until you agree it sounds like you.", pts: [] },
+    name: "Lắng nghe", more: "/vi/blog/lang-nghe-cau-chuyen-nguoi-sang-lap/", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Chúng tôi ngồi cùng bạn 60 phút: vì sao bạn bắt đầu, bạn tin vào điều gì, điều gì khiến bạn trăn trở. Chúng tôi ghi chép, viết thành bản tóm tắt và gửi bạn xác nhận. Bạn thấy đúng là mình rồi mới đi tiếp.", pts: [] },
+  { en: { name: "Positioning", more: "/blog/brand-positioning-competitor-analysis/", hook: "Know who you are, who you serve and how you differ.", line: "We do the competitor research ourselves, then work through the findings with you: where you stand, who you are for, what makes you different. Together we write the brand story, and you approve every line before any channel tells it.", pts: [] },
+    name: "Định vị", more: "/vi/blog/dinh-vi-thuong-hieu-phan-tich-doi-thu/", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi tự tay phân tích đối thủ, rồi cùng bạn đọc kết quả: bạn đang đứng ở đâu, dành cho ai, khác biệt ở điểm nào. Hai bên cùng viết câu chuyện thương hiệu, bạn duyệt từng câu trước khi mọi kênh cùng kể.", pts: [] },
+  { en: { name: "Identity", more: "/blog/brand-identity-design-process/", hook: "We shape the brand together with the founder.", line: "Our designers create the logo, colours, typography and voice, and sit with you and the person in charge of the brand at each round. We adjust until you are happy, then hand over the finished files and one set of guidelines your team can use.", pts: [] },
+    name: "Nhận diện", more: "/vi/blog/quy-trinh-thiet-ke-nhan-dien-thuong-hieu/", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Đội thiết kế của chúng tôi làm logo, màu sắc, kiểu chữ, giọng văn, và ngồi cùng bạn cùng người phụ trách thương hiệu ở mỗi vòng. Chỉnh đến khi bạn ưng, rồi bàn giao đủ file và một bộ quy chuẩn để đội bạn dùng được ngay.", pts: [] },
+  { en: { name: "Reach", more: "/blog/brand-reach-omnichannel-presence/", hook: "Be where your customers already are.", line: "We build the website, set up your social channels and make the first posts with you, not just a plan to follow. Already have channels? We read the data, customer behaviour and past campaigns with your team, then run the new campaign alongside you.", pts: [] },
+    name: "Phủ sóng", more: "/vi/blog/phu-song-thuong-hieu-da-kenh/", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Chúng tôi dựng website, thiết lập các kênh mạng xã hội và cùng bạn làm những bài đăng đầu tiên, không chỉ đưa một bản kế hoạch để bạn tự làm. Đã có kênh? Chúng tôi cùng đội bạn đọc dữ liệu, hành vi khách hàng và các chiến dịch trước, rồi cùng chạy chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
+  { en: { name: "Community", more: "/blog/brand-community-building/", hook: "Strong brands grow on a community.", line: "Returning customers save you a great deal of sales and marketing spend. We set up the community spaces on the platforms your customers prefer, plan the first activities and run them together with your team until they can carry on on their own.", pts: [] },
+    name: "Cộng đồng", more: "/vi/blog/xay-dung-cong-dong-thuong-hieu/", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Khách quay lại giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi lập không gian cộng đồng trên những nền tảng khách hàng yêu thích, lên các hoạt động đầu tiên và cùng đội bạn vận hành cho đến khi đội bạn tự làm được.", pts: [] },
+  { en: { name: "Crisis communication", more: "/blog/crisis-communication-for-small-business/", hook: "Steady when a crisis hits.", line: "When something goes wrong, our crisis team works with you from the first hour: we assess the situation, draft the responses and handle the communication side by side with you, then train your team so they are ready next time.", pts: [] },
+    name: "Xử lý khủng hoảng", more: "/vi/blog/xu-ly-khung-hoang-truyen-thong/", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Khi có sự cố, đội xử lý khủng hoảng của chúng tôi cùng bạn vào cuộc ngay từ giờ đầu: đánh giá tình hình, soạn phản hồi và xử lý truyền thông song song với bạn, rồi training cho đội bạn để lần sau sẵn sàng hơn.", pts: [] },
 ];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
@@ -1054,7 +1055,11 @@ stepsEl.innerHTML = steps.map((s, i) => `
   </li>`).join("");
 function renderSteps() {
   const sc = document.getElementById("scards");
-  if (sc) sc.innerHTML = steps.map((st, i) => { const s = tr(st); return `<a class="scard" href="${s.more || "#cach-lam"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${(LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0")}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join("");
+  const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
+  if (sc) { sc.classList.toggle("designed", designed); sc.innerHTML = steps.map((st, i) => { const s = tr(st), lab = (LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0");
+    return designed
+      ? `<a class="scard" href="${s.more || "#cach-lam"}" aria-label="${lab}: ${esc(s.name)}"><img src="/img/home/stepcard-${i + 1}.jpg" width="720" height="900" alt="${lab}: ${esc(s.name)}" loading="lazy" decoding="async"></a>`
+      : `<a class="scard" href="${s.more || "#cach-lam"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${lab}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join(""); }
   stepsEl.querySelectorAll(".step").forEach((el, i) => {
     const s = tr(steps[i]);
     el.querySelector("h3").textContent = s.name;
@@ -1137,13 +1142,7 @@ document.querySelectorAll(".choose").forEach(b => b.addEventListener("click", ()
   setTimeout(() => document.getElementById("mail").focus({ preventScroll: true }), reduce ? 0 : 600);
 }));
 
-/* Sao chép email + chính sách */
-document.getElementById("copyMail").addEventListener("click", async e => {
-  const b = e.currentTarget, mail = document.getElementById("mail").textContent;
-  try { await navigator.clipboard.writeText(mail); b.textContent = t("Đã chép", "Copied"); }
-  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = t("Đã chọn", "Selected"); }
-  setTimeout(() => { b.textContent = t("Sao chép", "Copy"); }, 1800);
-});
+/* Chính sách */
 /* ---------- Bản tin: gửi JSON {email, lang} tới /api/subscribe ---------- */
 const newsForm = document.getElementById("newsForm");
 if (newsForm) {

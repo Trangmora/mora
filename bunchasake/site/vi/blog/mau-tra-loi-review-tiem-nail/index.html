@@ -162,7 +162,6 @@
     <div class="mail-card">
       <span class="cap">Liên hệ email</span>
       <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
-      <div class="mail-act"><button class="mail-copy" type="button" id="copyMail" data-done="Đã chép">Sao chép</button></div>
       <nav class="mail-soc" aria-label="Mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
     </div>
   </div>
@@ -178,14 +177,5 @@
     <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a><a href="/vi/blog/">Blog</a><a href="/vi/#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
-<script>
-(function () {
-  var b = document.getElementById("copyMail"); if (!b) return;
-  b.addEventListener("click", function () {
-    var m = document.getElementById("mail").textContent, o = b.textContent;
-    (navigator.clipboard ? navigator.clipboard.writeText(m) : Promise.reject()).then(function () { b.textContent = b.dataset.done; setTimeout(function () { b.textContent = o; }, 1800); }, function () {});
-  });
-})();
-</script>
 </body>
 </html>

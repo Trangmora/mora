@@ -163,7 +163,6 @@ function foot(l, cta) {
     <div class="mail-card">
       <span class="cap">${t.byMail}</span>
       <a class="mail-big" href="${mailto(cta?.subject)}" id="mail">${MAIL}</a>
-      <div class="mail-act"><button class="mail-copy" type="button" id="copyMail" data-done="${t.copied}">${t.copy}</button></div>
       <nav class="mail-soc" aria-label="${l === "vi" ? "Mạng xã hội" : "Social media"}"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
     </div>
   </div>
@@ -179,15 +178,6 @@ function foot(l, cta) {
     <nav class="legal-links" aria-label="Legal"><a href="${mailto()}">${MAIL}</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a><a href="${U.blogindex(l)}">Blog</a><a href="${U.home(l)}#${ANCH[l].pkg}">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
-<script>
-(function () {
-  var b = document.getElementById("copyMail"); if (!b) return;
-  b.addEventListener("click", function () {
-    var m = document.getElementById("mail").textContent, o = b.textContent;
-    (navigator.clipboard ? navigator.clipboard.writeText(m) : Promise.reject()).then(function () { b.textContent = b.dataset.done; setTimeout(function () { b.textContent = o; }, 1800); }, function () {});
-  });
-})();
-</script>
 </body>
 </html>
 `;
@@ -480,7 +470,7 @@ Promise: "You run the business. We grow the brand."
 ## How we work
 Six steps, and the client approves after each one: Listening (a 60-minute conversation: the founder's story, why they started, what they believe in and what the founder wants from the business), Positioning (who the brand is, who it is for, how it is different; in-depth competitor analysis to see where the brand stands and which direction to take, based on the founder's wishes; the brand story), Identity (working directly with the founder and the person in charge of the brand: name if needed, logo, colours, typography, voice, guidelines), Reach (taking the brand where customers already go: website, social media such as Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo and Pinterest, and other media channels; for existing channels we read the channel data, customer behaviour and past campaign results, then advise on a strategy for new campaigns), Community (helping the client build a loyal community on the platforms their customers prefer), Crisis communication (a team that studies and handles communication crises, keeps the impact and risk to the brand as small as possible, and trains the client's team to respond).
 
-Packages: Start (new businesses), Build (the full six steps), Refresh (an existing brand that feels dated). The quote comes after the first conversation.
+Packages: Build (new businesses), Growth (the full six steps), Refresh (an existing brand that feels dated). In every package we work alongside the client at each step. The quote comes after the first conversation.
 
 Add-on, Social Media Automation: your own AI assistant trained on the brand voice, a 30-day content calendar, AI drafts that you approve, automatic scheduling on Facebook, Instagram and TikTok, and automatic inbox replies. We set up the system; your team runs it.
 
