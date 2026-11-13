@@ -490,7 +490,9 @@ dialog.policy form { margin-top: 18px; }
 .mail-soc { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; font-size: 14px; font-weight: 500; }
 .mail-soc a { color: var(--card-ink); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color .2s; }
 .mail-soc a:hover { text-decoration-color: var(--mark); }
-.mail-soc a + a::before { content: "·"; color: var(--mark); margin: 0 10px; display: inline-block; }
+.mail-soc { gap: 6px 18px; }
+.soc-dd a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }
+.soc-dd a:hover { color: var(--mark); }
 .mail-copy:hover { border-color: var(--card-ink); }
 .mail-copy:focus-visible { outline: 2px solid var(--card-ink); outline-offset: 3px; }
 </style>
@@ -534,7 +536,7 @@ dialog.policy form { margin-top: 18px; }
     <div class="stats">
       <div><b>11</b><span>thương hiệu đã đồng hành</span></div>
       <div><b>2</b><span>quốc gia: Việt Nam, Ý</span></div>
-      <div><b>5</b><span>bước, bạn duyệt từng bước</span></div>
+      <div><b>6</b><span>bước, bạn duyệt từng bước</span></div>
     </div>
   </section>
 
@@ -877,6 +879,7 @@ dialog.policy form { margin-top: 18px; }
     <dl class="reach">
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
+      <div><dt>Mạng xã hội</dt><dd class="soc-dd"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a> · <a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></dd></div>
     </dl>
     <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">AI Growth</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">AI Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
@@ -1025,6 +1028,7 @@ const EN = {
 "<span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span>": "<span><b>A proposal and quote</b> for exactly what you need.</span>",
 "Làm việc": "Based in",
 "Ngôn ngữ": "Languages",
+"Mạng xã hội": "Social",
 "Việt Nam · Ý · Online": "Vietnam · Italy · Online",
 "Tiếng Việt · English": "Vietnamese · English",
 "Sao chép": "Copy",
