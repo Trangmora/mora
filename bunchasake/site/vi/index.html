@@ -154,6 +154,25 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .step .body { display: grid; gap: 12px; justify-items: start; min-width: 0; }
 .step .hook { font-size: clamp(20px, 1.65vw, 26px); line-height: 1.28; letter-spacing: -0.025em; font-weight: 400; color: var(--ink); max-width: 38ch; text-wrap: balance; }
 .step .hook:empty { display: none; }
+/* ===== Thẻ ảnh 6 bước và dải ảnh mạng xã hội ===== */
+.scards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-top: clamp(24px, 3vw, 36px); }
+.scard { position: relative; display: block; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden; background: var(--raise); color: #F7F7F4; }
+.scard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.scard::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,22,21,0) 35%, rgba(22,22,21,.9) 100%); }
+.scard:hover img { transform: scale(1.05); }
+.scard .sc { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 1; display: grid; gap: 6px; }
+.scard .sc-n { justify-self: start; background: var(--mark); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .1em; padding: 4px 9px; border-radius: 999px; }
+.scard .sc-t { font-size: clamp(17px, 1.4vw, 22px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
+@media (max-width: 1000px) { .scards { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; } .scard { scroll-snap-align: start; } }
+@media (max-width: 560px) { .scards { grid-auto-columns: 62%; } }
+.feed { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-top: clamp(24px, 3vw, 36px); }
+.feed a { display: block; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; background: var(--raise); border: 1px solid var(--line); }
+.feed img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.feed a:hover img { transform: scale(1.04); }
+.feed-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.feed-links a { font-size: 14px; font-weight: 500; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--ink); }
+.feed-links a:hover { background: var(--mark); border-color: var(--mark); color: #0A0A0A; }
+@media (max-width: 820px) { .feed { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .step-more { justify-self: start; font-size: 15px; font-weight: 500; color: var(--ink); padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line-strong); transition: background .2s, color .2s, border-color .2s; }
 .step-more:hover { background: var(--mark); border-color: var(--mark); color: #0A0A0A; }
 .step-more span { color: var(--mark); }
@@ -433,7 +452,7 @@ dialog.policy form { margin-top: 18px; }
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
 <div class="progress" id="progress" aria-hidden="true" style=""></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bunchasake.com/#org","name":"Bunchasake","url":"https://bunchasake.com/","logo":"https://bunchasake.com/apple-touch-icon.png","image":"https://bunchasake.com/og.png","email":"hello@bunchasake.com","sameAs":["https://www.facebook.com/profile.php?id=61596245068595"],"slogan":"You run the business. We grow the brand.","description":"Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.","knowsLanguage":["vi","en"],"areaServed":["Vietnam","Italy","Worldwide (online)"],"parentOrganization":{"@type":"Organization","name":"Impact Investments S.R.L.","vatID":"IT01331310324","address":{"@type":"PostalAddress","streetAddress":"Via Guido Zanetti 1","postalCode":"34133","addressLocality":"Trieste","addressRegion":"TS","addressCountry":"IT"}},"knowsAbout":["Brand strategy","Brand identity","Bilingual Vietnamese and English content","Social media automation","Nail salon branding","Restaurant branding"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Dịch vụ","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiệm nail","url":"https://bunchasake.com/vi/marketing-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nhà hàng & F&B","url":"https://bunchasake.com/vi/marketing-nha-hang/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Doanh nghiệp Việt ở nước ngoài","url":"https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thương hiệu Việt ra quốc tế","url":"https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI tự động hoá social media","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho tiệm nail","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho nhà hàng","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/"}}]}},{"@type":"WebSite","@id":"https://bunchasake.com/#website","url":"https://bunchasake.com/","name":"Bunchasake","inLanguage":["en","vi"],"publisher":{"@id":"https://bunchasake.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bunchasake.com/#org","name":"Bunchasake","url":"https://bunchasake.com/","logo":"https://bunchasake.com/apple-touch-icon.png","image":"https://bunchasake.com/og.png","email":"hello@bunchasake.com","sameAs":["https://www.facebook.com/profile.php?id=61596245068595","https://www.instagram.com/buncha_sake/","https://www.threads.com/@buncha_sake","https://www.linkedin.com/in/morapost/"],"slogan":"You run the business. We grow the brand.","description":"Bunchasake is a brand builder and growth partner: a Vietnamese studio working between Vietnam and Italy that builds brands and sets up social media automation for Vietnamese business owners abroad and Vietnamese brands going international.","knowsLanguage":["vi","en"],"areaServed":["Vietnam","Italy","Worldwide (online)"],"parentOrganization":{"@type":"Organization","name":"Impact Investments S.R.L.","vatID":"IT01331310324","address":{"@type":"PostalAddress","streetAddress":"Via Guido Zanetti 1","postalCode":"34133","addressLocality":"Trieste","addressRegion":"TS","addressCountry":"IT"}},"knowsAbout":["Brand strategy","Brand identity","Bilingual Vietnamese and English content","Social media automation","Nail salon branding","Restaurant branding"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Dịch vụ","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiệm nail","url":"https://bunchasake.com/vi/marketing-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nhà hàng & F&B","url":"https://bunchasake.com/vi/marketing-nha-hang/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Doanh nghiệp Việt ở nước ngoài","url":"https://bunchasake.com/vi/marketing-doanh-nghiep-viet-o-nuoc-ngoai/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thương hiệu Việt ra quốc tế","url":"https://bunchasake.com/vi/marketing-thuong-hieu-viet-ra-quoc-te/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI tự động hoá social media","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho tiệm nail","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-tiem-nail/"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation cho nhà hàng","url":"https://bunchasake.com/vi/tu-dong-hoa-social-media-nha-hang/"}}]}},{"@type":"WebSite","@id":"https://bunchasake.com/#website","url":"https://bunchasake.com/","name":"Bunchasake","inLanguage":["en","vi"],"publisher":{"@id":"https://bunchasake.com/#org"}}]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span> <i>Brand Builder · AI Growth Partner</i></a>
@@ -511,6 +530,7 @@ dialog.policy form { margin-top: 18px; }
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
       <h2>Sáu bước. <span class="it">Xây dựng nó.</span></h2>
     </div>
+    <div class="scards" id="scards"><a class="scard" href="/vi/blog/lang-nghe-cau-chuyen-nguoi-sang-lap/"><img src="/img/home/step-1.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 01</span><span class="sc-t">Lắng nghe</span></span></a><a class="scard" href="/vi/blog/dinh-vi-thuong-hieu-phan-tich-doi-thu/"><img src="/img/home/step-2.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 02</span><span class="sc-t">Định vị</span></span></a><a class="scard" href="/vi/blog/quy-trinh-thiet-ke-nhan-dien-thuong-hieu/"><img src="/img/home/step-3.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 03</span><span class="sc-t">Nhận diện</span></span></a><a class="scard" href="/vi/blog/phu-song-thuong-hieu-da-kenh/"><img src="/img/home/step-4.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 04</span><span class="sc-t">Phủ sóng</span></span></a><a class="scard" href="/vi/blog/xay-dung-cong-dong-thuong-hieu/"><img src="/img/home/step-5.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 05</span><span class="sc-t">Cộng đồng</span></span></a><a class="scard" href="/vi/blog/xu-ly-khung-hoang-truyen-thong/"><img src="/img/home/step-6.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">BƯỚC 06</span><span class="sc-t">Xử lý khủng hoảng</span></span></a></div>
     <ol class="steps" id="steps" role="list">
   <li class="step active" data-i="0">
     <span class="n">01</span>
@@ -708,6 +728,16 @@ dialog.policy form { margin-top: 18px; }
 
 </main>
 
+<section class="sec" id="feed">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Mạng xã hội</span>
+      <h2>Câu chuyện thương hiệu, <span class="it">mỗi ngày.</span></h2>
+      <p>Mỗi tuần, chúng tôi chia sẻ những gì đã học được khi xây thương hiệu cho các chuỗi và thương hiệu đang mở rộng.</p>
+    </div>
+    <div class="feed"><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m01-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m02-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m03-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m04-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m05-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener"><img src="/img/home/feed-m07-1.jpg" width="480" height="600" alt="" loading="lazy" decoding="async"></a></div>
+    <div class="feed-links"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></div>
+  </section>
+
 <footer id="lien-he">
   <div class="contact-side">
     <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
@@ -720,7 +750,7 @@ dialog.policy form { margin-top: 18px; }
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">AI Growth</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">AI Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#growth">AI Growth</a><a href="#cach-lam">Cách làm</a><a href="#goi">Gói</a><a href="#automation">AI Automation</a><a href="#du-an">Dự án</a><a href="/vi/blog/">Blog</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -736,7 +766,7 @@ dialog.policy form { margin-top: 18px; }
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
     <p>Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="/vi/blog/">Blog</a><a href="#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a><a href="/vi/blog/">Blog</a><a href="#goi">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 
@@ -870,6 +900,9 @@ const EN = {
 "Việt Nam · Ý · Online": "Vietnam · Italy · Online",
 "Tiếng Việt · English": "Vietnamese · English",
 "Sao chép": "Copy",
+"Mạng xã hội": "Social",
+"Câu chuyện thương hiệu, <span class=\"it\">mỗi ngày.</span>": "Brand stories, <span class=\"it\">every day.</span>",
+"Mỗi tuần, chúng tôi chia sẻ những gì đã học được khi xây thương hiệu cho các chuỗi và thương hiệu đang mở rộng.": "Every week we share what we learn building brands for chains and growing companies.",
 "Nhắn tin qua Facebook": "Message us on Facebook",
 "Gửi câu chuyện": "Send your story",
 "Đặt lịch gọi 30 phút": "Book a 30-min call",
@@ -998,6 +1031,8 @@ stepsEl.innerHTML = steps.map((s, i) => `
     </div>
   </li>`).join("");
 function renderSteps() {
+  const sc = document.getElementById("scards");
+  if (sc) sc.innerHTML = steps.map((st, i) => { const s = tr(st); return `<a class="scard" href="${s.more || "#cach-lam"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${(LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0")}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join("");
   stepsEl.querySelectorAll(".step").forEach((el, i) => {
     const s = tr(steps[i]);
     el.querySelector("h3").textContent = s.name;
