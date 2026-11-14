@@ -70,6 +70,38 @@ h1, h2, h3 { font-weight: 500; text-wrap: balance; }
 .pill.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-strong); }
 .pill.ghost:hover { box-shadow: inset 0 0 0 1px var(--ink); background: transparent; color: var(--ink); }
 @media (max-width: 960px) { .nav ul { display: none; } }
+/* ---------- Menu: nhóm + menu con, menu điện thoại ---------- */
+.nav ul > li { position: relative; }
+.nav ul > li > a { display: inline-flex; align-items: center; gap: 6px; padding-block: 8px; }
+.has-sub > a::after { content: ""; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); opacity: .6; transition: transform .25s var(--ease); }
+.has-sub:hover > a::after, .has-sub:focus-within > a::after { transform: translateY(1px) rotate(225deg); }
+.nav ul > li > a.active { color: var(--ink); }
+.nav ul > li > a.active::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; background: var(--mark); border-radius: 2px; }
+.sub { position: absolute; top: 100%; left: -16px; min-width: 260px; display: grid; gap: 2px; padding: 8px; margin-top: 10px; background: var(--raise); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 18px 40px rgba(0,0,0,.35); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s, transform .25s var(--ease), visibility 0s .25s; text-transform: none; letter-spacing: 0; }
+.sub::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.has-sub:hover .sub, .has-sub:focus-within .sub { opacity: 1; visibility: visible; transform: none; transition: opacity .2s, transform .25s var(--ease); }
+.nav .sub a { display: grid; gap: 2px; padding: 10px 12px; border-radius: 10px; color: var(--ink); }
+.nav .sub a:hover, .nav .sub a:focus-visible { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.sub b { font-size: 14px; font-weight: 500; }
+.sub small { font-size: 12.5px; color: var(--muted); font-weight: 300; }
+.menu-btn { all: unset; box-sizing: border-box; cursor: pointer; display: none; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.menu-btn:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.mb-i { display: grid; gap: 4px; width: 14px; }
+.mb-i i { display: block; height: 1.5px; background: currentColor; border-radius: 2px; transition: transform .3s var(--ease); }
+.nav.open .mb-i i:first-child { transform: translateY(2.75px) rotate(45deg); }
+.nav.open .mb-i i:last-child { transform: translateY(-2.75px) rotate(-45deg); }
+@media (max-width: 960px) {
+  .menu-btn { display: inline-flex; }
+  .nav.open ul#navMenu { display: grid; position: absolute; top: 100%; left: 0; right: 0; gap: 0; padding: 8px var(--gutter) 20px; background: var(--bg); border-bottom: 1px solid var(--line); max-height: calc(100dvh - 72px); overflow-y: auto; }
+  .nav.open ul#navMenu > li { border-top: 1px solid var(--line); padding-block: 6px; }
+  .nav.open ul#navMenu > li > a { font-size: 15px; color: var(--ink); padding-block: 10px; }
+  .nav.open .has-sub > a::after { display: none; }
+  .nav.open .sub { position: static; opacity: 1; visibility: visible; transform: none; min-width: 0; margin: 0 0 6px; padding: 0; background: none; border: 0; box-shadow: none; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .nav.open .sub a { background: var(--raise); border: 1px solid var(--line); }
+  .nav.open ul#navMenu > li > a.active::before { display: none; }
+}
+@media (max-width: 560px) { .nav-r .pill { display: none; } .nav.open .sub { grid-template-columns: 1fr; } }
+
 @media (max-width: 1260px) and (min-width: 961px) { .logo i { display: none; } }
 @media (max-width: 640px) { .logo i { display: none; } }
 @media (max-width: 480px) { .nav .pill { padding: 10px 14px; font-size: 12px; } }
@@ -577,11 +609,13 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
-  <ul class="cap">
-    <li><a href="#goi">Brand Builder</a></li>
-    <li><a href="#growth">AI Growth &amp; Automation</a></li>
-    <li><a href="#cach-lam">How we work</a></li>
-    <li><a href="#du-an">Our Brands</a></li>
+  <ul class="cap" id="navMenu">
+    <li class="has-sub"><a href="#ban-gi" data-spy="ban-gi goi">Brand Builder</a>
+      <div class="sub"><a href="#ban-gi"><b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small></a><a href="#goi"><b>Gói</b><small>Build · Growth · Refresh</small></a></div></li>
+    <li class="has-sub"><a href="#growth" data-spy="growth automation">AI Growth &amp; Automation</a>
+      <div class="sub"><a href="#growth"><b>AI Growth</b><small>Tăng trưởng độ nhận diện</small></a><a href="#automation"><b>AI Automation</b><small>Tự động hoá mạng xã hội</small></a></div></li>
+    <li><a href="#cach-lam" data-spy="cach-lam">How we work</a></li>
+    <li><a href="#du-an" data-spy="du-an">Our Brands</a></li>
     <li><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a></li>
   </ul>
   <div class="nav-r">
@@ -590,6 +624,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <button type="button" data-lang="vi" aria-pressed="false" lang="vi">VI</button>
     </div>
     <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+    <button class="menu-btn" type="button" id="menuBtn" aria-controls="navMenu" aria-expanded="false"><span class="mb-l">Menu</span><span class="mb-i" aria-hidden="true"><i></i><i></i></span></button>
   </div>
 </header>
 
@@ -859,6 +894,10 @@ const EN = {
 
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
 "Cách làm": "How we work",
+"<b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small>": "<b>Services</b><small>What we do, and how</small>",
+"<b>Gói</b><small>Build · Growth · Refresh</small>": "<b>Packages</b><small>Build · Growth · Refresh</small>",
+"<b>AI Growth</b><small>Tăng trưởng độ nhận diện</small>": "<b>AI Growth</b><small>Grow brand awareness</small>",
+"<b>AI Automation</b><small>Tự động hoá mạng xã hội</small>": "<b>AI Automation</b><small>Social media on autopilot</small>",
 "Xem dịch vụ <span aria-hidden=\"true\">↓</span>": "See services <span aria-hidden=\"true\">↓</span>",
 "<span class=\"dot\" aria-hidden=\"true\"></span>Dịch vụ": "<span class=\"dot\" aria-hidden=\"true\"></span>Services",
 "Chúng tôi làm gì. <span class=\"it\">Và làm thế nào.</span>": "What we do. <span class=\"it\">And how.</span>",
@@ -1149,13 +1188,19 @@ function onScroll() {
 addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
 /* ---------- Scrollspy ---------- */
-const navLinks = [...document.querySelectorAll('.nav ul a')];
+const navLinks = [...document.querySelectorAll('.nav ul > li > a[data-spy]')];
 if ("IntersectionObserver" in window) {
   const spy = new IntersectionObserver(es => es.forEach(en => {
-    if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+    if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.dataset.spy.split(" ").includes(en.target.id)));
   }), { rootMargin: "-40% 0px -55% 0px" });
-  ["growth", "cach-lam", "goi", "automation", "du-an"].forEach(id => spy.observe(document.getElementById(id)));
+  navLinks.flatMap(a => a.dataset.spy.split(" ")).forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 }
+/* Menu điện thoại */
+const navEl = document.getElementById("nav"), menuBtn = document.getElementById("menuBtn");
+const setMenu = open => { navEl.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); };
+menuBtn.addEventListener("click", () => setMenu(!navEl.classList.contains("open")));
+document.getElementById("navMenu").addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+addEventListener("keydown", e => { if (e.key === "Escape" && navEl.classList.contains("open")) { setMenu(false); menuBtn.focus(); } });
 
 /* ---------- Thanh CTA trên điện thoại ---------- */
 const mcta = document.getElementById("mobileCta"), heroEl = document.querySelector(".hero"), contactEl = document.getElementById("thu") || document.getElementById("lien-he"); /* ẩn thanh CTA khi tới bản tin để không che ô nhập email */

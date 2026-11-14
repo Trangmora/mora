@@ -152,7 +152,7 @@ function nav(l, urls, current, blogCur) {
 const ANCH = { en: { work: "projects", pkg: "packages" }, vi: { work: "du-an", pkg: "goi" } };
 function enAnchors(h) {
   for (const [a, b] of [["cach-lam", "how-we-work"], ["du-an", "projects"], ["lien-he", "contact"], ["cau-chuyen", "story"]]) h = h.replace(new RegExp(`(?<![\\w-])${a}(?![\\w-])`, "g"), b);
-  return h.replace(/id="goi"/g, 'id="packages"').replace(/#goi\b/g, "#packages").replace(/"goi"/g, '"packages"');
+  return h.replace(/id="goi"/g, 'id="packages"').replace(/#goi\b/g, "#packages").replace(/"goi"/g, '"packages"').replace(/(data-spy="[^"]*?)\bgoi\b/g, "$1packages");
 }
 function foot(l, cta) {
   const t = T[l], link = (k) => U.landing(k, l) ? `<a href="${U.landing(k, l)}">${esc(LABEL[k]?.[l] || landing[k][l].kicker)}</a>` : "";
