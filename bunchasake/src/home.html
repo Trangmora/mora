@@ -601,44 +601,6 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 .news-msg[data-state="err"] { color: #FF8A73; }
 @media (max-width: 860px) { .news-in { grid-template-columns: 1fr; } }
 @media (max-width: 440px) { .news-form { grid-template-columns: 1fr; } .news-form button { width: 100%; } .news-msg { padding-left: 4px; } }
-
-/* ================= Bản tối giản (ít chữ, ít lớp) ================= */
-.hero { padding-block: clamp(64px, 10vw, 140px) clamp(48px, 7vw, 96px); }
-.hero-foot p { font-size: clamp(17px, 1.5vw, 21px); color: var(--ink); opacity: .78; }
-.sec-head { margin-bottom: 0; }
-.sec-head h2 { text-wrap: balance; }
-/* Brand Builder */
-.pkgs { gap: 14px; }
-.pkg { min-height: clamp(220px, 20vw, 280px); align-content: stretch; grid-template-rows: auto 1fr auto; gap: 14px; }
-.pkg h3 { font-size: clamp(36px, 3.6vw, 56px); }
-.pkg .fit { font-size: 16px; max-width: 26ch; }
-/* AI Automation */
-.auto-band { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px 40px; padding: clamp(28px, 4vw, 56px); border: 1px solid var(--line); border-radius: 20px; background: var(--raise); }
-.auto-band h2 { font-size: clamp(34px, 4.4vw, 64px); line-height: 1; letter-spacing: -0.05em; margin-top: 14px; }
-.auto-band h2 .it { color: var(--muted); }
-.auto-band .chips { grid-column: 1; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.auto-band .chips li { padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink); }
-.auto-band .pill { grid-column: 2; grid-row: 1 / span 2; align-self: end; }
-@media (max-width: 760px) { .auto-band { grid-template-columns: 1fr; } .auto-band .pill { grid-column: 1; grid-row: auto; justify-self: start; } }
-/* How we work: 6 thẻ, 3 cột */
-.scards { margin-top: clamp(28px, 3.4vw, 44px); margin-bottom: 0; }
-@media (min-width: 1001px) { .scards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
-/* Footer gọn */
-footer { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: end; }
-footer .contact-side { gap: clamp(20px, 2.6vw, 32px); }
-footer .mail-big { color: var(--ink); justify-self: start; }
-footer .mail-soc a { color: var(--muted); }
-footer .mail-soc a:hover { color: var(--ink); }
-footer .news-form { align-self: end; grid-template-columns: 1fr; gap: 12px; }
-.news-lab { color: var(--muted); }
-.news-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
-footer .news-msg { padding-left: 4px; }
-.legal { font-size: 12.5px; }
-@media (max-width: 860px) { footer { grid-template-columns: 1fr; } }
-@media (max-width: 440px) { .news-row { grid-template-columns: 1fr; } }
-.mobile-cta .pill { flex: 1; justify-content: center; }
-.auto-band .lab { display: flex; align-items: center; gap: 10px; color: var(--muted); }
-@media (max-width: 900px) { .pkg { min-height: 0; } }
 </style>
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
@@ -648,7 +610,8 @@ footer .news-msg { padding-left: 4px; }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li><a href="#goi" data-spy="goi">Brand Builder</a></li>
+    <li class="has-sub"><a href="#ban-gi" data-spy="ban-gi goi">Brand Builder</a>
+      <div class="sub"><a href="#ban-gi"><b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small></a><a href="#goi"><b>Gói</b><small>Build · Growth · Refresh</small></a></div></li>
     <li><a href="#automation" data-spy="automation">AI Automation</a></li>
     <li><a href="#cach-lam" data-spy="cach-lam">How we work</a></li>
     <li><a href="#du-an" data-spy="du-an">Our Brands</a></li>
@@ -670,88 +633,206 @@ footer .news-msg { padding-left: 4px; }
       <span class="row"><span>You have the <span class="it">story.</span></span></span>
       <span class="row"><span><span class="muted">We turn it into a</span> <span class="brand">brand.</span></span></span>
     </h1>
+    <p class="promise">Bạn lo vận hành. <span>Chúng tôi tăng trưởng thương hiệu.</span></p>
     <div class="hero-foot">
-      <p>Xây và tăng trưởng thương hiệu cho chuỗi và doanh nghiệp đang mở rộng.</p>
+      <p><b>Bunchasake</b> xây và tăng trưởng thương hiệu cho chuỗi và doanh nghiệp đang mở rộng: định vị, nhận diện, website, mạng xã hội và AI automation. Đội của chúng tôi làm cùng bạn, bạn duyệt từng bước.</p>
       <div class="hero-cta">
-        <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
-        <a class="pill ghost" href="#goi">Xem dịch vụ</a>
+        <a class="pill" href="#ban-gi">Xem dịch vụ <span aria-hidden="true">↓</span></a>
+        <a class="pill ghost" href="#du-an">Xem dự án</a>
       </div>
+    </div>
+    <div class="stats">
+      <div><b>11</b><span>thương hiệu đã đồng hành</span></div>
+      <div><b>2</b><span>quốc gia: Việt Nam, Ý</span></div>
+      <div><b>6</b><span>bước, bạn duyệt từng bước</span></div>
     </div>
   </section>
 
-  <!-- Brand Builder -->
+  <div class="marquee bleed" aria-label="Những thương hiệu đã đồng hành">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <!-- Chúng tôi làm gì -->
+  <section class="sec offer" id="ban-gi">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dịch vụ</span>
+      <h2>Chúng tôi làm gì. <span class="it">Và làm thế nào.</span></h2>
+    </div>
+    <div class="offers">
+      <a class="offer-i" href="#goi"><span class="cap">Build</span><h3>Xây thương hiệu mới</h3><p>Định vị gọn, logo, màu sắc, kiểu chữ và bộ ấn phẩm đầu tiên cho doanh nghiệp sắp mở.</p></a>
+      <a class="offer-i" href="#goi"><span class="cap">Growth</span><h3>Thương hiệu đầy đủ, để tăng trưởng</h3><p>Đủ 6 bước: định vị, câu chuyện, bộ quy chuẩn, website, kênh mạng xã hội, cộng đồng.</p></a>
+      <a class="offer-i" href="#goi"><span class="cap">Refresh</span><h3>Làm mới thương hiệu đang có</h3><p>Đánh giá, định vị lại và làm mới nhận diện cho thương hiệu đã cũ hoặc đã lệch chuẩn giữa các chi nhánh.</p></a>
+      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI automation mạng xã hội</h3><p>Dựng sẵn trợ lý AI và lịch nội dung để đội bạn tự đăng Facebook, Instagram, TikTok mỗi ngày.</p></a>
+    </div>
+    <ol class="how">
+      <li><b>01</b><span><strong>Trò chuyện 60 phút.</strong> Online hoặc gặp trực tiếp, nghe câu chuyện và mục tiêu của bạn.</span></li>
+      <li><b>02</b><span><strong>Đề xuất và báo giá.</strong> Bằng văn bản, đúng phạm vi bạn cần. Bạn đồng ý thì mới bắt đầu.</span></li>
+      <li><b>03</b><span><strong>Cùng làm, bạn duyệt.</strong> Đội của chúng tôi làm cùng bạn qua từng bước, bạn duyệt rồi mới đi tiếp.</span></li>
+    </ol>
+  </section>
+
+  <!-- Vì sao là câu chuyện -->
+  <section class="sec why" id="cau-chuyen">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Vì sao là câu chuyện</span>
+    </div>
+    <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
+    <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
+    <div class="pains">
+      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"/><path d="M24 24v-5a8 8 0 0 1 16 0v5"/></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"/><path d="M46 30h4a6 6 0 0 1 0 12h-5"/><path d="M10 56h40"/><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg></div><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"/><path d="M26 54h12"/><circle cx="22" cy="26" r="5"/><circle cx="33" cy="24" r="5.5"/><circle cx="43.5" cy="27" r="4"/><path d="M38 20 52 7M42 22 56 11"/></svg></div><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
+    </div>
+    <div class="why-close">
+      <p class="why-pull">Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class="it">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.</p>
+      <p class="why-body">Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.</p>
+    </div>
+  </section>
+
+  <!-- Tăng trưởng -->
+
+  <section class="sec grow" id="growth">
+    <div class="grow-text">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
+      <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
+      <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="grow-video"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
+      <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI đọc dữ liệu</h3><p>AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.</p></li><li><span class="gp-n">02</span><h3>AI làm việc hằng ngày</h3><p>Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.</p></li><li><span class="gp-n">03</span><h3>Người đồng hành</h3><p>Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.</p></li></ol>
+  </section>
+
+  <!-- Quy trình -->
+  <section class="sec" id="cach-lam">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
+      <h2>Sáu bước. <span class="it">Xây dựng nó.</span></h2>
+      <p>Chúng tôi không chỉ hướng dẫn. Ở cả sáu bước, đội của chúng tôi bắt tay làm cùng bạn, và bạn duyệt từng bước.</p>
+    </div>
+    <div class="scards" id="scards"></div>
+    <ol class="steps" id="steps" role="list"></ol>
+  </section>
+
+  <!-- Gói -->
   <section class="sec" id="goi">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Brand Builder</span>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Gói</span>
       <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
+      <p>Báo giá sau buổi trò chuyện đầu tiên.</p>
     </div>
     <div class="pkgs">
       <article class="pkg">
+        <span class="for cap">Doanh nghiệp mới mở</span>
         <h3>Build</h3>
-        <p class="fit">Thương hiệu mới cho doanh nghiệp sắp mở.</p>
+        <p class="fit">Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.</p>
+        <ul>
+          <li>Lắng nghe và định vị bản gọn</li>
+          <li>Logo, màu sắc, kiểu chữ</li>
+          <li>Danh thiếp, ảnh đại diện, mẫu bài đăng</li>
+        </ul>
         <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
+        <span class="tag cap">Đầy đủ nhất</span>
+        <span class="for cap">Cần thương hiệu bài bản</span>
         <h3>Growth</h3>
-        <p class="fit">Đủ 6 bước, thương hiệu dùng được nhiều năm.</p>
+        <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
+        <ul>
+          <li>Đủ 6 bước</li>
+          <li>Câu chuyện thương hiệu và giọng văn</li>
+          <li>Bộ quy chuẩn thương hiệu</li>
+          <li>Website và các điểm chạm chính</li>
+        </ul>
         <button class="choose" type="button" data-pkg="growth">Chọn Growth <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
+        <span class="for cap">Thương hiệu đã cũ</span>
         <h3>Refresh</h3>
-        <p class="fit">Làm mới thương hiệu đã cũ.</p>
+        <p class="fit">Phù hợp nếu khách nói thương hiệu của bạn "nhìn cũ".</p>
+        <ul>
+          <li>Đánh giá thương hiệu hiện tại</li>
+          <li>Định vị lại, làm mới nhận diện</li>
+          <li>Cập nhật các điểm chạm đang dùng</li>
+        </ul>
         <button class="choose" type="button" data-pkg="refresh">Chọn Refresh <span aria-hidden="true">→</span></button>
       </article>
     </div>
   </section>
 
-  <!-- AI Automation -->
+  <!-- Automation -->
   <section class="sec" id="automation">
-    <div class="auto-band">
-      <div>
-        <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Automation</span>
-        <h2>Mạng xã hội <span class="it">tự chạy.</span></h2>
-      </div>
-      <ul class="chips"><li>Trợ lý AI riêng</li><li>Lịch nội dung 30 ngày</li><li>Tự đăng bài</li><li>Trả lời inbox</li></ul>
-      <a class="pill ghost" href="https://bunchasake.com/social-media-automation/" data-vi="https://bunchasake.com/vi/tu-dong-hoa-social-media/">Xem chi tiết <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
-  <!-- How we work -->
-  <section class="sec" id="cach-lam">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How we work</span>
-      <h2>Sáu bước. <span class="it">Cùng làm với bạn.</span></h2>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Thêm vào bất kỳ gói nào</span>
+      <h2>AI Automation Social Media <span class="it">cho bạn.</span></h2>
+      <p>Chúng tôi dựng sẵn hệ thống, team của bạn tự vận hành Facebook, TikTok, Instagram.</p>
     </div>
-    <div class="scards" id="scards"></div>
+    <div class="auto">
+      <div><span class="n cap">01</span><b>Trợ lý AI riêng</b></div>
+      <div><span class="n cap">02</span><b>Lịch nội dung 30 ngày</b></div>
+      <div><span class="n cap">03</span><b>AI viết, bạn duyệt</b></div>
+      <div><span class="n cap">04</span><b>Tự lên lịch đăng</b></div>
+      <div><span class="n cap">05</span><b>Trả lời inbox tự động</b></div>
+    </div>
+    <div class="auto-foot" style="justify-content:flex-end">
+      <a class="more" href="https://bunchasake.com/social-media-automation/" data-vi="https://bunchasake.com/vi/tu-dong-hoa-social-media/">Xem chi tiết AI Automation →</a>
+      <a class="pill ghost" href="#lien-he">Thêm AI Automation <span aria-hidden="true">↗</span></a>
+    </div>
   </section>
 
-  <!-- Our Brands -->
+  <!-- Dự án -->
   <section class="sec" id="du-an">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Our Brands</span>
-      <h2>Thương hiệu <span class="it">chúng tôi đã làm.</span></h2>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dự án</span>
+      <h2>Những câu chuyện <span class="it">đã thành thương hiệu.</span></h2>
+      <p>Mỗi nơi một câu chuyện, một thương hiệu.</p>
     </div>
     <div class="grid" id="workGrid"></div><ol class="wl" id="work" role="list"></ol>
   </section>
+
+  <!-- Bản tin -->
+  <section class="sec news" id="thu" aria-labelledby="news-h">
+    <div class="news-in">
+      <div class="news-copy">
+        <span class="lab cap"><span class="dot" aria-hidden="true"></span>Bản tin</span>
+        <h2 id="news-h">Nhận thư từ <span class="it">Bunchasake.</span></h2>
+        <p>Mỗi tuần một câu chuyện về xây thương hiệu cho chuỗi và thương hiệu đang mở rộng. Không spam.</p>
+      </div>
+      <form class="news-form" id="newsForm" aria-label="Đăng ký nhận bản tin" action="/api/subscribe" method="post" novalidate>
+        <label class="news-field"><span class="sr">Email của bạn</span><input type="email" name="email" id="newsEmail" placeholder="email@congty.com" autocomplete="email" inputmode="email" required aria-describedby="newsMsg"></label>
+        <button type="submit" id="newsBtn">Đăng ký <span aria-hidden="true">→</span></button>
+        <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
 </main>
+
+
 
 <footer id="lien-he">
   <div class="contact-side">
     <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
+    <ol class="next" aria-label="Sau khi bạn gửi email">
+      <li><span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span></li>
+      <li><span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span></li>
+      <li><span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span></li>
+    </ol>
+    <dl class="reach">
+      <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
+      <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
+    </dl>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#goi">Brand Builder</a><a href="#automation">AI Automation</a><a href="#cach-lam">How we work</a><a href="#du-an">Our Brands</a><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="#thu">Bản tin</a></nav>
+  </div>
+
+  <div class="card-form mail-card" id="contactCard">
+    <span class="cap mail-lab">Liên hệ email</span>
     <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
     <nav class="mail-soc" aria-label="Mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
-  <form class="news-form" id="newsForm" aria-label="Đăng ký nhận bản tin" action="/api/subscribe" method="post" novalidate>
-    <span class="cap news-lab">Nhận bản tin</span>
-    <div class="news-row">
-      <label class="news-field"><span class="sr">Email của bạn</span><input type="email" name="email" id="newsEmail" placeholder="email@congty.com" autocomplete="email" inputmode="email" required aria-describedby="newsMsg"></label>
-      <button type="submit" id="newsBtn">Đăng ký <span aria-hidden="true">→</span></button>
-    </div>
-    <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
-  </form>
+
   <div class="legal">
-    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy · Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="https://bunchasake.com/privacy/">Privacy policy</a><a href="https://bunchasake.com/terms/">Terms of service</a><a href="https://bunchasake.com/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
+    <p>Operated by Mora AI Business (household business) · Vietnam</p>
+    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="#goi">Pricing</a><a href="https://bunchasake.com/privacy/">Privacy policy</a><a href="https://bunchasake.com/terms/">Terms of service</a><a href="https://bunchasake.com/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 
@@ -767,7 +848,8 @@ footer .news-msg { padding-left: 4px; }
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+  <a class="pill" href="#lien-he">Gửi email</a>
+  <a class="pill ghost" href="#lien-he">Liên hệ</a>
 </div>
 
 <script>
@@ -811,20 +893,6 @@ const EN = {
 
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
 "Cách làm": "How we work",
-"Xây và tăng trưởng thương hiệu cho chuỗi và doanh nghiệp đang mở rộng.": "Brand building and growth for chains and expanding businesses.",
-"Xem dịch vụ": "See services",
-"Thương hiệu mới cho doanh nghiệp sắp mở.": "A new brand for a business about to open.",
-"Đủ 6 bước, thương hiệu dùng được nhiều năm.": "All 6 steps, a brand built to last.",
-"Làm mới thương hiệu đã cũ.": "A fresh look for a brand that feels dated.",
-"Mạng xã hội <span class=\"it\">tự chạy.</span>": "Social media <span class=\"it\">on autopilot.</span>",
-"Trợ lý AI riêng": "Your own AI assistant",
-"Lịch nội dung 30 ngày": "30-day content calendar",
-"Tự đăng bài": "Auto-posting",
-"Trả lời inbox": "Inbox replies",
-"Xem chi tiết <span aria-hidden=\"true\">→</span>": "See details <span aria-hidden=\"true\">→</span>",
-"Sáu bước. <span class=\"it\">Cùng làm với bạn.</span>": "Six steps. <span class=\"it\">Done with you.</span>",
-"Thương hiệu <span class=\"it\">chúng tôi đã làm.</span>": "Brands <span class=\"it\">we have built.</span>",
-"Nhận bản tin": "Newsletter",
 "<b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small>": "<b>Services</b><small>What we do, and how</small>",
 "<b>Gói</b><small>Build · Growth · Refresh</small>": "<b>Packages</b><small>Build · Growth · Refresh</small>",
 "<b>AI Growth</b><small>Tăng trưởng độ nhận diện</small>": "<b>AI Growth</b><small>Grow brand awareness</small>",
@@ -1025,7 +1093,7 @@ if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttr
 
 /* ---------- Marquee ---------- */
 const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
-{ const mq = document.getElementById("marquee"); if (mq) mq.innerHTML = names + names; }
+document.getElementById("marquee").innerHTML = names + names;
 
 /* ---------- Quy trình ---------- */
 const CHI = (() => {
@@ -1042,6 +1110,19 @@ const CHI = (() => {
     Pinterest: S('<path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"/>', 1),
   };
 })();
+const stepsEl = document.getElementById("steps");
+stepsEl.innerHTML = steps.map((s, i) => `
+  <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
+    <span class="n">${String(i + 1).padStart(2, "0")}</span>
+    <h3></h3>
+    <div class="body">
+      <p class="hook"></p>
+      <p class="line"></p>${s.ch ? `
+      <p class="ch">${s.ch.map(c => `<span>${CHI[c] || ""}${c}</span>`).join("")}</p>` : ""}
+      <div class="pts"><span class="lead"></span><ul></ul></div>
+      <a class="step-more" href="#"></a>
+    </div>
+  </li>`).join("");
 function renderSteps() {
   const sc = document.getElementById("scards");
   const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
@@ -1049,8 +1130,29 @@ function renderSteps() {
     return designed
       ? `<a class="scard" href="${s.more || "#cach-lam"}" aria-label="${lab}: ${esc(s.name)}"><img src="/img/home/stepcard-${i + 1}.jpg" width="720" height="900" alt="${lab}: ${esc(s.name)}" loading="lazy" decoding="async"></a>`
       : `<a class="scard" href="${s.more || "#cach-lam"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${lab}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join(""); }
+  stepsEl.querySelectorAll(".step").forEach((el, i) => {
+    const s = tr(steps[i]);
+    el.querySelector("h3").textContent = s.name;
+    el.querySelector(".hook").textContent = s.hook || "";
+    el.querySelector(".line").innerHTML = s.line;
+    const mo = el.querySelector(".step-more"); if (s.more) { mo.href = s.more; mo.innerHTML = (LANG === "en" ? "Read more" : "Xem thêm") + ' <span aria-hidden="true">→</span>'; } else mo.remove();
+    el.querySelector(".lead").textContent = s.lead || "";
+    el.querySelector(".pts ul").innerHTML = s.pts.map(p => `<li>${esc(p)}</li>`).join("");
+    el.querySelector(".pts").style.display = s.pts.length || s.lead ? "" : "none";
+  });
 }
 renderSteps();
+if ("IntersectionObserver" in window) {
+  const rows = [...stepsEl.querySelectorAll(".step")];
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const i = +en.target.dataset.i;
+      rows.forEach((s, j) => { s.classList.toggle("active", j === i); s.classList.toggle("passed", j < i); });
+    });
+  }, { rootMargin: "-45% 0px -45% 0px" });
+  rows.forEach(s => io.observe(s));
+} else { stepsEl.classList.add("no-io"); }
 
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
