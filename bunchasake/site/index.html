@@ -617,6 +617,44 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 .news-msg[data-state="err"] { color: #FF8A73; }
 @media (max-width: 860px) { .news-in { grid-template-columns: 1fr; } }
 @media (max-width: 440px) { .news-form { grid-template-columns: 1fr; } .news-form button { width: 100%; } .news-msg { padding-left: 4px; } }
+
+/* ================= Bản tối giản (ít chữ, ít lớp) ================= */
+.hero { padding-block: clamp(64px, 10vw, 140px) clamp(48px, 7vw, 96px); }
+.hero-foot p { font-size: clamp(17px, 1.5vw, 21px); color: var(--ink); opacity: .78; }
+.sec-head { margin-bottom: 0; }
+.sec-head h2 { text-wrap: balance; }
+/* Brand Builder */
+.pkgs { gap: 14px; }
+.pkg { min-height: clamp(220px, 20vw, 280px); align-content: stretch; grid-template-rows: auto 1fr auto; gap: 14px; }
+.pkg h3 { font-size: clamp(36px, 3.6vw, 56px); }
+.pkg .fit { font-size: 16px; max-width: 26ch; }
+/* AI Automation */
+.auto-band { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 28px 40px; padding: clamp(28px, 4vw, 56px); border: 1px solid var(--line); border-radius: 20px; background: var(--raise); }
+.auto-band h2 { font-size: clamp(34px, 4.4vw, 64px); line-height: 1; letter-spacing: -0.05em; margin-top: 14px; }
+.auto-band h2 .it { color: var(--muted); }
+.auto-band .chips { grid-column: 1; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.auto-band .chips li { padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line-strong); font-size: 14px; color: var(--ink); }
+.auto-band .pill { grid-column: 2; grid-row: 1 / span 2; align-self: end; }
+@media (max-width: 760px) { .auto-band { grid-template-columns: 1fr; } .auto-band .pill { grid-column: 1; grid-row: auto; justify-self: start; } }
+/* How we work: 6 thẻ, 3 cột */
+.scards { margin-top: clamp(28px, 3.4vw, 44px); margin-bottom: 0; }
+@media (min-width: 1001px) { .scards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
+/* Footer gọn */
+footer { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: end; }
+footer .contact-side { gap: clamp(20px, 2.6vw, 32px); }
+footer .mail-big { color: var(--ink); justify-self: start; }
+footer .mail-soc a { color: var(--muted); }
+footer .mail-soc a:hover { color: var(--ink); }
+footer .news-form { align-self: end; grid-template-columns: 1fr; gap: 12px; }
+.news-lab { color: var(--muted); }
+.news-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+footer .news-msg { padding-left: 4px; }
+.legal { font-size: 12.5px; }
+@media (max-width: 860px) { footer { grid-template-columns: 1fr; } }
+@media (max-width: 440px) { .news-row { grid-template-columns: 1fr; } }
+.mobile-cta .pill { flex: 1; justify-content: center; }
+.auto-band .lab { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+@media (max-width: 900px) { .pkg { min-height: 0; } }
 </style>
 </head>
 <body>
@@ -628,8 +666,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li class="has-sub"><a href="#ban-gi" data-spy="ban-gi packages">Brand Builder</a>
-      <div class="sub"><a href="#ban-gi"><b>Services</b><small>What we do, and how</small></a><a href="#packages"><b>Packages</b><small>Build · Growth · Refresh</small></a></div></li>
+    <li><a href="#packages" data-spy="packages">Brand Builder</a></li>
     <li><a href="#automation" data-spy="automation">AI Automation</a></li>
     <li><a href="#how-we-work" data-spy="how-we-work">How we work</a></li>
     <li><a href="#projects" data-spy="projects">Our Brands</a></li>
@@ -648,218 +685,66 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <span class="row"><span>You have the <span class="it">story.</span></span></span>
       <span class="row"><span><span class="muted">We turn it into a</span> <span class="brand">brand.</span></span></span>
     </h1>
-    <p class="promise">You run the business. <span>We grow the brand.</span></p>
     <div class="hero-foot">
-      <p><b>Bunchasake</b> builds and grows brands for chains and expanding businesses: positioning, identity, website, social media and AI automation. Our team works with you, and you approve each step.</p>
+      <p>Brand building and growth for chains and expanding businesses.</p>
       <div class="hero-cta">
-        <a class="pill" href="#ban-gi">See services <span aria-hidden="true">↓</span></a>
-        <a class="pill ghost" href="#projects">See our work</a>
+        <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
+        <a class="pill ghost" href="#packages">See services</a>
       </div>
     </div>
-    <div class="stats">
-      <div><b>11</b><span>brands we have worked with</span></div>
-      <div><b>2</b><span>countries: Vietnam, Italy</span></div>
-      <div><b>6</b><span>steps, you approve each one</span></div>
-    </div>
   </section>
 
-  <div class="marquee bleed" aria-label="Brands we have worked with">
-    <div class="marquee-track" id="marquee"><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span></div>
-  </div>
-
-  <!-- Chúng tôi làm gì -->
-  <section class="sec offer" id="ban-gi">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Services</span>
-      <h2>What we do. <span class="it">And how.</span></h2>
-    </div>
-    <div class="offers">
-      <a class="offer-i" href="#packages"><span class="cap">Build</span><h3>A new brand, built</h3><p>Short positioning, logo, colours, typography and the first set of materials for a business about to open.</p></a>
-      <a class="offer-i" href="#packages"><span class="cap">Growth</span><h3>A complete brand, built to grow</h3><p>All 6 steps: positioning, story, guidelines, website, social channels and community.</p></a>
-      <a class="offer-i" href="#packages"><span class="cap">Refresh</span><h3>Refresh the brand you have</h3><p>Review, reposition and refresh an identity that feels dated or has drifted across branches.</p></a>
-      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI social media automation</h3><p>We set up an AI assistant and content calendar so your team posts on Facebook, Instagram and TikTok every day.</p></a>
-    </div>
-    <ol class="how">
-      <li><b>01</b><span><strong>A 60-minute conversation.</strong> Online or in person, about your story and your goals.</span></li>
-      <li><b>02</b><span><strong>Proposal and quote.</strong> In writing, scoped to what you need. Work starts only when you agree.</span></li>
-      <li><b>03</b><span><strong>We do it together.</strong> Our team works with you through each step, and you approve before we move on.</span></li>
-    </ol>
-  </section>
-
-  <!-- Vì sao là câu chuyện -->
-  <section class="sec why" id="story">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Why the story</span>
-    </div>
-    <h2 class="why-lead">What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class="it">The story behind it.</span></h2>
-    <p class="why-sub">People don't really buy a product or a service. <b>They buy the story behind it.</b></p>
-    <div class="pains">
-      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q><p>It tells a story about the taste, style and personality of the person carrying it.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q><p>It is a moment of calm, time for yourself, or a meeting worth remembering.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q><p>It is built from the values, feelings, trust and story it gives its customers.</p></div>
-    </div>
-    <div class="why-close">
-      <p class="why-pull">A product earns attention. A <span class="it">story</span> is what moves people, stays with them and makes them stay.</p>
-      <p class="why-body">Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.</p>
-    </div>
-  </section>
-
-  <!-- Tăng trưởng -->
-
-  <section class="sec grow" id="growth">
-    <div class="grow-text">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
-      <h2>We help you automate <span class="it">and grow your brand awareness.</span></h2>
-      <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
-    </div>
-    <div class="grow-video"><video class="logo-video" src="/work/lab-video.mp4" poster="/work/lab-video-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
-      <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI reads the data</h3><p>AI analyses your channels, customers and competitors to show where the brand can grow.</p></li><li><span class="gp-n">02</span><h3>AI does the daily work</h3><p>Drafts content, schedules posts and answers messages. You approve, the system runs.</p></li><li><span class="gp-n">03</span><h3>A partner beside you</h3><p>We track the results with you and adjust the strategy so the brand keeps growing.</p></li></ol>
-  </section>
-
-  <!-- Quy trình -->
-  <section class="sec" id="how-we-work">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How we work</span>
-      <h2>Six steps. <span class="it">Build it.</span></h2>
-      <p>We don’t just advise. At all six steps our team does the work with you, and you approve each step.</p>
-    </div>
-    <div class="scards" id="scards"><a class="scard" href="/blog/brand-discovery-founder-story/"><img src="/img/home/step-1.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 01</span><span class="sc-t">Listening</span></span></a><a class="scard" href="/blog/brand-positioning-competitor-analysis/"><img src="/img/home/step-2.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 02</span><span class="sc-t">Positioning</span></span></a><a class="scard" href="/blog/brand-identity-design-process/"><img src="/img/home/step-3.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 03</span><span class="sc-t">Identity</span></span></a><a class="scard" href="/blog/brand-reach-omnichannel-presence/"><img src="/img/home/step-4.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 04</span><span class="sc-t">Reach</span></span></a><a class="scard" href="/blog/brand-community-building/"><img src="/img/home/step-5.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 05</span><span class="sc-t">Community</span></span></a><a class="scard" href="/blog/crisis-communication-for-small-business/"><img src="/img/home/step-6.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 06</span><span class="sc-t">Crisis communication</span></span></a></div>
-    <ol class="steps" id="steps" role="list">
-  <li class="step active" data-i="0">
-    <span class="n">01</span>
-    <h3>Listening</h3>
-    <div class="body">
-      <p class="hook">Every brand begins with the founder’s story.</p>
-      <p class="line">We sit down with you for 60 minutes: why you started, what you believe in, what keeps you up at night. We take the notes, write them up and send you a summary to confirm. Nothing moves on until you agree it sounds like you.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-discovery-founder-story/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="1">
-    <span class="n">02</span>
-    <h3>Positioning</h3>
-    <div class="body">
-      <p class="hook">Know who you are, who you serve and how you differ.</p>
-      <p class="line">We do the competitor research ourselves, then work through the findings with you: where you stand, who you are for, what makes you different. Together we write the brand story, and you approve every line before any channel tells it.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-positioning-competitor-analysis/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="2">
-    <span class="n">03</span>
-    <h3>Identity</h3>
-    <div class="body">
-      <p class="hook">We shape the brand together with the founder.</p>
-      <p class="line">Our designers create the logo, colours, typography and voice, and sit with you and the person in charge of the brand at each round. We adjust until you are happy, then hand over the finished files and one set of guidelines your team can use.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-identity-design-process/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="3">
-    <span class="n">04</span>
-    <h3>Reach</h3>
-    <div class="body">
-      <p class="hook">Be where your customers already are.</p>
-      <p class="line">We build the website, set up your social channels and make the first posts with you, not just a plan to follow. Already have channels? We read the data, customer behaviour and past campaigns with your team, then run the new campaign alongside you.</p>
-      <p class="ch"><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9s-1.2 6.3-3.7 9c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"></path></svg>Website</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"></path></svg>Facebook</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"></circle></svg>Instagram</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.5 3c.3 2.1 1.6 3.6 3.8 3.9v2.9c-1.4 0-2.7-.4-3.8-1.1v5.9a5.6 5.6 0 1 1-5.6-5.6h.3v3a2.7 2.7 0 1 0 2.4 2.7V3z"></path></svg>TikTok</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M21.6 7.6c-.2-.9-.9-1.6-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9.2 2 12 2 12s0 2.8.4 4.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10 15V9l5.2 3z"></path></svg>YouTube</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"></path><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"></path></svg>Threads</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"></path></svg>LinkedIn</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.4-9 7.6 0 2.4 1.3 4.5 3.3 5.9l-.6 3.1 3.3-1.7c1 .3 2 .4 3 .4 5 0 9-3.4 9-7.7s-4-7.6-9-7.6z"></path><path d="M8.5 9h4l-4 5h4M15 9v5"></path></svg>Zalo</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"></path></svg>Pinterest</span></p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-reach-omnichannel-presence/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="4">
-    <span class="n">05</span>
-    <h3>Community</h3>
-    <div class="body">
-      <p class="hook">Strong brands grow on a community.</p>
-      <p class="line">Returning customers save you a great deal of sales and marketing spend. We set up the community spaces on the platforms your customers prefer, plan the first activities and run them together with your team until they can carry on on their own.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-community-building/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="5">
-    <span class="n">06</span>
-    <h3>Crisis communication</h3>
-    <div class="body">
-      <p class="hook">Steady when a crisis hits.</p>
-      <p class="line">When something goes wrong, our crisis team works with you from the first hour: we assess the situation, draft the responses and handle the communication side by side with you, then train your team so they are ready next time.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/crisis-communication-for-small-business/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li></ol>
-  </section>
-
-  <!-- Gói -->
+  <!-- Brand Builder -->
   <section class="sec" id="packages">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Brand Builder</span>
       <h2>Choose where <span class="it">to start.</span></h2>
-      <p>Quoted after our first conversation.</p>
     </div>
     <div class="pkgs">
       <article class="pkg">
-        <span class="for cap">New businesses</span>
         <h3>Build</h3>
-        <p class="fit">Right for you if you are about to open and need to look ready fast.</p>
-        <ul>
-          <li>Short listening and positioning</li>
-          <li>Logo, colours, typography</li>
-          <li>Business card, profile image, post templates</li>
-        </ul>
+        <p class="fit">A new brand for a business about to open.</p>
         <button class="choose" type="button" data-pkg="build">Choose Build <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
-        <span class="tag cap">Most complete</span>
-        <span class="for cap">Need a complete brand</span>
         <h3>Growth</h3>
-        <p class="fit">Right for you if you want a brand that lasts for years.</p>
-        <ul>
-          <li>All 6 steps</li>
-          <li>Brand story and voice</li>
-          <li>Brand guidelines</li>
-          <li>Website and key touchpoints</li>
-        </ul>
+        <p class="fit">All 6 steps, a brand built to last.</p>
         <button class="choose" type="button" data-pkg="growth">Choose Growth <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
-        <span class="for cap">Brand feels dated</span>
         <h3>Refresh</h3>
-        <p class="fit">Right for you if customers say your brand "looks old".</p>
-        <ul>
-          <li>Review of your current brand</li>
-          <li>Repositioning and a refreshed identity</li>
-          <li>Updated touchpoints you already use</li>
-        </ul>
+        <p class="fit">A fresh look for a brand that feels dated.</p>
         <button class="choose" type="button" data-pkg="refresh">Choose Refresh <span aria-hidden="true">→</span></button>
       </article>
     </div>
   </section>
 
-  <!-- Automation -->
+  <!-- AI Automation -->
   <section class="sec" id="automation">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Add to any package</span>
-      <h2>AI Social Media Automation, <span class="it">built for you.</span></h2>
-      <p>We set up the system; your team runs Facebook, TikTok and Instagram.</p>
-    </div>
-    <div class="auto">
-      <div><span class="n cap">01</span><b>Your own AI assistant</b></div>
-      <div><span class="n cap">02</span><b>30-day content calendar</b></div>
-      <div><span class="n cap">03</span><b>AI drafts, you approve</b></div>
-      <div><span class="n cap">04</span><b>Auto-scheduled posts</b></div>
-      <div><span class="n cap">05</span><b>Automatic inbox replies</b></div>
-    </div>
-    <div class="auto-foot" style="justify-content:flex-end">
-      <a class="more" href="/social-media-automation/">More about AI Automation →</a>
-      <a class="pill ghost" href="#contact">Add AI Automation <span aria-hidden="true">↗</span></a>
+    <div class="auto-band">
+      <div>
+        <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Automation</span>
+        <h2>Social media <span class="it">on autopilot.</span></h2>
+      </div>
+      <ul class="chips"><li>Your own AI assistant</li><li>30-day content calendar</li><li>Auto-posting</li><li>Inbox replies</li></ul>
+      <a class="pill ghost" href="/social-media-automation/">See details <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
-  <!-- Dự án -->
+  <!-- How we work -->
+  <section class="sec" id="how-we-work">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How we work</span>
+      <h2>Six steps. <span class="it">Done with you.</span></h2>
+    </div>
+    <div class="scards" id="scards"><a class="scard" href="/blog/brand-discovery-founder-story/"><img src="/img/home/step-1.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 01</span><span class="sc-t">Listening</span></span></a><a class="scard" href="/blog/brand-positioning-competitor-analysis/"><img src="/img/home/step-2.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 02</span><span class="sc-t">Positioning</span></span></a><a class="scard" href="/blog/brand-identity-design-process/"><img src="/img/home/step-3.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 03</span><span class="sc-t">Identity</span></span></a><a class="scard" href="/blog/brand-reach-omnichannel-presence/"><img src="/img/home/step-4.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 04</span><span class="sc-t">Reach</span></span></a><a class="scard" href="/blog/brand-community-building/"><img src="/img/home/step-5.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 05</span><span class="sc-t">Community</span></span></a><a class="scard" href="/blog/crisis-communication-for-small-business/"><img src="/img/home/step-6.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 06</span><span class="sc-t">Crisis communication</span></span></a></div>
+  </section>
+
+  <!-- Our Brands -->
   <section class="sec" id="projects">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Work</span>
-      <h2>Stories <span class="it">that became brands.</span></h2>
-      <p>Every place has a story, and its own brand.</p>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Our Brands</span>
+      <h2>Brands <span class="it">we have built.</span></h2>
     </div>
     <div class="grid" id="workGrid">
   <div class="card big" style="transition-delay: 0ms;">
@@ -995,52 +880,25 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <span class="ch">Website</span>
   </a></li></ol>
   </section>
-
-  <!-- Bản tin -->
-  <section class="sec news" id="thu" aria-labelledby="news-h">
-    <div class="news-in">
-      <div class="news-copy">
-        <span class="lab cap"><span class="dot" aria-hidden="true"></span>Newsletter</span>
-        <h2 id="news-h">Letters from <span class="it">Bunchasake.</span></h2>
-        <p>One story a week on building brands for chains and growing companies. No spam.</p>
-      </div>
-      <form class="news-form" id="newsForm" aria-label="Newsletter sign-up" action="/api/subscribe" method="post" novalidate="">
-        <label class="news-field"><span class="sr">Your email</span><input type="email" name="email" id="newsEmail" placeholder="you@company.com" autocomplete="email" inputmode="email" required="" aria-describedby="newsMsg"></label>
-        <button type="submit" id="newsBtn">Subscribe <span aria-hidden="true">→</span></button>
-        <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
 </main>
-
-
 
 <footer id="contact">
   <div class="contact-side">
     <h2>Tell us <span class="it">your story.</span></h2>
-    <ol class="next" aria-label="Sau khi bạn gửi email">
-      <li><span><b>We read your story</b> and prepare questions just for you.</span></li>
-      <li><span><b>A 60-minute conversation</b>, online or in person.</span></li>
-      <li><span><b>A proposal and quote</b> for exactly what you need.</span></li>
-    </ol>
-    <dl class="reach">
-      <div><dt>Based in</dt><dd>Vietnam · Italy · Online</dd></div>
-      <div><dt>Languages</dt><dd>Vietnamese · English</dd></div>
-    </dl>
-    <nav class="foot-nav cap" aria-label="Footer"><a href="#packages">Brand Builder</a><a href="#automation">AI Automation</a><a href="#how-we-work">How we work</a><a href="#projects">Our Brands</a><a href="/blog/">Blog</a><a href="#thu">Newsletter</a></nav>
-  </div>
-
-  <div class="card-form mail-card" id="contactCard">
-    <span class="cap mail-lab">Contact by email</span>
     <a class="mail-big" href="mailto:hello@bunchasake.com" id="mail">hello@bunchasake.com</a>
     <nav class="mail-soc" aria-label="Mạng xã hội"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
   </div>
-
+  <form class="news-form" id="newsForm" aria-label="Newsletter sign-up" action="/api/subscribe" method="post" novalidate="">
+    <span class="cap news-lab">Newsletter</span>
+    <div class="news-row">
+      <label class="news-field"><span class="sr">Your email</span><input type="email" name="email" id="newsEmail" placeholder="you@company.com" autocomplete="email" inputmode="email" required="" aria-describedby="newsMsg"></label>
+      <button type="submit" id="newsBtn">Subscribe <span aria-hidden="true">→</span></button>
+    </div>
+    <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
+  </form>
   <div class="legal">
-    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
-    <p>Operated by Mora AI Business (household business) · Vietnam</p>
-    <nav class="legal-links" aria-label="Legal"><a href="mailto:hello@bunchasake.com">hello@bunchasake.com</a><a href="/blog/">Blog</a><a href="#packages">Pricing</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
+    <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy · Operated by Mora AI Business (household business) · Vietnam</p>
+    <nav class="legal-links" aria-label="Legal"><a href="/blog/">Blog</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/refund-policy/">Refunds &amp; cancellations</a></nav>
   </div>
 </footer>
 
@@ -1056,8 +914,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#contact">Email us</a>
-  <a class="pill ghost" href="#contact">Contact</a>
+  <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
 </div>
 
 <script>
@@ -1101,6 +958,20 @@ const EN = {
 
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
 "Cách làm": "How we work",
+"Xây và tăng trưởng thương hiệu cho chuỗi và doanh nghiệp đang mở rộng.": "Brand building and growth for chains and expanding businesses.",
+"Xem dịch vụ": "See services",
+"Thương hiệu mới cho doanh nghiệp sắp mở.": "A new brand for a business about to open.",
+"Đủ 6 bước, thương hiệu dùng được nhiều năm.": "All 6 steps, a brand built to last.",
+"Làm mới thương hiệu đã cũ.": "A fresh look for a brand that feels dated.",
+"Mạng xã hội <span class=\"it\">tự chạy.</span>": "Social media <span class=\"it\">on autopilot.</span>",
+"Trợ lý AI riêng": "Your own AI assistant",
+"Lịch nội dung 30 ngày": "30-day content calendar",
+"Tự đăng bài": "Auto-posting",
+"Trả lời inbox": "Inbox replies",
+"Xem chi tiết <span aria-hidden=\"true\">→</span>": "See details <span aria-hidden=\"true\">→</span>",
+"Sáu bước. <span class=\"it\">Cùng làm với bạn.</span>": "Six steps. <span class=\"it\">Done with you.</span>",
+"Thương hiệu <span class=\"it\">chúng tôi đã làm.</span>": "Brands <span class=\"it\">we have built.</span>",
+"Nhận bản tin": "Newsletter",
 "<b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small>": "<b>Services</b><small>What we do, and how</small>",
 "<b>Gói</b><small>Build · Growth · Refresh</small>": "<b>Packages</b><small>Build · Growth · Refresh</small>",
 "<b>AI Growth</b><small>Tăng trưởng độ nhận diện</small>": "<b>AI Growth</b><small>Grow brand awareness</small>",
@@ -1301,7 +1172,7 @@ if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttr
 
 /* ---------- Marquee ---------- */
 const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
-document.getElementById("marquee").innerHTML = names + names;
+{ const mq = document.getElementById("marquee"); if (mq) mq.innerHTML = names + names; }
 
 /* ---------- Quy trình ---------- */
 const CHI = (() => {
@@ -1318,19 +1189,6 @@ const CHI = (() => {
     Pinterest: S('<path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"/>', 1),
   };
 })();
-const stepsEl = document.getElementById("steps");
-stepsEl.innerHTML = steps.map((s, i) => `
-  <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
-    <span class="n">${String(i + 1).padStart(2, "0")}</span>
-    <h3></h3>
-    <div class="body">
-      <p class="hook"></p>
-      <p class="line"></p>${s.ch ? `
-      <p class="ch">${s.ch.map(c => `<span>${CHI[c] || ""}${c}</span>`).join("")}</p>` : ""}
-      <div class="pts"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="#"></a>
-    </div>
-  </li>`).join("");
 function renderSteps() {
   const sc = document.getElementById("scards");
   const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
@@ -1338,29 +1196,8 @@ function renderSteps() {
     return designed
       ? `<a class="scard" href="${s.more || "#how-we-work"}" aria-label="${lab}: ${esc(s.name)}"><img src="/img/home/stepcard-${i + 1}.jpg" width="720" height="900" alt="${lab}: ${esc(s.name)}" loading="lazy" decoding="async"></a>`
       : `<a class="scard" href="${s.more || "#how-we-work"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${lab}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join(""); }
-  stepsEl.querySelectorAll(".step").forEach((el, i) => {
-    const s = tr(steps[i]);
-    el.querySelector("h3").textContent = s.name;
-    el.querySelector(".hook").textContent = s.hook || "";
-    el.querySelector(".line").innerHTML = s.line;
-    const mo = el.querySelector(".step-more"); if (s.more) { mo.href = s.more; mo.innerHTML = (LANG === "en" ? "Read more" : "Xem thêm") + ' <span aria-hidden="true">→</span>'; } else mo.remove();
-    el.querySelector(".lead").textContent = s.lead || "";
-    el.querySelector(".pts ul").innerHTML = s.pts.map(p => `<li>${esc(p)}</li>`).join("");
-    el.querySelector(".pts").style.display = s.pts.length || s.lead ? "" : "none";
-  });
 }
 renderSteps();
-if ("IntersectionObserver" in window) {
-  const rows = [...stepsEl.querySelectorAll(".step")];
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      const i = +en.target.dataset.i;
-      rows.forEach((s, j) => { s.classList.toggle("active", j === i); s.classList.toggle("passed", j < i); });
-    });
-  }, { rootMargin: "-45% 0px -45% 0px" });
-  rows.forEach(s => io.observe(s));
-} else { stepsEl.classList.add("no-io"); }
 
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `

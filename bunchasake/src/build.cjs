@@ -145,7 +145,7 @@ function nav(l, urls, current, blogCur) {
   const lang = LANGS.map(x => urls[x] ? `<a href="${urls[x]}" hreflang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ""}>${x.toUpperCase()}</a>` : `<span>${x.toUpperCase()}</span>`).join("");
   return `<header class="nav" id="nav">
   <a class="logo" href="${U.home(l)}"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
-  <ul class="cap">${blogCur ? `<li><a href="${U.cat("automation", l)}"${blogCur === "automation" ? ' aria-current="page"' : ""}>${t.automation}</a></li><li><a href="${U.blogindex(l)}"${blogCur !== "automation" ? ' aria-current="page"' : ""}>${t.blog}</a></li>` : `${a("nail-salon-brand-marketing", t.navNail)}${a("restaurant-brand-marketing", t.navRest)}${a("social-media-automation", t.automation)}<li><a href="${U.blogindex(l)}"${current === "blog" ? ' aria-current="page"' : ""}>${t.blog}</a></li>`}</ul>
+  <ul class="cap"><li><a href="${U.home(l)}#${ANCH[l].pkg}">Brand Builder</a></li><li><a href="${U.landing("social-media-automation", l) || U.home(l) + "#automation"}"${current === "social-media-automation" ? ' aria-current="page"' : ""}>AI Automation</a></li><li><a href="${U.home(l)}#${l === "vi" ? "cach-lam" : "how-we-work"}">How we work</a></li><li><a href="${U.home(l)}#${ANCH[l].work}">Our Brands</a></li><li><a href="${U.blogindex(l)}"${current === "blog" || blogCur ? ' aria-current="page"' : ""}>Blog</a></li></ul>
   <div class="nav-r"><div class="lang" role="group" aria-label="Language">${lang}</div><a class="pill" href="#contact">${t.emailUs} <span aria-hidden="true">↓</span></a></div>
 </header>`;
 }
@@ -166,12 +166,6 @@ function foot(l, cta) {
       <nav class="mail-soc" aria-label="${l === "vi" ? "Mạng xã hội" : "Social media"}"><a href="https://www.facebook.com/profile.php?id=61596245068595" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/buncha_sake/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@buncha_sake" target="_blank" rel="noopener">Threads</a><a href="https://www.linkedin.com/in/morapost/" target="_blank" rel="noopener">LinkedIn</a></nav>
     </div>
   </div>
-  <nav class="foot-cols" aria-label="Footer">
-    <div><b class="cap">${t.who}</b>${["nail-salon-brand-marketing", "restaurant-brand-marketing", "vietnamese-diaspora-brand-marketing", "international-brand-marketing-vietnam"].map(link).join("")}</div>
-    <div><b class="cap">${t.automation}</b>${["social-media-automation", "social-media-automation-for-nail-salons", "social-media-automation-for-restaurants"].map(link).join("")}</div>
-    <div><b class="cap">${t.blog}</b>${posts}<a href="${U.blogindex(l)}">${t.all} →</a></div>
-    <div><b class="cap">Bunchasake</b><a href="${U.home(l)}">${t.home}</a><a href="${U.home(l)}#${ANCH[l].work}">${t.work}</a><a href="${mailto()}">${MAIL}</a></div>
-  </nav>
   <div class="legal">
     <p>© 2026 Bunchasake — Built by Impact Investments S.R.L. · VAT ID IT01331310324 · Via Guido Zanetti 1, 34133 Trieste (TS), Italy</p>
     <p>Operated by Mora AI Business (household business) · Vietnam</p>
