@@ -39,7 +39,7 @@
   --card-line: #BDBDB8;
   --sans: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --gutter: clamp(16px, 2.8vw, 44px);
+  --gutter: max(clamp(16px, 2.8vw, 44px), calc((100vw - 1520px) / 2));
   --ease: cubic-bezier(.2, .7, .1, 1);
   color-scheme: dark;
 }
@@ -617,6 +617,15 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 .news-msg[data-state="err"] { color: #FF8A73; }
 @media (max-width: 860px) { .news-in { grid-template-columns: 1fr; } }
 @media (max-width: 440px) { .news-form { grid-template-columns: 1fr; } .news-form button { width: 100%; } .news-msg { padding-left: 4px; } }
+
+/* Bớt chữ phần đầu trang */
+.why-close { grid-template-columns: 1fr; }
+.why-pull { max-width: 30ch; }
+.offer-i { min-height: clamp(130px, 11vw, 170px); align-content: space-between; }
+.offer-i h3 { font-size: clamp(22px, 1.9vw, 28px); }
+.hero-foot { grid-template-columns: 1fr; }
+.why .pains { margin-top: clamp(32px, 4vw, 56px); }
+@media (max-width: 760px) { .offer-i { min-height: 0; gap: 18px; } }
 </style>
 </head>
 <body>
@@ -650,22 +659,12 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     </h1>
     <p class="promise">You run the business. <span>We grow the brand.</span></p>
     <div class="hero-foot">
-      <p><b>Bunchasake</b> builds and grows brands for chains and expanding businesses: positioning, identity, website, social media and AI automation. Our team works with you, and you approve each step.</p>
       <div class="hero-cta">
         <a class="pill" href="#ban-gi">See services <span aria-hidden="true">↓</span></a>
         <a class="pill ghost" href="#projects">See our work</a>
       </div>
     </div>
-    <div class="stats">
-      <div><b>11</b><span>brands we have worked with</span></div>
-      <div><b>2</b><span>countries: Vietnam, Italy</span></div>
-      <div><b>6</b><span>steps, you approve each one</span></div>
-    </div>
   </section>
-
-  <div class="marquee bleed" aria-label="Brands we have worked with">
-    <div class="marquee-track" id="marquee"><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span><span>Chop Chop</span><span>Borgo Villa Nemec</span><span>Impact Investments</span><span>Viet My Clean Home</span><span>Bác Sĩ Ánh</span><span>Canasto de Flores</span><span>Lạc Hồng</span><span>Talk2TheTop</span><span>NA-VI Living</span><span>Vestra Place</span><span>Vina KTV</span></div>
-  </div>
 
   <!-- Chúng tôi làm gì -->
   <section class="sec offer" id="ban-gi">
@@ -674,16 +673,11 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <h2>What we do. <span class="it">And how.</span></h2>
     </div>
     <div class="offers">
-      <a class="offer-i" href="#packages"><span class="cap">Build</span><h3>A new brand, built</h3><p>Short positioning, logo, colours, typography and the first set of materials for a business about to open.</p></a>
-      <a class="offer-i" href="#packages"><span class="cap">Growth</span><h3>A complete brand, built to grow</h3><p>All 6 steps: positioning, story, guidelines, website, social channels and community.</p></a>
-      <a class="offer-i" href="#packages"><span class="cap">Refresh</span><h3>Refresh the brand you have</h3><p>Review, reposition and refresh an identity that feels dated or has drifted across branches.</p></a>
-      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI social media automation</h3><p>We set up an AI assistant and content calendar so your team posts on Facebook, Instagram and TikTok every day.</p></a>
+      <a class="offer-i" href="#packages"><span class="cap">Build</span><h3>A new brand, built</h3></a>
+      <a class="offer-i" href="#packages"><span class="cap">Growth</span><h3>A complete brand, built to grow</h3></a>
+      <a class="offer-i" href="#packages"><span class="cap">Refresh</span><h3>Refresh the brand you have</h3></a>
+      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI social media automation</h3></a>
     </div>
-    <ol class="how">
-      <li><b>01</b><span><strong>A 60-minute conversation.</strong> Online or in person, about your story and your goals.</span></li>
-      <li><b>02</b><span><strong>Proposal and quote.</strong> In writing, scoped to what you need. Work starts only when you agree.</span></li>
-      <li><b>03</b><span><strong>We do it together.</strong> Our team works with you through each step, and you approve before we move on.</span></li>
-    </ol>
   </section>
 
   <!-- Vì sao là câu chuyện -->
@@ -692,15 +686,13 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Why the story</span>
     </div>
     <h2 class="why-lead">What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class="it">The story behind it.</span></h2>
-    <p class="why-sub">People don't really buy a product or a service. <b>They buy the story behind it.</b></p>
     <div class="pains">
-      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q><p>It tells a story about the taste, style and personality of the person carrying it.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q><p>It is a moment of calm, time for yourself, or a meeting worth remembering.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q><p>It is built from the values, feelings, trust and story it gives its customers.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q></div>
     </div>
     <div class="why-close">
       <p class="why-pull">A product earns attention. A <span class="it">story</span> is what moves people, stays with them and makes them stay.</p>
-      <p class="why-body">Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.</p>
     </div>
   </section>
 
@@ -1301,7 +1293,7 @@ if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttr
 
 /* ---------- Marquee ---------- */
 const names = projects.map(p => `<span>${esc(p.name)}</span>`).join("");
-document.getElementById("marquee").innerHTML = names + names;
+{ const mq = document.getElementById("marquee"); if (mq) mq.innerHTML = names + names; }
 
 /* ---------- Quy trình ---------- */
 const CHI = (() => {
