@@ -83,6 +83,7 @@ const U = {
   blog: (k, l) => blog[k]?.[l] ? `${pre(l)}/blog/${blog[k][l].slug}/` : null,
 };
 const EXT = {   // liên kết ngoài được phép dùng trong bài (chỉ trang chính thức)
+  "vnexpress-cong-seoul": "https://e.vnexpress.net/news/travel-life/vietnam-s-cong-cafe-to-open-first-branch-in-south-korea-3778743.html", "vietcetera-cong-toronto": "https://vietcetera.com/en/cong-ca-phe-brews-beyond-asia-with-north-american-debut-in-toronto", "insideretail-cong-ph": "https://insideretail.asia/2025/01/08/vietnams-cong-ca-phe-to-debut-in-the-philippines/",
   "gbp": "https://business.google.com/", "gbp-help": "https://support.google.com/business/",
   "ig-business": "https://business.instagram.com/", "ig-help": "https://help.instagram.com/",
   "meta-business": "https://www.facebook.com/business/", "tiktok-business": "https://www.tiktok.com/business/",
@@ -244,6 +245,7 @@ function renderLanding(k, l) {
 const CTA_LABEL = { "nail-salon-brand-marketing": { en: "Branding for nail salons", vi: "Thương hiệu cho tiệm nail" }, "restaurant-brand-marketing": { en: "Branding for restaurants", vi: "Thương hiệu cho nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Branding for small businesses", vi: "Thương hiệu cho doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "For brands going global", vi: "Cho thương hiệu ra quốc tế" }, "social-media-automation": { en: "AI social media automation", vi: "AI tự động hoá social media" } };
 const CAT = { "nail-salon-brand-marketing": { en: "Nail salons", vi: "Tiệm nail" }, "restaurant-brand-marketing": { en: "Restaurants", vi: "Nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Small business", vi: "Doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "Going international", vi: "Ra quốc tế" }, "social-media-automation": { en: "Automation", vi: "Automation" } };
 const BCATS = [
+  { id: "brand-stories", en: "Brand stories", vi: "Câu chuyện thương hiệu", se: "brand-stories", sv: "cau-chuyen-thuong-hieu", de: "Real brand stories: how chains and growing brands built their positioning, identity and community, and what you can learn from them.", dv: "Câu chuyện thương hiệu có thật: các chuỗi và thương hiệu đang mở rộng đã định vị, xây nhận diện và cộng đồng thế nào, và bài học cho bạn." },
   { id: "process", en: "How we work", vi: "Cách làm", se: "how-we-work", sv: "cach-lam", de: "The six steps Bunchasake uses to build and grow a brand, one guide per step.", dv: "Sáu bước Bunchasake xây và tăng trưởng thương hiệu, mỗi bước một bài hướng dẫn." },
   { id: "nail-salons", en: "Nail salons", vi: "Tiệm nail", se: "nail-salons", sv: "tiem-nail", de: "Guides on branding, content, social media and bookings for nail salon owners.", dv: "Hướng dẫn về thương hiệu, content, social media và lượng khách cho chủ tiệm nail." },
   { id: "restaurants", en: "Restaurants", vi: "Nhà hàng", se: "restaurants", sv: "nha-hang", de: "Guides on branding, menus, content and local marketing for restaurants, cafés and food businesses.", dv: "Hướng dẫn về thương hiệu, menu, content và marketing địa phương cho nhà hàng, quán cà phê." },
