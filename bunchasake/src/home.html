@@ -608,6 +608,59 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 .hero-foot { grid-template-columns: 1fr; }
 .why .pains { margin-top: clamp(32px, 4vw, 56px); }
 @media (max-width: 760px) { .offer-i { min-height: 0; gap: 18px; } }
+
+/* ===== Vì sao + AI Growth: nền đen, có tương tác ===== */
+/* 3 ý: dạng mở-đóng, tự chuyển, rê/bấm để xem */
+.why .pains { display: grid; grid-template-columns: 1fr; margin-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--line-strong); }
+.why .pain, .why .pain + .pain { position: relative; display: grid; grid-template-columns: clamp(52px, 5vw, 72px) minmax(0, 1fr); align-items: center; column-gap: clamp(16px, 3vw, 40px); row-gap: 0; padding: clamp(20px, 2.4vw, 30px) 0; border: 0; border-bottom: 1px solid var(--line); cursor: pointer; outline: none; }
+.why .pain-mk { grid-row: 1 / span 2; padding: 0; margin: 0; border: 0; display: block; }
+.why .pain-mk svg { width: clamp(40px, 3.8vw, 56px); stroke: var(--dim); transition: stroke .4s; }
+.why .pain-mk { display: grid; gap: 8px; justify-items: start; }
+.why .pain-n { font-size: clamp(20px, 1.8vw, 26px); color: var(--dim); transition: color .4s; }
+.why .pain q { grid-column: 2; font-size: clamp(24px, 2.8vw, 42px); line-height: 1.12; color: var(--dim); transition: color .4s; }
+.why .pain p { grid-column: 2; max-height: 0; opacity: 0; overflow: hidden; font-size: clamp(15px, 1.2vw, 17px); color: var(--muted); max-width: 56ch; transition: max-height .5s var(--ease), opacity .4s, margin .5s var(--ease); }
+.why .pain:hover q, .why .pain:focus-visible q { color: var(--ink); }
+.why .pain.on q { color: var(--ink); }
+.why .pain.on .pain-n { color: var(--mark); }
+.why .pain.on .pain-mk svg { stroke: var(--mark); }
+.why .pain.on .pain-mk svg * { stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw 1.4s var(--ease) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.why .pain.on p { max-height: 160px; opacity: 1; margin-top: 12px; }
+.why .pain::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 0; background: var(--mark); }
+.why .pains.autoplay .pain.on::after { animation: bar 5s linear forwards; }
+.why .pain.on::after { width: 100%; }
+.why .pains.autoplay .pain.on::after { width: 0; }
+@keyframes bar { to { width: 100%; } }
+.why .pain:focus-visible { box-shadow: inset 0 0 0 2px var(--mark); border-radius: 8px; }
+/* Câu kết: chữ sáng dần khi cuộn */
+.why-close { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: end; gap: 24px clamp(32px, 5vw, 80px); margin-top: clamp(64px, 8vw, 120px); padding: 0; border: 0; }
+.why-pull { --p: 0%; font-size: clamp(30px, 3.8vw, 58px); max-width: 20ch; color: transparent; background: linear-gradient(180deg, var(--ink) var(--p), var(--dim) calc(var(--p) + .1%)); -webkit-background-clip: text; background-clip: text; }
+.why-pull .it { color: var(--mark); }
+.why-body { margin: 0; max-width: 48ch; }
+@media (max-width: 900px) { .why-close { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .why-pull { --p: 100%; } .why .pain.on .pain-mk svg * { animation: none; stroke-dashoffset: 0; } }
+@media (max-width: 760px) { .why .pain, .why .pain + .pain { grid-template-columns: 44px minmax(0, 1fr); } }
+.why-top { display: grid; grid-template-columns: minmax(0, 1fr) clamp(260px, 30vw, 440px); gap: clamp(28px, 5vw, 80px); align-items: end; }
+.why-top .why-lead { margin-top: clamp(20px, 3vw, 32px); }
+.why-img { margin: 0; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; background: var(--raise); }
+.why-img img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.06); transition: transform 1.6s var(--ease); }
+.why-img.in img, .why-img:hover img { transform: scale(1); }
+@media (max-width: 860px) { .why-top { grid-template-columns: 1fr; } .why-img { aspect-ratio: 4 / 3; } .why-img img { object-position: 50% 30%; } }
+.grow-photo { margin: 0; aspect-ratio: 4 / 5; max-width: 480px; justify-self: end; width: 100%; }
+.grow-photo img, .why-img img { filter: brightness(.92); }
+.grow-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.6s var(--ease), filter .6s; }
+.grow-photo:hover img, .why-img:hover img { filter: brightness(1.05); }
+.grow-photo:hover img { transform: scale(1.03); }
+@media (max-width: 860px) { .grow-photo { justify-self: stretch; max-width: none; aspect-ratio: 4 / 3; } .grow-photo img { object-position: 50% 30%; } }
+/* AI Growth: chữ một cột, rê vào từng ý thì ý đó sáng lên */
+.grow { align-items: center; }
+.grow-text .gp { grid-column: auto; display: grid; grid-template-columns: 1fr; margin: 4px 0 8px; border-top: 1px solid var(--line); width: 100%; }
+.grow-text .gp li { grid-template-columns: 44px minmax(0, 1fr); column-gap: 14px; row-gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--line); transition: opacity .3s; }
+.grow-text .gp li + li { padding-left: 0; border-left: 0; margin-top: 0; border-top: 0; }
+.grow-text .gp-n { grid-row: span 2; font-size: clamp(22px, 1.8vw, 28px); padding-top: 2px; }
+.grow-text .gp h3 { font-size: clamp(18px, 1.4vw, 21px); }
+.grow-text .gp p { font-size: 15px; max-width: none; }
+@media (hover: hover) { .grow-text .gp:hover li { opacity: .4; } .grow-text .gp li:hover { opacity: 1; } }
 </style>
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
@@ -653,8 +706,13 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Vì sao là câu chuyện</span>
     </div>
-    <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
-    <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
+    <div class="why-top">
+      <div class="why-txt">
+        <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
+        <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
+      </div>
+      <figure class="why-img"><img src="/img/home/why-dress.jpg" width="900" height="1125" alt="Đôi tay cài từng chiếc cúc trên lưng váy cưới ren" loading="lazy" decoding="async"></figure>
+    </div>
     <div class="pains">
       <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"/><path d="M24 24v-5a8 8 0 0 1 16 0v5"/></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
       <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"/><path d="M46 30h4a6 6 0 0 1 0 12h-5"/><path d="M10 56h40"/><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg></div><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
@@ -672,10 +730,10 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <div class="grow-text">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
       <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
+            <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI đọc dữ liệu</h3><p>AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.</p></li><li><span class="gp-n">02</span><h3>AI làm việc hằng ngày</h3><p>Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.</p></li><li><span class="gp-n">03</span><h3>Người đồng hành</h3><p>Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.</p></li></ol>
       <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
     </div>
-    <div class="grow-video"><video class="logo-video" src="work/lab-video.mp4" poster="work/lab-video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-hidden="true"></video></div>
-      <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI đọc dữ liệu</h3><p>AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.</p></li><li><span class="gp-n">02</span><h3>AI làm việc hằng ngày</h3><p>Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.</p></li><li><span class="gp-n">03</span><h3>Người đồng hành</h3><p>Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.</p></li></ol>
+    <figure class="grow-video grow-photo"><img src="/img/home/grow-phone.jpg" width="900" height="1125" alt="Điện thoại trên giá đang quay video trong quán" loading="lazy" decoding="async"></figure>
   </section>
 
   <!-- Quy trình -->
@@ -1003,6 +1061,8 @@ const EN = {
 "Đăng ký <span aria-hidden=\"true\">→</span>": "Subscribe <span aria-hidden=\"true\">→</span>"
 };
 const EN_ATTR = {
+  "Đôi tay cài từng chiếc cúc trên lưng váy cưới ren": "Hands fastening the buttons on the back of a lace wedding dress",
+  "Điện thoại trên giá đang quay video trong quán": "A phone on a stand filming a video inside a shop",
 "Những thương hiệu đã đồng hành": "Brands we have worked with",
 "Bảng màu": "Palette",
 "Sau khi bạn gửi": "After you send it",
@@ -1030,7 +1090,7 @@ function applyStatic() {
     document.querySelectorAll("body *:not(script):not(style)").forEach(el => {
       const k = norm(el.innerHTML);
       if (ENN[k] !== undefined) staticEls.push({ el, vi: el.innerHTML, en: ENN[k] });
-      for (const a of ["placeholder", "aria-label"]) { const v = el.getAttribute(a); if (v && EN_ATTR[v]) staticEls.push({ el, attr: a, vi: v, en: EN_ATTR[v] }); }
+      for (const a of ["placeholder", "aria-label", "alt"]) { const v = el.getAttribute(a); if (v && EN_ATTR[v]) staticEls.push({ el, attr: a, vi: v, en: EN_ATTR[v] }); }
     });
   }
   staticEls.forEach(x => { if (!x.el.isConnected) return; const v = LANG === "en" ? x.en : x.vi; if (x.attr) x.el.setAttribute(x.attr, v); else if (x.el.innerHTML !== v) x.el.innerHTML = v; });
@@ -1131,6 +1191,36 @@ if ("IntersectionObserver" in window) {
   rows.forEach(s => io.observe(s));
 } else { stepsEl.classList.add("no-io"); }
 
+
+/* ---------- Vì sao: 3 ý dạng mở-đóng + câu kết sáng dần ---------- */
+(() => {
+  const box = document.querySelector(".why .pains"); if (!box) return;
+  const items = [...box.querySelectorAll(".pain")]; let cur = 0, timer = null;
+  const show = i => { cur = i; items.forEach((el, j) => { el.classList.toggle("on", j === i); el.setAttribute("aria-expanded", String(j === i)); }); };
+  const stop = () => { clearInterval(timer); timer = null; box.classList.remove("autoplay"); };
+  items.forEach((el, i) => {
+    el.tabIndex = 0; el.setAttribute("role", "button");
+    el.addEventListener("click", () => { stop(); show(i); });
+    el.addEventListener("mouseenter", () => { if (matchMedia("(hover: hover)").matches) { stop(); show(i); } });
+    el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); stop(); show(i); } });
+  });
+  show(0);
+  if (!reduce && "IntersectionObserver" in window) {
+    new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting && !timer && !box.dataset.touched) { box.classList.add("autoplay"); timer = setInterval(() => { show((cur + 1) % items.length); box.classList.remove("autoplay"); void box.offsetWidth; box.classList.add("autoplay"); }, 5000); }
+      else if (!en.isIntersecting && timer) stop();
+    }), { threshold: .4 }).observe(box);
+    box.addEventListener("pointerdown", () => { box.dataset.touched = "1"; }, { once: true });
+    box.addEventListener("mouseenter", () => { box.dataset.touched = "1"; }, { once: true });
+  }
+  const wimg = document.querySelector(".why-img");
+  if (wimg && "IntersectionObserver" in window) new IntersectionObserver((es, o) => es.forEach(en => { if (en.isIntersecting) { wimg.classList.add("in"); o.disconnect(); } }), { threshold: .3 }).observe(wimg);
+  const pull = document.querySelector(".why-pull");
+  if (pull && !reduce) {
+    const upd = () => { const r = pull.getBoundingClientRect(); const t = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (innerHeight * .5))); pull.style.setProperty("--p", (t * 100).toFixed(1) + "%"); };
+    addEventListener("scroll", upd, { passive: true }); upd();
+  }
+})();
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
   <li><a class="row" href="${p.url}" target="_blank" rel="noopener" data-img="${p.img}">
