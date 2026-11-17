@@ -603,8 +603,6 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 @media (max-width: 440px) { .news-form { grid-template-columns: 1fr; } .news-form button { width: 100%; } .news-msg { padding-left: 4px; } }
 
 /* Bớt chữ phần đầu trang */
-.why-close { grid-template-columns: 1fr; }
-.why-pull { max-width: 30ch; }
 .offer-i { min-height: clamp(130px, 11vw, 170px); align-content: space-between; }
 .offer-i h3 { font-size: clamp(22px, 1.9vw, 28px); }
 .hero-foot { grid-template-columns: 1fr; }
@@ -619,8 +617,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li class="has-sub"><a href="#ban-gi" data-spy="ban-gi goi">Brand Builder</a>
-      <div class="sub"><a href="#ban-gi"><b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small></a><a href="#goi"><b>Gói</b><small>Build · Growth · Refresh</small></a></div></li>
+    <li><a href="#goi" data-spy="goi">Brand Builder</a></li>
     <li><a href="#automation" data-spy="automation">AI Automation</a></li>
     <li><a href="#cach-lam" data-spy="cach-lam">How we work</a></li>
     <li><a href="#du-an" data-spy="du-an">Our Brands</a></li>
@@ -645,23 +642,9 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <p class="promise">Bạn lo vận hành. <span>Chúng tôi tăng trưởng thương hiệu.</span></p>
     <div class="hero-foot">
       <div class="hero-cta">
-        <a class="pill" href="#ban-gi">Xem dịch vụ <span aria-hidden="true">↓</span></a>
+        <a class="pill" href="#goi">Xem dịch vụ <span aria-hidden="true">↓</span></a>
         <a class="pill ghost" href="#du-an">Xem dự án</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Chúng tôi làm gì -->
-  <section class="sec offer" id="ban-gi">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dịch vụ</span>
-      <h2>Chúng tôi làm gì. <span class="it">Và làm thế nào.</span></h2>
-    </div>
-    <div class="offers">
-      <a class="offer-i" href="#goi"><span class="cap">Build</span><h3>Xây thương hiệu mới</h3></a>
-      <a class="offer-i" href="#goi"><span class="cap">Growth</span><h3>Thương hiệu đầy đủ, để tăng trưởng</h3></a>
-      <a class="offer-i" href="#goi"><span class="cap">Refresh</span><h3>Làm mới thương hiệu đang có</h3></a>
-      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI automation mạng xã hội</h3></a>
     </div>
   </section>
 
@@ -671,13 +654,15 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Vì sao là câu chuyện</span>
     </div>
     <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
+    <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
     <div class="pains">
-      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"/><path d="M24 24v-5a8 8 0 0 1 16 0v5"/></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"/><path d="M46 30h4a6 6 0 0 1 0 12h-5"/><path d="M10 56h40"/><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg></div><q>Một tách cà phê không chỉ là cà phê.</q></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"/><path d="M26 54h12"/><circle cx="22" cy="26" r="5"/><circle cx="33" cy="24" r="5.5"/><circle cx="43.5" cy="27" r="4"/><path d="M38 20 52 7M42 22 56 11"/></svg></div><q>Một thương hiệu không chỉ là sản phẩm tốt.</q></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"/><path d="M24 24v-5a8 8 0 0 1 16 0v5"/></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"/><path d="M46 30h4a6 6 0 0 1 0 12h-5"/><path d="M10 56h40"/><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg></div><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"/><path d="M26 54h12"/><circle cx="22" cy="26" r="5"/><circle cx="33" cy="24" r="5.5"/><circle cx="43.5" cy="27" r="4"/><path d="M38 20 52 7M42 22 56 11"/></svg></div><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
     </div>
     <div class="why-close">
       <p class="why-pull">Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class="it">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.</p>
+      <p class="why-body">Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.</p>
     </div>
   </section>
 

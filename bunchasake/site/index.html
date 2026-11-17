@@ -619,8 +619,6 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 @media (max-width: 440px) { .news-form { grid-template-columns: 1fr; } .news-form button { width: 100%; } .news-msg { padding-left: 4px; } }
 
 /* Bớt chữ phần đầu trang */
-.why-close { grid-template-columns: 1fr; }
-.why-pull { max-width: 30ch; }
 .offer-i { min-height: clamp(130px, 11vw, 170px); align-content: space-between; }
 .offer-i h3 { font-size: clamp(22px, 1.9vw, 28px); }
 .hero-foot { grid-template-columns: 1fr; }
@@ -637,8 +635,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li class="has-sub"><a href="#ban-gi" data-spy="ban-gi packages">Brand Builder</a>
-      <div class="sub"><a href="#ban-gi"><b>Services</b><small>What we do, and how</small></a><a href="#packages"><b>Packages</b><small>Build · Growth · Refresh</small></a></div></li>
+    <li><a href="#packages" data-spy="packages">Brand Builder</a></li>
     <li><a href="#automation" data-spy="automation">AI Automation</a></li>
     <li><a href="#how-we-work" data-spy="how-we-work">How we work</a></li>
     <li><a href="#projects" data-spy="projects">Our Brands</a></li>
@@ -660,23 +657,9 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
     <p class="promise">You run the business. <span>We grow the brand.</span></p>
     <div class="hero-foot">
       <div class="hero-cta">
-        <a class="pill" href="#ban-gi">See services <span aria-hidden="true">↓</span></a>
+        <a class="pill" href="#packages">See services <span aria-hidden="true">↓</span></a>
         <a class="pill ghost" href="#projects">See our work</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Chúng tôi làm gì -->
-  <section class="sec offer" id="ban-gi">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Services</span>
-      <h2>What we do. <span class="it">And how.</span></h2>
-    </div>
-    <div class="offers">
-      <a class="offer-i" href="#packages"><span class="cap">Build</span><h3>A new brand, built</h3></a>
-      <a class="offer-i" href="#packages"><span class="cap">Growth</span><h3>A complete brand, built to grow</h3></a>
-      <a class="offer-i" href="#packages"><span class="cap">Refresh</span><h3>Refresh the brand you have</h3></a>
-      <a class="offer-i" href="#automation"><span class="cap">Automation</span><h3>AI social media automation</h3></a>
     </div>
   </section>
 
@@ -686,13 +669,15 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Why the story</span>
     </div>
     <h2 class="why-lead">What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class="it">The story behind it.</span></h2>
+    <p class="why-sub">People don't really buy a product or a service. <b>They buy the story behind it.</b></p>
     <div class="pains">
-      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q><p>It tells a story about the taste, style and personality of the person carrying it.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q><p>It is a moment of calm, time for yourself, or a meeting worth remembering.</p></div>
+      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q><p>It is built from the values, feelings, trust and story it gives its customers.</p></div>
     </div>
     <div class="why-close">
       <p class="why-pull">A product earns attention. A <span class="it">story</span> is what moves people, stays with them and makes them stay.</p>
+      <p class="why-body">Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.</p>
     </div>
   </section>
 
