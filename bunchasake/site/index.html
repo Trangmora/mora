@@ -19,7 +19,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#161615">
+<meta name="theme-color" content="#2A2A2B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&amp;display=swap">
@@ -677,6 +677,55 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
 .grow-text .gp h3 { font-size: clamp(18px, 1.4vw, 21px); }
 .grow-text .gp p { font-size: 15px; max-width: none; }
 @media (hover: hover) { .grow-text .gp:hover li { opacity: .4; } .grow-text .gp li:hover { opacity: 1; } }
+
+/* ===== THEME C · "Xám" — nền xám trung tính, chữ sáng hơn, ảnh ánh sáng tự nhiên ===== */
+:root {
+  --bg: #2A2A2B;          /* xám trung tính */
+  --raise: #343435;
+  --ink: #F7F7F5;
+  --muted: #CACAC6;       /* chữ phụ sáng hơn nhiều so với #9A9A95 */
+  --dim: #8C8C88;
+  --line: #414142;
+  --line-strong: #58585A;
+  --card: #F7F7F5;
+  --card-ink: #1A1A1B;
+  --card-line: #C4C4C0;
+  --glow: rgba(255, 255, 255, .045);
+}
+body {
+  line-height: 1.6;
+  background:
+    radial-gradient(1100px 620px at 85% -6%, var(--glow), transparent 62%),
+    radial-gradient(900px 520px at -10% 38%, rgba(255, 255, 255, .025), transparent 60%),
+    var(--bg);
+}
+/* chữ phụ: bỏ nét 300 mảnh, đọc rõ trên nền tối */
+.hero-foot p, .sec-head p, .pain p, .why-sub, .why-body, .why .pain p, .gp p, .grow-text .gp p,
+.offer-i p, .step .line, .pkg li, .pkg .fit, .auto p, .card p, .pillars p, .faq .panel p,
+.news-copy p, .next li, .pkgs-note, .auto-foot p { font-weight: 400; }
+.why-body, .why .pain p, .step .line { line-height: 1.65; }
+/* nhiều khoảng thở hơn */
+.sec { padding-block: clamp(96px, 12vw, 180px) 0; }
+.why-close { margin-top: clamp(72px, 9vw, 132px); }
+/* ảnh tự nhiên: không làm tối, không vignette */
+.grow-photo img, .why-img img { filter: none; }
+.grow-photo:hover img, .why-img:hover img { filter: brightness(1.03); }
+.why-img, .grow-photo { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .55); }
+.grow-video { background: var(--raise); }
+/* dự án: đen trắng nhưng không còn bị dìm tối */
+.card img { filter: grayscale(1) brightness(.98) contrast(1.02); }
+.card:hover .img { box-shadow: 0 26px 50px -24px rgba(0, 0, 0, .6); }
+/* thẻ nổi nhẹ, viền ấm */
+.pkg, .auto div, .news-in, .who a, .offer-i { background: linear-gradient(180deg, #373738, var(--raise)); }
+.pkg.feature { background: var(--ink); color: var(--card-ink); }
+.pkg.feature .for, .pkg.feature .fit { color: #66666A; }
+.pkg.feature li { border-top-color: #D8D8D4; }
+.pkg.feature .choose { background: var(--card-ink); color: var(--ink); }
+.news-form input:hover { border-color: var(--dim); }
+.legal p { color: var(--muted); }
+.legal { color: var(--muted); }
+.sub { box-shadow: 0 18px 40px rgba(0, 0, 0, .3); }
+.hero h1 .muted { color: #9C9C98; }
 </style>
 </head>
 <body>
@@ -726,7 +775,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
         <h2 class="why-lead">What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class="it">The story behind it.</span></h2>
         <p class="why-sub">People don't really buy a product or a service. <b>They buy the story behind it.</b></p>
       </div>
-      <figure class="why-img"><img src="/img/home/why-dress.jpg" width="900" height="1125" alt="Hands fastening the buttons on the back of a lace wedding dress" loading="lazy" decoding="async"></figure>
+      <figure class="why-img"><img src="/img/home/why-dress-light.jpg" width="900" height="1125" alt="Hands fastening the buttons on the back of a lace wedding dress" loading="lazy" decoding="async"></figure>
     </div>
     <div class="pains">
       <div class="pain on" tabindex="0" role="button" aria-expanded="true"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q><p>It tells a story about the taste, style and personality of the person carrying it.</p></div>
@@ -748,7 +797,7 @@ footer { margin-top: clamp(56px, 8vw, 110px); }
             <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI reads the data</h3><p>AI analyses your channels, customers and competitors to show where the brand can grow.</p></li><li><span class="gp-n">02</span><h3>AI does the daily work</h3><p>Drafts content, schedules posts and answers messages. You approve, the system runs.</p></li><li><span class="gp-n">03</span><h3>A partner beside you</h3><p>We track the results with you and adjust the strategy so the brand keeps growing.</p></li></ol>
       <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
     </div>
-    <figure class="grow-video grow-photo"><img src="/img/home/grow-phone.jpg" width="900" height="1125" alt="A phone on a stand filming a video inside a shop" loading="lazy" decoding="async"></figure>
+    <figure class="grow-video grow-photo"><img src="/img/home/grow-phone-light.jpg" width="900" height="1125" alt="A phone on a stand filming a video inside a shop" loading="lazy" decoding="async"></figure>
   </section>
 
   <!-- Quy trình -->
