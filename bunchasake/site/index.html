@@ -726,6 +726,56 @@ body {
 .legal { color: var(--muted); }
 .sub { box-shadow: 0 18px 40px rgba(0, 0, 0, .3); }
 .hero h1 .muted { color: #9C9C98; }
+
+/* ===== Bố cục so le: ảnh trái (Vì sao) – ảnh phải (AI Growth), cùng kích thước ===== */
+:root { --pw: clamp(280px, 34vw, 460px); }
+.why-top { display: block; }
+.why-top .why-lead { max-width: 20em; }
+.why-mid { display: grid; grid-template-columns: var(--pw) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; margin-top: clamp(40px, 5vw, 72px); }
+.why-mid .pains { margin-top: 0; }
+.why-mid .why-img { width: 100%; }
+.grow { grid-template-columns: minmax(0, 1fr) var(--pw); gap: clamp(32px, 5vw, 88px); }
+.grow-photo { max-width: none; justify-self: stretch; }
+.why-img, .grow-photo { border-radius: 20px; aspect-ratio: 4 / 5; }
+@media (max-width: 860px) { .why-mid, .grow { grid-template-columns: 1fr; } .why-img, .grow-photo { aspect-ratio: 4 / 3; } }
+
+/* ===== Định vị AI Automation ===== */
+.hero-kick { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); margin-bottom: clamp(18px, 2.4vw, 28px); animation: fade 1s .2s var(--ease) both; }
+.hero-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+.hero-pos { max-width: 52ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.6; color: var(--muted); }
+.hero-pos b { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .hero-foot { grid-template-columns: 1fr; } }
+.machines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.4vw, 44px); }
+.mc { position: relative; display: grid; align-content: start; gap: 12px; padding: clamp(24px, 2.4vw, 34px); border: 1px solid var(--line); border-radius: 20px; background: var(--raise); transition: transform .4s var(--ease), border-color .3s; }
+.mc:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+.mc.on { border-color: var(--mark); }
+.mc-st { justify-self: start; padding: 5px 10px; border-radius: 999px; font-size: 11px; border: 1px solid var(--line-strong); color: var(--muted); }
+.mc.on .mc-st { background: var(--mark); border-color: var(--mark); color: #fff; }
+.mc-n { font: 400 italic clamp(36px, 3.4vw, 52px)/.9 var(--serif); color: var(--mark); margin-top: 8px; }
+.mc h3 { font-size: clamp(22px, 2vw, 30px); font-weight: 500; letter-spacing: -0.03em; }
+.mc p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+.mc-you { margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+#automation .auto-foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+@media (max-width: 900px) { .machines { grid-template-columns: 1fr; } }
+
+/* ===== Pivot: AI Automation for Marketing ===== */
+.grow-sub { color: var(--muted); font-size: clamp(16px, 1.25vw, 18px); line-height: 1.6; max-width: 46ch; }
+.proof { list-style: none; margin: 4px 0 8px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); width: 100%; }
+.proof li { display: grid; gap: 6px; align-content: start; padding: 18px 16px 0 0; }
+.proof li + li { padding-left: 16px; border-left: 1px solid var(--line); }
+.proof b { font: 400 italic clamp(40px, 4vw, 60px)/.9 var(--serif); color: var(--mark); }
+.proof span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+.flow { list-style: none; margin: clamp(28px, 3.4vw, 44px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line-strong); }
+.flow li { display: grid; align-content: start; gap: 10px; padding: clamp(22px, 2.4vw, 32px) clamp(14px, 2vw, 28px) 0 0; }
+.flow li + li { padding-left: clamp(14px, 2vw, 28px); border-left: 1px solid var(--line); }
+.fl-n { font: 400 italic clamp(30px, 2.8vw, 44px)/.9 var(--serif); color: var(--mark); }
+.flow h3 { font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.03em; }
+.flow p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+@media (max-width: 900px) { .flow { grid-template-columns: 1fr 1fr; row-gap: 28px; } .flow li:nth-child(3) { padding-left: 0; border-left: 0; } }
+@media (max-width: 560px) { .flow, .proof { grid-template-columns: 1fr; } .flow li + li, .proof li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
+.pkg .price { font-size: 15px; color: var(--muted); margin: -4px 0 4px; }
+.pkg .price b { font-size: clamp(26px, 2.4vw, 34px); font-weight: 600; letter-spacing: -0.03em; color: inherit; }
+.pkg.feature .price { color: inherit; opacity: .85; }
 </style>
 </head>
 <body>
@@ -737,139 +787,78 @@ body {
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li><a href="#packages" data-spy="packages">Brand Builder</a></li>
-    <li><a href="#automation" data-spy="automation">AI Automation</a></li>
-    <li><a href="#how-we-work" data-spy="how-we-work">How we work</a></li>
-    <li><a href="#projects" data-spy="projects">Our Brands</a></li>
+    <li><a href="#automation" data-spy="automation growth">AI Automation</a></li>
+    <li><a href="#how-we-work" data-spy="how-we-work">How it works</a></li>
+    <li><a href="#packages" data-spy="packages">Packages</a></li>
+    <li><a href="#projects" data-spy="projects">Clients</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
   <div class="nav-r">
     <div class="lang" role="group" aria-label="Language"><a href="/" hreflang="en" lang="en" aria-current="true">EN</a><a href="/vi/" hreflang="vi" lang="vi">VI</a></div>
-    <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
+    <a class="pill" href="#contact">Get started <span aria-hidden="true">↗</span></a>
     <button class="menu-btn" type="button" id="menuBtn" aria-controls="navMenu" aria-expanded="false"><span class="mb-l">Menu</span><span class="mb-i" aria-hidden="true"><i></i><i></i></span></button>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
+    <span class="hero-kick cap"><span class="dot" aria-hidden="true"></span>AI Automation for Marketing</span>
     <h1>
-      <span class="row"><span>You have the <span class="it">story.</span></span></span>
-      <span class="row"><span><span class="muted">We turn it into a</span> <span class="brand">brand.</span></span></span>
+      <span class="row"><span>You run the <span class="it">business.</span></span></span>
+      <span class="row"><span><span class="muted">AI runs your</span> <span class="brand">marketing.</span></span></span>
     </h1>
-    <p class="promise">You run the business. <span>We grow the brand.</span></p>
+    <p class="promise">You run the business. <span>AI runs the marketing.</span></p>
     <div class="hero-foot">
+      <p class="hero-pos">Bunchasake builds the AI system that runs your social media, answers customer messages and keeps regulars coming back, for chains and growing companies. <b>Your team just approves.</b></p>
       <div class="hero-cta">
-        <a class="pill" href="#packages">See services <span aria-hidden="true">↓</span></a>
-        <a class="pill ghost" href="#projects">See our work</a>
+        <a class="pill" href="#automation">See the AI system <span aria-hidden="true">↓</span></a>
+        <a class="pill ghost" href="#how-we-work">How it works</a>
       </div>
     </div>
   </section>
 
-  <!-- Vì sao là câu chuyện -->
-  <section class="sec why" id="story">
+  <!-- Automation -->
+  <section class="sec" id="automation">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Why the story</span>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Automation</span>
+      <h2>Three AI machines. <span class="it">Your team just approves.</span></h2>
+      <p>We build, run and monitor the system for you. Start with one machine and a 30-day trial.</p>
     </div>
-    <div class="why-top">
-      <div class="why-txt">
-        <h2 class="why-lead">What separates a few-hundred-dollar wedding dress from one worth hundreds of thousands? <span class="it">The story behind it.</span></h2>
-        <p class="why-sub">People don't really buy a product or a service. <b>They buy the story behind it.</b></p>
-      </div>
-      <figure class="why-img"><img src="/img/home/why-dress-light.jpg" width="900" height="1125" alt="Hands fastening the buttons on the back of a lace wedding dress" loading="lazy" decoding="async"></figure>
+    <div class="machines">
+      <article class="mc on"><span class="mc-st cap">Now taking clients</span><span class="mc-n">01</span><h3>Social media</h3><p>A 30-day content calendar, posts, images and short videos, published automatically on 6 platforms: Facebook, Instagram, TikTok, Threads, LinkedIn and YouTube.</p><span class="mc-you">You just: approve posts once a week</span></article>
+      <article class="mc"><span class="mc-st cap">Coming soon</span><span class="mc-n">02</span><h3>Customer messages</h3><p>Answers messages 24/7 about prices, opening hours and services, takes bookings and hands over to a person when needed.</p><span class="mc-you">You just: handle the tricky cases</span></article>
+      <article class="mc"><span class="mc-st cap">Coming soon</span><span class="mc-n">03</span><h3>Brand community</h3><p>Replies to reviews, reminds regulars and sends offers to customers who haven’t come back in a while.</p><span class="mc-you">You just: approve the offers</span></article>
     </div>
-    <div class="pains">
-      <div class="pain on" tabindex="0" role="button" aria-expanded="true"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"></path><path d="M24 24v-5a8 8 0 0 1 16 0v5"></path></svg></div><q>A bag is never just a bag.</q><p>It tells a story about the taste, style and personality of the person carrying it.</p></div>
-      <div class="pain" tabindex="0" role="button" aria-expanded="false"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"></path><path d="M46 30h4a6 6 0 0 1 0 12h-5"></path><path d="M10 56h40"></path><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"></path></svg></div><q>A cup of coffee is never just coffee.</q><p>It is a moment of calm, time for yourself, or a meeting worth remembering.</p></div>
-      <div class="pain" tabindex="0" role="button" aria-expanded="false"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"></path><path d="M26 54h12"></path><circle cx="22" cy="26" r="5"></circle><circle cx="33" cy="24" r="5.5"></circle><circle cx="43.5" cy="27" r="4"></circle><path d="M38 20 52 7M42 22 56 11"></path></svg></div><q>A brand is more than a good product.</q><p>It is built from the values, feelings, trust and story it gives its customers.</p></div>
-    </div>
-    <div class="why-close">
-      <p class="why-pull" style="--p: 0.0%;">A product earns attention. A <span class="it">story</span> is what moves people, stays with them and makes them stay.</p>
-      <p class="why-body">Among hundreds of options of similar quality, customers choose the brand that makes them feel they belong to something. The brands that win have their own story, tell it consistently, know exactly where they stand and understand what their customers want.</p>
+    <div class="auto-foot">
+      <a class="more" href="/social-media-automation/">More about AI Automation →</a>
+      <a class="pill" href="#contact">Start with one machine <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
-  <!-- Tăng trưởng -->
-
+  <!-- Chính chúng tôi -->
   <section class="sec grow" id="growth">
     <div class="grow-text">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
-      <h2>We help you automate <span class="it">and grow your brand awareness.</span></h2>
-            <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI reads the data</h3><p>AI analyses your channels, customers and competitors to show where the brand can grow.</p></li><li><span class="gp-n">02</span><h3>AI does the daily work</h3><p>Drafts content, schedules posts and answers messages. You approve, the system runs.</p></li><li><span class="gp-n">03</span><h3>A partner beside you</h3><p>We track the results with you and adjust the strategy so the brand keeps growing.</p></li></ol>
-      <a class="pill" href="#contact">Tell your story <span aria-hidden="true">↗</span></a>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Our own system</span>
+      <h2>Bunchasake runs on <span class="it">this very system.</span></h2>
+      <p class="grow-sub">Not a demo. Our own social media and blog are run by these AI machines every day; our team just approves.</p>
+      <ul class="proof" role="list"><li><b>4</b><span>posts a day, published automatically</span></li><li><b>4</b><span>platforms: Facebook, Instagram, Threads, LinkedIn</span></li><li><b>3</b><span>blog articles a week, written automatically</span></li></ul>
+      <a class="pill" href="#contact">Start with one machine <span aria-hidden="true">↗</span></a>
     </div>
     <figure class="grow-video grow-photo"><img src="/img/home/grow-phone-light.jpg" width="900" height="1125" alt="A phone on a stand filming a video inside a shop" loading="lazy" decoding="async"></figure>
   </section>
 
-  <!-- Quy trình -->
+  <!-- Cách làm -->
   <section class="sec" id="how-we-work">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How we work</span>
-      <h2>Six steps. <span class="it">Build it.</span></h2>
-      <p>We don’t just advise. At all six steps our team does the work with you, and you approve each step.</p>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How it works</span>
+      <h2>Four steps. <span class="it">Running from month one.</span></h2>
     </div>
-    <div class="scards" id="scards"><a class="scard" href="/blog/brand-discovery-founder-story/"><img src="/img/home/step-1.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 01</span><span class="sc-t">Listening</span></span></a><a class="scard" href="/blog/brand-positioning-competitor-analysis/"><img src="/img/home/step-2.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 02</span><span class="sc-t">Positioning</span></span></a><a class="scard" href="/blog/brand-identity-design-process/"><img src="/img/home/step-3.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 03</span><span class="sc-t">Identity</span></span></a><a class="scard" href="/blog/brand-reach-omnichannel-presence/"><img src="/img/home/step-4.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 04</span><span class="sc-t">Reach</span></span></a><a class="scard" href="/blog/brand-community-building/"><img src="/img/home/step-5.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 05</span><span class="sc-t">Community</span></span></a><a class="scard" href="/blog/crisis-communication-for-small-business/"><img src="/img/home/step-6.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">STEP 06</span><span class="sc-t">Crisis communication</span></span></a></div>
-    <ol class="steps" id="steps" role="list">
-  <li class="step active" data-i="0">
-    <span class="n">01</span>
-    <h3>Listening</h3>
-    <div class="body">
-      <p class="hook">Every brand begins with the founder’s story.</p>
-      <p class="line">We sit down with you for 60 minutes: why you started, what you believe in, what keeps you up at night. We take the notes, write them up and send you a summary to confirm. Nothing moves on until you agree it sounds like you.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-discovery-founder-story/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="1">
-    <span class="n">02</span>
-    <h3>Positioning</h3>
-    <div class="body">
-      <p class="hook">Know who you are, who you serve and how you differ.</p>
-      <p class="line">We do the competitor research ourselves, then work through the findings with you: where you stand, who you are for, what makes you different. Together we write the brand story, and you approve every line before any channel tells it.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-positioning-competitor-analysis/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="2">
-    <span class="n">03</span>
-    <h3>Identity</h3>
-    <div class="body">
-      <p class="hook">We shape the brand together with the founder.</p>
-      <p class="line">Our designers create the logo, colours, typography and voice, and sit with you and the person in charge of the brand at each round. We adjust until you are happy, then hand over the finished files and one set of guidelines your team can use.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-identity-design-process/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="3">
-    <span class="n">04</span>
-    <h3>Reach</h3>
-    <div class="body">
-      <p class="hook">Be where your customers already are.</p>
-      <p class="line">We build the website, set up your social channels and make the first posts with you, not just a plan to follow. Already have channels? We read the data, customer behaviour and past campaigns with your team, then run the new campaign alongside you.</p>
-      <p class="ch"><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9s-1.2 6.3-3.7 9c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"></path></svg>Website</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"></path></svg>Facebook</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"></circle></svg>Instagram</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M15.5 3c.3 2.1 1.6 3.6 3.8 3.9v2.9c-1.4 0-2.7-.4-3.8-1.1v5.9a5.6 5.6 0 1 1-5.6-5.6h.3v3a2.7 2.7 0 1 0 2.4 2.7V3z"></path></svg>TikTok</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M21.6 7.6c-.2-.9-.9-1.6-1.8-1.8C18.2 5.4 12 5.4 12 5.4s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9.2 2 12 2 12s0 2.8.4 4.4c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.4.4-4.4s0-2.8-.4-4.4zM10 15V9l5.2 3z"></path></svg>YouTube</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 11.2c-.4-2.2-2-3.2-4.1-3.2-2 0-3.3 1-3.7 2.4M8.6 15c.5 1.2 1.7 2 3.4 2 2.4 0 3.8-1.4 3.8-3.4 0-1.7-1.4-2.6-3.6-2.6-1.9 0-3.2.8-3.2 2.1 0 1.1 1 1.8 2.3 1.8 2.6 0 3.5-2 3.5-4.3"></path><path d="M19.5 15.5c-1 3.3-3.6 5-7.4 5C7 20.5 4 17.3 4 12s3-8.5 8.1-8.5c3.8 0 6.3 1.7 7.3 4.8"></path></svg>Threads</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM3.4 9h3.3v11.5H3.4zM9 9h3.2v1.6c.5-.9 1.6-1.9 3.4-1.9 3.4 0 4 2.2 4 5.1v6.7h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6H9z"></path></svg>LinkedIn</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.4-9 7.6 0 2.4 1.3 4.5 3.3 5.9l-.6 3.1 3.3-1.7c1 .3 2 .4 3 .4 5 0 9-3.4 9-7.7s-4-7.6-9-7.6z"></path><path d="M8.5 9h4l-4 5h4M15 9v5"></path></svg>Zalo</span><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3.5 18.3c-.1-.8-.2-2 0-2.8l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.2c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A9.5 9.5 0 1 0 12 2.5z"></path></svg>Pinterest</span></p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-reach-omnichannel-presence/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="4">
-    <span class="n">05</span>
-    <h3>Community</h3>
-    <div class="body">
-      <p class="hook">Strong brands grow on a community.</p>
-      <p class="line">Returning customers save you a great deal of sales and marketing spend. We set up the community spaces on the platforms your customers prefer, plan the first activities and run them together with your team until they can carry on on their own.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/brand-community-building/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li>
-  <li class="step" data-i="5">
-    <span class="n">06</span>
-    <h3>Crisis communication</h3>
-    <div class="body">
-      <p class="hook">Steady when a crisis hits.</p>
-      <p class="line">When something goes wrong, our crisis team works with you from the first hour: we assess the situation, draft the responses and handle the communication side by side with you, then train your team so they are ready next time.</p>
-      <div class="pts" style="display: none;"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="/blog/crisis-communication-for-small-business/">Read more <span aria-hidden="true">→</span></a>
-    </div>
-  </li></ol>
+    <ol class="flow" role="list">
+      <li><span class="fl-n">01</span><h3>A 30-minute call</h3><p>We look at where your chain is losing time: posting, messages, reviews.</p></li>
+      <li><span class="fl-n">02</span><h3>We build the system</h3><p>We connect your channels, teach the AI your brand voice and prepare the first content calendar.</p></li>
+      <li><span class="fl-n">03</span><h3>A 30-day trial</h3><p>The system runs, you approve. At the end of the month we review the numbers together.</p></li>
+      <li><span class="fl-n">04</span><h3>Monthly operation</h3><p>We monitor, adjust and add machines when your chain needs them.</p></li>
+    </ol>
   </section>
 
   <!-- Gói -->
@@ -877,73 +866,51 @@ body {
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
       <h2>Choose where <span class="it">to start.</span></h2>
-      <p>Quoted after our first conversation.</p>
+      <p>Monthly pricing. Cancel any time.</p>
     </div>
     <div class="pkgs">
       <article class="pkg">
-        <span class="for cap">New businesses</span>
-        <h3>Build</h3>
-        <p class="fit">Right for you if you are about to open and need to look ready fast.</p>
+        <span class="for cap">Try it first</span>
+        <h3>Start</h3>
+        <p class="price"><b>399,000 VND</b><span>/month</span></p>
         <ul>
-          <li>Short listening and positioning</li>
-          <li>Logo, colours, typography</li>
-          <li>Business card, profile image, post templates</li>
+          <li>3 posts a day on each platform</li>
+          <li>6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
+          <li>About 540 posts a month</li>
         </ul>
-        <button class="choose" type="button" data-pkg="build">Choose Build <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="start">Choose Start <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
-        <span class="tag cap">Most complete</span>
-        <span class="for cap">Need a complete brand</span>
+        <span class="tag cap">Most popular</span>
+        <span class="for cap">Fully automated social media</span>
         <h3>Growth</h3>
-        <p class="fit">Right for you if you want a brand that lasts for years.</p>
+        <p class="price"><b>999,000 VND</b><span>/month</span></p>
         <ul>
-          <li>All 6 steps</li>
-          <li>Brand story and voice</li>
-          <li>Brand guidelines</li>
-          <li>Website and key touchpoints</li>
+          <li>8 posts a day on each platform</li>
+          <li>6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
+          <li>About 1,440 posts a month, weekly report</li>
         </ul>
         <button class="choose" type="button" data-pkg="growth">Choose Growth <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
-        <span class="for cap">Brand feels dated</span>
-        <h3>Refresh</h3>
-        <p class="fit">Right for you if customers say your brand "looks old".</p>
+        <span class="for cap">Multi-branch chains</span>
+        <h3>Chain</h3>
+        <p class="price">From <b>1,500,000 VND</b><span>/month</span></p>
         <ul>
-          <li>Review of your current brand</li>
-          <li>Repositioning and a refreshed identity</li>
-          <li>Updated touchpoints you already use</li>
+          <li>10 posts a day on each platform</li>
+          <li>6 platforms, content for each branch</li>
+          <li>About 1,800 posts a month, reports per branch</li>
         </ul>
-        <button class="choose" type="button" data-pkg="refresh">Choose Refresh <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="chain">Choose Chain <span aria-hidden="true">→</span></button>
       </article>
-    </div>
-  </section>
-
-  <!-- Automation -->
-  <section class="sec" id="automation">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Add to any package</span>
-      <h2>AI Social Media Automation, <span class="it">built for you.</span></h2>
-      <p>We set up the system; your team runs Facebook, TikTok and Instagram.</p>
-    </div>
-    <div class="auto">
-      <div><span class="n cap">01</span><b>Your own AI assistant</b></div>
-      <div><span class="n cap">02</span><b>30-day content calendar</b></div>
-      <div><span class="n cap">03</span><b>AI drafts, you approve</b></div>
-      <div><span class="n cap">04</span><b>Auto-scheduled posts</b></div>
-      <div><span class="n cap">05</span><b>Automatic inbox replies</b></div>
-    </div>
-    <div class="auto-foot" style="justify-content:flex-end">
-      <a class="more" href="/social-media-automation/">More about AI Automation →</a>
-      <a class="pill ghost" href="#contact">Add AI Automation <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
   <!-- Dự án -->
   <section class="sec" id="projects">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Work</span>
-      <h2>Stories <span class="it">that became brands.</span></h2>
-      <p>Every place has a story, and its own brand.</p>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Clients</span>
+      <h2>Brands <span class="it">we have worked with.</span></h2>
     </div>
     <div class="grid" id="workGrid">
   <div class="card big" style="transition-delay: 0ms;">
@@ -1086,7 +1053,7 @@ body {
       <div class="news-copy">
         <span class="lab cap"><span class="dot" aria-hidden="true"></span>Newsletter</span>
         <h2 id="news-h">Letters from <span class="it">Bunchasake.</span></h2>
-        <p>One story a week on building brands for chains and growing companies. No spam.</p>
+        <p>One way a week to use AI to run marketing for your chain. No spam.</p>
       </div>
       <form class="news-form" id="newsForm" aria-label="Newsletter sign-up" action="/api/subscribe" method="post" novalidate="">
         <label class="news-field"><span class="sr">Your email</span><input type="email" name="email" id="newsEmail" placeholder="you@company.com" autocomplete="email" inputmode="email" required="" aria-describedby="newsMsg"></label>
@@ -1102,17 +1069,17 @@ body {
 
 <footer id="contact">
   <div class="contact-side">
-    <h2>Tell us <span class="it">your story.</span></h2>
+    <h2>Start with <span class="it">one machine.</span></h2>
     <ol class="next" aria-label="Sau khi bạn gửi email">
-      <li><span><b>We read your story</b> and prepare questions just for you.</span></li>
-      <li><span><b>A 60-minute conversation</b>, online or in person.</span></li>
-      <li><span><b>A proposal and quote</b> for exactly what you need.</span></li>
+      <li><span><b>Write to us</b> about where your chain is losing time.</span></li>
+      <li><span><b>A 30-minute call</b>, online.</span></li>
+      <li><span><b>A proposal and quote</b> for your first machine.</span></li>
     </ol>
     <dl class="reach">
       <div><dt>Based in</dt><dd>Vietnam · Italy · Online</dd></div>
       <div><dt>Languages</dt><dd>Vietnamese · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Footer"><a href="#packages">Brand Builder</a><a href="#automation">AI Automation</a><a href="#how-we-work">How we work</a><a href="#projects">Our Brands</a><a href="/blog/">Blog</a><a href="#thu">Newsletter</a></nav>
+    <nav class="foot-nav cap" aria-label="Footer"><a href="#automation">AI Automation</a><a href="#how-we-work">How it works</a><a href="#packages">Packages</a><a href="#projects">Clients</a><a href="/blog/">Blog</a><a href="#thu">Newsletter</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -1140,7 +1107,7 @@ body {
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#contact">Email us</a>
+  <a class="pill" href="#contact">Get started </a>
   <a class="pill ghost" href="#contact">Contact</a>
 </div>
 
@@ -1184,7 +1151,22 @@ const EN = {
 "Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.": "We track the results with you and adjust the strategy so the brand keeps growing.",
 
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
-"Cách làm": "How we work",
+"Chúng tôi xây hệ thống AI chạy mạng xã hội, trả lời tin nhắn khách hàng và nuôi cộng đồng thương hiệu cho chuỗi và công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "We build the AI system that runs your social media, answers your customers and grows your brand community, for chains and growing companies. <b>Your team just approves.</b>",
+"Xem hệ thống AI <span aria-hidden=\"true\">↓</span>": "See the AI system <span aria-hidden=\"true\">↓</span>",
+"Ba cỗ máy AI. <span class=\"it\">Đội của bạn chỉ việc duyệt.</span>": "Three AI machines. <span class=\"it\">Your team just approves.</span>",
+"Chúng tôi dựng, chạy và theo dõi hệ thống cho bạn. Bắt đầu với một cỗ máy, chạy thử 30 ngày.": "We build, run and monitor the system for you. Start with one machine and a 30-day trial.",
+"Đang nhận khách": "Now taking clients",
+"Sắp ra mắt": "Coming soon",
+"Mạng xã hội": "Social media",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng Facebook, Instagram, TikTok, Threads.": "A 30-day content calendar, posts, images and short videos, published automatically to Facebook, Instagram, TikTok and Threads.",
+"Bạn chỉ việc: duyệt bài mỗi tuần": "You just: approve posts once a week",
+"Tin nhắn khách hàng": "Customer messages",
+"Trả lời tin nhắn 24/7 về giá, giờ mở cửa, dịch vụ, nhận đặt lịch và chuyển cho người thật khi cần.": "Answers messages 24/7 about prices, opening hours and services, takes bookings and hands over to a person when needed.",
+"Bạn chỉ việc: xử lý ca khó": "You just: handle the tricky cases",
+"Cộng đồng thương hiệu": "Brand community",
+"Trả lời đánh giá, nhắc khách quen, gửi ưu đãi cho khách lâu không quay lại.": "Replies to reviews, reminds regulars and sends offers to customers who haven’t come back in a while.",
+"Bạn chỉ việc: duyệt ưu đãi": "You just: approve the offers",
+"Bắt đầu với một cỗ máy <span aria-hidden=\"true\">↗</span>": "Start with one machine <span aria-hidden=\"true\">↗</span>",
 "<b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small>": "<b>Services</b><small>What we do, and how</small>",
 "<b>Gói</b><small>Build · Growth · Refresh</small>": "<b>Packages</b><small>Build · Growth · Refresh</small>",
 "<b>AI Growth</b><small>Tăng trưởng độ nhận diện</small>": "<b>AI Growth</b><small>Grow brand awareness</small>",
@@ -1240,6 +1222,68 @@ const EN = {
 "Cần thương hiệu bài bản": "Need a complete brand",
 "Thương hiệu đã cũ": "Brand feels dated",
 "Đầy đủ nhất": "Most complete",
+"<b>399.000đ</b><span>/tháng</span>": "<b>399,000 VND</b><span>/month</span>",
+"<b>999.000đ</b><span>/tháng</span>": "<b>999,000 VND</b><span>/month</span>",
+"Từ <b>1.500.000đ</b><span>/tháng</span>": "From <b>1,500,000 VND</b><span>/month</span>",
+"3 bài mỗi ngày trên mỗi nền tảng": "3 posts a day on each platform",
+"8 bài mỗi ngày trên mỗi nền tảng": "8 posts a day on each platform",
+"10 bài mỗi ngày trên mỗi nền tảng": "10 posts a day on each platform",
+"6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X": "6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn, X",
+"Khoảng 540 lượt đăng mỗi tháng": "About 540 posts a month",
+"Khoảng 1.440 lượt đăng mỗi tháng, báo cáo mỗi tuần": "About 1,440 posts a month, weekly report",
+"6 nền tảng, nội dung riêng cho từng chi nhánh": "6 platforms, content for each branch",
+"Khoảng 1.800 lượt đăng mỗi tháng, báo cáo theo chi nhánh": "About 1,800 posts a month, reports per branch",
+"Giá theo tháng. Hủy bất cứ lúc nào.": "Monthly pricing. Cancel any time.",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng trên 6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X.": "A 30-day content calendar, posts, images and short videos, published automatically on 6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn and X.",
+"Mạng xã hội tự động hoàn toàn": "Fully automated social media",
+"Chưa đến <b>700.000đ</b><span>/tháng</span>": "Under <b>700,000 VND</b><span>/month</span>",
+"6 nền tảng: Facebook, Instagram, TikTok, Threads, LinkedIn, YouTube": "6 platforms: Facebook, Instagram, TikTok, Threads, LinkedIn, YouTube",
+"Tự viết, tự làm ảnh và video ngắn, tự đăng": "Writes, makes images and short videos, and posts on its own",
+"Báo cáo mỗi tuần, tối ưu mỗi tháng": "Weekly report, monthly optimisation",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng trên 6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X.": "A 30-day content calendar, posts, images and short videos, published automatically on 6 platforms: Facebook, Instagram, TikTok, Threads, LinkedIn and YouTube.",
+"Bạn lo vận hành. <span>AI lo marketing.</span>": "You run the business. <span>AI runs the marketing.</span>",
+"Bunchasake dựng hệ thống AI chạy mạng xã hội, trả lời tin nhắn khách hàng và nuôi khách quen cho chuỗi và công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "Bunchasake builds the AI system that runs your social media, answers customer messages and keeps regulars coming back, for chains and growing companies. <b>Your team just approves.</b>",
+"Cách làm": "How it works",
+"Bắt đầu <span aria-hidden=\"true\">↗</span>": "Get started <span aria-hidden=\"true\">↗</span>",
+"Bắt đầu ": "Get started ",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Chính chúng tôi": "<span class=\"dot\" aria-hidden=\"true\"></span>Our own system",
+"Bunchasake chạy bằng <span class=\"it\">chính hệ thống này.</span>": "Bunchasake runs on <span class=\"it\">this very system.</span>",
+"Không phải bản demo. Mạng xã hội và blog của chúng tôi đang do các cỗ máy AI vận hành mỗi ngày, đội chúng tôi chỉ duyệt.": "Not a demo. Our own social media and blog are run by these AI machines every day; our team just approves.",
+"<b>4</b><span>bài mỗi ngày, tự đăng</span>": "<b>4</b><span>posts a day, published automatically</span>",
+"<b>4</b><span>nền tảng: Facebook, Instagram, Threads, LinkedIn</span>": "<b>4</b><span>platforms: Facebook, Instagram, Threads, LinkedIn</span>",
+"<b>3</b><span>bài blog mỗi tuần, tự viết</span>": "<b>3</b><span>blog articles a week, written automatically</span>",
+"Bốn bước. <span class=\"it\">Chạy từ tháng đầu.</span>": "Four steps. <span class=\"it\">Running from month one.</span>",
+"Trò chuyện 30 phút": "A 30-minute call",
+"Chúng tôi xem chuỗi của bạn đang tốn thời gian ở đâu: đăng bài, tin nhắn, đánh giá.": "We look at where your chain is losing time: posting, messages, reviews.",
+"Dựng hệ thống": "We build the system",
+"Kết nối các kênh, dạy AI nói đúng giọng thương hiệu, chuẩn bị lịch nội dung đầu tiên.": "We connect your channels, teach the AI your brand voice and prepare the first content calendar.",
+"Chạy thử 30 ngày": "A 30-day trial",
+"Hệ thống chạy, bạn duyệt. Cuối tháng cùng xem số liệu.": "The system runs, you approve. At the end of the month we review the numbers together.",
+"Vận hành hằng tháng": "Monthly operation",
+"Chúng tôi theo dõi, chỉnh và thêm cỗ máy khi chuỗi của bạn cần.": "We monitor, adjust and add machines when your chain needs them.",
+"Muốn thử trước": "Try it first",
+"Cỗ máy Mạng xã hội, chạy thử 30 ngày": "The Social media machine, 30-day trial",
+"Lịch nội dung 30 ngày cho 1–2 nền tảng": "A 30-day content calendar for 1–2 platforms",
+"Báo cáo cuối tháng": "An end-of-month report",
+"Phổ biến nhất": "Most popular",
+"Mạng xã hội trọn gói": "Full social media",
+"Đủ 4 nền tảng, ảnh và video ngắn": "All 4 platforms, images and short videos",
+"Báo cáo mỗi tuần": "A weekly report",
+"Tối ưu nội dung mỗi tháng": "Monthly content optimisation",
+"Chuỗi nhiều chi nhánh": "Multi-branch chains",
+"Một hệ thống chung, nội dung riêng từng chi nhánh": "One shared system, content for each branch",
+"Ưu tiên cỗ máy Tin nhắn và Cộng đồng khi ra mắt": "First access to the Messages and Community machines",
+"Báo cáo theo từng chi nhánh": "Reports for each branch",
+"Chọn Chain <span aria-hidden=\"true\">→</span>": "Choose Chain <span aria-hidden=\"true\">→</span>",
+"Chọn Start <span aria-hidden=\"true\">→</span>": "Choose Start <span aria-hidden=\"true\">→</span>",
+"Chọn Growth <span aria-hidden=\"true\">→</span>": "Choose Growth <span aria-hidden=\"true\">→</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Khách hàng": "<span class=\"dot\" aria-hidden=\"true\"></span>Clients",
+"Đã đồng hành <span class=\"it\">cùng chúng tôi.</span>": "Brands <span class=\"it\">we have worked with.</span>",
+"Mỗi tuần một cách dùng AI để chạy marketing cho chuỗi của bạn. Không spam.": "One way a week to use AI to run marketing for your chain. No spam.",
+"Bắt đầu với <span class=\"it\">một cỗ máy.</span>": "Start with <span class=\"it\">one machine.</span>",
+"<span><b>Viết cho chúng tôi</b> chuỗi của bạn đang mất thời gian ở đâu.</span>": "<span><b>Write to us</b> about where your chain is losing time.</span>",
+"<span><b>Buổi trò chuyện 30 phút</b>, online.</span>": "<span><b>A 30-minute call</b>, online.</span>",
+"<span><b>Đề xuất và báo giá</b> cho cỗ máy đầu tiên.</span>": "<span><b>A proposal and quote</b> for your first machine.</span>",
 "Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.": "Right for you if you are about to open and need to look ready fast.",
 "Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.": "Right for you if you want a brand that lasts for years.",
 "Phù hợp nếu khách nói thương hiệu của bạn \"nhìn cũ\".": "Right for you if customers say your brand \"looks old\".",
@@ -1274,7 +1318,6 @@ const EN = {
 "<span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span>": "<span><b>A proposal and quote</b> for exactly what you need.</span>",
 "Làm việc": "Based in",
 "Ngôn ngữ": "Languages",
-"Mạng xã hội": "Social",
 "Việt Nam · Ý · Online": "Vietnam · Italy · Online",
 "Tiếng Việt · English": "Vietnamese · English",
 "Sao chép": "Copy",
@@ -1405,6 +1448,9 @@ const CHI = (() => {
   };
 })();
 const stepsEl = document.getElementById("steps");
+function renderSteps() {}
+if (stepsEl) {
+
 stepsEl.innerHTML = steps.map((s, i) => `
   <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
     <span class="n">${String(i + 1).padStart(2, "0")}</span>
@@ -1417,7 +1463,7 @@ stepsEl.innerHTML = steps.map((s, i) => `
       <a class="step-more" href="#"></a>
     </div>
   </li>`).join("");
-function renderSteps() {
+renderSteps = function () {
   const sc = document.getElementById("scards");
   const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
   if (sc) { sc.classList.toggle("designed", designed); sc.innerHTML = steps.map((st, i) => { const s = tr(st), lab = (LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0");
@@ -1478,6 +1524,8 @@ if ("IntersectionObserver" in window) {
     addEventListener("scroll", upd, { passive: true }); upd();
   }
 })();
+
+}
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
   <li><a class="row" href="${p.url}" target="_blank" rel="noopener" data-img="${p.img}">

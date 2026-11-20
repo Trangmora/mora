@@ -1,5 +1,5 @@
 <title>Bunchasake</title>
-<meta name="description" content="Bunchasake – brand builder and growth partner. You have the story. We turn it into a brand.">
+<meta name="description" content="Bunchasake – AI automation for marketing. We build the AI system that runs social media, customer messages and loyal customers for chains and growing companies.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -710,6 +710,56 @@ body {
 .legal { color: var(--muted); }
 .sub { box-shadow: 0 18px 40px rgba(0, 0, 0, .3); }
 .hero h1 .muted { color: #9C9C98; }
+
+/* ===== Bố cục so le: ảnh trái (Vì sao) – ảnh phải (AI Growth), cùng kích thước ===== */
+:root { --pw: clamp(280px, 34vw, 460px); }
+.why-top { display: block; }
+.why-top .why-lead { max-width: 20em; }
+.why-mid { display: grid; grid-template-columns: var(--pw) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); align-items: center; margin-top: clamp(40px, 5vw, 72px); }
+.why-mid .pains { margin-top: 0; }
+.why-mid .why-img { width: 100%; }
+.grow { grid-template-columns: minmax(0, 1fr) var(--pw); gap: clamp(32px, 5vw, 88px); }
+.grow-photo { max-width: none; justify-self: stretch; }
+.why-img, .grow-photo { border-radius: 20px; aspect-ratio: 4 / 5; }
+@media (max-width: 860px) { .why-mid, .grow { grid-template-columns: 1fr; } .why-img, .grow-photo { aspect-ratio: 4 / 3; } }
+
+/* ===== Định vị AI Automation ===== */
+.hero-kick { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); margin-bottom: clamp(18px, 2.4vw, 28px); animation: fade 1s .2s var(--ease) both; }
+.hero-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+.hero-pos { max-width: 52ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.6; color: var(--muted); }
+.hero-pos b { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .hero-foot { grid-template-columns: 1fr; } }
+.machines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.4vw, 44px); }
+.mc { position: relative; display: grid; align-content: start; gap: 12px; padding: clamp(24px, 2.4vw, 34px); border: 1px solid var(--line); border-radius: 20px; background: var(--raise); transition: transform .4s var(--ease), border-color .3s; }
+.mc:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+.mc.on { border-color: var(--mark); }
+.mc-st { justify-self: start; padding: 5px 10px; border-radius: 999px; font-size: 11px; border: 1px solid var(--line-strong); color: var(--muted); }
+.mc.on .mc-st { background: var(--mark); border-color: var(--mark); color: #fff; }
+.mc-n { font: 400 italic clamp(36px, 3.4vw, 52px)/.9 var(--serif); color: var(--mark); margin-top: 8px; }
+.mc h3 { font-size: clamp(22px, 2vw, 30px); font-weight: 500; letter-spacing: -0.03em; }
+.mc p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+.mc-you { margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+#automation .auto-foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+@media (max-width: 900px) { .machines { grid-template-columns: 1fr; } }
+
+/* ===== Pivot: AI Automation for Marketing ===== */
+.grow-sub { color: var(--muted); font-size: clamp(16px, 1.25vw, 18px); line-height: 1.6; max-width: 46ch; }
+.proof { list-style: none; margin: 4px 0 8px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); width: 100%; }
+.proof li { display: grid; gap: 6px; align-content: start; padding: 18px 16px 0 0; }
+.proof li + li { padding-left: 16px; border-left: 1px solid var(--line); }
+.proof b { font: 400 italic clamp(40px, 4vw, 60px)/.9 var(--serif); color: var(--mark); }
+.proof span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+.flow { list-style: none; margin: clamp(28px, 3.4vw, 44px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line-strong); }
+.flow li { display: grid; align-content: start; gap: 10px; padding: clamp(22px, 2.4vw, 32px) clamp(14px, 2vw, 28px) 0 0; }
+.flow li + li { padding-left: clamp(14px, 2vw, 28px); border-left: 1px solid var(--line); }
+.fl-n { font: 400 italic clamp(30px, 2.8vw, 44px)/.9 var(--serif); color: var(--mark); }
+.flow h3 { font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.03em; }
+.flow p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+@media (max-width: 900px) { .flow { grid-template-columns: 1fr 1fr; row-gap: 28px; } .flow li:nth-child(3) { padding-left: 0; border-left: 0; } }
+@media (max-width: 560px) { .flow, .proof { grid-template-columns: 1fr; } .flow li + li, .proof li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
+.pkg .price { font-size: 15px; color: var(--muted); margin: -4px 0 4px; }
+.pkg .price b { font-size: clamp(26px, 2.4vw, 34px); font-weight: 600; letter-spacing: -0.03em; color: inherit; }
+.pkg.feature .price { color: inherit; opacity: .85; }
 </style>
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
@@ -719,10 +769,10 @@ body {
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
   <ul class="cap" id="navMenu">
-    <li><a href="#goi" data-spy="goi">Brand Builder</a></li>
-    <li><a href="#automation" data-spy="automation">AI Automation</a></li>
-    <li><a href="#cach-lam" data-spy="cach-lam">How we work</a></li>
-    <li><a href="#du-an" data-spy="du-an">Our Brands</a></li>
+    <li><a href="#automation" data-spy="automation growth">AI Automation</a></li>
+    <li><a href="#cach-lam" data-spy="cach-lam">How it works</a></li>
+    <li><a href="#goi" data-spy="goi">Packages</a></li>
+    <li><a href="#du-an" data-spy="du-an">Clients</a></li>
     <li><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a></li>
   </ul>
   <div class="nav-r">
@@ -730,144 +780,122 @@ body {
       <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
       <button type="button" data-lang="vi" aria-pressed="false" lang="vi">VI</button>
     </div>
-    <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
+    <a class="pill" href="#lien-he">Bắt đầu <span aria-hidden="true">↗</span></a>
     <button class="menu-btn" type="button" id="menuBtn" aria-controls="navMenu" aria-expanded="false"><span class="mb-l">Menu</span><span class="mb-i" aria-hidden="true"><i></i><i></i></span></button>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
+    <span class="hero-kick cap"><span class="dot" aria-hidden="true"></span>AI Automation for Marketing</span>
     <h1>
-      <span class="row"><span>You have the <span class="it">story.</span></span></span>
-      <span class="row"><span><span class="muted">We turn it into a</span> <span class="brand">brand.</span></span></span>
+      <span class="row"><span>You run the <span class="it">business.</span></span></span>
+      <span class="row"><span><span class="muted">AI runs your</span> <span class="brand">marketing.</span></span></span>
     </h1>
-    <p class="promise">Bạn lo vận hành. <span>Chúng tôi tăng trưởng thương hiệu.</span></p>
+    <p class="promise">Bạn lo vận hành. <span>AI lo marketing.</span></p>
     <div class="hero-foot">
+      <p class="hero-pos">Bunchasake dựng hệ thống AI chạy mạng xã hội, trả lời tin nhắn khách hàng và nuôi khách quen cho chuỗi và công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b></p>
       <div class="hero-cta">
-        <a class="pill" href="#goi">Xem dịch vụ <span aria-hidden="true">↓</span></a>
-        <a class="pill ghost" href="#du-an">Xem dự án</a>
+        <a class="pill" href="#automation">Xem hệ thống AI <span aria-hidden="true">↓</span></a>
+        <a class="pill ghost" href="#cach-lam">Cách làm</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Vì sao là câu chuyện -->
-  <section class="sec why" id="cau-chuyen">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Vì sao là câu chuyện</span>
-    </div>
-    <div class="why-top">
-      <div class="why-txt">
-        <h2 class="why-lead">Một chiếc váy cưới vài trăm đô và một chiếc hàng trăm ngàn đô khác nhau ở đâu? <span class="it">Ở câu chuyện tạo nên nó.</span></h2>
-        <p class="why-sub">Người ta không thực sự mua một sản phẩm hay dịch vụ đơn thuần. <b>Người ta mua câu chuyện đằng sau nó.</b></p>
-      </div>
-      <figure class="why-img"><img src="/img/home/why-dress-light.jpg" width="900" height="1125" alt="Đôi tay cài từng chiếc cúc trên lưng váy cưới ren" loading="lazy" decoding="async"></figure>
-    </div>
-    <div class="pains">
-      <div class="pain"><div class="pain-mk"><span class="pain-n">01</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 24h36l-3 30H17z"/><path d="M24 24v-5a8 8 0 0 1 16 0v5"/></svg></div><q>Một chiếc túi không chỉ là một chiếc túi.</q><p>Đó có thể là câu chuyện về sự tinh tế, phong cách và cá tính của người sở hữu.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">02</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h34v10a17 17 0 0 1-34 0z"/><path d="M46 30h4a6 6 0 0 1 0 12h-5"/><path d="M10 56h40"/><path d="M24 10c-2 3 2 5 0 8M32 10c-2 3 2 5 0 8"/></svg></div><q>Một tách cà phê không chỉ là cà phê.</q><p>Đó là cảm giác bình yên, một khoảng thời gian dành cho bản thân hay một cuộc gặp gỡ đáng nhớ.</p></div>
-      <div class="pain"><div class="pain-mk"><span class="pain-n">03</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 33h48a24 21 0 0 1-48 0z"/><path d="M26 54h12"/><circle cx="22" cy="26" r="5"/><circle cx="33" cy="24" r="5.5"/><circle cx="43.5" cy="27" r="4"/><path d="M38 20 52 7M42 22 56 11"/></svg></div><q>Một thương hiệu không chỉ là sản phẩm tốt.</q><p>Nó được tạo nên từ những giá trị, cảm xúc, niềm tin và câu chuyện mà nó mang đến cho khách hàng.</p></div>
-    </div>
-    <div class="why-close">
-      <p class="why-pull">Sản phẩm có thể khiến khách hàng chú ý, nhưng <span class="it">câu chuyện</span> mới là thứ khiến họ rung động, ghi nhớ và muốn gắn bó lâu dài.</p>
-      <p class="why-body">Giữa hàng trăm lựa chọn có chất lượng tương tự nhau, khách hàng thường chọn thương hiệu khiến họ cảm thấy mình thuộc về một điều gì đó. Những thương hiệu làm tốt là những thương hiệu có câu chuyện riêng và nhất quán trong cách thể hiện, biết định vị mình chính xác và hiểu mong muốn của khách hàng.</p>
-    </div>
-  </section>
-
-  <!-- Tăng trưởng -->
-
-  <section class="sec grow" id="growth">
-    <div class="grow-text">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Growth Partner</span>
-      <h2>Chúng tôi giúp bạn chuyển đổi tự động <span class="it">và tăng trưởng độ nhận diện thương hiệu.</span></h2>
-            <ol class="gp" role="list"><li><span class="gp-n">01</span><h3>AI đọc dữ liệu</h3><p>AI phân tích kênh, khách hàng và đối thủ của bạn, chỉ ra chỗ thương hiệu có thể lớn lên.</p></li><li><span class="gp-n">02</span><h3>AI làm việc hằng ngày</h3><p>Soạn nội dung, lên lịch đăng, trả lời tin nhắn. Bạn duyệt, hệ thống tự chạy.</p></li><li><span class="gp-n">03</span><h3>Người đồng hành</h3><p>Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.</p></li></ol>
-      <a class="pill" href="#lien-he">Kể câu chuyện <span aria-hidden="true">↗</span></a>
-    </div>
-    <figure class="grow-video grow-photo"><img src="/img/home/grow-phone-light.jpg" width="900" height="1125" alt="Điện thoại trên giá đang quay video trong quán" loading="lazy" decoding="async"></figure>
-  </section>
-
-  <!-- Quy trình -->
-  <section class="sec" id="cach-lam">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Cách chúng tôi làm</span>
-      <h2>Sáu bước. <span class="it">Xây dựng nó.</span></h2>
-      <p>Chúng tôi không chỉ hướng dẫn. Ở cả sáu bước, đội của chúng tôi bắt tay làm cùng bạn, và bạn duyệt từng bước.</p>
-    </div>
-    <div class="scards" id="scards"></div>
-    <ol class="steps" id="steps" role="list"></ol>
-  </section>
-
-  <!-- Gói -->
-  <section class="sec" id="goi">
-    <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Gói</span>
-      <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
-      <p>Báo giá sau buổi trò chuyện đầu tiên.</p>
-    </div>
-    <div class="pkgs">
-      <article class="pkg">
-        <span class="for cap">Doanh nghiệp mới mở</span>
-        <h3>Build</h3>
-        <p class="fit">Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.</p>
-        <ul>
-          <li>Lắng nghe và định vị bản gọn</li>
-          <li>Logo, màu sắc, kiểu chữ</li>
-          <li>Danh thiếp, ảnh đại diện, mẫu bài đăng</li>
-        </ul>
-        <button class="choose" type="button" data-pkg="build">Chọn Build <span aria-hidden="true">→</span></button>
-      </article>
-      <article class="pkg feature">
-        <span class="tag cap">Đầy đủ nhất</span>
-        <span class="for cap">Cần thương hiệu bài bản</span>
-        <h3>Growth</h3>
-        <p class="fit">Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.</p>
-        <ul>
-          <li>Đủ 6 bước</li>
-          <li>Câu chuyện thương hiệu và giọng văn</li>
-          <li>Bộ quy chuẩn thương hiệu</li>
-          <li>Website và các điểm chạm chính</li>
-        </ul>
-        <button class="choose" type="button" data-pkg="growth">Chọn Growth <span aria-hidden="true">→</span></button>
-      </article>
-      <article class="pkg">
-        <span class="for cap">Thương hiệu đã cũ</span>
-        <h3>Refresh</h3>
-        <p class="fit">Phù hợp nếu khách nói thương hiệu của bạn "nhìn cũ".</p>
-        <ul>
-          <li>Đánh giá thương hiệu hiện tại</li>
-          <li>Định vị lại, làm mới nhận diện</li>
-          <li>Cập nhật các điểm chạm đang dùng</li>
-        </ul>
-        <button class="choose" type="button" data-pkg="refresh">Chọn Refresh <span aria-hidden="true">→</span></button>
-      </article>
     </div>
   </section>
 
   <!-- Automation -->
   <section class="sec" id="automation">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Thêm vào bất kỳ gói nào</span>
-      <h2>AI Automation Social Media <span class="it">cho bạn.</span></h2>
-      <p>Chúng tôi dựng sẵn hệ thống, team của bạn tự vận hành Facebook, TikTok, Instagram.</p>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>AI Automation</span>
+      <h2>Ba cỗ máy AI. <span class="it">Đội của bạn chỉ việc duyệt.</span></h2>
+      <p>Chúng tôi dựng, chạy và theo dõi hệ thống cho bạn. Bắt đầu với một cỗ máy, chạy thử 30 ngày.</p>
     </div>
-    <div class="auto">
-      <div><span class="n cap">01</span><b>Trợ lý AI riêng</b></div>
-      <div><span class="n cap">02</span><b>Lịch nội dung 30 ngày</b></div>
-      <div><span class="n cap">03</span><b>AI viết, bạn duyệt</b></div>
-      <div><span class="n cap">04</span><b>Tự lên lịch đăng</b></div>
-      <div><span class="n cap">05</span><b>Trả lời inbox tự động</b></div>
+    <div class="machines">
+      <article class="mc on"><span class="mc-st cap">Đang nhận khách</span><span class="mc-n">01</span><h3>Mạng xã hội</h3><p>Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng trên 6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X.</p><span class="mc-you">Bạn chỉ việc: duyệt bài mỗi tuần</span></article>
+      <article class="mc"><span class="mc-st cap">Sắp ra mắt</span><span class="mc-n">02</span><h3>Tin nhắn khách hàng</h3><p>Trả lời tin nhắn 24/7 về giá, giờ mở cửa, dịch vụ, nhận đặt lịch và chuyển cho người thật khi cần.</p><span class="mc-you">Bạn chỉ việc: xử lý ca khó</span></article>
+      <article class="mc"><span class="mc-st cap">Sắp ra mắt</span><span class="mc-n">03</span><h3>Cộng đồng thương hiệu</h3><p>Trả lời đánh giá, nhắc khách quen, gửi ưu đãi cho khách lâu không quay lại.</p><span class="mc-you">Bạn chỉ việc: duyệt ưu đãi</span></article>
     </div>
-    <div class="auto-foot" style="justify-content:flex-end">
+    <div class="auto-foot">
       <a class="more" href="https://bunchasake.com/social-media-automation/" data-vi="https://bunchasake.com/vi/tu-dong-hoa-social-media/">Xem chi tiết AI Automation →</a>
-      <a class="pill ghost" href="#lien-he">Thêm AI Automation <span aria-hidden="true">↗</span></a>
+      <a class="pill" href="#lien-he">Bắt đầu với một cỗ máy <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <!-- Chính chúng tôi -->
+  <section class="sec grow" id="growth">
+    <div class="grow-text">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Chính chúng tôi</span>
+      <h2>Bunchasake chạy bằng <span class="it">chính hệ thống này.</span></h2>
+      <p class="grow-sub">Không phải bản demo. Mạng xã hội và blog của chúng tôi đang do các cỗ máy AI vận hành mỗi ngày, đội chúng tôi chỉ duyệt.</p>
+      <ul class="proof" role="list"><li><b>4</b><span>bài mỗi ngày, tự đăng</span></li><li><b>4</b><span>nền tảng: Facebook, Instagram, Threads, LinkedIn</span></li><li><b>3</b><span>bài blog mỗi tuần, tự viết</span></li></ul>
+      <a class="pill" href="#lien-he">Bắt đầu với một cỗ máy <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="grow-video grow-photo"><img src="/img/home/grow-phone-light.jpg" width="900" height="1125" alt="Điện thoại trên giá đang quay video trong quán" loading="lazy" decoding="async"></figure>
+  </section>
+
+  <!-- Cách làm -->
+  <section class="sec" id="cach-lam">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>How it works</span>
+      <h2>Bốn bước. <span class="it">Chạy từ tháng đầu.</span></h2>
+    </div>
+    <ol class="flow" role="list">
+      <li><span class="fl-n">01</span><h3>Trò chuyện 30 phút</h3><p>Chúng tôi xem chuỗi của bạn đang tốn thời gian ở đâu: đăng bài, tin nhắn, đánh giá.</p></li>
+      <li><span class="fl-n">02</span><h3>Dựng hệ thống</h3><p>Kết nối các kênh, dạy AI nói đúng giọng thương hiệu, chuẩn bị lịch nội dung đầu tiên.</p></li>
+      <li><span class="fl-n">03</span><h3>Chạy thử 30 ngày</h3><p>Hệ thống chạy, bạn duyệt. Cuối tháng cùng xem số liệu.</p></li>
+      <li><span class="fl-n">04</span><h3>Vận hành hằng tháng</h3><p>Chúng tôi theo dõi, chỉnh và thêm cỗ máy khi chuỗi của bạn cần.</p></li>
+    </ol>
+  </section>
+
+  <!-- Gói -->
+  <section class="sec" id="goi">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
+      <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
+      <p>Giá theo tháng. Hủy bất cứ lúc nào.</p>
+    </div>
+    <div class="pkgs">
+      <article class="pkg">
+        <span class="for cap">Muốn thử trước</span>
+        <h3>Start</h3>
+        <p class="price"><b>399.000đ</b><span>/tháng</span></p>
+        <ul>
+          <li>3 bài mỗi ngày trên mỗi nền tảng</li>
+          <li>6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
+          <li>Khoảng 540 lượt đăng mỗi tháng</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="start">Chọn Start <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="pkg feature">
+        <span class="tag cap">Phổ biến nhất</span>
+        <span class="for cap">Mạng xã hội tự động hoàn toàn</span>
+        <h3>Growth</h3>
+        <p class="price"><b>999.000đ</b><span>/tháng</span></p>
+        <ul>
+          <li>8 bài mỗi ngày trên mỗi nền tảng</li>
+          <li>6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
+          <li>Khoảng 1.440 lượt đăng mỗi tháng, báo cáo mỗi tuần</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="growth">Chọn Growth <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="pkg">
+        <span class="for cap">Chuỗi nhiều chi nhánh</span>
+        <h3>Chain</h3>
+        <p class="price">Từ <b>1.500.000đ</b><span>/tháng</span></p>
+        <ul>
+          <li>10 bài mỗi ngày trên mỗi nền tảng</li>
+          <li>6 nền tảng, nội dung riêng cho từng chi nhánh</li>
+          <li>Khoảng 1.800 lượt đăng mỗi tháng, báo cáo theo chi nhánh</li>
+        </ul>
+        <button class="choose" type="button" data-pkg="chain">Chọn Chain <span aria-hidden="true">→</span></button>
+      </article>
     </div>
   </section>
 
   <!-- Dự án -->
   <section class="sec" id="du-an">
     <div class="sec-head">
-      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Dự án</span>
-      <h2>Những câu chuyện <span class="it">đã thành thương hiệu.</span></h2>
-      <p>Mỗi nơi một câu chuyện, một thương hiệu.</p>
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Khách hàng</span>
+      <h2>Đã đồng hành <span class="it">cùng chúng tôi.</span></h2>
     </div>
     <div class="grid" id="workGrid"></div><ol class="wl" id="work" role="list"></ol>
   </section>
@@ -878,7 +906,7 @@ body {
       <div class="news-copy">
         <span class="lab cap"><span class="dot" aria-hidden="true"></span>Bản tin</span>
         <h2 id="news-h">Nhận thư từ <span class="it">Bunchasake.</span></h2>
-        <p>Mỗi tuần một câu chuyện về xây thương hiệu cho chuỗi và thương hiệu đang mở rộng. Không spam.</p>
+        <p>Mỗi tuần một cách dùng AI để chạy marketing cho chuỗi của bạn. Không spam.</p>
       </div>
       <form class="news-form" id="newsForm" aria-label="Đăng ký nhận bản tin" action="/api/subscribe" method="post" novalidate>
         <label class="news-field"><span class="sr">Email của bạn</span><input type="email" name="email" id="newsEmail" placeholder="email@congty.com" autocomplete="email" inputmode="email" required aria-describedby="newsMsg"></label>
@@ -894,17 +922,17 @@ body {
 
 <footer id="lien-he">
   <div class="contact-side">
-    <h2>Kể chúng tôi nghe <span class="it">câu chuyện của bạn.</span></h2>
+    <h2>Bắt đầu với <span class="it">một cỗ máy.</span></h2>
     <ol class="next" aria-label="Sau khi bạn gửi email">
-      <li><span><b>Chúng tôi đọc câu chuyện</b> và chuẩn bị câu hỏi riêng cho bạn.</span></li>
-      <li><span><b>Buổi trò chuyện 60 phút</b>, online hoặc gặp trực tiếp.</span></li>
-      <li><span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span></li>
+      <li><span><b>Viết cho chúng tôi</b> chuỗi của bạn đang mất thời gian ở đâu.</span></li>
+      <li><span><b>Buổi trò chuyện 30 phút</b>, online.</span></li>
+      <li><span><b>Đề xuất và báo giá</b> cho cỗ máy đầu tiên.</span></li>
     </ol>
     <dl class="reach">
       <div><dt>Làm việc</dt><dd>Việt Nam · Ý · Online</dd></div>
       <div><dt>Ngôn ngữ</dt><dd>Tiếng Việt · English</dd></div>
     </dl>
-    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#goi">Brand Builder</a><a href="#automation">AI Automation</a><a href="#cach-lam">How we work</a><a href="#du-an">Our Brands</a><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="#thu">Bản tin</a></nav>
+    <nav class="foot-nav cap" aria-label="Chân trang"><a href="#automation">AI Automation</a><a href="#cach-lam">How it works</a><a href="#goi">Packages</a><a href="#du-an">Clients</a><a href="https://bunchasake.com/blog/" data-vi="https://bunchasake.com/vi/blog/">Blog</a><a href="#thu">Bản tin</a></nav>
   </div>
 
   <div class="card-form mail-card" id="contactCard">
@@ -932,7 +960,7 @@ body {
 </dialog>
 
 <div class="mobile-cta" id="mobileCta">
-  <a class="pill" href="#lien-he">Gửi email</a>
+  <a class="pill" href="#lien-he">Bắt đầu </a>
   <a class="pill ghost" href="#lien-he">Liên hệ</a>
 </div>
 
@@ -976,7 +1004,22 @@ const EN = {
 "Chúng tôi theo dõi kết quả cùng bạn và điều chỉnh chiến lược để thương hiệu tăng trưởng đều.": "We track the results with you and adjust the strategy so the brand keeps growing.",
 
 "Chúng tôi giúp bạn chuyển đổi tự động <span class=\"it\">và tăng trưởng độ nhận diện thương hiệu.</span>": "We help you automate <span class=\"it\">and grow your brand awareness.</span>",
-"Cách làm": "How we work",
+"Chúng tôi xây hệ thống AI chạy mạng xã hội, trả lời tin nhắn khách hàng và nuôi cộng đồng thương hiệu cho chuỗi và công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "We build the AI system that runs your social media, answers your customers and grows your brand community, for chains and growing companies. <b>Your team just approves.</b>",
+"Xem hệ thống AI <span aria-hidden=\"true\">↓</span>": "See the AI system <span aria-hidden=\"true\">↓</span>",
+"Ba cỗ máy AI. <span class=\"it\">Đội của bạn chỉ việc duyệt.</span>": "Three AI machines. <span class=\"it\">Your team just approves.</span>",
+"Chúng tôi dựng, chạy và theo dõi hệ thống cho bạn. Bắt đầu với một cỗ máy, chạy thử 30 ngày.": "We build, run and monitor the system for you. Start with one machine and a 30-day trial.",
+"Đang nhận khách": "Now taking clients",
+"Sắp ra mắt": "Coming soon",
+"Mạng xã hội": "Social media",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng Facebook, Instagram, TikTok, Threads.": "A 30-day content calendar, posts, images and short videos, published automatically to Facebook, Instagram, TikTok and Threads.",
+"Bạn chỉ việc: duyệt bài mỗi tuần": "You just: approve posts once a week",
+"Tin nhắn khách hàng": "Customer messages",
+"Trả lời tin nhắn 24/7 về giá, giờ mở cửa, dịch vụ, nhận đặt lịch và chuyển cho người thật khi cần.": "Answers messages 24/7 about prices, opening hours and services, takes bookings and hands over to a person when needed.",
+"Bạn chỉ việc: xử lý ca khó": "You just: handle the tricky cases",
+"Cộng đồng thương hiệu": "Brand community",
+"Trả lời đánh giá, nhắc khách quen, gửi ưu đãi cho khách lâu không quay lại.": "Replies to reviews, reminds regulars and sends offers to customers who haven’t come back in a while.",
+"Bạn chỉ việc: duyệt ưu đãi": "You just: approve the offers",
+"Bắt đầu với một cỗ máy <span aria-hidden=\"true\">↗</span>": "Start with one machine <span aria-hidden=\"true\">↗</span>",
 "<b>Dịch vụ</b><small>Chúng tôi làm gì, làm thế nào</small>": "<b>Services</b><small>What we do, and how</small>",
 "<b>Gói</b><small>Build · Growth · Refresh</small>": "<b>Packages</b><small>Build · Growth · Refresh</small>",
 "<b>AI Growth</b><small>Tăng trưởng độ nhận diện</small>": "<b>AI Growth</b><small>Grow brand awareness</small>",
@@ -1032,6 +1075,68 @@ const EN = {
 "Cần thương hiệu bài bản": "Need a complete brand",
 "Thương hiệu đã cũ": "Brand feels dated",
 "Đầy đủ nhất": "Most complete",
+"<b>399.000đ</b><span>/tháng</span>": "<b>399,000 VND</b><span>/month</span>",
+"<b>999.000đ</b><span>/tháng</span>": "<b>999,000 VND</b><span>/month</span>",
+"Từ <b>1.500.000đ</b><span>/tháng</span>": "From <b>1,500,000 VND</b><span>/month</span>",
+"3 bài mỗi ngày trên mỗi nền tảng": "3 posts a day on each platform",
+"8 bài mỗi ngày trên mỗi nền tảng": "8 posts a day on each platform",
+"10 bài mỗi ngày trên mỗi nền tảng": "10 posts a day on each platform",
+"6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X": "6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn, X",
+"Khoảng 540 lượt đăng mỗi tháng": "About 540 posts a month",
+"Khoảng 1.440 lượt đăng mỗi tháng, báo cáo mỗi tuần": "About 1,440 posts a month, weekly report",
+"6 nền tảng, nội dung riêng cho từng chi nhánh": "6 platforms, content for each branch",
+"Khoảng 1.800 lượt đăng mỗi tháng, báo cáo theo chi nhánh": "About 1,800 posts a month, reports per branch",
+"Giá theo tháng. Hủy bất cứ lúc nào.": "Monthly pricing. Cancel any time.",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng trên 6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X.": "A 30-day content calendar, posts, images and short videos, published automatically on 6 platforms: Facebook, Instagram, TikTok, YouTube, LinkedIn and X.",
+"Mạng xã hội tự động hoàn toàn": "Fully automated social media",
+"Chưa đến <b>700.000đ</b><span>/tháng</span>": "Under <b>700,000 VND</b><span>/month</span>",
+"6 nền tảng: Facebook, Instagram, TikTok, Threads, LinkedIn, YouTube": "6 platforms: Facebook, Instagram, TikTok, Threads, LinkedIn, YouTube",
+"Tự viết, tự làm ảnh và video ngắn, tự đăng": "Writes, makes images and short videos, and posts on its own",
+"Báo cáo mỗi tuần, tối ưu mỗi tháng": "Weekly report, monthly optimisation",
+"Lịch nội dung 30 ngày, bài viết, ảnh và video ngắn, tự đăng trên 6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X.": "A 30-day content calendar, posts, images and short videos, published automatically on 6 platforms: Facebook, Instagram, TikTok, Threads, LinkedIn and YouTube.",
+"Bạn lo vận hành. <span>AI lo marketing.</span>": "You run the business. <span>AI runs the marketing.</span>",
+"Bunchasake dựng hệ thống AI chạy mạng xã hội, trả lời tin nhắn khách hàng và nuôi khách quen cho chuỗi và công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "Bunchasake builds the AI system that runs your social media, answers customer messages and keeps regulars coming back, for chains and growing companies. <b>Your team just approves.</b>",
+"Cách làm": "How it works",
+"Bắt đầu <span aria-hidden=\"true\">↗</span>": "Get started <span aria-hidden=\"true\">↗</span>",
+"Bắt đầu ": "Get started ",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Chính chúng tôi": "<span class=\"dot\" aria-hidden=\"true\"></span>Our own system",
+"Bunchasake chạy bằng <span class=\"it\">chính hệ thống này.</span>": "Bunchasake runs on <span class=\"it\">this very system.</span>",
+"Không phải bản demo. Mạng xã hội và blog của chúng tôi đang do các cỗ máy AI vận hành mỗi ngày, đội chúng tôi chỉ duyệt.": "Not a demo. Our own social media and blog are run by these AI machines every day; our team just approves.",
+"<b>4</b><span>bài mỗi ngày, tự đăng</span>": "<b>4</b><span>posts a day, published automatically</span>",
+"<b>4</b><span>nền tảng: Facebook, Instagram, Threads, LinkedIn</span>": "<b>4</b><span>platforms: Facebook, Instagram, Threads, LinkedIn</span>",
+"<b>3</b><span>bài blog mỗi tuần, tự viết</span>": "<b>3</b><span>blog articles a week, written automatically</span>",
+"Bốn bước. <span class=\"it\">Chạy từ tháng đầu.</span>": "Four steps. <span class=\"it\">Running from month one.</span>",
+"Trò chuyện 30 phút": "A 30-minute call",
+"Chúng tôi xem chuỗi của bạn đang tốn thời gian ở đâu: đăng bài, tin nhắn, đánh giá.": "We look at where your chain is losing time: posting, messages, reviews.",
+"Dựng hệ thống": "We build the system",
+"Kết nối các kênh, dạy AI nói đúng giọng thương hiệu, chuẩn bị lịch nội dung đầu tiên.": "We connect your channels, teach the AI your brand voice and prepare the first content calendar.",
+"Chạy thử 30 ngày": "A 30-day trial",
+"Hệ thống chạy, bạn duyệt. Cuối tháng cùng xem số liệu.": "The system runs, you approve. At the end of the month we review the numbers together.",
+"Vận hành hằng tháng": "Monthly operation",
+"Chúng tôi theo dõi, chỉnh và thêm cỗ máy khi chuỗi của bạn cần.": "We monitor, adjust and add machines when your chain needs them.",
+"Muốn thử trước": "Try it first",
+"Cỗ máy Mạng xã hội, chạy thử 30 ngày": "The Social media machine, 30-day trial",
+"Lịch nội dung 30 ngày cho 1–2 nền tảng": "A 30-day content calendar for 1–2 platforms",
+"Báo cáo cuối tháng": "An end-of-month report",
+"Phổ biến nhất": "Most popular",
+"Mạng xã hội trọn gói": "Full social media",
+"Đủ 4 nền tảng, ảnh và video ngắn": "All 4 platforms, images and short videos",
+"Báo cáo mỗi tuần": "A weekly report",
+"Tối ưu nội dung mỗi tháng": "Monthly content optimisation",
+"Chuỗi nhiều chi nhánh": "Multi-branch chains",
+"Một hệ thống chung, nội dung riêng từng chi nhánh": "One shared system, content for each branch",
+"Ưu tiên cỗ máy Tin nhắn và Cộng đồng khi ra mắt": "First access to the Messages and Community machines",
+"Báo cáo theo từng chi nhánh": "Reports for each branch",
+"Chọn Chain <span aria-hidden=\"true\">→</span>": "Choose Chain <span aria-hidden=\"true\">→</span>",
+"Chọn Start <span aria-hidden=\"true\">→</span>": "Choose Start <span aria-hidden=\"true\">→</span>",
+"Chọn Growth <span aria-hidden=\"true\">→</span>": "Choose Growth <span aria-hidden=\"true\">→</span>",
+"<span class=\"dot\" aria-hidden=\"true\"></span>Khách hàng": "<span class=\"dot\" aria-hidden=\"true\"></span>Clients",
+"Đã đồng hành <span class=\"it\">cùng chúng tôi.</span>": "Brands <span class=\"it\">we have worked with.</span>",
+"Mỗi tuần một cách dùng AI để chạy marketing cho chuỗi của bạn. Không spam.": "One way a week to use AI to run marketing for your chain. No spam.",
+"Bắt đầu với <span class=\"it\">một cỗ máy.</span>": "Start with <span class=\"it\">one machine.</span>",
+"<span><b>Viết cho chúng tôi</b> chuỗi của bạn đang mất thời gian ở đâu.</span>": "<span><b>Write to us</b> about where your chain is losing time.</span>",
+"<span><b>Buổi trò chuyện 30 phút</b>, online.</span>": "<span><b>A 30-minute call</b>, online.</span>",
+"<span><b>Đề xuất và báo giá</b> cho cỗ máy đầu tiên.</span>": "<span><b>A proposal and quote</b> for your first machine.</span>",
 "Phù hợp nếu bạn sắp khai trương và cần lên hình nhanh.": "Right for you if you are about to open and need to look ready fast.",
 "Phù hợp nếu bạn muốn một thương hiệu dùng được nhiều năm.": "Right for you if you want a brand that lasts for years.",
 "Phù hợp nếu khách nói thương hiệu của bạn \"nhìn cũ\".": "Right for you if customers say your brand \"looks old\".",
@@ -1066,7 +1171,6 @@ const EN = {
 "<span><b>Đề xuất và báo giá</b> theo đúng việc bạn cần.</span>": "<span><b>A proposal and quote</b> for exactly what you need.</span>",
 "Làm việc": "Based in",
 "Ngôn ngữ": "Languages",
-"Mạng xã hội": "Social",
 "Việt Nam · Ý · Online": "Vietnam · Italy · Online",
 "Tiếng Việt · English": "Vietnamese · English",
 "Sao chép": "Copy",
@@ -1197,6 +1301,9 @@ const CHI = (() => {
   };
 })();
 const stepsEl = document.getElementById("steps");
+function renderSteps() {}
+if (stepsEl) {
+
 stepsEl.innerHTML = steps.map((s, i) => `
   <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
     <span class="n">${String(i + 1).padStart(2, "0")}</span>
@@ -1209,7 +1316,7 @@ stepsEl.innerHTML = steps.map((s, i) => `
       <a class="step-more" href="#"></a>
     </div>
   </li>`).join("");
-function renderSteps() {
+renderSteps = function () {
   const sc = document.getElementById("scards");
   const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
   if (sc) { sc.classList.toggle("designed", designed); sc.innerHTML = steps.map((st, i) => { const s = tr(st), lab = (LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0");
@@ -1270,6 +1377,8 @@ if ("IntersectionObserver" in window) {
     addEventListener("scroll", upd, { passive: true }); upd();
   }
 })();
+
+}
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
   <li><a class="row" href="${p.url}" target="_blank" rel="noopener" data-img="${p.img}">
