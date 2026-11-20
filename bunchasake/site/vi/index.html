@@ -776,6 +776,8 @@ body {
 .pkg .price { font-size: 15px; color: var(--muted); margin: -4px 0 4px; }
 .pkg .price b { font-size: clamp(26px, 2.4vw, 34px); font-weight: 600; letter-spacing: -0.03em; color: inherit; }
 .pkg.feature .price { color: inherit; opacity: .85; }
+.contact-lead { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.5; color: var(--muted); max-width: 40ch; }
+#goi .sec-head p a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -866,7 +868,7 @@ body {
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
       <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
-      <p>Giá theo tháng. Hủy bất cứ lúc nào.</p>
+      <p>Giá theo tháng. Hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href="#lien-he">Hãy nói cho chúng tôi nhu cầu của bạn.</a></p>
     </div>
     <div class="pkgs">
       <article class="pkg">
@@ -1070,6 +1072,7 @@ body {
 <footer id="lien-he">
   <div class="contact-side">
     <h2>Bắt đầu với <span class="it">một cỗ máy.</span></h2>
+    <p class="contact-lead">Hãy nói cho chúng tôi nhu cầu của bạn, và cùng xem chúng ta có thể làm việc cùng nhau không.</p>
     <ol class="next" aria-label="Sau khi bạn gửi email">
       <li><span><b>Viết cho chúng tôi</b> chuỗi của bạn đang mất thời gian ở đâu.</span></li>
       <li><span><b>Buổi trò chuyện 30 phút</b>, online.</span></li>
@@ -1222,6 +1225,8 @@ const EN = {
 "Cần thương hiệu bài bản": "Need a complete brand",
 "Thương hiệu đã cũ": "Brand feels dated",
 "Đầy đủ nhất": "Most complete",
+"Hãy nói cho chúng tôi nhu cầu của bạn, và cùng xem chúng ta có thể làm việc cùng nhau không.": "Tell us what you need, and let’s see if we can work together.",
+"Giá theo tháng. Hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href=\"#lien-he\">Hãy nói cho chúng tôi nhu cầu của bạn.</a>": "Monthly pricing. Cancel any time. Not sure which fits? <a href=\"#lien-he\">Tell us what you need.</a>",
 "Bunchasake xây hệ thống AI automation cho mạng xã hội, AI chatbot trả lời tin nhắn trên Facebook, Instagram và các nền tảng khác, chăm sóc khách hàng và tự tạo nội dung cho công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "Bunchasake builds AI automation for your social media, AI chatbots that answer messages on Facebook, Instagram and other platforms, customer care and content that creates itself, for your company. <b>Your team just approves.</b>",
 "Một thương hiệu tốt là thương hiệu có khách quay lại. Chúng tôi dựng, chạy và theo dõi cả ba cỗ máy cho bạn.": "A good brand is one customers come back to. We build, run and monitor all three machines for you.",
 "Mạng xã hội là nơi đưa nội dung của bạn đến với khách hàng. AI tự tạo bài viết, ảnh, video và tự đăng trên 6 nền tảng.": "Social media is where your content reaches your customers. AI creates posts, images and videos and publishes them on 6 platforms.",
