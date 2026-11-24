@@ -3,7 +3,7 @@
 Giọng: "Trang giọng việt", ElevenLabs v3 (ổn định 0.5, độ giống 0.85), hạ trầm ~1 nửa cung bằng ffmpeg. Kiểu dựng: Vox (nền giấy, ảnh cắt dán, highlight tím). Ảnh: Unsplash.
 
 ## Mở đầu
-`[warmly]` Xin chào các bạn, mình là Trang, founder của Morai AI. Hôm nay mình muốn nói về một chủ đề: năm 2026, các bạn làm marketing thì sẽ tốn bao nhiêu tiền? Mình sẽ chia sẻ cách mình đang làm marketing cho các thương hiệu khách hàng, với chi phí rất rẻ. Video này dành cho các bạn không rành công nghệ. Mình chia làm tám bước.
+`[warmly]` Xin chào các bạn, mình là Trang, founder của Mora AI. Hôm nay mình muốn nói về một chủ đề: năm 2026, các bạn làm marketing thì sẽ tốn bao nhiêu tiền? Mình sẽ chia sẻ cách mình đang làm marketing cho các thương hiệu khách hàng, với chi phí rất rẻ. Video này dành cho các bạn không rành công nghệ. Mình chia làm tám bước.
 
 ## Bước 1 · Nghiên cứu thị trường
 `[calm]` Bước một, rất quan trọng: nghiên cứu thị trường, tức là tìm hiểu khách hàng thích gì, cần gì. Ví dụ mình đang làm cho một thương hiệu đồ lụa. Đầu tiên, các bạn lên Facebook, TikTok, Instagram, tìm những video về đồ lụa đang lên xu hướng, xem người ta làm nội dung như thế nào. Mình không khuyến khích copy. Mình học cách làm, rồi tạo luồng nội dung riêng cho mình. Các bạn lưu link tất cả lại một chỗ. Sau đó, đọc comment. Khách sẽ hỏi: màu này còn không em? Giá bao nhiêu? Lụa này có nhăn không? Đọc những câu đó, bạn biết khách cần gì, và chịu chi khoảng bao nhiêu. Bước này có hai cách. Một là làm tay, mình khuyến khích lúc mới bắt đầu. Hai là dùng công cụ quét dữ liệu như Apify, kết nối vào Claude, để nó quét video và comment, rồi tóm lại cho bạn.
