@@ -1,6 +1,6 @@
 # Video 01 – AI agent làm marketing năm 2026 (bản nháp kịch bản, CHỜ CHỊ TRANG DUYỆT)
 
-Kênh: YouTube "Trang AI" · dài ~4 phút · giọng Trang (ElevenLabs, cần gói có giọng nhân bản)
+Kênh: YouTube "Trang AI" · dài ~5 phút · giọng Trang (ElevenLabs, cần gói có giọng nhân bản)
 Nguồn tham khảo: The Startup Ideas Podcast (Greg Isenberg) với Cody Schneider. Ghi nguồn trong mô tả video. Không dùng lại hình/clip của họ.
 
 Tiêu đề đề xuất: "Làm marketing bằng AI agent năm 2026: 3 thứ bạn phải dựng trước"
@@ -14,34 +14,41 @@ Các bạn biết đấy, trước đây nếu bạn là người làm marketing
 Năm 2026, cùng mẫu quảng cáo đó, một AI agent làm trong năm phút, chi phí chỉ khoảng một trăm nghìn đồng.
 Vậy người làm marketing còn làm gì? Trong video này, mình tóm lại những ý quan trọng nhất từ một buổi chia sẻ rất hay của Cody Schneider trên Startup Ideas Podcast, và cách mình áp dụng cho các chuỗi ở Việt Nam.
 
-## 0:35 – Ý 1: Marketing giờ là code và token
-Cody nói một câu mình rất thích: "Mọi việc marketing giờ chỉ còn là code và token."
-Thiết kế ảnh, viết lời quảng cáo, dựng video, cắt podcast: những việc trước đây là một người ngồi gõ phím, kéo chuột, giờ agent làm được.
-Nên việc của bạn không còn là tự tay làm từng mẫu. Việc của bạn là làm nhạc trưởng: dựng hệ thống để agent làm việc cho đúng.
+## 0:35 – Ý 1: Làm ra nội dung giờ rất rẻ. Thứ đắt là gu và dữ liệu
+Cody nói một câu rất đáng nghĩ: "Mọi việc marketing giờ chỉ còn là code và token."
+Nghĩa là gì? Trước đây, cái khó nhất là làm ra được một mẫu quảng cáo. Giờ agent làm ra năm mẫu trong năm phút.
+Khi làm ra đã rẻ, cái khó chuyển sang chỗ khác: chọn mẫu nào đúng chất thương hiệu, và biết mẫu nào thật sự ra đơn.
+Nên người làm marketing năm 2026 không thua vì làm chậm hơn AI. Họ thua nếu không có gu, không hiểu khách, và không đo được kết quả. Đó mới là phần việc của bạn.
 
-## 1:05 – Ý 2: Agent cần ba thứ
-Muốn agent làm tốt, bạn phải cho nó một "môi trường" đủ ba thứ.
-Một, dữ liệu. Số liệu quảng cáo, website, khách hàng, doanh thu, gom về một chỗ. Có dữ liệu chung thì agent mới biết mẫu nào thật sự ra đơn, thậm chí mẫu nào kéo về khách quay lại nhiều nhất.
-Hai, quyền truy cập. Agent được đăng bài, tải quảng cáo, bật tắt quảng cáo. Nhưng nhớ: chỉ cho nó ghi qua API, còn đọc số liệu thì đọc từ kho dữ liệu của bạn. Agent mà gọi API Facebook hàng nghìn lần một giây là tài khoản bị khóa đấy.
-Ba, công cụ. Công cụ tạo ảnh, tạo video, tạo giọng đọc, tìm khách hàng tiềm năng.
-Và mình thêm một thứ thứ tư: thư viện cảm hứng. Một kho thật nhiều mẫu quảng cáo hay, cộng một file mô tả thương hiệu của bạn: màu, font, giọng nói. Agent giỏi đến đâu cũng cần biết "đẹp" và "đúng chất mình" là thế nào.
+## 1:10 – Ý 2: Agent giỏi đến đâu là do "chỗ làm việc" bạn dựng cho nó
+Hãy nghĩ agent như một nhân viên mới rất giỏi, nhưng hôm nay là ngày đầu đi làm. Nó không biết gì về công ty bạn.
+Muốn nó làm tốt, bạn phải đưa nó bốn thứ.
+Một, dữ liệu: bán được bao nhiêu, khách nhắn gì, bài nào nhiều tương tác. Không có dữ liệu, agent chỉ đoán.
+Hai, quyền: được đăng bài, được tải quảng cáo lên. Nhưng chỉ cho nó ghi, còn đọc số liệu thì đọc từ kho của bạn. Agent gọi Facebook hàng nghìn lần một giây là tài khoản bị khóa.
+Ba, công cụ: tạo ảnh, tạo video, tạo giọng đọc.
+Bốn, trí nhớ thương hiệu: một file ghi màu, font, giọng nói, điều được nói và không được nói, cộng một kho mẫu quảng cáo bạn thấy hay. Thiếu file này, agent làm ra quảng cáo đẹp nhưng giống của ai cũng được.
+Với một chuỗi nhỏ, chưa cần hệ thống to tát. Một bảng tính gom số liệu, quyền vào trang Facebook, và một file thương hiệu là đủ để bắt đầu.
 
-## 2:05 – Ý 3: Một quy trình làm quảng cáo bằng agent
-Quy trình Cody làm mẫu trên chương trình như thế này.
-Bạn đưa agent đường link website. Nó tự lấy màu và font thương hiệu, xem thư viện quảng cáo của đối thủ, đọc khách đang than phiền gì trên mạng xã hội.
-Rồi nó đề xuất năm ý tưởng quảng cáo, mỗi ý là một nỗi đau hoặc một mong muốn của khách, và tự làm ra năm mẫu ảnh.
-Với video kiểu người thật review, agent viết kịch bản, đọc bằng giọng đã nhân bản, ghép với ảnh nhân vật, rồi tự nghe lại từng chữ. Chữ nào đọc sai thì nó cắt đúng đoạn đó và sửa. Một video như vậy khoảng năm đô, so với vài trăm đô nếu thuê người làm.
+## 2:10 – Ý 3: Đừng bảo agent "làm marketing cho tôi". Hãy chia việc thành từng bước
+Cody nói thẳng: một "AI toàn năng" chạy quảng cáo là cách làm rất tệ. Cách đúng là xem người giỏi nhất làm những bước nào, rồi biến từng bước thành quy trình cho agent.
+Ví dụ quy trình làm quảng cáo anh ấy làm mẫu: đưa link website. Agent lấy màu và font, xem quảng cáo của đối thủ, đọc khách đang than phiền gì trên mạng. Rồi nó đề xuất năm ý tưởng, mỗi ý đánh vào một nỗi đau của khách, và làm ra năm mẫu.
+Với video, agent còn tự nghe lại từng chữ. Chữ nào đọc sai thì cắt đúng đoạn đó và sửa.
+Vì sao chia nhỏ lại tốt hơn? Vì mỗi bước có đầu vào rõ, đầu ra rõ, sai ở đâu thì sửa đúng chỗ đó. Kết quả đều tay, không phụ thuộc may rủi.
 
-## 3:00 – Ý 4: Con người vẫn là người duyệt
-Nhưng có một điểm mình muốn nhấn mạnh: đừng để agent chạy một mình hoàn toàn.
-Hãy đặt một cổng duyệt. Agent làm xong, một agent khác chấm điểm trước, dưới tám trên mười thì làm lại. Rồi con người, là bạn, duyệt lần cuối trước khi đăng. Ngành nào có quy định, như tài chính hay mỹ phẩm, thì càng phải có bước này.
-Và nghĩ theo công việc, đừng nghĩ theo "nhân viên AI". Người chạy quảng cáo giỏi nhất làm những bước gì, mình biến từng bước đó thành quy trình cho agent.
+## 3:05 – Ý 4: AI làm số lượng, con người giữ niềm tin
+Agent làm được trăm bài một ngày. Nhưng chỉ một bài sai, sai giá, sai cam kết, hay lời lẽ không đúng chất, là mất lòng khách mà trăm bài tốt cũng không bù được.
+Nên hãy đặt hai lớp duyệt. Lớp một: một agent khác chấm điểm, dưới tám trên mười thì làm lại. Lớp hai: con người duyệt lần cuối trước khi đăng.
+Kênh YouTube này của mình cũng vậy: không video nào lên khi mình chưa xem.
+Và nếu dùng nhân vật hay giọng đọc tạo bằng AI, hãy nói rõ. Khách năm 2026 không ghét AI, họ ghét bị lừa.
 
-## 3:35 – Ý 5: Tốc độ ra mẫu
-Cuối cùng: thuật toán Facebook bây giờ rất giỏi tự tìm đúng người cho đúng mẫu. Việc của bạn là cho nó đủ mẫu tốt để chọn. Thay vì mười mẫu một tháng, hãy thử ba mươi mẫu một đợt, rồi giữ mẫu thắng.
+## 3:45 – Ý 5: Đừng đoán mẫu nào thắng. Hãy thử nhiều và đo đến tận doanh thu
+Thuật toán Facebook giờ rất giỏi tự tìm đúng người cho đúng mẫu. Việc của bạn là đưa cho nó đủ nhiều mẫu khác nhau để chọn.
+Cody kể có lúc video nhân vật AI lại chạy tốt hơn video người thật, cùng một kịch bản, mà không ai giải thích được vì sao. Nghĩa là: đừng tin cảm giác, hãy thử.
+Nhưng đo cái gì? Đừng chỉ đếm lượt thích. Hãy nối mỗi mẫu tới tin nhắn, tới đơn hàng, và nếu được, tới khách quay lại. Hai mẫu cùng mang về một trăm tin nhắn, nhưng mẫu nào mang về khách mua lần hai mới là mẫu thắng.
+Chuỗi nhỏ thì không cần ba mươi mẫu một đợt. Mười đến hai mươi biến thể mỗi tháng, giữ mẫu thắng, bỏ mẫu thua, đã là khác biệt lớn.
 
-## 3:55 – Kết + kêu gọi
-Tóm lại: dựng dữ liệu, cho quyền, đưa công cụ, có thư viện thương hiệu, và luôn có người duyệt.
+## 4:35 – Kết + kêu gọi
+Tóm lại năm ý: làm ra giờ rẻ, gu và dữ liệu mới đắt. Dựng chỗ làm việc cho agent. Chia việc thành từng bước. AI làm số lượng, con người giữ niềm tin. Và thử nhiều, đo đến tận doanh thu.
 Ở Bunchasake, bọn mình dựng đúng hệ thống này cho các chuỗi: mạng xã hội đăng đều mỗi ngày, chatbot trả lời tin nhắn 24/7, đội của bạn chỉ việc duyệt.
 Nếu bạn muốn mình làm video tiếp theo về cách tự động tìm khách và gửi email bằng agent, comment cho mình biết nhé. Hẹn gặp lại các bạn.
 
