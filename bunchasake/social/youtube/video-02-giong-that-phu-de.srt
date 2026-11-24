@@ -1,0 +1,507 @@
+1
+00:00:00,500 --> 00:00:01,389
+Hello, xin chào các bạn.
+
+2
+00:00:01,439 --> 00:00:03,610
+Mình là Trang, founder của Mora AI.
+
+3
+00:00:03,660 --> 00:00:06,549
+Hôm nay thì mình sẽ hướng dẫn cho các bạn cách để
+
+4
+00:00:06,599 --> 00:00:10,989
+chúng ta làm triển khai một cái marketing của năm 2026, khi
+
+5
+00:00:11,039 --> 00:00:14,549
+mà, các cái, AI, Claude nó đã quá là mạnh.
+
+6
+00:00:14,599 --> 00:00:15,869
+Một cái con tướng rất là mạnh.
+
+7
+00:00:15,919 --> 00:00:18,809
+Mà nếu chúng ta không sử dụng trong cái, cái, cái, cái
+
+8
+00:00:18,859 --> 00:00:21,129
+marketing của chúng ta thì nó sẽ rất là phí.
+
+9
+00:00:21,179 --> 00:00:24,230
+Mình không, Mình sẽ đi theo tám bước.
+
+10
+00:00:24,280 --> 00:00:26,449
+Và cái video này thì dành cho những cái bạn mà không
+
+11
+00:00:26,500 --> 00:00:27,589
+làm về tech ha.
+
+12
+00:00:27,640 --> 00:00:30,109
+Những cái bạn non-tech ấy, các bạn có thể sử dụng được.
+
+13
+00:00:30,160 --> 00:00:32,990
+Thì, đầu tiên là chúng ta sẽ nói là: Cái chủ đề
+
+14
+00:00:33,039 --> 00:00:36,150
+năm 2026 thì nó sẽ chi phí nó khoảng bao nhiêu?
+
+15
+00:00:36,200 --> 00:00:38,109
+Thì các bạn chưa đến khoảng một triệu thì các bạn đã
+
+16
+00:00:38,159 --> 00:00:41,170
+có thể run được một cái, Một cái gọi là có bao,
+
+17
+00:00:41,219 --> 00:00:44,230
+bao gồm cả thiết kế này, đăng bài này, chỉnh sửa báo
+
+18
+00:00:44,280 --> 00:00:46,970
+cáo cho bạn. Thế thì cái bước đầu tiên ý, bao giờ
+
+19
+00:00:47,020 --> 00:00:49,350
+cũng là cái bước mà chúng ta sẽ đi tìm kiếm khách
+
+20
+00:00:49,399 --> 00:00:52,290
+hàng. Các bạn sẽ tìm trên Facebook, TikTok, Instagram.
+
+21
+00:00:52,340 --> 00:00:55,210
+Tìm những cái video mà nó đang lên xu hướng của cái
+
+22
+00:00:55,259 --> 00:00:57,390
+mảng mà chúng ta đang muốn làm hoặc đã làm mà nó
+
+23
+00:00:57,439 --> 00:01:00,250
+chưa được. Chúng ta không copy mà chúng ta chỉ học cái
+
+24
+00:01:00,299 --> 00:01:01,929
+content người ta làm thôi.
+
+25
+00:01:01,979 --> 00:01:03,770
+Và chúng ta đọc, những cái comment.
+
+26
+00:01:03,820 --> 00:01:06,109
+Mình sẽ đọc luôn luôn đọc cái comment của khách hàng xem
+
+27
+00:01:06,159 --> 00:01:09,189
+là khách hàng đang, đang cần cái gì, người ta đang hỏi
+
+28
+00:01:09,239 --> 00:01:11,630
+gì. Thì cái việc đấy nó sẽ cho chúng ta biết được
+
+29
+00:01:11,680 --> 00:01:13,689
+là khách hàng người ta đang có nhu cầu gì.
+
+30
+00:01:13,739 --> 00:01:15,549
+Với cái việc này thì chúng ta sẽ có hai bước: Một
+
+31
+00:01:15,599 --> 00:01:17,810
+là các bạn làm tay, hai là các bạn, Mình thì khuyến
+
+32
+00:01:17,859 --> 00:01:20,370
+khích cái việc làm tay để chúng ta có thể hiểu nữa.
+
+33
+00:01:20,420 --> 00:01:22,010
+Thứ hai là các bạn khi mà quen rồi, các bạn có
+
+34
+00:01:22,060 --> 00:01:25,049
+thể dùng Apify để chúng ta quét, chúng ta quét và chúng
+
+35
+00:01:25,099 --> 00:01:27,010
+ta... xem cái nhu cầu.
+
+36
+00:01:27,060 --> 00:01:29,409
+Đấy. Và, bước thứ hai ấy, là các bạn cần phải có
+
+37
+00:01:29,459 --> 00:01:31,689
+những cái... thứ nhất là website.
+
+38
+00:01:31,739 --> 00:01:34,130
+Website chắc chắn là phải có, rất là dễ làm và thời
+
+39
+00:01:34,180 --> 00:01:35,689
+đại bây giờ không phải thuê ai cả, các bạn có thể
+
+40
+00:01:35,739 --> 00:01:38,990
+tự làm được. Thứ hai là mạng xã hội để tối ưu
+
+41
+00:01:39,040 --> 00:01:42,189
+SEO và GEO, cho nó lên các cái công cụ tìm kiếm.
+
+42
+00:01:42,239 --> 00:01:44,210
+Và cái này thì mình sẽ có một cái video khác để
+
+43
+00:01:44,260 --> 00:01:45,769
+hỗ trợ các bạn nha.
+
+44
+00:01:45,819 --> 00:01:48,130
+Đó. Và chúng ta cần phải có cái mạng xã hội nữa.
+
+45
+00:01:48,180 --> 00:01:50,390
+Tất cả các mạng xã hội của chúng ta đều phải phủ
+
+46
+00:01:50,439 --> 00:01:53,189
+hết. Đó. Và thứ ba là bước quan trọng nhất là khi
+
+47
+00:01:53,239 --> 00:01:55,870
+mà chúng ta đã hoàn thành xong bước một và bước hai,
+
+48
+00:01:55,920 --> 00:01:57,829
+là chúng ta sẽ thiết lập Claude.
+
+49
+00:01:57,879 --> 00:02:00,189
+Và tổng trung bình giá các bạn có thể dùng cái giá
+
+50
+00:02:00,239 --> 00:02:02,189
+khoảng hai mươi đô mỗi tháng là đủ rồi.
+
+51
+00:02:02,239 --> 00:02:05,850
+Thì ở trong Claude, Claude là một cái trợ lý AI mà
+
+52
+00:02:05,900 --> 00:02:08,069
+mình nghĩ là một trong những cái trợ lý nó mạnh nhất
+
+53
+00:02:08,120 --> 00:02:09,229
+ở thời điểm hiện tại.
+
+54
+00:02:09,280 --> 00:02:11,509
+Thứ nhất là chúng ta cần phải có những cái API để
+
+55
+00:02:11,560 --> 00:02:13,149
+chúng ta phục vụ cho cái việc thiết kế.
+
+56
+00:02:13,199 --> 00:02:15,769
+Các bạn có thể bây giờ các bạn có thể làm 3D,
+
+57
+00:02:15,819 --> 00:02:19,549
+2D, 2.5D, 1D trên Claude hoàn toàn miễn phí.
+
+58
+00:02:19,599 --> 00:02:22,069
+không, không phải hoàn toàn miễn phí, mà các bạn có thể
+
+59
+00:02:22,120 --> 00:02:25,889
+là, làm, một cách gọi là, kỹ càng hơn.
+
+60
+00:02:25,939 --> 00:02:29,509
+Và... các cái công cụ tạo AI dựng bài viết.
+
+61
+00:02:29,560 --> 00:02:31,229
+Nó sẽ tất nhiên chúng ta sẽ có rất là nhiều cái
+
+62
+00:02:31,280 --> 00:02:33,289
+data để chúng ta training vào đấy.
+
+63
+00:02:33,340 --> 00:02:35,689
+Thì, Đấy là cái việc mà để đảm bảo cho các bạn
+
+64
+00:02:35,740 --> 00:02:38,389
+là các bạn sẽ, sẽ viết đúng cái theo cái tone của
+
+65
+00:02:38,439 --> 00:02:39,869
+thương hiệu mình. Đó.
+
+66
+00:02:39,919 --> 00:02:42,509
+Cái Claude ấy, nó sẽ hoạt động dựa trên cái dữ liệu
+
+67
+00:02:42,560 --> 00:02:45,409
+mà các bạn hướng dẫn và cái nguyên tắc các bạn lập
+
+68
+00:02:45,460 --> 00:02:48,329
+ra cho nó. Và cái bước thứ tư là cái bước mà
+
+69
+00:02:48,379 --> 00:02:49,409
+chúng ta phải thử.
+
+70
+00:02:49,460 --> 00:02:52,109
+Tức là đừng có ngại cái việc là chúng ta thử nghiệm
+
+71
+00:02:52,159 --> 00:02:56,169
+A A/B. Nếu những cái thương hiệu mà đã có, Đã có
+
+72
+00:02:56,219 --> 00:02:58,369
+trên thị trường rồi mà chúng ta muốn thử thì mình nghĩ
+
+73
+00:02:58,419 --> 00:03:00,129
+là các bạn phải thử rất là chắc và phải rà soát
+
+74
+00:03:00,180 --> 00:03:02,409
+rất là chắc. Tuy nhiên, với những cái thương hiệu mới, các
+
+75
+00:03:02,460 --> 00:03:04,649
+bạn cứ thử mạnh dạn cho mình A với B.
+
+76
+00:03:04,699 --> 00:03:07,689
+Với những cái khách hàng mà có cái video thật, thì chúng
+
+77
+00:03:07,740 --> 00:03:10,729
+ta có thể là dựng, sẽ quay ở cửa hàng, quay ở
+
+78
+00:03:10,780 --> 00:03:12,810
+bất cứ nơi nào bằng cái điện thoại iPhone các bạn có
+
+79
+00:03:12,860 --> 00:03:15,369
+thể quay. Sau đấy các bạn không cần phải chỉnh sửa hằng
+
+80
+00:03:15,419 --> 00:03:17,289
+giờ mà các bạn có thể đẩy luôn Claude.
+
+81
+00:03:17,340 --> 00:03:19,889
+Những cái video đầu tiên ấy thì chúng ta cùng phải ngồi
+
+82
+00:03:19,939 --> 00:03:22,369
+xuống để hướng dẫn nó cách chỉnh theo cái hướng mà chúng
+
+83
+00:03:22,419 --> 00:03:25,509
+ta muốn. Nhưng những cái video sau thì nó sẽ tự cái...
+
+84
+00:03:25,560 --> 00:03:27,849
+chỉnh theo cái mà cái data mà chúng ta đã training cho
+
+85
+00:03:27,900 --> 00:03:30,669
+nó. Và bước thứ ba là chúng ta sẽ khi mà nó
+
+86
+00:03:30,719 --> 00:03:33,909
+tự sửa xong ha, tự sửa bài, tự làm bài, tự viết
+
+87
+00:03:33,960 --> 00:03:36,909
+bài. Thì bước tiếp theo là nó sẽ tự lên lịch, tự
+
+88
+00:03:36,960 --> 00:03:39,469
+đăng lịch lên trên cái mạng xã hội của chúng ta, tự
+
+89
+00:03:39,520 --> 00:03:42,109
+viết một cái bài, trên website của chúng ta luôn.
+
+90
+00:03:42,159 --> 00:03:44,969
+Và mình thì dùng qua cái nền tảng của mình để làm
+
+91
+00:03:45,020 --> 00:03:48,669
+Morapost. Còn, Và cái website thì nó cũng tự viết luôn.
+
+92
+00:03:48,719 --> 00:03:51,949
+Đó. Và bước cuối cùng á, là chúng ta cần phải có
+
+93
+00:03:52,000 --> 00:03:54,689
+dữ liệu. Dữ liệu, tức là cái khi mà khách hàng người
+
+94
+00:03:54,740 --> 00:03:57,969
+ta... mua hàng, khi khách hàng người ta tương tác trên mạng
+
+95
+00:03:58,020 --> 00:04:01,429
+xã hội, bài nào lên xu hướng, bài nào không được chạy.
+
+96
+00:04:01,479 --> 00:04:04,169
+Phải có cái sự báo cáo hằng tháng để cho chúng ta
+
+97
+00:04:04,219 --> 00:04:06,229
+điều chỉnh những cái chiến lược tiếp theo.
+
+98
+00:04:06,280 --> 00:04:09,389
+Đó. Và cái phần cuối cùng ấy, là cái phần chăm sóc
+
+99
+00:04:09,439 --> 00:04:12,149
+khách hàng. Ví dụ như là, tin nhắn báo cáo là bao
+
+100
+00:04:12,199 --> 00:04:14,929
+nhiêu, thì chúng ta sẽ cần phải tối ưu cái phần đấy
+
+101
+00:04:14,979 --> 00:04:18,149
+lại để mà nắm thông tin khách hàng sau.
+
+102
+00:04:18,199 --> 00:04:20,069
+Đúng không? Để chúng ta điều chỉnh xem là bộ phận nào,
+
+103
+00:04:20,120 --> 00:04:22,189
+ví dụ như chăm sóc khách hàng thì cần cái gì, chatbot
+
+104
+00:04:22,240 --> 00:04:23,810
+có cần điều chỉnh gì không.
+
+105
+00:04:23,860 --> 00:04:27,349
+Đó. Và cuối cùng là cái, cái, cái, cái chi phí thì
+
+106
+00:04:27,399 --> 00:04:29,370
+mình đây là cái chi phí tạm tính của mình nha.
+
+107
+00:04:29,420 --> 00:04:32,110
+Thứ nhất là Claude là năm trăm hai mươi đồng này.
+
+108
+00:04:32,160 --> 00:04:34,349
+Ảnh AI khoảng hai trăm, ba trăm nghìn.
+
+109
+00:04:34,399 --> 00:04:37,009
+Apify thì hiện tại miễn phí năm đô mỗi tháng nên các
+
+110
+00:04:37,060 --> 00:04:38,229
+bạn không mất tiền.
+
+111
+00:04:38,279 --> 00:04:40,009
+Tên miền thì khoảng ba mươi nghìn.
+
+112
+00:04:40,060 --> 00:04:42,229
+Hoặc là các bạn mua cái tên miền nó rẻ, khoảng tầm
+
+113
+00:04:42,279 --> 00:04:44,990
+vài đô ấy. Tên miền cho website thì các bạn một năm
+
+114
+00:04:45,040 --> 00:04:47,069
+các bạn trả khoảng hai trăm nghìn, ba trăm nghìn là các
+
+115
+00:04:47,120 --> 00:04:48,769
+bạn đã có một cái tên miền rồi.
+
+116
+00:04:48,819 --> 00:04:51,349
+Đó. Cái Morapost này của mình thì là do mình build nên
+
+117
+00:04:51,399 --> 00:04:52,449
+nó đang không đồng.
+
+118
+00:04:52,500 --> 00:04:55,670
+Đó. Thì, chi phí nó đâu đấy khoảng tầm một triệu.
+
+119
+00:04:55,720 --> 00:04:58,289
+Và chưa tính nếu mà các bạn dựng video thì, thì nó
+
+120
+00:04:58,339 --> 00:05:00,589
+sẽ có thêm một chi phí của ElevenLabs nó đâu đấy khoảng
+
+121
+00:05:00,639 --> 00:05:02,110
+năm, mười đô mỗi tháng.
+
+122
+00:05:02,160 --> 00:05:04,930
+Thì các bạn sẽ xài thoải mái cho cái tháng đấy.
+
+123
+00:05:04,980 --> 00:05:07,269
+Nó rất là rẻ so với việc là các bạn thuê các
+
+124
+00:05:07,319 --> 00:05:10,870
+cái designer, các cái bạn chuyên đi phục vụ page.
+
+125
+00:05:10,920 --> 00:05:13,889
+Đó. Thì, àm... đây là một cái bài mình muốn chia sẻ
+
+126
+00:05:13,939 --> 00:05:17,069
+nhanh tại vì mình thấy cái, cái việc mà có nhiều các
+
+127
+00:05:17,120 --> 00:05:20,819
+bạn rất là loay hoay trong việc tại là làm thế nào.
