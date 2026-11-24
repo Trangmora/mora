@@ -17,9 +17,12 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
 3. **Kết:** quay lại câu hỏi mở đầu và giới thiệu tập sau.
 
 ## 3. Giọng đọc và nhịp
-- **Giọng:** ElevenLabs **Chris** (`iP95p4xoKVk53GoZ742B`), model `eleven_v3`, stability 0.6, similarity 0.8, style 0.1.
-  - Ghép vào video với `atempo=0.93` (chậm hơn 7%) và trễ 1,3 giây.
-  - Đã thử và **không dùng**: George, Brian, Eric, Will, Marco (giọng Ý).
+- **Giọng:** giọng clone của chủ kênh, ElevenLabs **"Trang giọng việt"** (`1SF4Jqf4CNRoja3ACqWC`), model `eleven_v3`, stability 0.6, similarity 0.85, style 0.1. Dùng cho **cả bản tiếng Anh lẫn bản tiếng Việt**.
+  - Ghép vào video với `atempo=0.9` (chậm hơn 10%, chủ kênh muốn chậm) và trễ 1,3 giây.
+  - **Không co giãn giọng để khớp cảnh.** Luôn dựng cảnh theo nhịp đọc tự nhiên (mốc thời gian lấy từ `with-timestamps`).
+  - Văn bản dài hơn khoảng 2.500 ký tự thì chia làm 2 lần gọi, nối bằng 0,6 giây lặng.
+  - Đã thử và **không dùng**: Chris (từng dùng ở bản nháp), George, Brian, Eric, Will, Marco (giọng Ý), "TRANG TÔI".
+- **Hai bản cho hai kênh:** mỗi tập làm bản tiếng Anh và bản tiếng Việt với cùng hình. Lời, chữ trên màn hình và mốc cảnh theo từng ngôn ngữ. Chữ tiếng Việt dùng font Be Vietnam Pro (Lora thiếu dấu).
 - **Văn phong:** người kể chuyện bình thường, tò mò, câu ngắn, có câu hỏi. Không giật gân kiểu quảng cáo, không giọng "đọc".
 - **Nhịp:** đề tài thần thoại, tôn giáo phải **chậm và bí ẩn, không theo kiểu video công nghệ**.
   - Mỗi cảnh 3–7 giây, **không có cảnh dưới 2 giây**.
@@ -41,7 +44,11 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
   - **Chớp mắt và mỉm cười:** dùng bản "nhắm mắt" và "mỉm cười" do AI sửa từ ảnh gốc (`edits.py`), chỉ trộn đúng vùng mặt.
   - **Môi trường:** mặt trời mọc, mây trôi, nước gợn, ngọn lửa chập chờn, thần linh nhấp nhô, cánh hoa rơi.
 - **Không kéo, xoay cả thân người** (nhìn buồn cười): nông dân "cúi", người viết "gật gù" đã bị chê.
-- **Cử động tay chân thật** chỉ làm bằng rig con rối (tờ các mảnh nhân vật, khớp ở vai và hông) hoặc dịch vụ image-to-video. Không dùng cách kéo méo vùng ảnh.
+- **Cử động tay chân thật:** dùng image-to-video **Wan 2.2 Turbo trên fal.ai** (`fal-ai/wan/v2.2-a14b/image-to-video/turbo`, 720p, khoảng $0,10 mỗi clip 5 giây).
+  - Đưa ảnh giấy cắt vào, kèm prompt mô tả cử động.
+  - Cuối prompt luôn thêm: "Static camera, no zoom. Keep the exact flat paper-cut illustration style, colors, outlines and faces."
+  - Dùng cho các cảnh có người làm việc gì đó: cấy lúa, rửa tay, tung muối, cúi lạy, nhảy múa.
+  - Không dùng cách kéo méo vùng ảnh.
 - **Không dùng nhân vật dẫn đường xuyên suốt** (cô bé đã bị bỏ).
 
 ## 6. Điểm rơi (beats)
@@ -53,7 +60,11 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 
 ## 7. Chuyển cảnh
 - **Không dùng:** cắt nhanh, trượt ngang nhanh, tiếng thụp "bục bục" ở mỗi lần cắt.
-- **Dùng chuyển cảnh theo một vật** (match cut), dài khoảng 1,4 giây, kèm một nốt đàn koto nhẹ. Ví dụ: một bông hoa trong cảnh cũ nhấc lên, vòng tròn mở rộng quanh nó để lộ cảnh mới, và bông hoa đáp đúng vào một bông hoa trong cảnh mới.
+- **Ba kiểu chuyển cảnh được dùng:**
+  1. **Theo một vật (match cut)**, dài khoảng 1,4 giây, kèm một nốt đàn koto nhẹ. Ví dụ: một bông hoa trong cảnh cũ nhấc lên, vòng tròn mở rộng quanh nó để lộ cảnh mới, và bông hoa đáp đúng vào một bông hoa trong cảnh mới.
+  2. **Xé giấy**, dài khoảng 1,7 giây, kèm tiếng giấy xé: cảnh cũ bị xé từ phải sang trái, có mép xơ giấy trắng và bóng đổ.
+  3. **Chuyển mờ nhẹ** (khoảng 0,8 giây) giữa các khung của cùng một cảnh, và khi chuyển từ ảnh tĩnh sang clip của chính ảnh đó.
+- **Cảnh dài hơn 7,5 giây phải chia thành 2–4 khung:** toàn cảnh, rồi cận vào chi tiết (mặt người, tay, tia sét…), xen kẽ clip và ảnh tĩnh.
 - Từ phần mở đầu sang phần chính: tối dần rồi sáng dần.
 
 ## 8. Chữ trên màn hình
@@ -68,6 +79,12 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - **Không có tiếng trống thụp khi cắt cảnh.** Chỉ có tiếng giấy lướt rất nhẹ và một nốt đàn ở chỗ chuyển cảnh.
 - **Tiếng động đúng lúc:** sấm, mưa, trống và vỗ tay ở cảnh tiệc, chuông khi ánh sáng trở lại.
 - Xem `pipeline/audio/audio4.py`.
+
+## 9b. Ngân sách và tái sử dụng
+- **Tối đa $5 cho mỗi video** (ảnh OpenAI, ElevenLabs, fal.ai cộng lại).
+- **Tập 1 (khoảng 3 phút 10 giây):** khoảng 30 ảnh và bản sửa (gồm cả các bản thử) cộng 5 clip, ước tính **khoảng $3**. Đây là ước tính, không phải số đọc từ hóa đơn.
+- **Luôn xem `assets/<nước>/index.json` trước khi tạo ảnh hoặc clip mới.** Dùng lại hình và clip đã có nếu hợp ngữ cảnh.
+- Mỗi ảnh và clip mới tạo phải được lưu vào kho này kèm một câu mô tả.
 
 ## 10. Nội dung và độ chính xác
 - Kiểm chứng năm, con số, tên riêng trước khi đăng. Thần thoại kể là thần thoại ("They say…", "Legend says…").
@@ -92,6 +109,9 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - Trộn ảnh thật với tranh vẽ.
 - Chữ Vox to.
 - Cô bé dẫn đường.
+- Giọng Chris (thay bằng giọng clone của chủ kênh).
+- Co giãn giọng đọc nhanh hơn để khớp cảnh có sẵn (nghe bị gấp).
+- Một khung hình giữ quá 7 giây.
 - Camera 3D xoay và zoom nhiều.
 - Cắt nhanh kiểu video công nghệ.
 - Tiếng thụp ở các lần cắt.

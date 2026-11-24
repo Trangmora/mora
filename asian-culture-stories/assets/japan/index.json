@@ -1,0 +1,117 @@
+{
+ "p1": {
+  "file": "images/p1.jpg",
+  "desc": "Shinto priest in white robes before a huge sacred tree with shimenawa rope, kami spirits, terracotta bg"
+ },
+ "p1_blink": {
+  "file": "images/p1_blink.jpg",
+  "desc": "same as p1, eyes closed (blink variant)"
+ },
+ "r2": {
+  "file": "images/r2.jpg",
+  "desc": "two farmers in straw hats planting rice, flooded paddy, ochre sky with NO sun (sun added by code)"
+ },
+ "r2_blink": {
+  "file": "images/r2_blink.jpg",
+  "desc": "same as r2, eyes closed"
+ },
+ "p4": {
+  "file": "images/p4.jpg",
+  "desc": "mountain, winding river, terracotta storm cloud with vermilion lightning, kami spirits"
+ },
+ "p5": {
+  "file": "images/p5.jpg",
+  "desc": "ancient court scribe writing on a scroll with a brush, scroll stacks, oil lamp"
+ },
+ "p5_blink": {
+  "file": "images/p5_blink.jpg",
+  "desc": "same as p5, eyes closed"
+ },
+ "p3": {
+  "file": "images/p3.jpg",
+  "desc": "Amaterasu peeking out of a cave with golden rays, gods dancing in front"
+ },
+ "p3_blink": {
+  "file": "images/p3_blink.jpg",
+  "desc": "same as p3, goddess eyes closed"
+ },
+ "p3_smile": {
+  "file": "images/p3_smile.jpg",
+  "desc": "same as p3, goddess smiling"
+ },
+ "p6": {
+  "file": "images/p6.jpg",
+  "desc": "ancient emperor seated front-facing with golden halo, mirror, sword, jewel (three treasures)"
+ },
+ "p6_blink": {
+  "file": "images/p6_blink.jpg",
+  "desc": "same as p6, eyes closed"
+ },
+ "p6_smile": {
+  "file": "images/p6_smile.jpg",
+  "desc": "same as p6, emperor smiling"
+ },
+ "f1": {
+  "file": "images/f1.jpg",
+  "desc": "tunnel of vermilion torii gates up a mountain, fox statues, visitor (Fushimi Inari)"
+ },
+ "f2": {
+  "file": "images/f2.jpg",
+  "desc": "woman purifying hands with bamboo ladle at stone water basin (temizuya)"
+ },
+ "f2b": {
+  "file": "images/f2b.jpg",
+  "desc": "sumo wrestler throwing salt in the ring under shrine-style roof, crowd"
+ },
+ "f3": {
+  "file": "images/f3.jpg",
+  "desc": "woman praying before small shrine hall with bell rope and offering box (back view)"
+ },
+ "f4a": {
+  "file": "images/f4a.jpg",
+  "desc": "sad exiled scholar (Sugawara no Michizane) under red plum tree"
+ },
+ "f4b": {
+  "file": "images/f4b.jpg",
+  "desc": "lightning strikes imperial palace roof, courtiers running"
+ },
+ "f4c": {
+  "file": "images/f4c.jpg",
+  "desc": "students hanging ema prayer plaques at Tenjin shrine, bronze ox, plum trees"
+ },
+ "f5": {
+  "file": "images/f5.jpg",
+  "desc": "two identical thatched shrines side by side, carpenters building the new one (Ise rebuild)"
+ },
+ "f6": {
+  "file": "images/f6.jpg",
+  "desc": "New Year crowd lining up at shrine with red torii and lanterns (hatsumode)"
+ },
+ "bg_s": {
+  "file": "images/bg_s.jpg",
+  "desc": "sumi-e ink wash misty mountains, pale paper, empty upper area for text (opening/ending background)"
+ },
+ "_clips": {
+  "clip_r2": {
+   "file": "clips/clip_r2.mp4",
+   "desc": "farmers bend and plant rice (Wan 2.2 from r2)"
+  },
+  "clip_f2": {
+   "file": "clips/clip_f2.mp4",
+   "desc": "woman pours water over her hand (from f2)"
+  },
+  "clip_f2b": {
+   "file": "clips/clip_f2b.mp4",
+   "desc": "sumo wrestler throws salt (from f2b)"
+  },
+  "clip_f3": {
+   "file": "clips/clip_f3.mp4",
+   "desc": "woman bows and claps at shrine (from f3)"
+  },
+  "clip_p3": {
+   "file": "clips/clip_p3.mp4",
+   "desc": "gods dance before Amaterasu cave (from p3)"
+  }
+ },
+ "_style_prompt": "Flat 2D vector illustration like a hand-made paper-cut animated documentary: bold simple geometric shapes with clean dark-brown outlines, visible soft paper grain and faint hand-drawn crackle lines, evenly lit bright mid-tone warm colors (NOT dark, NOT night), muted earthy palette of terracotta red, ochre, cream, sage green and black ink, characters drawn front-facing and symmetrical with minimal faces made of a few simple lines, flat colors with slight soft shading, gentle vignette, a few simple pale flowers scattered as decoration. Wide 16:9, no text, no letters. "
+}
