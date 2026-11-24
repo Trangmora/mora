@@ -73,20 +73,30 @@ Và một việc cuối cùng: cứ khoảng ba ngày một lần, và mỗi cu�
 Thử A/B, xem lại, báo cáo kết quả, rồi giữ lại kiểu nội dung thắng.
 
 ## 6:35 – Bước 8: Tổng chi phí một tháng là bao nhiêu?
-Và bước cuối cùng, chắc nhiều bạn chờ nhất: làm hết bảy bước này thì một tháng tốn khoảng bao nhiêu?
-Mình tính cho trường hợp đăng khoảng ba đến năm bài mỗi ngày, chủ yếu là ảnh, thêm vài video mỗi tháng.
-Thứ nhất, Claude: khoảng 20 đô một tháng, tức là khoảng năm trăm nghìn đồng.
-Thứ hai, tạo hình qua API của Gemini hay GPT: mỗi tấm chỉ vài nghìn đồng. Một tháng khoảng một trăm đến một trăm năm mươi tấm, tầm năm đến mười đô, tức là khoảng một trăm rưỡi đến hai trăm rưỡi nghìn.
-Thứ ba, tạo video bằng AI: cái này đắt hơn, tùy độ dài và số lượng. Nếu làm vài video ngắn mỗi tháng thì khoảng mười đến ba mươi đô. Còn video quay thật thì gần như không tốn thêm, vì Claude dựng giúp mình.
-Thứ tư, công cụ quét dữ liệu như Apify: có gói miễn phí để bắt đầu. Bạn nào làm tay ở bước một thì không tốn đồng nào.
-Thứ năm, website: tên miền khoảng vài trăm nghìn một năm.
-Và nền tảng đăng bài: nếu làm cùng bên mình thì miễn phí.
-Cộng lại, một tháng khoảng ba mươi lăm đến sáu mươi đô, tức là chưa đến một triệu rưỡi đồng.
-Trong khi nếu thuê một người viết, một người thiết kế, một người dựng video, thì một tháng ít nhất cũng mười mấy triệu.
-Giá mỗi công cụ có thể thay đổi, các bạn xem trên trang của từng bên nhé. Nhưng con số chung là vậy: rẻ hơn rất nhiều lần.
+Và bước cuối cùng, chắc nhiều bạn chờ nhất: làm hết bảy bước này thì một tháng tốn bao nhiêu?
+Mình tính cho trường hợp đăng ba đến năm bài mỗi ngày trên các nền tảng. Mình chia chi phí làm ba nhóm cho dễ nhớ.
+
+Nhóm một: khoản cố định, tháng nào cũng trả.
+Claude: 20 đô một tháng, khoảng năm trăm hai mươi nghìn đồng. Đây là khoản chính.
+Tên miền website: khoảng ba trăm nghìn một năm, chia ra chưa đến ba mươi nghìn một tháng.
+
+Nhóm hai: khoản dùng bao nhiêu trả bấy nhiêu.
+Tạo hình bằng AI, qua API của Gemini hoặc GPT: mỗi tấm khoảng một đến hai nghìn đồng. Một tháng một trăm năm mươi tấm thì khoảng hai trăm đến ba trăm nghìn.
+Quét dữ liệu bằng Apify: Apify cho miễn phí 5 đô mỗi tháng. Quét một nghìn comment chỉ tốn khoảng từ vài nghìn đến hơn năm chục nghìn đồng, tùy công cụ. Nên nếu mỗi tháng bạn đọc vài nghìn comment, gần như nằm gọn trong phần miễn phí. Còn bạn nào tự đọc tay ở bước một thì không tốn đồng nào.
+Tạo video bằng AI: đây là khoản dao động nhiều nhất, tùy công cụ, độ dài và số lượng. Vài video ngắn mỗi tháng thì khoảng hai trăm rưỡi đến tám trăm nghìn. Còn video quay thật thì không tốn thêm, vì Claude dựng giúp mình.
+
+Nhóm ba: miễn phí.
+Các trang mạng xã hội: miễn phí.
+Nền tảng đăng bài: nếu làm cùng bên mình thì mình tặng.
+
+Vậy tổng cộng:
+Nếu bạn dùng ảnh AI và video quay thật: khoảng tám trăm nghìn đến một triệu một tháng.
+Nếu thêm vài video tạo bằng AI: khoảng một triệu đến một triệu tám.
+Trong khi thuê một người viết, một người thiết kế, một người dựng video, thì một tháng ít nhất cũng mười mấy triệu.
+Giá các công cụ thay đổi khá nhanh, các bạn xem lại trên trang của từng bên trước khi dùng nhé. Nhưng con số chung là vậy: rẻ hơn hơn chục lần.
 
 ## 7:35 – Kết
-Đó là tám bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, tự đăng bài, dùng dữ liệu để chạy chiến dịch và chăm sóc khách, và tất cả chỉ tốn chưa đến một triệu rưỡi mỗi tháng.
+Đó là tám bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, tự đăng bài, dùng dữ liệu để chạy chiến dịch và chăm sóc khách, và tất cả chỉ tốn khoảng một triệu đồng mỗi tháng.
 Bạn đang kẹt ở bước nào, comment cho mình biết nhé. Hẹn gặp lại các bạn trong video sau.
 
 ---
