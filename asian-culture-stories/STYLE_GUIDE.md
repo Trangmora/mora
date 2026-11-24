@@ -1,0 +1,100 @@
+# Asian Culture Stories: quy tắc làm video
+
+Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sau làm theo đúng file này. Có điều gì thay đổi thì sửa file này trước.
+
+## 1. Kênh
+- **Tên kênh:** Asian Culture Stories. Banner ghi "ASIAN CULTURE STORIES · History · Mythology". Avatar là lữ khách cầm đèn lồng đỏ.
+- **Ngôn ngữ video:** tiếng Anh (lời dẫn và chữ). Tôi trao đổi với chủ kênh bằng tiếng Việt.
+- **Chủ đề:** chỉ văn hóa, thần thoại, lịch sử châu Á (không làm châu Âu).
+
+## 2. Cấu trúc một tập
+1. **Mở đầu thủy mặc** (~20 giây, khuôn mẫu chung cho mọi nước, chủ kênh rất thích):
+   - Nền tranh thủy mặc sương mù sáng (giấy ấm, mực xám), chiều sâu 2.5D, camera trôi rất chậm, viền tối ở góc.
+   - Chữ bản địa màu đỏ (thư pháp, ví dụ 八百万の神) hiện dần **như mực loang**, kèm dòng tiếng Anh serif mảnh, giãn chữ.
+   - Lời dẫn kiểu người tò mò tự hỏi: "X has … But why? Where do they come from? … So what is it called? It's called ___. In [language], it means ___."
+   - Kết đoạn bằng chữ bản địa lớn (神道) + tên Latin (SHINTO) + nghĩa ("THE WAY OF THE KAMI"), giữ lâu, có một đoạn nhạc dài.
+2. **Phần chính:** nguồn gốc → thần thoại → các điều thú vị, theo phong cách ảnh ở mục 4.
+3. **Kết:** quay lại câu hỏi mở đầu và giới thiệu tập sau.
+
+## 3. Giọng đọc và nhịp
+- **Giọng:** ElevenLabs **Chris** (`iP95p4xoKVk53GoZ742B`), model `eleven_v3`, stability 0.6, similarity 0.8, style 0.1.
+  - Ghép vào video với `atempo=0.93` (chậm hơn 7%) và trễ 1,3 giây.
+  - Đã thử và **không dùng**: George, Brian, Eric, Will, Marco (giọng Ý).
+- **Văn phong:** người kể chuyện bình thường, tò mò, câu ngắn, có câu hỏi. Không giật gân kiểu quảng cáo, không giọng "đọc".
+- **Nhịp:** đề tài thần thoại, tôn giáo phải **chậm và bí ẩn, không theo kiểu video công nghệ**.
+  - Mỗi cảnh 3–7 giây, **không có cảnh dưới 2 giây**.
+  - Dùng "..." trong lời dẫn để tạo khoảng lặng.
+- Lấy mốc thời gian từng chữ bằng endpoint `with-timestamps` để khớp cảnh, chữ và hiệu ứng với lời.
+
+## 4. Phong cách ảnh (phần chính)
+- **Chất ảnh:** giấy cắt phẳng, **sáng và ấm**, không tối, không cảnh đêm u ám, không quá nhiều chi tiết.
+  - Màu: đỏ đất, vàng nghệ, kem, xanh lá mạ, đen mực.
+  - Viền nâu đậm, hạt giấy, vân nứt nhẹ, vài bông hoa nhạt rải làm nền.
+  - Nhân vật đứng chính diện, mặt vẽ vài nét đơn giản.
+- **Prompt chung (dùng nguyên văn cho mọi ảnh):** xem `pipeline/scenes/gen.py` (biến `ST`). Model `gpt-image-2`, 1536×1024, quality medium.
+- **Không trộn phong cách:** không lẫn ảnh thật, cảnh vector SVG phẳng và tranh tối nhiều chi tiết trong cùng phần chính.
+- Cảnh có hiệu ứng "mọc" (mặt trời, trăng) thì vẽ ảnh **không có** vật đó, rồi thêm bằng code.
+
+## 5. Chuyển động
+- **Camera gần như đứng yên:** zoom tối đa 1,05→1,10. Không zoom vào ra nhiều, không rung, không xoay 3D mạnh (gây chóng mặt).
+- **Chuyển động phải thật và có ý nghĩa, ăn theo lời đọc:**
+  - **Chớp mắt và mỉm cười:** dùng bản "nhắm mắt" và "mỉm cười" do AI sửa từ ảnh gốc (`edits.py`), chỉ trộn đúng vùng mặt.
+  - **Môi trường:** mặt trời mọc, mây trôi, nước gợn, ngọn lửa chập chờn, thần linh nhấp nhô, cánh hoa rơi.
+- **Không kéo, xoay cả thân người** (nhìn buồn cười): nông dân "cúi", người viết "gật gù" đã bị chê.
+- **Cử động tay chân thật** chỉ làm bằng rig con rối (tờ các mảnh nhân vật, khớp ở vai và hông) hoặc dịch vụ image-to-video. Không dùng cách kéo méo vùng ảnh.
+- **Không dùng nhân vật dẫn đường xuyên suốt** (cô bé đã bị bỏ).
+
+## 6. Điểm rơi (beats)
+Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiếng đi kèm. Ví dụ:
+- **"The whole world went dark":** tối đen thật 1–2 giây, nhạc gần như tắt, rồi một đốm sáng nhỏ và tiếng chuông, sau đó vòng sáng mở ra cảnh tiếp theo.
+- **"Storm":** màn hình lóe trắng, có sấm.
+- **"Ancestor":** nhân vật mỉm cười, có chuông.
+- **"Sun":** mặt trời mọc lên.
+
+## 7. Chuyển cảnh
+- **Không dùng:** cắt nhanh, trượt ngang nhanh, tiếng thụp "bục bục" ở mỗi lần cắt.
+- **Dùng chuyển cảnh theo một vật** (match cut), dài khoảng 1,4 giây, kèm một nốt đàn koto nhẹ. Ví dụ: một bông hoa trong cảnh cũ nhấc lên, vòng tròn mở rộng quanh nó để lộ cảnh mới, và bông hoa đáp đúng vào một bông hoa trong cảnh mới.
+- Từ phần mở đầu sang phần chính: tối dần rồi sáng dần.
+
+## 8. Chữ trên màn hình
+- **Không dùng khối chữ đỏ to kiểu Vox** (đã bị chê là quá to).
+- **Dùng dải giấy nhỏ** có con dấu đỏ (hanko) chữ 神 (đổi chữ hợp với từng nước), chữ Lora serif giãn rộng, gạch chân bằng nét cọ đỏ dưới từ khóa.
+- Tối đa khoảng 4 từ. **Đặt ở góc trống, không bao giờ che nhân vật.**
+- Phần mở đầu dùng chữ mực loang (mục 2).
+
+## 9. Âm thanh
+- **Nền:** gió, âm ngân trầm, đàn koto thưa (thang hirajoshi Rê), chuông.
+- **Nhạc tắt hẳn 0,5–1,5 giây** trước các câu then chốt để tạo bí ẩn.
+- **Không có tiếng trống thụp khi cắt cảnh.** Chỉ có tiếng giấy lướt rất nhẹ và một nốt đàn ở chỗ chuyển cảnh.
+- **Tiếng động đúng lúc:** sấm, mưa, trống và vỗ tay ở cảnh tiệc, chuông khi ánh sáng trở lại.
+- Xem `pipeline/audio/audio4.py`.
+
+## 10. Nội dung và độ chính xác
+- Kiểm chứng năm, con số, tên riêng trước khi đăng. Thần thoại kể là thần thoại ("They say…", "Legend says…").
+- Chủ đề chính trị (ví dụ Thần đạo Quốc gia) giữ trung lập, chỉ nêu sự kiện.
+- **Không chép kịch bản hay hình của kênh khác:** chỉ lấy sự kiện làm tư liệu, tự viết lời và tự dựng cấu trúc.
+
+## 11. Quy trình làm một tập
+1. Viết kịch bản tiếng Việt cho chủ kênh duyệt, rồi dịch sang tiếng Anh.
+2. Làm bản thử 10–30 giây, rồi bản 1 phút, rồi cả tập.
+3. **Thứ tự kỹ thuật:**
+   1. Tạo giọng đọc có mốc thời gian.
+   2. Tạo ảnh và bản chớp mắt, mỉm cười.
+   3. Tạo bản đồ độ sâu cho phần mở đầu (Depth Anything V2 ONNX từ Hugging Face).
+   4. Render bằng Playwright + WebGL (`paper_tpl4.html`, `build8.cjs`, `comp2.html`) và ffmpeg.
+   5. Tạo nhạc (`audio4.py`).
+   6. Ghép: VO `atempo=0.93, adelay=1300`, nhạc ×0,85, grain 5, fade cuối 3 giây.
+4. **Môi trường:** key OpenAI (`api.openai.com`) và ElevenLabs (`api.elevenlabs.io`, header `xi-api-key`) lưu trong Network secrets của môi trường Default. Unsplash cũng có key nhưng hiện không dùng ảnh thật.
+
+## 12. Đã thử và bỏ (đừng lặp lại)
+- Cảnh vector SVG tự vẽ đơn sơ ("ảnh xấu").
+- Tranh màu tối, nhiều chi tiết, cảnh đêm.
+- Trộn ảnh thật với tranh vẽ.
+- Chữ Vox to.
+- Cô bé dẫn đường.
+- Camera 3D xoay và zoom nhiều.
+- Cắt nhanh kiểu video công nghệ.
+- Tiếng thụp ở các lần cắt.
+- Chuyển cảnh trượt ngang nhanh.
+- Kéo méo thân người để giả cử động.
+- Giọng Marco.
