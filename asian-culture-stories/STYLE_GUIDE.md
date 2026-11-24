@@ -18,7 +18,8 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
 
 ## 3. Giọng đọc và nhịp
 - **Giọng:** giọng clone của chủ kênh, ElevenLabs **"Trang giọng việt"** (`1SF4Jqf4CNRoja3ACqWC`), model `eleven_v3`, stability 0.6, similarity 0.85, style 0.1. Dùng cho **cả bản tiếng Anh lẫn bản tiếng Việt**.
-  - Ghép vào video với `atempo=0.9` (chậm hơn 10%, chủ kênh muốn chậm) và trễ 1,3 giây.
+  - Cài đặt giọng: stability 0.5, style 0.3, đọc ở **tốc độ tự nhiên** (không chỉnh atempo).
+  - **Không chèn thẻ cảm xúc** dạng `[curious]` hay `[pause]`: model đọc nhầm thành tiếng (nghe như có giọng lạ chen vào). Tạo cảm xúc bằng dấu câu và "...".
   - **Không co giãn giọng để khớp cảnh.** Luôn dựng cảnh theo nhịp đọc tự nhiên (mốc thời gian lấy từ `with-timestamps`).
   - Văn bản dài hơn khoảng 2.500 ký tự thì chia làm 2 lần gọi, nối bằng 0,6 giây lặng.
   - Đã thử và **không dùng**: Chris (từng dùng ở bản nháp), George, Brian, Eric, Will, Marco (giọng Ý), "TRANG TÔI".
@@ -28,6 +29,12 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
   - Mỗi cảnh 3–7 giây, **không có cảnh dưới 2 giây**.
   - Dùng "..." trong lời dẫn để tạo khoảng lặng.
 - Lấy mốc thời gian từng chữ bằng endpoint `with-timestamps` để khớp cảnh, chữ và hiệu ứng với lời.
+
+## 3b. Khoảng ngắt nhạc (nhịp kiểu phim Netflix)
+- **Mở đầu: 4–5 giây chỉ có nhạc** trước khi có lời. Ở tập 1, mặt trời đỏ mọc lên **từ sau đỉnh núi** (bị núi che theo đường sống núi), và lặn xuống trước khi chữ tên tôn giáo hiện ra.
+- **Mặt trời không bao giờ được che chữ:** đặt nó ở vùng trống, cách khối chữ ít nhất 50 px, và kiểm tra trên khung hình thật sau khi camera zoom.
+- **Mỗi chỗ chuyển phần có 2,5–4 giây lời dừng, nhạc vang lên,** và cảnh mới hiện ra cùng lúc. Ở tập 1 là các điểm: sau tên tôn giáo, trước thần thoại, trước các điều thú vị, trước mỗi câu chuyện lớn, trước đoạn kết.
+- Chèn khoảng lặng vào **chính file giọng đọc** (`G_<lang>.json` lưu mốc đã cộng các khoảng ngắt), và cảnh mới bắt đầu ở **đầu** khoảng ngắt.
 
 ## 4. Phong cách ảnh (phần chính)
 - **Chất ảnh:** giấy cắt phẳng, **sáng và ấm**, không tối, không cảnh đêm u ám, không quá nhiều chi tiết.
@@ -80,6 +87,13 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - **Tiếng động đúng lúc:** sấm, mưa, trống và vỗ tay ở cảnh tiệc, chuông khi ánh sáng trở lại.
 - Xem `pipeline/audio/audio4.py`.
 
+## 9a. Nhạc nền
+- **Dưới lời đọc, nhạc phải không lời** (không giọng hát) và rất nhỏ (mức 0,10). Bài có giọng hát chỉ được dùng ở đoạn không có lời đọc, hoặc dùng bản instrumental.
+- Ở khoảng ngắt thì nhạc lên mức khoảng 0,7 (lên trong 0,5 giây, xuống trong 0,4 giây).
+- **Nguồn nhạc:** bài chủ kênh cung cấp (Artlist, xem `assets/music/README.md`), Openverse (chỉ CC0 hoặc CC-BY, ghi tên tác giả), hoặc nhạc AI (fal.ai ACE-Step). Không đưa file nhạc có bản quyền vào git.
+- Hiệu ứng âm thanh (xé giấy, nốt koto lúc chuyển cảnh, sấm, chuông, trống) chỉ dùng **ít và nhỏ**: mỗi lần chuyển phần một âm, không lặp ở mọi lần cắt cảnh.
+- **Clip AI từ fal.ai không có tiếng.** Mọi âm thanh lạ trong video đều đến từ hiệu ứng tự tạo hoặc từ nhạc.
+
 ## 9b. Ngân sách và tái sử dụng
 - **Tối đa $5 cho mỗi video** (ảnh OpenAI, ElevenLabs, fal.ai cộng lại).
 - **Tập 1 (khoảng 3 phút 10 giây):** khoảng 30 ảnh và bản sửa (gồm cả các bản thử) cộng 5 clip, ước tính **khoảng $3**. Đây là ước tính, không phải số đọc từ hóa đơn.
@@ -118,3 +132,7 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - Chuyển cảnh trượt ngang nhanh.
 - Kéo méo thân người để giả cử động.
 - Giọng Marco.
+- Thẻ cảm xúc tiếng Anh trong lời đọc.
+- Nhạc có lời chạy dưới giọng đọc.
+- Mặt trời che chữ.
+- Bản tiếng Việt đọc kiểu "đọc bài". Phải nói chuyện thân mật: "Xin chào các bác, hôm nay chúng ta cùng tìm hiểu…".
