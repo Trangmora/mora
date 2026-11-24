@@ -1,0 +1,39 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Admin · Bunchasake</title><meta name="description" content="Trang quản trị nội bộ Bunchasake: bài đăng và số liệu mạng xã hội.">
+<style>
+:root{--bg:#2A2A2B;--raise:#343435;--ink:#F7F7F5;--muted:#CACAC6;--dim:#8C8C88;--line:#414142;--red:#FF4D2E;--ok:#7CD992;--warn:#F2C14E}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif;padding:28px 16px 80px}
+.wrap{max-width:1180px;margin:0 auto}h1{font-size:30px;letter-spacing:-.02em}h1 b{color:var(--red)}
+.sub{color:var(--dim);margin:6px 0 24px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.k{background:var(--raise);border:1px solid var(--line);border-radius:14px;padding:16px}.k small{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.k div{font-size:28px;font-weight:700;margin-top:4px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.bar button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;font:inherit}.bar button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--dim);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:var(--raise)}
+td.cap{max-width:380px;color:var(--muted)}.st{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid}.published{color:var(--ok)}.scheduled{color:var(--muted)}.failed{color:var(--red)}
+.m{white-space:nowrap}.na{color:var(--dim);font-size:12px}a{color:var(--ink)}.err{background:#4a2420;border:1px solid var(--red);padding:14px;border-radius:12px;margin:16px 0}
+.note{color:var(--dim);font-size:13px;margin-top:18px}
+</style></head><body><div class="wrap">
+<h1>Bunchasake <b>admin</b></h1><p class="sub" id="sub">Đang tải số liệu mạng xã hội…</p>
+<div class="kpis" id="kpis"></div><div class="bar" id="bar"></div><div id="out"></div>
+<p class="note">Số liệu lấy trực tiếp từ Morapost mỗi khi mở trang. Ô “chưa có số liệu” là do nền tảng chưa cấp quyền đọc số liệu cho Morapost (Facebook, Threads cần Meta duyệt; LinkedIn chưa hỗ trợ).</p>
+</div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let D=null,F="all";
+function fmt(d){return d?new Date(d).toLocaleString("vi-VN",{dateStyle:"short",timeStyle:"short"}):""}
+function render(){
+ const posts=D.posts.filter(p=>F==="all"||p.platforms.includes(F)).sort((a,b)=>(b.published_at||b.scheduled_at||"").localeCompare(a.published_at||a.scheduled_at||""));
+ const c={published:0,scheduled:0,failed:0};D.posts.forEach(p=>c[p.status]=(c[p.status]||0)+1);
+ let likes=0,comments=0;Object.values(D.metrics).forEach(m=>(m.targets||[]).forEach(t=>{if(t.metrics){likes+=t.metrics.likes||0;comments+=t.metrics.comments||0}}));
+ $("#kpis").innerHTML=[["Đã đăng",c.published],["Đang chờ lịch",c.scheduled],["Lỗi",c.failed],["Kênh kết nối",D.accounts.length],["Thích (có số)",likes],["Bình luận (có số)",comments]].map(([a,b])=>`<div class="k"><small>${a}</small><div>${b}</div></div>`).join("");
+ const pls=["all",...new Set(D.accounts.map(a=>a.platform))];
+ $("#bar").innerHTML=pls.map(p=>`<button class="${p===F?"on":""}" data-p="${p}">${p==="all"?"Tất cả":p}</button>`).join("");
+ $("#bar").querySelectorAll("button").forEach(b=>b.onclick=()=>{F=b.dataset.p;render()});
+ $("#out").innerHTML=`<div class="tbl"><table><thead><tr><th>Thời gian</th><th>Kênh</th><th>Trạng thái</th><th>Nội dung</th><th>Số liệu</th></tr></thead><tbody>${posts.slice(0,150).map(p=>{
+  const m=D.metrics[p.id];const tg=(m&&m.targets)||[];
+  const met=tg.length?tg.map(t=>t.metrics?`<div class="m">${esc(t.platform)}: ${Object.entries(t.metrics).map(([k,v])=>`${esc(k)} ${esc(v)}`).join(" · ")}</div>`:`<div class="na">${esc(t.platform)}: chưa có số liệu</div>`).join(""):(p.status==="published"?'<span class="na">—</span>':"");
+  const link=(p.links||[]).map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener">mở</a>`).join(" ");
+  return `<tr><td>${fmt(p.published_at||p.scheduled_at)}</td><td>${esc(p.platforms.join(", "))}</td><td><span class="st ${esc(p.status)}">${esc(p.status)}</span>${p.error?`<div class="na">${esc(String(p.error).slice(0,140))}</div>`:""}</td><td class="cap">${esc((p.caption||"").slice(0,160))}… ${link}</td><td>${met}</td></tr>`}).join("")}</tbody></table></div>`;
+ $("#sub").textContent=`Xin chào ${D.user} · cập nhật ${fmt(D.fetched_at)} · ${D.posts.length} bài`;
+}
+fetch("/admin/api/posts",{credentials:"same-origin"}).then(async r=>{const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(r.status===403?"Bạn không có quyền xem trang này.":(j.error||r.status));D=j;render()}).catch(e=>{$("#sub").textContent="";$("#out").innerHTML=`<div class="err">${esc(e.message)}</div>`});
+</script></body></html>

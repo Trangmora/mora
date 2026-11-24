@@ -1,6 +1,7 @@
-# bunchasake.com – mọi công cụ tìm kiếm và trợ lý AI đều được đọc toàn bộ website
+# bunchasake.com – mọi công cụ tìm kiếm và trợ lý AI đều được đọc toàn bộ website (trừ /admin/)
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 User-agent: Googlebot
 User-agent: Bingbot
@@ -21,5 +22,6 @@ User-agent: meta-externalagent
 User-agent: CCBot
 User-agent: Bravebot
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://bunchasake.com/sitemap.xml

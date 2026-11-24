@@ -2,6 +2,7 @@ import os,re,sys,json,html
 SITE='/home/user/mora/bunchasake/site'
 pages=[]
 for r,d,f in os.walk(SITE):
+    if "/admin" in r: continue  # trang quản trị nội bộ, noindex
     for x in f:
         if x.endswith('.html'): pages.append(os.path.join(r,x))
 def exists(u):

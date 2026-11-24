@@ -464,7 +464,8 @@ function writeMeta() {
   const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` + pages.flatMap(p => LANGS.filter(l => p.urls[l]).map(l => `  <url><loc>${ORIGIN}${p.urls[l]}</loc><lastmod>${p.lastmod}</lastmod><priority>${p.priority}</priority>${LANGS.filter(x => p.urls[x]).map(x => `<xhtml:link rel="alternate" hreflang="${x}" href="${ORIGIN}${p.urls[x]}"/>`).join("")}${p.urls.en ? `<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${p.urls.en}"/>` : ""}</url>`)).join("\n") + `\n</urlset>\n`;
   write("sitemap.xml", sm);
   const bots = ["Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckDuckBot", "Amazonbot", "meta-externalagent", "CCBot", "Bravebot"];
-  write("robots.txt", `# bunchasake.com – mọi công cụ tìm kiếm và trợ lý AI đều được đọc toàn bộ website\nUser-agent: *\nAllow: /\n\n${bots.map(b => `User-agent: ${b}`).join("\n")}\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
+  write("admin/index.html", fs.readFileSync(path.join(__dirname, "admin.html"), "utf8"));
+  write("robots.txt", `# bunchasake.com – mọi công cụ tìm kiếm và trợ lý AI đều được đọc toàn bộ website (trừ /admin/)\nUser-agent: *\nAllow: /\nDisallow: /admin/\n\n${bots.map(b => `User-agent: ${b}`).join("\n")}\nAllow: /\nDisallow: /admin/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
   const L = k => landing[k]?.en ? `- [${LABEL[k]?.en || k}](${ORIGIN}${U.landing(k, "en")}): ${landing[k].en.description}` : "";
   write("llms.txt", `# Bunchasake
 
