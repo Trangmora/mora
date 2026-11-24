@@ -1,0 +1,331 @@
+1
+00:00:00,668 --> 00:00:03,859
+Xin chào các bạn, mình là Trang, founder của Mora AI.
+
+2
+00:00:03,759 --> 00:00:05,939
+Hôm nay mình muốn nói về một chủ đề:
+
+3
+00:00:05,799 --> 00:00:10,660
+năm 2026, các bạn làm marketing thì sẽ tốn bao nhiêu tiền?
+
+4
+00:00:10,480 --> 00:00:15,780
+Mình sẽ chia sẻ cách mình đang làm marketing cho các thương hiệu khách hàng, với chi phí rất rẻ.
+
+5
+00:00:15,612 --> 00:00:18,500
+Video này dành cho các bạn không rành công nghệ.
+
+6
+00:00:18,399 --> 00:00:20,100
+Mình chia làm tám bước.
+
+7
+00:00:20,876 --> 00:00:22,626
+Bước một, rất quan trọng:
+
+8
+00:00:22,349 --> 00:00:26,545
+nghiên cứu thị trường, tức là tìm hiểu khách hàng thích gì, cần gì.
+
+9
+00:00:26,405 --> 00:00:29,106
+Ví dụ mình đang làm cho một thương hiệu đồ lụa.
+
+10
+00:00:28,925 --> 00:00:36,785
+Đầu tiên, các bạn lên Facebook, TikTok, Instagram, tìm những video về đồ lụa đang lên xu hướng, xem người ta làm nội dung như thế nào.
+
+11
+00:00:36,725 --> 00:00:38,705
+Mình không khuyến khích copy.
+
+12
+00:00:38,606 --> 00:00:41,905
+Mình học cách làm, rồi tạo luồng nội dung riêng cho mình.
+
+13
+00:00:41,706 --> 00:00:43,985
+Các bạn lưu link tất cả lại một chỗ.
+
+14
+00:00:43,805 --> 00:00:45,506
+Sau đó, đọc comment.
+
+15
+00:00:45,313 --> 00:00:46,545
+Khách sẽ hỏi:
+
+16
+00:00:46,345 --> 00:00:47,905
+màu này còn không em?
+
+17
+00:00:47,686 --> 00:00:48,865
+Giá bao nhiêu?
+
+18
+00:00:48,725 --> 00:00:50,305
+Lụa này có nhăn không?
+
+19
+00:00:50,165 --> 00:00:54,625
+Đọc những câu đó, bạn biết khách cần gì, và chịu chi khoảng bao nhiêu.
+
+20
+00:00:54,566 --> 00:00:56,145
+Bước này có hai cách.
+
+21
+00:00:55,966 --> 00:00:59,265
+Một là làm tay, mình khuyến khích lúc mới bắt đầu.
+
+22
+00:00:59,125 --> 00:01:07,185
+Hai là dùng công cụ quét dữ liệu như Apify, kết nối vào Claude, để nó quét video và comment, rồi tóm lại cho bạn.
+
+23
+00:01:07,909 --> 00:01:10,137
+Bước hai là dựng nhà trên mạng.
+
+24
+00:01:10,236 --> 00:01:21,576
+Mình rất khuyến khích các bạn có một website, và tối ưu SEO và GEO, để khách tìm trên Google, hay hỏi các trợ lý AI như ChatGPT, là thấy bạn.
+
+25
+00:01:21,436 --> 00:01:25,896
+Phần SEO và GEO này, mình sẽ hướng dẫn trong một video khác.
+
+26
+00:01:25,956 --> 00:01:27,896
+Rồi đến mạng xã hội:
+
+27
+00:01:27,694 --> 00:01:32,616
+Facebook, Instagram, TikTok, YouTube, LinkedIn, X.
+
+28
+00:01:32,417 --> 00:01:34,216
+Các bạn nên có đủ.
+
+29
+00:01:34,930 --> 00:01:36,438
+Bước ba rất quan trọng:
+
+30
+00:01:36,234 --> 00:01:38,278
+dựng bộ máy trong Claude.
+
+31
+00:01:38,105 --> 00:01:41,798
+Claude là một trợ lý AI, khoảng hai mươi đô một tháng.
+
+32
+00:01:41,599 --> 00:01:46,838
+Nếu bạn kinh doanh một mình, hoặc là doanh nghiệp vừa và nhỏ, bạn không cần thuê designer nữa.
+
+33
+00:01:46,632 --> 00:01:50,039
+Trong Claude, chúng ta gọi các API cần dùng.
+
+34
+00:01:49,978 --> 00:01:55,638
+API hiểu đơn giản là một sợi dây nối, để Claude điều khiển các công cụ khác thay mình.
+
+35
+00:01:55,578 --> 00:01:59,078
+Thứ nhất, tạo hình qua Gemini hoặc GPT.
+
+36
+00:01:58,965 --> 00:02:01,798
+Thứ hai, kết nối công cụ tạo video.
+
+37
+00:02:01,632 --> 00:02:05,558
+Thứ ba, tạo các kỹ năng cho Claude, ví dụ viết bài.
+
+38
+00:02:05,659 --> 00:02:09,959
+Mình viết một bài mẫu đúng giọng thương hiệu, rồi dạy Claude viết theo.
+
+39
+00:02:09,778 --> 00:02:13,239
+Năm đến mười bài đầu, mình vẫn kiểm tra rất kỹ để chỉnh.
+
+40
+00:02:13,030 --> 00:02:18,359
+Claude làm tốt hay không là nhờ dữ liệu, hướng dẫn và nguyên tắc mình đưa cho nó.
+
+41
+00:02:19,192 --> 00:02:20,012
+Bước bốn:
+
+42
+00:02:19,831 --> 00:02:22,172
+lên ý tưởng và thử A/B.
+
+43
+00:02:22,058 --> 00:02:28,652
+Từ những gì tìm được ở bước một, mình làm hai kiểu nội dung khác nhau, đăng cả hai, rồi xem kiểu nào khách thích hơn.
+
+44
+00:02:28,448 --> 00:02:31,532
+Phần viết bài, làm hình, Claude làm hết.
+
+45
+00:02:32,241 --> 00:02:33,029
+Bước năm:
+
+46
+00:02:32,822 --> 00:02:34,229
+video quay thật.
+
+47
+00:02:34,008 --> 00:02:37,989
+Thương hiệu vẫn cần video thật, quay ở cửa hàng hay studio.
+
+48
+00:02:37,822 --> 00:02:40,549
+Trước đây, mỗi video mất hàng giờ ngồi dựng.
+
+49
+00:02:40,408 --> 00:02:45,989
+Bây giờ, các bạn quay xong, đưa lên Claude, kèm một bộ kỹ năng hướng dẫn dựng theo đúng kiểu mình muốn.
+
+50
+00:02:45,788 --> 00:02:48,868
+Khoảng năm video đầu, mình chỉnh cùng nó.
+
+51
+00:02:48,609 --> 00:02:50,949
+Sau đó, nó tự dựng đúng hướng.
+
+52
+00:02:51,662 --> 00:02:52,610
+Bước sáu:
+
+53
+00:02:52,497 --> 00:02:54,450
+tự lên lịch và đăng bài.
+
+54
+00:02:54,509 --> 00:02:59,090
+Mình kết nối Claude với Morapost, nền tảng đăng bài của mình.
+
+55
+00:02:58,893 --> 00:03:03,969
+Claude viết xong là tự lên lịch cả tháng, và đăng lên tất cả mạng xã hội.
+
+56
+00:03:03,810 --> 00:03:06,050
+Bạn dùng nền tảng khác cũng được.
+
+57
+00:03:05,909 --> 00:03:09,090
+Còn nếu làm cùng bên mình, mình tặng miễn phí phần này.
+
+58
+00:03:09,950 --> 00:03:10,671
+Bước bảy:
+
+59
+00:03:10,450 --> 00:03:11,631
+dùng dữ liệu.
+
+60
+00:03:11,510 --> 00:03:15,951
+Khi nội dung chạy đều, mình bắt đầu có dữ liệu, và dữ liệu này là vàng.
+
+61
+00:03:15,790 --> 00:03:23,631
+Nếu khách mua trên website, Claude theo dõi luôn mẫu nào bán chạy, để mình dồn quảng cáo vào đúng mẫu đó, và làm giảm giá đúng lúc.
+
+62
+00:03:23,450 --> 00:03:25,070
+Rồi đến chăm sóc khách hàng:
+
+63
+00:03:24,871 --> 00:03:30,671
+trợ lý AI đọc hết tin nhắn, và tổng hợp mỗi tuần, bao nhiêu khách phàn nàn, phàn nàn chuyện gì.
+
+64
+00:03:31,391 --> 00:03:32,260
+Bước tám:
+
+65
+00:03:32,039 --> 00:03:33,780
+tổng chi phí một tháng.
+
+66
+00:03:33,582 --> 00:03:35,861
+Claude khoảng năm trăm hai mươi nghìn.
+
+67
+00:03:35,721 --> 00:03:38,661
+Tạo hình bằng AI khoảng hai đến ba trăm nghìn.
+
+68
+00:03:38,520 --> 00:03:42,021
+Quét dữ liệu bằng Apify gần như nằm trong phần miễn phí.
+
+69
+00:03:41,860 --> 00:03:44,981
+Tên miền website chưa đến ba mươi nghìn một tháng.
+
+70
+00:03:44,881 --> 00:03:48,501
+Đăng bài qua Morapost, miễn phí nếu làm cùng bên mình.
+
+71
+00:03:48,329 --> 00:03:51,781
+Cộng lại, khoảng tám trăm nghìn đến một triệu một tháng.
+
+72
+00:03:51,614 --> 00:03:55,701
+Thêm video tạo bằng AI thì khoảng một triệu đến một triệu tám.
+
+73
+00:03:55,493 --> 00:03:59,061
+Trong khi thuê ba người làm, ít nhất cũng mười mấy triệu.
+
+74
+00:03:59,772 --> 00:04:00,561
+Tóm lại:
+
+75
+00:04:00,293 --> 00:04:02,320
+bước một và bước hai, mình tự làm.
+
+76
+00:04:02,181 --> 00:04:03,921
+Bước ba, dựng một lần.
+
+77
+00:04:03,807 --> 00:04:07,681
+Từ đó, Claude làm nội dung, dựng video, đăng bài.
+
+78
+00:04:07,441 --> 00:04:08,721
+Bạn chỉ cần ra lệnh:
+
+79
+00:04:08,501 --> 00:04:14,241
+tuần này đăng ba video vào thứ Hai, thứ Ba và thứ Năm, làm xong báo cáo cho tôi.
+
+80
+00:04:14,048 --> 00:04:19,441
+Và cứ ba ngày một lần, cuối tuần, các bạn xem lại kết quả, rồi giữ lại kiểu nội dung thắng.
+
+81
+00:04:20,226 --> 00:04:27,668
+Đó là tám bước mình đang làm cho các thương hiệu năm 2026, với chi phí khoảng một triệu đồng mỗi tháng.
+
+82
+00:04:27,588 --> 00:04:30,867
+Bạn đang kẹt ở bước nào, comment cho mình biết nhé.
+
+83
+00:04:30,887 --> 00:04:32,388
+Hẹn gặp lại các bạn.
