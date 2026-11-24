@@ -32,14 +32,14 @@ Thứ hai, mạng xã hội: Facebook, Instagram, TikTok, YouTube, LinkedIn, X. 
 
 ## 2:15 – Bước 3: Dựng bộ máy trong Claude
 Bước ba rất quan trọng: dựng bộ máy làm nội dung trong Claude.
-Claude là một trợ lý AI. Mình khuyến khích các bạn làm gần như toàn bộ qua Claude. Nếu bạn là người kinh doanh một mình, hoặc chủ doanh nghiệp vừa và nhỏ, bạn không nhất thiết phải thuê designer hay dùng quá nhiều phần mềm nữa.
-Claude khoảng 20 đô một tháng. Mình tính với khoảng ba đến năm bài mỗi ngày trên các nền tảng thì như vậy là tương đối đủ. Các công cụ tạo ảnh, tạo video thì tính phí riêng, tùy bạn làm nhiều hay ít.
-Trong Claude, mình kết nối những công cụ cần dùng.
-Một, công cụ tạo hình ảnh, ví dụ Gemini hay GPT.
-Hai, công cụ tạo video.
-Ba, mình tạo các "kỹ năng" cho Claude. Hiểu đơn giản, kỹ năng là một bản hướng dẫn làm một việc cụ thể, ví dụ viết bài, hay dựng hình 3D bằng Blender.
-Với kỹ năng viết bài, mình viết một bài mẫu đúng giọng thương hiệu mình muốn, rồi dạy Claude viết theo giọng đó. Năm đến mười bài đầu tiên, mình vẫn kiểm tra rất kỹ để chỉnh.
-Vì Claude làm tốt hay không là dựa vào dữ liệu mình đưa cho nó, hướng dẫn mình giao cho nó, và nguyên tắc mình đặt ra. Đưa đúng thì nó làm rất tốt.
+Mình khuyến khích các bạn làm hoàn toàn qua Claude. Nếu bạn là solo entrepreneur, tức là kinh doanh một mình, hoặc chủ doanh nghiệp vừa và nhỏ, bạn không cần designer, không cần quá nhiều nền tảng nữa.
+Claude khoảng 20 đô một tháng. Mình tính một ngày các bạn đăng khoảng ba đến năm bài trên tất cả các nền tảng, thì như vậy là tương đối đủ để vận hành marketing. Các công cụ tạo ảnh, tạo video thì tính phí riêng, tùy bạn làm nhiều hay ít.
+Khi đó, chúng ta sẽ set up trong Claude, gọi các API mà chúng ta cần vào. API hiểu đơn giản là một sợi dây nối, để Claude điều khiển được các công cụ khác thay cho mình.
+Thứ nhất là tạo hình. Các bạn có thể tạo hình qua Gemini hoặc GPT. Chúng ta set up API của công cụ đó vào Claude, để Claude tạo hình ảnh luôn.
+Thứ hai, nếu cần tạo video, chúng ta kết nối thêm API của các công cụ chuyên tạo video vào.
+Thứ ba, chúng ta tạo các skill, tức là kỹ năng, cho bộ Claude của mình. Ví dụ dựng hình 3D bằng Blender.
+Và chúng ta xếp tiếp các skill khác, ví dụ viết bài. Mình viết một bài mẫu đúng giọng điệu mà mình mong muốn, rồi training Claude viết theo giọng đó.
+Tất nhiên, khoảng năm đến mười bài đầu tiên, chúng ta vẫn là người kiểm tra rất kỹ để chỉnh. Vì Claude hoàn thiện dựa trên dữ liệu chúng ta cho nó, dựa trên những hướng dẫn chúng ta giao cho nó, và những nguyên tắc chúng ta đặt ra. Có đủ những thứ đó thì nó làm rất tốt.
 
 ## 3:35 – Bước 4: Lên ý tưởng và thử A/B
 Từ những gì tìm được ở bước một, mình có ý tưởng cho nội dung.
