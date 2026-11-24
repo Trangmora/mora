@@ -1,10 +1,10 @@
-# Video 02 – 7 bước mình làm marketing cho thương hiệu năm 2026 (kịch bản của chị Trang, em biên tập lại · CHỜ DUYỆT)
+# Video 02 – 8 bước mình làm marketing cho thương hiệu năm 2026 (kịch bản của chị Trang, em biên tập lại · CHỜ DUYỆT)
 
-Kênh: YouTube "Trang AI" · dài ~7 phút · giọng Trang · phong cách: chị kể trực tiếp, thân mật, như đang tư vấn
+Kênh: YouTube "Trang AI" · dài ~8 phút · giọng Trang · phong cách: chị kể trực tiếp, thân mật, như đang tư vấn
 Ví dụ xuyên suốt: một thương hiệu đồ lụa
-Biên tập: giữ ý và giọng của chị, bỏ lặp, sửa từ nhận giọng sai (Apify, kết nối vào Claude, Blender…), sắp lại đúng 7 bước.
+Biên tập: giữ ý và giọng của chị, bỏ lặp, sửa từ nhận giọng sai (Apify, kết nối vào Claude, Blender…), sắp lại đúng 8 bước.
 
-Tiêu đề đề xuất: "Mình làm marketing cho thương hiệu năm 2026 như thế nào? 7 bước, chi phí rất rẻ"
+Tiêu đề đề xuất: "Mình làm marketing cho thương hiệu năm 2026 như thế nào? 8 bước, chi phí rất rẻ"
 
 ---
 
@@ -13,7 +13,7 @@ Xin chào các bạn, mình là Trang, founder của Mora AI.
 Năm 2026 rồi, các bạn đang làm marketing, bán hàng và xây thương hiệu như thế nào?
 Hôm nay mình chia sẻ cách mình, một brand builder chuyên làm thương hiệu và marketing, đang làm cho các thương hiệu khách hàng của mình, với chi phí rất rẻ.
 Video này dành cho các bạn không rành công nghệ. Bạn nào rành rồi thì có thể tua nhanh nhé.
-Mình chia làm bảy bước.
+Mình chia làm tám bước.
 
 ## 0:30 – Bước 1: Nghiên cứu thị trường
 Bước đầu tiên và rất quan trọng: nghiên cứu thị trường, tức là tìm hiểu khách đang thích gì, cần gì.
@@ -58,7 +58,7 @@ Mình dùng luôn nền tảng của mình là Morapost. Claude viết xong bài
 Bạn dùng nền tảng khác cũng được. Còn nếu bạn làm cùng bên mình, mình tặng miễn phí phần này.
 
 ## 5:00 – Bước 7: Dùng dữ liệu để chạy chiến dịch và chăm sóc khách
-Bước cuối cùng: khi nội dung đã chạy đều, mình bắt đầu có dữ liệu. Và dữ liệu này là vàng.
+Bước bảy: khi nội dung đã chạy đều, mình bắt đầu có dữ liệu. Và dữ liệu này là vàng.
 Thứ nhất, dữ liệu bán hàng. Nếu khách mua và thanh toán ngay trên website của bạn, bạn kết nối website với Claude. Claude sẽ theo dõi luôn: bán được bao nhiêu, mẫu nào bán chạy nhất. Ví dụ áo lụa màu kem bán gấp ba màu khác, thì mình nên dồn nội dung và quảng cáo vào mẫu đó, hay làm thêm màu tương tự?
 Thứ hai, từ những dữ liệu đó, mình lên chiến dịch: chạy quảng cáo cho mẫu đang bán chạy, làm chương trình giảm giá đúng lúc, đúng nhóm khách.
 Thứ ba, chăm sóc khách hàng. Bạn kết nối một trợ lý AI vào nơi bạn trả lời tin nhắn khách. Nó đọc hết tin nhắn và tổng hợp lại: tuần này có bao nhiêu khách phàn nàn, phàn nàn chuyện gì. Ví dụ mười khách hỏi về chuyện lụa bị nhăn, thì mình biết cần làm một video hướng dẫn giặt và ủi lụa.
@@ -72,13 +72,26 @@ Từ đó trở đi, bước bốn, năm, sáu, tức là làm nội dung, viế
 Và một việc cuối cùng: cứ khoảng ba ngày một lần, và mỗi cuối tuần, các bạn xem lại kết quả. Video nào lên top? Với thương hiệu đang làm, nội dung nào nên làm tiếp?
 Thử A/B, xem lại, báo cáo kết quả, rồi giữ lại kiểu nội dung thắng.
 
-## 6:35 – Kết
-Đó là bảy bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, tự đăng bài, và dùng dữ liệu để chạy chiến dịch, chăm sóc khách.
+## 6:35 – Bước 8: Tổng chi phí một tháng là bao nhiêu?
+Và bước cuối cùng, chắc nhiều bạn chờ nhất: làm hết bảy bước này thì một tháng tốn khoảng bao nhiêu?
+Mình tính cho trường hợp đăng khoảng ba đến năm bài mỗi ngày, chủ yếu là ảnh, thêm vài video mỗi tháng.
+Thứ nhất, Claude: khoảng 20 đô một tháng, tức là khoảng năm trăm nghìn đồng.
+Thứ hai, tạo hình qua API của Gemini hay GPT: mỗi tấm chỉ vài nghìn đồng. Một tháng khoảng một trăm đến một trăm năm mươi tấm, tầm năm đến mười đô, tức là khoảng một trăm rưỡi đến hai trăm rưỡi nghìn.
+Thứ ba, tạo video bằng AI: cái này đắt hơn, tùy độ dài và số lượng. Nếu làm vài video ngắn mỗi tháng thì khoảng mười đến ba mươi đô. Còn video quay thật thì gần như không tốn thêm, vì Claude dựng giúp mình.
+Thứ tư, công cụ quét dữ liệu như Apify: có gói miễn phí để bắt đầu. Bạn nào làm tay ở bước một thì không tốn đồng nào.
+Thứ năm, website: tên miền khoảng vài trăm nghìn một năm.
+Và nền tảng đăng bài: nếu làm cùng bên mình thì miễn phí.
+Cộng lại, một tháng khoảng ba mươi lăm đến sáu mươi đô, tức là chưa đến một triệu rưỡi đồng.
+Trong khi nếu thuê một người viết, một người thiết kế, một người dựng video, thì một tháng ít nhất cũng mười mấy triệu.
+Giá mỗi công cụ có thể thay đổi, các bạn xem trên trang của từng bên nhé. Nhưng con số chung là vậy: rẻ hơn rất nhiều lần.
+
+## 7:35 – Kết
+Đó là tám bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, tự đăng bài, dùng dữ liệu để chạy chiến dịch và chăm sóc khách, và tất cả chỉ tốn chưa đến một triệu rưỡi mỗi tháng.
 Bạn đang kẹt ở bước nào, comment cho mình biết nhé. Hẹn gặp lại các bạn trong video sau.
 
 ---
 
 ## Mô tả YouTube (nháp)
-7 bước Trang đang dùng để làm marketing cho các thương hiệu năm 2026, chi phí thấp, dành cho người không rành công nghệ.
+8 bước Trang đang dùng để làm marketing cho các thương hiệu năm 2026, chi phí thấp, dành cho người không rành công nghệ.
 Giọng đọc trong video được tạo bằng AI từ giọng của chính Trang. (Bỏ dòng này nếu dùng file ghi âm thật của chị.)
 Bunchasake – AI automation for marketing: https://bunchasake.com/vi/
