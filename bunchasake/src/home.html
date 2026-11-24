@@ -762,11 +762,20 @@ body {
 .pkg.feature .price { color: inherit; opacity: .85; }
 .contact-lead { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.5; color: var(--muted); max-width: 40ch; }
 #goi .sec-head p a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 4px; }
+
+/* FAQ (SEO/GEO) */
+.faq-list{max-width:980px;border-top:1px solid var(--line-strong)}
+.qa{border-bottom:1px solid var(--line-strong)}
+.qa summary{cursor:pointer;list-style:none;padding:26px 48px 26px 0;position:relative;font-size:clamp(19px,1.6vw,24px);font-weight:600;color:var(--ink)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--muted);transition:transform .2s}
+.qa[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.qa p{padding:0 48px 28px 0;color:var(--muted);line-height:1.65;max-width:820px}
 </style>
 
 <a class="skip" href="#growth">Bỏ qua, tới nội dung</a>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"Brand-building studio that turns founders' stories into brands.","availableLanguage":["en","vi"],"areaServed":["VN","IT"],"sameAs":["https://www.facebook.com/profile.php?id=61596245068595","https://www.instagram.com/buncha_sake/","https://www.threads.com/@buncha_sake","https://www.linkedin.com/in/morapost/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bunchasake","url":"https://bunchasake.com","description":"AI automation for marketing: social media, AI chatbot for customer messages, customer care and brand community.","availableLanguage":["en","vi"],"areaServed":["VN","IT"],"sameAs":["https://www.facebook.com/profile.php?id=61596245068595","https://www.instagram.com/buncha_sake/","https://www.threads.com/@buncha_sake","https://www.linkedin.com/in/morapost/"]}</script>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top"><span class="dot" aria-hidden="true"></span><span><span class="lr">Buncha</span>sake</span></a>
@@ -853,40 +862,42 @@ body {
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Packages</span>
       <h2>Chọn điểm <span class="it">bắt đầu.</span></h2>
-      <p>Giá theo tháng. Hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href="#lien-he">Hãy nói cho chúng tôi nhu cầu của bạn.</a></p>
+      <p>Setup trả một lần. Grow và Chain trả theo tháng, hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href="#lien-he">Hãy nói cho chúng tôi nhu cầu của bạn.</a></p>
     </div>
     <div class="pkgs">
       <article class="pkg">
-        <span class="for cap">Muốn thử trước</span>
-        <h3>Start</h3>
-        <p class="price"><b>339.000đ</b><span>/tháng</span></p>
+        <span class="for cap">Chỉ cần dựng hệ thống</span>
+        <h3>Setup</h3>
+        <p class="price"><b>Một lần</b><span>, báo giá sau buổi trò chuyện</span></p>
         <ul>
-          <li>3 bài mỗi ngày trên mỗi nền tảng</li>
-          <li>6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
-          <li>Khoảng 540 lượt đăng mỗi tháng</li>
+          <li>Dựng hệ thống Claude, AI agent cho doanh nghiệp của bạn</li>
+          <li>Dạy AI viết đúng giọng thương hiệu, nối công cụ ảnh, video và lịch đăng</li>
+          <li>Hướng dẫn đội của bạn tự vận hành</li>
         </ul>
-        <button class="choose" type="button" data-pkg="start">Chọn Start <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="setup">Chọn Setup <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg feature">
         <span class="tag cap">Phổ biến nhất</span>
-        <span class="for cap">Mạng xã hội tự động hoàn toàn</span>
-        <h3>Growth</h3>
+        <span class="for cap">Your team + Bunchasake team</span>
+        <h3>Grow</h3>
         <p class="price"><b>999.000đ</b><span>/tháng</span></p>
         <ul>
-          <li>8 bài mỗi ngày trên mỗi nền tảng</li>
+          <li>Đội của bạn và đội Bunchasake cùng vận hành</li>
+          <li>Chúng tôi theo dõi, tinh chỉnh nội dung và AI mỗi tháng</li>
           <li>6 nền tảng: Facebook, Instagram, TikTok, YouTube, LinkedIn, X</li>
-          <li>Khoảng 1.440 lượt đăng mỗi tháng, báo cáo mỗi tuần</li>
+          <li>Báo cáo mỗi tuần</li>
         </ul>
-        <button class="choose" type="button" data-pkg="growth">Chọn Growth <span aria-hidden="true">→</span></button>
+        <button class="choose" type="button" data-pkg="grow">Chọn Grow <span aria-hidden="true">→</span></button>
       </article>
       <article class="pkg">
-        <span class="for cap">Chuỗi nhiều chi nhánh</span>
+        <span class="for cap">We do all for you</span>
         <h3>Chain</h3>
-        <p class="price">Từ <b>1.500.000đ</b><span>/tháng</span></p>
+        <p class="price">Từ <b>2.500.000đ</b><span>/tháng</span></p>
         <ul>
-          <li>10 bài mỗi ngày trên mỗi nền tảng</li>
-          <li>6 nền tảng, nội dung riêng cho từng chi nhánh</li>
-          <li>Khoảng 1.800 lượt đăng mỗi tháng, báo cáo theo chi nhánh</li>
+          <li>Chúng tôi làm hết: nội dung, ảnh, video, lên lịch, đăng bài</li>
+          <li>6 nền tảng, đăng mỗi ngày</li>
+          <li>Hợp với chuỗi nhiều chi nhánh: nội dung riêng từng chi nhánh</li>
+          <li>Đội của bạn chỉ việc duyệt</li>
         </ul>
         <button class="choose" type="button" data-pkg="chain">Chọn Chain <span aria-hidden="true">→</span></button>
       </article>
@@ -894,6 +905,21 @@ body {
   </section>
 
   <!-- Dự án -->
+  <section class="sec" id="hoi-dap" aria-labelledby="faq-h">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>FAQ</span>
+      <h2 id="faq-h">Câu hỏi <span class="it">thường gặp.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="qa"><summary>Bunchasake làm gì?</summary><p>Bunchasake xây hệ thống AI automation cho marketing: tự tạo nội dung và đăng lên mạng xã hội, chatbot AI trả lời tin nhắn trên Facebook, Instagram và các nền tảng khác, chăm sóc khách cũ và xây cộng đồng thương hiệu. Đội của bạn chỉ việc duyệt.</p></details>
+      <details class="qa"><summary>Chi phí bao nhiêu?</summary><p>Có ba gói. Setup trả một lần, báo giá sau buổi trò chuyện: chúng tôi dựng hệ thống Claude và AI agent, rồi đội của bạn tự vận hành. Grow 999.000đ/tháng: đội của bạn và đội Bunchasake cùng vận hành. Chain từ 2.500.000đ/tháng: chúng tôi làm hết, đội của bạn chỉ việc duyệt. Gói theo tháng hủy bất cứ lúc nào.</p></details>
+      <details class="qa"><summary>Bunchasake đăng bài lên những nền tảng nào?</summary><p>Facebook, Instagram, TikTok, YouTube, LinkedIn và X. Cùng một nội dung được đăng lên tất cả các nền tảng bạn chọn.</p></details>
+      <details class="qa"><summary>Tôi phải làm gì?</summary><p>Bạn kể cho chúng tôi về doanh nghiệp trong một buổi trò chuyện 30 phút online, chọn gói, rồi duyệt nội dung. Phần còn lại tùy gói: tự vận hành, cùng vận hành, hoặc để chúng tôi làm hết.</p></details>
+      <details class="qa"><summary>Chatbot trả lời tin nhắn đã có chưa?</summary><p>Cỗ máy mạng xã hội đang nhận khách. Chatbot tin nhắn, chăm sóc khách hàng và cộng đồng thương hiệu sắp ra mắt.</p></details>
+      <details class="qa"><summary>Bunchasake dùng công cụ AI nào?</summary><p>Chúng tôi dùng Claude để viết nội dung theo giọng thương hiệu của bạn, các công cụ tạo ảnh và video bằng AI, và Morapost để lên lịch và đăng bài lên mạng xã hội.</p></details>
+      <details class="qa"><summary>Bunchasake làm việc ở đâu, bằng ngôn ngữ nào?</summary><p>Đội của chúng tôi làm việc giữa Việt Nam và Ý, online với khách ở mọi nơi, bằng tiếng Việt và tiếng Anh.</p></details>
+    </div>
+  </section>
   <section class="sec" id="du-an">
     <div class="sec-head">
       <span class="lab cap"><span class="dot" aria-hidden="true"></span>Khách hàng</span>
@@ -1078,6 +1104,37 @@ const EN = {
 "Cần thương hiệu bài bản": "Need a complete brand",
 "Thương hiệu đã cũ": "Brand feels dated",
 "Đầy đủ nhất": "Most complete",
+"Hỏi đáp": "FAQ",
+"Câu hỏi <span class=\"it\">thường gặp.</span>": "Questions, <span class=\"it\">answered.</span>",
+"Bunchasake làm gì?": "What does Bunchasake do?",
+"Bunchasake xây hệ thống AI automation cho marketing: tự tạo nội dung và đăng lên mạng xã hội, chatbot AI trả lời tin nhắn trên Facebook, Instagram và các nền tảng khác, chăm sóc khách cũ và xây cộng đồng thương hiệu. Đội của bạn chỉ việc duyệt.": "Bunchasake builds AI automation systems for marketing: content created and posted to social media, an AI chatbot that answers messages on Facebook, Instagram and other platforms, care for past customers and a brand community. Your team just approves.",
+"Chi phí bao nhiêu?": "How much does it cost?",
+"Có ba gói. Setup trả một lần, báo giá sau buổi trò chuyện: chúng tôi dựng hệ thống Claude và AI agent, rồi đội của bạn tự vận hành. Grow 999.000đ/tháng: đội của bạn và đội Bunchasake cùng vận hành. Chain từ 2.500.000đ/tháng: chúng tôi làm hết, đội của bạn chỉ việc duyệt. Gói theo tháng hủy bất cứ lúc nào.": "There are three packages. Setup is a one-time fee, quoted after our call: we build a Claude and AI agent system, then your team runs it. Grow is 999,000 VND a month: your team and the Bunchasake team run it together. Chain starts at 2,500,000 VND a month: we do it all and your team just approves. Monthly packages can be cancelled any time.",
+"Bunchasake đăng bài lên những nền tảng nào?": "Which platforms do you post to?",
+"Facebook, Instagram, TikTok, YouTube, LinkedIn và X. Cùng một nội dung được đăng lên tất cả các nền tảng bạn chọn.": "Facebook, Instagram, TikTok, YouTube, LinkedIn and X. The same content goes to every platform you choose.",
+"Tôi phải làm gì?": "What do I have to do?",
+"Bạn kể cho chúng tôi về doanh nghiệp trong một buổi trò chuyện 30 phút online, chọn gói, rồi duyệt nội dung. Phần còn lại tùy gói: tự vận hành, cùng vận hành, hoặc để chúng tôi làm hết.": "You tell us about your business in a 30-minute online call, choose a package, then approve the content. The rest depends on the package: run it yourself, run it together, or let us do it all.",
+"Chatbot trả lời tin nhắn đã có chưa?": "Is the messaging chatbot available yet?",
+"Cỗ máy mạng xã hội đang nhận khách. Chatbot tin nhắn, chăm sóc khách hàng và cộng đồng thương hiệu sắp ra mắt.": "The social media machine is taking clients now. The messaging chatbot, customer care and brand community machines are coming soon.",
+"Bunchasake dùng công cụ AI nào?": "Which AI tools does Bunchasake use?",
+"Chúng tôi dùng Claude để viết nội dung theo giọng thương hiệu của bạn, các công cụ tạo ảnh và video bằng AI, và Morapost để lên lịch và đăng bài lên mạng xã hội.": "We use Claude to write content in your brand voice, AI image and video tools, and Morapost to schedule and publish posts to social media.",
+"Bunchasake làm việc ở đâu, bằng ngôn ngữ nào?": "Where is Bunchasake based, and in which languages do you work?",
+"Đội của chúng tôi làm việc giữa Việt Nam và Ý, online với khách ở mọi nơi, bằng tiếng Việt và tiếng Anh.": "Our team works between Vietnam and Italy, online with clients anywhere, in Vietnamese and English.",
+"Từ <b>2.500.000đ</b><span>/tháng</span>": "From <b>2,500,000 VND</b><span>/month</span>",
+"Setup trả một lần. Grow và Chain trả theo tháng, hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href=\"#lien-he\">Hãy nói cho chúng tôi nhu cầu của bạn.</a>": "Setup is a one-time fee. Grow and Chain are monthly, cancel any time. Not sure which fits? <a href=\"#lien-he\">Tell us what you need.</a>",
+"Chỉ cần dựng hệ thống": "Just need the system built",
+"<b>Một lần</b><span>, báo giá sau buổi trò chuyện</span>": "<b>One-time</b><span>, quoted after our call</span>",
+"Dựng hệ thống Claude, AI agent cho doanh nghiệp của bạn": "We build a Claude and AI agent system for your business",
+"Dạy AI viết đúng giọng thương hiệu, nối công cụ ảnh, video và lịch đăng": "Train the AI in your brand voice, connect image, video and scheduling tools",
+"Hướng dẫn đội của bạn tự vận hành": "Train your team to run it themselves",
+"Chọn Setup <span aria-hidden=\"true\">→</span>": "Choose Setup <span aria-hidden=\"true\">→</span>",
+"Đội của bạn và đội Bunchasake cùng vận hành": "Your team and the Bunchasake team run it together",
+"Chúng tôi theo dõi, tinh chỉnh nội dung và AI mỗi tháng": "We monitor and fine-tune the content and AI every month",
+"Chọn Grow <span aria-hidden=\"true\">→</span>": "Choose Grow <span aria-hidden=\"true\">→</span>",
+"Chúng tôi làm hết: nội dung, ảnh, video, lên lịch, đăng bài": "We do it all: content, images, video, scheduling, posting",
+"6 nền tảng, đăng mỗi ngày": "6 platforms, posting every day",
+"Hợp với chuỗi nhiều chi nhánh: nội dung riêng từng chi nhánh": "Built for multi-branch chains: content for each branch",
+"Đội của bạn chỉ việc duyệt": "Your team just approves",
 "Hãy nói cho chúng tôi nhu cầu của bạn, và cùng xem chúng ta có thể làm việc cùng nhau không.": "Tell us what you need, and let’s see if we can work together.",
 "Giá theo tháng. Hủy bất cứ lúc nào. Chưa chắc gói nào hợp? <a href=\"#lien-he\">Hãy nói cho chúng tôi nhu cầu của bạn.</a>": "Monthly pricing. Cancel any time. Not sure which fits? <a href=\"#lien-he\">Tell us what you need.</a>",
 "Bunchasake xây hệ thống AI automation cho mạng xã hội, AI chatbot trả lời tin nhắn trên Facebook, Instagram và các nền tảng khác, chăm sóc khách hàng và tự tạo nội dung cho công ty của bạn. <b>Đội của bạn chỉ việc duyệt.</b>": "Bunchasake builds AI automation for your social media, AI chatbots that answer messages on Facebook, Instagram and other platforms, customer care and content that creates itself, for your company. <b>Your team just approves.</b>",
