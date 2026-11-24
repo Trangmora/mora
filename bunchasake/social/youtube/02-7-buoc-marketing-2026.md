@@ -1,10 +1,10 @@
-# Video 02 – 6 bước mình làm marketing cho thương hiệu năm 2026 (kịch bản của chị Trang, em biên tập lại · CHỜ DUYỆT)
+# Video 02 – 7 bước mình làm marketing cho thương hiệu năm 2026 (kịch bản của chị Trang, em biên tập lại · CHỜ DUYỆT)
 
-Kênh: YouTube "Trang AI" · dài ~6 phút · giọng Trang · phong cách: chị kể trực tiếp, thân mật, như đang tư vấn
+Kênh: YouTube "Trang AI" · dài ~7 phút · giọng Trang · phong cách: chị kể trực tiếp, thân mật, như đang tư vấn
 Ví dụ xuyên suốt: một thương hiệu đồ lụa
-Biên tập: giữ ý và giọng của chị, bỏ lặp, sửa từ nhận giọng sai (Apify, kết nối vào Claude, Blender…), sắp lại đúng 6 bước.
+Biên tập: giữ ý và giọng của chị, bỏ lặp, sửa từ nhận giọng sai (Apify, kết nối vào Claude, Blender…), sắp lại đúng 7 bước.
 
-Tiêu đề đề xuất: "Mình làm marketing cho thương hiệu năm 2026 như thế nào? 6 bước, chi phí rất rẻ"
+Tiêu đề đề xuất: "Mình làm marketing cho thương hiệu năm 2026 như thế nào? 7 bước, chi phí rất rẻ"
 
 ---
 
@@ -13,7 +13,7 @@ Xin chào các bạn, mình là Trang, founder của Mora AI.
 Năm 2026 rồi, các bạn đang làm marketing, bán hàng và xây thương hiệu như thế nào?
 Hôm nay mình chia sẻ cách mình, một brand builder chuyên làm thương hiệu và marketing, đang làm cho các thương hiệu khách hàng của mình, với chi phí rất rẻ.
 Video này dành cho các bạn không rành công nghệ. Bạn nào rành rồi thì có thể tua nhanh nhé.
-Mình chia làm sáu bước.
+Mình chia làm bảy bước.
 
 ## 0:30 – Bước 1: Nghiên cứu thị trường
 Bước đầu tiên và rất quan trọng: nghiên cứu thị trường, tức là tìm hiểu khách đang thích gì, cần gì.
@@ -57,21 +57,28 @@ Có video rồi, bước sáu là kết nối Claude với một nền tảng đ
 Mình dùng luôn nền tảng của mình là Morapost. Claude viết xong bài là tự lên lịch cả tháng, và tự đăng lên tất cả các mạng xã hội cho mình.
 Bạn dùng nền tảng khác cũng được. Còn nếu bạn làm cùng bên mình, mình tặng miễn phí phần này.
 
-## 5:00 – Vậy mình còn phải làm gì?
-Tóm lại: bước một nghiên cứu và bước hai dựng nền tảng, mình tự làm. Bước ba dựng bộ máy trong Claude, làm một lần.
-Từ đó trở đi, bước bốn, năm, sáu, tức là làm nội dung, viết bài, dựng video, đăng bài, Claude tự làm. Bạn chỉ cần ra lệnh. Ví dụ: "Tuần này đăng ba video vào thứ Hai, thứ Ba và thứ Năm. Làm xong báo cáo cho tôi."
+## 5:00 – Bước 7: Dùng dữ liệu để chạy chiến dịch và chăm sóc khách
+Bước cuối cùng: khi nội dung đã chạy đều, mình bắt đầu có dữ liệu. Và dữ liệu này là vàng.
+Thứ nhất, dữ liệu bán hàng. Nếu khách mua và thanh toán ngay trên website của bạn, bạn kết nối website với Claude. Claude sẽ theo dõi luôn: bán được bao nhiêu, mẫu nào bán chạy nhất. Ví dụ áo lụa màu kem bán gấp ba màu khác, thì mình nên dồn nội dung và quảng cáo vào mẫu đó, hay làm thêm màu tương tự?
+Thứ hai, từ những dữ liệu đó, mình lên chiến dịch: chạy quảng cáo cho mẫu đang bán chạy, làm chương trình giảm giá đúng lúc, đúng nhóm khách.
+Thứ ba, chăm sóc khách hàng. Bạn kết nối một trợ lý AI vào nơi bạn trả lời tin nhắn khách. Nó đọc hết tin nhắn và tổng hợp lại: tuần này có bao nhiêu khách phàn nàn, phàn nàn chuyện gì. Ví dụ mười khách hỏi về chuyện lụa bị nhăn, thì mình biết cần làm một video hướng dẫn giặt và ủi lụa.
+Phần chăm sóc khách hàng này mình sẽ làm một video riêng, chia sẻ kỹ hơn với các bạn.
 
-## 5:25 – Đừng quên: xem lại kết quả
+## 5:50 – Vậy mình còn phải làm gì?
+Tóm lại: bước một nghiên cứu và bước hai dựng nền tảng, mình tự làm. Bước ba dựng bộ máy trong Claude, làm một lần.
+Từ đó trở đi, bước bốn, năm, sáu, tức là làm nội dung, viết bài, dựng video, đăng bài, Claude tự làm. Bước bảy, Claude đọc số liệu và báo cáo, còn quyết định chạy chiến dịch nào vẫn là mình. Bạn chỉ cần ra lệnh. Ví dụ: "Tuần này đăng ba video vào thứ Hai, thứ Ba và thứ Năm. Làm xong báo cáo cho tôi."
+
+## 6:15 – Đừng quên: xem lại kết quả
 Và một việc cuối cùng: cứ khoảng ba ngày một lần, và mỗi cuối tuần, các bạn xem lại kết quả. Video nào lên top? Với thương hiệu đang làm, nội dung nào nên làm tiếp?
 Thử A/B, xem lại, báo cáo kết quả, rồi giữ lại kiểu nội dung thắng.
 
-## 5:45 – Kết
-Đó là sáu bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, và tự đăng bài.
+## 6:35 – Kết
+Đó là bảy bước mình đang làm cho các thương hiệu năm 2026: nghiên cứu, dựng nền tảng, dựng bộ máy trong Claude, lên ý tưởng và thử A/B, dựng video, tự đăng bài, và dùng dữ liệu để chạy chiến dịch, chăm sóc khách.
 Bạn đang kẹt ở bước nào, comment cho mình biết nhé. Hẹn gặp lại các bạn trong video sau.
 
 ---
 
 ## Mô tả YouTube (nháp)
-6 bước Trang đang dùng để làm marketing cho các thương hiệu năm 2026, chi phí thấp, dành cho người không rành công nghệ.
+7 bước Trang đang dùng để làm marketing cho các thương hiệu năm 2026, chi phí thấp, dành cho người không rành công nghệ.
 Giọng đọc trong video được tạo bằng AI từ giọng của chính Trang. (Bỏ dòng này nếu dùng file ghi âm thật của chị.)
 Bunchasake – AI automation for marketing: https://bunchasake.com/vi/
