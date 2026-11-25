@@ -26,4 +26,6 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
 - **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
 - **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
-- **Kênh YouTube tiếng Anh và tiếng Việt phải được kết nối trong Morapost** (Settings → Accounts). Hiện chỉ có kênh "Trang AI".
+- **Kênh YouTube tiếng Anh và tiếng Việt phải được kết nối trong Morapost** (Settings → Accounts).
+  - Với key ngày 25/11/2026, đã có kênh YouTube "Asian Myths & Culture" (`UC5u1YF6TmvZTKCKlEU6K9-w`), Instagram asian_myths và kênh "Ridiculous Case".
+  - Kênh tiếng Việt chưa được kết nối.
