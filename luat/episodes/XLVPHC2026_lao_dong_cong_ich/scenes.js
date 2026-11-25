@@ -8,7 +8,7 @@ function sA(t){
  stamp('TỪ 01/01/2028',1050,128,P(.35,.4),{size:30,rot:.05});
  txt('Bị phạt hành chính',520,232,{size:54,a:P(g('op1')+1.3,.2)});txt('đến 5 triệu đồng',520,302,{size:54,col:RED,a:P(g('k_5tr')-.1,.2)});
  underline(520,320,tw('đến 5 triệu đồng',54),g('k_5tr')+.2,.4);
- box(520,368,660,196,g('k_cv'),{lw:6},a=>{txt('CÓ THỂ LÀM CÔNG VIỆC',34,52,{size:23,col:GREY,ls:3});txt('PHỤC VỤ CỘNG ĐỒNG',30,118,{size:54,col:RED});txt('thay cho việc nộp tiền',34,164,{size:28,w:600,a:P(g('k_thay'),.2)})});
+ box(520,368,660,196,g('k_cv'),{lw:6},a=>{txt('CÓ THỂ LÀM CÔNG VIỆC',34,52,{size:23,col:GREY,ls:3});txt('PHỤC VỤ CỘNG ĐỒNG',32,116,{size:50,col:RED});txt('thay cho việc nộp tiền',34,164,{size:28,w:600,a:P(g('k_thay'),.2)})});
  source(SRC_L,P(1,.4))}
 function sM(t){const t0=g('op2');
  box(300,100,680,96,t0+.1,{lw:6},a=>{txt('PHỤC VỤ CỘNG ĐỒNG THAY PHẠT TIỀN',340,62,{size:32,align:'center'})});
@@ -29,9 +29,9 @@ function sH(t){const t0=g('s2');title(null,'HIỆN NAY: BỊ PHẠT TIỀN THÌ 
  const y=196,h=320;
  box(50,y,350,h,g('k_h1')-.2,{col:GREY},a=>{txt('BƯỚC 1',175,54,{size:21,col:GREY,align:'center',ls:2});icon('paper',115,66,120,g('k_h1'),.5);txt('Nhận quyết định',175,236,{size:30,align:'center'});txt('xử phạt',175,276,{size:30,align:'center'})});
  arrow(408,y+h/2,460,y+h/2,g('k_h2')-.5,.2);
- box(468,y,350,h,g('k_h2')-.3,{},a=>{txt('THỜI HẠN NỘP TIỀN',175,54,{size:21,col:GREY,align:'center',ls:2});txt('10 ngày',175,170,{size:84,align:'center'});txt('kể từ ngày nhận',175,228,{size:24,w:600,align:'center'});txt('quyết định xử phạt',175,262,{size:24,w:600,align:'center'})});
+ box(468,y,350,h,g('k_h2')-.3,{},a=>{txt('THỜI HẠN NỘP TIỀN',175,54,{size:21,col:GREY,align:'center',ls:2});txt('10 ngày',175,168,{size:76,align:'center'});txt('kể từ ngày nhận',175,228,{size:24,w:600,align:'center'});txt('quyết định xử phạt',175,262,{size:24,w:600,align:'center'})});
  arrow(826,y+h/2,878,y+h/2,g('k_h3')-.3,.2);
- box(886,y,350,h,g('k_h3'),{lw:6},a=>{txt('NỘP CHẬM',175,54,{size:21,col:RED,align:'center',ls:2});txt('+0,05%',175,170,{size:80,col:RED,align:'center',a:P(g('k_h4')-.1,.2)});txt('mỗi ngày, trên số tiền',175,228,{size:24,w:600,align:'center',a:P(g('k_h4')-.1,.2)});txt('chưa nộp',175,262,{size:24,w:600,align:'center',a:P(g('k_h4')+.9,.2)})});
+ box(886,y,350,h,g('k_h3'),{lw:6},a=>{txt('NỘP CHẬM',175,54,{size:21,col:RED,align:'center',ls:2});txt('+0,05%',175,168,{size:70,col:RED,align:'center',a:P(g('k_h4')-.1,.2)});txt('mỗi ngày, trên số tiền',175,228,{size:24,w:600,align:'center',a:P(g('k_h4')-.1,.2)});txt('chưa nộp',175,262,{size:24,w:600,align:'center',a:P(g('k_h4')+.9,.2)})});
  source('Nguồn: Điều 78 Luật Xử lý vi phạm hành chính hiện hành (theo LuatVietnam, Thư viện Pháp luật, Tạp chí Luật sư Việt Nam).',1)}
 function sN(t){const t0=g('s3');title(null,'LUẬT MỚI: THÊM MỘT LỰA CHỌN',t0);
  box(60,216,420,270,t0+.3,{col:GREY},a=>{txt('HÌNH THỨC XỬ PHẠT',210,56,{size:21,col:GREY,align:'center',ls:2});txt('Phạt tiền',210,160,{size:62,align:'center'});txt('đến 5 triệu đồng',210,212,{size:26,w:600,col:GREY,align:'center'})});
