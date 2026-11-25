@@ -170,5 +170,145 @@
  "clip_A5": {
   "file": "clips/clip_A5.mp4",
   "desc": "Wan 2.2 clip of A5 (Confucius episode)"
+ },
+ "dg_A2b": {
+  "file": "images/dg_A2b.jpg",
+  "desc": "Laozi episode scene A2b (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A15w": {
+  "file": "images/dg_A15w.jpg",
+  "desc": "Laozi episode scene A15w (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A7": {
+  "file": "images/dg_A7.jpg",
+  "desc": "Laozi episode scene A7 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_OPBG": {
+  "file": "images/dg_OPBG.jpg",
+  "desc": "Laozi episode scene OPBG (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A14w": {
+  "file": "images/dg_A14w.jpg",
+  "desc": "Laozi episode scene A14w (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A12": {
+  "file": "images/dg_A12.jpg",
+  "desc": "Laozi episode scene A12 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A8c": {
+  "file": "images/dg_A8c.jpg",
+  "desc": "Laozi episode scene A8c (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A3": {
+  "file": "images/dg_A3.jpg",
+  "desc": "Laozi episode scene A3 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A11n": {
+  "file": "images/dg_A11n.jpg",
+  "desc": "Laozi episode scene A11n (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A1b": {
+  "file": "images/dg_A1b.jpg",
+  "desc": "Laozi episode scene A1b (episodes/03-dao-giao/script.md)"
+ },
+ "dg_SIL": {
+  "file": "images/dg_SIL.jpg",
+  "desc": "Laozi episode scene SIL (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A13": {
+  "file": "images/dg_A13.jpg",
+  "desc": "Laozi episode scene A13 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A17w": {
+  "file": "images/dg_A17w.jpg",
+  "desc": "Laozi episode scene A17w (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A1": {
+  "file": "images/dg_A1.jpg",
+  "desc": "Laozi episode scene A1 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A4": {
+  "file": "images/dg_A4.jpg",
+  "desc": "Laozi episode scene A4 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A8": {
+  "file": "images/dg_A8.jpg",
+  "desc": "Laozi episode scene A8 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A6": {
+  "file": "images/dg_A6.jpg",
+  "desc": "Laozi episode scene A6 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A2": {
+  "file": "images/dg_A2.jpg",
+  "desc": "Laozi episode scene A2 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A14": {
+  "file": "images/dg_A14.jpg",
+  "desc": "Laozi episode scene A14 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A5": {
+  "file": "images/dg_A5.jpg",
+  "desc": "Laozi episode scene A5 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A15": {
+  "file": "images/dg_A15.jpg",
+  "desc": "Laozi episode scene A15 (episodes/03-dao-giao/script.md)"
+ },
+ "dg_A8b": {
+  "file": "images/dg_A8b.jpg",
+  "desc": "Laozi episode scene A8b (episodes/03-dao-giao/script.md)"
+ },
+ "dg_clip_A13": {
+  "file": "clips/dg_clip_A13.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A2": {
+  "file": "clips/dg_clip_A2.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A3": {
+  "file": "clips/dg_clip_A3.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A15w": {
+  "file": "clips/dg_clip_A15w.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A6": {
+  "file": "clips/dg_clip_A6.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A8c": {
+  "file": "clips/dg_clip_A8c.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "dg_clip_A12": {
+  "file": "clips/dg_clip_A12.mp4",
+  "desc": "Laozi episode clip"
+ },
+ "clip_A13": {
+  "file": "clips/clip_A13.mp4",
+  "desc": "Confucius teachings clip"
+ },
+ "clip_A12a": {
+  "file": "clips/clip_A12a.mp4",
+  "desc": "Confucius teachings clip"
+ },
+ "clip_A12e": {
+  "file": "clips/clip_A12e.mp4",
+  "desc": "Confucius teachings clip"
+ },
+ "clip_A12c": {
+  "file": "clips/clip_A12c.mp4",
+  "desc": "Confucius teachings clip"
+ },
+ "clip_A12d": {
+  "file": "clips/clip_A12d.mp4",
+  "desc": "Confucius teachings clip"
+ },
+ "clip_A12b": {
+  "file": "clips/clip_A12b.mp4",
+  "desc": "Confucius teachings clip"
  }
 }
