@@ -34,4 +34,14 @@ Tiếng Việt 11:30 giờ VN (YouTube Shorts Ridiculous Case, Facebook Mora Med
 | 29/11 | Tia nước trên đầu thần Shiva | đã hẹn giờ |
 | 30/11 | Bị gọi là chó lạc nhà | đã hẹn giờ |
 | 01/12 | Vị thần của sĩ tử | đã hẹn giờ |
-| 02/12 trở đi | 9 video đợt 2 (sumo, torii, Ise, dữ hơn hổ, đốt sách, như con rồng, biến mất, Kumbh Mela, quyền của sông) | đang dựng |
+| 02/12 | Vì sao sumo tung muối? | đã hẹn giờ |
+| 03/12 | Dữ hơn cả hổ | đã hẹn giờ |
+| 04/12 | Người Khổng Tử không hiểu nổi | đã hẹn giờ |
+| 05/12 | Cuộc tụ họp lớn nhất hành tinh (Kumbh Mela) | đã hẹn giờ |
+| 06/12 | Bí mật cổng torii | đã hẹn giờ; TikTok và X chờ Buffer |
+| 07/12 | Ngày sách bị đốt | đã hẹn giờ; TikTok và X chờ Buffer |
+| 08/12 | Viết xong rồi biến mất (Lão Tử) | đã hẹn giờ; TikTok và X chờ Buffer |
+| 09/12 | Dòng sông có quyền như người? | đã hẹn giờ; TikTok và X chờ Buffer |
+| 10/12 | Ngôi đền 20 năm dựng lại (Ise) | đã hẹn giờ; TikTok và X chờ Buffer |
+
+Buffer gói miễn phí chỉ giữ 10 bài hẹn giờ mỗi kênh. 10 bài TikTok và X của 06–10/12 nằm trong `pipeline/publish/buffer_pending.json`; đã đặt nhắc việc ngày 01/12 và 05/12 để chạy `buffer_topup.py`.
