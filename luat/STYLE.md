@@ -14,7 +14,7 @@
 - Mọi hình đều vẽ bằng code (`vox/vox.html` là mẫu đầu tiên), chi phí hình $0.
 
 ## Nội dung
-- Dài 1–2 phút. Mỗi video một ý chính: luật gì, thay đổi gì, ảnh hưởng ai, từ khi nào.
+- Dài tối thiểu khoảng 2 phút (xem cập nhật bên dưới). Mỗi video một vấn đề: luật gì, thay đổi gì, ảnh hưởng ai, từ khi nào.
 - Câu ngắn, dễ hiểu, như nói chuyện.
 - **Bắt buộc trên màn hình:** số hiệu văn bản, ngày thông qua, ngày có hiệu lực, nguồn (góc dưới).
 - Kết video luôn có câu: "Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý."
@@ -25,8 +25,10 @@
 - **Trình bày kiểu sơ đồ:** ô nối ô bằng mũi tên, đi từng ô một cho tới khi ra cả sơ đồ. **Màu chủ đạo là đỏ:** viền ô đỏ, chữ đen, nền màu giấy.
 - **Bỏ bàn tay, chỉ giữ cây bút dạ** vẽ mũi tên và gạch chân.
 - **Dùng ảnh thật từ Unsplash** (ghi tác giả trong `sources.md`); không dùng ảnh rõ mặt người gắn với hành vi vi phạm. Vẫn không dùng ảnh báo chí.
-- **Tiết tấu nhanh:** giọng đọc nhanh hơn 15%, khoảng nghỉ giữa các đoạn 0,3–0,5 giây, không để quá 2 giây mà không có gì mới hiện ra.
-- **Hơi hài cho dễ hiểu:** một hai câu đùa nhẹ mỗi video; không đùa về con số, không giễu cơ quan nhà nước.
+- **Tiết tấu nhanh:** giọng đọc nhanh hơn 15%, khoảng nghỉ giữa các đoạn 0,3–0,5 giây, hình mới hiện ra đều theo lời đọc.
+- **Nghiêm túc, không đùa** (chủ kênh đổi ý sau khi xem bản thử có câu đùa): giọng trung lập, giải thích cho dễ hiểu.
+- **Một video một vấn đề.** Ví dụ tội làm nhục người khác là một video riêng, không gộp với tội khác của cùng bộ luật.
+- **Dài tối thiểu khoảng 2 phút**, giải thích kỹ luật nói gì: văn bản nào, khái niệm là gì, quy định từng ý, so với trước, áp dụng từ khi nào, bạn nên làm gì.
 - **Luôn có phần "Bạn nên làm gì?"** (ô viền xanh lá, dấu tích) trước câu lưu ý cuối video.
 - **Giọng đọc:** giọng nam, mã ElevenLabs `ywBZEqUhld86Jeajq94o` (chủ kênh gửi), model eleven_v3.
-- Khung dựng: `luat/pipeline/vox/` (xem README ở đó). Tập mẫu: `luat/episodes/BLHS2026_diem_moi/`.
+- Khung dựng: `luat/pipeline/vox/` (xem README ở đó). Tập mẫu: `luat/episodes/BLHS2026_lam_nhuc/`.

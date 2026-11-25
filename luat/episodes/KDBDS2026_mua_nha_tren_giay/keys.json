@@ -1,27 +1,19 @@
 {
-"k_tien": [
+"k_a1": [
 "op1",
-"mà tiền"
+"chủ đầu tư"
 ],
-"k_bay": [
+"k_a2": [
 "op1",
-"đã bay"
+"không được thu"
 ],
-"k_tu": [
+"k_a3": [
 "op1",
-"Từ ngày"
-],
-"k_thu": [
-"op1",
-"thu tiền kiểu"
-],
-"k_cam": [
-"op1",
-"bị cấm"
+"khi bất động sản"
 ],
 "k_mua": [
 "op2",
-"Mua nhà"
+"Nếu bạn"
 ],
 "k_ba": [
 "op2",
@@ -55,21 +47,17 @@
 "s2",
 "chủ đầu tư"
 ],
+"k_b2b": [
+"s2",
+"của người mua"
+],
 "k_b3": [
 "s2",
 "dưới bất kỳ"
 ],
 "k_b4": [
 "s2",
-"Gọi là"
-],
-"k_b5": [
-"s2",
-"hay đặt chỗ"
-],
-"k_b6": [
-"s2",
-"thì cũng vậy"
+"Đây là điểm mới"
 ],
 "k_c0": [
 "s3",
@@ -86,10 +74,6 @@
 "k_c1b": [
 "s3",
 "và chỉ khi"
-],
-"k_c1c": [
-"s3",
-"Mức này"
 ],
 "k_c2": [
 "s4",
@@ -121,19 +105,19 @@
 ],
 "k_c5a": [
 "s5",
-"Sổ về"
+"người mua trả"
+],
+"k_c5b": [
+"s5",
+"Các mốc"
 ],
 "k_e1": [
 "s6",
 "Thứ nhất"
 ],
-"k_src": [
-"out",
-"Hãy kiểm tra"
-],
 "k_e1b": [
 "s6",
-"dù được"
+"khi dự án"
 ],
 "k_e2b": [
 "s7",
@@ -142,5 +126,13 @@
 "k_e3b": [
 "s8",
 "và giữ lại"
+],
+"k_src": [
+"out",
+"Hãy kiểm tra"
+],
+"k_e3c": [
+"s8",
+"cho tới"
 ]
 }

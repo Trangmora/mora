@@ -1,6 +1,6 @@
 # Khung dựng video luật (kiểu sơ đồ)
 
-Mỗi video là một chuỗi "slide sơ đồ": ô viền đỏ nối nhau bằng mũi tên bút dạ, ảnh thật, phụ đề cháy chữ. Toàn bộ vẽ bằng code (canvas), xuất 1080p 30 hình/giây. Tập mẫu: `luat/episodes/BLHS2026_diem_moi/`.
+Mỗi video là một chuỗi "slide sơ đồ": ô viền đỏ nối nhau bằng mũi tên bút dạ, ảnh thật, phụ đề cháy chữ. Toàn bộ vẽ bằng code (canvas), xuất 1080p 30 hình/giây. Tập mẫu: `luat/episodes/BLHS2026_lam_nhuc/`.
 
 ## Một tập gồm
 - `script.json`: `{"vi": [["id_đoạn", "lời đọc"], ...]}`. Số viết bằng chữ để giọng đọc đúng. **Đoạn cuối đặt id `out`, không đặt `end`** (trùng khóa tổng thời lượng).
@@ -36,6 +36,7 @@ Toạ độ 1280x720. Thời điểm tính bằng `g('tên_mốc')` (giây trong
 - `stamp(chữ,x,y,P(t0,.35),{size,rot,col})`: con dấu. `hl(...)`: tô bút dạ vàng. `badge(n,cx,cy,t0)`: số trong vòng tròn đỏ.
 - `txt(chữ,x,y,{size,w,col,align,a})`, `tw(chữ,size)` (đo bề rộng), `P(t0,dur)` (0→1 từ lúc t0).
 - `source(chữ)`: dòng nguồn góc dưới. Phụ đề và dải tiêu đề trên cùng tự vẽ.
+- Cảnh dùng chung: `vxTodo(t0, [[t, dòng1, dòng2], ...])` (cảnh "Bạn nên làm gì?"), `vxDisclaimer(t0, dòng_văn_bản, dòng_số_hiệu, t_nguồn, chữ_nguồn)` (cảnh lưu ý cuối).
 - Không có bàn tay, chỉ có cây bút. Tắt bút: `defineEpisode({pen:false})`.
 
 ## Lưu ý

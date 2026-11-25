@@ -2,27 +2,26 @@
 
 - **Văn bản:** Luật sửa đổi, bổ sung một số điều của Bộ luật Lao động, Luật Lưu trữ, Luật Bình đẳng giới, Luật Hoạt động chữ thập đỏ, Luật Việc làm. **Số hiệu: chưa công bố** (tính đến 25/11/2026).
 - **Thông qua:** sáng 21/11/2026 (Kỳ họp thứ 2, Quốc hội khóa XVI). **Hiệu lực:** 01/3/2027.
-- **Video:** `luat/videos/BLLD2026_hai_ngay_nghi_le_vi.mp4`, khoảng 1 phút 14 giây, giọng `ywBZEqUhld86Jeajq94o` (đọc nhanh 1,15 lần), chưa có nhạc.
+- **Video:** `luat/videos/BLLD2026_hai_ngay_nghi_le_vi.mp4`, khoảng 1 phút 19 giây, giọng `ywBZEqUhld86Jeajq94o` (đọc nhanh 1,15 lần), chưa có nhạc.
+- **Giọng điệu:** nghiêm túc, trung lập, không câu đùa (chủ kênh chốt 25/11/2026). Mỗi video một vấn đề: ở đây là 2 ngày nghỉ lễ mới.
 - **Chưa đọc được bài gốc hay văn bản luật**: mọi con số lấy từ kết quả tìm kiếm (xem `luat/research/2026-11_thue_kinh_doanh.md`, phần "LUẬT 2"). Chủ kênh cần đối chiếu văn bản chính thức trước khi đăng.
 
 ## Lời đọc
 
 | Đoạn | Lời |
 |---|---|
-| op1 | Tin vui cho hội đếm ngày nghỉ: Bộ luật Lao động vừa có thêm hai ngày nghỉ lễ, hưởng nguyên lương. |
+| op1 | Bộ luật Lao động vừa được bổ sung hai ngày nghỉ lễ, hưởng nguyên lương. Từ năm 2027, người lao động được nghỉ 13 ngày lễ, Tết mỗi năm, thay vì 11 ngày. |
 | op2 | Có ba điều bạn cần biết. |
 | s1 | Một. Nghỉ ngày nào? Ngày 27 tháng 7, Ngày Thương binh, liệt sĩ. Và ngày 24 tháng 11, Ngày Văn hóa Việt Nam. |
-| s2 | Hai. Tổng số ngày nghỉ lễ, Tết hưởng nguyên lương, tăng từ 11 lên 13 ngày mỗi năm. Nghỉ mà vẫn có lương, không cần xin phép. |
-| s3 | Ba. Khi nào áp dụng? Quốc hội thông qua luật ngày 21 tháng 11 năm 2026, với 461 trên 463 phiếu tán thành. Hiệu lực từ ngày 1 tháng 3 năm 2027. |
-| s4 | Riêng ngày 24 tháng 11, đã được nghỉ từ năm 2026. Ngày 27 tháng 7, bắt đầu nghỉ từ năm 2027. |
-| s5 | Vậy bạn nên làm gì? Thứ nhất: ghi ngay hai ngày này vào lịch. Hạn nộp báo cáo còn nhớ, thì ngày nghỉ càng phải nhớ. |
-| s6 | Thứ hai: phải đi làm ngày lễ, hãy hỏi rõ lương làm thêm, theo Bộ luật Lao động. |
+| s2 | Hai. Ai được hưởng? Người lao động được nghỉ làm việc, và hưởng nguyên lương trong hai ngày này. Tổng số ngày nghỉ lễ, Tết hưởng lương, tăng từ 11 lên 13 ngày mỗi năm. |
+| s3 | Ba. Khi nào áp dụng? Quốc hội thông qua luật ngày 21 tháng 11 năm 2026, với 461 trên 463 phiếu tán thành. Luật có hiệu lực từ ngày 1 tháng 3 năm 2027. |
+| s4 | Riêng ngày 24 tháng 11, đã được nghỉ từ năm 2026, theo một nghị quyết của Quốc hội. Ngày 27 tháng 7, bắt đầu nghỉ từ năm 2027. |
+| s5 | Vậy bạn nên làm gì? Thứ nhất: ghi hai ngày này vào lịch làm việc. |
+| s6 | Thứ hai: nếu phải đi làm ngày lễ, hãy hỏi rõ lương làm thêm, theo Bộ luật Lao động. |
 | s7 | Thứ ba: xem thông báo lịch nghỉ chính thức mỗi năm. Có vướng mắc, hãy hỏi công đoàn, hoặc cơ quan lao động địa phương. |
 | out | Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý. Hãy kiểm tra văn bản gốc. |
 
 (Trong `script.json` các con số viết bằng chữ để giọng đọc đúng. Đã kiểm bằng ElevenLabs scribe_v1: mọi con số và ngày tháng đọc đúng.)
-
-Câu đùa: "hội đếm ngày nghỉ" (mở đầu), "Hạn nộp báo cáo còn nhớ, thì ngày nghỉ càng phải nhớ" (phần nên làm gì). Không đùa ở phần Ngày Thương binh, liệt sĩ.
 
 ## Con số nào lấy từ nguồn nào
 
@@ -39,7 +38,8 @@ Câu đùa: "hội đếm ngày nghỉ" (mở đầu), "Hạn nộp báo cáo c�
 
 ## Nội dung trên hình không phải con số của luật mới
 
-- "Vẫn có lương", "Không cần xin phép": cách diễn giải thông thường của "nghỉ lễ hưởng nguyên lương", không trích điều khoản.
+- "Người lao động được nghỉ làm việc", "Hưởng nguyên lương": diễn đạt lại nội dung báo đưa ("người lao động được bổ sung hai ngày nghỉ lễ, hưởng nguyên lương"), không trích điều khoản. Video không nêu nhóm đối tượng cụ thể nào khác.
 - "Hỏi rõ lương làm thêm theo Bộ luật Lao động": cố ý **không nêu tỷ lệ** (300% hay 400% chưa đối chiếu).
 - Tên ngày 27/7: báo cáo ghi đầy đủ là "Ngày Tổ quốc tri ân – Ngày Thương binh, liệt sĩ"; video dùng tên quen thuộc "Ngày Thương binh, liệt sĩ". Nên đối chiếu tên gọi chính thức trong văn bản luật.
+- Con dấu "ĐÃ THÔNG QUA", "TỪ NĂM 2027" trên hình là nhãn thông tin, không phải câu đùa.
 - Phần "Bạn nên làm gì" là gợi ý chung, không phải tư vấn pháp lý.

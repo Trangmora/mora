@@ -1,19 +1,15 @@
 {
-"k_ne": [
+"k_lai": [
 "op1",
-"né camera"
+"người lái ô tô"
 ],
-"k_che2": [
+"k_them": [
 "op1",
-"Che được biển"
+"có thêm"
 ],
-"k_vi": [
+"k_cao": [
 "op1",
-"nhưng không che được ví"
-],
-"k_oto": [
-"op1",
-"ô tô bị phạt"
+"Mức cao nhất"
 ],
 "k_26": [
 "op1",
@@ -21,15 +17,15 @@
 ],
 "k_nd": [
 "op2",
-"Nghị định"
+"Nghị định hai trăm"
 ],
-"k_apd": [
+"k_sua": [
 "op2",
-"áp dụng"
+"sửa đổi"
 ],
 "k_ba": [
 "op2",
-"Có ba lỗi"
+"Có ba điểm"
 ],
 "k_a1": [
 "s1",
@@ -41,7 +37,7 @@
 ],
 "k_a2": [
 "s1",
-"Ô tô"
+"Với ô tô"
 ],
 "k_a3": [
 "s1",
@@ -65,11 +61,7 @@
 ],
 "k_b3": [
 "s2",
-"trừ hai"
-],
-"k_b4": [
-"s2",
-"Ẩu một giây"
+"và trừ"
 ],
 "k_c0a": [
 "s3",
@@ -87,13 +79,21 @@
 "s3",
 "phạt cảnh cáo"
 ],
+"k_c3b": [
+"s3",
+"thay cho"
+],
 "k_c4b": [
 "s4",
-"ngồi hàng ghế trước"
+"cùng hàng ghế"
 ],
 "k_c5": [
 "s4",
-"vẫn phạt"
+"vẫn bị phạt"
+],
+"k_c6": [
+"s4",
+"tám trăm"
 ],
 "k_d0": [
 "s5",
@@ -101,27 +101,15 @@
 ],
 "k_d1": [
 "s5",
-"Mức phạt không đổi"
-],
-"k_d2": [
-"s5",
-"Nghĩa là"
+"không thay đổi"
 ],
 "k_e1": [
 "s6",
 "Thứ nhất"
 ],
-"k_src": [
-"out",
-"Hãy kiểm tra"
-],
-"k_c6": [
-"s4",
-"tám trăm"
-],
 "k_e1b": [
 "s6",
-"Đừng che"
+"không che"
 ],
 "k_e2a": [
 "s7",
@@ -138,5 +126,21 @@
 "k_e4b": [
 "s9",
 "của Cục"
+],
+"k_src": [
+"out",
+"Hãy kiểm tra"
+],
+"k_e1a": [
+"s6",
+"sạch và rõ"
+],
+"k_e3a": [
+"s8",
+"hàng ghế sau"
+],
+"k_e4a": [
+"s9",
+"trên trang"
 ]
 }

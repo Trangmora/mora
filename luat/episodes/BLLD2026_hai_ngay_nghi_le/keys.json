@@ -1,8 +1,4 @@
 {
-"k_bl": [
-"op1",
-"Bộ luật Lao động"
-],
 "k_2": [
 "op1",
 "hai ngày nghỉ lễ"
@@ -11,9 +7,17 @@
 "op1",
 "hưởng nguyên lương"
 ],
-"k_ba": [
-"op2",
-"Có ba"
+"k_2027": [
+"op1",
+"Từ năm 2027"
+],
+"k_13a": [
+"op1",
+"mười ba ngày"
+],
+"k_11a": [
+"op1",
+"thay vì"
 ],
 "k_277": [
 "s1",
@@ -31,6 +35,14 @@
 "s1",
 "Ngày Văn hóa"
 ],
+"k_nld": [
+"s2",
+"Người lao động"
+],
+"k_hnl": [
+"s2",
+"và hưởng nguyên lương"
+],
 "k_tong": [
 "s2",
 "Tổng số"
@@ -42,14 +54,6 @@
 "k_13": [
 "s2",
 "lên mười ba"
-],
-"k_nghi": [
-"s2",
-"Nghỉ mà"
-],
-"k_xin": [
-"s2",
-"không cần xin phép"
 ],
 "k_qh": [
 "s3",
@@ -63,13 +67,25 @@
 "s3",
 "bốn trăm sáu mươi mốt"
 ],
+"k_463": [
+"s3",
+"trên bốn trăm"
+],
+"k_tt": [
+"s3",
+"phiếu tán thành"
+],
 "k_hl": [
 "s3",
-"Hiệu lực"
+"Luật có hiệu lực"
 ],
 "k_r24b": [
 "s4",
 "đã được nghỉ"
+],
+"k_r24c": [
+"s4",
+"theo một nghị quyết"
 ],
 "k_r27": [
 "s4",
@@ -83,33 +99,13 @@
 "s5",
 "Thứ nhất"
 ],
-"k_e1j": [
+"k_e1b": [
 "s5",
-"Hạn nộp"
+"vào lịch"
 ],
 "k_e2b": [
 "s6",
 "hãy hỏi"
-],
-"k_e3b": [
-"s7",
-"Có vướng"
-],
-"k_src": [
-"out",
-"Hãy kiểm tra"
-],
-"k_463": [
-"s3",
-"trên bốn trăm"
-],
-"k_tt": [
-"s3",
-"phiếu tán thành"
-],
-"k_e1k": [
-"s5",
-"thì ngày nghỉ"
 ],
 "k_e2c": [
 "s6",
@@ -119,8 +115,32 @@
 "s7",
 "chính thức"
 ],
+"k_e3b": [
+"s7",
+"Có vướng"
+],
 "k_e3c": [
 "s7",
 "hoặc cơ quan"
+],
+"k_src": [
+"out",
+"Hãy kiểm tra"
+],
+"k_nld0": [
+"op1",
+"người lao động"
+],
+"k_hl2": [
+"s3",
+"ngày một tháng ba"
+],
+"k_r24y": [
+"s4",
+"từ năm 2026"
+],
+"k_r27y": [
+"s4",
+"từ năm 2027"
 ]
 }

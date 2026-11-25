@@ -93,6 +93,16 @@ function source(s,a=1){txt(s,36,706,{size:14,w:600,col:'#6b6458',a})}
 function title(n,s,t0,o={}){const px=o.x??60,py=o.y??118,size=o.size??44;let tx=px;if(n!=null){badge(n,px+26,py-16,t0,26);tx=px+68}
  txt(s,tx,py,{size,a:P(t0+.05,.25)});underline(tx,py+12,tw(s,size),t0+.25,.35,{hand:o.hand});if(o.sub)txt(o.sub,tx,py+46,{size:19,w:600,col:GREY,a:P(t0+.3,.3)})}
 function subtitle(t){const c=SUBS.find(c=>t>=D+c.t0&&t<D+c.t1);if(!c)return;const m=tw(c.text,30,600),bw=m+60,bh=56,bx=640-bw/2,by=616;x.save();x.fillStyle='rgba(40,40,44,.94)';rr(bx,by,bw,bh,8);x.fill();x.restore();txt(c.text,640,by+38,{size:30,w:600,col:'#fff',align:'center'})}
+// ---- cảnh dùng chung (tên có tiền tố vx để không trùng hàm riêng của từng tập) ----
+// vxTodo(t0, [[t, dòng1, dòng2], ...], ghi_chú): cảnh "BẠN NÊN LÀM GÌ?" với các ô viền xanh và dấu tích.
+function vxTodo(t0,items,note='Gợi ý chung, không thay cho tư vấn pháp lý.'){const s='BẠN NÊN LÀM GÌ?',m=tw(s,48);txt(s,640,122,{size:48,col:GREEN,align:'center',a:P(t0,.2)});underline(640-m/2,136,m,t0+.25,.35,{col:GREEN});
+ const n=items.length,h=n>3?96:122,gap=n>3?12:16;items.forEach(([ti,a1,a2],i)=>{const y=172+i*(h+gap);box(170,y,940,h,ti,{col:GREEN},a=>{check(36,h/2-25,50,ti+.25,.25);if(a2){txt(a1,130,h/2-8,{size:n>3?26:30});txt(a2,130,h/2+(n>3?24:32),{size:n>3?26:30})}else txt(a1,130,h/2+11,{size:30})})});
+ source(note,1)}
+// vxDisclaimer(t0, dòng_văn_bản, dòng_số_hiệu, t_nguồn, chữ_nguồn): cảnh lưu ý cuối video.
+function vxDisclaimer(t0,line1,line2,tsrc,src){box(240,140,800,380,t0,{lw:6},a=>{txt('LƯU Ý',400,70,{size:30,col:RED,align:'center',ls:4});
+ txt('Nội dung chỉ mang tính thông tin,',400,138,{size:36,w:600,f:'LoraV',align:'center'});txt('không phải tư vấn pháp lý.',400,186,{size:36,w:600,f:'LoraV',align:'center'});
+ txt(line1,400,250,{size:19,w:600,align:'center'});if(line2)txt(line2,400,280,{size:19,w:600,col:GREY,align:'center'});
+ txt('Kiểm tra văn bản gốc: vbpl.vn · thuvienphapluat.vn',400,330,{size:22,w:600,col:BLUE,align:'center',a:P(tsrc,.3)})});source(src,1)}
 window.defineEpisode=e=>{EP=e};
 window.setK=k=>{K=k.K;SUBS=k.SUBS};
 window.ready=(async()=>{await document.fonts.load('800 40px BVP','ĐƯ');await document.fonts.load('600 40px BVP','ĐƯ');await document.fonts.load('600 40px LoraV','Đư')})();

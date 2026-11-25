@@ -1,12 +1,178 @@
-{"op1":[["Che biển số","Che biển số để né camera?"],["Che được","Che được biển, nhưng không che được ví:"],["ô tô bị","ô tô bị phạt tới 26 triệu đồng."]],
-"op2":[["Đó là","Đó là quy định của Nghị định 238,"],["áp dụng","áp dụng từ ngày 15/8/2026."],["Có ba","Có 3 lỗi bạn cần biết."]],
-"s1":[["Một","Một. Dùng vật liệu, hoặc thiết bị,"],["làm camera","làm camera khó nhận diện biển số."],["Ô tô","Ô tô: phạt từ 20 đến 26 triệu đồng,"],["và trừ","và trừ 6 điểm bằng lái."]],
-"s2":[["Hai","Hai. Chuyển làn trên cao tốc"],["mà không","mà không giữ khoảng cách an toàn:"],["phạt từ","phạt từ 4 đến 6 triệu đồng, trừ 2 điểm."],["Ẩu","Ẩu một giây, mất cả tháng tiền xăng."]],
-"s3":[["Ba","Ba. Ô tô chở trẻ dưới 10 tuổi,"],["và cao","và cao dưới 1,35 m,"],["mà không","mà không có ghế an toàn phù hợp:"],["phạt cảnh cáo","phạt cảnh cáo."]],
-"s4":[["Nhưng","Nhưng cho bé ngồi hàng ghế trước,"],["vẫn phạt","vẫn phạt từ 800.000 đến 1 triệu đồng."]],
-"s5":[["Còn","Còn nồng độ cồn và vượt đèn đỏ?"],["Mức phạt","Mức phạt không đổi."],["Nghĩa là","Nghĩa là, vẫn rất đau ví."]],
-"s6":[["Vậy","Vậy bạn nên làm gì?"],["Thứ nhất","Thứ nhất: giữ biển số sạch và rõ."],["Đừng che","Đừng che, đừng dán."]],
-"s7":[["Thứ hai","Thứ hai: trên cao tốc, bật xi nhan, nhìn gương,"],["đủ khoảng","đủ khoảng cách rồi mới chuyển làn."]],
-"s8":[["Thứ ba","Thứ ba: cho trẻ nhỏ ngồi hàng ghế sau,"],["với ghế","với ghế phù hợp."]],
-"s9":[["Thứ tư","Thứ tư: tra cứu phạt nguội trên trang chính thức"],["của Cục","của Cục Cảnh sát giao thông."]],
-"out":[["Nội dung","Nội dung chỉ mang tính thông tin,"],["không phải","không phải tư vấn pháp lý."],["Hãy","Hãy kiểm tra văn bản gốc."]]}
+{
+"op1": [
+[
+"Từ ngày",
+"Từ ngày 15/8/2026,"
+],
+[
+"người lái",
+"người lái ô tô có thêm một số lỗi bị xử phạt."
+],
+[
+"Mức cao",
+"Mức cao nhất: tới 26 triệu đồng."
+]
+],
+"op2": [
+[
+"Đây là",
+"Đây là quy định của Nghị định 238 năm 2026,"
+],
+[
+"sửa đổi",
+"sửa đổi Nghị định 168"
+],
+[
+"về xử phạt",
+"về xử phạt vi phạm giao thông."
+],
+[
+"Có ba",
+"Có 3 điểm bạn cần biết."
+]
+],
+"s1": [
+[
+"Một",
+"Một. Dùng vật liệu, hoặc thiết bị,"
+],
+[
+"làm camera",
+"làm camera khó nhận diện biển số."
+],
+[
+"Với ô tô",
+"Với ô tô: phạt từ 20 đến 26 triệu đồng,"
+],
+[
+"và trừ",
+"và trừ 6 điểm giấy phép lái xe."
+]
+],
+"s2": [
+[
+"Hai",
+"Hai. Chuyển làn trên đường cao tốc"
+],
+[
+"mà không",
+"mà không bảo đảm khoảng cách an toàn với xe khác:"
+],
+[
+"phạt từ",
+"phạt từ 4 đến 6 triệu đồng,"
+],
+[
+"và trừ",
+"và trừ 2 điểm."
+]
+],
+"s3": [
+[
+"Ba",
+"Ba. Ô tô chở trẻ dưới 10 tuổi,"
+],
+[
+"và cao",
+"và cao dưới 1,35 m,"
+],
+[
+"mà không",
+"mà không có thiết bị an toàn phù hợp:"
+],
+[
+"phạt cảnh cáo",
+"phạt cảnh cáo,"
+],
+[
+"thay cho",
+"thay cho phạt tiền như trước."
+]
+],
+"s4": [
+[
+"Nhưng",
+"Nhưng nếu cho trẻ ngồi"
+],
+[
+"cùng hàng",
+"cùng hàng ghế với người lái,"
+],
+[
+"vẫn bị",
+"vẫn bị phạt từ 800.000 đến 1 triệu đồng."
+]
+],
+"s5": [
+[
+"Mức phạt",
+"Mức phạt nồng độ cồn và vượt đèn đỏ"
+],
+[
+"không thay",
+"không thay đổi."
+]
+],
+"s6": [
+[
+"Vậy",
+"Vậy bạn nên làm gì?"
+],
+[
+"Thứ nhất",
+"Thứ nhất: giữ biển số sạch và rõ,"
+],
+[
+"không che",
+"không che, không dán."
+]
+],
+"s7": [
+[
+"Thứ hai",
+"Thứ hai: trên cao tốc,"
+],
+[
+"bật xi nhan",
+"bật xi nhan, quan sát gương,"
+],
+[
+"đủ khoảng",
+"đủ khoảng cách rồi mới chuyển làn."
+]
+],
+"s8": [
+[
+"Thứ ba",
+"Thứ ba: cho trẻ nhỏ ngồi hàng ghế sau,"
+],
+[
+"với ghế",
+"với ghế an toàn phù hợp."
+]
+],
+"s9": [
+[
+"Thứ tư",
+"Thứ tư: tra cứu phạt nguội trên trang chính thức"
+],
+[
+"của Cục",
+"của Cục Cảnh sát giao thông."
+]
+],
+"out": [
+[
+"Nội dung",
+"Nội dung chỉ mang tính thông tin,"
+],
+[
+"không phải",
+"không phải tư vấn pháp lý."
+],
+[
+"Hãy",
+"Hãy kiểm tra văn bản gốc."
+]
+]
+}
