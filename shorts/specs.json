@@ -1,0 +1,862 @@
+[
+ {
+  "id": "c1_hocphi",
+  "seal": "儒",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   20
+  ],
+  "hook": {
+   "vi": "HỌC PHÍ CỦA KHỔNG TỬ",
+   "en": "CONFUCIUS'S SCHOOL FEE"
+  },
+  "shots": [
+   "episodes/02-nho-giao/work/clip_A4.mp4",
+   {
+    "src": "episodes/02-nho-giao/work/img/A4.png",
+    "f": [
+     0.66,
+     0.45
+    ],
+    "z": 1.25
+   },
+   "episodes/02-nho-giao/work/clip_A1.mp4",
+   "episodes/02-nho-giao/work/clip_A4.mp4",
+   {
+    "src": "episodes/02-nho-giao/work/img/A4.png",
+    "f": [
+     0.3,
+     0.3
+    ],
+    "z": 1.2
+   },
+   "episodes/02-nho-giao/work/clip_A2.mp4",
+   "episodes/02-nho-giao/work/clip_A4.mp4"
+  ],
+  "vi": [
+   "Học phí để theo học một trong những người thầy vĩ đại nhất lịch sử là bao nhiêu?",
+   "Một bó thịt khô.",
+   "Hơn hai nghìn năm trăm năm trước, Khổng Tử mở trường ở nước Lỗ. Thời ấy, chỉ con nhà quý tộc mới được đi học.",
+   "Nhưng ông nhận tất cả, giàu hay nghèo. Ai mang đến chút lễ mọn, ông đều dạy.",
+   "Tương truyền, ông có tới ba nghìn học trò.",
+   "Chính cậu bé nghèo năm xưa, từng phải chăn bò giữ kho thóc, đã mở cánh cửa học hành cho mọi người.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "How much did it cost to study with one of the greatest teachers in history?",
+   "A bundle of dried meat.",
+   "Twenty-five centuries ago, Confucius opened a school in the state of Lu. Back then, only the sons of nobles went to school.",
+   "But he took everyone, rich or poor. Bring the smallest gift, and he would teach you.",
+   "Legend says he had three thousand students.",
+   "The poor boy who once herded cattle and guarded a granary opened the door of learning to everyone.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "c2_cholacnha",
+  "seal": "儒",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   60
+  ],
+  "hook": {
+   "vi": "BỊ GỌI LÀ CHÓ LẠC NHÀ",
+   "en": "THEY CALLED HIM A STRAY DOG"
+  },
+  "shots": [
+   {
+    "src": "episodes/02-nho-giao/work/img/A8.png",
+    "f": [
+     0.45,
+     0.5
+    ]
+   },
+   "episodes/02-nho-giao/work/clip_A6.mp4",
+   {
+    "src": "episodes/02-nho-giao/work/img/A8.png",
+    "f": [
+     0.68,
+     0.5
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "episodes/02-nho-giao/work/img/A8.png",
+    "f": [
+     0.42,
+     0.42
+    ],
+    "z": 1.3
+   },
+   "episodes/02-nho-giao/work/img/A9.png",
+   "episodes/02-nho-giao/work/clip_A4.mp4"
+  ],
+  "vi": [
+   "Có người từng gọi Khổng Tử là... một con chó lạc nhà. Và ông đã trả lời thế nào?",
+   "Lúc ấy ông đã ngoài năm mươi, đi hết nước này sang nước khác suốt mười bốn năm, mà không ông vua nào chịu dùng.",
+   "Một lần lạc mất học trò, ông đứng một mình ở cổng thành. Có người tả lại: trông ông thảm như con chó lạc nhà.",
+   "Học trò kể lại, tưởng thầy sẽ giận. Nhưng Khổng Tử bật cười: Nói đúng lắm! Đúng lắm!",
+   "Người biết cười giữa lúc thất bại ấy, về sau được cả châu Á gọi là người thầy của muôn đời.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Someone once called Confucius... a stray dog. So how did he answer?",
+   "He was past fifty, wandering from kingdom to kingdom for fourteen years, and not one king would hire him.",
+   "One day he lost his students and stood alone at a city gate. A passer-by said he looked as lost as a stray dog.",
+   "His students expected him to be angry. But Confucius laughed: That's exactly right! Exactly right!",
+   "The man who could laugh at his own failure was later called the teacher of ten thousand generations.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "l1_thuocsung",
+  "seal": "道",
+  "music": [
+   "assets/music/Imperial_Forces_-_Aaron_Kenny.mp3",
+   8
+  ],
+  "hook": {
+   "vi": "AI TÌM RA THUỐC SÚNG?",
+   "en": "WHO FOUND GUNPOWDER?"
+  },
+  "shots": [
+   {
+    "src": "episodes/03-dao-giao/work/clip_A13.mp4",
+    "fx": [
+     "fire"
+    ]
+   },
+   "episodes/03-dao-giao/work/clip_A12.mp4",
+   {
+    "src": "episodes/03-dao-giao/work/img/A12.png",
+    "f": [
+     0.35,
+     0.5
+    ]
+   },
+   {
+    "src": "episodes/03-dao-giao/work/clip_A13.mp4",
+    "fx": [
+     "fire"
+    ]
+   },
+   {
+    "src": "episodes/03-dao-giao/work/img/A13.png",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.15
+   },
+   "episodes/03-dao-giao/work/clip_A12.mp4"
+  ],
+  "vi": [
+   "Thuốc súng được tìm ra... bởi những người đang đi tìm thuốc trường sinh.",
+   "Ở Trung Quốc xưa, các đạo sĩ tin rằng có thể luyện ra một viên thuốc giúp con người sống mãi.",
+   "Họ trộn đủ thứ khoáng chất rồi nung trong lò. Nhiều vị vua uống thuốc tiên... và được cho là đã mất mạng vì nó.",
+   "Rồi khoảng thế kỷ thứ chín, một cuốn sách luyện đan cảnh báo: trộn diêm tiêu với lưu huỳnh, lửa sẽ bùng lên, cháy cả nhà.",
+   "Đi tìm sự sống vĩnh cửu, họ lại tìm ra thứ thay đổi mọi cuộc chiến về sau.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Gunpowder was discovered... by people searching for eternal life.",
+   "In ancient China, Taoist alchemists believed they could brew a pill that would let you live forever.",
+   "They mixed all kinds of minerals and cooked them in furnaces. Several emperors drank these elixirs... and are thought to have lost their lives to them.",
+   "Then, around the ninth century, an alchemy book warned: mix saltpetre with sulphur, and the flames will burn your house down.",
+   "Searching for eternal life, they found the thing that changed every war that followed.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "g1_shiva",
+  "seal": "ॐ",
+  "seal_font": "NotoSerifDeva700.ttf",
+  "music": [
+   "assets/music/Dreams_Of_River_Ganga_-_Hanu_Dixit.mp3",
+   15
+  ],
+  "hook": {
+   "vi": "TIA NƯỚC TRÊN ĐẦU THẦN SHIVA",
+   "en": "THE RIVER IN SHIVA'S HAIR"
+  },
+  "shots": [
+   "episodes/05-song-hang/work/clip_G2.mp4",
+   {
+    "src": "episodes/05-song-hang/work/img/G1.png",
+    "f": [
+     0.62,
+     0.3
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "episodes/05-song-hang/work/img/G1.png",
+    "f": [
+     0.28,
+     0.5
+    ],
+    "z": 1.1
+   },
+   "episodes/05-song-hang/work/clip_G2.mp4",
+   "episodes/05-song-hang/work/clip_G4.mp4",
+   "episodes/05-song-hang/work/clip_G5.mp4"
+  ],
+  "vi": [
+   "Vì sao trên đầu thần Shiva luôn có một tia nước phun ra?",
+   "Thần thoại Ấn Độ kể rằng xưa kia, sông Hằng chảy trên trời, và là một nữ thần tên Ganga.",
+   "Vua Bhagiratha tu khổ hạnh nhiều năm để xin bà xuống trần, rửa tro cốt cho tổ tiên.",
+   "Nhưng nếu Ganga đổ thẳng xuống, sức nước sẽ làm vỡ cả mặt đất. Thế là thần Shiva đưa đầu ra hứng.",
+   "Dòng sông rơi vào mái tóc rối của thần, rồi mới chảy xuống hiền hòa. Đó chính là sông Hằng ngày nay.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Why is there always a jet of water springing from Shiva's head?",
+   "Indian myths say that long ago, the Ganges flowed in heaven, as a goddess named Ganga.",
+   "King Bhagiratha prayed for years, asking her to come down and wash the ashes of his ancestors.",
+   "But if Ganga fell straight down, her force would shatter the earth. So the god Shiva caught her on his head.",
+   "The river fell into his tangled hair, and only then flowed gently down. That is the Ganges we know today.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "j1_amaterasu",
+  "seal": "神",
+  "music": [
+   "assets/music/Hon_Kyoku_-_Doug_Maxwell__Zac_Zinger.mp3",
+   10
+  ],
+  "hook": {
+   "vi": "NGÀY MẶT TRỜI BIẾN MẤT",
+   "en": "THE DAY THE SUN HID"
+  },
+  "shots": [
+   {
+    "src": "assets/japan/images/p3.jpg",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   {
+    "src": "assets/japan/images/p3.jpg",
+    "f": [
+     0.5,
+     0.3
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/japan/images/p3.jpg",
+    "f": [
+     0.3,
+     0.65
+    ],
+    "z": 1.2
+   },
+   "assets/japan/clips/clip_p3.mp4",
+   {
+    "src": "assets/japan/images/p6.jpg",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "assets/japan/clips/clip_p3.mp4"
+  ],
+  "vi": [
+   "Có lần, cả thế giới chìm trong bóng tối... chỉ vì một nữ thần giận dỗi.",
+   "Thần thoại Nhật Bản kể rằng nữ thần mặt trời Amaterasu bị em trai quậy phá. Giận quá, bà trốn vào hang đá và lấp cửa lại.",
+   "Mặt trời biến mất. Các vị thần khác cuống cuồng tìm cách dụ bà ra.",
+   "Họ bày một bữa tiệc, nhảy múa, cười vang trước cửa hang. Amaterasu tò mò hé cửa nhìn... và ánh sáng trở lại.",
+   "Người Nhật tin rằng các Thiên hoàng chính là hậu duệ của bà.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Once, the whole world went dark... because a goddess was sulking.",
+   "Japanese myth says the sun goddess Amaterasu was tormented by her wild brother. Furious, she hid in a cave and sealed the door.",
+   "The sun was gone. The other gods scrambled to lure her out.",
+   "They threw a party, dancing and laughing outside the cave. Curious, Amaterasu peeked out... and the light returned.",
+   "The Japanese believe their emperors are her descendants.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "j2_thanthicu",
+  "seal": "神",
+  "music": [
+   "assets/music/Aomori_Wings_-_The_Mini_Vandals.mp3",
+   5
+  ],
+  "hook": {
+   "vi": "VỊ THẦN CỦA SĨ TỬ",
+   "en": "THE GOD OF EXAMS"
+  },
+  "shots": [
+   {
+    "src": "assets/japan/images/f4c.jpg",
+    "f": [
+     0.45,
+     0.5
+    ]
+   },
+   {
+    "src": "assets/japan/images/f4a.jpg",
+    "f": [
+     0.48,
+     0.45
+    ]
+   },
+   {
+    "src": "assets/japan/images/f4b.jpg",
+    "f": [
+     0.6,
+     0.35
+    ]
+   },
+   {
+    "src": "assets/japan/images/f4c.jpg",
+    "f": [
+     0.25,
+     0.55
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/japan/images/f4c.jpg",
+    "f": [
+     0.6,
+     0.5
+    ],
+    "z": 1.1
+   },
+   {
+    "src": "assets/japan/images/f4a.jpg",
+    "f": [
+     0.4,
+     0.4
+    ],
+    "z": 1.2
+   }
+  ],
+  "vi": [
+   "Ở Nhật, học sinh đi thi thường cầu khấn một vị thần... vốn là người thật.",
+   "Thế kỷ thứ mười, học giả Sugawara no Michizane bị vu oan, đày đi xa, rồi mất trong buồn tủi.",
+   "Sau đó, sét đánh trúng cung điện, và những kẻ hại ông lần lượt gặp nạn.",
+   "Người ta sợ linh hồn ông nổi giận, bèn lập đền thờ, tôn ông làm Tenjin, vị thần của học vấn.",
+   "Đến nay, trước mỗi kỳ thi, học sinh Nhật vẫn đến đền của ông treo thẻ gỗ cầu may.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In Japan, students pray before exams to a god... who was once a real man.",
+   "In the tenth century, the scholar Sugawara no Michizane was falsely accused, exiled far away, and passed away in sorrow.",
+   "Then lightning struck the palace, and one by one his enemies met misfortune.",
+   "Fearing his angry spirit, people built him a shrine and made him Tenjin, the god of learning.",
+   "To this day, before every exam, Japanese students hang wooden prayer plaques at his shrines.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "j3_sumo",
+  "seal": "神",
+  "music": [
+   "assets/music/Aomori_Wings_-_The_Mini_Vandals.mp3",
+   30
+  ],
+  "hook": {
+   "vi": "VÌ SAO SUMO TUNG MUỐI?",
+   "en": "WHY SUMO THROW SALT"
+  },
+  "shots": [
+   "assets/japan/clips/clip_f2b.mp4",
+   {
+    "src": "assets/japan/images/f2b.jpg",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "assets/japan/clips/clip_f2.mp4",
+   "assets/japan/clips/clip_f2.mp4",
+   "assets/japan/clips/clip_f2b.mp4",
+   "assets/japan/clips/clip_f3.mp4"
+  ],
+  "vi": [
+   "Vì sao trước mỗi trận đấu, đô vật sumo lại tung một nắm muối lên võ đài?",
+   "Sumo vốn không chỉ là thể thao. Nó bắt nguồn từ nghi lễ của Thần đạo, tôn giáo bản địa của Nhật Bản.",
+   "Trong Thần đạo, con người không sinh ra đã có tội. Mình chỉ bám chút bụi bẩn, và bụi thì rửa là sạch.",
+   "Vì vậy trước khi vào đền, người Nhật rửa tay, súc miệng. Còn muối được tin là có thể xua đi điều xấu.",
+   "Nên nắm muối ấy là để thanh tẩy võ đài, biến nó thành một nơi linh thiêng.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Why do sumo wrestlers throw a handful of salt into the ring before every match?",
+   "Sumo was never just a sport. It grew out of the rituals of Shinto, Japan's native religion.",
+   "In Shinto, you are not born sinful. You just get a little dusty, and dust can be washed away.",
+   "That is why people wash their hands and mouth before entering a shrine. And salt is believed to drive away impurity.",
+   "So that handful of salt purifies the ring, and turns it into a sacred place.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "j4_torii",
+  "seal": "神",
+  "music": [
+   "assets/music/Hon_Kyoku_-_Doug_Maxwell__Zac_Zinger.mp3",
+   40
+  ],
+  "hook": {
+   "vi": "BÍ MẬT CỔNG TORII",
+   "en": "THE SECRET OF TORII GATES"
+  },
+  "shots": [
+   {
+    "src": "assets/japan/images/f1.jpg",
+    "f": [
+     0.5,
+     0.5
+    ]
+   },
+   {
+    "src": "assets/japan/images/f1.jpg",
+    "f": [
+     0.5,
+     0.3
+    ],
+    "z": 1.25
+   },
+   {
+    "src": "assets/japan/images/f6.jpg",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "assets/japan/clips/clip_f3.mp4",
+   {
+    "src": "assets/japan/images/f1.jpg",
+    "f": [
+     0.2,
+     0.65
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/japan/images/f1.jpg",
+    "f": [
+     0.8,
+     0.65
+    ],
+    "z": 1.2
+   }
+  ],
+  "vi": [
+   "Bước qua cánh cổng đỏ này, bạn đã rời thế giới của con người.",
+   "Ở Nhật, cổng torii đánh dấu ranh giới giữa thế giới của chúng ta và thế giới của các vị thần.",
+   "Ở đền Fushimi Inari tại Kyoto, hàng nghìn cánh cổng nối nhau chạy lên tận đỉnh núi.",
+   "Mỗi cánh cổng là một món quà của một người hay một công ty, gửi lời cảm ơn đến thần linh.",
+   "Còn những bức tượng cáo đứng canh hai bên? Đó là sứ giả của thần Inari, vị thần của lúa gạo.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Step through this red gate, and you have left the human world.",
+   "In Japan, a torii gate marks the line between our world and the world of the gods.",
+   "At Fushimi Inari shrine in Kyoto, thousands of gates climb all the way up the mountain.",
+   "Each gate is a gift from a person or a company, saying thank you to the gods.",
+   "And the fox statues standing guard? They are the messengers of Inari, the god of rice.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "j5_ise",
+  "seal": "神",
+  "music": [
+   "assets/music/Hon_Kyoku_-_Doug_Maxwell__Zac_Zinger.mp3",
+   70
+  ],
+  "hook": {
+   "vi": "NGÔI ĐỀN 20 NĂM DỰNG LẠI",
+   "en": "REBUILT EVERY 20 YEARS"
+  },
+  "shots": [
+   {
+    "src": "assets/japan/images/f5.jpg",
+    "f": [
+     0.5,
+     0.5
+    ]
+   },
+   {
+    "src": "assets/japan/images/f5.jpg",
+    "f": [
+     0.3,
+     0.5
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/japan/images/f5.jpg",
+    "f": [
+     0.72,
+     0.55
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/japan/images/f5.jpg",
+    "f": [
+     0.7,
+     0.6
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/japan/images/f5.jpg",
+    "f": [
+     0.5,
+     0.45
+    ]
+   },
+   "assets/japan/clips/clip_f3.mp4"
+  ],
+  "vi": [
+   "Ngôi đền linh thiêng nhất Nhật Bản... cứ hai mươi năm lại bị dỡ bỏ.",
+   "Đó là đền Ise. Cứ hai mươi năm một lần, người ta dựng một ngôi đền mới y hệt ngay bên cạnh, rồi dỡ ngôi đền cũ đi.",
+   "Truyền thống này đã kéo dài hơn một nghìn ba trăm năm.",
+   "Nhờ vậy, tay nghề của những người thợ mộc được truyền từ đời này sang đời khác, không bao giờ thất truyền.",
+   "Một ngôi đền lúc nào cũng cổ, mà lúc nào cũng mới.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "The most sacred shrine in Japan... is torn down every twenty years.",
+   "It is the Ise Shrine. Every twenty years, an identical new shrine is built right beside it, and the old one is taken apart.",
+   "This tradition has lasted more than thirteen hundred years.",
+   "That way, the carpenters' skills pass from one generation to the next and are never lost.",
+   "A shrine that is always old, and always new.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "c3_ho",
+  "seal": "儒",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   100
+  ],
+  "hook": {
+   "vi": "DỮ HƠN CẢ HỔ",
+   "en": "FIERCER THAN A TIGER"
+  },
+  "shots": [
+   "episodes/02-nho-giao/work/clip_A6.mp4",
+   {
+    "src": "episodes/02-nho-giao/work/img/A6b.png",
+    "f": [
+     0.68,
+     0.6
+    ]
+   },
+   {
+    "src": "episodes/02-nho-giao/work/img/A6b.png",
+    "f": [
+     0.75,
+     0.55
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "episodes/02-nho-giao/work/img/A6b.png",
+    "f": [
+     0.3,
+     0.45
+    ],
+    "z": 1.1
+   },
+   {
+    "src": "episodes/02-nho-giao/work/img/A6b.png",
+    "f": [
+     0.3,
+     0.4
+    ],
+    "z": 1.3
+   },
+   "episodes/02-nho-giao/work/clip_A6.mp4"
+  ],
+  "vi": [
+   "Điều gì đáng sợ hơn cả hổ dữ? Khổng Tử đã có câu trả lời từ hai nghìn năm trăm năm trước.",
+   "Trên đường chu du, ông gặp một người phụ nữ ngồi khóc bên mộ dưới chân núi.",
+   "Bà kể: bố chồng, chồng, rồi con trai bà đều bị hổ vồ.",
+   "Ông hỏi: sao bà không dọn đi nơi khác? Bà đáp: vì ở đây không có quan lại hà khắc.",
+   "Khổng Tử quay sang học trò: các con nhớ lấy. Chính quyền hà khắc... còn dữ hơn cả hổ.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "What is more frightening than a man-eating tiger? Confucius answered that twenty-five centuries ago.",
+   "On his travels, he met a woman weeping beside a grave at the foot of a mountain.",
+   "A tiger, she said, had taken her father-in-law, her husband, and now her son.",
+   "He asked: why not move away? She answered: because here, there are no cruel officials.",
+   "Confucius turned to his students: remember this. Cruel government... is fiercer than a tiger.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "c4_dotsach",
+  "seal": "儒",
+  "music": [
+   "assets/music/Imperial_Forces_-_Aaron_Kenny.mp3",
+   0
+  ],
+  "hook": {
+   "vi": "NGÀY SÁCH BỊ ĐỐT",
+   "en": "THE DAY THE BOOKS BURNED"
+  },
+  "shots": [
+   {
+    "src": "episodes/02-nho-giao/work/clip_A14.mp4",
+    "fx": [
+     "fire"
+    ]
+   },
+   {
+    "src": "episodes/02-nho-giao/work/clip_A14.mp4",
+    "fx": [
+     "fire"
+    ]
+   },
+   {
+    "src": "episodes/02-nho-giao/work/img/A14.png",
+    "f": [
+     0.75,
+     0.5
+    ],
+    "z": 1.2
+   },
+   "episodes/02-nho-giao/work/clip_A11.mp4",
+   {
+    "src": "episodes/02-nho-giao/work/img/A15.png",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "episodes/02-nho-giao/work/clip_A11.mp4"
+  ],
+  "vi": [
+   "Vị hoàng đế đầu tiên của Trung Hoa từng ra lệnh... đốt gần hết sách trong thiên hạ.",
+   "Năm 213 trước Công nguyên, Tần Thủy Hoàng muốn cả nước chỉ nghe theo một tư tưởng. Sách của các nhà Nho bị ném vào lửa.",
+   "Tương truyền, nhiều nho sĩ cũng bị trừng phạt rất nặng.",
+   "Nhưng nhà Tần sụp đổ chỉ sau mười lăm năm. Còn những cuốn sách được học trò chép lại và cất giấu thì sống sót.",
+   "Đến nhà Hán, chính những lời dạy từng bị đốt ấy lại trở thành tư tưởng chính thống của cả đế chế.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "China's first emperor once ordered... almost every book in the land to be burned.",
+   "In 213 BC, Qin Shi Huang wanted the whole empire to follow a single idea. The books of the Confucian scholars went into the fire.",
+   "Legend says many scholars were punished severely as well.",
+   "But the Qin dynasty collapsed after only fifteen years. And the books that students had copied and hidden survived.",
+   "Under the Han, the very teachings that had been burned became the official philosophy of the empire.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "l2_rong",
+  "seal": "道",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   0
+  ],
+  "hook": {
+   "vi": "NGƯỜI KHỔNG TỬ KHÔNG HIỂU NỔI",
+   "en": "THE MAN CONFUCIUS COULDN'T GRASP"
+  },
+  "shots": [
+   {
+    "src": "episodes/03-dao-giao/work/img/A1b.png",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "episodes/03-dao-giao/work/clip_A2.mp4",
+   "episodes/03-dao-giao/work/clip_A2.mp4",
+   {
+    "src": "episodes/03-dao-giao/work/img/A2b.png",
+    "f": [
+     0.45,
+     0.45
+    ]
+   },
+   "episodes/03-dao-giao/work/clip_A6.mp4",
+   "episodes/03-dao-giao/work/clip_A3.mp4"
+  ],
+  "vi": [
+   "Có một người mà đến Khổng Tử cũng phải thốt lên: ta không hiểu nổi ông ấy.",
+   "Tương truyền, hồi còn trẻ, Khổng Tử tìm đến hỏi lễ một ông già giữ kho sách của nhà Chu.",
+   "Ông già chỉ khuyên chàng trai: hãy bỏ bớt kiêu ngạo và tham vọng đi.",
+   "Về nhà, Khổng Tử bảo học trò: chim thì ta biết nó bay, cá thì ta biết nó bơi. Còn người này... như con rồng cưỡi mây cưỡi gió.",
+   "Ông già ấy là Lão Tử, tác giả của Đạo Đức Kinh.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "There was one man even Confucius admitted he could not understand.",
+   "Legend says a young Confucius once visited an old man who kept the royal archives of the Zhou.",
+   "The old man simply told him: let go of your pride and your ambition.",
+   "Back home, Confucius told his students: birds, I know they fly. Fish, I know they swim. But this man... is like a dragon riding the wind and clouds.",
+   "That old man was Laozi, author of the Tao Te Ching.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "l3_bienmat",
+  "seal": "道",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   40
+  ],
+  "hook": {
+   "vi": "VIẾT XONG RỒI BIẾN MẤT",
+   "en": "HE WROTE IT, THEN VANISHED"
+  },
+  "shots": [
+   "episodes/03-dao-giao/work/clip_A3.mp4",
+   "episodes/03-dao-giao/work/clip_A3.mp4",
+   {
+    "src": "episodes/03-dao-giao/work/img/A5.png",
+    "f": [
+     0.5,
+     0.5
+    ]
+   },
+   "episodes/03-dao-giao/work/clip_A6.mp4",
+   {
+    "src": "episodes/03-dao-giao/work/img/A7.png",
+    "f": [
+     0.5,
+     0.4
+    ]
+   },
+   "episodes/03-dao-giao/work/clip_A3.mp4"
+  ],
+  "vi": [
+   "Ông viết một trong những cuốn sách nổi tiếng nhất thế giới... rồi biến mất mãi mãi.",
+   "Hơn hai nghìn năm trước, chán cảnh triều đình rối ren, Lão Tử cưỡi trâu đi về phía tây.",
+   "Tương truyền, viên quan giữ ải níu ông lại: trước khi đi ẩn, xin thầy viết cho con một cuốn sách.",
+   "Lão Tử ngồi xuống, viết hơn năm nghìn chữ. Đó là Đạo Đức Kinh.",
+   "Rồi ông ra khỏi cửa ải. Không ai biết ông đi đâu, cũng không ai biết ông mất ở đâu.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "He wrote one of the most famous books in the world... and then vanished forever.",
+   "More than two thousand years ago, tired of a court in chaos, Laozi rode west on a water buffalo.",
+   "Legend says the keeper of the pass stopped him: before you disappear, please write me a book.",
+   "Laozi sat down and wrote some five thousand characters. That book is the Tao Te Ching.",
+   "Then he rode out through the gate. No one knows where he went, or where his life ended.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "g2_kumbh",
+  "seal": "ॐ",
+  "seal_font": "NotoSerifDeva700.ttf",
+  "music": [
+   "assets/music/Asian_Drums_-_Vadodara_-_Kevin_MacLeod.mp3",
+   10
+  ],
+  "hook": {
+   "vi": "CUỘC TỤ HỌP LỚN NHẤT HÀNH TINH",
+   "en": "THE BIGGEST GATHERING ON EARTH"
+  },
+  "shots": [
+   "episodes/05-song-hang/work/clip_G8.mp4",
+   {
+    "src": "episodes/05-song-hang/work/img/G8.png",
+    "f": [
+     0.3,
+     0.5
+    ]
+   },
+   "episodes/05-song-hang/work/clip_G4.mp4",
+   {
+    "src": "episodes/05-song-hang/work/img/G8.png",
+    "f": [
+     0.65,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "episodes/05-song-hang/work/clip_G8.mp4",
+   "episodes/05-song-hang/work/clip_G5.mp4"
+  ],
+  "vi": [
+   "Cuộc tụ họp đông người nhất hành tinh không phải là một buổi hòa nhạc hay một trận bóng.",
+   "Đó là Kumbh Mela, lễ hội tắm sông thiêng của Ấn Độ.",
+   "Người Ấn tin rằng vào đúng thời khắc ấy, tắm ở nơi các dòng sông thiêng gặp nhau sẽ gột sạch mọi tội lỗi.",
+   "Hàng chục triệu người đổ về cùng một bờ sông, dựng lên cả một thành phố lều tạm.",
+   "Và mười hai năm sau, họ lại quay về.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "The largest gathering of people on Earth is not a concert or a football match.",
+   "It is the Kumbh Mela, India's festival of sacred bathing.",
+   "Hindus believe that at exactly that moment, bathing where the sacred rivers meet washes away every sin.",
+   "Tens of millions of pilgrims arrive at the same riverbank and build an entire city of tents.",
+   "And twelve years later, they come back again.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "g3_quyen",
+  "seal": "ॐ",
+  "seal_font": "NotoSerifDeva700.ttf",
+  "music": [
+   "assets/music/Dreams_Of_River_Ganga_-_Hanu_Dixit.mp3",
+   50
+  ],
+  "hook": {
+   "vi": "DÒNG SÔNG CÓ QUYỀN NHƯ NGƯỜI?",
+   "en": "A RIVER WITH HUMAN RIGHTS?"
+  },
+  "shots": [
+   "episodes/05-song-hang/work/clip_G4.mp4",
+   "episodes/05-song-hang/work/clip_G5.mp4",
+   {
+    "src": "episodes/05-song-hang/work/img/G9.png",
+    "f": [
+     0.7,
+     0.6
+    ]
+   },
+   {
+    "src": "episodes/05-song-hang/work/img/G10.png",
+    "f": [
+     0.4,
+     0.45
+    ]
+   },
+   {
+    "src": "episodes/05-song-hang/work/img/G10.png",
+    "f": [
+     0.35,
+     0.4
+    ],
+    "z": 1.25
+   },
+   "episodes/05-song-hang/work/clip_G4.mp4"
+  ],
+  "vi": [
+   "Một dòng sông có thể có quyền như một con người không?",
+   "Với người Ấn Độ, sông Hằng không chỉ là sông. Đó là một nữ thần, là Mẹ Ganga.",
+   "Nhưng nước thải và rác đang đổ xuống dòng sông mỗi ngày.",
+   "Năm 2017, một tòa án Ấn Độ tuyên bố sông Hằng là một thực thể sống, có quyền như một con người.",
+   "Phán quyết sau đó bị tạm dừng. Còn bạn, bạn nghĩ sao?",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Can a river have the same rights as a person?",
+   "To the people of India, the Ganges is not just a river. She is a goddess, Mother Ganga.",
+   "But sewage and rubbish pour into her every single day.",
+   "In 2017, an Indian court declared the Ganges a living entity, with the rights of a person.",
+   "The ruling was later put on hold. So what do you think?",
+   "Follow for more stories from Asia!"
+  ]
+ }
+]
