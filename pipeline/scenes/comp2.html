@@ -1,0 +1,15 @@
+<!doctype html><canvas id=c width=1280 height=720></canvas><script>
+const x=document.getElementById("c").getContext("2d");const L=s=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src="data:image/jpeg;base64,"+s});
+const SP={};window.loadSp=async(d)=>{for(const k in d){SP[k]=await new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src="data:image/png;base64,"+d[k]})}};
+const E=p=>0.5-0.5*Math.cos(Math.PI*Math.min(1,Math.max(0,p)));
+window.comp2=async(a,b,p,spec)=>{const A=await L(a),B=await L(b);const Z=1.08,k=1280*Z/1536;
+ const sc=(u,v)=>[(.5+(u-.5)*Z)*1280,(.5+(v-.5)*Z/0.8438)*720];
+ const cA=sc(spec.a[0],spec.a[1]),cB=sc(spec.b[0],spec.b[1]);const q=Math.pow(Math.min(1,Math.max(0,p)),1.7);
+ const cx=cA[0]+(cB[0]-cA[0])*q,cy=cA[1]+(cB[1]-cA[1])*q-Math.sin(Math.PI*q)*90;
+ const r=1700*Math.pow(E(p),1.1);
+ x.drawImage(A,0,0);
+ x.save();x.beginPath();x.arc(cx,cy,Math.max(0.01,r),0,6.283);x.clip();x.drawImage(B,0,0);x.restore();
+ if(r>2){x.save();x.beginPath();x.arc(cx,cy,r,0,6.283);x.lineWidth=7;x.strokeStyle="rgba(246,233,207,.92)";x.shadowColor="rgba(40,20,10,.5)";x.shadowBlur=14;x.stroke();x.restore()}
+ const S0=SP[spec.sp];const sA=S0.width*k,sB=spec.bw*k;const sz=sA+(sB-sA)*E(p);const pop=1+0.25*Math.sin(Math.PI*Math.min(1,p*1.4));
+ x.save();x.translate(cx,cy);x.rotate(p*2.2);x.globalAlpha=p>.9?Math.max(0,1-(p-.9)/.1):1;x.shadowColor="rgba(40,20,10,.45)";x.shadowBlur=12;x.shadowOffsetY=4;x.drawImage(S0,-sz*pop/2,-sz*pop/2*S0.height/S0.width,sz*pop,sz*pop*S0.height/S0.width);x.restore()}
+</script>
