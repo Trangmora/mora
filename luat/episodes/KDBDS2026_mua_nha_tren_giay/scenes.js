@@ -12,11 +12,11 @@ function cash(px,py,rot,a){if(a<=0)return;x.save();x.globalAlpha*=a;x.translate(
 function strikeS(px,py,w,t0,dur=.25){return sketch([seg(px-8,py+5,px+w+8,py-7,px)],t0,dur,{col:RED,lw:7})}
 function sA(t){
  photoCard('site',70,168,410,390,.15,{rot:-.03});bubble(380,90,180,.5);txt('Nhà đâu?',470,183,{size:27,col:RED,align:'center',a:P(.95,.2)});
- txt('Tiền “giữ chỗ”',540,250,{size:60,a:P(g('k_tien'),.25)});txt('mua nhà trên giấy',540,324,{size:60,a:P(g('k_tien')+.5,.25)});
- underline(540,342,tw('mua nhà trên giấy',60),g('k_bay'),.4);
+ txt('Tiền “giữ chỗ”',540,268,{size:60,a:P(g('k_tien'),.25)});txt('mua nhà trên giấy',540,340,{size:60,a:P(g('k_tien')+.5,.25)});
+ underline(540,358,tw('mua nhà trên giấy',60),g('k_bay'),.4);
  stamp('TỪ 01/7/2027',1060,128,P(g('k_tu'),.4),{size:30,rot:.05});
- box(540,388,620,170,g('k_tu')+1.6,{lw:6},a=>{txt('THU TIỀN KHI CHƯA ĐỦ ĐIỀU KIỆN KINH DOANH',34,50,{size:19,col:GREY,ls:1});txt('BỊ CẤM',30,138,{size:86,col:RED,a:P(g('k_cam')-.15,.2)})});
- for(let i=0;i<3;i++){const ts=g('k_tien')+.2+i*.28,p=cl((t-ts)/1.3);if(p>0&&p<1){const e=1-Math.pow(1-p,2);cash(455+p*(760+i*40),200-i*30-25*e+Math.sin(t*7+i)*3,-.25+Math.sin(t*5+i)*.18,p<.12?p/.12:p>.8?(1-p)/.2:1)}}
+ box(540,402,620,166,g('k_tu')+1.6,{lw:6},a=>{txt('THU TIỀN KHI CHƯA ĐỦ ĐIỀU KIỆN KINH DOANH',34,48,{size:19,col:GREY,ls:1});txt('BỊ CẤM',30,136,{size:86,col:RED,a:P(g('k_cam')-.15,.2)})});
+ for(let i=0;i<3;i++){const ts=g('k_tien')+.2+i*.28,p=cl((t-ts)/1.3);if(p>0&&p<1){const e=1-Math.pow(1-p,2);cash(640+p*(600+i*40),180-i*26-12*e+Math.sin(t*7+i)*3,-.25+Math.sin(t*5+i)*.18,p<.12?p/.12:p>.8?(1-p)/.2:1)}}
  source(SRC2,P(1,.4))}
 function sM(t){const t0=g('op2');
  box(230,92,820,92,t0+.1,{lw:6},a=>{txt('LUẬT KINH DOANH BẤT ĐỘNG SẢN (SỬA ĐỔI)',410,60,{size:33,align:'center'})});
@@ -42,9 +42,9 @@ function sC(t){const t0=g('s2');title(2,'CẤM THU TIỀN “GIỮ CHỖ”',t0,
  box(450,y,380,h,tM,{lw:6},a=>{txt('CHỦ ĐẦU TƯ',190,58,{size:21,col:GREY,align:'center',ls:2});txt('KHÔNG ĐƯỢC',190,140,{size:50,col:RED,align:'center'});txt('THU TIỀN',190,202,{size:50,col:RED,align:'center'});
   txt('dưới bất kỳ hình thức nào',190,264,{size:23,w:600,align:'center',a:P(g('k_b3'),.2)})});
  const t4=g('k_b4'),t5=g('k_b5'),t6=g('k_b6');
- arrow(838,300,892,262,t4-.2,.18);box(900,196,330,130,t4,{},a=>{txt('“Giữ chỗ”',165,82,{size:42,align:'center'})});
- arrow(838,402,892,440,t5-.2,.18);box(900,376,330,130,t5,{},a=>{txt('“Đặt chỗ”',165,82,{size:42,align:'center'})});
- strikeS(950,264,230,t6-.15,.18);strikeS(950,444,230,t6+.08,.18);stamp('CŨNG CẤM',1065,351,P(t6+.3,.4),{size:32,rot:-.08});
+ arrow(838,300,892,250,t4-.2,.18);box(900,186,330,120,t4,{},a=>{txt('“Giữ chỗ”',165,76,{size:42,align:'center'})});
+ arrow(838,402,892,452,t5-.2,.18);box(900,396,330,120,t5,{},a=>{txt('“Đặt chỗ”',165,76,{size:42,align:'center'})});
+ strikeS(950,248,230,t6-.15,.18);strikeS(950,458,230,t6+.08,.18);stamp('CŨNG CẤM',1065,351,P(t6+.3,.4),{size:32,rot:-.08});
  source(SRC2,1)}
 const BX=71,BW=1138,BY=446,BH=32;
 function payBox(i,lab,big,t0,tBig,extra){const px=71+i*296;box(px,184,250,230,t0,{},a=>{txt(lab,125,42,{size:17,col:GREY,align:'center',ls:.5});txt(big,125,128,{size:64,col:RED,align:'center',a:P(tBig-.1,.2)});extra&&extra(a)});
