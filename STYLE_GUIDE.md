@@ -29,6 +29,11 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
   - Dùng "..." trong lời dẫn để tạo khoảng lặng.
 - Lấy mốc thời gian từng chữ bằng endpoint `with-timestamps` để khớp cảnh, chữ và hiệu ứng với lời.
 
+## 3a. Mở đầu riêng cho từng tập
+- Giữ **công thức** mở đầu (thủy mặc, 4–5 giây chỉ có nhạc, chữ bản địa đỏ hiện như mực loang, câu hỏi bí ẩn), nhưng **khung cảnh phải khác hẳn ở mỗi tập**. Không lặp lại cảnh đồi núi sương của tập 1.
+- Ví dụ: Samurai là chiến trường lúc bình minh, cờ hiệu trong sương, thanh kiếm cắm trên đất. Nho giáo là núi Thái Sơn. Phật giáo là con thuyền vượt biển. Con Rồng cháu Tiên là vịnh có rồng dưới nước.
+- Mỗi tập có **một chuyển động mở đầu riêng** (tương tự mặt trời mọc ở tập 1), ví dụ kiếm lóe sáng, cờ bay, thuyền cập bến.
+
 ## 3b. Khoảng ngắt nhạc (nhịp kiểu phim Netflix)
 - **Mở đầu: 4–5 giây chỉ có nhạc** trước khi có lời. Ở tập 1, mặt trời đỏ mọc lên **từ sau đỉnh núi** (bị núi che theo đường sống núi), và lặn xuống trước khi chữ tên tôn giáo hiện ra.
 - **Mặt trời không bao giờ được che chữ:** đặt nó ở vùng trống, cách khối chữ ít nhất 50 px, và kiểm tra trên khung hình thật sau khi camera zoom.
@@ -94,7 +99,7 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - **Clip AI từ fal.ai không có tiếng.** Mọi âm thanh lạ trong video đều đến từ hiệu ứng tự tạo hoặc từ nhạc.
 
 ## 9b. Ngân sách và tái sử dụng
-- **Tối đa $5 cho mỗi video** (ảnh OpenAI, ElevenLabs, fal.ai cộng lại).
+- **Tối đa $5 cho mỗi video** (nếu video dài 7–8 phút thì tối đa khoảng $8; ưu tiên dùng lại kho để giữ dưới mức này) (ảnh OpenAI, ElevenLabs, fal.ai cộng lại).
 - **Tập 1 (khoảng 3 phút 10 giây):** khoảng 30 ảnh và bản sửa (gồm cả các bản thử) cộng 5 clip, ước tính **khoảng $3**. Đây là ước tính, không phải số đọc từ hóa đơn.
 - **Luôn xem `assets/<nước>/index.json` trước khi tạo ảnh hoặc clip mới.** Dùng lại hình và clip đã có nếu hợp ngữ cảnh.
 - Mỗi ảnh và clip mới tạo phải được lưu vào kho này kèm một câu mô tả.
