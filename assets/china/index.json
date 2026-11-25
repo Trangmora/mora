@@ -50,5 +50,125 @@
  "clip_A4c": {
   "file": "clips/clip_A4c.mp4",
   "desc": "Wan 2.2 clip of A4c: musicians strike bells and play pan-pipes, Confucius sways eyes closed (5 s)"
+ },
+ "A12a": {
+  "file": "images/A12a.jpg",
+  "desc": "Confucius episode scene A12a (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A7": {
+  "file": "images/A7.jpg",
+  "desc": "Confucius episode scene A7 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A19w": {
+  "file": "images/A19w.jpg",
+  "desc": "Confucius episode scene A19w (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A19": {
+  "file": "images/A19.jpg",
+  "desc": "Confucius episode scene A19 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A6b": {
+  "file": "images/A6b.jpg",
+  "desc": "Confucius episode scene A6b (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A21": {
+  "file": "images/A21.jpg",
+  "desc": "Confucius episode scene A21 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A12": {
+  "file": "images/A12.jpg",
+  "desc": "Confucius episode scene A12 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A12b": {
+  "file": "images/A12b.jpg",
+  "desc": "Confucius episode scene A12b (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A16": {
+  "file": "images/A16.jpg",
+  "desc": "Confucius episode scene A16 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A12d": {
+  "file": "images/A12d.jpg",
+  "desc": "Confucius episode scene A12d (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A11": {
+  "file": "images/A11.jpg",
+  "desc": "Confucius episode scene A11 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A13": {
+  "file": "images/A13.jpg",
+  "desc": "Confucius episode scene A13 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A9": {
+  "file": "images/A9.jpg",
+  "desc": "Confucius episode scene A9 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A18": {
+  "file": "images/A18.jpg",
+  "desc": "Confucius episode scene A18 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A12c": {
+  "file": "images/A12c.jpg",
+  "desc": "Confucius episode scene A12c (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A8": {
+  "file": "images/A8.jpg",
+  "desc": "Confucius episode scene A8 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A6": {
+  "file": "images/A6.jpg",
+  "desc": "Confucius episode scene A6 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A10": {
+  "file": "images/A10.jpg",
+  "desc": "Confucius episode scene A10 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A12e": {
+  "file": "images/A12e.jpg",
+  "desc": "Confucius episode scene A12e (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A14": {
+  "file": "images/A14.jpg",
+  "desc": "Confucius episode scene A14 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A5": {
+  "file": "images/A5.jpg",
+  "desc": "Confucius episode scene A5 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A15": {
+  "file": "images/A15.jpg",
+  "desc": "Confucius episode scene A15 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "A17": {
+  "file": "images/A17.jpg",
+  "desc": "Confucius episode scene A17 (see episodes/02-nho-giao/script.md, Prompt tạo ảnh)"
+ },
+ "clip_A11": {
+  "file": "clips/clip_A11.mp4",
+  "desc": "Wan 2.2 clip of A11 (Confucius episode)"
+ },
+ "clip_A19": {
+  "file": "clips/clip_A19.mp4",
+  "desc": "Wan 2.2 clip of A19 (Confucius episode)"
+ },
+ "clip_A7": {
+  "file": "clips/clip_A7.mp4",
+  "desc": "Wan 2.2 clip of A7 (Confucius episode)"
+ },
+ "clip_A16": {
+  "file": "clips/clip_A16.mp4",
+  "desc": "Wan 2.2 clip of A16 (Confucius episode)"
+ },
+ "clip_A6": {
+  "file": "clips/clip_A6.mp4",
+  "desc": "Wan 2.2 clip of A6 (Confucius episode)"
+ },
+ "clip_A14": {
+  "file": "clips/clip_A14.mp4",
+  "desc": "Wan 2.2 clip of A14 (Confucius episode)"
+ },
+ "clip_A5": {
+  "file": "clips/clip_A5.mp4",
+  "desc": "Wan 2.2 clip of A5 (Confucius episode)"
  }
 }
