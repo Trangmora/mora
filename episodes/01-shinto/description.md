@@ -27,8 +27,6 @@ Music:
 "Aomori Wings" by The Mini Vandals (YouTube Audio Library)
 "Wild Lotus Rhythms – Japan Travel" by asian_background_music (Pixabay)
 
-Illustrations are AI-assisted. Narration uses an AI voice (ElevenLabs).
-
 #Shinto #Japan #Mythology #AsianCulture #Amaterasu
 
 ## VI (YouTube Ridiculous Case, Facebook Mora Media)
@@ -57,8 +55,6 @@ Nhạc nền:
 "Hon Kyoku" – Doug Maxwell & Zac Zinger (YouTube Audio Library)
 "Aomori Wings" – The Mini Vandals (YouTube Audio Library)
 "Wild Lotus Rhythms – Japan Travel" – asian_background_music (Pixabay)
-
-Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 #ThanDao #NhatBan #ThanThoai #VanHoaChauA
 

@@ -129,7 +129,6 @@ Sources:
 - Ursula K. Le Guin, *Lao Tzu: Tao Te Ching* (1997); Benjamin Hoff, *The Tao of Pooh* (1982)
 
 Music: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
-Visuals: AI-assisted illustrations. Narration voice: AI voice (ElevenLabs).
 
 **VI**
 Nguồn tham khảo:
@@ -143,7 +142,6 @@ Nguồn tham khảo:
 
 Nhạc nền:
 "Finding Movement" – Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License
-Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 *(Ghi nhạc cho đúng mẫu ở `episodes/01-shinto/description.md` khi đã chốt các bài dùng, xem mục Nhạc bên dưới.)*
 
