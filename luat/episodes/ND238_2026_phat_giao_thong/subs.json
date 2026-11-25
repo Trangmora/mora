@@ -1,178 +1,21 @@
-{
-"op1": [
-[
-"Từ ngày",
-"Từ ngày 15/8/2026,"
-],
-[
-"người lái",
-"người lái ô tô có thêm một số lỗi bị xử phạt."
-],
-[
-"Mức cao",
-"Mức cao nhất: tới 26 triệu đồng."
-]
-],
-"op2": [
-[
-"Đây là",
-"Đây là quy định của Nghị định 238 năm 2026,"
-],
-[
-"sửa đổi",
-"sửa đổi Nghị định 168"
-],
-[
-"về xử phạt",
-"về xử phạt vi phạm giao thông."
-],
-[
-"Có ba",
-"Có 3 điểm bạn cần biết."
-]
-],
-"s1": [
-[
-"Một",
-"Một. Dùng vật liệu, hoặc thiết bị,"
-],
-[
-"làm camera",
-"làm camera khó nhận diện biển số."
-],
-[
-"Với ô tô",
-"Với ô tô: phạt từ 20 đến 26 triệu đồng,"
-],
-[
-"và trừ",
-"và trừ 6 điểm giấy phép lái xe."
-]
-],
-"s2": [
-[
-"Hai",
-"Hai. Chuyển làn trên đường cao tốc"
-],
-[
-"mà không",
-"mà không bảo đảm khoảng cách an toàn với xe khác:"
-],
-[
-"phạt từ",
-"phạt từ 4 đến 6 triệu đồng,"
-],
-[
-"và trừ",
-"và trừ 2 điểm."
-]
-],
-"s3": [
-[
-"Ba",
-"Ba. Ô tô chở trẻ dưới 10 tuổi,"
-],
-[
-"và cao",
-"và cao dưới 1,35 m,"
-],
-[
-"mà không",
-"mà không có thiết bị an toàn phù hợp:"
-],
-[
-"phạt cảnh cáo",
-"phạt cảnh cáo,"
-],
-[
-"thay cho",
-"thay cho phạt tiền như trước."
-]
-],
-"s4": [
-[
-"Nhưng",
-"Nhưng nếu cho trẻ ngồi"
-],
-[
-"cùng hàng",
-"cùng hàng ghế với người lái,"
-],
-[
-"vẫn bị",
-"vẫn bị phạt từ 800.000 đến 1 triệu đồng."
-]
-],
-"s5": [
-[
-"Mức phạt",
-"Mức phạt nồng độ cồn và vượt đèn đỏ"
-],
-[
-"không thay",
-"không thay đổi."
-]
-],
-"s6": [
-[
-"Vậy",
-"Vậy bạn nên làm gì?"
-],
-[
-"Thứ nhất",
-"Thứ nhất: giữ biển số sạch và rõ,"
-],
-[
-"không che",
-"không che, không dán."
-]
-],
-"s7": [
-[
-"Thứ hai",
-"Thứ hai: trên cao tốc,"
-],
-[
-"bật xi nhan",
-"bật xi nhan, quan sát gương,"
-],
-[
-"đủ khoảng",
-"đủ khoảng cách rồi mới chuyển làn."
-]
-],
-"s8": [
-[
-"Thứ ba",
-"Thứ ba: cho trẻ nhỏ ngồi hàng ghế sau,"
-],
-[
-"với ghế",
-"với ghế an toàn phù hợp."
-]
-],
-"s9": [
-[
-"Thứ tư",
-"Thứ tư: tra cứu phạt nguội trên trang chính thức"
-],
-[
-"của Cục",
-"của Cục Cảnh sát giao thông."
-]
-],
-"out": [
-[
-"Nội dung",
-"Nội dung chỉ mang tính thông tin,"
-],
-[
-"không phải",
-"không phải tư vấn pháp lý."
-],
-[
-"Hãy",
-"Hãy kiểm tra văn bản gốc."
-]
-]
-}
+{"op1":[["Từ ngày","Từ ngày 15/8/2026,"],["việc xử phạt","việc xử phạt vi phạm giao thông đường bộ"],["có nhiều","có nhiều điểm mới."],["Có lỗi","Có lỗi bị phạt tới 26 triệu đồng,"],["và trừ","và trừ 6 điểm giấy phép lái xe."]],
+"op2":[["Các điểm","Các điểm mới nằm trong Nghị định 238 năm 2026"],["của Chính phủ","của Chính phủ, ban hành ngày 26/6."],["Nghị định này","Nghị định này sửa đổi Nghị định 168 năm 2024."]],
+"op3":[["Có bốn","Có 4 nhóm quy định bạn cần biết."]],
+"a1":[["Nhóm thứ nhất","Nhóm thứ nhất: biển số xe."],["Nghị định bổ sung","Nghị định bổ sung hành vi"],["dùng vật liệu","dùng vật liệu, hoặc thiết bị,"],["làm thay đổi","làm thay đổi khả năng nhận diện biển số của camera."]],
+"a2":[["Nghĩa là","Nghĩa là, dù mắt thường vẫn đọc được biển số,"],["nhưng camera","nhưng camera khó nhận diện, thì vẫn bị phạt."]],
+"a3":[["Với ô tô","Với ô tô: phạt từ 20 đến 26 triệu đồng,"],["và trừ","và trừ 6 điểm."],["Xe máy","Xe máy cũng bị phạt, với mức thấp hơn."]],
+"b1":[["Nhóm thứ hai","Nhóm thứ hai: chuyển làn."],["Nghị định bổ sung","Nghị định bổ sung lỗi chuyển làn"],["không bảo đảm","không bảo đảm khoảng cách an toàn"],["với xe","với xe phía trước, phía sau, và hai bên."]],
+"b2":[["Trên đường","Trên đường cao tốc, người lái ô tô"],["bị phạt","bị phạt từ 4 đến 6 triệu đồng,"],["và trừ","và trừ 2 điểm."]],
+"c1":[["Nhóm thứ ba","Nhóm thứ ba: chở trẻ em trên ô tô."],["Áp dụng","Áp dụng với trẻ dưới 10 tuổi,"],["và cao","và cao dưới 1,35 m."]],
+"c2":[["Không dùng","Không dùng thiết bị an toàn phù hợp cho trẻ:"],["phạt cảnh cáo","phạt cảnh cáo."],["Trước đó","Trước đó, mức phạt là"],["từ tám","từ 800.000 đến 1 triệu đồng."]],
+"c3":[["Cho trẻ","Cho trẻ ngồi cùng hàng ghế với người lái:"],["vẫn phạt","vẫn phạt từ 800.000 đến 1 triệu đồng,"],["trừ xe","trừ xe chỉ có một hàng ghế."]],
+"d1":[["Nhóm thứ tư","Nhóm thứ tư: xe không kinh doanh vận tải,"],["nhưng chở","nhưng chở khách có thu tiền."],["Người lái","Người lái bị phạt từ 12 đến 14 triệu đồng,"],["và trừ","và trừ 6 điểm."]],
+"e1":[["Về điểm","Về điểm: mỗi giấy phép lái xe có 12 điểm."],["Nếu chưa","Nếu chưa bị trừ hết,"],["và mười hai","và 12 tháng không bị trừ thêm,"],["điểm được","điểm được phục hồi đủ."]],
+"e2":[["Nếu bị","Nếu bị trừ hết điểm,"],["bạn không","bạn không được lái xe theo giấy phép đó."],["Sau ít","Sau ít nhất 6 tháng,"],["bạn được","bạn được kiểm tra lại kiến thức pháp luật"],["để phục","để phục hồi điểm."]],
+"e3":[["Nghị định mới","Nghị định mới nêu rõ: không trừ điểm"],["khi giấy phép","khi giấy phép đang bị tước quyền sử dụng."]],
+"f1":[["Điều không","Điều không đổi:"],["mức phạt","mức phạt nồng độ cồn và vượt đèn đỏ."]],
+"g1":[["Vậy","Vậy bạn nên làm gì?"],["Thứ nhất","Thứ nhất: giữ biển số sạch và rõ,"],["không che","không che, không dán, không phủ thêm vật liệu."]],
+"g2":[["Thứ hai","Thứ hai: trước khi chuyển làn,"],["bật xi nhan","bật xi nhan, quan sát gương,"],["và giữ","và giữ đủ khoảng cách."]],
+"g3":[["Thứ ba","Thứ ba: cho trẻ ngồi hàng ghế sau,"],["với thiết bị","với thiết bị an toàn phù hợp."]],
+"g4":[["Thứ tư","Thứ tư: không dùng xe không kinh doanh vận tải"],["để chở","để chở khách thu tiền."]],
+"out":[["Nội dung","Nội dung chỉ mang tính thông tin,"],["không phải","không phải tư vấn pháp lý."],["Hãy","Hãy kiểm tra văn bản gốc."]]}

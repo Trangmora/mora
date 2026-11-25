@@ -1,146 +1,19 @@
-{
-"k_lai": [
-"op1",
-"người lái ô tô"
-],
-"k_them": [
-"op1",
-"có thêm"
-],
-"k_cao": [
-"op1",
-"Mức cao nhất"
-],
-"k_26": [
-"op1",
-"hai mươi sáu"
-],
-"k_nd": [
-"op2",
-"Nghị định hai trăm"
-],
-"k_sua": [
-"op2",
-"sửa đổi"
-],
-"k_ba": [
-"op2",
-"Có ba điểm"
-],
-"k_a1": [
-"s1",
-"Dùng vật liệu"
-],
-"k_a1b": [
-"s1",
-"làm camera"
-],
-"k_a2": [
-"s1",
-"Với ô tô"
-],
-"k_a3": [
-"s1",
-"phạt từ"
-],
-"k_a4": [
-"s1",
-"và trừ"
-],
-"k_b1": [
-"s2",
-"Chuyển làn"
-],
-"k_b1b": [
-"s2",
-"mà không"
-],
-"k_b2": [
-"s2",
-"phạt từ"
-],
-"k_b3": [
-"s2",
-"và trừ"
-],
-"k_c0a": [
-"s3",
-"dưới mười tuổi"
-],
-"k_c0b": [
-"s3",
-"và cao"
-],
-"k_c2": [
-"s3",
-"mà không có"
-],
-"k_c3": [
-"s3",
-"phạt cảnh cáo"
-],
-"k_c3b": [
-"s3",
-"thay cho"
-],
-"k_c4b": [
-"s4",
-"cùng hàng ghế"
-],
-"k_c5": [
-"s4",
-"vẫn bị phạt"
-],
-"k_c6": [
-"s4",
-"tám trăm"
-],
-"k_d0": [
-"s5",
-"vượt đèn đỏ"
-],
-"k_d1": [
-"s5",
-"không thay đổi"
-],
-"k_e1": [
-"s6",
-"Thứ nhất"
-],
-"k_e1b": [
-"s6",
-"không che"
-],
-"k_e2a": [
-"s7",
-"bật xi nhan"
-],
-"k_e2b": [
-"s7",
-"đủ khoảng"
-],
-"k_e3b": [
-"s8",
-"với ghế"
-],
-"k_e4b": [
-"s9",
-"của Cục"
-],
-"k_src": [
-"out",
-"Hãy kiểm tra"
-],
-"k_e1a": [
-"s6",
-"sạch và rõ"
-],
-"k_e3a": [
-"s8",
-"hàng ghế sau"
-],
-"k_e4a": [
-"s9",
-"trên trang"
-]
-}
+{"k_o1a":["op1","việc xử phạt"],"k_o1b":["op1","có nhiều điểm mới"],"k_o1c":["op1","Có lỗi"],"k_26":["op1","hai mươi sáu"],"k_o1d":["op1","và trừ"],
+"k_nd":["op2","Nghị định hai trăm"],"k_cp":["op2","của Chính phủ"],"k_bh":["op2","ban hành"],"k_sua":["op2","sửa đổi"],
+"k_bon":["op3","bốn nhóm"],
+"k_a1":["a1","biển số xe"],"k_a1b":["a1","Nghị định bổ sung"],"k_a1c":["a1","dùng vật liệu"],"k_a1d":["a1","làm thay đổi"],"k_a1e":["a1","của camera"],
+"k_a2a":["a2","dù mắt thường"],"k_a2b":["a2","nhưng camera"],"k_a2c":["a2","thì vẫn"],
+"k_a3a":["a3","phạt từ"],"k_a3b":["a3","và trừ"],"k_a3c":["a3","Xe máy"],
+"k_b1":["b1","chuyển làn"],"k_b1b":["b1","Nghị định bổ sung"],"k_b1c":["b1","không bảo đảm"],"k_b1d":["b1","xe phía trước"],"k_b1e":["b1","phía sau"],"k_b1f":["b1","và hai bên"],
+"k_b2a":["b2","người lái ô tô"],"k_b2b":["b2","bốn đến sáu"],"k_b2c":["b2","và trừ"],
+"k_c1":["c1","chở trẻ em"],"k_c1a":["c1","dưới mười tuổi"],"k_c1b":["c1","và cao"],
+"k_c2a":["c2","phạt cảnh cáo"],"k_c2b":["c2","Trước đó"],"k_c2c":["c2","tám trăm"],
+"k_c3a":["c3","vẫn phạt"],"k_c3b":["c3","tám trăm"],"k_c3c":["c3","trừ xe"],
+"k_d1":["d1","xe không kinh doanh"],"k_d1b":["d1","nhưng chở khách"],"k_d1c":["d1","Người lái"],"k_d1d":["d1","mười hai đến"],"k_d1e":["d1","và trừ"],
+"k_e1a":["e1","mỗi giấy phép"],"k_e1b":["e1","Nếu chưa"],"k_e1c":["e1","và mười hai tháng"],"k_e1d":["e1","điểm được phục hồi"],
+"k_e2a":["e2","bạn không được"],"k_e2b":["e2","Sau ít nhất"],"k_e2c":["e2","bạn được kiểm tra"],"k_e2d":["e2","để phục hồi"],
+"k_e3a":["e3","không trừ điểm"],"k_e3b":["e3","khi giấy phép"],
+"k_f1a":["f1","mức phạt nồng độ cồn"],"k_f1b":["f1","vượt đèn đỏ"],
+"k_g1":["g1","Thứ nhất"],"k_g1a":["g1","sạch và rõ"],"k_g1b":["g1","không che"],"k_g1c":["g1","không phủ"],
+"k_g2a":["g2","bật xi nhan"],"k_g2b":["g2","và giữ"],"k_g3a":["g3","hàng ghế sau"],"k_g3b":["g3","với thiết bị"],"k_g4a":["g4","xe không kinh doanh"],"k_g4b":["g4","để chở khách"],
+"k_src":["out","Hãy kiểm tra"]}
