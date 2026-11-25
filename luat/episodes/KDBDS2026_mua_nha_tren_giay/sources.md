@@ -16,8 +16,20 @@ Tra cứu ngày 25/11/2026 qua kết quả tìm kiếm; chưa mở được bài
 - K10 Báo Chính phủ (bản đăng lại trên Báo Đấu thầu), "Luật Kinh doanh bất động sản (sửa đổi): Siết đặt cọc, thanh toán, tăng bảo vệ người mua nhà": https://baodauthau.vn/luat-kinh-doanh-bat-dong-san-sua-doi-siet-dat-coc-thanh-toan-tang-bao-ve-nguoi-mua-nha-post213510.html
 - K11 Tiền Phong, "Quy định mới về tiến độ thanh toán, tiền đặt cọc bất động sản": https://tienphong.vn/quy-dinh-moi-ve-tien-do-thanh-toan-tien-dat-coc-bat-dong-san-post1896354.tpo
 - K12 Tiền Phong, "Cấp mã định danh điện tử cho nhà ở từ 1/7/2027": https://tienphong.vn/cap-ma-dinh-danh-dien-tu-cho-nha-o-tu-172027-post1897302.tpo
+- K19 Công lý, "Quốc hội thông qua Luật Kinh doanh bất động sản (sửa đổi): Siết chặt điều kiện kinh doanh, bảo vệ người mua nhà": https://congly.vn/quoc-hoi-thong-qua-luat-kinh-doanh-bat-dong-san-sua-doi-siet-chat-dieu-kien-kinh-doanh-bao-ve-nguoi-mua-nha-548611.html
+- K20 Thời báo Tài chính, "Cấm thu tiền giữ chỗ khi bất động sản chưa đủ điều kiện kinh doanh": https://thoibaotaichinhvietnam.vn/cam-thu-tien-giu-cho-khi-bat-dong-san-chua-du-dieu-kien-kinh-doanh-207341.html
+- K21 Báo Xây dựng, "Minh bạch hóa thị trường bất động sản từ quy định siết thu tiền giữ chỗ, đặt cọc": https://batdongsan.baoxaydung.vn/minh-bach-hoa-thi-truong-bat-dong-san-tu-quy-dinh-siet-thu-tien-giu-cho-dat-coc-19226112416093129.htm
 - K17 Vietstock (qua Investing), "Luật Kinh doanh bất động sản (sửa đổi): Siết trần đặt cọc 5%, bổ sung mã định danh điện tử": https://vn.investing.com/news/stock-market-news/luat-kinh-doanh-bat-dong-san-sua-doi-siet-tran-dat-coc-5-bo-sung-ma-dinh-danh-dien-tu-2770646
 - K18 Viettimes, "Mua nhà hình thành trong tương lai: Chủ đầu tư chỉ được nhận đặt cọc tối đa 5%": https://viettimes.vn/mua-nha-hinh-thanh-trong-tuong-lai-chu-dau-tu-chi-duoc-nhan-dat-coc-toi-da-5-post208689.html
+
+## Luật hiện hành (dùng cho phần giải thích khái niệm)
+
+- Luật Kinh doanh bất động sản 2023 (Luật 29/2023/QH15): Điều 3 (định nghĩa nhà ở hình thành trong tương lai), khoản 5 Điều 23 (đặt cọc không quá 5%), Điều 24 (điều kiện đưa nhà ở hình thành trong tương lai vào kinh doanh), Điều 25 (thanh toán 30%, 70%, 95%). Bản đăng trên cổng tỉnh Bình Phước: https://binhphuoc.gov.vn/uploads/binhphuoc/news/2024_04/luat29.pdf
+- Nghị định 96/2024/NĐ-CP (thủ tục thông báo nhà ở hình thành trong tương lai đủ điều kiện được bán). Tạp chí Luật sư Việt Nam, "Thủ tục thông báo nhà ở hình thành trong tương lai đủ điều kiện được bán, cho thuê mua": https://lsvn.vn/thu-tuc-thong-bao-nha-o-hinh-thanh-trong-tuong-lai-du-dieu-kien-duoc-ban-cho-thue-mua-1722676472-a145951.html
+- Tạp chí Luật sư Việt Nam, "Điều kiện đưa vào kinh doanh nhà ở, công trình xây dựng hình thành trong tương lai": https://lsvn.vn/dieu-kien-dua-vao-kinh-doanh-nha-o-cong-trinh-xay-dung-hinh-thanh-trong-tuong-lai-1723539323-a146163.html
+- Tạp chí Luật sư Việt Nam, "Tiến độ thanh toán đối với hợp đồng mua nhà ở hình thành trong tương lai từ 01/01/2025": https://lsvn.vn/tien-do-thanh-toan-doi-voi-hop-dong-mua-nha-o-hinh-thanh-trong-tuong-lai-tu-01-01-2025-1724209660-a146406.html
+
+Số điều của Luật 2023 ghi theo trí nhớ của trợ lý và kết quả tìm kiếm; chưa mở được toàn văn để đối chiếu.
 
 ## Ảnh minh họa (Unsplash, giấy phép Unsplash)
 
@@ -26,13 +38,14 @@ Tra cứu ngày 25/11/2026 qua kết quả tìm kiếm; chưa mở được bài
 | `img/site.jpg` | Youssef Abdelwahab | https://unsplash.com/photos/a-group-of-tall-buildings-under-construction-qyzo7TDSVQs |
 | `img/keys.jpg` | Jakub Żerdzicki | https://unsplash.com/photos/holding-house-keys-in-front-of-the-entrance-bqUZEAeWuok |
 | `img/contract.jpg` | Cytonn Photography | https://unsplash.com/photos/person-writing-on-white-paper-GJao3ZTX9gU |
+| `img/scaffold.jpg` | Timur Seyfelmlyukov | https://unsplash.com/photos/apartment-building-under-construction-s7Ui_GeOw64 |
 
-Ghi chú: lệnh báo lượt tải về Unsplash (`download_location`) trả mã 403 lúc dựng, nên chưa ghi nhận được lượt tải. Ảnh công trường là công trình ở nước ngoài, chỉ dùng minh họa.
+Ghi chú: lệnh báo lượt tải về Unsplash (`download_location`) trả mã 403 lúc dựng, nên chưa ghi nhận được lượt tải. Ảnh công trường và ảnh nhà đang xây là công trình ở nước ngoài, chỉ dùng minh họa.
 
 ## Dựng lại
 
 ```
 cd luat/episodes/KDBDS2026_mua_nha_tren_giay
-VOICE_ID=ywBZEqUhld86Jeajq94o TEMPO=1.15 python3 ../../../pipeline/full/tts_seg.py script.json vi work/vo 0.3 op2=0.45 s1=0.45 s2=0.45 s5=0.5 s8=0.5
+VOICE_ID=ywBZEqUhld86Jeajq94o TEMPO=1.15 python3 ../../../pipeline/full/tts_seg.py script.json vi work/vo 0.3 op2=0.45 s1=0.45 s3=0.4 s5=0.45 s7=0.45 s8=0.45 s9=0.45 s13=0.5
 PARTS=1 ../../pipeline/vox/build.sh . ../../videos/KDBDS2026_mua_nha_tren_giay_vi.mp4
 ```

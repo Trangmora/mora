@@ -21,7 +21,7 @@ function sM(t){const t0=g('op2');
  const bx=[60,465,870],lab=[['Cấm thu tiền','“giữ chỗ”'],['Đặt cọc và các','mốc trả tiền'],['Ví dụ: căn nhà','giá 2 tỷ đồng']],ph=['site','contract','keys'];
  for(let i=0;i<3;i++){const ti=g('k_m1')-.4+i*.42;arrow(640+(i-1)*150,188,bx[i]+175,258,ti,.2);
   box(bx[i],264,350,214,ti+.18,{},a=>{photo(ph[i],12,12,326,92);badge(i+1,38,140,ti+.25,20);txt(lab[i][0],68,148,{size:24});txt(lab[i][1],68,182,{size:24})})}
- const te=g('k_m2');arrow(640,482,640,502,te,.15);box(390,508,500,80,te+.12,{col:GREEN,lw:5},a=>{txt('BẠN NÊN LÀM GÌ?',250,53,{size:32,col:GREEN,align:'center'})});
+ const te=g('k_m2')+.6;arrow(640,482,640,502,te,.15);box(390,508,500,80,te+.12,{col:GREEN,lw:5},a=>{txt('BẠN NÊN LÀM GÌ?',250,53,{size:32,col:GREEN,align:'center'})});
  source(SRC1,1)}
 // ---- văn bản nào, khi nào ----
 function sB(t){const t0=g('s1');title(null,'VĂN BẢN NÀO, KHI NÀO?',t0);
@@ -31,7 +31,7 @@ function sB(t){const t0=g('s1');title(null,'VĂN BẢN NÀO, KHI NÀO?',t0);
  box(468,y,350,h,g('k_phieu'),{},a=>{txt('PHIẾU TÁN THÀNH',175,56,{size:21,col:GREY,align:'center',ls:1});txt('471',175,190,{size:120,align:'center'});txt('trên 479 đại biểu',175,242,{size:25,w:600,align:'center',a:P(g('k_phieu')+1.1,.2)});txt('tham gia biểu quyết',175,276,{size:25,w:600,align:'center',a:P(g('k_phieu')+1.1,.2)})});
  arrow(826,y+h/2,878,y+h/2,g('k_hl')-.3,.2);
  box(886,y,350,h,g('k_hl'),{lw:6},a=>{txt('CÓ HIỆU LỰC TỪ',175,56,{size:21,col:GREY,align:'center',ls:1});icon('calendar',115,74,120,g('k_hl')+.25,.5);txt('01/7/2027',175,264,{size:54,col:RED,align:'center',a:P(g('k_hl2'),.2)})});
- box(50,512,1186,80,g('k_cu'),{col:GREY,lw:3},a=>{txt('Từ nay đến hết 30/6/2027: Luật Kinh doanh bất động sản năm 2023 vẫn áp dụng',593,34,{size:23,align:'center'});txt('Số hiệu luật mới: chờ công bố chính thức',593,62,{size:18,w:600,col:GREY,align:'center',a:P(g('k_cu')+1.3,.3)})});
+ box(50,512,1186,80,g('k_cu'),{col:GREY,lw:3},a=>{txt('Từ nay đến hết 30/6/2027: Luật Kinh doanh bất động sản năm 2023 vẫn áp dụng',593,34,{size:23,align:'center'});txt('Số hiệu luật mới: chờ công bố chính thức',593,62,{size:18,w:600,col:GREY,align:'center',a:P(g('k_cu')+2.0,.3)})});
  source(SRC1,1)}
 // ---- nhà trên giấy là gì ----
 function sC(t){const t0=g('s2');title(null,'“NHÀ TRÊN GIẤY” LÀ GÌ?',t0,{sub:'Tên trong luật: nhà ở hình thành trong tương lai'});
@@ -41,7 +41,7 @@ function sC(t){const t0=g('s2');title(null,'“NHÀ TRÊN GIẤY” LÀ GÌ?',t0
  arrow(838,374,892,374,g('k_n4')-.25,.2);
  box(900,322,330,104,g('k_n4'),{},a=>{txt('Nhận nhà sau',165,64,{size:34,align:'center'})});
  arrow(665,430,665,452,g('k_n5')-.3,.15);
- box(500,458,730,112,g('k_n5')-.05,{lw:6},a=>{txt('RỦI RO',28,42,{size:21,col:RED,ls:3});txt('nằm ở khoản tiền trả trước',28,86,{size:32})});
+ box(500,458,730,112,g('k_n5')-.05,{lw:6},a=>{txt('RỦI RO',28,42,{size:21,col:RED,ls:3});txt('nằm ở khoản tiền trả trước',28,86,{size:32,a:P(g('k_n5')+.85,.2)})});
  source(SRC4,1)}
 // ---- tiền giữ chỗ là gì ----
 function sD(t){const t0=g('s3');title(null,'TIỀN “GIỮ CHỖ” LÀ GÌ?',t0);
@@ -64,11 +64,11 @@ function sE(t){const t0=g('s4');title(null,'LUẬT MỚI: CẤM THU TIỀN “GI
  box(450,y,380,h,tM,{lw:6},a=>{txt('CHỦ ĐẦU TƯ',190,54,{size:21,col:GREY,align:'center',ls:2});txt('KHÔNG ĐƯỢC',190,128,{size:50,col:RED,align:'center'});txt('THU TIỀN',190,188,{size:50,col:RED,align:'center'});
   txt('của người mua',190,236,{size:25,w:600,align:'center',a:P(g('k_b2b'),.2)});txt('dưới bất kỳ hình thức nào',190,282,{size:23,w:600,align:'center',a:P(g('k_b3'),.2)})});
  arrow(838,y+h/2,892,y+h/2,tN-.25,.2);
- box(900,y,330,h,tN,{},a=>{txt('ĐIỂM MỚI',165,96,{size:46,col:RED,align:'center'});txt('so với luật hiện hành',165,150,{size:24,w:600,align:'center'});txt('(Luật Kinh doanh',165,214,{size:20,w:600,col:GREY,align:'center'});txt('bất động sản năm 2023)',165,242,{size:20,w:600,col:GREY,align:'center'})});
+ box(900,y,330,h,tN,{},a=>{txt('ĐIỂM MỚI',165,96,{size:46,col:RED,align:'center'});txt('so với luật hiện hành',165,150,{size:24,w:600,align:'center'});txt('(Luật Kinh doanh',165,214,{size:20,w:600,col:GREY,align:'center',a:P(tN+.9,.25)});txt('bất động sản năm 2023)',165,242,{size:20,w:600,col:GREY,align:'center',a:P(tN+.9,.25)})});
  source(SRC2,1)}
 // ---- thế nào là đủ điều kiện kinh doanh ----
 function sF(t){const t0=g('s5');title(null,'THẾ NÀO LÀ “ĐỦ ĐIỀU KIỆN KINH DOANH”?',t0,{size:40,sub:'Theo luật hiện hành: Luật Kinh doanh bất động sản 2023, Điều 24'});
- stamp('LUẬT HIỆN HÀNH',1085,150,P(g('k_d1'),.4),{size:22,rot:.05});
+ stamp('LUẬT HIỆN HÀNH',1098,100,P(g('k_d1'),.4),{size:21,rot:.04});
  const t2=g('k_d2')-.1,t3=g('k_d3')-.1,t4=g('k_d4')-.05;
  box(120,192,1040,100,t2,{},a=>{check(32,26,48,t2+.3,.25);txt('Dự án có đủ giấy tờ pháp lý',112,63,{size:32})});
  box(120,310,1040,124,t3,{},a=>{check(32,38,48,t3+.3,.25);txt('Chủ đầu tư thông báo cho cơ quan quản lý cấp tỉnh',112,54,{size:30});txt('trước khi bán',112,96,{size:30,a:P(g('k_d3b'),.2)})});
@@ -85,7 +85,7 @@ function payBar(t,tShow,st,tGreen){const pb=P(tShow,.3);if(pb<=0)return;x.save()
  for(const[tk,v,lab]of st){txt(lab,BX+BW*v,BY+BH+26,{size:20,col:INK,align:v>.9?'right':'center',a:P(tk,.2)})}
  txt('Đã trả',BX,BY-10,{size:16,w:600,col:GREY});x.restore()}
 function sG(t){const t0=g('s6'),t7=g('s7');title(null,'ĐẶT CỌC VÀ CÁC MỐC TRẢ TIỀN',t0,{sub:'Mua nhà ở hình thành trong tương lai (“nhà trên giấy”)'});
- const c1=g('k_c1')-.1,gT=g('k_c4a')+1.1;
+ const c1=g('k_c1')-.1,gT=g('k_c4a')+.8;
  payBar(t,t7,[[Math.max(g('k_c1a'),t7+.3),.05,'5%'],[g('k_c2a'),.30,'30%'],[g('k_c3a'),.70,'70%'],[g('k_c4a'),.95,'95%']],gT);
  pbox(0,'ĐẶT CỌC',c1,a=>{txt('≤ 5%',125,128,{size:64,col:RED,align:'center',a:P(g('k_c1a')-.1,.2)});txt('giá bán',125,162,{size:20,w:600,align:'center',a:P(g('k_c1a')+.3,.2)});
   txt('chỉ khi nhà đã đủ',125,192,{size:17,w:600,col:GREY,align:'center',a:P(c1+.5,.2)});txt('điều kiện kinh doanh',125,214,{size:17,w:600,col:GREY,align:'center',a:P(c1+.5,.2)})});
@@ -96,7 +96,7 @@ function sG(t){const t0=g('s6'),t7=g('s7');title(null,'ĐẶT CỌC VÀ CÁC M�
  parrow(2,g('k_c4')-.4);
  pbox(3,'TRƯỚC KHI CÓ SỔ',g('k_c4')-.1,a=>{txt('≤ 95%',125,128,{size:64,col:RED,align:'center',a:P(g('k_c4a')-.1,.2)});txt('giá trị hợp đồng',125,162,{size:20,w:600,align:'center',a:P(g('k_c4a')+.2,.2)})});
  box(569,522,640,78,gT,{col:GREEN,lw:5},a=>{check(26,20,40,gT+.3,.22);txt('5% còn lại: trả sau khi được cấp sổ',92,50,{size:29,col:GREEN})});
- const t6=g('k_c5');box(71,522,470,78,t6,{col:GREY,lw:3},a=>{txt('Các mốc này giữ từ Luật năm 2023',235,33,{size:22,align:'center'});txt('Điểm mới: cấm thu tiền “giữ chỗ”',235,63,{size:21,col:RED,align:'center',a:P(t6+1.2,.25)})});
+ const t6=g('k_c5');box(71,522,470,78,t6,{col:GREY,lw:3},a=>{txt('Các mốc này giữ từ Luật năm 2023',235,33,{size:22,align:'center'});txt('Điểm mới: cấm thu tiền “giữ chỗ”',235,63,{size:21,col:RED,align:'center',a:P(t6+1.6,.25)})});
  source(SRC3,1)}
 function sH(t){const t0=g('s8');title(null,'VÍ DỤ: CĂN NHÀ GIÁ 2 TỶ ĐỒNG',t0,{sub:'Ví dụ minh họa, giả sử giá bán và giá trị hợp đồng đều là 2 tỷ đồng'});
  stamp('VÍ DỤ',1120,120,P(t0+.4,.4),{size:30,rot:.06});
@@ -106,7 +106,7 @@ function sH(t){const t0=g('s8');title(null,'VÍ DỤ: CĂN NHÀ GIÁ 2 TỶ Đ�
  pbox(1,'LẦN THANH TOÁN ĐẦU',g('k_v2')-.1,amt('600 triệu',g('k_v2a'),'30%','đã gồm cọc',g('k_v2b')));parrow(1,g('k_v3')-.4);
  pbox(2,'TRƯỚC KHI BÀN GIAO',g('k_v3')-.1,amt('1,4 tỷ',g('k_v3a'),'70%'));parrow(2,g('k_v4')-.4);
  pbox(3,'TRƯỚC KHI CÓ SỔ',g('k_v4')-.1,amt('1,9 tỷ',g('k_v4a'),'95%'));
- const t5=g('k_v5');box(569,522,640,78,t5,{col:GREEN,lw:5},a=>{check(26,20,40,t5+.3,.22);txt('100 triệu cuối: trả khi được cấp sổ',92,50,{size:29,col:GREEN})});
+ const t5=g('k_v5');box(569,522,640,78,t5,{col:GREEN,lw:5},a=>{check(26,20,40,t5+.3,.22);txt('100 triệu cuối: ',92,50,{size:29,col:GREEN});txt('trả khi được cấp sổ',92+tw('100 triệu cuối: ',29),50,{size:29,col:GREEN,a:P(t5+1.0,.2)})});
  source('Ví dụ tự tính từ các mức 5%, 30%, 70%, 95%. '+SRC3,1)}
 // ---- ai bị ảnh hưởng ----
 function sI(t){const t0=g('s9');title(null,'AI BỊ ẢNH HƯỞNG?',t0);
