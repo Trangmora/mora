@@ -26,41 +26,51 @@ function sM(t){const t0=g('op2'),tb=g('k_ba');
  source(SRC1,1)}
 function sB(t){const t0=g('s1');title(1,'KHI NÀO ÁP DỤNG?',t0);
  const y=176,h=330;
- box(50,y,350,h,g('k_tq')-.1,{},a=>{photo('gavel',14,14,322,140);txt('QUỐC HỘI THÔNG QUA',175,196,{size:21,col:GREY,align:'center',ls:1});txt('20/11/2026',175,254,{size:46,align:'center',a:P(g('k_ngay'),.2)});txt('Sửa 3 luật thuế trong 1 luật',175,296,{size:21,w:600,col:GREY,align:'center',a:P(g('k_ngay')+.4,.25)})});
+ box(50,y,350,h,g('k_tq')-.1,{},a=>{photo('gavel',14,14,322,140);txt('QUỐC HỘI THÔNG QUA',175,196,{size:21,col:GREY,align:'center',ls:1});txt('20/11/2026',175,254,{size:46,align:'center',a:P(g('k_ngay'),.2)});txt('Sửa 3 luật thuế trong 1 luật',175,296,{size:21,w:600,col:GREY,align:'center',a:P(g('k_ngay')+1.6,.25)})});
  arrow(408,y+h/2,460,y+h/2,g('k_phieu')-.3,.2);
- box(468,y,350,h,g('k_phieu'),{},a=>{txt('PHIẾU TÁN THÀNH',175,58,{size:21,col:GREY,align:'center',ls:1});txt('475',175,196,{size:120,align:'center'});txt('trên 477 đại biểu',175,250,{size:25,w:600,align:'center'});txt('tham gia biểu quyết',175,284,{size:25,w:600,align:'center'})});
+ box(468,y,350,h,g('k_phieu'),{},a=>{txt('PHIẾU TÁN THÀNH',175,58,{size:21,col:GREY,align:'center',ls:1});txt('475',175,196,{size:120,align:'center'});txt('trên 477 đại biểu',175,250,{size:25,w:600,align:'center',a:P(g('k_477'),.2)});txt('tham gia biểu quyết',175,284,{size:25,w:600,align:'center',a:P(g('k_tt'),.2)})});
  arrow(826,y+h/2,878,y+h/2,g('k_hl')-.3,.2);
- box(886,y,350,h,g('k_hl'),{lw:6},a=>{txt('CÓ HIỆU LỰC TỪ',175,58,{size:21,col:GREY,align:'center',ls:1});icon('calendar',115,78,120,g('k_hl')+.25,.5);txt('01/01/2027',175,270,{size:52,col:RED,align:'center',a:P(g('k_hl')+.45,.2)})});
- txt('Số hiệu luật: chờ công bố chính thức',640,558,{size:19,w:600,col:GREY,align:'center',a:P(g('k_hl')+.8,.3)});
+ box(886,y,350,h,g('k_hl'),{lw:6},a=>{txt('CÓ HIỆU LỰC TỪ',175,58,{size:21,col:GREY,align:'center',ls:1});icon('calendar',115,78,120,g('k_hl')+.25,.5);txt('01/01/2027',175,270,{size:52,col:RED,align:'center',a:P(g('k_hl2'),.2)})});
+ txt('Số hiệu luật: chờ công bố chính thức',640,558,{size:19,w:600,col:GREY,align:'center',a:P(g('k_hl2')+1.1,.3)});
  source(SRC1,1)}
 function rowC(y,h,lab,t0,fn,o={}){arrow(322,350,382,y+h/2,t0-.05,.2);box(390,y,840,h,t0+.13,o,a=>{txt(lab,28,36,{size:19,col:GREY,ls:2});fn(a)})}
 function sC(t){const t0=g('s2');title(2,'HỘ KINH DOANH: ĐƯỢC CHỌN CÁCH TÍNH THUẾ',t0,{size:38,y:112,sub:'Áp dụng từ kỳ tính thuế năm 2027'});
  box(50,206,264,290,g('k_ho')-.1,{lw:6},a=>{photo('pho',14,14,236,160);txt('Hộ, cá nhân',132,218,{size:27,align:'center'});txt('kinh doanh',132,254,{size:27,align:'center'})});
- rowC(178,196,'DOANH THU TRÊN 1 TỶ ĐẾN 10 TỶ ĐỒNG / NĂM',g('k_1ty'),a=>{txt('Được chọn 1 trong 2 cách tính thuế',28,84,{size:32,a:P(g('k_chon'),.2)});
+ rowC(178,196,'DOANH THU TRÊN 1 TỶ ĐẾN 10 TỶ ĐỒNG / NĂM',g('k_1ty'),a=>{hl(26,54,tw('Được chọn',32)+6,38,P(g('k_nho'),.3));txt('Được chọn 1 trong 2 cách tính thuế',28,84,{size:32,a:P(g('k_chon'),.2)});
   box(28,106,384,68,g('k_c1'),{lw:3,r:10,fill:'#fff'},b=>{badge(1,36,34,g('k_c1')+.1,17);txt('Tỷ lệ % trên doanh thu',64,43,{size:25})});
   box(428,106,384,68,g('k_c2'),{lw:3,r:10,fill:'#fff'},b=>{badge(2,36,34,g('k_c2')+.1,17);txt('Theo thu nhập',64,43,{size:25})})},{lw:6});
  rowC(388,96,'TRƯỚC ĐÂY',g('s3')+.1,a=>{const s0='Ngưỡng được chọn:  ',w0=tw(s0,30),w1=tw('3 tỷ đồng',30);txt(s0,28,78,{size:30});txt('3 tỷ đồng',28+w0,78,{size:30,col:GREY,a:P(g('k_3ty')-.2,.2)});strikeS(28+w0,66,w1,g('k_3ty')+.5);
   txt('→  10 tỷ đồng',28+w0+w1+22,78,{size:30,col:RED,a:P(g('k_3ty')+.7,.2)})});
- stamp('CHỌN ≠ MIỄN',1080,440,P(g('k_nho')+.2,.4),{size:26,rot:-.1});
+ stamp('CHỌN ≠ MIỄN',182,552,P(g('k_kmien'),.4),{size:28,rot:-.07});
  rowC(498,96,'DOANH THU ĐẾN 1 TỶ ĐỒNG / NĂM',g('k_d1ty')-.3,a=>{txt('Không phải nộp thuế',28,78,{size:32,col:GREEN,a:P(g('k_knop'),.2)});txt('Đã có từ trước (Nghị định 141/2026),',478,58,{size:17,w:600,col:GREY,a:P(g('k_qd'),.25)});txt('không thuộc luật mới',478,80,{size:17,w:600,col:GREY,a:P(g('k_qd'),.25)})},{col:GREEN});
  source(SRC2,1)}
+// mảnh đất trống: nền nhạt, vạch đất, cỏ; lúc tg cỏ mọc cao thêm (nét xanh)
+function land(px,py,w,h,t0,tg){if(IMG.land){photo('land',px,py,w,h);return}x.save();x.fillStyle=TINT;rr(px,py,w,h,8);x.fill();x.restore();
+ const gy=py+h-20,st=[seg(px+16,gy,px+w-16,gy,1)],st2=[];
+ for(let i=0;i<9;i++){const bx=px+34+i*(w-68)/8,hh=16+14*R(i+3);st.push(seg(bx,gy,bx-6,gy-hh*.8,i*3+2),seg(bx,gy,bx,gy-hh,i*3+3),seg(bx,gy,bx+6,gy-hh*.8,i*3+4));
+  const h2=44+26*R(i+11);st2.push(seg(bx+9,gy,bx+4,gy-h2*.8,i*3+40),seg(bx+9,gy,bx+10,gy-h2,i*3+41),seg(bx+9,gy,bx+17,gy-h2*.75,i*3+42))}
+ sketch(st,t0,.5);sketch(st2,tg,.7,{col:GREEN,lw:4})}
 function sD(t){const t0=g('s4');title(3,'DOANH NGHIỆP NHỎ VÀ VỪA: MIỄN THUẾ 3 NĂM',t0,{size:38,y:112});
  const y=160,h=350;
  box(50,y,340,h,g('k_dn')-.1,{},a=>{pic('shop',IC.shop,14,14,312,150,g('k_dn')+.15);txt('AI ĐƯỢC HƯỞNG?',170,206,{size:21,col:GREY,align:'center',ls:2});txt('Doanh nghiệp',170,256,{size:32,align:'center'});txt('nhỏ và vừa',170,296,{size:32,align:'center'})});
  arrow(398,y+h/2,442,y+h/2,g('k_mien')-.25,.2);
- box(450,y,380,h,g('k_mien'),{lw:6},a=>{txt('MIỄN THUẾ THU NHẬP DOANH NGHIỆP',190,50,{size:18,col:GREY,align:'center',ls:1});txt('3 NĂM',190,172,{size:110,col:RED,align:'center',a:P(g('k_3nam')-.15,.2)});
-  const pg=P(g('k_giay'),.25);txt('tính từ khi được cấp',190,228,{size:23,w:600,align:'center',a:pg});txt('giấy chứng nhận đăng ký',190,260,{size:23,w:600,align:'center',a:pg});txt('doanh nghiệp lần đầu',190,292,{size:23,w:600,align:'center',a:pg})});
- const td=g('k_dat')-.35;
- box(890,y,340,h,td,{},a=>{txt('THÊM: ĐẤT BỎ HOANG',170,46,{size:21,col:RED,align:'center',ls:2});pic('land',grass,14,62,312,112,td+.3);txt('Thuế suất',170,208,{size:22,w:600,align:'center'});txt('0,2%',170,280,{size:76,col:RED,align:'center',a:P(g('k_02')-.1,.2)});txt('từ 01/7/2027',170,322,{size:26,align:'center',a:P(g('k_17'),.2)})});
- stamp('CỎ MỌC CŨNG TỐN TIỀN',1060,548,P(g('k_co')+.1,.4),{size:21,rot:-.06});
+ box(450,y,380,h,g('k_mien'),{lw:6},a=>{txt('MIỄN THUẾ THU NHẬP',190,44,{size:19,col:GREY,align:'center',ls:1});txt('DOANH NGHIỆP',190,70,{size:19,col:GREY,align:'center',ls:1});txt('3 NĂM',190,176,{size:96,col:RED,align:'center',a:P(g('k_3nam')-.15,.2)});
+  txt('tính từ khi được cấp',190,232,{size:23,w:600,align:'center',a:P(g('k_giay'),.2)});txt('giấy chứng nhận đăng ký',190,264,{size:23,w:600,align:'center',a:P(g('k_gcn'),.2)});txt('doanh nghiệp lần đầu',190,296,{size:23,w:600,align:'center',a:P(g('k_dk')+.3,.2)})});
+ const td=g('s5')-.05;
+ box(890,y,340,h,td,{},a=>{txt('THÊM: ĐẤT BỎ HOANG',170,46,{size:21,col:RED,align:'center',ls:2});land(14,62,312,112,td+.3,g('k_co'));txt('Thuế suất',170,208,{size:22,w:600,align:'center'});txt('0,2%',170,280,{size:76,col:RED,align:'center',a:P(g('k_02')-.1,.2)});
+  const dw=tw('từ 01/7/2027',26);txt('từ 01/7/2027',170,320,{size:26,align:'center',a:P(g('k_17'),.2)});underline(170-dw/2,328,dw,g('k_17')+1.1,.3)});
+ stamp('CỎ MỌC CŨNG TỐN TIỀN',1060,552,P(g('k_ton'),.4),{size:21,rot:-.06});
  source(SRC3,1)}
 function sE(t){const t0=g('s6');const m=tw('BẠN NÊN LÀM GÌ?',48);txt('BẠN NÊN LÀM GÌ?',640,122,{size:48,col:GREEN,align:'center',a:P(t0,.2)});underline(640-m/2,136,m,t0+.25,.35,{col:GREEN});
- const it=[[g('k_e1'),'Cộng doanh thu cả năm,','xem mình thuộc nhóm nào',0],[g('s7'),'Tính thử cả hai cách,','chọn cách có lợi hơn',0],[g('s8'),'Giữ đủ hóa đơn, chứng từ','Chờ nghị định hướng dẫn, hỏi cơ quan thuế',g('k_e3b')]];
- it.forEach(([ti,a1,a2,t2],i)=>{const y=172+i*138;box(170,y,940,122,ti,{col:GREEN},a=>{check(36,36,54,ti+.25,.25);txt(a1,130,54,{size:30});txt(a2,130,94,{size:30,a:t2?P(t2,.2):1})})});
+ const rowE=(i,ti,fn)=>{const y=172+i*138;box(170,y,940,122,ti,{col:GREEN},a=>{check(36,36,54,ti+.25,.25);fn()})};
+ rowE(0,g('k_e1'),()=>{txt('Cộng doanh thu cả năm,',130,54,{size:30});txt('xem mình thuộc nhóm nào',130,94,{size:30,a:P(g('k_e1b'),.2)})});
+ rowE(1,g('s7'),()=>{txt('Tính thử cả hai cách,',130,54,{size:30});txt('chọn cách có lợi hơn',130,94,{size:30,a:P(g('k_e2b'),.2)})});
+ rowE(2,g('s8'),()=>{const a1='Giữ đủ hóa đơn, ',b1='Chờ nghị định hướng dẫn, ';txt(a1,130,54,{size:30});txt('chứng từ',130+tw(a1,30),54,{size:30,a:P(g('k_ct'),.2)});
+  txt(b1,130,94,{size:30,a:P(g('k_e3b'),.2)});txt('hỏi cơ quan thuế',130+tw(b1,30),94,{size:30,a:P(g('k_e3c'),.2)})});
  source('Gợi ý chung, không thay cho tư vấn pháp lý.',1)}
 function sF(t){const t0=g('out');box(240,140,800,380,t0,{lw:6},a=>{txt('LƯU Ý',400,70,{size:30,col:RED,align:'center',ls:4});
- txt('Nội dung chỉ mang tính thông tin,',400,138,{size:36,w:600,f:'LoraV',align:'center'});txt('không phải tư vấn pháp lý.',400,186,{size:36,w:600,f:'LoraV',align:'center'});
- txt('Luật sửa đổi 3 luật thuế · thông qua 20/11/2026 · hiệu lực 01/01/2027',400,250,{size:19,w:600,align:'center'});txt('Số hiệu luật: chờ công bố chính thức',400,280,{size:19,w:600,col:GREY,align:'center'});
+ txt('Nội dung chỉ mang tính thông tin,',400,138,{size:36,w:600,f:'LoraV',align:'center'});txt('không phải tư vấn pháp lý.',400,186,{size:36,w:600,f:'LoraV',align:'center',a:P(g('k_kp')-.1,.2)});
+ const p2=P(g('k_kp')+.9,.3);txt('Luật sửa đổi 3 luật thuế · thông qua 20/11/2026 · hiệu lực 01/01/2027',400,250,{size:19,w:600,align:'center',a:p2});txt('Số hiệu luật: chờ công bố chính thức',400,280,{size:19,w:600,col:GREY,align:'center',a:p2});
  txt('Kiểm tra văn bản gốc: vbpl.vn · thuvienphapluat.vn',400,330,{size:22,w:600,col:BLUE,align:'center',a:P(g('k_src'),.3)})});
  source(SRC1+'  ·  Ảnh minh họa: Unsplash',1)}
 defineEpisode({header:'Luật sửa đổi 3 luật thuế  ·  thông qua 20/11/2026  ·  hiệu lực 01/01/2027',
