@@ -1,0 +1,125 @@
+{
+ "bg": "work/img/OPBG.png",
+ "depth": "work/img/OPBG_d.png",
+ "crop_y": 0.75,
+ "sky_thr": 0.07,
+ "timing": "work/vo_op_{lang}.json",
+ "music_lead": 4.6,
+ "end": "end+4.5",
+ "fonts": {
+  "brush": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/MaShanZheng.ttf",
+  "cap_vi": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/BeVN600.ttf",
+  "cap_en": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/Lora600.ttf"
+ },
+ "dragon": {
+  "img": "work/img/SIL.png",
+  "width": 200,
+  "wave": [
+   0,
+   400,
+   0
+  ],
+  "occlude": 0,
+  "opacity": 0.85,
+  "path": [
+   [
+    0.0,
+    0.8,
+    0.8
+   ],
+   [
+    "op2+0.5",
+    0.56,
+    0.78
+   ]
+  ],
+  "fade_in": [
+   0.0,
+   1.6
+  ],
+  "fade_out": [
+   "op2-1.5",
+   "op2+0.4"
+  ]
+ },
+ "ink": [
+  {
+   "text": "五千言",
+   "font": "brush",
+   "size": 150,
+   "x": 110,
+   "y": 200,
+   "color": "#a8161d",
+   "t0": "op2+1.0",
+   "t1": "op3+1.5",
+   "reveal": 1.8
+  },
+  {
+   "text": "老子",
+   "font": "brush",
+   "size": 260,
+   "x": 420,
+   "y": 220,
+   "align": "center",
+   "color": "#a8161d",
+   "t0": {
+    "vi": "op3@Lão Tử-0.6",
+    "en": "op3@Laozi-0.6"
+   },
+   "reveal": 2.2
+  }
+ ],
+ "captions": [
+  {
+   "text": {
+    "vi": "NĂM NGHÌN CHỮ",
+    "en": "FIVE THOUSAND WORDS"
+   },
+   "font": "cap",
+   "size": 30,
+   "spacing": 7,
+   "x": 122,
+   "y": 300,
+   "color": "#2b2622",
+   "t0": "op2+2.2",
+   "t1": "op3+1.5",
+   "fadein": 1.0
+  },
+  {
+   "text": {
+    "vi": "LÃO TỬ",
+    "en": "LAOZI"
+   },
+   "font": "cap",
+   "size": 46,
+   "spacing": 18,
+   "x": 420,
+   "y": 400,
+   "align": "center",
+   "color": "#2b2622",
+   "t0": {
+    "vi": "op3@Lão Tử+0.6",
+    "en": "op3@Laozi+0.6"
+   },
+   "fadein": 1.0
+  },
+  {
+   "text": {
+    "vi": "NGƯỜI VIẾT ĐẠO ĐỨC KINH",
+    "en": "AUTHOR OF THE TAO TE CHING"
+   },
+   "font": "cap",
+   "size": 24,
+   "spacing": 9,
+   "x": 420,
+   "y": 455,
+   "align": "center",
+   "color": "#6b1216",
+   "t0": {
+    "vi": "op3@Lão Tử+1.8",
+    "en": "op3@Laozi+1.8"
+   },
+   "fadein": 1.0
+  }
+ ]
+}

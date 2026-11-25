@@ -212,6 +212,9 @@ def frame(t):
     for fx in sh.get('fx', []):
         if fx == 'fire': img = fire(img, t)
         elif fx == 'smoke': img = smoke(img, t, sh.get('smoke_at', [.75, .55]))
+        elif fx == 'purple':   # luồng khí tím trôi từ phía đông (phải) sang
+            band = np.exp(-(((xx / W) - (1.1 - .25 * sm(lt_ / 6))) ** 2) / .08 - ((yy / H - .3) ** 2) / .06)[..., None]
+            img = img * (1 - .35 * band) + np.float32([.72, .55, .85]) * .35 * band
         elif fx == 'flicker': img = img * (1 + .04 * math.sin(t * 9) + .03 * math.sin(t * 23))
     if 'ink' in sh: img = ink_char(img, sh['ink'], lt_)
     if sh.get('sweep', (i % 3 == 1)): img = sweep(img, t - sh['s'], sh['e'] - sh['s'])
