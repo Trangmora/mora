@@ -4,7 +4,7 @@ File âm thanh **không commit vào git** (`.gitignore`); chúng chỉ nằm tr�
 **Không dùng nhạc Artlist** (bị dính bản quyền). Ba bài Artlist đã xóa ngày 25/11/2026.
 **Quy tắc:** dưới giọng đọc chỉ dùng bài **không lời**. Bài có lời chỉ dùng ở khoảng ngắt không có giọng đọc.
 
-| File | Dài | Nước / chất liệu | Lời? | Nguồn dự đoán (cần kiểm tra giấy phép) |
+| File | Dài | Nước / chất liệu | Lời? | Nguồn (chủ kênh xác nhận không dính bản quyền, 25/11/2026) |
 |---|---|---|---|---|
 | Hon_Kyoku_-_Doug_Maxwell__Zac_Zinger | 2:28 | Nhật, shakuhachi, thiền | không | YouTube Audio Library |
 | Aomori_Wings_-_The_Mini_Vandals | 2:03 | Nhật, hiện đại | không | YouTube Audio Library |

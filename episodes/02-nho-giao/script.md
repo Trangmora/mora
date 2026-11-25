@@ -1,7 +1,7 @@
-# Tập 2: Nho giáo (Trung Quốc), kịch bản bản 3
+# Tập 2: Nho giáo (Trung Quốc), kịch bản bản 4
 
 **Trạng thái:** chờ chủ kênh duyệt. Chưa tạo ảnh.
-**Thời lượng dự kiến:** khoảng 4 phút 10 giây (tính cả các khoảng ngắt nhạc).
+**Thời lượng dự kiến:** khoảng 4 phút 45 giây (tính cả các khoảng ngắt nhạc).
 **Chữ tiêu đề:** 儒 (Nho), 孔子 (Khổng Tử).
 
 ## Mạch truyện
@@ -12,6 +12,7 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Hồi 3, lời thầy sống lại:** học trò chép Luận Ngữ. Tần Thủy Hoàng đốt sách, tưởng như Nho giáo đã chết. Nhà Hán đưa Nho giáo trở lại. Đây là **cú lật**.
 - **Những điều thú vị:** 1.300 năm khoa cử. Văn Miếu, và khoa thi cuối cùng ở Việt Nam năm 1919. Gia phả 80 đời. Bài học "kính trên nhường dưới" trong nhà mình.
 - **Chuyện nhỏ về Khổng Tử rải khắp bài:** học phí bó thịt khô, nhạc Thiều ba tháng không biết vị thịt, "hà chính mãnh ư hổ", bị vây đói vẫn gảy đàn, "chó lạc nhà", gặp Lão Tử "như con rồng".
+- **Ông dạy gì?** (sau Luận Ngữ): Nhân, Lễ, Hiếu, Quân tử, trị nước bằng đức và chính danh, rồi Ngũ luân (Mạnh Tử) và câu "Kỷ sở bất dục". Mỗi ý đều trích đúng chương Luận Ngữ.
 - **Kết:** quay lại câu hỏi. "Ông già bị cả thiên hạ từ chối… 2.500 năm sau vẫn còn đang dạy học."
 
 ## Lời dẫn và cảnh
@@ -28,7 +29,7 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 | s1 | A1 nước Lỗ, chiến tranh | Chuyện bắt đầu khoảng năm 551 trước Công nguyên, ở nước Lỗ nhỏ bé. Thời ấy là thời Xuân Thu… các nước đánh nhau liên miên. | It begins around 551 BC, in the small state of Lu. An age of endless war between rival kingdoms. |
 | s2 | A2 cậu bé trông kho thóc, chăn bò | Cha mất khi ông mới ba tuổi. Nhà nghèo, ông phải làm đủ việc: giữ kho thóc, chăn bò dê. | His father died when he was three. The family was poor. He kept the grain stores… he tended cattle. |
 | s3 | A3 thiếu niên đọc thẻ tre bên đèn dầu | Nhưng mười lăm tuổi, ông đã quyết chí học. Ông không có thầy cố định… ai giỏi điều gì, ông học người ấy. | But at fifteen, he set his heart on learning. He had no single teacher… he learned from anyone who knew something. |
-| s4 | A4 Khổng Tử dạy học (clip) | Rồi ông mở trường. Giàu hay nghèo, ai cũng được học. Học phí là gì các bác biết không? … Chỉ một bó thịt khô. | Then he opened a school. Rich or poor, anyone could come. The fee? … A bundle of dried meat. |
+| s4 | A4 Khổng Tử dạy học (clip) | Rồi ông mở trường. Giàu hay nghèo, ai cũng được học. Học phí là gì các bác biết không? … Theo cách hiểu phổ biến, chỉ cần một bó thịt khô. | Then he opened a school. Rich or poor, anyone could come. The fee? … A bundle of dried meat. |
 | s4b | A4 cận mặt, mỉm cười | Tương truyền, ông có tới ba nghìn học trò. | Legend says he had three thousand students. |
 | s4c | A4c Khổng Tử nghe nhạc Thiều, nhắm mắt, bát cơm thịt bỏ quên | Ông còn mê nhạc lắm. Có lần ở nước Tề, nghe khúc nhạc Thiều, ông say mê đến nỗi… ba tháng liền ăn thịt mà không biết thịt có vị gì. | He loved music, too. Once, after hearing the ancient Shao music, he was so moved… that for three months he couldn't taste his meat. |
 | **Ngắt nhạc 2,5 giây** | | | |
@@ -38,13 +39,19 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 | s7 | A7 bị vây giữa Trần và Thái, gảy đàn | Có lần bị vây giữa nước Trần và nước Thái, cả đoàn hết sạch lương thực, học trò đói lả. Vậy mà ông vẫn ngồi gảy đàn… và hát. | Once, trapped between the states of Chen and Cai, they ran out of food. His students were starving… and Confucius kept playing his zither, and singing. |
 | s8 | A8 ông đứng một mình ở cổng thành | Có lần lạc mất học trò, ông đứng một mình ở cổng thành. Người ta bảo trông ông thảm như… một con chó lạc nhà. Nghe vậy, ông cười: "Nói đúng lắm!" | Once, separated from his students, he stood alone at a city gate. Someone said he looked like… a stray dog. Confucius laughed. "That's exactly right." |
 | s9 | A9 ông già trở về, xếp thẻ tre | Mười bốn năm. Không ai dùng ông. Gần bảy mươi tuổi, ông trở về quê… dạy học, và sắp xếp lại sách xưa. | Fourteen years. No one hired him. At almost seventy he went home… to teach, and to put the old books in order. |
-| s10 | A10 đèn tắt, chiếu trống (điểm nhấn: nhạc tắt) | Năm 479 trước Công nguyên, ông mất… Ông nghĩ đời mình đã thất bại. | In 479 BC he died… believing he had failed. |
+| s10 | A10 đèn tắt, chiếu trống (điểm nhấn: nhạc tắt) | Cuối đời, ông từng than: "Không ai hiểu ta cả." Năm 479 trước Công nguyên, ông mất… tưởng như cả đời đã thất bại. | Near the end he sighed: "No one understands me." In 479 BC he died… it seemed, a failure. |
 | **Ngắt nhạc 3 giây.** Một đốm sáng nhỏ, tiếng chuông | | | |
-| s11 | A11 học trò chép lời thầy lên thẻ tre (clip) | Nhưng học trò không quên. Họ chép lại từng lời thầy dạy lên những thẻ tre. Cuốn sách ấy là Luận Ngữ. | But his students did not forget. They wrote down his words on strips of bamboo. That book became the Analects. |
-| s12 | A12 năm cặp người, ngũ luân | Nho giáo dạy rằng xã hội vững bền nhờ năm mối quan hệ: vua tôi, cha con, chồng vợ, anh em, bạn bè. Ai cũng giữ đúng phận mình. | Confucianism teaches that society rests on five bonds: ruler and subject, parent and child, husband and wife, elder and younger, friend and friend. |
-| s13 | A13 tay viết thư pháp, chữ thêm bằng code | Và có một câu mà đến giờ mình vẫn hay nghe: "Kỷ sở bất dục, vật thi ư nhân." Điều mình không muốn… thì đừng làm cho người khác. | And one line we still hear today: what you do not want for yourself… do not do to others. |
+| s11 | A11 học trò chép lời thầy lên thẻ tre (clip) | Nhưng học trò không quên. Họ cùng học trò của họ chép lại lời thầy lên những thẻ tre. Cuốn sách ấy là Luận Ngữ. | But his students did not forget. They, and their own students, wrote his words down on strips of bamboo. That book became the Analects. |
+| **Ngắt nhạc 2,5 giây**, tiêu đề "ÔNG DẠY GÌ?" / "WHAT DID HE TEACH?" | | | |
+| t1 | A12a chữ 仁 lớn, hai người đứng cạnh nhau | Vậy rốt cuộc ông dạy gì? Điều quan trọng nhất là chữ Nhân. Học trò hỏi Nhân là gì, ông đáp gọn: "Thương người." | So what did he actually teach? At the heart of it is one word: *ren*, humaneness. A student asked what it meant. He answered: "Love people." |
+| t2 | A12b nghi lễ cúi chào trong sân, chữ 禮 | Thứ hai là Lễ: cư xử đúng mực, từ cách chào hỏi đến cách thờ cúng. Với ông, Lễ là cách để lòng tốt bên trong hiện ra bên ngoài. | Second, *li*: ritual and good manners, from how you greet someone to how you honour the dead. For him, ritual is how goodness inside becomes visible outside. |
+| t3 | A12c người con kính cẩn dâng trà cho cha mẹ | Thứ ba là Hiếu. Ông nói: nuôi cha mẹ thôi thì chưa đủ, vì chó ngựa người ta cũng nuôi. Không có lòng kính… thì khác gì đâu? | Third, filial piety. Feeding your parents is not enough, he said. We feed our dogs and horses too. Without respect… what is the difference? |
+| t4 | A12d người quân tử áo vải bên cạnh quý tộc áo gấm | Và ông muốn mọi người trở thành người quân tử. Nhưng quân tử không phải do dòng dõi, mà do đạo đức. "Quân tử hiểu điều nghĩa, tiểu nhân chỉ hiểu điều lợi." | And he wanted everyone to become a *junzi*, a person of noble character. Not noble by birth, but by conduct. "The noble person understands what is right. The small person understands what is profitable." |
+| t5 | A12e vua ngồi ngay ngắn, dân chúng hướng về | Còn với người cai trị, ông dạy: hãy trị nước bằng đức, chứ đừng chỉ bằng hình phạt. Vua phải ra vua, tôi phải ra tôi, cha phải ra cha, con phải ra con. | And to rulers, he said: govern by virtue, not just by punishment. Let the ruler be a ruler, the minister a minister, the father a father, the son a son. |
+| t6 | A12 năm cặp người, ngũ luân | Về sau, Mạnh Tử gom lại thành năm mối quan hệ, gọi là Ngũ luân: vua tôi, cha con, chồng vợ, anh em, bạn bè. | Later, his follower Mencius summed it up as five relationships: ruler and subject, parent and child, husband and wife, elder and younger, friend and friend. |
+| t7 | A13 tay viết thư pháp, chữ 己所不欲 勿施於人 thêm bằng code | Và khi học trò hỏi có một chữ nào dùng được cả đời không, ông trả lời: "Kỷ sở bất dục, vật thi ư nhân." Điều mình không muốn… thì đừng làm cho người khác. | And when a student asked for one word to live by, he said: what you do not want for yourself… do not do to others. |
 | **Ngắt nhạc 3 giây.** Lửa | | | |
-| s14 | A14 đốt sách thời Tần (clip lửa, điểm nhấn: lóe đỏ) | Hai trăm năm sau, Tần Thủy Hoàng thống nhất Trung Hoa. Năm 213 trước Công nguyên, ông ra lệnh đốt sách… và tương truyền, chôn sống cả các nho sĩ. | Two centuries later, Qin Shi Huang united China. In 213 BC he ordered the books burned… and, the story goes, buried scholars alive. |
+| s14 | A14 đốt sách thời Tần (clip lửa, điểm nhấn: lóe đỏ) | Hơn hai trăm năm sau khi ông mất, Tần Thủy Hoàng thống nhất Trung Hoa. Năm 213 trước Công nguyên, ông ra lệnh đốt sách… và tương truyền, chôn sống cả các nho sĩ. | More than two centuries after his death, Qin Shi Huang united China. In 213 BC he ordered the books burned… and, the story goes, buried scholars alive. |
 | s15 | A15 Hán Vũ Đế trên ngai | Tưởng như Nho giáo đã chết. Nhưng nhà Tần sụp đổ chỉ sau mười lăm năm. Đến nhà Hán, Hán Vũ Đế đưa Nho giáo lên làm tư tưởng chính thống của triều đình. | It seemed the teachings were dead. But the Qin fell after just fifteen years. And under the Han, Emperor Wu made Confucianism the official philosophy of the state. |
 | **Ngắt nhạc 4 giây**, tiêu đề "NHỮNG ĐIỀU THÚ VỊ" / "CURIOUS FACTS" | | | |
 | s16 | A16 trường thi, dãy buồng nhỏ (clip sĩ tử viết) | Suốt khoảng một nghìn ba trăm năm, muốn làm quan ở Trung Quốc thì phải thi đỗ kinh sách Nho giáo. Sĩ tử bị nhốt mấy ngày đêm trong những buồng thi chật như cái tủ. | For about thirteen hundred years, to become an official in China you had to pass exams on the Confucian classics. Candidates spent days and nights locked in cells barely bigger than a cupboard. |
@@ -69,12 +76,47 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Nhạc Thiều:** "Tử tại Tề văn Thiều, tam nguyệt bất tri nhục vị" (Luận Ngữ 7.14).
 - **"Hà chính mãnh ư hổ"** (苛政猛於虎): Lễ Ký, thiên Đàn Cung hạ, chuyện ở chân núi Thái Sơn.
 - **Gặp Lão Tử, "như con rồng"** (其猶龍邪): Sử ký, Lão Tử Hàn Phi liệt truyện. Đây là truyền thuyết, nên lời dẫn nói "tương truyền".
+- **"Không ai hiểu ta cả"** (莫我知也夫): Luận Ngữ 14.35.
+- **Nhân là "thương người"** (愛人): Luận Ngữ 12.22. **Khắc kỷ phục lễ vi nhân:** Luận Ngữ 12.1.
+- **Hiếu, "chó ngựa cũng được nuôi":** Luận Ngữ 2.7.
+- **"Quân tử dụ ư nghĩa, tiểu nhân dụ ư lợi":** Luận Ngữ 4.16.
+- **Trị nước bằng đức:** Luận Ngữ 2.1 và 2.3. **Chính danh** ("quân quân, thần thần, phụ phụ, tử tử"): Luận Ngữ 12.11.
+- **"Kỷ sở bất dục, vật thi ư nhân":** Luận Ngữ 15.24 (trả lời Tử Cống, chữ "thứ" 恕). Cũng có ở 12.2.
+- **Luận Ngữ** do học trò và học trò của học trò biên soạn qua nhiều thế hệ, không phải do Khổng Tử tự viết. Ông tự nhận mình "thuật nhi bất tác", chỉ truyền lại chứ không sáng tác (Luận Ngữ 7.1).
+- **Không nhầm lẫn:** "Ngũ thường" (Nhân, Nghĩa, Lễ, Trí, Tín) và "Tam cương" là do Đổng Trọng Thư và các nhà Nho đời Hán hệ thống lại, không phải lời Khổng Tử. Kịch bản không gán chúng cho ông.
+- **Học phí bó thịt khô** (束脩, 7.7): có học giả hiểu là "từ 15 tuổi trở lên", nên lời dẫn nói "theo cách hiểu phổ biến".
+- **Gia phả:** Guinness ghi nhận là gia phả dài nhất. Bản năm 2009 có khoảng 2 triệu người, 83 đời (có nguồn ghi 80 hoặc 86), và một số đời bị khuyết.
 - **Ngũ luân** là cách gọi của Mạnh Tử, nên lời dẫn nói "Nho giáo dạy", không nói "ông dạy".
 - **Nhà Tần:** đốt sách năm 213 trước Công nguyên, chôn nho sĩ năm 212 (có tranh cãi, nên nói "tương truyền"). Nhà Tần tồn tại từ năm 221 đến 206 trước Công nguyên, khoảng 15 năm.
 - **Hán Vũ Đế** độc tôn Nho thuật theo đề nghị của Đổng Trọng Thư, khoảng năm 136–134 trước Công nguyên.
 - **Khoa cử Trung Quốc:** từ năm 605 (nhà Tùy) đến năm 1905.
 - **Việt Nam:** Văn Miếu dựng năm 1070. Khoa thi Nho học cuối cùng là năm 1919 ở Huế.
 - **Gia phả họ Khổng:** bản sửa năm 2009 có hơn 80 đời, khoảng 2 triệu người (Guinness).
+
+## Nguồn ghi trong mô tả video
+**EN**
+Sources:
+- Confucius, *The Analects* (Lunyu), trans. Edward Slingerland (Hackett, 2003) / James Legge (1861): 2.1, 2.3, 2.7, 4.16, 7.1, 7.7, 7.14, 9.9, 12.1, 12.11, 12.22, 14.35, 15.24, 18.4
+- Sima Qian, *Records of the Grand Historian* (Shiji), ch. 47 "Hereditary House of Confucius"; ch. 63 (Laozi)
+- *Mencius* 3A4 (the five relationships); *Book of Rites* (Liji), "Tan Gong II" (the tiger story)
+- Stanford Encyclopedia of Philosophy, "Confucius": https://plato.stanford.edu/entries/confucius/
+- Encyclopaedia Britannica, "Confucius" and "Chinese examination system"
+- Guinness World Records, "Longest family tree": https://guinnessworldrecords.com/world-records/67453-longest-family-tree
+- Temple of Literature (Văn Miếu), Hanoi, founded 1070 (*Đại Việt sử ký toàn thư*)
+
+Music: Finding Movement, Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0. Yearning, Nat Keefe. Imperial Forces, Aaron Kenny (YouTube Audio Library).
+Visuals: AI-assisted illustrations. Narration voice: AI voice (ElevenLabs).
+
+**VI**
+Nguồn tham khảo:
+- Khổng Tử, *Luận Ngữ*, các chương 2.1, 2.3, 2.7, 4.16, 7.1, 7.7, 7.14, 9.9, 12.1, 12.11, 12.22, 14.35, 15.24, 18.4
+- Tư Mã Thiên, *Sử ký*, "Khổng Tử thế gia" (quyển 47), "Lão Tử Hàn Phi liệt truyện" (quyển 63)
+- *Mạnh Tử*, Đằng Văn Công thượng (Ngũ luân); *Lễ Ký*, Đàn Cung hạ (chuyện "hà chính mãnh ư hổ")
+- *Đại Việt sử ký toàn thư* (Văn Miếu năm 1070); khoa thi Nho học cuối cùng năm 1919 (Khải Định)
+- Stanford Encyclopedia of Philosophy, "Confucius"; Britannica; Guinness World Records
+
+Nhạc: Finding Movement, Kevin MacLeod (incompetech.com), CC BY 4.0. Yearning, Nat Keefe. Imperial Forces, Aaron Kenny (YouTube Audio Library).
+Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 ## Prompt tạo ảnh
 - **Cách ghép prompt:** prompt = `ST` (phong cách chung trong `pipeline/scenes/gen.py`) + `CN_ERA` + `CONFUCIUS` (nếu có ông) + phần mô tả riêng của cảnh + `CN_NEG`.
@@ -106,6 +148,11 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 | A10 | Ngày ông mất | The same courtyard room as A9 but empty: his reed mat, his guqin and a closed bundle of bamboo slips on the low table, the oil lamp just gone out with a thin curl of smoke, pale cream light. No people. |
 | A11 | Học trò chép Luận Ngữ | Four Chinese students kneeling at low tables, writing with brush and black ink on long narrow bamboo slips, a small knife (shu dao) for scraping mistakes, finished slips being tied together with cord into a scroll-like bundle, warm ochre room. |
 | A12 | Ngũ luân | Five small scenes in a row on a cream background, each a pair of front-facing figures in early Chinese hanfu: a ruler with a tall cap and a minister bowing; a father and son; a husband and wife; an elder brother and younger brother; two friends with joined hands. Simple, symmetrical, decorative paper-cut panel. |
+| A12a | Chữ Nhân | Two ordinary Chinese people of the Spring and Autumn period, an old farmer and a young scholar, standing front-facing side by side, the scholar gently supporting the old man's arm, warm ochre background with a very large faint cream circle behind them (the character 仁 will be added by code). |
+| A12b | Lễ | A courtyard of an early Chinese ancestral temple: a family in crossed-collar hanfu bowing with joined hands (gongshou) before a low altar with bronze ritual vessels (ding, gui) and a simple wooden ancestral tablet, incense smoke, grey tile roof. |
+| A12c | Hiếu | A young man in a simple hanfu kneeling on a reed mat, offering a bowl with both hands to his elderly parents who sit kneeling at a low table, respectful posture, early Chinese house interior with bamboo-slip bundles on a shelf. |
+| A12d | Quân tử | Two men front-facing: on the left a humble scholar in plain undyed hemp robe holding a bundle of bamboo slips, calm and upright; on the right a rich noble in brightly patterned silk robe with jade pendants, holding a bag of coins and looking greedy; simple balanced composition. |
+| A12e | Trị nước bằng đức | An early Chinese ruler of a small state in a black and red robe sitting upright and calm on a raised mat, a group of common people and farmers in hemp clothes facing him with peaceful expressions, no weapons, no soldiers, a rice and millet field outside the open hall. |
 | A13 | Tay viết thư pháp | Close-up of an old hand holding a Chinese writing brush over a long unrolled sheet of plain cream silk on a low table, an inkstone and ink stick, a small jade brush rest; blank silk, no characters (characters added later by code). |
 | A14 | Đốt sách thời Tần | Qin dynasty soldiers in the armour of the Terracotta Army (rectangular lamellar armour, side topknot hairstyle, no helmet) throwing bundles of bamboo slips into a large bonfire in front of a grand black-and-red Qin palace; a Qin official in black robe and tall cap holding an edict; flames bright orange-red. Bright warm image, no gore, no bodies. |
 | A15 | Hán Vũ Đế | Emperor Wu of Han seated front-facing on a raised platform in a Han palace, wearing a black and red ceremonial robe and the mianguan crown: a flat rectangular board on top with strings of jade beads hanging in front and behind; two Confucian scholar-officials in black robes and jinxian caps kneeling before him presenting bamboo slip books; red lacquered pillars, bronze lamps. |
@@ -126,8 +173,8 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Hiện có:** Finding Movement (mở đầu, hồi 1), Yearning (hồi 2 và đoạn kết), Imperial Forces (đốt sách, nhà Hán, khoa cử).
 - **Nên bổ sung:** 1 bài cổ cầm hoặc cổ tranh không lời (YouTube Audio Library hoặc Pixabay) cho đoạn gảy đàn và Luận Ngữ.
 
-## Chi phí dự kiến (khoảng $3,9, dưới mức $5)
-- **23 ảnh và 12 bản chớp mắt, mỉm cười:** khoảng $2,2.
+## Chi phí dự kiến (khoảng $4,2, dưới mức $5)
+- **28 ảnh và 12 bản chớp mắt, mỉm cười:** khoảng $2,2.
 - **6–7 clip Wan:** khoảng $0,7.
 - **Giọng đọc 2 ngôn ngữ:** khoảng $0,6.
 - **Dự phòng ảnh làm lại:** khoảng $0,2.
