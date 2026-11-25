@@ -65,3 +65,4 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 
 - **Ảnh bìa tự chọn trên YouTube cần kênh đã xác minh** (youtube.com/verify, xác minh bằng số điện thoại). Ngày 25/11/2026, kênh Ridiculous Case (bản tiếng Việt) chưa xác minh nên Morapost đăng được video nhưng YouTube từ chối ảnh bìa. Sau khi đăng, luôn xem `links[].warning` trong `morapost.py status`.
 - Chạy `python3 pipeline/publish/morapost.py accounts` để kiểm tra lại ID trước khi đăng.
+- **Nhịp đăng:** 3 ngày một video (chủ kênh chốt 25/11/2026). Lịch cụ thể ở `SCHEDULE.md`. Đổi giờ: Morapost dùng `PATCH /api/v1/posts/<id>` với `scheduled_at`, Buffer dùng `editPost` với `dueAt`.
