@@ -105,7 +105,7 @@ Sources:
 - Guinness World Records, "Longest family tree": https://guinnessworldrecords.com/world-records/67453-longest-family-tree
 - Temple of Literature (Văn Miếu), Hanoi, founded 1070 (*Đại Việt sử ký toàn thư*)
 
-Music: Finding Movement, Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0. Yearning, Nat Keefe. Imperial Forces, Aaron Kenny (YouTube Audio Library).
+Music: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
 Visuals: AI-assisted illustrations. Narration voice: AI voice (ElevenLabs).
 
 **VI**
@@ -116,7 +116,7 @@ Nguồn tham khảo:
 - *Đại Việt sử ký toàn thư* (Văn Miếu năm 1070); khoa thi Nho học cuối cùng năm 1919 (Khải Định)
 - Stanford Encyclopedia of Philosophy, "Confucius"; Britannica; Guinness World Records
 
-Nhạc: Finding Movement, Kevin MacLeod (incompetech.com), CC BY 4.0. Yearning, Nat Keefe. Imperial Forces, Aaron Kenny (YouTube Audio Library).
+Nhạc: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
 Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 ## Prompt tạo ảnh
