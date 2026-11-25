@@ -1,0 +1,10 @@
+{
+ "bg_tai": {
+  "file": "images/bg_tai.jpg",
+  "desc": "Chinese shanshui ink wash of Mount Tai: granite peaks, stone stairway to summit gate tower (Nantianmen-like), pines lower-left, sea of clouds, empty sky upper-left for text, NO sun (opening/ending background)"
+ },
+ "dragon_red": {
+  "file": "images/dragon_red.jpg",
+  "desc": "traditional Chinese dragon (long) in vermilion red ink on plain white, side view flying right-to-left, antlers, whiskers, five claws, flaming pearl; composite with multiply blend"
+ }
+}

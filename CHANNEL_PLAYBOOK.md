@@ -26,4 +26,37 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
 - **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
 - **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
-- **Kênh YouTube tiếng Anh và tiếng Việt phải được kết nối trong Morapost** (Settings → Accounts). Hiện chỉ có kênh "Trang AI".
+- **Cách đăng theo độ dài (chủ kênh chốt):**
+  - **Video dài (16:9, cả tập):** YouTube và Facebook fanpage của từng ngôn ngữ. Kênh nào khác nhận được video dài thì cũng đăng bản dài.
+  - **Instagram, Threads, TikTok, X:** cắt lại khổ dọc 9:16, chia thành phần 1, phần 2… cho ngắn. Ảnh và giọng dùng lại, không tốn credit.
+- **Tóm tắt kênh đăng:**
+  - **Bản tiếng Anh (6 kênh):** YouTube Asian Myths & Culture, Instagram asian_myths, Threads call me You, Facebook Ridiculous Case (qua Morapost); X asian_myths, TikTok asian_myths (qua Buffer).
+  - **Bản tiếng Việt (2 kênh):** YouTube Ridiculous Case, Facebook Mora Media (qua Morapost).
+- **Kênh đăng (chủ kênh chốt ngày 25/11/2026):**
+
+| Bản | Nền tảng | Tài khoản | ID trong Morapost |
+|---|---|---|---|
+| Tiếng Anh | YouTube | Asian Myths & Culture | `UC5u1YF6TmvZTKCKlEU6K9-w` |
+| Tiếng Anh | Instagram | asian_myths | `29748236828134140` |
+| Tiếng Anh | Threads | call me You | `41529474649984500` |
+| Tiếng Anh | Facebook | Ridiculous Case | `1054215381111543` |
+| Tiếng Việt | YouTube | Ridiculous Case | `UCDHwhQBQk4ndvpwem5hWqCg` |
+| Tiếng Việt | Facebook | Mora Media | `661562267031641` |
+
+
+## Đăng qua Buffer (thêm ngày 25/11/2026)
+- **Key:** lưu trong Network secrets, host `api.buffer.com` (GraphQL, `POST https://api.buffer.com`). Proxy tự gắn key.
+- **Kênh:**
+
+| Nền tảng | Tài khoản | Channel ID trong Buffer |
+|---|---|---|
+| X (Twitter) | asian_myths | `6b06ec308541f09ecb9d8490` |
+| TikTok | asian_myths | `6b06ec178541f09ecb9d82f6` |
+
+- **Bản ngôn ngữ:** hai kênh này chỉ đăng bản **tiếng Anh** (chủ kênh chốt).
+- **Định dạng:** cả hai kênh hợp với video dọc 9:16 ngắn hơn bản YouTube.
+  - TikTok gần như bắt buộc khổ dọc.
+  - X giới hạn độ dài video với tài khoản thường. Kiểm tra lại giới hạn trước khi đăng.
+- Chưa có script đăng cho Buffer. Viết khi có video đầu tiên cần đăng.
+
+- Chạy `python3 pipeline/publish/morapost.py accounts` để kiểm tra lại ID trước khi đăng.
