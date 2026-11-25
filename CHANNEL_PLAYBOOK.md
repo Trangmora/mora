@@ -37,4 +37,20 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 | Tiếng Việt | YouTube | Ridiculous Case | `UCDHwhQBQk4ndvpwem5hWqCg` |
 | Tiếng Việt | Facebook | Mora Media | `661562267031641` |
 
+
+## Đăng qua Buffer (thêm ngày 25/11/2026)
+- **Key:** lưu trong Network secrets, host `api.buffer.com` (GraphQL, `POST https://api.buffer.com`). Proxy tự gắn key.
+- **Kênh:**
+
+| Nền tảng | Tài khoản | Channel ID trong Buffer |
+|---|---|---|
+| X (Twitter) | asian_myths | `6b06ec308541f09ecb9d8490` |
+| TikTok | asian_myths | `6b06ec178541f09ecb9d82f6` |
+
+- **Bản ngôn ngữ dùng cho hai kênh này:** chưa chốt, nhưng tên kênh cho thấy là bản tiếng Anh.
+- **Định dạng:** cả hai kênh hợp với video dọc 9:16 ngắn hơn bản YouTube.
+  - TikTok gần như bắt buộc khổ dọc.
+  - X giới hạn độ dài video với tài khoản thường. Kiểm tra lại giới hạn trước khi đăng.
+- Chưa có script đăng cho Buffer. Viết khi có video đầu tiên cần đăng.
+
 - Chạy `python3 pipeline/publish/morapost.py accounts` để kiểm tra lại ID trước khi đăng.
