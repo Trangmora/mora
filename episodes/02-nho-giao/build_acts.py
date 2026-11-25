@@ -39,18 +39,18 @@ def act2(g, end):
 def act3(g, end):
     s = []
     s += scene('clip_A11.mp4', 0, g('t1') - .3, [{"labels": [lab(3.6, 8.5, P(L("LUẬN NGỮ", "THE ANALECTS"), ""))]}], tr='none')
-    s += scene('img/A12a.png', g('t1') - .3, g('t2') - .3, [{"labels": [lab(0.0, 2.4, P("", L("ÔNG DẠY GÌ?", "WHAT DID HE TEACH?")), 'tc', 40), lab(3.0, 8.0, P(L("NHÂN · ", "REN · "), L("THƯƠNG NGƯỜI", "LOVE PEOPLE")))],
+    s += scene('clip_A12a.mp4', g('t1') - .3, g('t2') - .3, [{"labels": [lab(0.0, 2.4, P("", L("ÔNG DẠY GÌ?", "WHAT DID HE TEACH?")), 'tc', 40), lab(3.0, 8.0, P(L("NHÂN · ", "REN · "), L("THƯƠNG NGƯỜI", "LOVE PEOPLE")))],
               "ink": {"text": "仁", "x": .84, "y": .3, "size": 200, "t0": 2.6}}])
-    s += scene('img/A12b.png', g('t2') - .3, g('t3') - .3, [{"fx": ["smoke"], "smoke_at": [.63, .5], "labels": [lab(1.0, 6.0, P(L("LỄ · ", "LI · "), L("CƯ XỬ ĐÚNG MỰC", "RITUAL")))],
+    s += scene('clip_A12b.mp4', g('t2') - .3, g('t3') - .3, [{"fx": ["smoke"], "smoke_at": [.63, .5], "labels": [lab(1.0, 6.0, P(L("LỄ · ", "LI · "), L("CƯ XỬ ĐÚNG MỰC", "RITUAL")))],
               "ink": {"text": "禮", "font": "serif", "x": .13, "y": .3, "size": 170, "t0": .8}}])
-    s += scene('img/A12c.png', g('t3') - .3, g('t4') - .3, [{"labels": [lab(1.0, 6.0, P(L("HIẾU · ", "FILIAL "), L("KÍNH CHA MẸ", "PIETY")))], "ink": {"text": "孝", "x": .87, "y": .28, "size": 180, "t0": .8}}])
-    s += scene('img/A12d.png', g('t4') - .3, g('t5') - .3, [{"ink": {"text": "君子", "x": .5, "y": .17, "size": 150, "t0": .8}},
+    s += scene('clip_A12c.mp4', g('t3') - .3, g('t4') - .3, [{"labels": [lab(1.0, 6.0, P(L("HIẾU · ", "FILIAL "), L("KÍNH CHA MẸ", "PIETY")))], "ink": {"text": "孝", "x": .87, "y": .28, "size": 180, "t0": .8}}])
+    s += scene('clip_A12d.mp4', g('t4') - .3, g('t5') - .3, [{"ink": {"text": "君子", "x": .5, "y": .17, "size": 150, "t0": .8}},
               {"z": [1.35, 1.4], "f": [.3, .5], "f1": [.7, .5], "labels": [lab(.8, 5.5, P(L("QUÂN TỬ · ", "NOBLE · "), L("TIỂU NHÂN", "PETTY")))]}])
-    s += scene('img/A12e.png', g('t5') - .3, g('t6') - .3, [{"ink": {"text": "德", "x": .86, "y": .25, "size": 180, "t0": .8}, "labels": [lab(1.0, 6.0, P(L("TRỊ NƯỚC ", "RULE BY "), L("BẰNG ĐỨC", "VIRTUE")))]},
+    s += scene('clip_A12e.mp4', g('t5') - .3, g('t6') - .3, [{"ink": {"text": "德", "x": .86, "y": .25, "size": 180, "t0": .8}, "labels": [lab(1.0, 6.0, P(L("TRỊ NƯỚC ", "RULE BY "), L("BẰNG ĐỨC", "VIRTUE")))]},
               {"z": [1.35, 1.4], "f": [.5, .3], "labels": [lab(1.0, 5.5, P(L("VUA RA ", "LET THE RULER "), L("VUA", "BE A RULER")))]}])
     s += scene('img/A12.png', g('t6') - .3, g('t7') - .3, [{"ink": {"text": "五倫", "font": "serif", "x": .5, "y": .17, "size": 130, "t0": .8},
               "labels": [lab(1.5, 6.5, P(L("NGŨ LUÂN · ", "FIVE BONDS · "), L("MẠNH TỬ", "MENCIUS")))]}])
-    s += scene('img/A13.png', g('t7') - .3, end, [{"ink": {"text": "己所不欲 勿施於人", "x": .5, "y": .66, "size": 64, "t0": 4.0, "reveal": 3.5, "alpha": .95, "color": [.12, .1, .09]}},
+    s += scene('clip_A13.mp4', g('t7') - .3, end, [{"ink": {"text": "己所不欲 勿施於人", "x": .5, "y": .66, "size": 64, "t0": 4.0, "reveal": 3.5, "alpha": .95, "color": [.12, .1, .09]}},
               {"z": [1.3, 1.35], "f": [.5, .6], "ink": {"text": "己所不欲 勿施於人", "x": .5, "y": .66, "size": 64, "t0": -9, "color": [.12, .1, .09]}, "labels": [lab(1.0, 5.5, P(L("KỶ SỞ ", "DO NOT DO "), L("BẤT DỤC", "TO OTHERS")))]}])
     return s
 def act4(g, end):
@@ -66,7 +66,7 @@ def act5(g, end):
                   {"z": [1.5, 1.55], "f": [.36, .4], "labels": [lab(1.0, 5.0, P("TIÊN HỌC ", "LỄ"))]},
                   {"z": [1.3, 1.35], "f": [.5, .6], "labels": [lab(1.0, 5.0, P("KHOA THI CUỐI · ", "1919"))]}])
     else:
-        s += scene('img/A13.png', g('s17') - .3, g('s18') - .3, [{"z": [1.2, 1.25], "labels": [lab(1.0, 5.0, P("KOREA · ", "JAPAN"))]},
+        s += scene('clip_A13.mp4', g('s17') - .3, g('s18') - .3, [{"z": [1.2, 1.25], "labels": [lab(1.0, 5.0, P("KOREA · ", "JAPAN"))]},
                   {"z": [1.5, 1.55], "f": [.5, .6], "labels": [lab(1.0, 5.0, P("LATIN · ", "1687"))]}, {"z": [1.3, 1.35], "f": [.4, .4], "labels": [lab(1.0, 5.0, P("", "VOLTAIRE"))]}])
     s += scene('img/A18.png', g('s18') - .3, g('s19') - .3, [{"labels": [lab(1.0, 5.0, P(L("HƠN ", "MORE THAN "), L("80 ĐỜI", "80 GENERATIONS")))]}])
     if VI: s += scene('clip_A19.mp4', g('s19') - .3, end, [{"labels": [lab(2.0, 7.0, P(L("KÍNH TRÊN ", ""), L("NHƯỜNG DƯỚI", "")))]}], speed=.55)

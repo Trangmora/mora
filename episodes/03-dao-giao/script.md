@@ -1,3 +1,61 @@
+# Tập Lão Tử và Đạo giáo, bản kể chuyện (chủ kênh duyệt hướng này 25/11/2026, theo mẫu kịch bản Geisha)
+
+Bản này là **bản chính**. Phần cũ bên dưới chỉ để tham khảo nguồn và prompt ảnh.
+
+## MỞ ĐẦU
+| # | VI | EN |
+|---|---|---|
+| op1 | Xin chào các bạn. Hơn hai nghìn năm trước, một ông già cưỡi trâu đi về phía tây, ra khỏi biên giới, rồi biến mất. | Hello everyone. More than two thousand years ago, an old man rode a water buffalo west, out of the kingdom... and vanished. |
+| op2 | Không ai biết ông đi đâu, cũng không ai biết ông chết ở đâu. Ông chỉ để lại một cuốn sách mỏng, chừng năm nghìn chữ. | No one knows where he went, or where he died. All he left behind was one small book, about five thousand characters long. |
+| op3 | Vậy mà hôm nay, đó là một trong những cuốn sách được dịch nhiều nhất thế giới. Ông già ấy là ai? Ông là Lão Tử. | Yet today, it is often called one of the most translated books in the world. Who was he? His name was Laozi. |
+
+## NGƯỜI GIỮ KHO SÁCH VÀ CUỘC GẶP VỚI KHỔNG TỬ
+| # | VI | EN |
+|---|---|---|
+| k1 | Theo Sử ký của Tư Mã Thiên, ông tên là Lý Nhĩ, làm quan giữ kho sách cho nhà Chu. Cả đời ông sống lặng lẽ giữa những bó thẻ tre, không tranh giành, không cần ai biết đến. | According to the historian Sima Qian, his name was Li Er, and he kept the royal archives of the Zhou kings. He lived quietly among bundles of bamboo slips, never seeking fame. |
+| k2 | Đến chính Tư Mã Thiên cũng không chắc ông thật sự là ai. Nhưng có một người khách đã tìm đến tận nơi. | Even Sima Qian wasn't sure who he really was. But one young visitor came looking for him. |
+| k3 | Tương truyền, hồi còn trẻ, Khổng Tử đến hỏi Lão Tử về lễ nghi. Ông già chỉ khuyên chàng trai bỏ bớt tham vọng và kiêu ngạo đi. | Legend says a young Confucius once came to ask Laozi about ritual. The old man simply told him to let go of his pride and ambition. |
+| k4 | Về nhà, Khổng Tử bảo học trò: chim thì ta biết nó bay, cá thì ta biết nó bơi... còn Lão Tử, như con rồng, ta không hiểu nổi. | Back home, Confucius told his students: birds, I know they fly. Fish, I know they swim. But Laozi... is like a dragon. I cannot understand him. |
+
+## NĂM NGHÌN CHỮ Ở CỬA ẢI
+| # | VI | EN |
+|---|---|---|
+| p1 | Rồi nhà Chu bắt đầu suy tàn. Chán cảnh triều đình rối ren, Lão Tử cưỡi trâu một mình đi về phía tây. | Then the Zhou kingdom began to fall apart. Tired of the chaos at court, Laozi rode west on his buffalo, alone. |
+| p2 | Tương truyền, viên quan giữ ải Hàm Cốc là Doãn Hỷ trông thấy một luồng khí tím từ phương đông kéo tới, biết có bậc thánh nhân sắp qua. | Legend says the keeper of Hangu Pass, Yin Xi, saw a purple mist drifting in from the east, and knew a sage was coming. |
+| p3 | Ông níu Lão Tử lại: Thầy sắp đi ẩn rồi, xin hãy viết cho con một cuốn sách. | He stopped the old man: Before you disappear, please, write me a book. |
+| p4 | Lão Tử ngồi xuống, viết hơn năm nghìn chữ. Đó là Đạo Đức Kinh. | So Laozi sat down and wrote some five thousand characters. That book was the Tao Te Ching. |
+| p5 | Rồi ông ra khỏi ải... và không ai còn thấy ông nữa. | Then he rode through the gate... and was never seen again. |
+
+## CUỐN SÁCH NÓI GÌ?
+| # | VI | EN |
+|---|---|---|
+| t1 | Cuốn sách ấy nói gì? Câu đầu tiên đã lạ: Đạo mà gọi tên được thì không còn là Đạo. | So what does it say? Its very first line is strange: the Tao that can be named is not the true Tao. |
+| t2 | Ông dạy Vô vi, tức là đừng gượng ép, cứ thuận theo tự nhiên. | He taught wu wei: don't force things, flow with nature. |
+| t3 | Và ông nói không gì mềm hơn nước, vậy mà nước mài mòn cả đá. | And he wrote that nothing is softer than water... yet nothing wears away stone like water does. |
+| t4 | Nhưng điều Lão Tử không ngờ là người đời sau lại biến ông thành... một vị thần. | But Laozi never imagined that one day, people would turn him into... a god. |
+
+## ĐI TÌM TRƯỜNG SINH
+| # | VI | EN |
+|---|---|---|
+| g1 | Vài trăm năm sau, triết lý của ông thành một tôn giáo: Đạo giáo. Ông già cưỡi trâu được thờ như thần. | Centuries later, his philosophy became a religion: Taoism. The old man on the buffalo was worshipped as a god. |
+| g2 | Đạo sĩ ngày đêm luyện thuốc trường sinh, nhiều vị vua được cho là đã chết vì uống thuốc tiên. | Taoist alchemists spent their lives brewing elixirs of immortality, and several emperors are thought to have died from drinking them. |
+| g3 | Rồi khoảng thế kỷ thứ chín, một cuốn sách luyện đan cảnh báo: trộn diêm tiêu với lưu huỳnh thì lửa bùng lên, cháy cả nhà. | Then, around the ninth century, an alchemy book warned: mix saltpetre and sulphur, and the flames will burn your house down. |
+| g4 | Đi tìm thuốc trường sinh... họ lại tìm ra thuốc súng. | Searching for eternal life... they found gunpowder. |
+
+## VI: Ở VIỆT NAM MÌNH · EN: AROUND THE WORLD
+| # | VI | EN |
+|---|---|---|
+| w1 | Ở Việt Nam mình, Đạo giáo hòa cùng Nho và Phật thành Tam giáo đồng nguyên. | Today, the yin-yang circle is one of the best-known symbols on Earth. Millions practise tai chi in parks every morning. |
+| w2 | Ở Hà Nội, đền Quán Thánh đến nay vẫn thờ Trấn Vũ, một vị thần của Đạo giáo. | And when Bruce Lee said, Be water, my friend... he was echoing an old man on a buffalo. |
+
+## KẾT
+| # | VI | EN |
+|---|---|---|
+| e1 | Một ông già không muốn ai biết đến, viết năm nghìn chữ chỉ vì bị níu lại ở cửa ải, rồi biến mất. Vậy mà hơn hai nghìn năm sau, cả thế giới vẫn đọc ông. Có lẽ đó chính là Vô vi. | An old man who never wanted to be known, who wrote five thousand words only because someone stopped him at a gate, and then vanished. Yet two thousand years later, the whole world still reads him. Maybe that is wu wei. |
+| e2 | Theo bạn, sống thuận theo tự nhiên như Lão Tử là khôn ngoan hay là buông xuôi? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại! | What do you think: is going with the flow wisdom... or just giving up? Let me know in the comments. Thanks for watching, and see you next time! |
+
+---
+
 # Tập 3: Lão Tử và Đạo giáo (Trung Quốc), kịch bản bản 1
 
 **Trạng thái:** bản nháp, chờ chủ kênh duyệt.

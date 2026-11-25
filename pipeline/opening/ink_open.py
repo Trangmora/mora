@@ -150,7 +150,7 @@ def frame(t):
                 amp = A * (0.35 + 0.65 * np.clip(u / dw, 0, 1))
                 v = (gy - py) / sz + dh / 2 - amp * np.sin(2 * np.pi * u / lam - om * t)
                 patch = cv2.remap(DIMG, u, v, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=(1, 1, 1))
-                m = (fa * fb * DR.get('opacity', 0.95)) * skm[y0:y1, x0:x1]
+                m = (fa * fb * DR.get('opacity', 0.95)) * (skm[y0:y1, x0:x1] if DR.get('occlude', 1) else np.ones_like(skm[y0:y1, x0:x1]))
                 sub = img[y0:y1, x0:x1]
                 img[y0:y1, x0:x1] = sub * (1 - m[..., None] * (1 - patch))
     # chữ
