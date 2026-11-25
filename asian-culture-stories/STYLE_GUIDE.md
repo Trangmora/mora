@@ -90,7 +90,7 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 ## 9a. Nhạc nền
 - **Dưới lời đọc, nhạc phải không lời** (không giọng hát) và rất nhỏ (mức 0,10). Bài có giọng hát chỉ được dùng ở đoạn không có lời đọc, hoặc dùng bản instrumental.
 - Ở khoảng ngắt thì nhạc lên mức khoảng 0,7 (lên trong 0,5 giây, xuống trong 0,4 giây).
-- **Nguồn nhạc:** bài chủ kênh cung cấp (Artlist, xem `assets/music/README.md`), Openverse (chỉ CC0 hoặc CC-BY, ghi tên tác giả), hoặc nhạc AI (fal.ai ACE-Step). Không đưa file nhạc có bản quyền vào git.
+- **Nguồn nhạc:** bài chủ kênh cung cấp (YouTube Audio Library, Kevin MacLeod CC-BY, Pixabay; xem `assets/music/README.md`). **Không dùng nhạc Artlist** (bị dính bản quyền), Openverse (chỉ CC0 hoặc CC-BY, ghi tên tác giả), hoặc nhạc AI (fal.ai ACE-Step). Không đưa file nhạc có bản quyền vào git.
 - Hiệu ứng âm thanh (xé giấy, nốt koto lúc chuyển cảnh, sấm, chuông, trống) chỉ dùng **ít và nhỏ**: mỗi lần chuyển phần một âm, không lặp ở mọi lần cắt cảnh.
 - **Clip AI từ fal.ai không có tiếng.** Mọi âm thanh lạ trong video đều đến từ hiệu ứng tự tạo hoặc từ nhạc.
 
