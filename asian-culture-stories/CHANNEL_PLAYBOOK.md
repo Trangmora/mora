@@ -20,3 +20,10 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 9. **Kiểm tra:** xem các khung hình mẫu (chữ không bị che, không còn viền đen), nghe các đoạn chuyển phần.
 10. **Đăng:** hai kênh (Anh và Việt). Ghi nguồn nhạc trong mô tả, khai báo nội dung có dùng AI.
 11. **Ngân sách:** tối đa $5 mỗi video.
+
+## Đăng tự động qua Morapost
+- **Key:** đã lưu trong Network secrets của môi trường (host `www.morapost.com`). Gọi `/api/v1/...` là proxy tự gắn key.
+- **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
+- **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
+- **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
+- **Kênh YouTube tiếng Anh và tiếng Việt phải được kết nối trong Morapost** (Settings → Accounts). Hiện chỉ có kênh "Trang AI".
