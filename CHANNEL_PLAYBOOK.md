@@ -26,6 +26,9 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
 - **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
 - **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
+- **Cách đăng theo độ dài (chủ kênh chốt):**
+  - **Video dài (16:9, cả tập):** YouTube và Facebook fanpage của từng ngôn ngữ. Kênh nào khác nhận được video dài thì cũng đăng bản dài.
+  - **Instagram, Threads, TikTok, X:** cắt lại khổ dọc 9:16, chia thành phần 1, phần 2… cho ngắn. Ảnh và giọng dùng lại, không tốn credit.
 - **Tóm tắt kênh đăng:**
   - **Bản tiếng Anh (6 kênh):** YouTube Asian Myths & Culture, Instagram asian_myths, Threads call me You, Facebook Ridiculous Case (qua Morapost); X asian_myths, TikTok asian_myths (qua Buffer).
   - **Bản tiếng Việt (2 kênh):** YouTube Ridiculous Case, Facebook Mora Media (qua Morapost).
