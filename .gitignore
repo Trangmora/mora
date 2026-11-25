@@ -1,2 +1,3 @@
 episodes/*/out/
 episodes/*/work/
+__pycache__/
