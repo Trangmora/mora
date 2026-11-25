@@ -8,7 +8,7 @@ Nối tiếp tập 1 (Thần đạo kết thúc bằng câu "Tập sau: khi Ph�
 | # | Cảnh (giấy cắt) | EN | VI (giọng trò chuyện) |
 |---|---|---|---|
 | **Mở đầu: 4–5 giây chỉ có nhạc.** Thủy mặc: biển và một con thuyền nhỏ đến từ phía tây | | | |
-| op1 | | In the year 552, a ship from Korea brought a strange gift to the emperor of Japan. | Xin chào các bác. Năm 552, có một con thuyền từ Triều Tiên mang đến cho Thiên hoàng Nhật Bản một món quà rất lạ. |
+| op1 | | In the year 552, a ship from Korea brought a strange gift to the emperor of Japan. | Xin chào các bạn. Năm 552, có một con thuyền từ Triều Tiên mang đến cho Thiên hoàng Nhật Bản một món quà rất lạ. |
 | op2 | Tượng Phật vàng hé lộ | A golden statue, and a few scrolls. | Một bức tượng bằng vàng, và mấy cuộn kinh. |
 | op3 | | It almost started a civil war. | Món quà ấy suýt nữa gây ra nội chiến. |
 | op4 | Chữ đỏ 仏 | Today, it is part of almost every Japanese life… and every Japanese death. | Vậy mà ngày nay, nó có mặt trong gần như cả cuộc đời của người Nhật… và cả lúc họ qua đời. |
@@ -32,7 +32,7 @@ Nối tiếp tập 1 (Thần đạo kết thúc bằng câu "Tập sau: khi Ph�
 | s14 | Vườn đá Ryōan-ji, trà đạo | And the quiet beauty people love about Japan, rock gardens, the tea ceremony, much of it grew from Zen. | Và cái vẻ đẹp tĩnh lặng mà ai cũng mê ở Nhật, vườn đá, trà đạo… phần lớn đều lớn lên từ Thiền. |
 | **Ngắt nhạc 3 giây** | | | |
 | s15 | Kết: một ngôi chùa và một cổng torii đứng cạnh nhau | A gift that almost started a war became a way of living, side by side with the kami. | Một món quà suýt gây ra chiến tranh, rốt cuộc lại trở thành một cách sống, song song với các vị thần. |
-| s16 | | Next time: the tea ceremony. | Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bác đã xem, hẹn gặp lại nhé! |
+| s16 | | Next time: the tea ceremony. | Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bạn đã xem, hẹn gặp lại nhé! |
 
 ## Cần kiểm chứng trước khi đăng
 - **Năm Phật giáo đến:** theo Nihon Shoki là 552, theo các nguồn khác (Gangōji engi, Jōgū Shōtoku hōō teisetsu) là 538. Nên nói "khoảng giữa thế kỷ 6", hoặc nêu cả hai năm.

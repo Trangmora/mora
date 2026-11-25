@@ -7,7 +7,7 @@
 | # | Cảnh | VI (giọng trò chuyện) | EN |
 |---|---|---|---|
 | **Mở đầu (riêng cho tập này): 4–5 giây chỉ có nhạc.** Thủy mặc: chiến trường lúc bình minh trong sương, một hàng cờ hiệu đứng im, gió thổi cờ bay dần lên; một thanh kiếm cắm trên đất, ánh mặt trời lóe dọc lưỡi kiếm đúng lúc chữ 侍 hiện ra; vài cánh hoa anh đào bay ngang. Âm thanh: gió, rồi một tiếng trống taiko trầm | | | |
-| op1 | | Xin chào các bác. Có một tầng lớp người đã cai trị Nhật Bản suốt gần bảy trăm năm. | For almost seven hundred years, one class of people ruled Japan. |
+| op1 | | Xin chào các bạn. Có một tầng lớp người đã cai trị Nhật Bản suốt gần bảy trăm năm. | For almost seven hundred years, one class of people ruled Japan. |
 | op2 | | Họ mang hai thanh kiếm, viết thơ, uống trà… và sẵn sàng chết vì danh dự. | They carried two swords, wrote poetry, drank tea… and were ready to die for honour. |
 | op3 | | Nhưng cái tên của họ lại có một nghĩa rất khiêm tốn. | But their name means something surprisingly humble. |
 | op4 | Chữ đỏ 侍 | Samurai… nghĩa gốc là "người hầu cận". | Samurai… originally meant "one who serves." |
@@ -28,7 +28,7 @@
 | **Ngắt nhạc 3 giây** | | | |
 | s13 | Lệnh cấm kiếm, samurai cắt búi tóc | Năm 1876, chính quyền Minh Trị cấm mang kiếm nơi công cộng. Samurai cắt bỏ búi tóc, cất kiếm đi. | In 1876, the Meiji government banned carrying swords in public. Samurai cut their topknots and put their swords away. |
 | s14 | Saigō Takamori, trận cuối (im lặng) | Năm 1877, Saigō Takamori dẫn những samurai cuối cùng nổi dậy, và thua. Thời đại samurai kết thúc. | In 1877, Saigō Takamori led the last samurai in rebellion, and lost. The age of the samurai was over. |
-| s16 | Kết: chiến trường lúc hoàng hôn, thanh kiếm, hoa anh đào | Những người bắt đầu chỉ là "người hầu cận"… rốt cuộc lại trở thành biểu tượng của cả một đất nước. Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bác đã xem, hẹn gặp lại nhé! | People who began as "those who serve"… became the symbol of a nation. Next time: the tea ceremony. |
+| s16 | Kết: chiến trường lúc hoàng hôn, thanh kiếm, hoa anh đào | Những người bắt đầu chỉ là "người hầu cận"… rốt cuộc lại trở thành biểu tượng của cả một đất nước. Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bạn đã xem, hẹn gặp lại nhé! | People who began as "those who serve"… became the symbol of a nation. Next time: the tea ceremony. |
 
 ## Cần kiểm chứng trước khi đăng
 - **Nghĩa từ "samurai":** từ động từ "saburau" (hầu cận, phục vụ).

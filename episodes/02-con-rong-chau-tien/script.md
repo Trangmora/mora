@@ -7,7 +7,7 @@
 | # | Cảnh (ảnh giấy cắt) | EN | VI (giọng trò chuyện) |
 |---|---|---|---|
 | **Mở đầu: 4–5 giây chỉ có nhạc**, sương trên vịnh, một con rồng uốn mình dưới mặt nước, nhạc sáo trúc | | | |
-| op1 | Thủy mặc: núi đá vôi, sương | Vietnam says its people hatched from a hundred eggs. | Xin chào các bác. Có bao giờ các bác nghĩ: người Việt mình… nở ra từ một trăm quả trứng? |
+| op1 | Thủy mặc: núi đá vôi, sương | Vietnam says its people hatched from a hundred eggs. | Xin chào các bạn. Có bao giờ các bạn nghĩ: người Việt mình… nở ra từ một trăm quả trứng? |
 | op2 | | But why eggs? And whose eggs? | Mà trứng gì? Trứng của ai? |
 | op3 | | Every nation has a story of where it came from. Vietnam's is stranger than most. | Dân tộc nào cũng có chuyện kể về nguồn gốc của mình. Nhưng chuyện của người Việt thì… lạ lắm. |
 | op4 | Chữ đỏ 龍子仙孫 hiện như mực loang | They call themselves: children of the dragon, grandchildren of the fairy. | Mình hay tự gọi nhau là: con Rồng, cháu Tiên. |
@@ -28,7 +28,7 @@
 | s12 | Sơn Tinh, Thủy Tinh | And the yearly floods? Legend says it's the god of the waters, still fighting the god of the mountains for a princess. | Còn lũ lụt mỗi năm? Dân gian bảo đó là Thủy Tinh vẫn còn đánh nhau với Sơn Tinh, vì nàng Mỵ Nương. |
 | **Ngắt nhạc 3 giây** | | | |
 | s13 | Kết: biển và núi, chữ 龍子仙孫 | Half of the family went to the sea, half to the mountains. Maybe that's why Vietnam is shaped like this: a long coast, and a long spine of mountains… and one people, from one sac. | Một nửa xuống biển, một nửa lên non. Có lẽ vì thế mà đất nước mình có hình dáng như vậy: một dải bờ biển dài, một dãy núi dài… và một dân tộc, cùng chung một bọc. |
-| s14 | | Next time: the boy who grew into a giant, Thánh Gióng. | Tập sau, mình sẽ kể chuyện cậu bé lớn vụt thành người khổng lồ: Thánh Gióng. Hẹn gặp lại các bác! |
+| s14 | | Next time: the boy who grew into a giant, Thánh Gióng. | Tập sau, mình sẽ kể chuyện cậu bé lớn vụt thành người khổng lồ: Thánh Gióng. Hẹn gặp lại các bạn! |
 
 ## Cần kiểm chứng trước khi đăng
 - Truyện có trong **Lĩnh Nam chích quái** (thế kỷ 14–15), đưa vào **Đại Việt sử ký toàn thư**. Kể như truyền thuyết.
