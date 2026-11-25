@@ -1,6 +1,6 @@
-# Tập 2: Nho giáo (Trung Quốc), kịch bản bản 4
+# Tập 2: Nho giáo (Trung Quốc), kịch bản bản 5
 
-**Trạng thái:** chờ chủ kênh duyệt. Chưa tạo ảnh.
+**Trạng thái:** chủ kênh duyệt cho làm video thử (25/11/2026).
 **Thời lượng dự kiến:** khoảng 4 phút 45 giây (tính cả các khoảng ngắt nhạc).
 **Chữ tiêu đề:** 儒 (Nho), 孔子 (Khổng Tử).
 
@@ -10,7 +10,9 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Hồi 1, cậu bé nghèo nước Lỗ:** mồ côi, làm thuê, tự học, mở trường. Học phí chỉ là một bó thịt khô.
 - **Hồi 2, mười bốn năm lang thang:** bỏ quan, đi khắp các nước. Bị vây đói giữa nước Trần và nước Thái mà vẫn gảy đàn. Bị chê "như chó lạc nhà" mà vẫn cười. Về già trở về quê, rồi mất. Đây là **đáy của câu chuyện**.
 - **Hồi 3, lời thầy sống lại:** học trò chép Luận Ngữ. Tần Thủy Hoàng đốt sách, tưởng như Nho giáo đã chết. Nhà Hán đưa Nho giáo trở lại. Đây là **cú lật**.
-- **Văn Miếu và khoa thi Việt Nam năm 1919 chỉ có ở bản tiếng Việt** (chủ kênh chốt). Bản tiếng Anh chỉ nói chung là tư tưởng lan sang Hàn, Nhật, Việt.
+- **Hai bản khác nhau ở phần liên hệ** (chủ kênh chốt):
+  - **Bản tiếng Việt:** thêm mọi chỗ liên quan đến Việt Nam: Văn Miếu (1070), "tiên học lễ, hậu học văn", khoa thi cuối năm 1919, Tết chúc thọ ông bà.
+  - **Bản tiếng Anh:** bỏ hết chi tiết về Việt Nam, thay bằng ảnh hưởng ra thế giới: Hàn Quốc, Nhật Bản, bản dịch tiếng Latin năm 1687, Voltaire, khoa cử và thi tuyển công chức phương Tây.
 - **Những điều thú vị:** 1.300 năm khoa cử. Văn Miếu, và khoa thi cuối cùng ở Việt Nam năm 1919. Gia phả 80 đời. Bài học "kính trên nhường dưới" trong nhà mình.
 - **Chuyện nhỏ về Khổng Tử rải khắp bài:** học phí bó thịt khô, nhạc Thiều ba tháng không biết vị thịt, "hà chính mãnh ư hổ", bị vây đói vẫn gảy đàn, "chó lạc nhà", gặp Lão Tử "như con rồng".
 - **Ông dạy gì?** (sau Luận Ngữ): Nhân, Lễ, Hiếu, Quân tử, trị nước bằng đức và chính danh, rồi Ngũ luân (Mạnh Tử) và câu "Kỷ sở bất dục". Mỗi ý đều trích đúng chương Luận Ngữ.
@@ -56,9 +58,9 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 | s15 | A15 Hán Vũ Đế trên ngai | Tưởng như Nho giáo đã chết. Nhưng nhà Tần sụp đổ chỉ sau mười lăm năm. Đến nhà Hán, Hán Vũ Đế đưa Nho giáo lên làm tư tưởng chính thống của triều đình. | It seemed the teachings were dead. But the Qin fell after just fifteen years. And under the Han, Emperor Wu made Confucianism the official philosophy of the state. |
 | **Ngắt nhạc 4 giây**, tiêu đề "NHỮNG ĐIỀU THÚ VỊ" / "CURIOUS FACTS" | | | |
 | s16 | A16 trường thi, dãy buồng nhỏ (clip sĩ tử viết) | Suốt khoảng một nghìn ba trăm năm, muốn làm quan ở Trung Quốc thì phải thi đỗ kinh sách Nho giáo. Sĩ tử bị nhốt mấy ngày đêm trong những buồng thi chật như cái tủ. | For about thirteen hundred years, to become an official in China you had to pass exams on the Confucian classics. Candidates spent days and nights locked in cells barely bigger than a cupboard. |
-| s17 | A17 Văn Miếu Hà Nội, Khuê Văn Các | Ở Việt Nam mình, Văn Miếu được dựng năm 1070 để thờ Khổng Tử. Và các bác có biết không, khoa thi Nho học cuối cùng ở nước ta là năm 1919… còn muộn hơn cả Trung Quốc. | *(EN: bỏ đoạn này. Bản tiếng Anh nói chung: "His ideas crossed borders, to Korea, Japan and Vietnam, and shaped them for centuries.")* |
+| s17 | VI: A17 Văn Miếu Hà Nội · EN: A17w học giả châu Âu dịch sách Khổng Tử | Ở Việt Nam mình, Văn Miếu được dựng năm 1070 để thờ Khổng Tử. Học trò xưa ai cũng thuộc câu "tiên học lễ, hậu học văn". Và các bác có biết không, khoa thi Nho học cuối cùng ở nước ta là năm 1919… còn muộn hơn cả Trung Quốc. | His ideas spread across East Asia, to Korea and Japan. Then, in 1687, Jesuit scholars translated his teachings into Latin, and Europe met Confucius. Voltaire admired him. Some historians even think China's exams inspired modern civil-service tests in the West. |
 | s18 | A18 cây gia phả lớn | Dòng họ Khổng có gia phả được xem là dài nhất thế giới: hơn tám mươi đời, khoảng hai triệu người. | The Kong family tree is said to be the longest in the world: more than eighty generations, around two million people. |
-| s19 | A19 gia đình Việt ngày Tết, cháu chúc thọ ông bà (clip cúi chào) | Và nếu hồi bé các bác từng được dạy phải kính trên nhường dưới, phải chăm học… thì có lẽ, đó cũng là Khổng Tử đấy. | And if you were ever told to respect your elders and study hard… that may be Confucius too. |
+| s19 | VI: A19 gia đình Việt ngày Tết · EN: A19w gia đình Đông Á hiện đại, con cúi chào ông bà | Và nếu hồi bé các bác từng được dạy phải kính trên nhường dưới, phải chăm học, Tết đến phải chúc thọ ông bà… thì có lẽ, đó cũng là Khổng Tử đấy. | Today, more than a billion people live in cultures shaped by his ideas. And if your family taught you to respect your elders and study hard… that may be Confucius too. |
 | **Ngắt nhạc 3 giây** | | | |
 | s20 | kết thủy mặc, Thái Sơn, chữ 儒 | Một ông già bị cả thiên hạ từ chối. Vậy mà hai nghìn năm trăm năm sau… ông vẫn còn đang dạy học. | An old man the whole world turned away. Two and a half thousand years later… he is still teaching. |
 | s21 | A21 Khổng Tử cúi chào một ông già râu trắng (Lão Tử) | À, tương truyền hồi trẻ, Khổng Tử từng đi hỏi lễ một ông già bí ẩn. Về nhà, ông bảo học trò: "Người ấy như con rồng… ta không hiểu nổi." Ông già đó là Lão Tử. | Oh… and legend says that as a young man, Confucius once visited a mysterious old sage. Afterwards he told his students: "That man is like a dragon. I cannot understand him." His name was Laozi. |
@@ -86,6 +88,11 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Luận Ngữ** do học trò và học trò của học trò biên soạn qua nhiều thế hệ, không phải do Khổng Tử tự viết. Ông tự nhận mình "thuật nhi bất tác", chỉ truyền lại chứ không sáng tác (Luận Ngữ 7.1).
 - **Không nhầm lẫn:** "Ngũ thường" (Nhân, Nghĩa, Lễ, Trí, Tín) và "Tam cương" là do Đổng Trọng Thư và các nhà Nho đời Hán hệ thống lại, không phải lời Khổng Tử. Kịch bản không gán chúng cho ông.
 - **Học phí bó thịt khô** (束脩, 7.7): có học giả hiểu là "từ 15 tuổi trở lên", nên lời dẫn nói "theo cách hiểu phổ biến".
+- **Bản dịch Latin 1687:** *Confucius Sinarum Philosophus* do các giáo sĩ Dòng Tên (Prospero Intorcetta, Philippe Couplet…) xuất bản ở Paris năm 1687.
+- **Voltaire ngưỡng mộ Khổng Tử:** có trong *Dictionnaire philosophique* và *Essai sur les mœurs*.
+- **Khoa cử Trung Quốc ảnh hưởng thi tuyển công chức Anh** (báo cáo Northcote–Trevelyan năm 1854): có tranh luận, nên lời dẫn nói "some historians think".
+- **"Hơn một tỷ người":** dân số khu vực văn hóa chịu ảnh hưởng Nho giáo (Trung Quốc, Đài Loan, Hàn, Nhật, Việt Nam) cộng lại hơn 1,6 tỷ người, nên nói "more than a billion" là an toàn.
+- **"Tiên học lễ, hậu học văn":** câu khẩu hiệu quen thuộc ở trường học Việt Nam, rút từ tinh thần Luận Ngữ 1.6 ("hành hữu dư lực, tắc dĩ học văn").
 - **Gia phả:** Guinness ghi nhận là gia phả dài nhất. Bản năm 2009 có khoảng 2 triệu người, 83 đời (có nguồn ghi 80 hoặc 86), và một số đời bị khuyết.
 - **Ngũ luân** là cách gọi của Mạnh Tử, nên lời dẫn nói "Nho giáo dạy", không nói "ông dạy".
 - **Nhà Tần:** đốt sách năm 213 trước Công nguyên, chôn nho sĩ năm 212 (có tranh cãi, nên nói "tương truyền"). Nhà Tần tồn tại từ năm 221 đến 206 trước Công nguyên, khoảng 15 năm.
@@ -159,6 +166,8 @@ Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 | A15 | Hán Vũ Đế | Emperor Wu of Han seated front-facing on a raised platform in a Han palace, wearing a black and red ceremonial robe and the mianguan crown: a flat rectangular board on top with strings of jade beads hanging in front and behind; two Confucian scholar-officials in black robes and jinxian caps kneeling before him presenting bamboo slip books; red lacquered pillars, bronze lamps. |
 | A16 | Trường thi | Ming dynasty imperial examination hall: long straight rows of tiny open-front brick cells under grey tile roofs, in each cell a candidate in a dark blue Ming scholar robe and a square black scholar's cap (sifang pingding jin) writing at a plank desk, a guard walking the corridor with a lantern pole, a tall watchtower at the end. No queue hairstyle. |
 | A17 | Văn Miếu Hà Nội | The Temple of Literature in Hanoi, Vietnam: Khue Van Cac pavilion (a small two-storey red wooden pavilion standing on four white brick pillars, the upper storey with a round sun window on each side) in front of the square Thien Quang Well pond, rows of stone stelae standing on stone turtles under small tile roofs, frangipani and old banyan trees, Vietnamese students in modern white ao dai visiting. Accurate Vietnamese architecture, not Chinese or Japanese. |
+| A17w | Khổng Tử đến châu Âu | A 17th-century European Jesuit scholar in a black cassock sitting at a wooden desk in a library with tall bookshelves, writing in a large open book with a quill, beside him an open Chinese bound book and a small portrait scroll of Confucius; warm candlelight but bright ochre and cream tones. Accurate 17th-century European interior, no Asian architecture. |
+| A19w | Gia đình Đông Á hiện đại | A modern East Asian family in a bright apartment living room: grandparents sitting front-facing on a sofa, a child in modern clothes bowing politely to them with a small gift, parents behind smiling, school books on a table, a potted plant; neutral modern setting without country-specific festival decorations. |
 | A18 | Gia phả họ Khổng | A giant stylised family tree drawn like an old ochre trunk with spreading branches, each branch ending in a small round seal-like medallion, at the root a small figure of Confucius, the branches rising up the whole picture into the sky, decorative paper-cut style. |
 | A19 | Gia đình Việt ngày Tết | A modern Vietnamese family on Tet (Lunar New Year) in a bright living room: grandparents sitting front-facing on a wooden bench, a small grandchild in a red ao dai bowing with joined hands to wish them a happy new year, parents standing behind smiling, a peach blossom branch, a yellow apricot (hoa mai) tree, a tray of five fruits on the ancestral altar with a framed ancestor photo. Vietnamese, not Chinese decorations. |
 
