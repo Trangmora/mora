@@ -1,12 +1,12 @@
 # Tập 2: Samurai (bản nháp kịch bản, chờ duyệt)
 
-**Thời lượng dự kiến:** khoảng 3 phút 45 giây.
+**Thời lượng dự kiến:** khoảng 3 phút 30 giây (chủ kênh muốn 3–3,5 phút).
 **Chữ tiêu đề:** 侍 (samurai), rồi 武士 (võ sĩ).
 **Nhạc:** Hon Kyoku (mở đầu), Imperial Forces (chiến tranh), Hammersion (bộ gõ, phần điều thú vị), Yearning (đoạn kết).
 
 | # | Cảnh | VI (giọng trò chuyện) | EN |
 |---|---|---|---|
-| **Mở đầu: 4–5 giây chỉ có nhạc.** Thủy mặc: một thanh kiếm cắm trên đồi trong sương, hoa anh đào rơi | | | |
+| **Mở đầu (riêng cho tập này): 4–5 giây chỉ có nhạc.** Thủy mặc: chiến trường lúc bình minh trong sương, một hàng cờ hiệu đứng im, gió thổi cờ bay dần lên; một thanh kiếm cắm trên đất, ánh mặt trời lóe dọc lưỡi kiếm đúng lúc chữ 侍 hiện ra; vài cánh hoa anh đào bay ngang. Âm thanh: gió, rồi một tiếng trống taiko trầm | | | |
 | op1 | | Xin chào các bác. Có một tầng lớp người đã cai trị Nhật Bản suốt gần bảy trăm năm. | For almost seven hundred years, one class of people ruled Japan. |
 | op2 | | Họ mang hai thanh kiếm, viết thơ, uống trà… và sẵn sàng chết vì danh dự. | They carried two swords, wrote poetry, drank tea… and were ready to die for honour. |
 | op3 | | Nhưng cái tên của họ lại có một nghĩa rất khiêm tốn. | But their name means something surprisingly humble. |
@@ -23,14 +23,12 @@
 | **Ngắt nhạc 3 giây**, tiêu đề "Những điều thú vị" | | | |
 | s8 | Nữ chiến binh Tomoe Gozen | Không phải samurai nào cũng là đàn ông. Tomoe Gozen là một nữ chiến binh nổi tiếng thế kỷ mười hai. | Not every warrior was a man. Tomoe Gozen was a famous female warrior of the twelfth century. |
 | s9 | Yasuke bên Oda Nobunaga | Có cả một samurai người châu Phi, tên là Yasuke, phục vụ lãnh chúa Oda Nobunaga vào năm 1581. | There was even an African man named Yasuke, who served the warlord Oda Nobunaga in 1581. |
-| s10 | Samurai viết thơ, cắm hoa | Nhiều samurai làm thơ, học trà đạo, học thư pháp. Người ta bảo phải giỏi cả "văn" lẫn "võ". | Many samurai wrote poetry, studied tea and calligraphy. The ideal was mastery of both the pen and the sword. |
 | s11 | 47 lãng nhân (rōnin) trong tuyết | Samurai mất chủ thì gọi là rōnin. Chuyện bốn mươi bảy rōnin trả thù cho chủ năm 1703 đến giờ vẫn được kể ở Nhật. | A samurai without a master was a rōnin. The story of the forty-seven rōnin who avenged their lord in 1703 is still told in Japan today. |
 | s12 | Cuốn sách "Bushido" | Còn "Bushidō", đạo của võ sĩ? Cái tên ấy nổi tiếng thế giới nhờ một cuốn sách viết năm 1899, viết bằng tiếng Anh. | And "Bushidō", the way of the warrior? The word became famous worldwide thanks to a book written in 1899, in English. |
 | **Ngắt nhạc 3 giây** | | | |
 | s13 | Lệnh cấm kiếm, samurai cắt búi tóc | Năm 1876, chính quyền Minh Trị cấm mang kiếm nơi công cộng. Samurai cắt bỏ búi tóc, cất kiếm đi. | In 1876, the Meiji government banned carrying swords in public. Samurai cut their topknots and put their swords away. |
 | s14 | Saigō Takamori, trận cuối (im lặng) | Năm 1877, Saigō Takamori dẫn những samurai cuối cùng nổi dậy, và thua. Thời đại samurai kết thúc. | In 1877, Saigō Takamori led the last samurai in rebellion, and lost. The age of the samurai was over. |
-| s15 | Nhật Bản hiện đại: kendo, phim, anime | Nhưng tinh thần ấy thì chưa mất: trong kendo, trong phim ảnh, trong cách người Nhật nói về kỷ luật và danh dự. | But the spirit never quite left: in kendo, in films, in the way Japanese people speak of discipline and honour. |
-| s16 | Kết: kiếm trên đồi, hoa anh đào | Những người bắt đầu chỉ là "người hầu cận"… rốt cuộc lại trở thành biểu tượng của cả một đất nước. Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bác đã xem, hẹn gặp lại nhé! | People who began as "those who serve"… became the symbol of a nation. Next time: the tea ceremony. |
+| s16 | Kết: chiến trường lúc hoàng hôn, thanh kiếm, hoa anh đào | Những người bắt đầu chỉ là "người hầu cận"… rốt cuộc lại trở thành biểu tượng của cả một đất nước. Tập sau, mình sẽ kể về trà đạo Nhật Bản. Cảm ơn các bác đã xem, hẹn gặp lại nhé! | People who began as "those who serve"… became the symbol of a nation. Next time: the tea ceremony. |
 
 ## Cần kiểm chứng trước khi đăng
 - **Nghĩa từ "samurai":** từ động từ "saburau" (hầu cận, phục vụ).
