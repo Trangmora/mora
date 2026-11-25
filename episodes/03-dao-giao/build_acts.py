@@ -26,7 +26,7 @@ def a1(g, end):
     s = scene(I('A1'), 0, g('k2') - .3, [{"labels": [lab(1.5, 6.0, P(L("LÝ NHĨ · ", "LI ER · "), L("GIỮ KHO SÁCH", "ARCHIVIST")))]}, {"z": [1.4, 1.46], "f": [.55, .45]}], tr='none')
     s += scene(I('A1b'), g('k2') - .3, g('k3') - .3, [{}])
     s += scene('clip_A2.mp4', g('k3') - .3, g('k4') - .3, [{"labels": [lab(1.0, 5.0, P(L("KHỔNG TỬ ", "CONFUCIUS "), L("HỎI LỄ", "VISITS")))]}])
-    s += scene(I('A2b'), g('k4') - .3, end, [{"ink": {"text": "龍", "x": .8, "y": .28, "size": 230, "t0": 4.0, "reveal": 2.0},
+    s += scene(I('A2b'), g('k4') - .3, end, [{"ink": {"text": "龍", "font": "serif", "x": .8, "y": .28, "size": 230, "t0": 4.0, "reveal": 2.0},
               "labels": [lab(5.5, 10.0, P(L("NHƯ ", "LIKE A "), L("CON RỒNG", "DRAGON")))]}])
     return s
 def a2(g, end):

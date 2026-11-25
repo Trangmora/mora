@@ -9,5 +9,7 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP01_Shinto_vi.mp4 | 1. Thần đạo | Việt | ~3:10 | bản v3; lời chào còn là "các bác" (chưa thu lại) |
 | EP02_Samurai_vi.mp4 | 2. Samurai | Việt | 3:33 | bản v2, tiêu đề giữ lâu hơn |
 | EP02_Samurai_en.mp4 | 2. Samurai | Anh | 3:49 | giọng đọc tăng tốc 1,15 lần, tiêu đề giữ khoảng 5 giây |
-| EP03_Confucius_vi.mp4 | Khổng Tử | Việt | 6:22 | kịch bản bản 5, clip fal cho 12 cảnh, 2.5D, nhạc thăng trầm |
+| EP03_Confucius_vi.mp4 | Khổng Tử | Việt | 6:22 | kịch bản bản 5, clip fal cho 18 cảnh, 2.5D, nhạc thăng trầm |
 | EP03_Confucius_en.mp4 | Khổng Tử | Anh | 7:44 | bản tiếng Anh, không nhắc Việt Nam |
+| EP04_Laozi_vi.mp4 | Lão Tử | Việt | 3:38 | kịch bản kể chuyện, mở đầu ải Hàm Cốc |
+| EP04_Laozi_en.mp4 | Lão Tử | Anh | 4:41 | bản tiếng Anh, không nhắc Việt Nam |
