@@ -23,7 +23,7 @@ mus *= 0.16 / (np.sqrt(np.mean(mus ** 2)) + 1e-9)
 # phát hiện lúc đang nói
 mono = v[:, 0]; win = int(.05 * SR)
 rms = np.sqrt(np.convolve(mono ** 2, np.ones(win) / win, 'same'))
-speak = np.convolve((rms > 0.02).astype(np.float32), np.ones(int(.8 * SR)), 'same') > 0   # lặng < 0,8 s vẫn tính là đang nói
+speak = np.convolve((rms > 0.02).astype(np.float32), np.ones(int(2.6 * SR)), 'same') > 0   # lặng < 1,3 s vẫn tính là đang nói (tránh nhạc nhấp nhô giữa các câu)
 target = np.where(speak, 0.18, 0.90).astype(np.float32)
 last = np.where(speak)[0].max() / SR
 target[t > last + 0.3] = 0.90                                                              # khoảng ngắt cuối, nhạc lên

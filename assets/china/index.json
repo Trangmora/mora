@@ -6,5 +6,33 @@
  "dragon_red": {
   "file": "images/dragon_red.jpg",
   "desc": "traditional Chinese dragon (long) in vermilion red ink on plain white, side view flying right-to-left, antlers, whiskers, five claws, flaming pearl; composite with multiply blend"
+ },
+ "A0": {
+  "file": "images/A0.jpg",
+  "desc": "Confucius character reference: standing front-facing, grey beard, black cap, ochre/cream hanfu, plum blossoms"
+ },
+ "A1": {
+  "file": "images/A1.jpg",
+  "desc": "walled town of Lu on loess plain, Spring and Autumn soldiers with ge halberds and war chariot, terracotta sky"
+ },
+ "A2": {
+  "file": "images/A2.jpg",
+  "desc": "poor boy in patched hemp beside thatched granary on stilts and brown ox, millet fields"
+ },
+ "A3": {
+  "file": "images/A3.jpg",
+  "desc": "teenage boy kneeling at low table reading bamboo slips by bronze oil lamp, mud-brick room"
+ },
+ "A4": {
+  "file": "images/A4.jpg",
+  "desc": "Confucius teaching under apricot tree (xingtan), students kneeling on mats, one offering dried meat"
+ },
+ "A4c": {
+  "file": "images/A4c.jpg",
+  "desc": "Confucius eyes closed listening to Qi court music: bianzhong bells, stone chimes, pan-pipes; untouched bowl of meat"
+ },
+ "clip_A4": {
+  "file": "clips/clip_A4.mp4",
+  "desc": "Wan 2.2 clip of A4: Confucius raises hand and nods, student offers bundle, petals fall (5 s)"
  }
 }
