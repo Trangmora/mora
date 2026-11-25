@@ -1,7 +1,7 @@
 # Tập 3: Lão Tử và Đạo giáo (Trung Quốc), kịch bản bản 1
 
 **Trạng thái:** bản nháp, chờ chủ kênh duyệt.
-**Thời lượng dự kiến:** khoảng 3 phút 20 giây bản VI (khoảng 495 từ, lời đọc khoảng 2 phút 53 giây theo tốc độ thật 2,87 từ/giây đo từ giọng đọc tập 2, cộng 5 giây nhạc mở đầu và khoảng 22 giây ngắt nhạc, giữ chữ). Bản EN khoảng 485 từ, khoảng 3 phút 25–30 giây.
+**Thời lượng dự kiến:** khoảng 3 phút cả hai bản (bản rút gọn 26/11: chỉ giữ các điểm thú vị nhất, khoảng 380 từ VI).
 **Chữ tiêu đề:** 道 (Đạo), 老子 (Lão Tử).
 **Con dấu trên dải chữ:** 道.
 
@@ -18,6 +18,11 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 - **Kết:** quay lại câu hỏi. Ông già không muốn ai biết đến mình… mà hai nghìn năm sau cả thế giới vẫn đọc ông. Có lẽ đó chính là Vô vi.
 
 ## Lời dẫn và cảnh
+
+**Bản rút gọn (chủ kênh yêu cầu khoảng 3 phút):**
+- **Bỏ:** chi tiết nghi vấn tác giả, Âm dương và "Đạo pháp tự nhiên" ở phần lời dạy, năm 142 và Trương Đạo Lăng, Ngọc Hoàng và Đạo Mẫu, phong thủy và The Tao of Pooh.
+- **Giữ:** rồng, khí tím ở ải Hàm Cốc, nước mài mòn đá, giấc mơ hóa bướm, thuốc súng, Quán Thánh (VI), Lý Tiểu Long (EN).
+- Các mục ảnh, chữ và nguồn bên dưới vẫn giữ đủ để tham khảo. Cảnh nào đã bỏ thì không tạo ảnh.
 Mỗi dòng 3–7 giây ở tốc độ đọc tự nhiên (tiếng Việt khoảng 2,8–3 từ mỗi giây). Dòng nào dài hơn 7,5 giây thì chia khung (toàn cảnh, rồi cận).
 
 | # | Cảnh | VI (giọng trò chuyện) | EN |
@@ -29,32 +34,25 @@ Mỗi dòng 3–7 giây ở tốc độ đọc tự nhiên (tiếng Việt kho�
 | op4 | chữ đỏ 道 loang lớn, khí tím vờn quanh (nhạc tắt 1 giây trước chữ "Đạo") | Ông là Lão Tử. Còn điều không nói ra được ấy… gọi là Đạo. | His name was Laozi. And that thing with no words… is called the Dao. |
 | op5 | 道 lớn, ĐẠO GIÁO / TAOISM, dòng nhỏ "con đường không thể gọi tên" / "the way that cannot be named" (giữ lâu, nhạc dâng) | | In Chinese, *dao* simply means… the way. |
 | **Ngắt nhạc 3,5 giây.** Tối dần, sáng dần sang giấy cắt, tiếng đàn dây gảy | | | |
-| s1 | A1 kho sách nhà Chu, Lão Tử cuộn thẻ tre | Sử ký chép: ông tên là Lý Nhĩ, người giữ kho sách nhà Chu. | The historian Sima Qian says his name was Li Er, keeper of the Zhou royal archives. |
-| s2 | A1b cận mặt Lão Tử, chớp mắt (2 khung: cận mặt, rồi cận tay cầm thẻ tre) | Nhưng chính Tư Mã Thiên cũng không chắc ông là ai. Có học giả còn nghi… sách do nhiều người viết. | But even Sima Qian wasn't sure who he was. Some scholars think the book… had many authors. |
+| s1 | A1 kho sách nhà Chu, Lão Tử cuộn thẻ tre | Ông tên là Lý Nhĩ, người giữ kho sách nhà Chu. Đến Tư Mã Thiên cũng không chắc ông là ai. | His name, they say, was Li Er, keeper of the Zhou royal archives. Even the historian Sima Qian wasn't sure who he was. |
 | s3 | A2 Khổng Tử trẻ cúi chào Lão Tử (clip) | Tương truyền, hồi trẻ Khổng Tử từng đến hỏi ông về lễ. | Legend says a young Confucius once came to ask him about ritual. |
 | s3b | A2b Khổng Tử ngước nhìn mây, rồng đỏ bay qua (2 khung: toàn cảnh, cận rồng) | Về nhà, ông bảo học trò: chim biết bay, cá biết bơi… còn Lão Tử, như con rồng, ta không hiểu nổi. | Later he told his students: birds fly, fish swim… but Laozi is like a dragon. I cannot understand him. |
 | **Ngắt nhạc 2,5 giây** | | | |
 | s4 | A3 Lão Tử cưỡi trâu rời kinh đô nhà Chu (clip trâu bước) | Rồi nhà Chu suy tàn. Lão Tử cưỡi trâu, một mình đi về phía tây. | Then the Zhou kingdom fell into decline. Laozi rode west on his buffalo, alone. |
 | s5 | A4 Doãn Hỷ trên vọng lâu, khí tím từ phương đông (code) → khung 2: A5 Doãn Hỷ cúi xin ở cổng ải | Tương truyền, quan giữ ải Doãn Hỷ thấy khí tím từ phương đông… liền níu ông lại, xin viết sách. | Legend says the keeper of the pass, Yin Xi, saw a purple mist from the east… and begged the old man to write a book. |
-| s7 | A6 Lão Tử viết lên thẻ tre (clip tay viết) | Lão Tử viết hơn năm nghìn chữ, về Đạo và Đức. Đó là Đạo Đức Kinh. | So Laozi wrote some five thousand characters, on the Way and its Power. The *Dao De Jing*. |
-| s8 | A7 cổng ải mở, con đường vào sương, không còn ai (nhạc tắt, chỉ còn gió) | Rồi ông ra khỏi ải… và không ai biết ông đi về đâu. | Then he rode through the gate… and no one knows where he went. |
+| s7 | A6 Lão Tử viết lên thẻ tre (clip tay viết) | Lão Tử viết hơn năm nghìn chữ, đó là Đạo Đức Kinh… rồi ông ra khỏi ải, và không ai biết ông đi về đâu. | He wrote some five thousand characters, the Dao De Jing… then rode out through the gate, and no one knows where he went. |
 | **Ngắt nhạc 3 giây**, tiêu đề "ÔNG DẠY GÌ?" / "WHAT DID HE TEACH?" | | | |
-| t1 | A8 cuộn thẻ tre mở, sương trôi, chữ 道 thêm bằng code | Vậy sách dạy gì? Thứ nhất, Đạo: cội nguồn muôn vật. Đạo mà gọi tên được… đã không còn là Đạo. | So what does it teach? First, the Dao, the source of all things. The Dao that can be named… is not the true Dao. |
-| t2 | A8b người nông dân để nước tự chảy vào ruộng | Thứ hai, Vô vi: không phải lười, mà là đừng gượng ép. Không làm gì… mà chẳng việc gì không thành. | Second, *wu wei*: not laziness, but not forcing. Doing nothing… yet nothing is left undone. |
-| t3 | A8c dòng nước chảy quanh tảng đá (code: nước gợn) | Thứ ba, mềm thắng cứng. Không gì mềm hơn nước… vậy mà nước mài mòn cả đá. | Third, the soft overcomes the hard. Nothing is softer than water… yet it wears away stone. |
-| t4 | A8d hai con cá đen trắng bơi vòng tròn (code: cá xoay chậm) | Thứ tư, âm dương: tối với sáng, mềm với cứng… luôn đi cùng nhau. | Fourth, yin and yang: dark and light, soft and hard… always together. |
-| t5 | A8e Lão Tử ngồi bên thác dưới gốc thông | Thứ năm: người theo đất, đất theo trời, trời theo Đạo… Đạo theo tự nhiên. | Fifth: people follow the earth, earth follows heaven, heaven follows the Dao… and the Dao follows nature. |
+| t1 | A8 cuộn thẻ tre mở, sương trôi, chữ 道 thêm bằng code | Vậy sách dạy gì? Đạo là cội nguồn muôn vật. Đạo mà gọi tên được… đã không còn là Đạo. | So what does it teach? The Dao is the source of all things. The Dao that can be named… is not the true Dao. |
+| t2 | A8b người nông dân để nước tự chảy vào ruộng | Vô vi: không phải lười, mà là đừng gượng ép. | Wu wei: not laziness, but not forcing. |
+| t3 | A8c dòng nước chảy quanh tảng đá (code: nước gợn) | Và mềm thắng cứng: không gì mềm hơn nước… vậy mà nước mài mòn cả đá. | And the soft overcomes the hard: nothing is softer than water… yet it wears away stone. |
 | s9 | A9 Trang Tử ngủ dưới cây, con bướm bay lên (clip; 2 khung: toàn cảnh, cận bướm) | Về sau, Trang Tử mơ hóa bướm. Tỉnh dậy, ông hỏi: mình mơ làm bướm… hay bướm mơ làm mình? | Later, the sage Zhuangzi dreamed he was a butterfly. Waking, he asked: did I dream the butterfly… or is it dreaming me? |
 | **Ngắt nhạc 3 giây.** Tiếng chuông, xé giấy | | | |
-| s10 | A10 hai nửa: học giả đọc thẻ tre / đạo quán khói hương (2 khung: nửa trái, rồi nửa phải) | Nhưng khoan… Lão Tử, Trang Tử là Đạo gia, một triết học. Còn Đạo giáo, tôn giáo, ra đời muộn hơn nhiều. | But wait. Laozi and Zhuangzi were philosophers. Taoism the religion came much later. |
-| s11 | A11 Trương Đạo Lăng trên núi, Lão Tử hiện trên mây (2 khung: toàn cảnh, cận Lão Tử hào quang) | Năm 142, Trương Đạo Lăng nói Lão Tử hiện ra truyền đạo. Ông già cưỡi trâu… thành thần. | In 142 AD, Zhang Daoling said Laozi appeared to him in a vision. The old man on the buffalo… became a god. |
+| s11 | A11 Trương Đạo Lăng trên núi, Lão Tử hiện trên mây (2 khung: toàn cảnh, cận Lão Tử hào quang) | Vài trăm năm sau, triết học ấy thành tôn giáo: Đạo giáo. Ông già cưỡi trâu… được thờ như thần. | Centuries later, the philosophy became a religion, Taoism. The old man on the buffalo… became a god. |
 | s12 | A12 đạo sĩ luyện đan bên lò (clip; 2 khung: toàn cảnh, cận nồi đan) | Đạo sĩ bắt đầu luyện thuốc trường sinh. Nhiều vua được cho là đã chết vì uống thuốc tiên. | Taoist alchemists cooked up elixirs of immortality. Several emperors are thought to have died from them. |
 | s13 | A13 lò bùng lửa (clip; điểm nhấn: lóe trắng, nhạc tắt 1 giây; 2 khung) | Rồi thế kỷ chín, một sách luyện đan cảnh báo: trộn diêm tiêu, lưu huỳnh với mật ong… lửa bùng, cháy cả nhà. | Then, around the ninth century, an alchemy book warned: mix saltpetre, sulphur and honey… and the flames burn your house down. |
 | s14 | A13 cận khói tan, chữ 火藥 thêm bằng code (trống trầm) | Đi tìm thuốc trường sinh… họ lại tìm ra thuốc súng. | Searching for eternal life… they found gunpowder. |
 | **Ngắt nhạc 3 giây**, tiêu đề "NHỮNG ĐIỀU THÚ VỊ" / "CURIOUS FACTS", xé giấy | | | |
-| s15 | VI: A14 ba ông Nho, Phật, Lão cùng cười (2 khung) · EN: A14w tranh tường âm dương | Ở Việt Nam mình, Đạo hòa cùng Nho, Phật thành Tam giáo đồng nguyên. Nhà Lý còn mở cả khoa thi Tam giáo. | Today, the yin-yang circle is one of the best-known symbols on Earth. Feng shui grew from the same old ideas of balance. |
-| s16 | VI: A15 đền Quán Thánh, tượng Trấn Vũ (code: khói hương; 2 khung: toàn đền, cận tượng) · EN: A15w tập thái cực quyền ở công viên (clip) | Đền Quán Thánh ở Hà Nội thờ Trấn Vũ, một vị thần Đạo giáo, có tượng đồng đen hơn ba trăm năm tuổi. | Millions practise tai chi. Legend links it to a Taoist hermit, Zhang Sanfeng. |
-| s17 | VI: A16 điện Đạo Mẫu, Ngọc Hoàng ở tầng trên · EN: A16w chồng sách nhiều thứ tiếng | Còn Ngọc Hoàng, và nhiều vị thần Đạo Mẫu… cũng được cho là có gốc Đạo giáo. | The *Dao De Jing* is often called one of the most translated books ever. *The Tao of Pooh* even explained it with a bear. |
+| s15 | VI: A14 ba ông Nho, Phật, Lão cùng cười (2 khung) · EN: A14w tranh tường âm dương | Ở Việt Nam mình, Đạo hòa cùng Nho, Phật thành Tam giáo đồng nguyên. Đền Quán Thánh ở Hà Nội vẫn thờ Trấn Vũ, một vị thần Đạo giáo. | Today, the yin-yang circle is known all over the world, and millions practise tai chi. |
 | s17b | EN only: A17w bàn tay trong dòng nước | | And when Bruce Lee said, "Be water, my friend"… he was echoing an old man on a buffalo. |
 | **Ngắt nhạc 3 giây** | | | |
 | s18 | kết thủy mặc: ải Hàm Cốc, con đường vào sương, chữ 道 | Một ông già không muốn ai biết đến. Vậy mà hai nghìn năm sau… cả thế giới vẫn đọc ông. | An old man who never wanted to be known. Yet two thousand years later… the whole world still reads him. |
@@ -129,7 +127,6 @@ Sources:
 - Ursula K. Le Guin, *Lao Tzu: Tao Te Ching* (1997); Benjamin Hoff, *The Tao of Pooh* (1982)
 
 Music: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
-Visuals: AI-assisted illustrations. Narration voice: AI voice (ElevenLabs).
 
 **VI**
 Nguồn tham khảo:
@@ -143,7 +140,6 @@ Nguồn tham khảo:
 
 Nhạc nền:
 "Finding Movement" – Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License
-Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 *(Ghi nhạc cho đúng mẫu ở `episodes/01-shinto/description.md` khi đã chốt các bài dùng, xem mục Nhạc bên dưới.)*
 

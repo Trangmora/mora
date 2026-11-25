@@ -113,7 +113,6 @@ Sources:
 - Temple of Literature (Văn Miếu), Hanoi, founded 1070 (*Đại Việt sử ký toàn thư*)
 
 Music: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
-Visuals: AI-assisted illustrations. Narration voice: AI voice (ElevenLabs).
 
 **VI**
 Nguồn tham khảo:
@@ -124,7 +123,6 @@ Nguồn tham khảo:
 - Stanford Encyclopedia of Philosophy, "Confucius"; Britannica; Guinness World Records
 
 Nhạc: "Finding Movement" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License. http://creativecommons.org/licenses/by/4.0/
-Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 
 ## Prompt tạo ảnh
 - **Cách ghép prompt:** prompt = `ST` (phong cách chung trong `pipeline/scenes/gen.py`) + `CN_ERA` + `CONFUCIUS` (nếu có ông) + phần mô tả riêng của cảnh + `CN_NEG`.
