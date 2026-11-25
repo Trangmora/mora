@@ -32,9 +32,10 @@ def load_img(p):
 def load_clip(p):
     """khung clip, cắt về 16:9, ở 2x như ảnh để zoom cận vẫn nét"""
     if p not in cache:
-        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', f'scale={W * 2}:-2,crop={W * 2}:{H * 2}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+        # clip giữ ở 1x để đỡ tốn bộ nhớ (2x làm tràn RAM khi chạy nhiều phần song song)
+        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', f'scale={W}:-2,crop={W}:{H}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                            capture_output=True, check=True)
-        n = len(r.stdout) // (W * H * 12); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * W * H * 12].reshape(n, H * 2, W * 2, 3)
+        n = len(r.stdout) // (W * H * 3); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * W * H * 3].reshape(n, H, W, 3)
         cache[p + '#fps'] = float(eval(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=r_frame_rate',
                                                        '-of', 'csv=p=0', p], capture_output=True, text=True).stdout.strip()))
     return cache[p], cache[p + '#fps']
@@ -61,7 +62,8 @@ def render_shot(sh, lt):
     z0, z1 = sh.get('z', mv[0]); z = z0 + (z1 - z0) * k
     f0 = sh.get('f', mv[1]); f1 = sh.get('f1', mv[2] if 'f' not in sh else f0); fx = f0[0] + (f1[0] - f0[0]) * k; fy = f0[1] + (f1[1] - f0[1]) * k
     hw, hh = 0.5 / z, 0.5 / z; fx = min(max(fx, hw), 1 - hw); fy = min(max(fy, hh), 1 - hh)
-    x0 = (fx - hw) * W * 2; y0 = (fy - hh) * H * 2; s_ = (W * 2 / z) / W
+    sh_, sw_ = src.shape[:2]
+    x0 = (fx - hw) * sw_; y0 = (fy - hh) * sh_; s_ = (sw_ / z) / W
     M = np.float32([[s_, 0, x0], [0, s_, y0]])
     out = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
     dp = load_depth(sh)
