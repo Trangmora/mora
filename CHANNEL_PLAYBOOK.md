@@ -23,6 +23,7 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
    - VI: `Nhạc nền:` rồi mỗi bài một dòng, dạng `"Tên bài" – Tác giả (Nguồn)`.
    - Bài Kevin MacLeod (CC BY 4.0) phải ghi thêm câu giấy phép: `Licensed under Creative Commons: By Attribution 4.0 License`.
 11. **Ngân sách:** tối đa $5 mỗi video.
+12. **Lưu trữ (bắt buộc):** mọi video thành phẩm lưu vào `videos/` (ghi vào `videos/README.md`). Mọi hình GPT và clip fal.ai lưu vào `assets/<nước>/images` và `clips`, kèm mô tả trong `index.json`, để tập sau dùng lại.
 
 ## Đăng tự động qua Morapost
 - **Key:** đã lưu trong Network secrets của môi trường (host `www.morapost.com`). Gọi `/api/v1/...` là proxy tự gắn key.
