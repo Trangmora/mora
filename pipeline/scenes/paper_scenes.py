@@ -13,7 +13,7 @@ import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont
 
 cfg = json.load(open(sys.argv[1])); OUT = sys.argv[2]; STILLS = [float(a) for a in sys.argv[3:]]
-W, H, FPS = 1280, 720, 24
+W, H = cfg.get('size', [1280, 720]); FPS = 24; VERT = H > W   # size [720, 1280] = video dọc toàn màn hình
 SH = cfg['shots']; DUR = cfg['dur']
 yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
 rng = np.random.default_rng(5)
@@ -23,19 +23,26 @@ def sm(x): x = min(1., max(0., x)); return x * x * (3 - 2 * x)
 
 # ---------- nguồn hình ----------
 cache = {}
+def fit(im, interp):
+    """ngang: cắt 16:9 rồi đưa về 2x. dọc: giữ nguyên bề ngang ảnh (để lia ngang), cao 1,6x khung."""
+    h, w = im.shape[:2]
+    if VERT: return cv2.resize(im, (int(w * 1.6 * H / h), int(1.6 * H)), interpolation=interp)
+    ch = int(w * 9 / 16); y0 = (h - ch) // 2
+    return cv2.resize(im[y0:y0 + ch], (W * 2, H * 2), interpolation=interp)
 def load_img(p):
     if p not in cache:
-        im = cv2.cvtColor(cv2.imread(p), cv2.COLOR_BGR2RGB).astype(np.float32) / 255
-        h, w = im.shape[:2]; ch = int(w * 9 / 16); y0 = (h - ch) // 2
-        cache[p] = cv2.resize(im[y0:y0 + ch], (W * 2, H * 2), interpolation=cv2.INTER_AREA)   # 2x để zoom cận vẫn nét
+        cache[p] = fit(cv2.cvtColor(cv2.imread(p), cv2.COLOR_BGR2RGB).astype(np.float32) / 255, cv2.INTER_CUBIC if VERT else cv2.INTER_AREA)
     return cache[p]
 def load_clip(p):
-    """khung clip, cắt về 16:9, ở 2x như ảnh để zoom cận vẫn nét"""
+    """khung clip ở 1x (đỡ tốn bộ nhớ). dọc: giữ nguyên bề ngang clip, cao bằng khung."""
     if p not in cache:
-        # clip giữ ở 1x để đỡ tốn bộ nhớ (2x làm tràn RAM khi chạy nhiều phần song song)
-        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', f'scale={W}:-2,crop={W}:{H}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
-                           capture_output=True, check=True)
-        n = len(r.stdout) // (W * H * 3); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * W * H * 3].reshape(n, H, W, 3)
+        vf = f'scale=-2:{H}' if VERT else f'scale={W}:-2,crop={W}:{H}'
+        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', vf, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True, check=True)
+        cw = W
+        if VERT:
+            pr = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', p], capture_output=True, text=True).stdout.strip().split(',')
+            cw = int(round(int(pr[0]) * H / int(pr[1]) / 2)) * 2
+        n = len(r.stdout) // (cw * H * 3); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * cw * H * 3].reshape(n, H, cw, 3)
         cache[p + '#fps'] = float(eval(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=r_frame_rate',
                                                        '-of', 'csv=p=0', p], capture_output=True, text=True).stdout.strip()))
     return cache[p], cache[p + '#fps']
@@ -43,6 +50,8 @@ def load_clip(p):
 # các kiểu máy quay chậm, luân phiên theo từng khung: đẩy vào, lia phải, lùi ra, lia trái (zoom tối đa 1,12)
 MOVES = [([1.02, 1.10], [.5, .5], [.5, .48]), ([1.08, 1.10], [.44, .5], [.56, .5]),
          ([1.11, 1.03], [.5, .47], [.5, .5]), ([1.08, 1.10], [.56, .5], [.44, .5])]
+if VERT:   # video dọc: lia ngang rộng hơn để thấy hết cảnh
+    MOVES = [([1.0, 1.06], [.36, .5], [.64, .5]), ([1.08, 1.0], [.64, .5], [.40, .5]), ([1.0, 1.10], [.5, .5], [.5, .48]), ([1.05, 1.0], [.42, .5], [.60, .5])]
 for _i, _sh in enumerate(SH): _sh['_i'] = _i
 
 def base_frame(sh, lt):
@@ -61,9 +70,11 @@ def render_shot(sh, lt):
     mv = MOVES[sh.get('_i', 0) % len(MOVES)]
     z0, z1 = sh.get('z', mv[0]); z = z0 + (z1 - z0) * k
     f0 = sh.get('f', mv[1]); f1 = sh.get('f1', mv[2] if 'f' not in sh else f0); fx = f0[0] + (f1[0] - f0[0]) * k; fy = f0[1] + (f1[1] - f0[1]) * k
-    hw, hh = 0.5 / z, 0.5 / z; fx = min(max(fx, hw), 1 - hw); fy = min(max(fy, hh), 1 - hh)
     sh_, sw_ = src.shape[:2]
-    x0 = (fx - hw) * sw_; y0 = (fy - hh) * sh_; s_ = (sw_ / z) / W
+    wh = sh_ / z; ww = wh * W / H                      # cửa sổ nhìn trên ảnh nguồn, đúng tỉ lệ khung
+    if ww > sw_: ww = sw_; wh = ww * H / W
+    hw, hh = ww / sw_ / 2, wh / sh_ / 2; fx = min(max(fx, hw), 1 - hw); fy = min(max(fy, hh), 1 - hh)
+    x0 = (fx - hw) * sw_; y0 = (fy - hh) * sh_; s_ = ww / W
     M = np.float32([[s_, 0, x0], [0, s_, y0]])
     out = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
     dp = load_depth(sh)
@@ -78,8 +89,7 @@ def load_depth(sh):
     p = sh['img'].replace('.png', '_d.png').replace('.jpg', '_d.png')
     if p not in cache:
         try:
-            d = cv2.imread(p, cv2.IMREAD_GRAYSCALE).astype(np.float32) / 255; h, w = d.shape; ch = int(w * 9 / 16); y0 = (h - ch) // 2
-            cache[p] = cv2.GaussianBlur(cv2.resize(d[y0:y0 + ch], (W * 2, H * 2)), (0, 0), 3)
+            cache[p] = cv2.GaussianBlur(fit(cv2.imread(p, cv2.IMREAD_GRAYSCALE).astype(np.float32) / 255, cv2.INTER_LINEAR), (0, 0), 3)
         except Exception: cache[p] = None
     return cache[p]
 
@@ -105,10 +115,12 @@ def label_img(parts, size=26):
 labels = []
 for i, sh in enumerate(SH):
     for lb in sh.get('labels', []):
-        a = label_img(lb['parts'], lb.get('size', 26)); h, w = a.shape[:2]; pos = lb.get('pos', 'tl'); m = 36
+        sz_ = lb.get('size', 26); a = label_img(lb['parts'], sz_)
+        while a.shape[1] > W - 24 and sz_ > 14: sz_ -= 2; a = label_img(lb['parts'], sz_)      # nhãn không được rộng hơn khung
+        h, w = a.shape[:2]; pos = lb.get('pos', 'tl'); m = 36
         x = m if 'l' in pos else W - w - m; y = m if 't' in pos else H - h - m
         if pos == 'c': x = (W - w) // 2; y = (H - h) // 2
-        if pos == 'tc': x = (W - w) // 2; y = m
+        if pos == 'tc': x = (W - w) // 2; y = int(.13 * H) if VERT else m
         labels.append(dict(a=a, x=x, y=y, t0=sh['s'] + lb['t0'], t1=sh['s'] + lb['t1']))
 
 # ---------- chuyển cảnh ----------
@@ -187,6 +199,20 @@ def evict(i):
     for j in (i - 1, i, i + 1):
         if 0 <= j < len(SH): keep |= {SH[j].get('clip'), SH[j].get('clip', '') + '#fps', SH[j].get('img')}
     for k in [k for k in cache if k not in keep and not k.endswith('_d.png')]: del cache[k]
+SUBC = {}
+def sub_img(text):
+    """phụ đề to, chữ trắng viền đậm, tối đa 2 dòng"""
+    if text not in SUBC:
+        size = int(W * (.082 if VERT else .04)); f = ImageFont.truetype(F['sub'], size); words = text.split(' '); lines = ['']
+        for w_ in words:
+            t_ = (lines[-1] + ' ' + w_).strip()
+            if f.getlength(t_) <= W * .86 or not lines[-1]: lines[-1] = t_
+            else: lines.append(w_)
+        st = max(4, size // 9); lh = int(size * 1.25); im = Image.new('RGBA', (W, lh * len(lines) + st * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        for j, l in enumerate(lines):
+            d.text(((W - f.getlength(l)) / 2, st + j * lh), l, font=f, fill=(255, 250, 235, 255), stroke_width=st, stroke_fill=(35, 22, 15, 255))
+        SUBC[text] = np.asarray(im, np.float32) / 255
+    return SUBC[text]
 def frame(t):
     i = idx_at(t); sh = SH[i]; img = None
     evict(i)
@@ -222,6 +248,12 @@ def frame(t):
         if lb['t0'] <= t <= lb['t1'] + .25:
             a = lb['a']; h, w = a.shape[:2]; al = a[..., 3:] * sm((t - lb['t0']) / .3) * sm((lb['t1'] + .25 - t) / .25)
             sub = img[lb['y']:lb['y'] + h, lb['x']:lb['x'] + w]; img[lb['y']:lb['y'] + h, lb['x']:lb['x'] + w] = sub * (1 - al) + a[..., :3] * al
+    for t0, t1, txt in cfg.get('subs', []):
+        if t0 <= t < t1:
+            a = sub_img(txt); h_ = a.shape[0]; y_ = int(H * cfg.get('sub_y', .70 if VERT else .84) - h_ / 2)
+            pop = sm((t - t0) / .08); al = a[..., 3:] * pop
+            img[y_:y_ + h_] = img[y_:y_ + h_] * (1 - al) + a[..., :3] * al
+            break
     img = img * (0.78 + 0.22 * vig) + grain[int(t * FPS) % 6] * .015
     img = img * sm(t / cfg.get('fade_in', .8)) * sm((DUR - t) / cfg.get('fade_out', 1.5))
     return (np.clip(img, 0, 1) * 255).astype(np.uint8)

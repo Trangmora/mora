@@ -1,0 +1,87 @@
+{
+ "bg": "work/img/OPBG.png",
+ "depth": "work/img/OPBG_d.png",
+ "crop_y": 0.5,
+ "sky_thr": 0.07,
+ "timing": "work/vo_op_{lang}.json",
+ "music_lead": 4.6,
+ "end": "end+4.5",
+ "fonts": {
+  "brush": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/NotoSerifDeva700.ttf",
+  "cap_vi": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/BeVN600.ttf",
+  "cap_en": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/Lora600.ttf"
+ },
+ "sun": {
+  "x": 0.2,
+  "r": 0.07,
+  "color": "#e06a2a",
+  "path": [
+   [
+    0.3,
+    4.4,
+    0.8,
+    0.5
+   ],
+   [
+    "o1+3.0",
+    "o2-0.3",
+    0.5,
+    0.92
+   ]
+  ]
+ },
+ "ink": [
+  {
+   "text": "गंगा",
+   "font": "brush",
+   "size": 210,
+   "x": 330,
+   "y": 220,
+   "align": "center",
+   "color": "#a8161d",
+   "t0": {
+    "vi": "o3@Ganga-0.6",
+    "en": "o3@Ganga, the-0.6"
+   },
+   "reveal": 2.2
+  }
+ ],
+ "captions": [
+  {
+   "text": {
+    "vi": "SÔNG HẰNG",
+    "en": "THE GANGES"
+   },
+   "font": "cap",
+   "size": 46,
+   "spacing": 18,
+   "x": 330,
+   "y": 360,
+   "align": "center",
+   "color": "#2b2622",
+   "t0": {
+    "vi": "o3@Ganga+0.6",
+    "en": "o3@Ganga, the+0.6"
+   },
+   "fadein": 1.0
+  },
+  {
+   "text": {
+    "vi": "DÒNG SÔNG LÀ MỘT NỮ THẦN",
+    "en": "THE RIVER THAT IS A GODDESS"
+   },
+   "font": "cap",
+   "size": 24,
+   "spacing": 9,
+   "x": 330,
+   "y": 415,
+   "align": "center",
+   "color": "#6b1216",
+   "t0": {
+    "vi": "o3@Ganga+1.8",
+    "en": "o3@Ganga, the+1.8"
+   },
+   "fadein": 1.0
+  }
+ ]
+}
