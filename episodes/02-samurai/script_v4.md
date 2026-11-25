@@ -31,7 +31,7 @@ Nhưng thế giới bên ngoài Nhật Bản thì không đứng yên.
 Năm 1853, tàu chiến Mỹ tiến vào vịnh Edo. Nước Nhật nhận ra mình đã tụt lại quá xa. Chính quyền mới thời Minh Trị quyết định thay đổi tất cả: có quân đội kiểu phương Tây, có súng, có tàu. Và samurai trở thành thứ thừa thãi. Năm 1876, họ bị cấm mang kiếm. Năm 1877, những samurai cuối cùng theo Saigō Takamori nổi dậy, cầm kiếm lao vào súng đạn, và thất bại. Bảy trăm năm khép lại.
 
 **KẾT**
-Vậy là những người hầu đã trở thành chủ nhờ thanh kiếm, và cũng mất tất cả khi thanh kiếm không còn đủ mạnh. Nhưng điều họ để lại thì vẫn còn: chữ "Bushidō", đạo của võ sĩ, nổi tiếng khắp thế giới nhờ một cuốn sách năm 1899, và tinh thần kỷ luật, trung thành mà người Nhật vẫn nhắc đến cho tới hôm nay. Tập sau, mình sẽ kể cho các bạn nghe về trà đạo, thứ mà chính các samurai cũng từng say mê. Cảm ơn các bạn đã xem, hẹn gặp lại nhé!
+Vậy là những người hầu đã trở thành chủ nhờ thanh kiếm, và cũng mất tất cả khi thanh kiếm không còn đủ mạnh. Nhưng điều họ để lại thì vẫn còn: tinh thần kỷ luật, lòng trung thành và danh dự, thứ mà người Nhật vẫn nhắc đến cho tới hôm nay. Tập sau, mình sẽ kể cho các bạn nghe về trà đạo, thứ mà chính các samurai cũng từng say mê. Cảm ơn các bạn đã xem, hẹn gặp lại nhé!
 
 ---
 **Kiểm chứng thêm so với v3:**
@@ -40,4 +40,4 @@ Vậy là những người hầu đã trở thành chủ nhờ thanh kiếm, và
 - Thời Chiến quốc: bắt đầu từ năm 1467 (thế kỷ 15).
 - Câu "samurai mê trà đạo": đúng với nhiều samurai tầng lớp trên (ví dụ Oda Nobunaga và Toyotomi Hideyoshi sưu tầm đồ trà).
 
-**Đã bỏ so với v3:** câu về Tomoe Gozen (khó kiểm chứng, lại làm rối mạch truyện) và danh sách các điều thú vị (nay lồng vào trong truyện).
+**Đã bỏ so với v3:** đoạn nói về chữ Bushidō và cuốn sách năm 1899 (theo yêu cầu), câu về Tomoe Gozen (khó kiểm chứng, lại làm rối mạch truyện) và danh sách các điều thú vị (nay lồng vào trong truyện).
