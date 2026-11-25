@@ -26,6 +26,9 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
 - **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
 - **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
+- **Tóm tắt kênh đăng:**
+  - **Bản tiếng Anh (6 kênh):** YouTube Asian Myths & Culture, Instagram asian_myths, Threads call me You, Facebook Ridiculous Case (qua Morapost); X asian_myths, TikTok asian_myths (qua Buffer).
+  - **Bản tiếng Việt (2 kênh):** YouTube Ridiculous Case, Facebook Mora Media (qua Morapost).
 - **Kênh đăng (chủ kênh chốt ngày 25/11/2026):**
 
 | Bản | Nền tảng | Tài khoản | ID trong Morapost |
@@ -47,7 +50,7 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 | X (Twitter) | asian_myths | `6b06ec308541f09ecb9d8490` |
 | TikTok | asian_myths | `6b06ec178541f09ecb9d82f6` |
 
-- **Bản ngôn ngữ dùng cho hai kênh này:** chưa chốt, nhưng tên kênh cho thấy là bản tiếng Anh.
+- **Bản ngôn ngữ:** hai kênh này chỉ đăng bản **tiếng Anh** (chủ kênh chốt).
 - **Định dạng:** cả hai kênh hợp với video dọc 9:16 ngắn hơn bản YouTube.
   - TikTok gần như bắt buộc khổ dọc.
   - X giới hạn độ dài video với tài khoản thường. Kiểm tra lại giới hạn trước khi đăng.
