@@ -28,7 +28,7 @@ if not A.box:   # chỉ có chữ, đặt thẳng lên tranh, có quầng giấy
     lines = A.title.split('|')
     for size in range(150, 40, -2):
         ft = ImageFont.truetype(f'{A.F}/{A.font}', size)
-        if max(wsp(l, ft, 10) for l in lines) <= W - 160: break
+        if size <= 120 and max(wsp(l, ft, 10) for l in lines) <= W * 0.62: break
     lh = int(size * 1.24); th = lh * len(lines); ty = int(H * 0.60 - th / 2)
     glow = Image.new('L', (W, H), 0); gd = ImageDraw.Draw(glow)
     for i, l in enumerate(lines):
