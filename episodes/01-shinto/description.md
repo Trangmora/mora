@@ -22,6 +22,11 @@ Sources:
 - Association of Shinto Shrines (Jinja Honcho): shrine etiquette, two bows, two claps, one bow
 - Encyclopaedia Britannica, "Shinto"
 
+Music:
+"Hon Kyoku" by Doug Maxwell & Zac Zinger (YouTube Audio Library)
+"Aomori Wings" by The Mini Vandals (YouTube Audio Library)
+"Wild Lotus Rhythms – Japan Travel" by asian_background_music (Pixabay)
+
 Illustrations are AI-assisted. Narration uses an AI voice (ElevenLabs).
 
 #Shinto #Japan #Mythology #AsianCulture #Amaterasu
@@ -47,6 +52,11 @@ Nguồn tham khảo:
 - Đền Kitano Tenmangu, Kyoto: Sugawara no Michizane (845–903) và tín ngưỡng Tenjin
 - Hiệp hội các đền Thần đạo (Jinja Honcho): nghi thức hai lạy, hai vỗ tay, một lạy
 - Bách khoa toàn thư Britannica, mục "Shinto"
+
+Nhạc nền:
+"Hon Kyoku" – Doug Maxwell & Zac Zinger (YouTube Audio Library)
+"Aomori Wings" – The Mini Vandals (YouTube Audio Library)
+"Wild Lotus Rhythms – Japan Travel" – asian_background_music (Pixabay)
 
 Hình minh họa có sự hỗ trợ của AI. Giọng đọc AI (ElevenLabs).
 

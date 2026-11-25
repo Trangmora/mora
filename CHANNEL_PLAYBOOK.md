@@ -18,7 +18,10 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
    - `audio_sfx.py`: hiệu ứng âm thanh.
    - Ghép với `alimiter`.
 9. **Kiểm tra:** xem các khung hình mẫu (chữ không bị che, không còn viền đen), nghe các đoạn chuyển phần.
-10. **Đăng:** hai kênh (Anh và Việt). Mô tả ghi nguồn tư liệu và khai báo có dùng AI. **Nhạc chỉ ghi tên khi giấy phép bắt buộc:** hai bài Kevin MacLeod (Finding Movement, Asian Drums Vadodara, giấy phép CC BY 4.0) phải ghi đúng câu ghi công. Các bài còn lại (YouTube Audio Library, Pixabay) thì không ghi.
+10. **Đăng:** hai kênh (Anh và Việt). Mô tả ghi nguồn tư liệu và khai báo có dùng AI. **Ghi nhạc theo đúng mẫu chủ kênh đưa** (xem `episodes/01-shinto/description.md`):
+   - EN: `Music:` rồi mỗi bài một dòng, dạng `"Tên bài" by Tác giả (Nguồn)`.
+   - VI: `Nhạc nền:` rồi mỗi bài một dòng, dạng `"Tên bài" – Tác giả (Nguồn)`.
+   - Bài Kevin MacLeod (CC BY 4.0) phải ghi thêm câu giấy phép: `Licensed under Creative Commons: By Attribution 4.0 License`.
 11. **Ngân sách:** tối đa $5 mỗi video.
 
 ## Đăng tự động qua Morapost
