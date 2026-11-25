@@ -11,25 +11,6 @@
   "cap_vi": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/BeVN600.ttf",
   "cap_en": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/Lora600.ttf"
  },
- "sun": {
-  "x": 0.19,
-  "r": 0.085,
-  "color": "#b02a2c",
-  "path": [
-   [
-    0.3,
-    4.4,
-    0.62,
-    0.33
-   ],
-   [
-    "op1+3.5",
-    "op2-0.4",
-    0.33,
-    0.75
-   ]
-  ]
- },
  "ink": [
   {
    "text": "十四年",
@@ -59,5 +40,35 @@
    "t1": "end+5",
    "fadein": 1.0
   }
- ]
+ ],
+ "dragon": {
+  "img": "../../assets/china/images/dragon_red.jpg",
+  "width": 660,
+  "wave": [
+   14,
+   420,
+   2.2
+  ],
+  "path": [
+   [
+    0.0,
+    1.0,
+    0.3
+   ],
+   [
+    "op2+0.2",
+    -0.36,
+    0.33
+   ]
+  ],
+  "fade_in": [
+   0.0,
+   1.5
+  ],
+  "fade_out": [
+   "op2-1.6",
+   "op2+0.1"
+  ],
+  "opacity": 0.88
+ }
 }

@@ -89,6 +89,13 @@ for it in cfg['ink'] + cfg['captions']:
 def sm(x): x = min(1, max(0, x)); return x * x * (3 - 2 * x)
 
 S = cfg.get('sun')
+DR = cfg.get('dragon')
+if DR:   # rồng mực đỏ vẽ trên nền trắng -> hòa trộn kiểu nhân (multiply), giấy trắng không đổi màu
+    d_ = cv2.cvtColor(cv2.imread(DR['img']), cv2.COLOR_BGR2RGB).astype(np.float32) / 255
+    nz = np.where(d_.min(2) < 0.92); d_ = d_[nz[0].min():nz[0].max() + 1, nz[1].min():nz[1].max() + 1]
+    dw = int(DR['width']); dh = int(d_.shape[0] * dw / d_.shape[1])
+    DIMG = cv2.resize(d_, (dw, dh), interpolation=cv2.INTER_AREA)
+    if DR.get('flip'): DIMG = DIMG[:, ::-1].copy()
 SUNC = hexrgb(S['color']) if S else None
 def frame(t):
     k = sm(t / DUR)
@@ -117,6 +124,31 @@ def frame(t):
             d = np.sqrt((xx - px) ** 2 + (yy - py) ** 2)
             disc = np.clip((r * z - d) / 1.5, 0, 1) * skm
             img = img * (1 - disc[..., None]) + (SUNC * (0.96 + .04 * noise(2, 5)[..., None]) * disc[..., None])
+    # rồng: bay theo đường đi, thân uốn sóng, bị núi che theo đường chân trời
+    if DR:
+        P = [(ev(a), x_, y_) for a, x_, y_ in DR['path']]
+        if P[0][0] <= t <= P[-1][0]:
+            for (ta, xa, ya), (tb, xb, yb) in zip(P, P[1:]):
+                if ta <= t <= tb:
+                    q = (t - ta) / (tb - ta); q = q if DR.get('linear', 1) else sm(q)
+                    wx = (xa + (xb - xa) * q) * W; wy = (ya + (yb - ya) * q) * H; break
+            fa = sm((t - ev(DR['fade_in'][0])) / (ev(DR['fade_in'][1]) - ev(DR['fade_in'][0])))
+            fb = 1 - sm((t - ev(DR['fade_out'][0])) / (ev(DR['fade_out'][1]) - ev(DR['fade_out'][0])))
+            px = (wx - cx) * z + W / 2; py = (wy - cy) * z + H / 2
+            dh, dw = DIMG.shape[:2]; sz = z
+            A, lam, om = DR['wave']
+            x0 = int(max(0, px - dw * sz / 2 - 40)); x1 = int(min(W, px + dw * sz / 2 + 40))
+            y0 = int(max(0, py - dh * sz / 2 - A * 2 - 10)); y1 = int(min(H, py + dh * sz / 2 + A * 2 + 10))
+            if x1 > x0 and y1 > y0:
+                gx, gy = np.meshgrid(np.arange(x0, x1, dtype=np.float32), np.arange(y0, y1, dtype=np.float32))
+                u = (gx - px) / sz + dw / 2
+                # sóng truyền từ đầu (trái) về đuôi (phải); đầu ít lắc hơn đuôi
+                amp = A * (0.35 + 0.65 * np.clip(u / dw, 0, 1))
+                v = (gy - py) / sz + dh / 2 - amp * np.sin(2 * np.pi * u / lam - om * t)
+                patch = cv2.remap(DIMG, u, v, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=(1, 1, 1))
+                m = (fa * fb * DR.get('opacity', 0.95)) * skm[y0:y1, x0:x1]
+                sub = img[y0:y1, x0:x1]
+                img[y0:y1, x0:x1] = sub * (1 - m[..., None] * (1 - patch))
     # chữ
     for it in items:
         lt = t - it['t0']
