@@ -5,17 +5,13 @@
 ### Japan
 **Tên:** Japan: Myths, Gods & Culture
 
-**Mô tả:**
-Eight million gods, shrines rebuilt every 20 years, warriors, emperors and ghosts. This playlist explores the myths, religion and history of Japan, one story at a time.
+**Mô tả (chung, không nhắc tập cụ thể):**
+Stories from Japan: its gods and spirits, sacred shrines, ancient myths, emperors and warriors, and the traditions that still shape everyday life today.
 
-Each episode looks at where a tradition comes from, the legends behind it, and how it still lives in Japan today, told with hand-made paper-cut style illustrations and calm, curious storytelling.
+Each video takes one piece of Japanese culture and asks a simple question: where does it come from? Told with hand-made paper-cut style illustrations and calm, curious storytelling.
 
-Episodes:
-1. Japan's 8 Million Gods: What Is Shinto?
-2. Coming soon: when Buddhism arrived in Japan
+Subscribe to Asian Myths & Culture for more stories from across Asia.
 
-New episodes added regularly. Subscribe to Asian Myths & Culture for more stories from across Asia.
+#Japan #JapaneseMythology #JapaneseCulture #JapaneseHistory #AsianCulture
 
-#Japan #JapaneseMythology #Shinto #JapaneseCulture #AsianCulture
-
-**Video trong danh sách:** https://www.youtube.com/watch?v=mnM0BsNbiSQ (tập 1)
+**Mẫu cho nước khác:** giữ nguyên cấu trúc, đổi tên nước và các ví dụ (China: dragons, emperors, Confucius and Taoism…).
