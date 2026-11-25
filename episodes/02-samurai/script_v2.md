@@ -8,7 +8,7 @@
 ## MỞ ĐẦU: chiến trường lúc bình minh (4 giây chỉ có nhạc)
 *Sương, hàng cờ hiệu đứng im, gió nổi lên, cờ bay. Ánh mặt trời lóe dọc lưỡi kiếm cắm trên đất. Tiếng trống taiko.*
 
-1. [Cờ bay] Xin chào các bác.
+1. [Cờ bay] Xin chào các bạn.
 2. [Bóng samurai trong sương] Bảy trăm năm. Một tầng lớp người cai trị cả nước Nhật.
 3. [Hai thanh kiếm] Họ đeo hai thanh kiếm.
 4. [Bút lông, bài thơ] Họ làm thơ.
@@ -57,7 +57,7 @@
 ## KẾT
 32. [Kendo, phim, anime] Nhưng tinh thần ấy vẫn còn: trong kendo, trong phim ảnh, trong chữ "kỷ luật" của người Nhật.
 33. [Chiến trường lúc hoàng hôn, kiếm, hoa anh đào] Những người bắt đầu chỉ là "người hầu"… lại trở thành biểu tượng của cả một đất nước.
-34. [Chữ 侍] Tập sau, mình kể chuyện trà đạo Nhật Bản. Cảm ơn các bác đã xem, hẹn gặp lại nhé!
+34. [Chữ 侍] Tập sau, mình kể chuyện trà đạo Nhật Bản. Cảm ơn các bạn đã xem, hẹn gặp lại nhé!
 
 ## Số cảnh và chi phí
 - **34 cảnh trong khoảng 3 phút 20 giây**, mỗi cảnh trung bình khoảng 6 giây tính cả ngắt nhạc, phần lời 2–4 giây. Nhiều cảnh là khung cận của cùng một ảnh.

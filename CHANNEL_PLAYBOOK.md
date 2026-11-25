@@ -5,7 +5,7 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 1. **Chọn chủ đề:** một nét văn hóa, tôn giáo hoặc thần thoại của một nước châu Á.
 2. **Kịch bản:**
    - **Bản tiếng Anh:** giọng người tò mò kể chuyện.
-   - **Bản tiếng Việt:** nói chuyện thân mật ("Xin chào các bác…").
+   - **Bản tiếng Việt:** nói chuyện thân mật ("Xin chào các bạn…").
    - **Cấu trúc:** mở đầu bí ẩn bằng câu hỏi → nguồn gốc → thần thoại → các điều thú vị → kết quay lại câu hỏi.
    - Kiểm chứng năm, con số và tên riêng. Không chép kịch bản kênh khác.
 3. **Kho tài nguyên:** đọc `assets/<nước>/index.json`, dùng lại ảnh và clip hợp ngữ cảnh.

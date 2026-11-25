@@ -142,4 +142,4 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - Thẻ cảm xúc tiếng Anh trong lời đọc.
 - Nhạc có lời chạy dưới giọng đọc.
 - Mặt trời che chữ.
-- Bản tiếng Việt đọc kiểu "đọc bài". Phải nói chuyện thân mật: "Xin chào các bác, hôm nay chúng ta cùng tìm hiểu…".
+- Bản tiếng Việt đọc kiểu "đọc bài". Phải nói chuyện thân mật: "Xin chào các bạn, hôm nay chúng ta cùng tìm hiểu…".
