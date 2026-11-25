@@ -7,3 +7,4 @@ shorts/out/*.jpg
 shorts/out/*_vo.json
 shorts/*.log
 shorts/out/*.mp3
+shorts/out/
