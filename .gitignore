@@ -5,3 +5,5 @@ shorts/out/*_shots.json
 shorts/out/*.wav
 shorts/out/*.jpg
 shorts/out/*_vo.json
+shorts/*.log
+shorts/out/*.mp3
