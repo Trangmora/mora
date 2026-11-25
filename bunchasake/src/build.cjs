@@ -77,7 +77,7 @@ const blogKeys = [...BLOG_ORDER.filter(k => blog[k]), ...Object.keys(blog).filte
 /* ---------- URL ---------- */
 const pre = l => l === "vi" ? "/vi" : "";
 const U = {
-  home: l => pre(l) + "/",
+  home: l => l === "vi" ? "/" : "/en/",   /* trang chủ: tiếng Việt ở gốc, tiếng Anh ở /en/ */
   blogindex: l => pre(l) + "/blog/",
   landing: (k, l) => landing[k]?.[l] ? `${pre(l)}/${landing[k][l].slug}/` : null,
   blog: (k, l) => blog[k]?.[l] ? `${pre(l)}/blog/${blog[k][l].slug}/` : null,
@@ -109,7 +109,7 @@ function resolve(html, l, where) {
   });
 }
 const pages = [];   // { url:{en,vi}, lastmod, priority }
-const alt = urls => LANGS.filter(l => urls[l]).map(l => `<link rel="alternate" hreflang="${l}" href="${ORIGIN}${urls[l]}">`).join("\n") + (urls.en ? `\n<link rel="alternate" hreflang="x-default" href="${ORIGIN}${urls.en}">` : "");
+const alt = (urls, xd = "en") => LANGS.filter(l => urls[l]).map(l => `<link rel="alternate" hreflang="${l}" href="${ORIGIN}${urls[l]}">`).join("\n") + (urls[xd] ? `\n<link rel="alternate" hreflang="x-default" href="${ORIGIN}${urls[xd]}">` : "");
 
 /* ---------- Khung trang ---------- */
 function head({ l, title, desc, urls, type = "website", ldjson = [], cls = "", image = "/og.png" }) {
@@ -410,9 +410,9 @@ function renderLegal(key) {
 }
 function render404() {
   const l = "en", t = T.en, urls = { en: "/404.html" };
-  const h = head({ l, title: t.nfTitle, desc: "Page not found.", urls }).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<link rel="alternate"[^>]*>\n?/g, "") + "\n" + nav(l, { en: "/", vi: "/vi/" }, "") + `
+  const h = head({ l, title: t.nfTitle, desc: "Page not found.", urls }).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n').replace(/<link rel="alternate"[^>]*>\n?/g, "") + "\n" + nav(l, { en: "/en/", vi: "/" }, "") + `
 <main id="main"><section class="notfound"><p class="kicker cap"><span class="dot" aria-hidden="true"></span>404</p><h1>${t.nfH}</h1><p class="lead">${t.nfP}</p>
-<div class="hero-cta"><a class="pill" href="/">${t.home}</a><a class="pill ghost" href="/blog/">${t.blog}</a><a class="pill ghost" href="/vi/">Tiếng Việt</a></div></section></main>
+<div class="hero-cta"><a class="pill" href="/en/">${t.home}</a><a class="pill ghost" href="/blog/">${t.blog}</a><a class="pill ghost" href="/">Tiếng Việt</a></div></section></main>
 ` + foot(l, null);
   write("404.html", h);
 }
@@ -423,7 +423,7 @@ function wrapHome(src) {
   return `<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n${src.slice(0, i)}\n</head>\n<body>${src.slice(i)}\n</body>\n</html>\n`;
 }
 async function renderHome(browser, l) {
-  const src = fs.readFileSync(path.join(__dirname, "home.html"), "utf8"), urls = { en: "/", vi: "/vi/" };
+  const src = fs.readFileSync(path.join(__dirname, "home.html"), "utf8"), urls = { en: "/en/", vi: "/" };
   const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
   const errs = []; page.on("pageerror", e => errs.push(e.message));
   await page.route("**/*", r => r.request().url() === ORIGIN + "/" ? r.fulfill({ contentType: "text/html; charset=utf-8", body: wrapHome(src) }) : r.abort());
@@ -432,7 +432,7 @@ async function renderHome(browser, l) {
     setLang(lang);
     const de = document.documentElement; de.lang = lang; de.dataset.lang = lang;
     document.querySelectorAll("a[data-vi]").forEach(a => { if (lang === "vi") a.setAttribute("href", a.dataset.vi); a.removeAttribute("data-vi"); });
-    document.querySelector(".lang").innerHTML = ["en", "vi"].map(x => `<a href="${x === "vi" ? "/vi/" : "/"}" hreflang="${x}" lang="${x}"${x === lang ? ' aria-current="true"' : ""}>${x.toUpperCase()}</a>`).join("");
+    document.querySelector(".lang").innerHTML = ["en", "vi"].map(x => `<a href="${x === "vi" ? "/" : "/en/"}" hreflang="${x}" lang="${x}"${x === lang ? ' aria-current="true"' : ""}>${x.toUpperCase()}</a>`).join("");
     document.getElementById("progress").removeAttribute("style");
     document.getElementById("nav").classList.remove("scrolled"); document.getElementById("mobileCta").classList.remove("show");
     document.querySelectorAll(".nav ul a.active").forEach(a => a.classList.remove("active"));
@@ -441,10 +441,10 @@ async function renderHome(browser, l) {
   await page.close();
   if (errs.length) W(`home.${l}: lỗi JS khi dựng – ${errs.join("; ")}`);
   html = html.replace(/href="https:\/\/bunchasake\.com\//g, 'href="/').replace(/"work\//g, '"/work/').replace(/href="(favicon\.svg|favicon\.ico|apple-touch-icon\.png)"/g, 'href="/$1"');
-  const stillMissing = [...html.matchAll(/href="(\/[^"#]*\/)"/g)].map(m => m[1]).filter(u => !["/", "/vi/"].includes(u) && !fs.existsSync(path.join(SITE, u, "index.html")));
+  const stillMissing = [...html.matchAll(/href="(\/[^"#]*\/)"/g)].map(m => m[1]).filter(u => !["/", "/en/"].includes(u) && !fs.existsSync(path.join(SITE, u, "index.html")));
   [...new Set(stillMissing)].forEach(u => W(`home.${l}: liên kết ${u} chưa có trang`));
   const m = HOME[l];
-  const extra = `<link rel="canonical" href="${ORIGIN}${urls[l]}">\n${alt(urls)}\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="Bunchasake">\n<meta property="og:title" content="${esc(m.title)}">\n<meta property="og:description" content="${esc(m.desc)}">\n<meta property="og:url" content="${ORIGIN}${urls[l]}">\n<meta property="og:image" content="${ORIGIN}/og.png">\n<meta property="og:locale" content="${l === "vi" ? "vi_VN" : "en_US"}">\n<meta name="twitter:card" content="summary_large_image">`;
+  const extra = `<link rel="canonical" href="${ORIGIN}${urls[l]}">\n${alt(urls, "vi")}\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="Bunchasake">\n<meta property="og:title" content="${esc(m.title)}">\n<meta property="og:description" content="${esc(m.desc)}">\n<meta property="og:url" content="${ORIGIN}${urls[l]}">\n<meta property="og:image" content="${ORIGIN}/og.png">\n<meta property="og:locale" content="${l === "vi" ? "vi_VN" : "en_US"}">\n<meta name="twitter:card" content="summary_large_image">`;
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(m.title)}</title>`).replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${esc(m.desc)}">\n${extra}`);
   const services = landingKeys.filter(k => landing[k][l]).map(k => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: LABEL[k]?.[l] || k, url: ORIGIN + U.landing(k, l) } }));
   const vi_ = l === "vi";
@@ -454,14 +454,15 @@ async function renderHome(browser, l) {
   const faqPage = { "@type": "FAQPage", "@id": ORIGIN + urls[l] + "#faq", inLanguage: l, mainEntity: FAQ.map(x => ({ "@type": "Question", name: vi_ ? x[0] : x[2], acceptedAnswer: { "@type": "Answer", text: vi_ ? x[1] : x[3] } })) };
   const graph = { "@context": "https://schema.org", "@graph": [{ ...ORG, hasOfferCatalog: { "@type": "OfferCatalog", name: vi_ ? "Gói AI automation" : "AI automation packages", itemListElement: [...pkgs, ...services] } }, { "@type": "WebSite", "@id": ORIGIN + "/#website", url: ORIGIN + "/", name: "Bunchasake", inLanguage: ["en", "vi"], publisher: { "@id": ORIGIN + "/#org" } }, faqPage] };
   html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, ld(graph));
+  html = html.replace(/const EN = \{\n[\s\S]*?\n\};/, "const EN = {};").replace(/const EN_ATTR = \{\n[\s\S]*?\n\};/, "const EN_ATTR = {};");   /* trang dựng sẵn không dùng từ điển: bỏ để HTML nhẹ hơn */
   if (l === "en") html = enAnchors(html);
   write(urls[l] + "index.html", html);
-  if (l === "en") pages.unshift({ urls, lastmod: TODAY, priority: "1.0" });
+  if (l === "en") pages.unshift({ urls, lastmod: TODAY, priority: "1.0", xd: "vi" });
 }
 
 /* ---------- Tệp cho máy tìm kiếm & AI ---------- */
 function writeMeta() {
-  const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` + pages.flatMap(p => LANGS.filter(l => p.urls[l]).map(l => `  <url><loc>${ORIGIN}${p.urls[l]}</loc><lastmod>${p.lastmod}</lastmod><priority>${p.priority}</priority>${LANGS.filter(x => p.urls[x]).map(x => `<xhtml:link rel="alternate" hreflang="${x}" href="${ORIGIN}${p.urls[x]}"/>`).join("")}${p.urls.en ? `<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${p.urls.en}"/>` : ""}</url>`)).join("\n") + `\n</urlset>\n`;
+  const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` + pages.flatMap(p => LANGS.filter(l => p.urls[l]).map(l => `  <url><loc>${ORIGIN}${p.urls[l]}</loc><lastmod>${p.lastmod}</lastmod><priority>${p.priority}</priority>${LANGS.filter(x => p.urls[x]).map(x => `<xhtml:link rel="alternate" hreflang="${x}" href="${ORIGIN}${p.urls[x]}"/>`).join("")}${p.urls[p.xd || "en"] ? `<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${p.urls[p.xd || "en"]}"/>` : ""}</url>`)).join("\n") + `\n</urlset>\n`;
   write("sitemap.xml", sm);
   const bots = ["Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckDuckBot", "Amazonbot", "meta-externalagent", "CCBot", "Bravebot"];
   write("admin/index.html", fs.readFileSync(path.join(__dirname, "admin.html"), "utf8"));
@@ -508,7 +509,7 @@ ${landingKeys.filter(k => landing[k].vi).map(k => `- [${LABEL[k]?.vi || k}](${OR
 Brands we have worked with: ${Object.values(PROJECTS).map(p => `${p.name} (${p.en})`).join(", ")}.
 `);
   write("_headers", `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/work/*\n  Cache-Control: public, max-age=604800\n/assets/*\n  Cache-Control: public, max-age=300, must-revalidate\n`);
-  write("_redirects", ["/index-3d", "/index-3d.html", "/page", "/page.html", "/admin", "/admin.html"].map(p => `${p} / 301`).join("\n") + "\n");
+  write("_redirects", ["/index-3d", "/index-3d.html", "/page", "/page.html", "/vi", "/vi/"].map(p => `${p} / 301`).join("\n") + "\n");   /* /vi/ là trang chủ tiếng Việt cũ; /admin là trang quản trị thật nên không chuyển hướng */
   write(INDEXNOW_KEY + ".txt", INDEXNOW_KEY + "\n");
 }
 

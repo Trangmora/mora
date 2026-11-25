@@ -59,31 +59,23 @@
     }
   ],
   "process": {
-    "title": "Six steps, and you approve after each one",
+    "title": "Four steps, running from month one",
     "items": [
       {
-        "t": "Listening",
-        "p": "A 60-minute conversation about your services, policies and the questions customers ask most."
+        "t": "A 30-minute call",
+        "p": "An online conversation. We look at where your salon is losing time: posting, messages, reviews."
       },
       {
-        "t": "Positioning",
-        "p": "Who the salon is for and its key messages, which become the themes of the calendar."
+        "t": "We build the system",
+        "p": "We connect your channels, teach the AI your brand voice and prepare the first content calendar."
       },
       {
-        "t": "Identity",
-        "p": "Voice, colours and type: what the assistant learns, so drafts sound like you."
+        "t": "A 30-day trial",
+        "p": "The system runs, you approve. At the end of the month we review the numbers together."
       },
       {
-        "t": "Reach",
-        "p": "Post templates and the system itself, set up on your Facebook, Instagram and TikTok."
-      },
-      {
-        "t": "Community",
-        "p": "A brand that grows <b class=\"k\">without a community behind it</b> is not yet a success. Returning customers from a good community save a lot of sales and marketing spend, so we help you build one on the platforms your customers prefer, for loyal customers."
-      },
-      {
-        "t": "Crisis communication",
-        "p": "Every business meets a <b class=\"k\">communication crisis</b> at some point. Our team, specialised in studying and handling crises, keeps the impact and risk to your brand to a minimum and trains your team to respond like communication professionals."
+        "t": "Monthly operation",
+        "p": "We monitor, adjust and add machines when your salon needs them."
       }
     ]
   },
@@ -116,12 +108,12 @@
     },
     {
       "q": "What does it cost, and how do we start?",
-      "a": "Email <a href=\"{{mail}}\">hello@bunchasake.com</a> about your salon. After a 60-minute conversation, we send a proposal and a quote."
+      "a": "Email <a href=\"{{mail}}\">hello@bunchasake.com</a> about your salon. After a 30-minute online conversation, we send a proposal and a quote."
     }
   ],
   "cta": {
     "h2": "Keep the page alive while you do nails",
-    "p": "Tell us about your salon and how you post today. We prepare our questions and set up a 60-minute conversation.",
+    "p": "Tell us about your salon and how you post today. We prepare our questions and set up a 30-minute online conversation.",
     "subject": "Social media automation for my nail salon"
   },
   "related": [

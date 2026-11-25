@@ -1335,20 +1335,7 @@ const projects = [
   { name: "Vestra Place", sector: "Coworking", sectorEn: "Coworking", img: "work/vestra-place.jpg", url: "https://www.instagram.com/vestra_place/", ch: "Instagram" },
   { name: "Vina KTV", sector: "Thiết bị âm thanh", sectorEn: "Audio equipment", img: "work/vina-ktv.jpg", url: "https://vinaktv.com/", ch: "Website" },
 ];
-const steps = [
-  { en: { name: "Listening", more: "/blog/brand-discovery-founder-story/", hook: "Every brand begins with the founder’s story.", line: "We sit down with you for 60 minutes: why you started, what you believe in, what keeps you up at night. We take the notes, write them up and send you a summary to confirm. Nothing moves on until you agree it sounds like you.", pts: [] },
-    name: "Lắng nghe", more: "/vi/blog/lang-nghe-cau-chuyen-nguoi-sang-lap/", hook: "Mọi thương hiệu bắt đầu từ câu chuyện của người sáng lập.", line: "Chúng tôi ngồi cùng bạn 60 phút: vì sao bạn bắt đầu, bạn tin vào điều gì, điều gì khiến bạn trăn trở. Chúng tôi ghi chép, viết thành bản tóm tắt và gửi bạn xác nhận. Bạn thấy đúng là mình rồi mới đi tiếp.", pts: [] },
-  { en: { name: "Positioning", more: "/blog/brand-positioning-competitor-analysis/", hook: "Know who you are, who you serve and how you differ.", line: "We do the competitor research ourselves, then work through the findings with you: where you stand, who you are for, what makes you different. Together we write the brand story, and you approve every line before any channel tells it.", pts: [] },
-    name: "Định vị", more: "/vi/blog/dinh-vi-thuong-hieu-phan-tich-doi-thu/", hook: "Rõ mình là ai, dành cho ai và khác ai.", line: "Chúng tôi tự tay phân tích đối thủ, rồi cùng bạn đọc kết quả: bạn đang đứng ở đâu, dành cho ai, khác biệt ở điểm nào. Hai bên cùng viết câu chuyện thương hiệu, bạn duyệt từng câu trước khi mọi kênh cùng kể.", pts: [] },
-  { en: { name: "Identity", more: "/blog/brand-identity-design-process/", hook: "We shape the brand together with the founder.", line: "Our designers create the logo, colours, typography and voice, and sit with you and the person in charge of the brand at each round. We adjust until you are happy, then hand over the finished files and one set of guidelines your team can use.", pts: [] },
-    name: "Nhận diện", more: "/vi/blog/quy-trinh-thiet-ke-nhan-dien-thuong-hieu/", hook: "Cùng người sáng lập định hình thương hiệu.", line: "Đội thiết kế của chúng tôi làm logo, màu sắc, kiểu chữ, giọng văn, và ngồi cùng bạn cùng người phụ trách thương hiệu ở mỗi vòng. Chỉnh đến khi bạn ưng, rồi bàn giao đủ file và một bộ quy chuẩn để đội bạn dùng được ngay.", pts: [] },
-  { en: { name: "Reach", more: "/blog/brand-reach-omnichannel-presence/", hook: "Be where your customers already are.", line: "We build the website, set up your social channels and make the first posts with you, not just a plan to follow. Already have channels? We read the data, customer behaviour and past campaigns with your team, then run the new campaign alongside you.", pts: [] },
-    name: "Phủ sóng", more: "/vi/blog/phu-song-thuong-hieu-da-kenh/", hook: "Có mặt ở nơi khách hàng tìm đến.", line: "Chúng tôi dựng website, thiết lập các kênh mạng xã hội và cùng bạn làm những bài đăng đầu tiên, không chỉ đưa một bản kế hoạch để bạn tự làm. Đã có kênh? Chúng tôi cùng đội bạn đọc dữ liệu, hành vi khách hàng và các chiến dịch trước, rồi cùng chạy chiến dịch mới.", pts: [], ch: ["Website", "Facebook", "Instagram", "TikTok", "YouTube", "Threads", "LinkedIn", "Zalo", "Pinterest"] },
-  { en: { name: "Community", more: "/blog/brand-community-building/", hook: "Strong brands grow on a community.", line: "Returning customers save you a great deal of sales and marketing spend. We set up the community spaces on the platforms your customers prefer, plan the first activities and run them together with your team until they can carry on on their own.", pts: [] },
-    name: "Cộng đồng", more: "/vi/blog/xay-dung-cong-dong-thuong-hieu/", hook: "Thương hiệu lớn mạnh nhờ cộng đồng.", line: "Khách quay lại giúp bạn tiết kiệm rất nhiều chi phí bán hàng và marketing. Chúng tôi lập không gian cộng đồng trên những nền tảng khách hàng yêu thích, lên các hoạt động đầu tiên và cùng đội bạn vận hành cho đến khi đội bạn tự làm được.", pts: [] },
-  { en: { name: "Crisis communication", more: "/blog/crisis-communication-for-small-business/", hook: "Steady when a crisis hits.", line: "When something goes wrong, our crisis team works with you from the first hour: we assess the situation, draft the responses and handle the communication side by side with you, then train your team so they are ready next time.", pts: [] },
-    name: "Xử lý khủng hoảng", more: "/vi/blog/xu-ly-khung-hoang-truyen-thong/", hook: "Vững vàng khi khủng hoảng ập đến.", line: "Khi có sự cố, đội xử lý khủng hoảng của chúng tôi cùng bạn vào cuộc ngay từ giờ đầu: đánh giá tình hình, soạn phản hồi và xử lý truyền thông song song với bạn, rồi training cho đội bạn để lần sau sẵn sàng hơn.", pts: [] },
-];
+const steps = [];
 if (reduce) document.querySelectorAll('.logo-video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
 /* ---------- Marquee ---------- */
@@ -1372,83 +1359,6 @@ const CHI = (() => {
 })();
 const stepsEl = document.getElementById("steps");
 function renderSteps() {}
-if (stepsEl) {
-
-stepsEl.innerHTML = steps.map((s, i) => `
-  <li class="step${i === 0 ? " active" : ""}" data-i="${i}">
-    <span class="n">${String(i + 1).padStart(2, "0")}</span>
-    <h3></h3>
-    <div class="body">
-      <p class="hook"></p>
-      <p class="line"></p>${s.ch ? `
-      <p class="ch">${s.ch.map(c => `<span>${CHI[c] || ""}${c}</span>`).join("")}</p>` : ""}
-      <div class="pts"><span class="lead"></span><ul></ul></div>
-      <a class="step-more" href="#"></a>
-    </div>
-  </li>`).join("");
-renderSteps = function () {
-  const sc = document.getElementById("scards");
-  const designed = LANG === "vi"; /* bản VI dùng ảnh bìa có chữ của loạt bài "6 bước" */
-  if (sc) { sc.classList.toggle("designed", designed); sc.innerHTML = steps.map((st, i) => { const s = tr(st), lab = (LANG === "en" ? "STEP " : "BƯỚC ") + String(i + 1).padStart(2, "0");
-    return designed
-      ? `<a class="scard" href="${s.more || "#cach-lam"}" aria-label="${lab}: ${esc(s.name)}"><img src="/img/home/stepcard-${i + 1}.jpg" width="720" height="900" alt="${lab}: ${esc(s.name)}" loading="lazy" decoding="async"></a>`
-      : `<a class="scard" href="${s.more || "#cach-lam"}"><img src="/img/home/step-${i + 1}.jpg" width="600" height="750" alt="" loading="lazy" decoding="async"><span class="sc"><span class="sc-n">${lab}</span><span class="sc-t">${esc(s.name)}</span></span></a>`; }).join(""); }
-  stepsEl.querySelectorAll(".step").forEach((el, i) => {
-    const s = tr(steps[i]);
-    el.querySelector("h3").textContent = s.name;
-    el.querySelector(".hook").textContent = s.hook || "";
-    el.querySelector(".line").innerHTML = s.line;
-    const mo = el.querySelector(".step-more"); if (s.more) { mo.href = s.more; mo.innerHTML = (LANG === "en" ? "Read more" : "Xem thêm") + ' <span aria-hidden="true">→</span>'; } else mo.remove();
-    el.querySelector(".lead").textContent = s.lead || "";
-    el.querySelector(".pts ul").innerHTML = s.pts.map(p => `<li>${esc(p)}</li>`).join("");
-    el.querySelector(".pts").style.display = s.pts.length || s.lead ? "" : "none";
-  });
-}
-renderSteps();
-if ("IntersectionObserver" in window) {
-  const rows = [...stepsEl.querySelectorAll(".step")];
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      const i = +en.target.dataset.i;
-      rows.forEach((s, j) => { s.classList.toggle("active", j === i); s.classList.toggle("passed", j < i); });
-    });
-  }, { rootMargin: "-45% 0px -45% 0px" });
-  rows.forEach(s => io.observe(s));
-} else { stepsEl.classList.add("no-io"); }
-
-
-/* ---------- Vì sao: 3 ý dạng mở-đóng + câu kết sáng dần ---------- */
-(() => {
-  const box = document.querySelector(".why .pains"); if (!box) return;
-  const items = [...box.querySelectorAll(".pain")]; let cur = 0, timer = null;
-  const show = i => { cur = i; items.forEach((el, j) => { el.classList.toggle("on", j === i); el.setAttribute("aria-expanded", String(j === i)); }); };
-  const stop = () => { clearInterval(timer); timer = null; box.classList.remove("autoplay"); };
-  items.forEach((el, i) => {
-    el.tabIndex = 0; el.setAttribute("role", "button");
-    el.addEventListener("click", () => { stop(); show(i); });
-    el.addEventListener("mouseenter", () => { if (matchMedia("(hover: hover)").matches) { stop(); show(i); } });
-    el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); stop(); show(i); } });
-  });
-  show(0);
-  if (!reduce && "IntersectionObserver" in window) {
-    new IntersectionObserver(es => es.forEach(en => {
-      if (en.isIntersecting && !timer && !box.dataset.touched) { box.classList.add("autoplay"); timer = setInterval(() => { show((cur + 1) % items.length); box.classList.remove("autoplay"); void box.offsetWidth; box.classList.add("autoplay"); }, 5000); }
-      else if (!en.isIntersecting && timer) stop();
-    }), { threshold: .4 }).observe(box);
-    box.addEventListener("pointerdown", () => { box.dataset.touched = "1"; }, { once: true });
-    box.addEventListener("mouseenter", () => { box.dataset.touched = "1"; }, { once: true });
-  }
-  const wimg = document.querySelector(".why-img");
-  if (wimg && "IntersectionObserver" in window) new IntersectionObserver((es, o) => es.forEach(en => { if (en.isIntersecting) { wimg.classList.add("in"); o.disconnect(); } }), { threshold: .3 }).observe(wimg);
-  const pull = document.querySelector(".why-pull");
-  if (pull && !reduce) {
-    const upd = () => { const r = pull.getBoundingClientRect(); const t = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (innerHeight * .5))); pull.style.setProperty("--p", (t * 100).toFixed(1) + "%"); };
-    addEventListener("scroll", upd, { passive: true }); upd();
-  }
-})();
-
-}
 /* ---------- Dự án ---------- */
 function renderWork() { document.getElementById("work").innerHTML = projects.map((p, i) => `
   <li><a class="row" href="${p.url}" target="_blank" rel="noopener" data-img="${p.img}">
