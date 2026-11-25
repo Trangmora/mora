@@ -181,8 +181,15 @@ def ink_char(img, spec, lt):
     sub = img[y0:y0 + hh, x0:x0 + ww]; vis = vis[:sub.shape[0], :sub.shape[1], None]
     img[y0:y0 + hh, x0:x0 + ww] = sub * (1 - vis) + np.float32(spec.get('color', [.66, .09, .11])) * vis
     return img
+def evict(i):
+    """bỏ khỏi bộ nhớ các clip/ảnh không thuộc cảnh trước, hiện tại, kế tiếp"""
+    keep = set()
+    for j in (i - 1, i, i + 1):
+        if 0 <= j < len(SH): keep |= {SH[j].get('clip'), SH[j].get('clip', '') + '#fps', SH[j].get('img')}
+    for k in [k for k in cache if k not in keep and not k.endswith('_d.png')]: del cache[k]
 def frame(t):
     i = idx_at(t); sh = SH[i]; img = None
+    evict(i)
     nxt = SH[i + 1] if i + 1 < len(SH) else None
     # cảnh kế bắt đầu chuyển trước mốc của nó hw giây; cảnh hiện tại kết thúc chuyển sau mốc hw giây
     for k, tr_owner in [(i + 1, nxt), (i, sh)]:
