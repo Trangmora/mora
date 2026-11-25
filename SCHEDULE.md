@@ -6,9 +6,11 @@
 
 | Ngày (giờ VN) | Tập | Kênh | Trạng thái |
 |---|---|---|---|
+| **27/11 19:00** | Vụ án Lệ Chi Viên (chỉ có bản VI) | YouTube Ridiculous Case, Facebook Mora Media | đã hẹn giờ |
 | **29/11 19:00** | Khổng Tử (VI) | YouTube Ridiculous Case, Facebook Mora Media | đã hẹn giờ |
 | 30/11 07:00 | Khổng Tử (EN) | YouTube Asian Myths & Culture, Facebook Ridiculous Case | đã hẹn giờ |
 | 30/11 đến 03/12 | Khổng Tử (EN), 8 phần 1 phút, mỗi ngày 2 phần (07:00 và 19:00) | Instagram, Threads, TikTok, X | đã hẹn giờ |
+| 01/12 19:00 | Điện Biên Phủ (chỉ có bản VI) | YouTube Ridiculous Case, Facebook Mora Media | chờ file từ phiên dựng |
 | **03/12 19:00** | Samurai (VI) | YouTube, Facebook | đã hẹn giờ |
 | 04/12 07:00 | Samurai (EN) | YouTube, Facebook | đã hẹn giờ |
 | 04/12 đến 07/12 | Samurai (EN), 4 phần 1 phút, mỗi ngày 1 phần | Instagram, Threads: đã hẹn. TikTok, X: phần 1 đã hẹn, phần 2–4 chờ Buffer | một phần |
