@@ -1,0 +1,127 @@
+<!doctype html><meta charset=utf8>
+<style>
+@font-face{font-family:BVP;src:url(fonts/BeVietnamPro-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:BVP;src:url(fonts/BeVietnamPro-SemiBold.ttf);font-weight:600}
+@font-face{font-family:LoraV;src:url(fonts/Lora-var.ttf);font-weight:400 700}
+html,body{margin:0;background:#000}</style>
+<canvas id=c width=1920 height=1080></canvas>
+<script>
+// Kiểu Vox: nền giấy ngà, chữ đen đậm, bút dạ vàng, điểm nhấn đỏ, các mảnh giấy cắt có bóng đổ.
+const cv=document.getElementById('c'),x=cv.getContext('2d');const W=1280,H=720;x.scale(1.5,1.5);
+let K={};const D=2.5;const g=k=>D+K[k];
+const cl=v=>Math.max(0,Math.min(1,v));const ease=v=>{v=cl(v);return v*v*(3-2*v)};const back=v=>{v=cl(v);const s=1.7;return 1+(s+1)*Math.pow(v-1,3)+s*Math.pow(v-1,2)};
+const PAPER='#efe8da',INK='#1d1b19',YEL='#f6d33c',RED='#d8392b',GREY='#9a948a',BLUE='#2f5d8a';
+const R=i=>{let v=Math.sin(i*127.1+311.7)*43758.5453;return v-Math.floor(v)};
+// paper grain
+const grain=document.createElement('canvas');grain.width=1920;grain.height=1080;{const gx=grain.getContext('2d');const d=gx.createImageData(1920,1080);for(let i=0;i<d.data.length;i+=4){const v=128+(Math.random()-.5)*60;d.data[i]=v+6;d.data[i+1]=v;d.data[i+2]=v-8;d.data[i+3]=20}gx.putImageData(d,0,0)}
+function font(w,s,f='BVP'){x.font=`${w} ${s}px ${f}`}
+function txt(s,px,py,{size=40,w=800,col=INK,align='left',f='BVP',a=1,ls=0}={}){x.save();x.globalAlpha*=a;font(w,size,f);x.fillStyle=col;x.textAlign=align;x.textBaseline='alphabetic';x.letterSpacing=ls+'px';x.fillText(s,px,py);x.restore()}
+function tw(s,size,w=800,f='BVP',ls=0){x.save();font(w,size,f);x.letterSpacing=ls+'px';const m=x.measureText(s).width;x.restore();return m}
+// highlighter swipe behind text
+function hl(px,py,wd,h,p,col=YEL){if(p<=0)return;x.save();x.fillStyle=col;x.globalAlpha=.9;x.beginPath();const ww=wd*ease(p);x.moveTo(px-6,py+3);x.lineTo(px+ww,py);x.lineTo(px+ww+4,py+h);x.lineTo(px-4,py+h-2);x.closePath();x.fill();x.restore()}
+function card(px,py,wd,h,col='#fbf8f1',rot=0,sh=18){x.save();x.translate(px+wd/2,py+h/2);x.rotate(rot);x.shadowColor='rgba(40,25,10,.28)';x.shadowBlur=sh;x.shadowOffsetY=8;x.fillStyle=col;x.fillRect(-wd/2,-h/2,wd,h);x.restore()}
+function strike(px,py,wd,p){if(p<=0)return;x.save();x.strokeStyle=RED;x.lineWidth=6;x.lineCap='round';x.beginPath();x.moveTo(px-8,py+4);x.lineTo(px-8+(wd+16)*ease(p),py-6);x.stroke();x.restore()}
+function stamp(s,px,py,p,{size=46,rot=-.12,col=RED}={}){if(p<=0)return;const sc=p<.25?2.2-4.8*p:1;x.save();x.translate(px,py);x.rotate(rot);x.scale(sc,sc);x.globalAlpha=Math.min(1,p*5);font(800,size);x.letterSpacing='3px';const m=x.measureText(s).width;
+ x.strokeStyle=col;x.lineWidth=5;x.strokeRect(-m/2-18,-size*.95,m+36,size*1.35);x.fillStyle=col;x.textAlign='center';x.fillText(s,0,size*.12);x.restore()}
+function source(s,a=1){txt(s,40,700,{size:15,w:600,col:'#6d665c',a})}
+function fmt(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+
+// ---------- A: con số 20 triệu ----------
+function trafficLight(px,py,t,on=1){card(px,py,120,330,'#26241f',0,20);for(let i=0;i<3;i++){const cy=py+60+i*105;x.save();x.beginPath();x.arc(px+60,cy,40,0,6.283);
+ const lit=i===0&&on;x.fillStyle=lit?RED:'#4a4640';if(lit){x.shadowColor='rgba(216,57,43,.9)';x.shadowBlur=30+10*Math.sin(t*6)}x.fill();x.restore()}}
+function sceneA(t){const a=ease((t-.3)/.6);x.save();x.translate(-260*(1-a),0);trafficLight(120,180,t);x.restore();
+ const p0=ease((t-1.0)/.5);txt('Ô TÔ VƯỢT ĐÈN ĐỎ',330,250,{size:30,w:800,col:GREY,a:p0,ls:4});
+ // date tag
+ const pd=cl((t-1.4)/.4);stamp('01/01/2025',1080,120,pd,{size:34,rot:.08});
+ // counter
+ const c0=g('op1')+3.2,c1=g('w20')+.5;const v=20000000*ease((t-c0)/(c1-c0));const show=t>c0-.3;
+ if(show){const s=fmt(v)+' đ';const m=tw('20.000.000 đ',112);hl(326,300,m+10,108,(t-c1)/.5);txt(s,330,390,{size:112,w:800})}
+ // so sánh với trước
+ const pg=cl((t-g('wgap'))/.4);if(pg>0){txt('TRƯỚC ĐÂY',330,470,{size:24,w:800,col:GREY,a:pg,ls:3});txt('6.000.000 đ',330,535,{size:60,w:800,col:GREY,a:pg});strike(330,515,tw('6.000.000 đ',60),(t-g('wgap')-.4)/.5)}
+ const pg2=cl((t-g('wgap')-.9)/.6);if(pg2>0){x.save();x.translate(900,500);const sc=back(pg2);x.scale(sc,sc);x.beginPath();x.arc(0,0,95,0,6.283);x.fillStyle=RED;x.shadowColor='rgba(0,0,0,.25)';x.shadowBlur=14;x.fill();x.shadowColor='transparent';txt('×3,3',0,22,{size:66,w:800,col:'#fff',align:'center'});x.restore()}
+ const pq=cl((t-g('wq'))/.5);txt('Chuyện gì đã thay đổi?',330,640,{size:44,w:600,f:'LoraV',col:INK,a:pq})}
+
+// ---------- B: văn bản ----------
+function docLines(px,py,wd,n,seed,a=1){x.save();x.globalAlpha*=a;x.fillStyle='#c9c2b5';for(let i=0;i<n;i++){const ww=wd*(.55+R(seed+i)*.45);x.fillRect(px,py+i*22,ww,8)}x.restore()}
+function sceneB(t){const t0=g('s1')-.3;const lt=t-t0;
+ // NĐ 100 cũ phía sau
+ const pa=ease(lt/.6);x.save();x.translate(0,40*(1-pa));x.globalAlpha=pa;card(120,140,380,480,'#f3efe6',-.06);x.save();x.translate(310,380);x.rotate(-.06);
+ txt('NGHỊ ĐỊNH',0,-150,{size:22,w:800,align:'center',col:'#555'});txt('100/2019/NĐ-CP',0,-115,{size:30,w:800,align:'center',col:'#555'});docLines(-150,-80,300,12,3,.9);x.restore();x.restore();
+ const ps=cl((t-g('w100'))/.4);if(ps>0){x.save();x.translate(310,380);x.rotate(-.06);stamp('HẾT HIỆU LỰC',0,40,ps,{size:34,rot:-.2});x.restore()}
+ // NĐ 168 mới
+ const pb=ease((lt-.5)/.7);x.save();x.translate(0,60*(1-pb));x.globalAlpha=pb;card(560,90,560,580,'#fdfbf6',.02,24);x.save();x.translate(840,380);x.rotate(.02);
+ txt('CHÍNH PHỦ',-240,-235,{size:18,w:800,col:INK});const hs=(t-g('w168'))/.6;hl(-244,-232,tw('Số: 168/2024/NĐ-CP',30)+8,40,hs);txt('Số: 168/2024/NĐ-CP',-240,-200,{size:30,w:800,col:INK});
+ txt('NGHỊ ĐỊNH',0,-118,{size:40,w:800,align:'center'});
+ font(400,19,'LoraV');x.fillStyle=INK;x.textAlign='center';['Quy định xử phạt vi phạm hành chính về trật tự,','an toàn giao thông trong lĩnh vực giao thông','đường bộ; trừ điểm, phục hồi điểm giấy phép lái xe'].forEach((l,i)=>x.fillText(l,0,-70+i*28));
+ docLines(-220,30,440,9,11);x.restore();x.restore();
+ const pe=cl((lt-2.0)/.4);stamp('HIỆU LỰC 01/01/2025',990,610,pe,{size:26,rot:-.05,col:BLUE});
+ source('Nguồn: Nghị định 168/2024/NĐ-CP',cl((lt-1)/.5))}
+
+// ---------- C: biểu đồ ----------
+const MAX=20e6,BX=360,BW=760;
+function bar(py,val,col,p,lbl,lblcol){const w=BW*val/MAX*ease(p);x.save();x.shadowColor='rgba(40,25,10,.2)';x.shadowBlur=8;x.shadowOffsetY=3;x.fillStyle=col;x.fillRect(BX,py,w,46);x.restore();
+ if(p>.6)txt(lbl,BX+w+16,py+34,{size:28,w:800,col:lblcol,a:cl((p-.6)/.4)})}
+function sceneC(t){const t0=g('s2')-.3;const lt=t-t0;
+ const ph=ease(lt/.5);hl(640-tw('VƯỢT ĐÈN ĐỎ',46,800,'BVP',2)/2,58,tw('VƯỢT ĐÈN ĐỎ',46,800,'BVP',2),48,(lt-.3)/.5);txt('VƯỢT ĐÈN ĐỎ',640,95,{size:46,w:800,align:'center',a:ph,ls:2});
+ txt('mức phạt tối đa',640,130,{size:20,w:600,col:GREY,align:'center',a:ph});
+ // legend
+ x.save();x.globalAlpha=ph;x.fillStyle=GREY;x.fillRect(880,160,22,22);txt('NĐ 100 (cũ)',910,179,{size:18,w:600,col:INK});x.fillStyle=RED;x.fillRect(880,192,22,22);txt('NĐ 168 (mới)',910,211,{size:18,w:600,col:INK});x.restore();
+ // xe máy
+ const pxm=cl((t-g('wxm'))/.4);txt('XE MÁY',BX-30,300,{size:30,w:800,align:'right',a:pxm});
+ bar(255,1e6,GREY,(t-g('wxm')-.3)/.7,'1 triệu',GREY);bar(310,6e6,RED,(t-g('wxmnew'))/.9,'4–6 triệu',RED);
+ // ô tô
+ const pot=cl((t-g('woto'))/.4);txt('Ô TÔ',BX-30,475,{size:30,w:800,align:'right',a:pot});
+ bar(430,6e6,GREY,(t-g('woto')-.2)/.7,'4–6 triệu',GREY);bar(485,20e6,RED,(t-g('wotonew'))/1.1,'',RED);
+ const pv=cl((t-g('wotonew')-1.1)/.4);if(pv>0){txt('18–20 triệu',BX+BW-10,475,{size:30,w:800,col:RED,align:'right',a:pv})}
+ x.save();x.strokeStyle='#bdb5a8';x.lineWidth=2;x.beginPath();x.moveTo(BX,230);x.lineTo(BX,560);x.stroke();x.restore();
+ source('Nguồn: NĐ 100/2019 (sửa đổi bởi NĐ 123/2021); NĐ 168/2024, Điều 6 và Điều 7',ph)}
+
+// ---------- D: bằng lái 12 điểm ----------
+function sceneD(t){const t0=g('s4')-.3;const lt=t-t0;const pc=ease(lt/.7);
+ x.save();x.translate(-300*(1-pc),0);x.globalAlpha=pc;
+ card(110,170,520,330,'#fbf3e6',-.03,24);x.save();x.translate(370,335);x.rotate(-.03);
+ x.fillStyle=BLUE;x.fillRect(-260,-165,520,64);txt('GIẤY PHÉP LÁI XE',0,-122,{size:28,w:800,col:'#fff',align:'center',ls:2});
+ x.fillStyle='#d9d0c0';x.fillRect(-230,-80,130,160);x.fillStyle='#b5ab9a';x.beginPath();x.arc(-165,-25,30,0,6.283);x.fill();x.fillRect(-205,15,80,60);
+ // 12 chấm điểm
+ const lostStart=g('wm4')+.6,allLost=g('whet')+.3,restore=g('wph');
+ for(let i=0;i<12;i++){const cx=-60+(i%6)*52,cy=-40+Math.floor(i/6)*62;let lost=0,fall=0;
+  if(i>=8&&t>lostStart+(i-8)*.15){lost=1;fall=cl((t-lostStart-(i-8)*.15)/.6)}
+  if(t>allLost+i*.05){lost=1;fall=Math.max(fall,0)}
+  let back2=0;if(t>restore+i*.08){back2=cl((t-restore-i*.08)/.25)}
+  if(back2>0){lost=0;fall=0}
+  x.save();x.translate(cx,cy+fall*fall*240);x.globalAlpha*=1-fall;x.beginPath();x.arc(0,0,20,0,6.283);
+  x.fillStyle=lost?'#cfc6b6':(back2>0?'#3e9c5a':YEL);if(!lost){x.shadowColor='rgba(0,0,0,.2)';x.shadowBlur=6}x.fill();x.strokeStyle=INK;x.lineWidth=2;x.stroke();x.restore()}
+ x.restore();x.restore();
+ // chữ bên phải
+ const p12=cl((t-g('w12b'))/.4);if(p12>0&&t<g('wm4')){const m=tw('12 ĐIỂM',96);hl(700,270,m+10,96,(t-g('w12b')-.2)/.5);txt('12 ĐIỂM',704,350,{size:96,w:800,a:p12})}
+ const pl=cl((t-g('w12'))/.4);if(t<g('wm4'))txt('Lần đầu tiên',704,230,{size:40,w:600,f:'LoraV',a:pl});
+ if(t>g('wm4')&&t<g('whet')){const pm=cl((t-g('wm4'))/.3);txt('VƯỢT ĐÈN ĐỎ',704,240,{size:32,w:800,col:GREY,a:pm,ls:3});txt('−4 ĐIỂM',700,340,{size:100,w:800,col:RED,a:pm})}
+ if(t>g('whet')&&t<g('wrest')){const pa=cl((t-g('whet'))/.3);txt('HẾT ĐIỂM',704,250,{size:70,w:800,col:RED,a:pa});
+  stamp('KHÔNG ĐƯỢC LÁI XE',370,340,cl((t-g('whet')-.6)/.5),{size:36,rot:-.18});
+  const p6=cl((t-g('w6'))/.4);txt('≥ 6 tháng',704,350,{size:52,w:800,a:p6});txt('→ kiểm tra lại kiến thức',704,405,{size:30,w:600,a:p6});txt('pháp luật giao thông',704,445,{size:30,w:600,a:p6})}
+ if(t>g('wrest')){const pr=cl((t-g('wrest'))/.4);txt('12 THÁNG',704,250,{size:70,w:800,a:pr});txt('không bị trừ điểm',704,300,{size:32,w:600,a:pr});
+  const pp=cl((t-g('wph'))/.4);const m=tw('PHỤC HỒI 12 ĐIỂM',52);hl(700,330,m+10,58,(t-g('wph')-.2)/.5,'#bfe3c2');txt('PHỤC HỒI 12 ĐIỂM',704,378,{size:52,w:800,col:'#235c33',a:pp})}
+ source('Nguồn: Luật Trật tự, an toàn giao thông đường bộ 2024, Điều 58; NĐ 168/2024',pc)}
+
+// ---------- E: lưu ý ----------
+function sceneE(t){const t0=g('wdis')-.3;const lt=t-t0;const p=ease(lt/.6);
+ card(240,170,800,340,'#fdfbf6',0,24);x.save();x.globalAlpha=p;
+ txt('LƯU Ý',640,250,{size:30,w:800,col:RED,align:'center',ls:4});
+ txt('Nội dung chỉ mang tính thông tin,',640,320,{size:38,w:600,f:'LoraV',align:'center'});txt('không phải tư vấn pháp lý.',640,370,{size:38,w:600,f:'LoraV',align:'center'});
+ const ps=cl((t-g('wsrc'))/.4);txt('Kiểm tra văn bản gốc: vbpl.vn · thuvienphapluat.vn',640,450,{size:24,w:600,col:BLUE,align:'center',a:ps});x.restore();
+ source('Nguồn: NĐ 168/2024/NĐ-CP; Luật TTATGTĐB 2024',p)}
+
+const SC=[[0,sceneA],[()=>g('s1')-.3,sceneB],[()=>g('s2')-.3,sceneC],[()=>g('s4')-.3,sceneD],[()=>g('wdis')-.3,sceneE]];
+window.setK=k=>{K=k};
+window.ready=(async()=>{await document.fonts.load('800 40px BVP','ĐƯ');await document.fonts.load('600 40px BVP','ĐƯ');await document.fonts.load('600 40px LoraV','Đư')})();
+window.draw=function(t,END){x.fillStyle=PAPER;x.fillRect(0,0,W,H);
+ const st=SC.map(s=>typeof s[0]==='function'?s[0]():s[0]);let i=0;for(let k=0;k<st.length;k++)if(t>=st[k])i=k;
+ const TR=.55;const drift=Math.sin(t*.25)*4;
+ if(i+1<st.length&&t>st[i+1]-TR){}
+ const into=t-st[i];
+ if(i>0&&into<TR){const p=ease(into/TR);x.save();x.translate(-W*p+drift,0);SC[i-1][1](t);x.restore();x.save();x.translate(W*(1-p)+drift,0);SC[i][1](t);x.restore()}
+ else{x.save();x.translate(drift,0);SC[i][1](t);x.restore()}
+ x.setTransform(1,0,0,1,0,0);x.drawImage(grain,0,0);x.setTransform(1.5,0,0,1.5,0,0);
+ const vg=x.createRadialGradient(W/2,H/2,380,W/2,H/2,860);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(60,40,20,.18)');x.fillStyle=vg;x.fillRect(0,0,W,H);
+ const f=Math.min(1,t/.6)*Math.min(1,(END-t)/1.0);if(f<1){x.fillStyle=`rgba(0,0,0,${1-f})`;x.fillRect(0,0,W,H)}};
+</script>
