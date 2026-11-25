@@ -26,6 +26,15 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Script:** `pipeline/publish/morapost.py`, gồm các lệnh `accounts`, `post`, `status`, `metrics`.
 - **Video phải là URL công khai** (MP4, tối đa 200 MB). Cần một chỗ chứa file công khai trước khi gọi API.
 - **Mặc định đăng ở chế độ `private`.** Chủ kênh xem lại rồi mới chuyển sang công khai, hoặc dùng `--at` để hẹn giờ.
-- **Kênh YouTube tiếng Anh và tiếng Việt phải được kết nối trong Morapost** (Settings → Accounts).
-  - Với key ngày 25/11/2026, đã có kênh YouTube "Asian Myths & Culture" (`UC5u1YF6TmvZTKCKlEU6K9-w`), Instagram asian_myths và kênh "Ridiculous Case".
-  - Kênh tiếng Việt chưa được kết nối.
+- **Kênh đăng (chủ kênh chốt ngày 25/11/2026):**
+
+| Bản | Nền tảng | Tài khoản | ID trong Morapost |
+|---|---|---|---|
+| Tiếng Anh | YouTube | Asian Myths & Culture | `UC5u1YF6TmvZTKCKlEU6K9-w` |
+| Tiếng Anh | Instagram | asian_myths | `29748236828134140` |
+| Tiếng Anh | Threads | call me You | `41529474649984500` |
+| Tiếng Anh | Facebook | Ridiculous Case | `1054215381111543` |
+| Tiếng Việt | YouTube | Ridiculous Case | `UCDHwhQBQk4ndvpwem5hWqCg` |
+| Tiếng Việt | Facebook | Mora Media | `661562267031641` |
+
+- Chạy `python3 pipeline/publish/morapost.py accounts` để kiểm tra lại ID trước khi đăng.
