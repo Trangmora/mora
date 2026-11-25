@@ -24,8 +24,11 @@ for f, off, a, b in P['music']:
     mus[i0:i0 + n] += seg[:n] * env[:, None]
 # kế hoạch mức nhạc
 L = np.array(P['levels'], np.float32); lvl = np.interp(t, L[:, 0], L[:, 1]).astype(np.float32)
-win = int(.05 * SR); rms = np.sqrt(np.convolve(v[:, 0] ** 2, np.ones(win) / win, 'same'))
-speak = np.convolve((rms > 0.02).astype(np.float32), np.ones(int(2.6 * SR)), 'same') > 0
+def box(x, n):   # trung bình trượt bằng tổng tích lũy (nhanh hơn np.convolve hàng trăm lần)
+    c = np.concatenate([[0.0], np.cumsum(x, dtype=np.float64)]); h = n // 2; i = np.arange(len(x))
+    return (c[np.minimum(i + h + 1, len(x))] - c[np.maximum(i - h, 0)]) / n
+win = int(.05 * SR); rms = np.sqrt(np.maximum(box(v[:, 0].astype(np.float64) ** 2, win), 0))
+speak = box((rms > 0.02).astype(np.float64), int(2.6 * SR)) > 0
 target = np.where(speak, np.minimum(lvl, P.get('duck', 0.2)), lvl)
 for a, b in P.get('mutes', []): target[(t >= a) & (t < b)] = 0.0
 g = np.empty_like(target); cur = target[0]; up, dn = 1 / (0.5 * SR), 1 / (0.35 * SR)
