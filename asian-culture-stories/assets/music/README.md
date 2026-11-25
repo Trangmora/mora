@@ -1,17 +1,35 @@
-# Thư viện nhạc nền (Nhật Bản)
+# Thư viện nhạc nền
 
-Ba bài nhạc chủ kênh cung cấp cho tập 1. File âm thanh **không được commit** vì là nhạc có bản quyền. Chúng chỉ nằm trên máy làm việc, và được `.gitignore` bỏ qua.
+File âm thanh **không commit vào git** (`.gitignore`); chúng chỉ nằm trên máy làm việc. Muốn dùng ở phiên làm việc mới thì chủ kênh tải lên lại.
+**Quy tắc:** dưới giọng đọc chỉ dùng bài **không lời**. Bài có lời chỉ dùng ở khoảng ngắt không có giọng đọc.
 
-| File | Độ dài | Đặc điểm | Dùng ở |
-|---|---|---|---|
-| Roie_Shpigler_-_Kumiko.mp3 | 2:39 | koto, nhẹ, không lời | mở đầu, nguồn gốc, thần thoại |
-| Isaku_Kageyama_-_Tokyo_Ondo.mp3 | 3:15 | lễ hội, trống, không lời | phần "điều thú vị" |
-| Ian_Post_feat._Aya_Ishida_-_Manatsu_Ni_Haeru.mp3 | 3:44 | **có giọng hát** | đoạn kết, rất nhỏ khi có lời đọc |
+| File | Dài | Nước / chất liệu | Lời? | Nguồn dự đoán (cần kiểm tra giấy phép) |
+|---|---|---|---|---|
+| Roie_Shpigler_-_Kumiko | 2:39 | Nhật, koto nhẹ | không | Artlist (trả phí) |
+| Isaku_Kageyama_-_Tokyo_Ondo | 3:15 | Nhật, lễ hội, trống | **có** | Artlist (có bản không lời) |
+| Ian_Post_feat_Aya_Ishida_-_Manatsu_Ni_Haeru | 3:44 | Nhật, nhẹ | **có** | Artlist (có bản không lời) |
+| Hon_Kyoku_-_Doug_Maxwell__Zac_Zinger | 2:28 | Nhật, shakuhachi, thiền | không | YouTube Audio Library |
+| Aomori_Wings_-_The_Mini_Vandals | 2:03 | Nhật, hiện đại | không | YouTube Audio Library |
+| Imperial_Forces_-_Aaron_Kenny | 1:47 | Á Đông, hùng tráng (chiến tranh, triều đình) | không | YouTube Audio Library |
+| Finding_Movement_-_Kevin_MacLeod | 1:56 | Á Đông chung | không | Kevin MacLeod (CC-BY, phải ghi tên) |
+| Asian_Drums_-_Vadodara_-_Kevin_MacLeod | 2:19 | Ấn Độ, trống | không | Kevin MacLeod (CC-BY, phải ghi tên) |
+| Dreams_Of_River_Ganga_-_Hanu_Dixit | 2:22 | Ấn Độ | không | YouTube Audio Library |
+| Bhaj_Le_Ram_-_Bhajan_Voice_Sarangi_Tabla | 2:27 | Ấn Độ, bhajan | **có** | YouTube Audio Library |
+| Raag_Ahir_Bhairav_-_Drut_Teentaal_Sarangi_Tabla | 2:58 | Ấn Độ, raga | không | YouTube Audio Library |
+| Hammersion_-_Ezra_Lipp | 2:00 | bộ gõ | không | YouTube Audio Library |
+| Yearning_-_Nat_Keefe | 3:22 | cảm xúc, chậm | không | YouTube Audio Library |
+| Daytime_Forrest_Bonfire | 3:04 | âm thanh rừng, lửa trại (không khí) | không | YouTube Audio Library |
+| asian_background_music-wild-lotus-rhythms-japan-travel-220672 | 3:19 | Nhật, du lịch | không rõ | Pixabay |
+| vprodmusic_asia_bgm-ha-long-bay-serenity-147067 | 2:41 | Việt Nam, êm | không rõ | Pixabay |
+| vprodmusic_asia_bgm-vietnam-bamboo-flute-143601 | 2:33 | Việt Nam, sáo trúc | không rõ | Pixabay |
+| soulprodmusic-welcome-to-korea-173264 | 2:13 | Hàn Quốc | không rõ | Pixabay |
 
-**Cách trộn** (`pipeline/full/musicbed.py`):
-- Nhạc ở mức 0,10 khi có giọng đọc, 0,60 ở khoảng nghỉ trên 0,7 giây.
-- Cao trào 0,32 ở chữ "Shinto".
-- Tắt hẳn ở đoạn tối đen.
-- Lên nhạc trong 0,5 giây, xuống trong 0,4 giây.
+**Gợi ý theo chủ đề:**
+- **Nhật:** Kumiko, Hon Kyoku, Aomori Wings, Wild Lotus.
+- **Việt Nam:** Ha Long Bay, Bamboo Flute.
+- **Hàn Quốc:** Welcome to Korea.
+- **Ấn Độ:** Ganga, Raag, Vadodara.
+- **Cảnh chiến tranh hoặc triều đình:** Imperial Forces.
+- **Cảnh buồn:** Yearning.
 
-Trước khi đăng, kiểm tra giấy phép từng bài có cho dùng trên YouTube không.
+**Cách trộn** (`pipeline/full/musicbed.py`): nhạc ở mức 0,10 dưới giọng đọc, 0,72 ở khoảng ngắt, cao trào ở tên chủ đề, tắt ở đoạn tối đen.
