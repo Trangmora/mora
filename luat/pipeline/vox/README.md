@@ -41,4 +41,5 @@ Toạ độ 1280x720. Thời điểm tính bằng `g('tên_mốc')` (giây trong
 
 ## Lưu ý
 - Máy dựng 4 nhân: `PARTS=2` cho một tập, `PARTS=1` khi dựng nhiều tập cùng lúc.
-- Kênh luật không dùng nhạc nền (chủ kênh chốt 25/11/2026): chạy `build.sh` không có tham số nhạc.
+- Mặc định kênh luật không dùng nhạc nền. Muốn thử có nhạc: đặt `music.json` trong thư mục tập (xem đầu file `audio.py`), nhạc sẽ nhỏ dưới lời đọc và nổi lên ở chỗ nghỉ giữa các đoạn. Bài nhạc thử nằm ở `luat/music/` (tạo bằng ElevenLabs Music).
+- Cần chỗ nghỉ dài hơn cho nhạc nổi lên mà không thu lại giọng: `python3 regap.py <tập> 0.35 op1=1.0 s3=1.0 ...`, rồi chạy lại `keys.py`.

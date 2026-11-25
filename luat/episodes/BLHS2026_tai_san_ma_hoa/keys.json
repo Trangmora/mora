@@ -1,7 +1,12 @@
 {"k_rieng":["op1","có một tội danh riêng"],"k_muc":["op1","Mức phạt tiền"],"k_10":["op1","mười tỷ"],
-"k_190":["op2","Điều một trăm"],"k_qh":["op2","Quốc hội thông qua"],"k_hl":["op2","Hiệu lực"],
-"k_h1":["s1","Chào bán"],"k_h2":["s1","Cung cấp"],"k_h3":["s1","Dùng thông tin"],"k_h4":["s1","Và thao túng"],
-"k_m1a":["s2","phạt tiền"],"k_m1b":["s2","hoặc phạt tù"],
-"k_m2a":["s3","phạt tiền"],"k_m2b":["s3","hoặc phạt tù"],"k_m2c":["s3","Áp dụng khi"],"k_m2d":["s3","có tính chất"],"k_m2e":["s3","hoặc thu lợi"],
-"k_n1":["s4","điều luật này"],"k_n2":["s4","Mua bán"],
-"k_e1":["s5","Một:"],"k_src":["out","Hãy kiểm tra"]}
+"k_m1":["op2","hành vi nào"],"k_m2":["op2","mức phạt ra sao"],"k_m3":["op2","và người đang"],
+"k_190":["s1","Điều một trăm"],"k_qh":["s1","Quốc hội thông qua"],"k_hl":["s1","Hiệu lực"],
+"k_w1":["s2","Đó là"],"k_w2":["s2","dùng công nghệ"],"k_w3":["s2","Ví dụ"],
+"k_p1":["s3","Việt Nam thí điểm"],"k_p2":["s3","theo Nghị quyết"],"k_p3":["s3","Tổ chức cung cấp"],
+"k_a1":["s4","theo Nghị định"],"k_a2":["s4","Mức phạt tối đa"],"k_a3":["s4","hai trăm triệu"],"k_a4":["s4","Riêng nhà đầu tư"],"k_a5":["s4","bị phạt từ"],
+"k_h1":["s5","Chào bán"],"k_h2":["s5","Cung cấp"],"k_h3":["s5","Dùng thông tin"],"k_h4":["s5","Và thao túng"],
+"k_n500":["s6","thu lợi bất chính"],"k_n1":["s6","hoặc gây thiệt hại"],
+"k_c1a":["s7","phạt tiền"],"k_c1b":["s7","hoặc phạt tù"],
+"k_c2a":["s8","phạt tiền"],"k_c2b":["s8","hoặc phạt tù"],"k_c2c":["s8","Áp dụng khi"],"k_c2d":["s8","có tính chất"],"k_c2e":["s8","hoặc thu lợi"],
+"k_l1":["s9","điều luật này"],"k_l2":["s9","Mua bán"],
+"k_e1":["s10","Một:"],"k_src":["out","Hãy kiểm tra"]}
