@@ -17,3 +17,6 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP03_47Ronin_en.mp4 | 3. 47 Rōnin | Anh | 3:19 | giọng đọc tăng tốc 1,15 lần |
 | VN02_LeLoi_vi.mp4 | Lịch sử Việt Nam · Lê Lợi và thanh gươm thần | Việt | 3:37 | 15 hình Nano Banana, 5 clip fal; cuối tập hẹn tập Bạch Đằng |
 | VN03_LeChiVien_vi.mp4 | Lịch sử Việt Nam · Vụ án Lệ Chi Viên | Việt | 3:35 | 14 hình Nano Banana, 5 clip fal; chữ trên màn hình tránh từ nhạy cảm |
+
+## Video ngắn dọc (videos/shorts/)
+Mỗi video là một câu chuyện trọn vẹn 30–45 giây, 720×1280, có bản `_vi` và `_en`. Kịch bản ở `shorts/specs.json`, dựng bằng `pipeline/shorts/make_short.py`. Bản lưu ở đây đã nén nhẹ; bản đăng nằm trên R2.
