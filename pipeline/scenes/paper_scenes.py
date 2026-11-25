@@ -30,32 +30,39 @@ def load_img(p):
         cache[p] = cv2.resize(im[y0:y0 + ch], (W * 2, H * 2), interpolation=cv2.INTER_AREA)   # 2x để zoom cận vẫn nét
     return cache[p]
 def load_clip(p):
+    """khung clip, cắt về 16:9, ở 2x như ảnh để zoom cận vẫn nét"""
     if p not in cache:
-        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', f'scale={W}:-2,crop={W}:{H}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+        r = subprocess.run(['ffmpeg', '-v', 'error', '-i', p, '-vf', f'scale={W * 2}:-2,crop={W * 2}:{H * 2}', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                            capture_output=True, check=True)
-        n = len(r.stdout) // (W * H * 3); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * W * H * 3].reshape(n, H, W, 3)
-        fps = float(eval(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=r_frame_rate',
-                                         '-of', 'csv=p=0', p], capture_output=True, text=True).stdout.strip()))
-        cache[p + '#fps'] = fps
+        n = len(r.stdout) // (W * H * 12); cache[p] = np.frombuffer(r.stdout, np.uint8)[:n * W * H * 12].reshape(n, H * 2, W * 2, 3)
+        cache[p + '#fps'] = float(eval(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=r_frame_rate',
+                                                       '-of', 'csv=p=0', p], capture_output=True, text=True).stdout.strip()))
     return cache[p], cache[p + '#fps']
+
+# các kiểu máy quay chậm, luân phiên theo từng khung: đẩy vào, lia phải, lùi ra, lia trái (zoom tối đa 1,12)
+MOVES = [([1.02, 1.10], [.5, .5], [.5, .48]), ([1.08, 1.10], [.44, .5], [.56, .5]),
+         ([1.11, 1.03], [.5, .47], [.5, .5]), ([1.08, 1.10], [.56, .5], [.44, .5])]
+for _i, _sh in enumerate(SH): _sh['_i'] = _i
+
+def base_frame(sh, lt):
+    if 'clip' in sh:
+        fr, fps = load_clip(sh['clip']); n = len(fr)
+        # quay chậm (mặc định 0,6), trộn 2 khung kề nhau cho mượt; hết clip thì giữ khung cuối
+        pos = (sh.get('clip_t0', 0) + lt * sh.get('speed', cfg.get('speed', 0.6))) * fps
+        q = min(int(pos), n - 1); r = min(pos - q, 1.0) if q < n - 1 else 0.0
+        a = fr[q].astype(np.float32); bb = fr[min(q + 1, n - 1)].astype(np.float32)
+        return (a * (1 - r) + bb * r) / 255
+    return load_img(sh['img'])
 
 def render_shot(sh, lt):
     d = sh['e'] - sh['s']; k = sm(lt / max(d, 1e-3))
-    if 'clip' in sh:
-        fr, fps = load_clip(sh['clip']); n = len(fr)
-        # chạy chậm vừa đủ để phủ hết cảnh, đi tới rồi đi lui (ping-pong) nếu cảnh dài hơn clip
-        sp = max(.55, min(1, (n / fps) / d)); pos = lt * sp * fps; per = 2 * (n - 1)
-        q = int(pos) % per; q = per - q if q >= n else q
-        img = fr[q].astype(np.float32) / 255
-        z0, z1 = sh.get('z', [1.0, 1.03]); z = z0 + (z1 - z0) * k
-        M = cv2.getRotationMatrix2D((W / 2, H / 2), 0, z); return cv2.warpAffine(img, M, (W, H), borderMode=cv2.BORDER_REFLECT)
-    src = load_img(sh['img'])
-    z0, z1 = sh.get('z', [1.05, 1.10]); z = z0 + (z1 - z0) * k
-    f0 = sh.get('f', [.5, .5]); f1 = sh.get('f1', f0); fx = f0[0] + (f1[0] - f0[0]) * k; fy = f0[1] + (f1[1] - f0[1]) * k
-    # giữ khung trong ảnh
+    src = base_frame(sh, lt)
+    mv = MOVES[sh.get('_i', 0) % len(MOVES)]
+    z0, z1 = sh.get('z', mv[0]); z = z0 + (z1 - z0) * k
+    f0 = sh.get('f', mv[1]); f1 = sh.get('f1', mv[2] if 'f' not in sh else f0); fx = f0[0] + (f1[0] - f0[0]) * k; fy = f0[1] + (f1[1] - f0[1]) * k
     hw, hh = 0.5 / z, 0.5 / z; fx = min(max(fx, hw), 1 - hw); fy = min(max(fy, hh), 1 - hh)
-    x0 = (fx - hw) * W * 2; y0 = (fy - hh) * H * 2; s = (W * 2 / z) / W
-    M = np.float32([[s, 0, x0], [0, s, y0]])
+    x0 = (fx - hw) * W * 2; y0 = (fy - hh) * H * 2; s_ = (W * 2 / z) / W
+    M = np.float32([[s_, 0, x0], [0, s_, y0]])
     return cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
 
 # ---------- chữ: dải giấy + con dấu ----------
@@ -106,6 +113,19 @@ def petals(img, t):
         y = -30 + tt * 18 * sp; x = (r.random() * W + math.sin(tt * 1.1 + i) * 30 + tt * 6) % W; s = 3 + r.random() * 3
         cv2.ellipse(ov, (int(x), int(y)), (int(s), int(s * .65)), (tt * 40 + i * 30) % 180, 0, 360, (0.96, 0.86, 0.84), -1, cv2.LINE_AA)
     return ov
+def motes(img, t):
+    """bụi sáng ấm lơ lửng, trôi lên rất chậm"""
+    for j in range(22):
+        r = np.random.default_rng(100 + j); x = (r.random() * W + math.sin(t * .3 + j) * 25) % W
+        y = (r.random() * H - t * (6 + r.random() * 8)) % H; rad = 1.5 + r.random() * 2.5
+        a = .25 + .2 * math.sin(t * 1.3 + j)
+        cv2.circle(img, (int(x), int(y)), int(rad + 2), tuple(float(v) for v in img[int(y) % H, int(x) % W] * (1 - a * .5) + np.float32([1, .93, .75]) * a * .5), -1, cv2.LINE_AA)
+    return img
+def sweep(img, lt, d):
+    """một vệt nắng chéo quét qua cảnh một lần"""
+    p = lt / max(d, 1e-3); cx = -0.3 + p * 1.6
+    band = np.exp(-(((xx / W - cx) + (yy / H) * .35) ** 2) / .012)[..., None]
+    return img * (1 + .10 * band) + np.float32([1, .9, .7]) * .05 * band
 def frame(t):
     i = idx_at(t); sh = SH[i]; img = None
     nxt = SH[i + 1] if i + 1 < len(SH) else None
@@ -125,6 +145,8 @@ def frame(t):
     if img is None: img = render_shot(sh, t - sh['s'])
     img = np.ascontiguousarray(img, np.float32)
     img = petals(img, t)
+    img = motes(img, t)
+    if sh.get('sweep', (i % 3 == 1)): img = sweep(img, t - sh['s'], sh['e'] - sh['s'])
     for lb in labels:
         if lb['t0'] <= t <= lb['t1'] + .25:
             a = lb['a']; h, w = a.shape[:2]; al = a[..., 3:] * sm((t - lb['t0']) / .3) * sm((lb['t1'] + .25 - t) / .25)
