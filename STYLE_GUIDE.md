@@ -22,6 +22,7 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
   - **Không co giãn giọng để khớp cảnh.** Luôn dựng cảnh theo nhịp đọc tự nhiên (mốc thời gian lấy từ `with-timestamps`).
   - Văn bản dài hơn khoảng 2.500 ký tự thì chia làm 2 lần gọi, nối bằng 0,6 giây lặng.
   - Đã thử và **không dùng**: Chris (từng dùng ở bản nháp), George, Brian, Eric, Will, Marco (giọng Ý), "TRANG TÔI".
+- **Yếu tố Việt Nam (chủ kênh chốt, áp dụng cho mọi tập):** bản **tiếng Việt** được thêm chi tiết liên quan đến Việt Nam (di tích, phong tục, lịch sử Việt có liên hệ). Bản **tiếng Anh không nhắc Việt Nam**, thay bằng ảnh hưởng của chủ đề ra thế giới.
 - **Hai bản cho hai kênh:** mỗi tập làm bản tiếng Anh và bản tiếng Việt với cùng hình. Lời, chữ trên màn hình và mốc cảnh theo từng ngôn ngữ. Chữ tiếng Việt dùng font Be Vietnam Pro (Lora thiếu dấu).
 - **Văn phong:** người kể chuyện bình thường, tò mò, câu ngắn, có câu hỏi. Không giật gân kiểu quảng cáo, không giọng "đọc".
 - **Nhịp:** đề tài thần thoại, tôn giáo phải **chậm và bí ẩn, không theo kiểu video công nghệ**.
