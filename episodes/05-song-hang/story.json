@@ -1,0 +1,62 @@
+{
+ "op": {"vi": [
+  ["o1","Xin chào các bạn. Có một dòng sông mà mỗi ngày, hàng triệu người xuống tắm để gột sạch tội lỗi."],
+  ["o2","Người ta đem tro cốt người thân thả xuống đó, tin rằng linh hồn sẽ được giải thoát. Vậy mà đây cũng là một trong những dòng sông ô nhiễm nhất thế giới."],
+  ["o3","Và lạ hơn nữa, với người Ấn Độ, nó không phải là một dòng sông. Nó là một nữ thần. Tên bà là Ganga, tức sông Hằng."]],
+  "en": [
+  ["o1","Hello everyone. There is a river where, every single day, millions of people bathe to wash away their sins."],
+  ["o2","Families scatter the ashes of their loved ones in it, believing the soul will be set free. And yet it is also one of the most polluted rivers on Earth."],
+  ["o3","Stranger still, to the people of India, it is not a river at all. It is a goddess. Her name is Ganga, the Ganges."]]},
+ "a1": {"vi": [
+  ["m1","Thần thoại kể rằng xưa kia, Ganga chảy trên trời. Dưới trần gian, sáu vạn người con của vua Sagara bị thiêu thành tro, linh hồn không siêu thoát được."],
+  ["m2","Hậu duệ của họ là vua Bhagiratha đã tu khổ hạnh suốt nhiều năm, chỉ để xin nữ thần xuống trần rửa sạch tro cốt tổ tiên."],
+  ["m3","Nhưng có một vấn đề: nếu Ganga đổ thẳng xuống, sức nước sẽ làm vỡ cả mặt đất."],
+  ["m4","Thế là thần Shiva đứng ra, đưa đầu hứng lấy dòng nước. Ganga rơi vào mái tóc rối của thần, bị giữ lại ở đó, rồi mới chảy xuống thành từng dòng hiền hòa."],
+  ["m5","Vì vậy trong tranh tượng Ấn Độ, trên đầu thần Shiva luôn có một tia nước phun ra."]],
+  "en": [
+  ["m1","The myths say that long ago, Ganga flowed in heaven. On earth, the sixty thousand sons of King Sagara had been burned to ashes, and their souls could not find peace."],
+  ["m2","Their descendant, King Bhagiratha, prayed and fasted for years, just to ask the goddess to come down and wash his ancestors' ashes."],
+  ["m3","But there was a problem: if Ganga fell straight down, the force of her waters would shatter the earth."],
+  ["m4","So the god Shiva stepped forward and caught the river on his head. Ganga fell into his tangled hair, was held there, and then flowed down in gentle streams."],
+  ["m5","That is why, in Indian art, you will always see a jet of water springing from Shiva's hair."]]},
+ "a2": {"vi": [
+  ["j1","Ngoài đời thật, sông Hằng bắt nguồn từ sông băng Gangotri trên dãy Himalaya, chảy hơn hai nghìn năm trăm cây số qua đồng bằng bắc Ấn rồi đổ ra vịnh Bengal. Hàng trăm triệu người sống nhờ nước của nó."],
+  ["j2","Ở thành phố thánh Varanasi, những bậc đá dẫn xuống sông gọi là ghat. Sáng người ta xuống tắm, tối người ta làm lễ lửa Aarti."],
+  ["j3","Và có những giàn hỏa thiêu bên sông, người ta nói, cháy suốt ngày đêm."]],
+  "en": [
+  ["j1","In the real world, the Ganges is born from the Gangotri glacier in the Himalayas, and flows more than two thousand five hundred kilometres across northern India to the Bay of Bengal. Hundreds of millions of people depend on its water."],
+  ["j2","In the holy city of Varanasi, stone steps called ghats lead down to the river. In the morning people bathe. In the evening, priests perform the fire ceremony called Aarti."],
+  ["j3","And there are funeral pyres by the river that, people say, burn day and night."]]},
+ "a3": {"vi": [
+  ["g1","Người Ấn Độ không gọi đây là sông. Họ gọi là Ganga Ma, tức Mẹ Ganga. Dòng sông theo họ suốt cả một đời người."],
+  ["g2","Đứa trẻ mới sinh được nhỏ vài giọt nước sông Hằng. Nhà nào cũng cất một bình nhỏ, mang về từ chuyến hành hương, để dùng trong những dịp lễ."],
+  ["g3","Và khi một người sắp mất, người thân nhỏ vài giọt nước ấy vào miệng họ."],
+  ["g4","Nhiều người già còn tìm về Varanasi để chờ ngày cuối, vì tin rằng nhắm mắt bên bờ sông Hằng... linh hồn sẽ được giải thoát khỏi vòng luân hồi."]],
+  "en": [
+  ["g1","Indians do not simply call it a river. They call it Ganga Ma, Mother Ganga. And the river follows them through their whole lives."],
+  ["g2","A newborn baby is given a few drops of Ganges water. Many homes keep a small sealed pot of it, carried back from a pilgrimage, for special ceremonies."],
+  ["g3","And when someone is dying, the family places a few drops of that water on their lips."],
+  ["g4","Many elderly people even travel to Varanasi to wait for their final day, believing that to die beside the Ganges... is to be freed from the cycle of rebirth."]]},
+ "a4": {"vi": [
+  ["k1","Và cứ mười hai năm một lần, cả đất nước lại kéo về bên dòng sông. Đó là lễ hội Kumbh Mela."],
+  ["k2","Người ta tin rằng vào đúng thời khắc ấy, tắm ở nơi các dòng sông thiêng gặp nhau sẽ gột sạch mọi tội lỗi. Hàng chục triệu người đổ về cùng một bờ sông."],
+  ["k3","Đây được xem là cuộc tụ họp đông người nhất trên Trái Đất. Thế nhưng chính tình yêu ấy... lại đang làm dòng sông ngạt thở."]],
+  "en": [
+  ["k1","And once every twelve years, the whole country seems to gather at the river. This is the Kumbh Mela."],
+  ["k2","People believe that at exactly that moment, bathing where the sacred rivers meet washes away every sin. Tens of millions of pilgrims arrive at the same riverbank."],
+  ["k3","It is considered the largest gathering of people on Earth. And yet that very love... is choking the river."]]},
+ "a5": {"vi": [
+  ["p1","Nước thải, rác và hóa chất từ các thành phố đổ thẳng xuống sông mỗi ngày."],
+  ["p2","Năm 2017, một tòa án ở Ấn Độ còn tuyên bố sông Hằng là một thực thể sống, có quyền như một con người, để bảo vệ nó."],
+  ["p3","Phán quyết ấy sau đó bị Tòa án Tối cao tạm dừng. Nhưng nó cho thấy người ta coi dòng sông này như một sinh mệnh thật sự."]],
+  "en": [
+  ["p1","Sewage, rubbish and chemicals from the cities pour straight into the river every day."],
+  ["p2","In 2017, a court in India even declared the Ganges a living entity, with the same rights as a person, in order to protect it."],
+  ["p3","The Supreme Court later put that ruling on hold. But it shows how people see this river: as something truly alive."]]},
+ "end": {"vi": [
+  ["e1","Một dòng sông được yêu đến mức thành thần, và cũng vì được yêu như thế mà ô nhiễm."],
+  ["e2","Theo bạn, một dòng sông có nên được pháp luật coi như một con người không? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"]],
+  "en": [
+  ["e1","A river loved so much that it became a goddess, and polluted because it is loved so much."],
+  ["e2","What do you think: should a river have the same rights as a person? Let me know in the comments. Thanks for watching, and see you next time!"]]}
+}

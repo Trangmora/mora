@@ -10,7 +10,7 @@ def block(name):
 rows = {}
 for m in re.finditer(r'^\| (A\d+\w*) \| ([^|]+) \| (.+) \|$', md, re.M): rows.setdefault(m.group(1), m.group(3).strip())   # lấy dòng đầu tiên (bảng prompt), bỏ qua bảng clip phía sau
 EXTRA = json.loads(open(out + '/extra_prompts.json').read()) if __import__('os').path.exists(out + '/extra_prompts.json') else {}
-NEG = block('CN_NEG'); CH = block(CHB)
+NEG = block(__import__('os').environ.get('NEG_BLOCK', 'CN_NEG')); CH = block(CHB)
 def gen(spec):
     k, era = spec.split('=', 1); vn = era.endswith(':vn'); era = era.replace(':vn', '')
     scene = EXTRA.get(k) or rows[k]
