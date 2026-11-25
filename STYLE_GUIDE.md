@@ -53,7 +53,10 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
 - Cảnh có hiệu ứng "mọc" (mặt trời, trăng) thì vẽ ảnh **không có** vật đó, rồi thêm bằng code.
 
 ## 5. Chuyển động
-- **Camera gần như đứng yên:** zoom tối đa 1,05→1,10. Không zoom vào ra nhiều, không rung, không xoay 3D mạnh (gây chóng mặt).
+- **Từ tập 2 (chủ kênh yêu cầu ngày 25/11/2026): mọi cảnh đều phải cử động, video phải nhiều chuyển động để người xem không chán.**
+  - **Clip cử động:** đưa **tất cả** ảnh GPT sang fal.ai (Wan 2.2 Turbo) để tạo clip khoảng 5 giây. Sau đó **làm chậm clip** cho vừa độ dài cảnh (tối đa chậm còn 0,45 lần), trộn giữa hai khung liền nhau cho mượt.
+  - **Chuyển động máy quay bằng code** chạy chồng lên clip, đổi kiểu mỗi cảnh: zoom vào, zoom ra, lia trái, lia phải, lia dọc, và cảnh dài thì cắt sang cận cảnh (ví dụ thanh kiếm, khuôn mặt). Dùng tham số `c:[z0,z1,fx0,fy0,fx1,fy1]` trong `ep2.cjs`. Zoom trong khoảng 1,0–1,9, chuyển động êm, không rung, không xoay 3D.
+  - **Bộ lọc nội dung của fal.ai** có thể chặn ảnh có cung kiếm hay trận đánh. **Không tắt bộ lọc, không viết lại prompt để lách.** Cảnh bị chặn giữ ảnh tĩnh, rồi tạo chuyển động bằng code: lia máy, zoom, sóng hoặc cờ lay (`regs`), lóe sáng, hoa rơi. Tập 2 có 9/23 cảnh bị chặn.
 - **Chuyển động phải thật và có ý nghĩa, ăn theo lời đọc:**
   - **Chớp mắt và mỉm cười:** dùng bản "nhắm mắt" và "mỉm cười" do AI sửa từ ảnh gốc (`edits.py`), chỉ trộn đúng vùng mặt.
   - **Môi trường:** mặt trời mọc, mây trôi, nước gợn, ngọn lửa chập chờn, thần linh nhấp nhô, cánh hoa rơi.
@@ -95,6 +98,12 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - Xem `pipeline/audio/audio4.py`.
 
 ## 9a. Nhạc nền
+- **Nhạc phải có lên có xuống** (chủ kênh yêu cầu từ tập 2):
+  - **Mỗi phần nội dung một bài, hợp không khí:** mở đầu hùng tráng, chiến tranh dùng trống, thái bình dùng sáo, chuyện thú vị dùng nhạc vui, đoạn buồn dùng nhạc trầm, cao trào cuối dùng đoạn mạnh nhất của bài hùng tráng.
+  - **Cao trào:** nhạc dâng mạnh (0,95) đúng lúc hiện tiêu đề, kèm một tiếng trống lớn. Ở đoạn kết, nhạc dâng lên khi hiện tiêu đề tập sau.
+  - **Ngắt nghỉ:** nhạc lặng hẳn 0,5–0,8 giây ngay trước khi vào phần mới, rồi vào lại cùng một tiếng trống ("ngắt – vào").
+  - **Mức nhạc dưới giọng đổi theo đoạn:** đoạn chiến tranh và cao trào cao hơn, đoạn thái bình và đoạn buồn thấp hơn.
+  - Đoạn mạnh và đoạn nhẹ của từng bài: đo độ lớn theo từng 4 giây rồi chọn vị trí bắt đầu cho đúng chỗ (xem `episodes/02-samurai/build/audio2.py`).
 - **Dưới lời đọc, nhạc phải không lời** (không giọng hát) và nhỏ: chuẩn hóa bài nhạc về khoảng -16 dBFS, rồi để mức 0,18 dưới giọng (nhạc thấp hơn giọng khoảng 13 dB). Mức 0,10 cũ của tập 1 làm nhạc gần như mất hẳn. Bài có giọng hát chỉ được dùng ở đoạn không có lời đọc, hoặc dùng bản instrumental.
 - Đoạn chỉ có nhạc ở đầu và các khoảng ngắt: mức 0,9 (lên trong 0,5 giây, xuống trong 0,4 giây). Bỏ qua đoạn dạo đầu quá nhỏ của bài nhạc (ví dụ Finding Movement bắt đầu từ giây thứ 4).
 - **Nguồn nhạc:** bài chủ kênh cung cấp (YouTube Audio Library, Kevin MacLeod CC-BY, Pixabay; xem `assets/music/README.md`). **Không dùng nhạc Artlist** (bị dính bản quyền), Openverse (chỉ CC0 hoặc CC-BY, ghi tên tác giả), hoặc nhạc AI (fal.ai ACE-Step). Không đưa file nhạc có bản quyền vào git.
