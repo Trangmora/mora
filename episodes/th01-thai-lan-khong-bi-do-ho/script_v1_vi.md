@@ -35,4 +35,4 @@ Vậy là Xiêm mất nhiều vùng đất, nhưng trở thành quốc gia duy n
 - Chuyến công du châu Âu năm 1897, gặp Sa hoàng Nicholas II.
 - Đổi tên thành Thái Lan năm 1939. Ngày Chulalongkorn (23/10) là ngày lễ quốc gia.
 - "Ngoại giao cây tre" là cách gọi phổ biến về chính sách đối ngoại của Thái Lan.
-- Dài khoảng 590 chữ, tức khoảng 3 phút 15 giây.
+- Dài khoảng 560 chữ, tức khoảng 3 phút 05 giây.

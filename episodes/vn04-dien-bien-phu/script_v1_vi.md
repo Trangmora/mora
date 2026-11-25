@@ -39,4 +39,4 @@ Chỉ một ngày sau, hội nghị Giơ-ne-vơ bắt đầu bàn về Đông D�
 - Đồi A1: khối bộc phá gần 1.000 kg, nổ đêm 6/5/1954.
 - Chiều 7/5/1954 chiếm hầm chỉ huy; De Castries (thăng chuẩn tướng tháng 4/1954) và hơn 10.000 quân ra hàng.
 - Hội nghị Giơ-ne-vơ bàn về Đông Dương từ 8/5/1954; hiệp định ký ngày 21/7/1954. Pháp nổ súng ở Đà Nẵng năm 1858, tức gần 100 năm trước.
-- Dài khoảng 560 chữ, tức khoảng 3 phút 10 giây.
+- Dài khoảng 600 chữ, tức khoảng 3 phút 15 giây.

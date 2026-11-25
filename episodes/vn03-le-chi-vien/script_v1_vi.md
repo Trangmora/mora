@@ -43,4 +43,4 @@ Năm 1980, UNESCO kỷ niệm sáu trăm năm ngày sinh Nguyễn Trãi và vinh
 - Truyện rắn báo oán: truyền thuyết dân gian.
 - Năm 1464 Lê Thánh Tông minh oan; câu thơ trích trong bài "Quỳnh uyển cửu ca"; tìm được Nguyễn Anh Vũ, con trai Nguyễn Trãi.
 - Năm 1980 UNESCO kỷ niệm 600 năm ngày sinh Nguyễn Trãi.
-- Dài khoảng 590 chữ, tức khoảng 3 phút 15 giây.
+- Dài khoảng 660 chữ, tức khoảng 3 phút 35 giây.
