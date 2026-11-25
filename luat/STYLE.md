@@ -19,3 +19,14 @@
 - **Bắt buộc trên màn hình:** số hiệu văn bản, ngày thông qua, ngày có hiệu lực, nguồn (góc dưới).
 - Kết video luôn có câu: "Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý."
 - **Kiểm chứng:** mỗi con số phải có nguồn chính thống (Cổng thông tin Chính phủ, Quốc hội, Công báo, thuvienphapluat.vn, luatvietnam.vn). Chủ kênh đọc lại trước khi đăng.
+
+## Cập nhật theo ý chủ kênh (25/11/2026, phiên kênh luật)
+- **Đề tài:** những luật nhiều người quan tâm: kinh doanh, thuế, bất động sản, phạt giao thông, lao động, hình sự. (Chủ kênh đã cho làm lại bất động sản.)
+- **Trình bày kiểu sơ đồ:** ô nối ô bằng mũi tên, đi từng ô một cho tới khi ra cả sơ đồ. **Màu chủ đạo là đỏ:** viền ô đỏ, chữ đen, nền màu giấy.
+- **Bỏ bàn tay, chỉ giữ cây bút dạ** vẽ mũi tên và gạch chân.
+- **Dùng ảnh thật từ Unsplash** (ghi tác giả trong `sources.md`); không dùng ảnh rõ mặt người gắn với hành vi vi phạm. Vẫn không dùng ảnh báo chí.
+- **Tiết tấu nhanh:** giọng đọc nhanh hơn 15%, khoảng nghỉ giữa các đoạn 0,3–0,5 giây, không để quá 2 giây mà không có gì mới hiện ra.
+- **Hơi hài cho dễ hiểu:** một hai câu đùa nhẹ mỗi video; không đùa về con số, không giễu cơ quan nhà nước.
+- **Luôn có phần "Bạn nên làm gì?"** (ô viền xanh lá, dấu tích) trước câu lưu ý cuối video.
+- **Giọng đọc:** giọng nam, mã ElevenLabs `ywBZEqUhld86Jeajq94o` (chủ kênh gửi), model eleven_v3.
+- Khung dựng: `luat/pipeline/vox/` (xem README ở đó). Tập mẫu: `luat/episodes/BLHS2026_diem_moi/`.

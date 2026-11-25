@@ -3,10 +3,11 @@ Dùng: python3 tts_seg.py <script.json> <lang> <outdir> [gap_giây_mặc_định
 Xuất: <outdir>/vo_<lang>.wav và <outdir>/T_<lang>.json (mốc bắt đầu mỗi đoạn, kèm mốc từng ký tự).
 Cài đặt giọng theo STYLE_GUIDE: eleven_v3, stability 0.5, style 0.3, không chỉnh tốc độ."""
 import json, subprocess, base64, sys, os
-VID = '1SF4Jqf4CNRoja3ACqWC'
+VID = os.environ.get('VOICE_ID', '1SF4Jqf4CNRoja3ACqWC')  # mặc định giọng Trang; kênh luật đặt VOICE_ID để dùng giọng khác
 src, lang, out = sys.argv[1], sys.argv[2], sys.argv[3]
 gap_def = float(sys.argv[4]) if len(sys.argv) > 4 else 0.9
 gaps = dict(a.split('=') for a in sys.argv[5:])
+TEMPO = float(os.environ.get('TEMPO', '1'))  # >1: đọc nhanh hơn (ffmpeg atempo), mốc thời gian được chia theo
 os.makedirs(out, exist_ok=True)
 segs = json.load(open(src))[lang]
 SR = 44100
@@ -23,12 +24,12 @@ for i, (sid, text) in enumerate(segs):
     if 'audio_base64' not in d: print(sid, str(d)[:300]); sys.exit(1)
     mp3 = f'{out}/{lang}_{sid}.mp3'; open(mp3, 'wb').write(base64.b64decode(d['audio_base64']))
     wav = f'{out}/{lang}_{sid}.wav'
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', str(SR), '-ac', '1', wav], check=True)
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', mp3] + (['-af', f'atempo={TEMPO}'] if TEMPO != 1 else []) + ['-ar', str(SR), '-ac', '1', wav], check=True)
     dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav],
                                capture_output=True, text=True).stdout)
     a = d['alignment']
-    T[sid] = round(t, 3); T[sid + '_end'] = round(t + a['character_end_times_seconds'][-1], 3)
-    chars[sid] = [[c, round(s + t, 3)] for c, s in zip(a['characters'], a['character_start_times_seconds'])]
+    T[sid] = round(t, 3); T[sid + '_end'] = round(t + a['character_end_times_seconds'][-1] / TEMPO, 3)
+    chars[sid] = [[c, round(s / TEMPO + t, 3)] for c, s in zip(a['characters'], a['character_start_times_seconds'])]
     parts.append((wav, dur))
     t += dur + float(gaps.get(sid, gap_def))
     print(lang, sid, round(dur, 2))
