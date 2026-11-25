@@ -15,3 +15,6 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP04_Laozi_en.mp4 | Lão Tử | Anh | 4:41 | bản tiếng Anh, không nhắc Việt Nam |
 | EP03_47Ronin_vi.mp4 | 3. 47 Rōnin | Việt | 3:04 | toàn bộ bằng hình; 9 hình Nano Banana mới, dùng lại hình Samurai |
 | EP03_47Ronin_en.mp4 | 3. 47 Rōnin | Anh | 3:19 | giọng đọc tăng tốc 1,15 lần |
+
+## Video ngắn dọc (videos/shorts/)
+Mỗi video là một câu chuyện trọn vẹn 30–45 giây, 720×1280, có bản `_vi` và `_en`. Kịch bản ở `shorts/specs.json`, dựng bằng `pipeline/shorts/make_short.py`. Bản lưu ở đây đã nén nhẹ; bản đăng nằm trên R2.
