@@ -8,3 +8,4 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP01_Shinto_en.mp4 | 1. Thần đạo | Anh | ~3:10 | bản v3, nhạc sạch |
 | EP01_Shinto_vi.mp4 | 1. Thần đạo | Việt | ~3:10 | bản v3; lời chào còn là "các bác" (chưa thu lại) |
 | EP02_Samurai_vi.mp4 | 2. Samurai | Việt | 3:33 | bản v2, tiêu đề giữ lâu hơn |
+| EP02_Samurai_en.mp4 | 2. Samurai | Anh | 3:49 | giọng đọc tăng tốc 1,15 lần, tiêu đề giữ khoảng 5 giây |
