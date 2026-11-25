@@ -113,5 +113,190 @@
    "desc": "gods dance before Amaterasu cave (from p3)"
   }
  },
- "_style_prompt": "Flat 2D vector illustration like a hand-made paper-cut animated documentary: bold simple geometric shapes with clean dark-brown outlines, visible soft paper grain and faint hand-drawn crackle lines, evenly lit bright mid-tone warm colors (NOT dark, NOT night), muted earthy palette of terracotta red, ochre, cream, sage green and black ink, characters drawn front-facing and symmetrical with minimal faces made of a few simple lines, flat colors with slight soft shading, gentle vignette, a few simple pale flowers scattered as decoration. Wide 16:9, no text, no letters. "
+ "_style_prompt": "Flat 2D vector illustration like a hand-made paper-cut animated documentary: bold simple geometric shapes with clean dark-brown outlines, visible soft paper grain and faint hand-drawn crackle lines, evenly lit bright mid-tone warm colors (NOT dark, NOT night), muted earthy palette of terracotta red, ochre, cream, sage green and black ink, characters drawn front-facing and symmetrical with minimal faces made of a few simple lines, flat colors with slight soft shading, gentle vignette, a few simple pale flowers scattered as decoration. Wide 16:9, no text, no letters. ",
+ "sam_o0": {
+  "file": "images/sam_o0.jpg",
+  "desc": "battlefield at dawn: red and white banners, mounted samurai in horned helmets, big red rising sun, misty valley",
+  "episode": "02-samurai"
+ },
+ "sam_o0_clip": {
+  "file": "clips/sam_o0.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_o0",
+  "episode": "02-samurai"
+ },
+ "sam_a1": {
+  "file": "images/sam_a1.jpg",
+  "desc": "samurai in indigo kimono kneeling, writing a poem with brush, two swords beside him, cup of tea",
+  "episode": "02-samurai"
+ },
+ "sam_a1_clip": {
+  "file": "clips/sam_a1.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_a1",
+  "episode": "02-samurai"
+ },
+ "sam_b1": {
+  "file": "images/sam_b1.jpg",
+  "desc": "split: Kyoto court nobles banqueting under cherry blossoms (left) vs bandits raiding burning villages (right)",
+  "episode": "02-samurai"
+ },
+ "sam_b2": {
+  "file": "images/sam_b2.jpg",
+  "desc": "early mounted warriors riding along rice paddy dikes guarding the fields, landowner pointing, farmers planting",
+  "episode": "02-samurai"
+ },
+ "sam_b2_clip": {
+  "file": "clips/sam_b2.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_b2",
+  "episode": "02-samurai"
+ },
+ "sam_b3": {
+  "file": "images/sam_b3.jpg",
+  "desc": "close view of early mounted archer drawing a long yumi bow (fal.ai blocks this image for video)",
+  "episode": "02-samurai"
+ },
+ "sam_c1": {
+  "file": "images/sam_c1.jpg",
+  "desc": "samurai army marching to the imperial palace gate, worried court nobles peeking",
+  "episode": "02-samurai"
+ },
+ "sam_c1_clip": {
+  "file": "clips/sam_c1.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_c1",
+  "episode": "02-samurai"
+ },
+ "sam_c2": {
+  "file": "images/sam_c2.jpg",
+  "desc": "Taira (red banners) vs Minamoto (white banners) armies facing each other on a field",
+  "episode": "02-samurai"
+ },
+ "sam_c2_clip": {
+  "file": "clips/sam_c2.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_c2",
+  "episode": "02-samurai"
+ },
+ "sam_c3": {
+  "file": "images/sam_c3.jpg",
+  "desc": "sea battle (Dan-no-ura 1185): boats with red and white banners, stylized big waves (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_c4": {
+  "file": "images/sam_c4.jpg",
+  "desc": "shogun in black armor with gold fan on a dais, samurai kneeling, small emperor behind a bamboo screen",
+  "episode": "02-samurai"
+ },
+ "sam_c4_clip": {
+  "file": "clips/sam_c4.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_c4",
+  "episode": "02-samurai"
+ },
+ "sam_d1": {
+  "file": "images/sam_d1.jpg",
+  "desc": "Warring States: many white castles on hills, armies clashing in valleys, smoke, messenger rider (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_d2": {
+  "file": "images/sam_d2.jpg",
+  "desc": "peaceful Edo town: castle, wooden bridge over river, merchants, kites, cherry blossoms",
+  "episode": "02-samurai"
+ },
+ "sam_d2_clip": {
+  "file": "clips/sam_d2.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_d2",
+  "episode": "02-samurai"
+ },
+ "sam_d3": {
+  "file": "images/sam_d3.jpg",
+  "desc": "Edo samurai official in kamishimo at a desk with brush and abacus, stacked rice bales, swords on rack",
+  "episode": "02-samurai"
+ },
+ "sam_d3_clip": {
+  "file": "clips/sam_d3.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_d3",
+  "episode": "02-samurai"
+ },
+ "sam_d4": {
+  "file": "images/sam_d4.jpg",
+  "desc": "samurai with daisho (long and short sword) walking down a street, townspeople bowing",
+  "episode": "02-samurai"
+ },
+ "sam_d4_clip": {
+  "file": "clips/sam_d4.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_d4",
+  "episode": "02-samurai"
+ },
+ "sam_e1": {
+  "file": "images/sam_e1.jpg",
+  "desc": "Tomoe Gozen, female samurai with long hair, on galloping horse with naginata (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_e2": {
+  "file": "images/sam_e2.jpg",
+  "desc": "Yasuke, African samurai in armor, standing beside Oda Nobunaga in a castle hall",
+  "episode": "02-samurai"
+ },
+ "sam_e2_clip": {
+  "file": "clips/sam_e2.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_e2",
+  "episode": "02-samurai"
+ },
+ "sam_e3": {
+  "file": "images/sam_e3.jpg",
+  "desc": "Miyamoto Musashi with two swords on a beach at sunrise facing an opponent (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_e4": {
+  "file": "images/sam_e4.jpg",
+  "desc": "swordsmith hammering a glowing katana on an anvil, sparks, apprentice at the bellows",
+  "episode": "02-samurai"
+ },
+ "sam_e4_clip": {
+  "file": "clips/sam_e4.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_e4",
+  "episode": "02-samurai"
+ },
+ "sam_e5": {
+  "file": "images/sam_e5.jpg",
+  "desc": "47 ronin in black-white triangle coats marching through a snowy night street with lanterns",
+  "episode": "02-samurai"
+ },
+ "sam_e5_clip": {
+  "file": "clips/sam_e5.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_e5",
+  "episode": "02-samurai"
+ },
+ "sam_e6": {
+  "file": "images/sam_e6.jpg",
+  "desc": "temple graveyard with stone graves and incense smoke, people praying, red maple leaves (Sengaku-ji mood)",
+  "episode": "02-samurai"
+ },
+ "sam_e6_clip": {
+  "file": "clips/sam_e6.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_e6",
+  "episode": "02-samurai"
+ },
+ "sam_f1": {
+  "file": "images/sam_f1.jpg",
+  "desc": "Meiji era: samurai's topknot cut off, sword laid down, western-uniform soldiers marching past brick building (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_f2": {
+  "file": "images/sam_f2.jpg",
+  "desc": "last samurai rebellion 1877: Saigo Takamori leading samurai charging downhill against riflemen, red sky (fal.ai blocks)",
+  "episode": "02-samurai"
+ },
+ "sam_g1": {
+  "file": "images/sam_g1.jpg",
+  "desc": "modern kendo dojo: two kendo players in blue armor, students kneeling (fal.ai blocked the prompt)",
+  "episode": "02-samurai"
+ },
+ "sam_g2": {
+  "file": "images/sam_g2.jpg",
+  "desc": "lone armored samurai seen from behind under cherry tree, big red sunset over misty plain",
+  "episode": "02-samurai"
+ },
+ "sam_g2_clip": {
+  "file": "clips/sam_g2.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_g2",
+  "episode": "02-samurai"
+ }
 }
