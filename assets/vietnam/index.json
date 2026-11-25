@@ -222,5 +222,119 @@
   "file": "clips/lcv_c4.mp4",
   "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of lcv_c4: The stream flows over the rocks, the pine branches sway, the old scholar slowly turns a page of his book, mist drifts across the mountains.",
   "episode": "vn03-le-chi-vien"
+ },
+ "dbp_d1": {
+  "file": "images/dbp_d1.jpg",
+  "desc": "Dawn over a remote valley completely ringed by jungle-covered mountains, low mist on the valley floor, a small river; dozens of white parachutes with soldiers drifting down from propeller transport planes.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d11": {
+  "file": "images/dbp_d11.jpg",
+  "desc": "Dusk: Vietnamese artillery guns hidden in camouflaged dugouts on a mountainside firing down toward a valley fortress far below, bright muzzle flashes, puffs of smoke rising from the valley floor, orange sky.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d12": {
+  "file": "images/dbp_d12.jpg",
+  "desc": "A valley floor covered with a spider web of zigzag trenches slowly closing around a sandbagged hill fort with barbed wire; in the foreground Vietnamese soldiers in bamboo helmets digging a trench with shovels and hoes.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d14": {
+  "file": "images/dbp_d14.jpg",
+  "desc": "Heavy monsoon rain: tired Vietnamese soldiers in a flooded muddy trench, water up to their knees, sharing a small ball of rice under a rain cape, grey sky, barbed wire and a hill fort in the distance.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d15": {
+  "file": "images/dbp_d15.jpg",
+  "desc": "Cross-section view of a hill: on top a sandbagged bunker with barbed wire, and underground a narrow tunnel being dug by Vietnamese soldiers with small lamps, passing wooden crates along the tunnel toward the centre of th",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d17": {
+  "file": "images/dbp_d17.jpg",
+  "desc": "Afternoon: a Vietnamese soldier standing on the curved corrugated-steel roof of a sandbagged command bunker, waving a large red flag with a yellow star, other soldiers cheering around the bunker, smoke clearing over the ",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d18": {
+  "file": "images/dbp_d18.jpg",
+  "desc": "A long column of unarmed French soldiers walking out of a valley along a dirt road under a calm sky, tired faces, some with bandaged arms, watched by a few Vietnamese soldiers; mountains behind.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d19": {
+  "file": "images/dbp_d19.jpg",
+  "desc": "1954, a grand European conference hall: diplomats in dark suits from many countries seated around a very large table covered in green cloth, papers and microphones, tall windows with a lake and mountains outside.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d2": {
+  "file": "images/dbp_d2.jpg",
+  "desc": "A huge French fortified camp on a flat valley floor seen from a hill: sandbag bunkers, barbed wire, trenches, artillery guns, a few light tanks, an airstrip with propeller planes, a French tricolor flag, mountains all ar",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d20": {
+  "file": "images/dbp_d20.jpg",
+  "desc": "Present day: a green hill memorial site with a large grassy crater and preserved trenches, a restored sandbagged bunker with a curved steel roof, schoolchildren and tourists visiting, a red flag with a yellow star on a p",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d3": {
+  "file": "images/dbp_d3.jpg",
+  "desc": "Inside a sandbagged command bunker: a confident French artillery colonel with a moustache pointing at a wall map with a stick, other French officers in khaki listening, a lamp and field telephones on a table.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d6": {
+  "file": "images/dbp_d6.jpg",
+  "desc": "An endless line of Vietnamese civilian porters winding along a steep mountain pass at dawn: men and women with shoulder poles and baskets, and many bicycles loaded high with sacks of rice being pushed with bamboo poles; ",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d8": {
+  "file": "images/dbp_d8.jpg",
+  "desc": "Night on a very steep jungle slope: dozens of Vietnamese soldiers in green uniforms hauling a heavy field howitzer uphill with long thick ropes, others wedging logs behind its wheels, torchlight, mud, determined faces.",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d9": {
+  "file": "images/dbp_d9.jpg",
+  "desc": "Night inside a simple bamboo-and-thatch command hut in the jungle: a thoughtful Vietnamese general in a plain khaki uniform sitting alone at a table with a large map and an oil lamp, one hand on his forehead, deep in tho",
+  "episode": "vn04-dien-bien-phu",
+  "model": "nano-banana"
+ },
+ "dbp_d1_clip": {
+  "file": "clips/dbp_d1.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d1: The white parachutes drift slowly downward, the planes move across the sky, mist flows across the valley floor.",
+  "episode": "vn04-dien-bien-phu"
+ },
+ "dbp_d12_clip": {
+  "file": "clips/dbp_d12.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d12: The men dig with shovels and throw earth out of the trench, dust rises, clouds move slowly.",
+  "episode": "vn04-dien-bien-phu"
+ },
+ "dbp_d14_clip": {
+  "file": "clips/dbp_d14.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d14: Heavy rain falls, the water in the trench ripples, the men huddle together and eat.",
+  "episode": "vn04-dien-bien-phu"
+ },
+ "dbp_d20_clip": {
+  "file": "clips/dbp_d20.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d20: The flag waves in the wind, the children walk along the path, the grass sways.",
+  "episode": "vn04-dien-bien-phu"
+ },
+ "dbp_d6_clip": {
+  "file": "clips/dbp_d6.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d6: The long line of porters walks slowly forward along the mountain path, the loaded bicycles roll, the torch flames flicker, mist drifts.",
+  "episode": "vn04-dien-bien-phu"
+ },
+ "dbp_d8_clip": {
+  "file": "clips/dbp_d8.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of dbp_d8: The men pull the ropes together in rhythm, the heavy wheels turn slowly uphill, the torch flames flicker.",
+  "episode": "vn04-dien-bien-phu"
  }
 }
