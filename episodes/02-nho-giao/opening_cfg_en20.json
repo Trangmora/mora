@@ -1,0 +1,63 @@
+{
+ "bg": "../../assets/china/images/bg_tai.jpg",
+ "depth": "work/bg_tai_depth.png",
+ "crop_y": 0.25,
+ "sky_thr": 0.07,
+ "timing": "work/T_{lang}.json",
+ "music_lead": 4.6,
+ "end": "op3_end+4.0",
+ "fonts": {
+  "brush": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/MaShanZheng.ttf",
+  "cap_vi": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/BeVN600.ttf",
+  "cap_en": "/tmp/claude-0/-home-user-mora/7bef8db5-47a0-5c26-8307-972ba2796889/scratchpad/fonts/Lora600.ttf"
+ },
+ "sun": {
+  "x": 0.19,
+  "r": 0.085,
+  "color": "#b02a2c",
+  "path": [
+   [
+    0.3,
+    4.4,
+    0.62,
+    0.33
+   ],
+   [
+    "op1+3.5",
+    "op2-0.4",
+    0.33,
+    0.75
+   ]
+  ]
+ },
+ "ink": [
+  {
+   "text": "十四年",
+   "font": "brush",
+   "size": 170,
+   "x": 120,
+   "y": 215,
+   "color": "#a8161d",
+   "t0": "op2+0.2",
+   "t1": "end+5",
+   "reveal": 1.8
+  }
+ ],
+ "captions": [
+  {
+   "text": {
+    "vi": "MƯỜI BỐN NĂM CHU DU",
+    "en": "FOURTEEN YEARS ON THE ROAD"
+   },
+   "font": "cap",
+   "size": 30,
+   "spacing": 7,
+   "x": 132,
+   "y": 335,
+   "color": "#2b2622",
+   "t0": "op2+1.4",
+   "t1": "end+5",
+   "fadein": 1.0
+  }
+ ]
+}

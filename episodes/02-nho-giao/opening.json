@@ -1,0 +1,16 @@
+{
+ "vi": [
+  ["op1", "Xin chào các bác. Hôm nay chúng ta cùng tìm hiểu về một ông già... cả đời bị người ta từ chối."],
+  ["op2", "Ông đi khắp thiên hạ mười bốn năm. Không một ông vua nào chịu dùng ông."],
+  ["op3", "Ông mất đi với ý nghĩ rằng... đời mình đã thất bại."],
+  ["op4", "Vậy mà suốt hai nghìn năm sau, tư tưởng của ông cai trị cả một đế chế. Tại sao vậy nhỉ?"],
+  ["op5", "Ông tên là Khổng Khâu. Người đời gọi ông là Khổng Tử. Còn điều ông dạy... gọi là Nho giáo."]
+ ],
+ "en": [
+  ["op1", "This is the story of an old man... who was turned away all his life."],
+  ["op2", "For fourteen years he travelled from kingdom to kingdom. Not one king would take him."],
+  ["op3", "He died believing... his life had been a failure."],
+  ["op4", "And yet for two thousand years, his ideas ruled an empire. How?"],
+  ["op5", "His name was Kong Qiu. We call him Confucius. And what he taught... is called Confucianism."]
+ ]
+}
