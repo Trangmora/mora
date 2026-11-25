@@ -298,5 +298,80 @@
   "file": "clips/sam_g2.mp4",
   "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of sam_g2",
   "episode": "02-samurai"
+ },
+ "ron_n1": {
+  "file": "images/ron_n1.jpg",
+  "desc": "young lord Asano in court robes kneeling in Edo castle hall with golden painted doors, imperial envoys",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n2": {
+  "file": "images/ron_n2.jpg",
+  "desc": "old official Kira in purple robes sneering at humiliated young lord Asano kneeling",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n3": {
+  "file": "images/ron_n3.jpg",
+  "desc": "castle corridor with pine-painted doors: Asano drawing a short sword, Kira fleeing, officials rushing in",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n4": {
+  "file": "images/ron_n4.jpg",
+  "desc": "empty tatami room, folded white cloth, short sword on stand, cherry petals drifting in (solemn)",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n5": {
+  "file": "images/ron_n5.jpg",
+  "desc": "samurai retainers with bundles leaving a white castle by the sea, petals falling",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n5_clip": {
+  "file": "clips/ron_n5.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of ron_n5",
+  "episode": "03-47-ronin"
+ },
+ "ron_n6": {
+  "file": "images/ron_n6.jpg",
+  "desc": "masterless samurai kneeling by candlelight pressing seals on an oath scroll",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n6_clip": {
+  "file": "clips/ron_n6.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of ron_n6",
+  "episode": "03-47-ronin"
+ },
+ "ron_n7": {
+  "file": "images/ron_n7.jpg",
+  "desc": "Kyoto night street: samurai lying drunk with sake bottle, townsman in straw hat looking down, teahouse with red lanterns (fal.ai blocks this image for video)",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n8": {
+  "file": "images/ron_n8.jpg",
+  "desc": "snowy night: ronin in black-white triangle coats opening a charcoal shed, old man in white hiding inside",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n9": {
+  "file": "images/ron_n9.jpg",
+  "desc": "kabuki stage with snowy backdrop, actors in triangle-pattern coats posing, audience silhouettes",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
+ },
+ "ron_n9_clip": {
+  "file": "clips/ron_n9.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of ron_n9",
+  "episode": "03-47-ronin"
+ },
+ "ron_t1": {
+  "file": "images/ron_t1.jpg",
+  "desc": "Kyoto teahouse interior at night: samurai lying drunk on tatami, geisha playing shamisen, red lanterns (Nano Banana, no reference image)",
+  "episode": "03-47-ronin",
+  "model": "nano-banana"
  }
 }

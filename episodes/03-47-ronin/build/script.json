@@ -1,0 +1,182 @@
+{
+"vi": [
+[
+"op1",
+"Xin chào các bạn. Vào một đêm tuyết rơi dày ở Edo, năm 1703, có bốn mươi bảy người đàn ông lặng lẽ tiến về một dinh thự."
+],
+[
+"op2",
+"Họ đã chờ đêm này gần hai năm trời. Họ biết rằng dù thành công, họ cũng sẽ phải trả giá bằng chính mạng sống của mình."
+],
+[
+"op3",
+"Vậy điều gì đã khiến họ quyết tâm đến như vậy?"
+],
+[
+"s1",
+"Mọi chuyện bắt đầu từ mùa xuân năm 1701. Lãnh chúa trẻ Asano Naganori được giao tiếp đón sứ giả của Thiên hoàng tại lâu đài của Tướng quân."
+],
+[
+"s2",
+"Người hướng dẫn nghi lễ cho ông là Kira Yoshinaka, một quan chức lớn tuổi, có nhiều quyền thế. Tương truyền, Kira nhiều lần coi thường và làm nhục Asano."
+],
+[
+"s3",
+"Đến một ngày, Asano không kìm được nữa, rút kiếm chém Kira ngay trong hành lang của lâu đài."
+],
+[
+"s4",
+"Kira chỉ bị thương nhẹ. Nhưng rút kiếm trong lâu đài của Tướng quân là tội rất nặng."
+],
+[
+"s5",
+"Asano bị buộc phải chết ngay trong ngày hôm đó, đất đai bị tịch thu, còn Kira thì không bị phạt gì."
+],
+[
+"s6",
+"Chỉ sau một đêm, hơn ba trăm samurai của nhà Asano trở thành rōnin, những samurai không còn chủ."
+],
+[
+"s7",
+"Người đứng đầu các samurai là Ōishi Kuranosuke. Ban đầu, ông xin triều đình cho dòng họ Asano được khôi phục, nhưng không thành."
+],
+[
+"s8",
+"Thế là một nhóm rōnin âm thầm thề sẽ báo thù cho chủ."
+],
+[
+"s9",
+"Biết Kira cho người theo dõi, Ōishi giả làm một kẻ ăn chơi, ngày ngày say xỉn ở các quán trà Kyoto."
+],
+[
+"s10",
+"Tương truyền, có lần ông nằm say giữa đường, bị một người lạ khinh bỉ, nhổ vào mặt. Ai nhìn vào cũng nghĩ ông đã quên chủ cũ. Và Kira dần dần lơ là."
+],
+[
+"s11",
+"Đêm mười bốn tháng mười hai năm ấy, tuyết phủ trắng Edo. Bốn mươi bảy rōnin chia làm hai nhóm, tấn công dinh thự từ cổng trước và cổng sau theo hiệu trống."
+],
+[
+"s12",
+"Họ lục soát khắp nơi mà không thấy Kira, cho đến khi tìm ra ông ta đang trốn trong một nhà kho chứa than."
+],
+[
+"s13",
+"Trước khi trời sáng, họ đã báo được thù cho chủ, rồi cùng nhau đi bộ qua thành phố, đến chùa Sengaku-ji để báo tin trước mộ lãnh chúa Asano."
+],
+[
+"s14",
+"Cả nước Nhật xôn xao. Người dân ca ngợi họ là những nghĩa sĩ, nhưng luật vẫn là luật."
+],
+[
+"s15",
+"Sau nhiều tuần bàn bạc, Mạc phủ ra lệnh cho bốn mươi sáu người phải chết theo cách của samurai."
+],
+[
+"s16",
+"Người thứ bốn mươi bảy được cử đi báo tin về quê nhà, và sống đến tận tám mươi ba tuổi. Các rōnin được chôn cất ngay bên cạnh mộ của chủ mình."
+],
+[
+"s17",
+"Hơn ba trăm năm đã trôi qua, nhưng khói nhang ở chùa Sengaku-ji vẫn chưa bao giờ tắt. Mỗi năm vào ngày mười bốn tháng mười hai, người Nhật lại tổ chức lễ hội để tưởng nhớ họ."
+],
+[
+"s18",
+"Câu chuyện đã thành hàng trăm vở kịch và bộ phim, và trở thành bài học nổi tiếng nhất của nước Nhật về lòng trung thành."
+],
+[
+"end",
+"Còn bạn, bạn nghĩ họ đúng hay sai? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
+]
+],
+"en": [
+[
+"op1",
+"Hello everyone. On a night of heavy snow in Edo, in 1703, forty-seven men moved silently toward a mansion."
+],
+[
+"op2",
+"They had waited almost two years for this night. And they knew that even if they succeeded, they would pay with their own lives."
+],
+[
+"op3",
+"So what made them so determined?"
+],
+[
+"s1",
+"It all began in the spring of 1701. A young lord, Asano Naganori, was chosen to receive the Emperor's envoys at the Shōgun's castle."
+],
+[
+"s2",
+"His guide in court etiquette was Kira Yoshinaka, an older and very powerful official. Legend says Kira insulted and humiliated Asano again and again."
+],
+[
+"s3",
+"One day, Asano could take no more. He drew his sword and struck at Kira, right in a corridor of the castle."
+],
+[
+"s4",
+"Kira was only slightly wounded. But drawing a sword inside the Shōgun's castle was a grave crime."
+],
+[
+"s5",
+"Asano was ordered to die that very same day, and his lands were taken away. Kira was not punished at all."
+],
+[
+"s6",
+"Overnight, more than three hundred of Asano's samurai became rōnin: samurai without a master."
+],
+[
+"s7",
+"Their leader was Ōishi Kuranosuke. At first, he begged the government to restore the Asano family. He failed."
+],
+[
+"s8",
+"So a group of rōnin made a secret oath: to avenge their master."
+],
+[
+"s9",
+"Knowing Kira had spies watching him, Ōishi pretended to be a drunkard, wasting his days in the teahouses of Kyoto."
+],
+[
+"s10",
+"Legend says that once, as he lay drunk in the street, a stranger spat in his face in contempt. Everyone believed he had forgotten his old master. And slowly, Kira let down his guard."
+],
+[
+"s11",
+"On the fourteenth night of the twelfth month, snow covered Edo. The forty-seven rōnin split into two groups and stormed the mansion from the front and back gates, at the signal of a drum."
+],
+[
+"s12",
+"They searched everywhere but could not find Kira, until they discovered him hiding in a charcoal shed."
+],
+[
+"s13",
+"Before dawn, they had avenged their master. Then together they walked across the city to Sengaku-ji temple, to report to Lord Asano at his grave."
+],
+[
+"s14",
+"All of Japan was stirred. People hailed them as heroes, but the law was the law."
+],
+[
+"s15",
+"After weeks of debate, the Shōgun's government ordered forty-six of them to die in the way of the samurai."
+],
+[
+"s16",
+"The forty-seventh was sent home to carry the news, and lived to the age of eighty-three. The rōnin were buried right beside their master."
+],
+[
+"s17",
+"More than three hundred years later, the incense at Sengaku-ji has never stopped burning. Every year on December fourteenth, people gather to remember them."
+],
+[
+"s18",
+"Their story has inspired hundreds of plays and films, and became Japan's most famous lesson in loyalty."
+],
+[
+"end",
+"So what do you think: were they right, or wrong? Let me know in the comments. Thanks for watching, and see you next time!"
+]
+]
+}

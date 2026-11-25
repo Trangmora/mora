@@ -13,3 +13,5 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP03_Confucius_en.mp4 | Khổng Tử | Anh | 7:44 | bản tiếng Anh, không nhắc Việt Nam |
 | EP04_Laozi_vi.mp4 | Lão Tử | Việt | 3:38 | kịch bản kể chuyện, mở đầu ải Hàm Cốc |
 | EP04_Laozi_en.mp4 | Lão Tử | Anh | 4:41 | bản tiếng Anh, không nhắc Việt Nam |
+| EP03_47Ronin_vi.mp4 | 3. 47 Rōnin | Việt | 3:04 | toàn bộ bằng hình; 9 hình Nano Banana mới, dùng lại hình Samurai |
+| EP03_47Ronin_en.mp4 | 3. 47 Rōnin | Anh | 3:19 | giọng đọc tăng tốc 1,15 lần |
