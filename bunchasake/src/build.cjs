@@ -281,7 +281,7 @@ function catbar(l, current) {
 }
 const BIMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, "../content/blog-images.json"), "utf8")); } catch { return {}; } })();
 const bimg = k => BIMG[k] && fs.existsSync(path.join(SITE, `img/blog/${k}.jpg`)) ? BIMG[k] : null;
-const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${pubOf(d)}">${fmtDate(l, pubOf(d))}</time></span></a>`; };
+const prow = (k, l, H = "h3") => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><${H}>${esc(d.h1)}</${H}><p>${esc(d.description || d.lead || "")}</p><time datetime="${pubOf(d)}">${fmtDate(l, pubOf(d))}</time></span></a>`; };
 function renderCategory(c, l) {
   const t = T[l], C = BCAT[c], urls = { en: U.cat(c, "en"), vi: U.cat(c, "vi") }, list = blogKeys.filter(k => blog[k][l] && catOf(blog[k][l]) === c);
   if (!list.length) return;
@@ -292,7 +292,7 @@ function renderCategory(c, l) {
   const h = head({ l, title: title.length > 65 ? `${name} | Bunchasake Blog` : title, desc, urls, ldjson, cls: "blog" }) + "\n" + nav(l, urls, "blog", c) + "\n" + catbar(l, c) + `
 <main id="main">
   <div class="blog-wrap">${crumbs(l, [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [name, null]])}<section class="blog-head"><h1>${esc(name)}</h1><p class="lead">${esc(desc)}</p>${svc ? `<p class="cat-svc"><a href="${U.landing(svc, l)}">${t.related}: ${esc(CTA_LABEL[svc]?.[l] || LABEL[svc][l])} <span aria-hidden="true">→</span></a></p>` : ""}</section>
-  <section class="plist">${list.map(k => prow(k, l)).join("")}</section>
+  <section class="plist">${list.map(k => prow(k, l, "h2")).join("")}</section>
   </div>
 </main>
 ` + foot(l, null);

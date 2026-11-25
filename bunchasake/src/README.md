@@ -29,3 +29,5 @@ Nếu có cảnh báo (liên kết hỏng, tiêu đề quá dài…) lệnh sẽ
 1. Tạo `content/blog/<slug-tiếng-anh>.en.html` và `.vi.html` theo mẫu trong `content/BRIEF.md`.
    Ghi `date: YYYY-MM-DD` (ngày đăng) và `category:` trong phần đầu file: bài có ngày đăng mới nhất tự lên đầu blog. Ngày "cập nhật" và `lastmod` trong sitemap lấy từ git, không gõ tay.
 2. Chạy lệnh dựng, kiểm tra không có cảnh báo, rồi commit và push. Sitemap tự cập nhật.
+3. Kiểm tra: `python3 src/check.py` (PROBLEMS: 0) và `node src/tall.js` (problems: 0; cần `cd site && python3 -m http.server 8765`).
+4. Sau khi push: `bash src/cfst.sh` xem Cloudflare deploy xong chưa, rồi `bash src/indexnow.sh` để báo các công cụ tìm kiếm những URL vừa đổi.
