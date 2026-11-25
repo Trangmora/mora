@@ -17,8 +17,7 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
 3. **Kết:** quay lại câu hỏi mở đầu và giới thiệu tập sau.
 
 ## 3. Giọng đọc và nhịp
-- **Giọng:** giọng clone của chủ kênh, ElevenLabs **"Trang giọng việt"** (`1SF4Jqf4CNRoja3ACqWC`), model `eleven_v3`, stability 0.6, similarity 0.85, style 0.1. Dùng cho **cả bản tiếng Anh lẫn bản tiếng Việt**.
-  - Cài đặt giọng: stability 0.5, style 0.3, đọc ở **tốc độ tự nhiên** (không chỉnh atempo).
+- **Giọng:** giọng clone của chủ kênh, ElevenLabs **"Trang giọng việt"** (`1SF4Jqf4CNRoja3ACqWC`), model `eleven_v3`, stability 0.5, style 0.3, đọc ở **tốc độ tự nhiên** (không chỉnh atempo). Dùng cho **cả bản tiếng Anh lẫn bản tiếng Việt**. Chủ kênh rất thích giọng này, giữ nguyên.
   - **Không chèn thẻ cảm xúc** dạng `[curious]` hay `[pause]`: model đọc nhầm thành tiếng (nghe như có giọng lạ chen vào). Tạo cảm xúc bằng dấu câu và "...".
   - **Không co giãn giọng để khớp cảnh.** Luôn dựng cảnh theo nhịp đọc tự nhiên (mốc thời gian lấy từ `with-timestamps`).
   - Văn bản dài hơn khoảng 2.500 ký tự thì chia làm 2 lần gọi, nối bằng 0,6 giây lặng.
