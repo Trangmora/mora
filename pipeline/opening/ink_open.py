@@ -18,7 +18,11 @@ T, CH = TJ['T'], TJ['chars']
 OFF = cfg['music_lead']                     # giây chỉ có nhạc trước lời đầu tiên
 def G(sid): return OFF + T[sid]
 def W_(sid, word):                          # mốc bắt đầu một cụm từ trong đoạn sid
-    s = ''.join(c for c, _ in CH[sid]); i = s.index(word); return OFF + CH[sid][i][1]
+    if isinstance(CH, dict):
+        s = ''.join(c for c, _ in CH[sid]); i = s.index(word); return OFF + CH[sid][i][1]
+    s = ''.join(c for c, _ in CH); i = s.index(word)            # bản thu một lần (tts_flow): danh sách phẳng
+    while CH[i][1] < T[sid] - 0.05: i = s.index(word, i + 1)
+    return OFF + CH[i][1]
 def ev(x):                                  # biểu thức mốc: số, "op2", "op2+0.3", "op5@Nho giáo", "end+4"
     if isinstance(x, dict): x = x[LANG]
     if isinstance(x, (int, float)): return float(x)

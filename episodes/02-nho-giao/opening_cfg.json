@@ -3,7 +3,7 @@
  "depth": "work/bg_tai_depth.png",
  "crop_y": 0.25,
  "sky_thr": 0.07,
- "timing": "work/T_{lang}.json",
+ "timing": "work/vo_op_{lang}.json",
  "music_lead": 4.6,
  "end": "end+4.2",
  "fonts": {

@@ -68,6 +68,21 @@ Bộ quy tắc rút ra từ tập 1 (Thần đạo Nhật Bản). Mọi tập sa
   - Không dùng cách kéo méo vùng ảnh.
 - **Không dùng nhân vật dẫn đường xuyên suốt** (cô bé đã bị bỏ).
 
+## 5b. Clip cho mọi cảnh và chuyển động thêm (chủ kênh chốt 25/11/2026)
+- **Cảnh nào cũng là clip:** ảnh tạo bằng ChatGPT (gpt-image-2) → đưa sang fal.ai Wan 2.2 Turbo tạo clip khoảng 4 giây (`pipeline/scenes/fal_clip.py`) → **phát chậm 0,5–0,7 lần** cho dài ra (trộn khung cho mượt, hết clip thì giữ khung cuối).
+- **Thêm chuyển động của mình trên clip** để người xem không chán (`pipeline/scenes/paper_scenes.py`):
+  - Mỗi khung một kiểu máy quay chậm: đẩy vào, lia phải, lùi ra, lia trái. Zoom tối đa 1,12.
+  - Cảnh dài thì chia khung cận.
+  - Thêm bụi sáng lơ lửng, cánh hoa rơi, và một vệt nắng quét qua mỗi vài cảnh.
+- **Ngân sách:** khoảng 25 clip × $0,10 = $2,5 mỗi tập, cộng ảnh. Vẫn giữ dưới $5.
+
+## 9c. Nhạc thăng trầm (chủ kênh chốt 25/11/2026)
+- **Không để nhạc đều đều.** Mỗi tập có kế hoạch mức nhạc (`pipeline/full/mix_dynamic.py`):
+  - **Dâng lên:** ở đoạn đầu chỉ có nhạc, ở mỗi khoảng ngắt chuyển phần, và ở cao trào (chữ tên chủ đề hiện ra, cuối mỗi hồi).
+  - **Hạ xuống:** dưới lời đọc.
+  - **Tắt hẳn khoảng 1 giây:** ngay trước câu then chốt hoặc câu chốt hài.
+- **Điểm nhấn âm thanh:** chuông và trống trầm ở cao trào, tiếng đàn dây gảy khi sang hồi mới, tiếng giấy lướt rất nhẹ ở chỗ xé giấy.
+
 ## 6. Điểm rơi (beats)
 Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiếng đi kèm. Ví dụ:
 - **"The whole world went dark":** tối đen thật 1–2 giây, nhạc gần như tắt, rồi một đốm sáng nhỏ và tiếng chuông, sau đó vòng sáng mở ra cảnh tiếp theo.
