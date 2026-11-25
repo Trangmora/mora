@@ -453,5 +453,12 @@
     "photo": "https://unsplash.com/photos/brown-and-white-pizza-on-white-box-T-SkHm-18qQ?utm_source=bunchasake&utm_medium=referral",
     "id": "T-SkHm-18qQ",
     "alt": "A pizza in an open white delivery box"
+  },
+  "heinz-brand-story": {
+    "user": "Aditya Saxena",
+    "link": "https://unsplash.com/@adityaries",
+    "photo": "https://unsplash.com/photos/french-fries-with-ketchup-on-a-yellow-background-quvE3hwWZ2A?utm_source=bunchasake&utm_medium=referral",
+    "id": "quvE3hwWZ2A",
+    "alt": "French fries with ketchup on a yellow background"
   }
 }
