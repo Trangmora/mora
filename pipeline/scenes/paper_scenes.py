@@ -63,7 +63,23 @@ def render_shot(sh, lt):
     hw, hh = 0.5 / z, 0.5 / z; fx = min(max(fx, hw), 1 - hw); fy = min(max(fy, hh), 1 - hh)
     x0 = (fx - hw) * W * 2; y0 = (fy - hh) * H * 2; s_ = (W * 2 / z) / W
     M = np.float32([[s_, 0, x0], [0, s_, y0]])
-    return cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
+    out = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
+    dp = load_depth(sh)
+    if dp is not None:   # 2.5D: lớp gần trôi nhiều hơn lớp xa (thị sai), không tốn credit
+        d = cv2.warpAffine(dp, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
+        amp = sh.get('par', 14) * (k - .5) * 2
+        out = cv2.remap(out, xx - amp * (d - .35), yy - amp * .25 * (d - .35), cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+    return out
+
+def load_depth(sh):
+    if 'img' not in sh or sh.get('par', 1) == 0: return None
+    p = sh['img'].replace('.png', '_d.png').replace('.jpg', '_d.png')
+    if p not in cache:
+        try:
+            d = cv2.imread(p, cv2.IMREAD_GRAYSCALE).astype(np.float32) / 255; h, w = d.shape; ch = int(w * 9 / 16); y0 = (h - ch) // 2
+            cache[p] = cv2.GaussianBlur(cv2.resize(d[y0:y0 + ch], (W * 2, H * 2)), (0, 0), 3)
+        except Exception: cache[p] = None
+    return cache[p]
 
 # ---------- chữ: dải giấy + con dấu ----------
 F = cfg['fonts']
@@ -89,6 +105,8 @@ for i, sh in enumerate(SH):
     for lb in sh.get('labels', []):
         a = label_img(lb['parts'], lb.get('size', 26)); h, w = a.shape[:2]; pos = lb.get('pos', 'tl'); m = 36
         x = m if 'l' in pos else W - w - m; y = m if 't' in pos else H - h - m
+        if pos == 'c': x = (W - w) // 2; y = (H - h) // 2
+        if pos == 'tc': x = (W - w) // 2; y = m
         labels.append(dict(a=a, x=x, y=y, t0=sh['s'] + lb['t0'], t1=sh['s'] + lb['t1']))
 
 # ---------- chuyển cảnh ----------
@@ -126,6 +144,41 @@ def sweep(img, lt, d):
     p = lt / max(d, 1e-3); cx = -0.3 + p * 1.6
     band = np.exp(-(((xx / W - cx) + (yy / H) * .35) ** 2) / .012)[..., None]
     return img * (1 + .10 * band) + np.float32([1, .9, .7]) * .05 * band
+def fire(img, t):
+    """ánh lửa nhấp nháy + tàn lửa bay lên"""
+    img = img * (1 + .06 * math.sin(t * 11) + .04 * math.sin(t * 27))
+    for j in range(40):
+        r = np.random.default_rng(300 + j); per = 2 + r.random() * 2; tt = (t + r.random() * per) % per
+        x = W * (.35 + r.random() * .3) + math.sin(tt * 3 + j) * 20; y = H * (.75 - tt / per * .7)
+        a = 1 - tt / per; cv2.circle(img, (int(x), int(y)), 2, (1.0, .55 + .3 * a, .15), -1, cv2.LINE_AA)
+    return img
+def smoke(img, t, at):
+    """làn khói hương mảnh, uốn lượn"""
+    ov = np.zeros((H, W), np.float32)
+    for j in range(3):
+        pts = [(int(at[0] * W + math.sin(t * .8 + y * .03 + j) * (6 + y * .25)), int(at[1] * H - y)) for y in range(0, 220, 6)]
+        cv2.polylines(ov, [np.array(pts, np.int32)], False, .5, 3, cv2.LINE_AA)
+    ov = cv2.GaussianBlur(ov, (0, 0), 4)[..., None]
+    return img * (1 - ov * .5) + np.float32([.96, .95, .92]) * ov * .5
+INKC = {}
+def ink_char(img, spec, lt):
+    """chữ Hán đỏ lớn hiện dần như mực loang ở góc trống"""
+    key = (spec['text'], spec.get('size', 220))
+    if key not in INKC:
+        f = ImageFont.truetype(F[spec.get('font', 'brush')], spec.get('size', 220)); w = int(sum(f.getlength(c) for c in spec['text'])) + 40
+        im = Image.new('L', (w, int(spec.get('size', 220) * 1.4)), 0); ImageDraw.Draw(im).text((20, 0), spec['text'], font=f, fill=255)
+        m = np.asarray(im, np.float32) / 255; ys, xs = np.where(m > .05); m = m[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+        hh, ww = m.shape; gy, gx = np.mgrid[0:hh, 0:ww]; dist = np.hypot(gx - ww / 2, gy - hh / 2); dist /= dist.max()
+        fld = .55 * dist + .45 * cv2.resize(np.random.default_rng(7).random((hh // 9 + 2, ww // 9 + 2)).astype(np.float32), (ww, hh), interpolation=cv2.INTER_CUBIC)
+        INKC[key] = (m, fld)
+    m, fld = INKC[key]; hh, ww = m.shape
+    p = (lt - spec.get('t0', .6)) / spec.get('reveal', 1.8)
+    if p <= 0: return img
+    vis = np.clip((p * 1.25 - fld) / .12, 0, 1) * m * spec.get('alpha', .85)
+    x0 = int(spec['x'] * W - ww / 2); y0 = int(spec['y'] * H - hh / 2)
+    sub = img[y0:y0 + hh, x0:x0 + ww]; vis = vis[:sub.shape[0], :sub.shape[1], None]
+    img[y0:y0 + hh, x0:x0 + ww] = sub * (1 - vis) + np.float32(spec.get('color', [.66, .09, .11])) * vis
+    return img
 def frame(t):
     i = idx_at(t); sh = SH[i]; img = None
     nxt = SH[i + 1] if i + 1 < len(SH) else None
@@ -146,6 +199,12 @@ def frame(t):
     img = np.ascontiguousarray(img, np.float32)
     img = petals(img, t)
     img = motes(img, t)
+    lt_ = t - sh['s']
+    for fx in sh.get('fx', []):
+        if fx == 'fire': img = fire(img, t)
+        elif fx == 'smoke': img = smoke(img, t, sh.get('smoke_at', [.75, .55]))
+        elif fx == 'flicker': img = img * (1 + .04 * math.sin(t * 9) + .03 * math.sin(t * 23))
+    if 'ink' in sh: img = ink_char(img, sh['ink'], lt_)
     if sh.get('sweep', (i % 3 == 1)): img = sweep(img, t - sh['s'], sh['e'] - sh['s'])
     for lb in labels:
         if lb['t0'] <= t <= lb['t1'] + .25:
