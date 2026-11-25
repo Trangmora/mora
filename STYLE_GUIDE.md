@@ -87,8 +87,8 @@ Mỗi ý quan trọng trong lời dẫn cần một sự kiện hình và tiến
 - Xem `pipeline/audio/audio4.py`.
 
 ## 9a. Nhạc nền
-- **Dưới lời đọc, nhạc phải không lời** (không giọng hát) và rất nhỏ (mức 0,10). Bài có giọng hát chỉ được dùng ở đoạn không có lời đọc, hoặc dùng bản instrumental.
-- Ở khoảng ngắt thì nhạc lên mức khoảng 0,7 (lên trong 0,5 giây, xuống trong 0,4 giây).
+- **Dưới lời đọc, nhạc phải không lời** (không giọng hát) và nhỏ: chuẩn hóa bài nhạc về khoảng -16 dBFS, rồi để mức 0,18 dưới giọng (nhạc thấp hơn giọng khoảng 13 dB). Mức 0,10 cũ của tập 1 làm nhạc gần như mất hẳn. Bài có giọng hát chỉ được dùng ở đoạn không có lời đọc, hoặc dùng bản instrumental.
+- Đoạn chỉ có nhạc ở đầu và các khoảng ngắt: mức 0,9 (lên trong 0,5 giây, xuống trong 0,4 giây). Bỏ qua đoạn dạo đầu quá nhỏ của bài nhạc (ví dụ Finding Movement bắt đầu từ giây thứ 4).
 - **Nguồn nhạc:** bài chủ kênh cung cấp (YouTube Audio Library, Kevin MacLeod CC-BY, Pixabay; xem `assets/music/README.md`). **Không dùng nhạc Artlist** (bị dính bản quyền), Openverse (chỉ CC0 hoặc CC-BY, ghi tên tác giả), hoặc nhạc AI (fal.ai ACE-Step). Không đưa file nhạc có bản quyền vào git.
 - Hiệu ứng âm thanh (xé giấy, nốt koto lúc chuyển cảnh, sấm, chuông, trống) chỉ dùng **ít và nhỏ**: mỗi lần chuyển phần một âm, không lặp ở mọi lần cắt cảnh.
 - **Clip AI từ fal.ai không có tiếng.** Mọi âm thanh lạ trong video đều đến từ hiệu ứng tự tạo hoặc từ nhạc.

@@ -1,7 +1,7 @@
 """Ghép âm thanh cho đoạn mở đầu: giọng (tốc độ tự nhiên) + nhạc nền tự hạ khi có lời + gió + một tiếng chuông trầm.
 Dùng: python3 mix_open.py <lang> <video_câm.mp4> <vo.wav> <nhạc.mp3> <out.mp4> [nhạc_bắt_đầu_giây=0]
 Mốc lấy từ <video_câm.mp4>.json (DUR, OFF, marks) do ink_open.py xuất ra.
-Mức nhạc theo STYLE_GUIDE: 0,7 lúc chỉ có nhạc, 0,10 dưới giọng, 0,72 ở khoảng ngắt; lên 0,5 s, xuống 0,4 s.
+Mức nhạc (sau khi chuẩn hóa bài nhạc về ~ -16 dBFS): 0,9 lúc chỉ có nhạc và ở khoảng ngắt, 0,18 dưới giọng; lên 0,5 s, xuống 0,4 s.
 """
 import sys, json, subprocess, wave
 import numpy as np
@@ -18,13 +18,15 @@ def load(p, ss=0.0):
 
 vo = load(vo_p); v = np.zeros((N, 2), np.float32); a = int(OFF * SR); v[a:] = vo[:N - a]
 mus = load(mus_p, mstart)
+# chuẩn hóa độ to nhạc (RMS ~ -16 dBFS) để các mức 0,7 / 0,18 nghe rõ, bài nào cũng như nhau
+mus *= 0.16 / (np.sqrt(np.mean(mus ** 2)) + 1e-9)
 # phát hiện lúc đang nói
 mono = v[:, 0]; win = int(.05 * SR)
 rms = np.sqrt(np.convolve(mono ** 2, np.ones(win) / win, 'same'))
 speak = np.convolve((rms > 0.02).astype(np.float32), np.ones(int(.8 * SR)), 'same') > 0   # lặng < 0,8 s vẫn tính là đang nói
-target = np.where(speak, 0.10, 0.70).astype(np.float32)
+target = np.where(speak, 0.18, 0.90).astype(np.float32)
 last = np.where(speak)[0].max() / SR
-target[t > last + 0.3] = 0.72                                                              # khoảng ngắt cuối, nhạc lên
+target[t > last + 0.3] = 0.90                                                              # khoảng ngắt cuối, nhạc lên
 # làm mượt (lên 0,5 s, xuống 0,4 s)
 g = np.empty_like(target); cur = target[0]
 up, dn = 1 / (0.5 * SR), 1 / (0.4 * SR)
