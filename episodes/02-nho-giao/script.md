@@ -23,8 +23,8 @@ Kể như một câu chuyện có nút thắt, không kể như bài giảng.
 | # | Cảnh | VI (giọng trò chuyện) | EN |
 |---|---|---|---|
 | **Mở đầu thủy mặc: 4–5 giây chỉ có nhạc.** Núi Thái Sơn trong sương, mặt trời đỏ mọc sau đỉnh núi | | | |
-| op1 | thủy mặc | Xin chào các bạn. Hôm nay chúng ta cùng tìm hiểu về một ông già… cả đời bị người ta từ chối. | This is the story of an old man… who was turned away all his life. |
-| op2 | thủy mặc, con đường nhỏ | Ông đi khắp thiên hạ mười bốn năm. Không một ông vua nào chịu dùng ông. | For fourteen years he travelled from kingdom to kingdom. Not one king would take him. |
+| op1 | thủy mặc | Xin chào các bạn, hôm nay chúng ta sẽ tìm hiểu một trong những nhân vật nổi tiếng nhất Trung Quốc. | This is the story of an old man… who was turned away all his life. |
+| op2 | thủy mặc, con đường nhỏ | Ông đã dành mười bốn năm chu du khắp các nước. Vậy mà không một ông vua nào chịu dùng ông. | For fourteen years he travelled from kingdom to kingdom. Not one king would take him. |
 | op3 | thủy mặc | Ông mất đi với ý nghĩ rằng… đời mình đã thất bại. | He died believing… his life had been a failure. |
 | op4 | chữ đỏ 儒 hiện như mực loang | Vậy mà suốt hai nghìn năm sau, tư tưởng của ông cai trị cả một đế chế. Tại sao vậy nhỉ? | And yet for two thousand years, his ideas ruled an empire. How? |
 | op5 | 儒 lớn, NHO GIÁO / CONFUCIANISM | Ông tên là Khổng Khâu. Người đời gọi ông là Khổng Tử. Còn điều ông dạy… gọi là Nho giáo. | His name was Kong Qiu. We call him Confucius. And what he taught… is called Confucianism. In Chinese, *ru*: the way of the scholars. |
