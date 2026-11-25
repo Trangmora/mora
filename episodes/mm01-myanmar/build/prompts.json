@@ -1,0 +1,29 @@
+{
+ "ref": "/tmp/claude-0/-home-user-mora/38ef56c4-90f4-5764-b269-139a56395139/scratchpad/thai/img/t1.png",
+ "setting": "Setting: Burma (Myanmar) across the centuries. It must look Burmese, not Thai or Chinese: bell-shaped golden stupas with slender hti umbrella spires, brick-red temples of Bagan, teak palace halls with multi-tiered pyatthat roofs, men and women in wrapped longyi skirts, men with gaung baung head wraps, Buddhist monks in dark maroon robes, toddy palms, the wide Irrawaddy river. Respectful, dignified portrayal of everyone. No violence, no fighting, no blood.",
+ "scenes": {
+  "m1": "Dawn over the plain of Bagan: hundreds of brick-red temples and stupas of many sizes rising out of white morning mist as far as the eye can see, a large orange sun on the horizon, toddy palms, birds in the sky.",
+  "m2": "A great golden bell-shaped Burmese pagoda under a heavy dark stormy sky with distant smoke on the horizon; in the foreground a family in longyi walking away along a road carrying bundles and a small child, seen from behind.",
+  "m3": "An 11th-century Burmese king in a golden crown and robes riding a white elephant with a golden howdah, raising his hand, with attendants holding parasols and monks around him, and brick temples under construction with bamboo scaffolding behind.",
+  "m5": "A line of Mongol horsemen in fur-trimmed coats and pointed helmets on a ridge, seen in dark silhouette from behind, looking down at the temples of Bagan on the plain below under a stormy red sky. No fighting.",
+  "m6": "A powerful 16th-century Burmese king in golden armor seated on a high golden throne in a teak palace hall; envoys in different costumes (Siamese, Lao, Shan, Indian) kneeling in a row offering tribute chests and elephant tusks.",
+  "m7": "Seen from far across a river: the walled Siamese city of Ayutthaya with tall corn-cob shaped prang towers, columns of smoke rising above it into an orange sky; in the foreground Burmese war elephants and soldiers with banners standing on the riverbank watching. No close-up fighting.",
+  "m8": "The year 1885: two British paddle-steamer gunboats, each flying ONLY the British Union Jack flag (no other flags), steaming up the wide Irrawaddy river toward the long red brick walls, moat and tall tiered wooden pyatthat spires of the royal palace of Mandalay; British soldiers in pith helmets on deck; Burmese villagers in longyi watching from the bank.",
+  "m9": "A sad Burmese king and queen in royal dress sitting in a simple ox cart leaving the palace gate, escorted by British soldiers in red coats and pith helmets; townspeople kneeling and weeping along the road at dusk.",
+  "m10": "A busy colonial river port around 1920: Burmese and Indian dock workers carrying sacks of rice up gangplanks onto large steamships; mountains of rice sacks on the quay; colonial brick buildings with a clock tower behind; a British merchant in a white suit checking a ledger.",
+  "m11": "A split composition: on the left, Burmese rice farmers in longyi working in flat paddy fields; on the right, hill people in colorful ethnic dress in green mountains, some of them lined up in khaki colonial army uniforms; in the center a British colonial officer in a pith helmet at a desk, pointing one hand to each side.",
+  "m12": "The year 1947: inside a simple wooden hall, a young Burmese leader with short hair in a long military greatcoat signing a document at a table, surrounded by ethnic leaders wearing turbans and traditional jackets of the Shan, Kachin and Chin peoples, all watching solemnly.",
+  "m13": "An empty wooden chair at a long meeting table; on the table a military peaked cap, a long greatcoat folded over the chair, and scattered papers; a vase of white flowers; tall windows with rain outside; somber light. No people.",
+  "m14": "The year 1962: a stern Burmese general in an olive uniform and peaked cap standing on a balcony; below him a closed iron gate with a heavy chain and padlock, shuttered shops, soldiers standing guard, an empty street.",
+  "m15": "Close view: an old Burmese shopkeeper in longyi sitting among piles of useless paper banknotes, puzzled, holding up two new banknotes; an abacus and a nearly empty rice sack beside him.",
+  "m16": "The year 1988: a slender Burmese woman with white flowers in her hair, wearing a traditional blouse and longyi, speaking at a microphone on a stage before an enormous crowd, with a huge golden pagoda rising behind; people in the crowd hold flowers.",
+  "m17": "A two-story white colonial house by a lake behind a locked gate and a fence, a single soldier standing guard outside; the silhouette of a woman with flowers in her hair at an upstairs window, looking out; evening light.",
+  "m18": "The year 2021: night in a modern Burmese city street: a huge crowd of ordinary people holding candles and blank banners; in the distance military trucks blocking the road; a golden pagoda glowing far behind. Peaceful, no fighting.",
+  "m19": "Families of villagers, women, children and elderly people, walking in a long line along a jungle mountain path carrying bundles, pots and babies, a column of smoke far behind over the hills; a bamboo shelter camp ahead.",
+  "m20": "Inside a grand modern parliament hall with rows of seated officials, half of them in green military uniforms; a senior general with glasses in a formal jacket and longyi standing at a podium with one hand raised, taking an oath.",
+  "m21": "Sunrise at a quiet monastery: a young novice monk in a maroon robe and a small girl with thanaka paste on her cheeks releasing a white dove together, golden stupas and misty mountains behind, soft hopeful light."
+ },
+ "refs": {
+  "m8": "/tmp/claude-0/-home-user-mora/38ef56c4-90f4-5764-b269-139a56395139/scratchpad/mm/img/m10.png"
+ }
+}

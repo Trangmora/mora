@@ -3,13 +3,13 @@ const LANG=process.argv[2]||'vi';const STILLS=process.argv.slice(3).map(Number);
 const FPS=24,TEMPO=+(process.env.TEMPO||1.07),DELAY=4.6;const VI=LANG==='vi';
 const TJ=JSON.parse(fs.readFileSync(`../${process.env.VODIR||(VI?'vo':'vo_en')}/T_${LANG}.json`,'utf8')).T;
 const G=id=>DELAY+TJ[id]/TEMPO,E=id=>DELAY+TJ[id+'_end']/TEMPO;const L=(en,vi)=>VI?vi:en;
-const FONT=VI?"'Be Vietnam Pro'":'Lora';const lab=(t0,t1,parts,x=40,y=28)=>({t0,t1,x,y,parts,size:26,font:FONT,seal:globalThis.SEAL||'越'});
-const cap=s=>VI?`600 ${s}px 'Be Vietnam Pro'`:`600 ${s}px Lora`;
+const VF=VI||!!process.env.VIFONT;const FONT=VF?"'Be Vietnam Pro'":'Lora';const lab=(t0,t1,parts,x=40,y=28)=>({t0,t1,x,y,parts,size:26,font:FONT,seal:globalThis.SEAL||'越'});
+const cap=s=>VF?`600 ${s}px 'Be Vietnam Pro'`:`600 ${s}px Lora`;
 const P=(...a)=>a.map(x=>typeof x==='string'?{t:x}:{t:x[0],hl:1});
 const b={z0:1.04,z1:1.10};const reg=(c,r,o={})=>Object.assign({c,r},o);
 const END=E('endS')+5.0;
 var PI=[1.0,1.13,.5,.5,.5,.5],PO=[1.16,1.02,.5,.5,.5,.5],PR=[1.16,1.16,.40,.5,.60,.5],PL=[1.16,1.16,.60,.5,.40,.5],TU=[1.16,1.16,.5,.62,.5,.40],TD=[1.16,1.16,.5,.40,.5,.62];
-var sh;eval(fs.readFileSync('shots.js','utf8'));
+var sh;eval(fs.readFileSync(process.env.SHOTS||'shots.js','utf8'));
 for(let i=0;i<sh.length;i++)sh[i].e=i<sh.length-1?sh[i+1].s:END;
 // split: long stills with alt focus -> 2 shots; clips -> clip (<=5.3s) + still zoom; clipAfter -> still then clip
 const sc=[];const sub=(l,m)=>(l||[]).filter(x=>x.t0>=m).map(x=>({...x,t0:x.t0-m,t1:x.t1-m}));

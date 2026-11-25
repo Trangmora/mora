@@ -1,0 +1,28 @@
+// Vụ án Lệ Chi Viên, bản tiếng Anh: bỏ các đoạn s6, s16, s19 cho vừa độ dài
+globalThis.SEAL='越';
+sh=[
+ {clip:'c1',s:0,c:[1.0,1.15,.5,.5,.36,.5],fadeIn:2.0,lab:[lab(5.4,9.4,P(['VIETNAM'],' · AUGUST 1442'))]},
+ {k:'c12',s:G('op2')-.3,o:{z0:1.4,z1:1.6,f0:[.55,.65],f1:[.6,.7]},tr:'cross',lab:[lab(3.0,6.4,P(['NGUYỄN TRÃI']))]},
+ {clip:'c1',s:G('op3')-.3,c:[1.3,1.42,.3,.5,.25,.5],tr:'cross',title:{at:E('op3')+0.1-(G('op3')-.3),k:'茘枝園',l1:'LỆ CHI VIÊN',l2:'VIETNAM · THE LYCHEE GARDEN MYSTERY · 1442',font1:cap(54),font2:cap(22)}},
+ {k:'l14',s:G('s1')-.3,o:{z0:1.03,z1:1.2,f0:[.5,.5],f1:[.5,.6]},alt:[.5,.62,1.7,.5,.6],tr:'tear',lab:[lab(.6,4.6,P(['1428'],' · MING CHINA DRIVEN OUT'))],lab2:[lab(.5,4.6,P(['THE GREAT PROCLAMATION']))]},
+ {k:'c3',s:G('s2')-.3,o:{z0:1.15,z1:1.15,f0:[.32,.5],f1:[.68,.5]},tr:'cross'},
+ {clip:'c4',s:G('s2b')-.3,c:[1.0,1.13,.5,.5,.6,.48],tr:'cross',lab:[lab(.6,3.6,P(['CÔN SƠN']))]},
+ {k:'c5',s:G('s3')-.3,o:{z0:1.03,z1:1.15,f0:[.5,.5],f1:[.58,.5]},alt:[.72,.42,1.7,.72,.4],tr:'cross',lab:[lab(.6,4.5,P(['LÊ THÁI TÔNG'],' · THE YOUNG KING'))]},
+ {k:'c6',s:G('s4')-.3,o:{z0:1.03,z1:1.14,f0:[.5,.5],f1:[.55,.52]},alt:[.4,.5,1.6,.44,.5],tr:'tear',lab:[lab(.6,4.5,P(['NGUYỄN THỊ LỘ']))],lab2:[lab(.5,4.2,P(['LEGEND'],' · THE MAT SELLER'),560,28)]},
+ {k:'c7',s:G('s5')-.3,o:{z0:1.03,z1:1.16,f0:[.5,.5],f1:[.48,.5]},alt:[.5,.45,1.6,.5,.42],tr:'cross',lab:[lab(.6,4.4,P(['LADY OF RITES']))]},
+ {clip:'c4',s:G('s7')-.3,c:[1.25,1.35,.6,.5,.66,.45],tr:'tear',lab:[lab(.6,4.6,P(['1442'],' · CÔN SƠN'))]},
+ {clip:'c1',s:G('s8')-.3,c:[1.16,1.02,.5,.5,.5,.5],tr:'cross',lab:[lab(.6,5,P(['LỆ CHI VIÊN'],' · THE LYCHEE GARDEN'))]},
+ {clip:'c10',s:G('s9')-.3,c:[1.0,1.2,.5,.55,.5,.6],tr:'cross'},
+ {k:'c10',s:G('s9b')-.2,o:{z0:1.2,z1:1.26,f0:[.5,.6],darkRamp:2.2},tr:'cross'},
+ {k:'c12',s:G('s10')-.3,o:{z0:1.03,z1:1.12,f0:[.5,.5],f1:[.5,.55],fadeIn:.8},tr:'none',lab:[lab(.8,4.4,P(['ACCUSED']))]},
+ {k:'c12',s:G('s11')-.3,o:{z0:1.6,z1:1.8,f0:[.42,.5],f1:[.52,.62]},tr:'cross',lab:[lab(.5,5,P(['12 DAYS LATER'],' · THE SENTENCE'))]},
+ {k:'l14',s:G('s12')-.3,o:{z0:1.8,z1:1.92,f0:[.5,.62],f1:[.5,.6],fadeOut:2.4},tr:'cross'},
+ {k:'c13',s:G('s13')-.3,o:{z0:1.03,z1:1.14,f0:[.5,.5],f1:[.5,.46]},alt:[.5,.42,1.9,.5,.38],tr:'tear',lab:[lab(.6,4.6,P(['A FIGHT'],' FOR THE THRONE'))],lab2:[lab(.5,4.6,P(['NGUYỄN THỊ ANH'],' · NOW IN POWER'))]},
+ {k:'c14',s:G('s14')-.3,o:{z0:1.03,z1:1.2,f0:[.5,.5],f1:[.52,.68]},alt:[.52,.74,1.8,.54,.74],tr:'cross',lab:[lab(.6,4.6,P(['NGÔ THỊ NGỌC DAO']))]},
+ {k:'c3',s:G('s15')-.3,o:{z0:1.7,z1:1.85,f0:[.2,.5],f1:[.26,.5]},tr:'cross',lab:[lab(1.2,5.2,P('WHO WAS ',['BEHIND IT?']))]},
+ {k:'c14',s:G('s17')-.3,o:{z0:1.9,z1:2.05,f0:[.52,.74],f1:[.5,.72]},tr:'tear'},
+ {clip:'c16',s:G('s17b')-.3,c:[1.0,1.15,.55,.55,.6,.55],tr:'cross',lab:[lab(.6,5,P(['LÊ THÁNH TÔNG'],' · A GREAT KING OF VIETNAM'))]},
+ {clip:'c16',s:G('s18')-.3,c:[1.15,1.25,.6,.55,.58,.5],alt:[1.6,1.8,.5,.26,.5,.18],tr:'cross',lab:[lab(.6,4.4,P(['1464'],' · HIS NAME IS CLEARED'))],lab2:[lab(.3,6,P(['“ỨC TRAI’S HEART'],' SHINES LIKE THE KHUÊ STAR”'))]},
+ {clip:'c18',s:G('s20')-.3,c:[1.16,1.02,.5,.5,.5,.5],alt:[1.7,1.82,.15,.5,.16,.46],tr:'tear',lab:[lab(.6,4.6,P(['1980'],' · HONORED BY UNESCO'))],lab2:[lab(.5,4.6,P(['600 YEARS'],' · NGUYỄN TRÃI'),520,28)]},
+ {clip:'c1',s:G('endS')-.3,c:[1.1,1.0,.5,.5,.5,.5],fadeOut:2.0,tr:'cross',title:{at:.6,k:'冤',l1:'WHO WAS BEHIND IT?',l2:'TELL ME IN THE COMMENTS',font1:cap(40),font2:cap(26)}},
+];

@@ -1,100 +1,198 @@
 {
-"vi": [
-[
-"op1",
-"Xin chào các bạn. Tháng tám năm 1442, một vị vua mới hai mươi tuổi ghé nghỉ đêm tại một vườn vải bên sông. Sáng hôm sau, nhà vua không bao giờ tỉnh dậy nữa."
-],
-[
-"op2",
-"Chỉ mười hai ngày sau, người bị kết tội lại chính là vị công thần đã giúp dựng nên cả triều đại: Nguyễn Trãi."
-],
-[
-"op3",
-"Chuyện gì đã xảy ra trong đêm ấy ở Lệ Chi Viên?"
-],
-[
-"s1",
-"Nguyễn Trãi là quân sư số một của Lê Lợi trong mười năm đánh đuổi quân Minh, và là người viết Bình Ngô đại cáo."
-],
-[
-"s2",
-"Nhưng sau ngày thắng lợi, triều đình đầy ghen ghét và nghi kỵ, nhiều công thần lần lượt bị hại. Nguyễn Trãi chán nản, lui về ở ẩn tại Côn Sơn."
-],
-[
-"s3",
-"Đến khi vua trẻ Lê Thái Tông mời ra giúp nước, ông mới quay lại triều đình, dù tuổi đã sáu mươi."
-],
-[
-"s4",
-"Bên cạnh Nguyễn Trãi có một người vợ lẽ nổi tiếng tài sắc: Nguyễn Thị Lộ. Tương truyền, hai người gặp nhau khi bà còn là cô gái bán chiếu, và đã đối đáp với nhau bằng thơ."
-],
-[
-"s5",
-"Vua Thái Tông mến tài, phong bà làm Lễ nghi học sĩ, dạy dỗ các cung nữ."
-],
-[
-"s6",
-"Một người phụ nữ được ra vào cung cấm, lại thân cận với nhà vua: điều đó khiến không ít người trong hậu cung để ý."
-],
-[
-"s7",
-"Mùa thu năm 1442, vua Thái Tông đi duyệt quân ở Chí Linh, tiện đường ghé thăm Nguyễn Trãi ở Côn Sơn."
-],
-[
-"s8",
-"Trên đường về kinh, đoàn thuyền dừng lại ở Lệ Chi Viên, nghĩa là Vườn Vải, nay thuộc tỉnh Bắc Ninh."
-],
-[
-"s9",
-"Theo sử cũ, đêm ấy nhà vua thức suốt đêm, bên cạnh có Nguyễn Thị Lộ. Rồi vua đột ngột qua đời."
-],
-[
-"s10",
-"Triều đình lập tức kết tội Nguyễn Thị Lộ đã hại vua. Nguyễn Trãi bị bắt. Không có một cuộc điều tra kỹ lưỡng nào."
-],
-[
-"s11",
-"Chỉ mười hai ngày sau, ông cùng cả ba họ nhà mình phải nhận bản án nặng nhất thời bấy giờ: tru di tam tộc."
-],
-[
-"s12",
-"Người từng viết nên áng văn tuyên bố nền độc lập của đất nước, cuối cùng lại ra đi như một tội nhân."
-],
-[
-"s13",
-"Nhưng nhiều nhà sử học cho rằng Nguyễn Trãi chỉ là nạn nhân của một cuộc tranh giành ngôi báu. Người nối ngôi khi ấy là một hoàng tử mới một tuổi, và mẹ của cậu, bà phi Nguyễn Thị Anh, trở thành người nắm quyền."
-],
-[
-"s14",
-"Trước đó, một bà phi khác là Ngô Thị Ngọc Dao đang mang thai thì bị hãm hại, và tương truyền chính vợ chồng Nguyễn Trãi đã che chở, đưa bà đi lánh nạn."
-],
-[
-"s15",
-"Phải chăng có người muốn Nguyễn Trãi im lặng mãi mãi? Đến nay, chưa ai có câu trả lời chắc chắn."
-],
-[
-"s16",
-"Còn dân gian thì kể một cách khác: một con rắn trắng báo oán, đầu thai thành Thị Lộ để hại ba đời nhà ông."
-],
-[
-"s17",
-"Và câu chuyện có một cái kết bất ngờ. Đứa trẻ trong bụng bà phi năm ấy lớn lên, trở thành vua Lê Thánh Tông, một trong những vị vua giỏi nhất lịch sử Việt Nam."
-],
-[
-"s18",
-"Năm 1464, hai mươi hai năm sau vụ án, chính ông đã minh oan cho Nguyễn Trãi, và để lại câu thơ nổi tiếng: \"Ức Trai tâm thượng quang Khuê tảo\", nghĩa là tấm lòng Ức Trai sáng như sao Khuê."
-],
-[
-"s19",
-"Nhà vua còn cho tìm người con trai còn sống sót của Nguyễn Trãi để ban chức tước."
-],
-[
-"s20",
-"Năm 1980, UNESCO kỷ niệm sáu trăm năm ngày sinh Nguyễn Trãi và vinh danh ông là danh nhân văn hóa thế giới. Còn đêm ở vườn vải năm ấy thì vẫn là một trong những bí ẩn lớn nhất của lịch sử Việt Nam."
-],
-[
-"end",
-"Theo bạn, ai mới là người đứng sau vụ án Lệ Chi Viên? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
-]
-]
+ "vi": [
+  [
+   "op1",
+   "Xin chào các bạn. Tháng tám năm 1442, một vị vua mới hai mươi tuổi ghé nghỉ đêm tại một vườn vải bên sông. Sáng hôm sau, nhà vua không bao giờ tỉnh dậy nữa."
+  ],
+  [
+   "op2",
+   "Chỉ mười hai ngày sau, người bị kết tội lại chính là vị công thần đã giúp dựng nên cả triều đại: Nguyễn Trãi."
+  ],
+  [
+   "op3",
+   "Chuyện gì đã xảy ra trong đêm ấy ở Lệ Chi Viên?"
+  ],
+  [
+   "s1",
+   "Nguyễn Trãi là quân sư số một của Lê Lợi trong mười năm đánh đuổi quân Minh, và là người viết Bình Ngô đại cáo."
+  ],
+  [
+   "s2",
+   "Nhưng sau ngày thắng lợi, triều đình đầy ghen ghét và nghi kỵ, nhiều công thần lần lượt bị hại. Nguyễn Trãi chán nản, lui về ở ẩn tại Côn Sơn."
+  ],
+  [
+   "s3",
+   "Đến khi vua trẻ Lê Thái Tông mời ra giúp nước, ông mới quay lại triều đình, dù tuổi đã sáu mươi."
+  ],
+  [
+   "s4",
+   "Bên cạnh Nguyễn Trãi có một người vợ lẽ nổi tiếng tài sắc: Nguyễn Thị Lộ. Tương truyền, hai người gặp nhau khi bà còn là cô gái bán chiếu, và đã đối đáp với nhau bằng thơ."
+  ],
+  [
+   "s5",
+   "Vua Thái Tông mến tài, phong bà làm Lễ nghi học sĩ, dạy dỗ các cung nữ."
+  ],
+  [
+   "s6",
+   "Một người phụ nữ được ra vào cung cấm, lại thân cận với nhà vua: điều đó khiến không ít người trong hậu cung để ý."
+  ],
+  [
+   "s7",
+   "Mùa thu năm 1442, vua Thái Tông đi duyệt quân ở Chí Linh, tiện đường ghé thăm Nguyễn Trãi ở Côn Sơn."
+  ],
+  [
+   "s8",
+   "Trên đường về kinh, đoàn thuyền dừng lại ở Lệ Chi Viên, nghĩa là Vườn Vải, nay thuộc tỉnh Bắc Ninh."
+  ],
+  [
+   "s9",
+   "Theo sử cũ, đêm ấy nhà vua thức suốt đêm, bên cạnh có Nguyễn Thị Lộ. Rồi vua đột ngột qua đời."
+  ],
+  [
+   "s10",
+   "Triều đình lập tức kết tội Nguyễn Thị Lộ đã hại vua. Nguyễn Trãi bị bắt. Không có một cuộc điều tra kỹ lưỡng nào."
+  ],
+  [
+   "s11",
+   "Chỉ mười hai ngày sau, ông cùng cả ba họ nhà mình phải nhận bản án nặng nhất thời bấy giờ: tru di tam tộc."
+  ],
+  [
+   "s12",
+   "Người từng viết nên áng văn tuyên bố nền độc lập của đất nước, cuối cùng lại ra đi như một tội nhân."
+  ],
+  [
+   "s13",
+   "Nhưng nhiều nhà sử học cho rằng Nguyễn Trãi chỉ là nạn nhân của một cuộc tranh giành ngôi báu. Người nối ngôi khi ấy là một hoàng tử mới một tuổi, và mẹ của cậu, bà phi Nguyễn Thị Anh, trở thành người nắm quyền."
+  ],
+  [
+   "s14",
+   "Trước đó, một bà phi khác là Ngô Thị Ngọc Dao đang mang thai thì bị hãm hại, và tương truyền chính vợ chồng Nguyễn Trãi đã che chở, đưa bà đi lánh nạn."
+  ],
+  [
+   "s15",
+   "Phải chăng có người muốn Nguyễn Trãi im lặng mãi mãi? Đến nay, chưa ai có câu trả lời chắc chắn."
+  ],
+  [
+   "s16",
+   "Còn dân gian thì kể một cách khác: một con rắn trắng báo oán, đầu thai thành Thị Lộ để hại ba đời nhà ông."
+  ],
+  [
+   "s17",
+   "Và câu chuyện có một cái kết bất ngờ. Đứa trẻ trong bụng bà phi năm ấy lớn lên, trở thành vua Lê Thánh Tông, một trong những vị vua giỏi nhất lịch sử Việt Nam."
+  ],
+  [
+   "s18",
+   "Năm 1464, hai mươi hai năm sau vụ án, chính ông đã minh oan cho Nguyễn Trãi, và để lại câu thơ nổi tiếng: \"Ức Trai tâm thượng quang Khuê tảo\", nghĩa là tấm lòng Ức Trai sáng như sao Khuê."
+  ],
+  [
+   "s19",
+   "Nhà vua còn cho tìm người con trai còn sống sót của Nguyễn Trãi để ban chức tước."
+  ],
+  [
+   "s20",
+   "Năm 1980, UNESCO kỷ niệm sáu trăm năm ngày sinh Nguyễn Trãi và vinh danh ông là danh nhân văn hóa thế giới. Còn đêm ở vườn vải năm ấy thì vẫn là một trong những bí ẩn lớn nhất của lịch sử Việt Nam."
+  ],
+  [
+   "end",
+   "Theo bạn, ai mới là người đứng sau vụ án Lệ Chi Viên? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
+  ]
+ ],
+ "en": [
+  [
+   "op1",
+   "Hello everyone. This is a true mystery from Vietnam. In August 1442, a king just twenty years old stopped for the night at a lychee garden by a river. By morning, he was dead."
+  ],
+  [
+   "op2",
+   "Only twelve days later, the man condemned for it was the very hero who had helped found the dynasty: Nguyễn Trãi."
+  ],
+  [
+   "op3",
+   "So what really happened that night in the Lychee Garden?"
+  ],
+  [
+   "s1",
+   "Nguyễn Trãi was the chief strategist of Lê Lợi, who drove Ming China out of Vietnam after ten years of war. He also wrote the great proclamation of the country's independence."
+  ],
+  [
+   "s2",
+   "But after the victory, the court filled with jealousy and suspicion, and one war hero after another was brought down. Disheartened, Nguyễn Trãi withdrew to the hills of Côn Sơn."
+  ],
+  [
+   "s3",
+   "Only when the young king Lê Thái Tông called him back did he return to court, at the age of sixty."
+  ],
+  [
+   "s4",
+   "At his side was a concubine famous for her beauty and her learning: Nguyễn Thị Lộ. Legend says they met when she was a girl selling sleeping mats, and that they answered each other in verse."
+  ],
+  [
+   "s5",
+   "The king admired her talent and made her Lady of Rites, a teacher to the women of the palace."
+  ],
+  [
+   "s6",
+   "A woman free to enter the inner palace, and close to the king himself. In the royal household, that did not go unnoticed."
+  ],
+  [
+   "s7",
+   "In the autumn of 1442, the king went to review his troops, and on the way he visited Nguyễn Trãi at Côn Sơn."
+  ],
+  [
+   "s8",
+   "On the journey home, the royal boats stopped at Lệ Chi Viên, the Lychee Garden, in what is now Bắc Ninh province."
+  ],
+  [
+   "s9",
+   "According to the old chronicles, the king stayed awake all night, with Nguyễn Thị Lộ beside him. Then, suddenly, he died."
+  ],
+  [
+   "s10",
+   "The court at once accused her of killing the king. Nguyễn Trãi was arrested. There was no real investigation."
+  ],
+  [
+   "s11",
+   "Only twelve days later, he received the harshest sentence of the age: death for himself and for three generations of his family."
+  ],
+  [
+   "s12",
+   "The man who wrote his nation's declaration of independence left this world as a criminal."
+  ],
+  [
+   "s13",
+   "But many historians believe he was the victim of a struggle for the throne. The new king was a one-year-old prince, and his mother, the consort Nguyễn Thị Anh, now held power."
+  ],
+  [
+   "s14",
+   "Earlier, another consort, Ngô Thị Ngọc Dao, had been plotted against while pregnant, and it is said that Nguyễn Trãi and his wife took her to safety."
+  ],
+  [
+   "s15",
+   "Did someone want Nguyễn Trãi silenced forever? To this day, no one knows for sure."
+  ],
+  [
+   "s16",
+   "Folklore tells it another way: a white snake, seeking revenge, was reborn as Thị Lộ to ruin three generations of his family."
+  ],
+  [
+   "s17",
+   "And the story has an unexpected ending. The child that consort was carrying grew up to become Lê Thánh Tông, one of the greatest kings in Vietnamese history."
+  ],
+  [
+   "s18",
+   "In 1464, twenty-two years after the case, he cleared Nguyễn Trãi's name, and left a famous line of verse: the heart of Ức Trai, his pen name, shines like the Khuê star."
+  ],
+  [
+   "s19",
+   "He also found Nguyễn Trãi's one surviving son and gave him an official post."
+  ],
+  [
+   "s20",
+   "In 1980, UNESCO honored Nguyễn Trãi as a great figure of world culture, six hundred years after his birth. And that night in the lychee garden remains one of the great mysteries of Vietnamese history."
+  ],
+  [
+   "end",
+   "Who do you think was really behind the Lychee Garden case? Tell me in the comments. Thanks for watching, and see you next time!"
+  ]
+ ]
 }

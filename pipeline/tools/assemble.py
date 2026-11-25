@@ -12,8 +12,9 @@ sids = [k for k in C0 if k not in drop]
 T = {}; C = {}; t = 0.0; buf = []; SR = 44100
 for i, sid in enumerate(sids):
     w = wave.open(f'{V}/{lang}_{sid}.wav'); x = np.frombuffer(w.readframes(w.getnframes()), '<i2'); dur = len(x) / SR
-    T[sid] = round(t, 3); T[sid + '_end'] = round(t + (T0[sid + '_end'] - T0[sid]), 3)
-    C[sid] = [[c, round(s - T0[sid] + t, 3)] for c, s in C0[sid]]
+    base = C0[sid][0][1]  # mốc bắt đầu gốc của đoạn (T0['end'] bị ghi đè bằng tổng thời lượng nên không dùng được)
+    T[sid] = round(t, 3); T[sid + '_end'] = round(t + (T0[sid + '_end'] - base), 3)
+    C[sid] = [[c, round(s - base + t, 3)] for c, s in C0[sid]]
     g = float(kv.get(sid, gdef)); buf.append(x)
     if i < len(sids) - 1: buf.append(np.zeros(int(g * SR), '<i2')); t += dur + g
     else: t += dur

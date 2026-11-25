@@ -6,14 +6,15 @@ Dùng: python3 prep.py <thư_mục_tập> <tempo> [khóa=đoạn:cụm_từ ...]
 import json, sys, os, re, glob, base64, subprocess
 import cv2
 D = sys.argv[1]; TEMPO = sys.argv[2]; P = os.path.dirname(os.path.abspath(__file__)) + '/..'
-d = json.load(open(f'{D}/vo/T_vi.json')); T = d['T']; C = d['chars']
+LG = os.environ.get('LG', 'vi'); VO = 'vo' if LG == 'vi' else 'vo_' + LG
+d = json.load(open(f'{D}/{VO}/T_{LG}.json')); T = d['T']; C = d['chars']
 def at(seg, ph):
     s = ''.join(c for c, _ in C[seg]); i = s.find(ph); assert i >= 0, (seg, ph); return C[seg][i][1]
 T['endS'] = C['end'][0][1]; T['endS_end'] = T['end_end']
 for a in sys.argv[3:]:
     k, v = a.split('=', 1); seg, ph = v.split(':', 1); T[k] = at(seg, ph)
-json.dump(d, open(f'{D}/vo/T_vi.json', 'w'), ensure_ascii=False)
-subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{D}/vo/vo_vi.wav', '-af', f'atempo={TEMPO}', f'{D}/vo/vo_vi_f.wav'], check=True)
+json.dump(d, open(f'{D}/{VO}/T_{LG}.json', 'w'), ensure_ascii=False)
+subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{D}/{VO}/vo_{LG}.wav', '-af', f'atempo={TEMPO}', f'{D}/{VO}/vo_{LG}_f.wav'], check=True)
 R = f'{D}/r'; os.makedirs(R + '/fonts', exist_ok=True)
 for f in glob.glob(f'{P}/leloi/r/fonts/*'): subprocess.run(['cp', f, R + '/fonts/'])
 for f in ['fonts.css', 'comp5.html']: subprocess.run(['cp', f'{P}/leloi/r/{f}', R + '/'])
