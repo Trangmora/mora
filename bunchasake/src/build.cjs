@@ -10,6 +10,15 @@ const ROOT = path.join(__dirname, ".."), SITE = path.join(ROOT, "site"), CONTENT
 const ORIGIN = "https://bunchasake.com", MAIL = "hello@bunchasake.com";
 const TODAY = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 const PUBLISHED = "2026-11-11";
+const pubOf = d => /^\d{4}-\d{2}-\d{2}$/.test(d?.date || "") ? d.date : PUBLISHED;   /* ngày đăng riêng của từng bài: front matter "date: YYYY-MM-DD" */
+const maxd = (...a) => a.filter(Boolean).sort().pop();
+/* Ngày sửa cuối của từng file nội dung lấy từ git (file đang sửa dở = hôm nay) → dateModified và lastmod đúng thật, không đổi theo ngày dựng */
+const SRC_DATE = (() => { const m = {}; try {
+  const cp = require("child_process"), root = path.join(__dirname, "..");
+  let cur = ""; for (const line of cp.execSync("git log --format=@%cs --name-only -- content src/home.html", { cwd: root, encoding: "utf8", maxBuffer: 64e6 }).split("\n")) { if (line.startsWith("@")) cur = line.slice(1); else if (line && !m[path.basename(line)]) m[path.basename(line)] = cur; }
+  for (const line of cp.execSync("git status --porcelain -- content src/home.html", { cwd: root, encoding: "utf8" }).split("\n")) if (line.trim()) m[path.basename(line.slice(3).trim())] = TODAY;
+} catch {} return m; })();
+const modOf = file => SRC_DATE[file] || TODAY;
 const INDEXNOW_KEY = "b7c1e0d94a6f4e2f9d3a58c06e1f72ab";
 const LANGS = ["en", "vi"];
 const CSS_V = require("crypto").createHash("md5").update(fs.readFileSync(path.join(__dirname, "lp.css"))).digest("hex").slice(0, 8);
@@ -72,7 +81,9 @@ for (const f of fs.existsSync(CONTENT + "/blog") ? fs.readdirSync(CONTENT + "/bl
 }
 const landingKeys = [...LANDING_ORDER.filter(k => landing[k]), ...Object.keys(landing).filter(k => !LANDING_ORDER.includes(k))];
 const BLOG_ORDER = ["how-to-get-more-nail-clients", "nail-salon-social-media-content-ideas", "nail-salon-instagram-content-ideas", "google-business-profile-for-nail-salons", "how-to-market-a-vietnamese-restaurant", "restaurant-instagram-content-ideas", "how-vietnamese-business-owners-abroad-can-build-a-brand", "bilingual-marketing-for-vietnamese-businesses-abroad", "how-vietnamese-brands-can-enter-european-markets", "ai-content-calendar-for-small-business"];
-const blogKeys = [...BLOG_ORDER.filter(k => blog[k]), ...Object.keys(blog).filter(k => !BLOG_ORDER.includes(k))];
+const postPub = k => pubOf(blog[k].vi || blog[k].en), postMod = k => maxd(postPub(k), ...["en", "vi"].filter(l => blog[k][l]).map(l => modOf(`${k}.${l}.html`)));
+const datedKeys = Object.keys(blog).filter(k => postPub(k) > PUBLISHED).sort((a, b) => postPub(b).localeCompare(postPub(a)) || a.localeCompare(b));   /* bài có ngày đăng riêng: mới nhất lên đầu */
+const blogKeys = [...datedKeys, ...BLOG_ORDER.filter(k => blog[k] && !datedKeys.includes(k)), ...Object.keys(blog).filter(k => !BLOG_ORDER.includes(k) && !datedKeys.includes(k))];
 
 /* ---------- URL ---------- */
 const pre = l => l === "vi" ? "/vi" : "";
@@ -94,7 +105,7 @@ const EXT = {   // liên kết ngoài được phép dùng trong bài (chỉ tra
   "eu-access2markets": "https://trade.ec.europa.eu/access-to-markets/", "eu-youreurope": "https://europa.eu/youreurope/business/",
   "euipo": "https://www.euipo.europa.eu/", "wipo-madrid": "https://www.wipo.int/madrid/en/", "vietrade": "https://www.vietrade.gov.vn/",
   "sba": "https://www.sba.gov/", "ftc-business": "https://www.ftc.gov/business-guidance",
-  "fda-cosmetics": "https://www.fda.gov/cosmetics", "eu-cosmetics": "https://single-market-economy.ec.europa.eu/sectors/cosmetics_en", "linkedin-help": "https://www.linkedin.com/help/linkedin", "wcag": "https://www.w3.org/WAI/standards-guidelines/wcag/", "pagespeed": "https://pagespeed.web.dev/", "etsy-sellers": "https://www.etsy.com/seller-handbook",
+  "fda-cosmetics": "https://www.fda.gov/cosmetics", "eu-cosmetics": "https://single-market-economy.ec.europa.eu/sectors/cosmetics_en", "linkedin-help": "https://www.linkedin.com/help/linkedin", "wcag": "https://www.w3.org/WAI/standards-guidelines/wcag/", "pagespeed": "https://pagespeed.web.dev/", "google-ai-guide": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide", "google-ai-features": "https://developers.google.com/search/docs/appearance/ai-features", "google-ai-controls": "https://blog.google/products-and-platforms/products/search/new-opportunities-control-and-insights-for-website-owners/", "geo-paper": "https://arxiv.org/abs/2311.09735", "sej-geo-seo": "https://searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026", "search-console": "https://search.google.com/search-console/about", "claude": "https://claude.ai/", "apify": "https://apify.com/", "morapost": "https://www.morapost.com/", "youtube-8-steps": "https://www.youtube.com/watch?v=NIAJnaZuyxw", "etsy-sellers": "https://www.etsy.com/seller-handbook",
 };
 const mailto = subj => `mailto:${MAIL}${subj ? "?subject=" + encodeURIComponent(subj) : ""}`;
 function resolve(html, l, where) {
@@ -239,7 +250,7 @@ function renderLanding(k, l) {
 `;
   h += `</main>\n` + foot(l, d.cta ? { h2: R(d.cta.h2), p: R(d.cta.p), subject: d.cta.subject } : null);
   write(urls[l] + "index.html", h);
-  if (l === "en" || !urls.en) pages.push({ urls, lastmod: TODAY, priority: k.startsWith("social-media-automation-for") ? "0.7" : "0.9" });
+  if (l === "en" || !urls.en) pages.push({ urls, lastmod: maxd(...["en", "vi"].filter(x => landing[k][x]).map(x => modOf(`${k}.${x}.json`))), priority: k.startsWith("social-media-automation-for") ? "0.7" : "0.9" });
   return { title: d.title, desc: d.description, words: words(h.replace(/<header[\s\S]*?<\/header>|<footer[\s\S]*?<\/footer>|<script[\s\S]*?<\/script>/g, "")) };
 }
 
@@ -247,6 +258,7 @@ function renderLanding(k, l) {
 const CTA_LABEL = { "nail-salon-brand-marketing": { en: "Branding for nail salons", vi: "Thương hiệu cho tiệm nail" }, "restaurant-brand-marketing": { en: "Branding for restaurants", vi: "Thương hiệu cho nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Branding for small businesses", vi: "Thương hiệu cho doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "For brands going global", vi: "Cho thương hiệu ra quốc tế" }, "social-media-automation": { en: "AI social media automation", vi: "AI tự động hoá social media" } };
 const CAT = { "nail-salon-brand-marketing": { en: "Nail salons", vi: "Tiệm nail" }, "restaurant-brand-marketing": { en: "Restaurants", vi: "Nhà hàng" }, "vietnamese-diaspora-brand-marketing": { en: "Small business", vi: "Doanh nghiệp nhỏ" }, "international-brand-marketing-vietnam": { en: "Going international", vi: "Ra quốc tế" }, "social-media-automation": { en: "Automation", vi: "Automation" } };
 const BCATS = [
+  { id: "automation", en: "AI Automation", vi: "AI Automation", se: "ai-automation", sv: "ai-automation", de: "Guides on marketing with AI: AI automation, SEO and GEO, content calendars, social media automation, AI assistants and chatbots for growing businesses.", dv: "Hướng dẫn marketing bằng AI: AI automation là gì, SEO và GEO, lịch nội dung AI, tự động hoá mạng xã hội, trợ lý AI và chatbot cho doanh nghiệp đang lớn." },
   { id: "brand-stories", en: "Brand stories", vi: "Câu chuyện thương hiệu", se: "brand-stories", sv: "cau-chuyen-thuong-hieu", de: "Real brand stories: how chains and growing brands built their positioning, identity and community, and what you can learn from them.", dv: "Câu chuyện thương hiệu có thật: các chuỗi và thương hiệu đang mở rộng đã định vị, xây nhận diện và cộng đồng thế nào, và bài học cho bạn." },
   { id: "process", en: "How we work", vi: "Cách làm", se: "how-we-work", sv: "cach-lam", de: "Guides on the foundations of a brand: listening, positioning, identity, reach, community and crisis communication.", dv: "Hướng dẫn về nền tảng của một thương hiệu: lắng nghe, định vị, nhận diện, phủ sóng, cộng đồng và xử lý khủng hoảng." },
   { id: "nail-salons", en: "Nail salons", vi: "Tiệm nail", se: "nail-salons", sv: "tiem-nail", de: "Guides on branding, content, social media and bookings for nail salon owners.", dv: "Hướng dẫn về thương hiệu, content, social media và lượng khách cho chủ tiệm nail." },
@@ -257,7 +269,6 @@ const BCATS = [
   { id: "startups", en: "Startups & tech", vi: "Startup & công nghệ", se: "startups", sv: "startup-cong-nghe", de: "Guides on branding, positioning, websites and founder content for startups and tech companies.", dv: "Hướng dẫn về thương hiệu, định vị, website và content của nhà sáng lập cho startup và công ty công nghệ." },
   { id: "small-business", en: "Small business", vi: "Doanh nghiệp nhỏ", se: "small-business", sv: "doanh-nghiep-nho", de: "Guides on building a brand and marketing a small business, at home or abroad.", dv: "Hướng dẫn xây thương hiệu và làm marketing cho doanh nghiệp nhỏ, trong nước hay ở nước ngoài." },
   { id: "international", en: "Going international", vi: "Ra quốc tế", se: "international", sv: "ra-quoc-te", de: "Guides for brands entering new markets: positioning, localization and content.", dv: "Hướng dẫn cho thương hiệu bước vào thị trường mới: định vị, bản địa hoá và content." },
-  { id: "automation", en: "AI Automation", vi: "AI Automation", se: "ai-automation", sv: "ai-automation", de: "Guides on marketing with AI: AI content calendars, social media automation, AI assistants and chatbots for growing businesses.", dv: "Hướng dẫn marketing bằng AI: lịch nội dung AI, tự động hoá mạng xã hội, trợ lý AI và chatbot cho doanh nghiệp đang lớn." },
 ];
 const BCAT = Object.fromEntries(BCATS.map(c => [c.id, c]));
 const LANDING_CAT = { "nail-salon-brand-marketing": "nail-salons", "restaurant-brand-marketing": "restaurants", "vietnamese-diaspora-brand-marketing": "small-business", "international-brand-marketing-vietnam": "international" };
@@ -270,7 +281,7 @@ function catbar(l, current) {
 }
 const BIMG = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, "../content/blog-images.json"), "utf8")); } catch { return {}; } })();
 const bimg = k => BIMG[k] && fs.existsSync(path.join(SITE, `img/blog/${k}.jpg`)) ? BIMG[k] : null;
-const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time></span></a>`; };
+const prow = (k, l) => { const d = blog[k][l]; return `<a class="prow${bimg(k) ? " has-img" : ""}" href="${U.blog(k, l)}">${bimg(k) ? `<img class="pthumb" src="/img/blog/${k}-s.jpg" width="480" height="300" alt="" loading="lazy" decoding="async">` : ""}<span class="ptxt"><h3>${esc(d.h1)}</h3><p>${esc(d.description || d.lead || "")}</p><time datetime="${pubOf(d)}">${fmtDate(l, pubOf(d))}</time></span></a>`; };
 function renderCategory(c, l) {
   const t = T[l], C = BCAT[c], urls = { en: U.cat(c, "en"), vi: U.cat(c, "vi") }, list = blogKeys.filter(k => blog[k][l] && catOf(blog[k][l]) === c);
   if (!list.length) return;
@@ -286,7 +297,7 @@ function renderCategory(c, l) {
 </main>
 ` + foot(l, null);
   write(urls[l] + "index.html", h);
-  if (l === "en") pages.push({ urls, lastmod: TODAY, priority: "0.6" });
+  if (l === "en") pages.push({ urls, lastmod: maxd(...list.map(postMod)), priority: "0.6" });
 }
 const fmtDate = (l, iso) => { const [y, m, d] = iso.split("-").map(Number); return l === "vi" ? `${d}/${m}/${y}` : `${d} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][m - 1]} ${y}`; };
 function renderPost(k, l) {
@@ -301,10 +312,13 @@ function renderPost(k, l) {
   const lk = d.landing && landing[d.landing]?.[l] ? d.landing : null; if (d.landing && !lk) W(`${where}: landing "${d.landing}" không có`);
   const ck = catOf(d), cat = BCAT[ck][l], wc = words(body), mins = Math.max(3, Math.round(wc / (l === "vi" ? 260 : 220)));
   const bc = [[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, null]];
+  const pub = pubOf(d), mod = maxd(pub, modOf(`${k}.${l}.html`));
+  const vid = d.video ? { src: d.video, poster: d.video_poster || (bimg(k) ? `/img/blog/${k}.jpg` : "/og.png"), yt: d.video_youtube || "", dur: d.video_duration || "", date: d.video_date || pub, name: d.video_title || d.h1, desc: d.video_desc || d.description, lang: d.video_lang || l } : null;
   const ldjson = [
-    { "@context": "https://schema.org", "@type": "BlogPosting", headline: d.h1, description: d.description, inLanguage: l, datePublished: PUBLISHED, dateModified: TODAY, mainEntityOfPage: ORIGIN + urls[l], image: ORIGIN + (bimg(k) ? `/img/blog/${k}.jpg` : "/og.png"), author: { "@type": "Organization", name: "Bunchasake", url: ORIGIN + "/" }, publisher: ORG, keywords: d.keyword, wordCount: wc },
+    { "@context": "https://schema.org", "@type": "BlogPosting", headline: d.h1, description: d.description, inLanguage: l, datePublished: pub, dateModified: mod, mainEntityOfPage: ORIGIN + urls[l], image: ORIGIN + (bimg(k) ? `/img/blog/${k}.jpg` : "/og.png"), author: { "@type": "Organization", name: "Bunchasake", url: ORIGIN + "/" }, publisher: ORG, keywords: d.keyword, wordCount: wc },
     crumbLd([[t.home, U.home(l)], [t.blog, U.blogindex(l)], [cat, U.cat(ck, l)], [d.h1, urls[l]]]),
     ...(faq.length ? [faqLd(faq)] : []),
+    ...(vid ? [{ "@context": "https://schema.org", "@type": "VideoObject", name: vid.name, description: vid.desc, thumbnailUrl: [ORIGIN + vid.poster], uploadDate: vid.date, ...(vid.dur ? { duration: vid.dur } : {}), contentUrl: ORIGIN + vid.src, ...(vid.yt ? { embedUrl: `https://www.youtube.com/embed/${vid.yt}` } : {}), inLanguage: vid.lang, publisher: { "@id": ORIGIN + "/#org" } }] : []),
   ];
   const others = blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) === ck).concat(blogKeys.filter(x => x !== k && blog[x][l] && catOf(blog[x][l]) !== ck)).slice(0, 4);
   const h = head({ l, title: d.title.includes("Bunchasake") ? d.title : d.title, desc: d.description, urls, type: "article", ldjson, cls: "blog", image: bimg(k) ? `/img/blog/${k}.jpg` : "/og.png" }) + "\n" + nav(l, urls, "blog", ck) + "\n" + catbar(l, ck) + `
@@ -315,8 +329,9 @@ function renderPost(k, l) {
       <p class="kicker cap"><span class="dot" aria-hidden="true"></span>${esc(cat)}</p>
       <h1>${esc(d.h1)}</h1>
       ${d.lead ? `<p class="lead">${esc(d.lead)}</p>` : ""}
-      <p class="byline">${t.byEd} · ${t.published} <time datetime="${PUBLISHED}">${fmtDate(l, PUBLISHED)}</time> · ${mins} ${t.minRead}</p>
-    </header>${bimg(k) ? `
+      <p class="byline">${t.byEd} · ${t.published} <time datetime="${pub}">${fmtDate(l, pub)}</time>${mod > pub ? ` · ${t.updated} <time datetime="${mod}">${fmtDate(l, mod)}</time>` : ""} · ${mins} ${t.minRead}</p>
+    </header>${vid ? `
+    <figure class="post-hero post-video"><video controls preload="none" playsinline poster="${vid.poster}" width="1920" height="1080"><source src="${vid.src}" type="video/mp4"></video>${vid.yt ? `<figcaption>${l === "vi" ? "Video" : "Video (in Vietnamese)"}: <a href="https://www.youtube.com/watch?v=${vid.yt}" target="_blank" rel="noopener">${esc(vid.name)}</a> · YouTube</figcaption>` : ""}</figure>` : bimg(k) ? `
     <figure class="post-hero"><img src="/img/blog/${k}.jpg" width="1600" height="900" alt="${esc(d.h1)}" fetchpriority="high"></figure>` : ""}
     <div class="post-body">
       ${d.takeaways.length ? `<div class="takeaways"><b class="cap">${t.takeaways}</b><ul>${d.takeaways.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
@@ -331,7 +346,7 @@ function renderPost(k, l) {
 </main>
 ` + foot(l, null);
   write(urls[l] + "index.html", h);
-  if (l === "en" || !urls.en) pages.push({ urls, lastmod: TODAY, priority: "0.6" });
+  if (l === "en" || !urls.en) pages.push({ urls, lastmod: postMod(k), priority: "0.6" });
   return { title: d.title, desc: d.description, words: wc, faq: faq.length, takeaways: d.takeaways.length };
 }
 function renderBlogIndex(l) {
@@ -346,7 +361,7 @@ function renderBlogIndex(l) {
 </main>
 ` + foot(l, null);
   write(urls[l] + "index.html", h);
-  if (l === "en") pages.push({ urls, lastmod: TODAY, priority: "0.7" });
+  if (l === "en") pages.push({ urls, lastmod: maxd(...list.map(postMod)), priority: "0.7" });
 }
 
 /* ---------- Trang pháp lý (chỉ tiếng Anh) ---------- */
@@ -406,7 +421,7 @@ function renderLegal(key) {
 </main>
 ` + foot(l, null);
   write(d.slug + "index.html", h);
-  pages.push({ urls, lastmod: TODAY, priority: "0.3" });
+  pages.push({ urls, lastmod: PUBLISHED, priority: "0.3" });
 }
 function render404() {
   const l = "en", t = T.en, urls = { en: "/404.html" };
@@ -457,7 +472,7 @@ async function renderHome(browser, l) {
   html = html.replace(/const EN = \{\n[\s\S]*?\n\};/, "const EN = {};").replace(/const EN_ATTR = \{\n[\s\S]*?\n\};/, "const EN_ATTR = {};");   /* trang dựng sẵn không dùng từ điển: bỏ để HTML nhẹ hơn */
   if (l === "en") html = enAnchors(html);
   write(urls[l] + "index.html", html);
-  if (l === "en") pages.unshift({ urls, lastmod: TODAY, priority: "1.0", xd: "vi" });
+  if (l === "en") pages.unshift({ urls, lastmod: modOf("home.html"), priority: "1.0", xd: "vi" });
 }
 
 /* ---------- Tệp cho máy tìm kiếm & AI ---------- */

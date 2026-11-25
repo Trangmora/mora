@@ -6,26 +6,27 @@ file format below must be followed exactly. Write only the files you were assign
 
 ## 1. Who Bunchasake is (the only facts you may state about the company)
 
-- **Bunchasake** is a brand builder and growth partner. Voice is always "we" / "chúng tôi" (never "I", never a named person).
-- A Vietnamese studio working between **Vietnam and Italy**, online with clients anywhere. Working languages: **Vietnamese and English**.
-- Promise: "You run the business. We grow the brand." / "Bạn lo vận hành. Chúng tôi tăng trưởng thương hiệu."
-- Belief: people do not buy a product, they buy the story behind it. "You have the story. We turn it into a brand."
-- Who we work with: (1) Vietnamese business owners abroad (nail salons, restaurants, other owner-run businesses), (2) Vietnamese brands that want to go international.
-- **Process, six steps, the client approves after each step:**
-  1. Listening / Lắng nghe: a 60-minute conversation to hear the founder's story: why they started, what they believe in, and what the founder really wants from the business.
-  2. Positioning / Định vị: who the brand is, who it is for, how it differs; in-depth competitor analysis to see where the client stands and which direction the brand should take next, always based on the founder's wishes; the brand story every channel will tell.
-  3. Identity / Nhận diện: we work directly with the founder and the person in charge of the brand to shape the brand they want (logo, colours, type, voice), agree on each part together, and pack it into guidelines for the long term.
-  4. Reach / Phủ sóng: once customers start to recognise the brand, we take it where customers already go: website, social media (Facebook, Instagram, TikTok, YouTube, Threads, LinkedIn, Zalo, Pinterest) and the media channels they follow. If the client already has channels, we read the channel data, customer behaviour and past campaign results, then advise on a strategy for new campaigns.
-  5. Community / Cộng đồng: a brand that grows without a community is not yet successful; repeat purchases from a good community save sales and marketing spend. We help the client build their community on the platforms their customers prefer, for a loyal customer base.
-  6. Crisis communication / Xử lý khủng hoảng: every brand meets a communication crisis at some point. Our team studies and handles communication crises, keeps the impact and risk to the brand as small as possible, and trains the client's team to respond as communication professionals would.
-- **Packages:** Start (new business: lean positioning, logo/colours/type, business card, avatar, post templates), Build (all six steps, brand story and voice, brand guidelines, website and key touchpoints), Refresh (audit the current brand, reposition, refresh identity, update touchpoints in use). The quote comes after the first conversation.
-- **Add-on: Social Media Automation, built for you.** We set up the system; the client's own team runs Facebook, TikTok and Instagram with it. Five parts: (1) your own AI assistant trained on the brand voice, (2) a 30-day content calendar, (3) AI drafts, you approve, (4) posts scheduled automatically, (5) automatic inbox replies to common questions.
-- How a project starts: the client emails **hello@bunchasake.com**, we read their story and prepare questions, a 60-minute conversation online or in person, then a proposal and quote.
-- AI does the fast work, people make the decisions.
+*Updated 25 Nov 2026: Bunchasake now sells AI automation for marketing. Older articles were re-angled to this; write every new page from the facts below.*
+
+- **Bunchasake** builds AI automation systems for marketing ("AI Automation for Marketing"). Voice is always "we" / "chúng tôi" (never "I"). The founder may be named only as "Trang, founder of Mora AI" and only when an article is about one of the published videos on the YouTube channel "Trang AI".
+- A team working between **Vietnam and Italy**, online with clients anywhere. Working languages: **Vietnamese and English**.
+- Promise: "You run the business. We run your marketing." / "Bạn lo vận hành. AI lo marketing."
+- Principle: AI does the heavy work, people approve what matters. The client's team just approves.
+- Who we work with: owners of small businesses and growing chains (nail salons, restaurants, shops, spas, service businesses), in Vietnam or abroad.
+- **Three machines. All three are available now ("taking clients"). Never write that any of them is "coming soon".**
+  1. Social media / Mạng xã hội: AI creates posts, images and videos in the brand voice and publishes them on 6 platforms (Facebook, Instagram, TikTok, YouTube, LinkedIn, X). The client approves posts once a week.
+  2. Messages and customer care / Tin nhắn và chăm sóc khách hàng: an AI chatbot answers messages 24/7 on Facebook, Instagram and other platforms, and looks after past customers. The client handles the tricky cases.
+  3. Brand community / Cộng đồng thương hiệu: AI and people work together to build and keep the community of regulars. The client approves the offers.
+- When we set a client up we also cover posts for the website, SEO optimisation and a weekly blog. Bunchasake itself runs on the same system.
+- Tool: **Morapost**, our own platform (built by Mora AI), schedules and publishes posts to social media.
+- **How it works, four steps:** (1) a 30-minute online call, (2) we build the system: train the AI in the brand voice, connect image, video and scheduling tools, (3) a 30-day trial: the client reviews, we adjust, (4) monthly operation: the system runs, we monitor and fine-tune.
+- **Packages (the only prices you may state):** Setup, a one-time fee quoted after the call: we build a Claude and AI agent system and train the client's team to run it. Grow, 999,000 VND a month: the client's team and the Bunchasake team run it together, 6 platforms, a weekly report. Chain, from 2,500,000 VND a month: we do it all (content, images, video, scheduling, posting), built for multi-branch chains. Monthly packages can be cancelled any time.
+- How a project starts: the client tells us what they need (the contact form on the home page or **hello@bunchasake.com**), then the 30-minute call.
 - **Real work (11 brands, Vietnam and Italy).** You may name these as brands we have worked with, with their sector only:
   Chop Chop (restaurant), Borgo Villa Nemec (villa, Italy), Impact Investments (investment, Italy), Viet My Clean Home (home services, Hanoi),
   Bác Sĩ Ánh (healthcare, personal brand), Canasto de Flores (flowers, landscaping), Lạc Hồng (construction machinery), Talk2TheTop (podcast),
   NA-VI Living (hospitality), Vestra Place (coworking), Vina KTV (audio equipment).
+- Every blog article ends (before the FAQ) with the section `<h2>Bunchasake giúp bạn thế nào</h2>` / `<h2>How Bunchasake helps</h2>`; copy that paragraph from a recent article such as `what-is-ai-marketing-automation` so the wording stays identical.
 
 ## 1b. Audience framing for blog articles
 
@@ -34,8 +35,8 @@ Blog articles speak generally to owners ("your salon", "your restaurant", "your 
 ## 2. Hard rules (a page that breaks these will be rejected)
 
 - **Never invent facts about Bunchasake:** no client results, numbers, percentages, testimonials, prices, timelines, team size, years of experience, awards, offices, or clients in a specific country/industry beyond the list above. We have **no nail salon client** to cite. Do not write "we helped X salons".
-- **Services we do NOT sell, so never promise them:** running ads, SEO/Google Business Profile management as a service, posting or community management done daily on the client's behalf, influencer/KOL booking, photo or video shoots. Articles may *teach* the reader how to do these things themselves; landing pages must only offer what section 1 lists.
-- **No fabricated statistics or sources.** No "studies show", no "X% of customers". If you need to support a point, use reasoning or a concrete everyday example. Do not cite statistics from, or type URLs of, external websites (see "External links" in section 3 for the only outbound links allowed).
+- **Services we do NOT sell, so never promise them:** running paid ads, Google Business Profile management, influencer/KOL booking, on-location photo or video shoots. Articles may *teach* the reader how to do these things themselves; landing pages must only offer what section 1 lists.
+- **No fabricated statistics or sources.** No "studies show", no "X% of customers". If you need to support a point, use reasoning or a concrete everyday example. Do not cite statistics from, or type URLs of, external websites (see "External links" in section 3 for the only outbound links allowed). The one exception: a fact you have read yourself on a source page that has an `{{ext:KEY}}` entry (a brand story source, a Google guide, a research paper) may be stated with that link, dated, and without exaggeration.
 - Advice must be practical, specific and safe: correct for a small-business owner in the US, Canada, Australia or Europe. When platform features may vary or change, say so in plain words rather than guessing details.
 - No keyword stuffing. Use the primary keyword in the title, H1, first paragraph and one H2, then write naturally with related phrases.
 - Plain, warm, direct language. Short paragraphs. No hype words ("revolutionary", "game-changing", "unlock", "skyrocket"). No emoji. No em dashes; use commas, periods or colons.
@@ -141,6 +142,15 @@ Each batch 3 article has an extra frontmatter line `category: <value>` placed ri
 
 Extra outbound link keys for batch 3 (use like the others, `{{ext:KEY}}`): `fda-cosmetics` (U.S. FDA cosmetics guidance), `eu-cosmetics` (European Commission cosmetics rules), `linkedin-help` (LinkedIn Help), `wcag` (W3C Web Content Accessibility Guidelines), `pagespeed` (Google PageSpeed Insights), `etsy-sellers` (Etsy Seller Handbook), Only the keys listed in this file are valid.
 
+### Blog articles, AI marketing (KEY = English slug)
+
+| KEY | Primary keyword and scope | Vietnamese slug |
+|---|---|---|
+| `what-is-ai-marketing-automation` | what is AI marketing automation (pillar: definition, parts of the system, three machines, cost, 30-day start) | `ai-automation-cho-marketing-la-gi` |
+| `generative-engine-optimization-for-small-business` | what is GEO (generative engine optimization): Google's guidance, the GEO paper, 7 things to do, self-check | `geo-la-gi` |
+| `marketing-with-ai-8-steps` | marketing with AI in 8 steps (written version of the Trang AI video, with the monthly cost table) | `8-buoc-lam-marketing-bang-ai` |
+| `dominos-brand-story`, `heinz-brand-story`, `glossier-brand-story`, `pizza-4ps-brand-story`, `cong-ca-phe-brand-story` | real brand stories (category `brand-stories`), each with sourced facts | see the files |
+
 Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.
 
 ### External links (blog articles only)
@@ -169,6 +179,8 @@ Each blog article should include **2 to 4 outbound links to official resources**
 | `ftc-business` | U.S. Federal Trade Commission business guidance (advertising and reviews rules) |
 
 Do not attribute specific facts, numbers or quotes to these sources; link them as "the official place to do or read about this". Only use a link where it is genuinely relevant to the article.
+
+Keys added for AI marketing, SEO and GEO articles (facts from these may be stated with the link, see section 2): `google-ai-guide` (Google Search Central, May 2026: optimizing your website for generative AI features on Google Search), `google-ai-features` (Google Search Central: AI features and your website), `google-ai-controls` (Google blog, June 2026: new controls and insights for website owners), `geo-paper` (the research paper "GEO: Generative Engine Optimization", KDD 2024), `sej-geo-seo` (Search Engine Journal on Google's guide), `search-console` (Google Search Console), `pagespeed`, `claude` (Claude), `apify` (Apify), `morapost` (Morapost), `youtube-8-steps` (the 8-step video on the Trang AI channel). A new source needs a new entry in `EXT` in `src/build.cjs` first.
 
 ## 4. Format A: landing page
 
@@ -228,6 +240,9 @@ takeaway: Third key point
 ```
 
 - In the `.vi.html` file, `slug` is the Vietnamese slug; `landing` stays the English KEY.
+- Add `category: <id>` right after `landing:` (ids: automation, brand-stories, process, nail-salons, restaurants, fashion, retail, beauty, startups, small-business, international) and `date: YYYY-MM-DD` (the day the article is first published). Dated articles are listed newest first; "last updated" dates come from git, so never type them.
+- Use `landing: social-media-automation` (or the nail salon or restaurant variant) for new articles.
+- An article built around a video adds `video: /video/FILE.mp4`, `video_poster:`, `video_youtube: <YouTube id>`, `video_duration: PT5M21S`, `video_date:`, `video_lang:`, `video_title:`, `video_desc:`; the template then shows the player in place of the hero image and adds VideoObject data. See `marketing-with-ai-8-steps`.
 - 3 to 5 `takeaway:` lines. They are shown as a "Key takeaways" box and should be quotable, self-contained sentences.
 - Body: **1,300 to 1,900 words** (per language). Allowed tags: `<p> <h2> <h3> <ul> <ol> <li> <strong> <em> <a> <table> <thead> <tbody> <tr> <th> <td> <blockquote>`, plus the FAQ `<section class="faq">` with `<details><summary>…</summary><p>…</p></details>` (4 to 6 questions, each answer one `<p>`). No `<h1>`, no images, no inline styles, no scripts.
 - Structure that works: a direct answer in the first paragraph; H2 sections that each answer one question; numbered or bulleted ideas with a concrete example each (what to film, what to write in the caption, in English and, where it helps, in Vietnamese); one table or checklist the reader can copy; a short "common mistakes" section; the FAQ. A reader should be able to act on the article the same day.

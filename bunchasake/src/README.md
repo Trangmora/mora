@@ -20,11 +20,12 @@ Quy tắc viết nội dung và định dạng file: `content/BRIEF.md`.
 node bunchasake/src/build.cjs
 ```
 
-Cần Node và Playwright (trang chủ được dựng sẵn bằng trình duyệt thành hai bản tĩnh: `/` tiếng Anh và `/vi/` tiếng Việt).
+Cần Node và Playwright (trang chủ được dựng sẵn bằng trình duyệt thành hai bản tĩnh: `/` tiếng Việt và `/en/` tiếng Anh).
 Lệnh này ghi lại toàn bộ `site/`: các trang HTML, `sitemap.xml`, `robots.txt`, `llms.txt`, `404.html`, `_headers`, `_redirects`.
 Nếu có cảnh báo (liên kết hỏng, tiêu đề quá dài…) lệnh sẽ in ra ở cuối; sửa hết trước khi push.
 
 ## Thêm bài mới
 
 1. Tạo `content/blog/<slug-tiếng-anh>.en.html` và `.vi.html` theo mẫu trong `content/BRIEF.md`.
+   Ghi `date: YYYY-MM-DD` (ngày đăng) và `category:` trong phần đầu file: bài có ngày đăng mới nhất tự lên đầu blog. Ngày "cập nhật" và `lastmod` trong sitemap lấy từ git, không gõ tay.
 2. Chạy lệnh dựng, kiểm tra không có cảnh báo, rồi commit và push. Sitemap tự cập nhật.

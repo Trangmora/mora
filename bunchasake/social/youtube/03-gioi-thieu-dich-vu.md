@@ -1,6 +1,6 @@
 # Video 03 – Giới thiệu dịch vụ Bunchasake (~3 phút) · CHỜ CHỊ TRANG DUYỆT
 
-Kênh: YouTube "Trang AI" · khổ ngang · kiểu sơ đồ hộp đỏ · nhạc nền, không phụ đề trên hình.
+Kênh: YouTube "Trang AI" · khổ ngang · kiểu sơ đồ hộp, viền ngoài màu tím, điểm nhấn đỏ · nhạc nền đổi theo từng phần, không phụ đề trên hình.
 Giọng: "Trang giọng việt" (ElevenLabs v3, ổn định 0.5, độ giống 0.85), hạ trầm ~nửa cung.
 Lời đọc viết "Bún Chả Sake", "Mora Post" để máy đọc đúng tên; trên hình vẫn là Bunchasake, Morapost.
 
@@ -18,11 +18,11 @@ Bunchasake là dịch vụ tự động hoá marketing bằng AI của Mora AI. 
 0:15 Vì sao: chuyện rất quen của chủ tiệm
 0:35 AI làm được gì, và vì sao vẫn cần người duyệt
 1:05 Ba cỗ máy của Bunchasake
-1:32 Morapost: nền tảng đăng bài
-1:47 Bốn bước làm việc
-2:18 Ba gói: Setup, Grow, Chain
-2:37 Chính chúng tôi cũng dùng
-2:47 Bắt đầu thế nào
+1:29 Morapost: nền tảng đăng bài
+1:44 Bốn bước làm việc
+2:15 Ba gói: Setup, Grow, Chain
+2:34 Chính chúng tôi cũng dùng
+2:44 Bắt đầu thế nào
 
 🔗 Bunchasake: https://bunchasake.com
 📚 Blog marketing bằng AI: https://bunchasake.com/vi/blog/
@@ -43,7 +43,7 @@ Mình bắt đầu từ một chuyện rất quen. Chủ tiệm, chủ quán nà
 Trong khi đó, AI bây giờ đã viết được bài, làm được hình, dựng được video. Nhưng AI không phải phép màu. Để mặc nó tự chạy, nó có thể viết ra những bài nghe giống ai cũng được, thậm chí sai giá, sai thông tin. Nên bên mình chọn một cách khác: AI làm phần nặng, còn con người giữ phần quan trọng nhất, là hiểu khách và duyệt nội dung. Bên mình muốn một tiệm nhỏ cũng có được thứ trước đây chỉ công ty lớn mới có: marketing chạy đều mỗi ngày.
 
 **Ba cỗ máy**
-Bunchasake dựng cho bạn ba cỗ máy. Cỗ máy thứ nhất là mạng xã hội: AI viết nội dung đúng giọng thương hiệu của bạn, rồi tự lên lịch và đăng đều lên các kênh. Cỗ máy thứ hai là tin nhắn: chatbot trả lời khách và chăm sóc khách cũ. Cỗ máy thứ ba là cộng đồng khách quen. Hiện tại, cỗ máy mạng xã hội đang nhận khách, hai cỗ máy còn lại sắp ra mắt.
+Bunchasake dựng cho bạn ba cỗ máy. Cỗ máy thứ nhất là mạng xã hội: AI viết nội dung đúng giọng thương hiệu của bạn, rồi tự lên lịch và đăng đều lên các kênh. Cỗ máy thứ hai là tin nhắn: chatbot trả lời khách và chăm sóc khách cũ. Cỗ máy thứ ba là cộng đồng khách quen. Cả ba cỗ máy đều đã sẵn sàng. Bạn có thể bắt đầu với một cỗ máy, rồi thêm dần khi cần.
 
 **Morapost**
 Phần đăng bài chạy trên Morapost, nền tảng do chính bên mình xây. Một nội dung, đăng lên nhiều nền tảng cùng lúc: Facebook, Instagram, YouTube, LinkedIn và các kênh khác. Vì tự làm ra công cụ, bên mình chủ động được từ khâu viết đến khâu đăng.
