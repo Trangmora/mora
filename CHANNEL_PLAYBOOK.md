@@ -63,4 +63,5 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
   - X giới hạn độ dài video với tài khoản thường. Kiểm tra lại giới hạn trước khi đăng.
 - Chưa có script đăng cho Buffer. Viết khi có video đầu tiên cần đăng.
 
+- **Ảnh bìa tự chọn trên YouTube cần kênh đã xác minh** (youtube.com/verify, xác minh bằng số điện thoại). Ngày 25/11/2026, kênh Ridiculous Case (bản tiếng Việt) chưa xác minh nên Morapost đăng được video nhưng YouTube từ chối ảnh bìa. Sau khi đăng, luôn xem `links[].warning` trong `morapost.py status`.
 - Chạy `python3 pipeline/publish/morapost.py accounts` để kiểm tra lại ID trước khi đăng.
