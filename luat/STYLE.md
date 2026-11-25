@@ -31,4 +31,5 @@
 - **Dài tối thiểu khoảng 2 phút**, giải thích kỹ luật nói gì: văn bản nào, khái niệm là gì, quy định từng ý, so với trước, áp dụng từ khi nào, bạn nên làm gì.
 - **Luôn có phần "Bạn nên làm gì?"** (ô viền xanh lá, dấu tích) trước câu lưu ý cuối video.
 - **Giọng đọc:** giọng nam, mã ElevenLabs `ywBZEqUhld86Jeajq94o` (chủ kênh gửi), model eleven_v3.
+- **Không dùng nhạc nền** (chủ kênh chốt 25/11/2026): video chỉ có giọng đọc.
 - Khung dựng: `luat/pipeline/vox/` (xem README ở đó). Tập mẫu: `luat/episodes/BLHS2026_lam_nhuc/`.

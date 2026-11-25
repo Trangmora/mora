@@ -22,7 +22,7 @@ python3 ../../pipeline/vox/keys.py .
 # 4. Khung hình mẫu (xem từng khung trước khi dựng)
 node ../../pipeline/vox/render.cjs . 3 10 25 40
 # 5. Đoạn thử:  node ../../pipeline/vox/render.cjs . --range 0 14   (ghi work/clip.mp4, chưa có tiếng)
-# 6. Dựng trọn video có tiếng (thêm đường dẫn nhạc .wav 44,1 kHz làm tham số thứ ba nếu có)
+# 6. Dựng trọn video có tiếng (kênh luật không dùng nhạc nền)
 PARTS=2 ../../pipeline/vox/build.sh . ../../videos/<tên>_vi.mp4
 ```
 
@@ -41,4 +41,4 @@ Toạ độ 1280x720. Thời điểm tính bằng `g('tên_mốc')` (giây trong
 
 ## Lưu ý
 - Máy dựng 4 nhân: `PARTS=2` cho một tập, `PARTS=1` khi dựng nhiều tập cùng lúc.
-- Nhạc không nằm trong git. Chưa có nhạc thì video chỉ có giọng.
+- Kênh luật không dùng nhạc nền (chủ kênh chốt 25/11/2026): chạy `build.sh` không có tham số nhạc.
