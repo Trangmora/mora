@@ -14,4 +14,9 @@ Nguồn tham khảo:
 - UNESCO, kỷ niệm 600 năm ngày sinh Nguyễn Trãi (1980)
 - Các giả thuyết về người đứng sau vụ án là nhận định của giới nghiên cứu, không có trong chính sử
 
+Nhạc nền:
+"Vietnam Bamboo Flute" – VProdMusic (Pixabay)
+"Ha Long Bay Serenity" – VProdMusic (Pixabay)
+"Yearning" – Nat Keefe (YouTube Audio Library)
+
 #LeChiVien #NguyenTrai #LichSuVietNam #NhaLe #VanHoaChauA
