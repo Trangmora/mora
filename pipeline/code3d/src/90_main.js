@@ -4,6 +4,7 @@ function renderAt(t) {
   if (Q.has('cam')) { const c = Q.get('cam').split(',').map(Number); camera.position.set(c[0], c[1], c[2]); camera.lookAt(c[3], c[4], c[5]); if (c[6]) { camera.fov = c[6]; camera.updateProjectionMatrix(); } }
   camera.updateMatrixWorld();
   U.uCamPos.value.copy(camera.position);
+  if (window.ACTIVE_SCENE) { renderer.setRenderTarget(hdrRT); renderer.setClearColor(0x000000); renderer.clear(); renderer.render(window.ACTIVE_SCENE, camera); postRender(); return; }
   renderReflection();
   renderer.setRenderTarget(hdrRT); renderer.render(scene, camera);
   if (window.STYLE === 'ink') inkRender(); else postRender();
