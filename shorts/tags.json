@@ -1,4 +1,30 @@
-{"c": {"vi": "#KhongTu #TrungQuoc #LichSu #VanHoaChauA #Shorts", "en": "#Confucius #China #History #AsianCulture #Shorts"},
- "l": {"vi": "#LaoTu #DaoGiao #TrungQuoc #VanHoaChauA #Shorts", "en": "#Laozi #Taoism #China #AsianCulture #Shorts"},
- "g": {"vi": "#AnDo #SongHang #ThanThoai #VanHoaChauA #Shorts", "en": "#India #Ganges #Mythology #AsianCulture #Shorts"},
- "j": {"vi": "#NhatBan #ThanDao #ThanThoai #VanHoaChauA #Shorts", "en": "#Japan #Shinto #Mythology #AsianCulture #Shorts"}}
+{
+ "c": {
+  "vi": "#KhongTu #TrungQuoc #LichSu #VanHoaChauA #Shorts",
+  "en": "#Confucius #China #History #AsianCulture #Shorts"
+ },
+ "l": {
+  "vi": "#LaoTu #DaoGiao #TrungQuoc #VanHoaChauA #Shorts",
+  "en": "#Laozi #Taoism #China #AsianCulture #Shorts"
+ },
+ "g": {
+  "vi": "#AnDo #SongHang #ThanThoai #VanHoaChauA #Shorts",
+  "en": "#India #Ganges #Mythology #AsianCulture #Shorts"
+ },
+ "j": {
+  "vi": "#NhatBan #ThanDao #ThanThoai #VanHoaChauA #Shorts",
+  "en": "#Japan #Shinto #Mythology #AsianCulture #Shorts"
+ },
+ "v": {
+  "vi": "#LichSuVietNam #VietNam #TruyenThuyet #VanHoaChauA #Shorts",
+  "en": "#Vietnam #History #Legend #AsianCulture #Shorts"
+ },
+ "t": {
+  "vi": "#ThaiLan #Xiem #LichSu #VanHoaChauA #Shorts",
+  "en": "#Thailand #Siam #History #AsianCulture #Shorts"
+ },
+ "m": {
+  "vi": "#Myanmar #Bagan #LichSu #VanHoaChauA #Shorts",
+  "en": "#Myanmar #Burma #History #AsianCulture #Shorts"
+ }
+}

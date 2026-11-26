@@ -878,5 +878,862 @@
    "The ruling was later put on hold. So what do you think?",
    "Follow for more stories from Asia!"
   ]
+ },
+ {
+  "id": "v1_guom",
+  "seal": "越",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-vietnam-bamboo-flute-143601.mp3",
+   10
+  ],
+  "hook": {
+   "vi": "THANH SẮT TRONG LƯỚI",
+   "en": "THE IRON IN THE NET"
+  },
+  "shots": [
+   "assets/vietnam/clips/ll_v1.mp4",
+   {
+    "src": "assets/vietnam/images/ll_v2.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/vietnam/images/ll_v7.jpg",
+    "f": [
+     0.55,
+     0.3
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/vietnam/images/ll_v8.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/ll_v5.mp4",
+   "assets/vietnam/clips/ll_v15.mp4",
+   "assets/vietnam/clips/ll_v16.mp4"
+  ],
+  "vi": [
+   "Một người đánh cá ba lần thả lưới, ba lần vớt lên cùng một thanh sắt.",
+   "Ông ném đi, nó lại quay về lưới. Soi dưới đuốc, ông thấy hai chữ: Thuận Thiên, thuận theo ý trời.",
+   "Truyền thuyết kể rằng ít lâu sau, Lê Lợi thấy một chuôi gươm nạm ngọc phát sáng trên ngọn cây đa.",
+   "Đem lưỡi tra vào chuôi, vừa khít như được đúc cho nhau.",
+   "Từ đó, thanh gươm theo ông suốt mười năm đánh đuổi quân Minh.",
+   "Và khi đất nước yên bình, một con Rùa Vàng đã nổi lên giữa hồ để đòi lại gươm.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "A fisherman cast his net three times, and three times he pulled up the same bar of iron.",
+   "He threw it away, and it came back. Under a torch, he saw two words: the will of Heaven.",
+   "Legend says that later, the rebel leader Lê Lợi saw a jeweled sword hilt glowing at the top of a banyan tree.",
+   "He fitted the blade into the hilt. A perfect match.",
+   "That sword followed him through ten years of war to free Vietnam from Ming China.",
+   "And when peace came, a golden turtle rose from a lake in Hanoi to take it back.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "t1_nhatthuc",
+  "seal": "泰",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   30
+  ],
+  "hook": {
+   "vi": "ÔNG VUA ĐOÁN TRƯỚC NHẬT THỰC",
+   "en": "THE KING WHO PREDICTED AN ECLIPSE"
+  },
+  "shots": [
+   "assets/thailand/clips/th_t4.mp4",
+   {
+    "src": "assets/thailand/images/th_t4.jpg",
+    "f": [
+     0.4,
+     0.45
+    ],
+    "z": 1.25
+   },
+   {
+    "src": "assets/thailand/images/th_t5.jpg",
+    "f": [
+     0.5,
+     0.3
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/thailand/images/th_t5.jpg",
+    "f": [
+     0.45,
+     0.55
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/thailand/images/th_t6.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/thailand/clips/th_t8.mp4"
+  ],
+  "vi": [
+   "Có một ông vua đã tính trước nhật thực chính xác đến từng phút.",
+   "Trước khi lên ngôi, vua Mongkut của Xiêm La đi tu suốt hai mươi bảy năm, và tự học tiếng Anh, tiếng La-tinh, toán và thiên văn.",
+   "Năm 1868, ông tính rằng sẽ có nhật thực toàn phần ở miền nam Xiêm, và mời cả các nhà khoa học châu Âu đến xem.",
+   "Đúng ngày hôm ấy, mặt trời tối đen đúng như ông đã tính.",
+   "Một ông vua hiểu phương Tây đến thế đã chọn ký hiệp ước thay vì cầm gươm, và giúp Xiêm La không bao giờ bị đô hộ.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "One king calculated a solar eclipse in advance, almost to the minute.",
+   "Before taking the throne, King Mongkut of Siam spent twenty-seven years as a monk, teaching himself English, Latin, mathematics and astronomy.",
+   "In 1868, he predicted a total eclipse in southern Siam, and invited European scientists to come and watch.",
+   "On that day, the sun went dark exactly as he had said.",
+   "A king who understood the West that well chose treaties over swords, and helped Siam stay free of colonial rule.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v5_xedap",
+  "seal": "越",
+  "music": [
+   "assets/music/Imperial_Forces_-_Aaron_Kenny.mp3",
+   20
+  ],
+  "hook": {
+   "vi": "VŨ KHÍ BÍ MẬT: XE ĐẠP",
+   "en": "THE SECRET WEAPON: BICYCLES"
+  },
+  "shots": [
+   {
+    "src": "assets/vietnam/images/dbp_d2.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/dbp_d3.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.2
+   },
+   "assets/vietnam/clips/dbp_d6.mp4",
+   {
+    "src": "assets/vietnam/images/dbp_d6.jpg",
+    "f": [
+     0.4,
+     0.5
+    ],
+    "z": 1.3
+   },
+   "assets/vietnam/clips/dbp_d8.mp4",
+   {
+    "src": "assets/vietnam/images/dbp_d11.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/dbp_d20.mp4"
+  ],
+  "vi": [
+   "Năm 1954, quân Pháp tin rằng không ai có thể chở đủ lương thực, đạn dược vượt hàng trăm cây số núi rừng đến Điện Biên Phủ.",
+   "Họ đã nhầm.",
+   "Hơn hai trăm sáu mươi nghìn dân công đã lên đường, cùng khoảng hai mươi nghìn chiếc xe đạp thồ.",
+   "Mỗi chiếc chở hai, ba trăm ký hàng, được người đẩy bộ qua những con đèo dốc đứng.",
+   "Còn những khẩu pháo nặng hơn hai tấn thì được kéo lên núi bằng dây thừng và sức người.",
+   "Năm mươi sáu ngày đêm sau, pháo đài tưởng không thể bị đánh bại đã sụp đổ.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In 1954, the French army in Vietnam believed no one could haul enough supplies across hundreds of kilometers of jungle to Điện Biên Phủ.",
+   "They were wrong.",
+   "More than two hundred and sixty thousand civilian porters set out, with some twenty thousand bicycles.",
+   "Each one carried two or three hundred kilos, pushed by hand over steep mountain passes.",
+   "And guns weighing over two tons were dragged up the slopes with rope and muscle.",
+   "Fifty-six days later, the fortress that could never fall, fell.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "m1_bagan",
+  "seal": "缅",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-ha-long-bay-serenity-147067.mp3",
+   15
+  ],
+  "hook": {
+   "vi": "MƯỜI NGHÌN NGÔI ĐỀN",
+   "en": "10,000 TEMPLES ON ONE PLAIN"
+  },
+  "shots": [
+   {
+    "src": "assets/myanmar/images/mm_m1.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.1
+   },
+   {
+    "src": "assets/myanmar/images/mm_m3.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m1.jpg",
+    "f": [
+     0.3,
+     0.55
+    ],
+    "z": 1.35
+   },
+   {
+    "src": "assets/myanmar/images/mm_m1.jpg",
+    "f": [
+     0.7,
+     0.5
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/myanmar/images/mm_m5.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m2.jpg",
+    "f": [
+     0.5,
+     0.4
+    ],
+    "z": 1.15
+   }
+  ],
+  "vi": [
+   "Có một vùng đồng bằng từng có hơn mười nghìn ngôi đền, chùa và tháp.",
+   "Đó là Bagan, ở Myanmar. Năm 1044, vua Anawrahta lên ngôi và lần đầu thống nhất vùng đất này.",
+   "Trong khoảng hai trăm năm mươi năm, người dân đã dựng lên hơn mười nghìn công trình Phật giáo trên cùng một đồng bằng.",
+   "Đến hôm nay vẫn còn hơn hai nghìn công trình đứng vững, và Bagan đã thành Di sản thế giới.",
+   "Nhưng năm 1287, quân Mông Cổ tràn xuống, và vương quốc Bagan tan rã.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "One plain in Asia was once covered with more than ten thousand temples.",
+   "This is Bagan, in Myanmar. In 1044, King Anawrahta took the throne and united the land for the first time.",
+   "In about two hundred and fifty years, its people built more than ten thousand Buddhist monuments on a single plain.",
+   "Over two thousand still stand today, and Bagan is now a World Heritage Site.",
+   "But in 1287, Mongol armies swept in, and the kingdom of Bagan fell apart.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v8_vuonvai",
+  "seal": "越",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-ha-long-bay-serenity-147067.mp3",
+   40
+  ],
+  "hook": {
+   "vi": "BÍ ẨN ĐÊM VƯỜN VẢI",
+   "en": "THE LYCHEE GARDEN MYSTERY"
+  },
+  "shots": [
+   "assets/vietnam/clips/lcv_c1.mp4",
+   {
+    "src": "assets/vietnam/images/lcv_c5.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/lcv_c10.mp4",
+   {
+    "src": "assets/vietnam/images/lcv_c12.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/lcv_c4.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/lcv_c16.mp4",
+   "assets/vietnam/clips/lcv_c18.mp4"
+  ],
+  "vi": [
+   "Tháng tám năm 1442, vị vua hai mươi tuổi nghỉ đêm ở một vườn vải bên sông.",
+   "Sáng hôm sau, nhà vua đột ngột băng hà.",
+   "Bên cạnh vua đêm ấy là bà Nguyễn Thị Lộ, người thiếp tài sắc của Nguyễn Trãi. Triều đình lập tức buộc tội bà.",
+   "Chỉ mười hai ngày sau, Nguyễn Trãi, người viết Bình Ngô đại cáo, nhận bản án khắc nghiệt nhất thời bấy giờ.",
+   "Hai mươi hai năm sau, vua Lê Thánh Tông mới minh oan cho ông.",
+   "Đến nay, sự thật đêm ở Lệ Chi Viên vẫn là một bí ẩn.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In August 1442, a twenty-year-old king of Vietnam spent the night in a lychee garden by a river.",
+   "By morning, he was gone.",
+   "Beside him that night was Lady Nguyễn Thị Lộ, the gifted companion of the scholar Nguyễn Trãi. The court blamed her at once.",
+   "Just twelve days later, Nguyễn Trãi, the man who wrote his country's proclamation of independence, received the harshest sentence of the age.",
+   "Twenty-two years later, a new king cleared his name.",
+   "To this day, what really happened in the Lychee Garden is a mystery.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "t2_caytre",
+  "seal": "泰",
+  "music": [
+   "assets/music/Yearning_-_Nat_Keefe.mp3",
+   70
+  ],
+  "hook": {
+   "vi": "NGOẠI GIAO CÂY TRE",
+   "en": "BAMBOO DIPLOMACY"
+  },
+  "shots": [
+   "assets/thailand/clips/th_t1.mp4",
+   {
+    "src": "assets/thailand/images/th_t2.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/thailand/images/th_t11.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/thailand/clips/th_t12.mp4",
+   {
+    "src": "assets/thailand/images/th_t14.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/thailand/clips/th_t16.mp4"
+  ],
+  "vi": [
+   "Năm 1893, chiến hạm Pháp tiến thẳng vào Bangkok và chĩa súng về phía hoàng cung.",
+   "Khi ấy, gần như cả Đông Nam Á đã thuộc về Anh, Pháp và Hà Lan.",
+   "Vua Chulalongkorn đau buồn đến đổ bệnh, nhưng ông chấp nhận nhường lại vùng đất phía đông sông Mê Kông.",
+   "Người ta gọi đó là ngoại giao cây tre: uốn theo chiều gió để không bị gãy.",
+   "Anh và Pháp cũng không muốn chung biên giới, nên đồng ý giữ Xiêm làm vùng đệm.",
+   "Nhờ vậy, Thái Lan là nước Đông Nam Á duy nhất chưa từng bị thực dân đô hộ.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In 1893, French warships steamed into Bangkok and aimed their guns at the royal palace.",
+   "By then, almost all of Southeast Asia belonged to Britain, France and the Netherlands.",
+   "King Chulalongkorn was so grief-stricken he fell ill, but he gave up the lands east of the Mekong River.",
+   "People call it bamboo diplomacy: bend with the wind, so you never break.",
+   "Britain and France did not want to share a border, so they agreed to keep Siam as a buffer.",
+   "And that is how Thailand became the only country in Southeast Asia never colonized.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v2_lelai",
+  "seal": "越",
+  "music": [
+   "assets/music/Imperial_Forces_-_Aaron_Kenny.mp3",
+   50
+  ],
+  "hook": {
+   "vi": "NGƯỜI MẶC ÁO CHỦ TƯỚNG",
+   "en": "THE MAN IN THE LEADER'S ROBE"
+  },
+  "shots": [
+   {
+    "src": "assets/vietnam/images/ll_v9.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v4.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v10.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v10.jpg",
+    "f": [
+     0.6,
+     0.5
+    ],
+    "z": 1.35
+   },
+   {
+    "src": "assets/vietnam/images/ll_v3.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v14.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   }
+  ],
+  "vi": [
+   "Có một vị tướng đã mặc áo của chủ tướng, rồi một mình lao vào vòng vây giặc.",
+   "Đầu thế kỷ mười lăm, nghĩa quân Lam Sơn của Lê Lợi bị quân Minh vây chặt, đói khát, tưởng như không còn lối thoát.",
+   "Tướng Lê Lai xin mặc áo bào của Lê Lợi, phi ngựa thẳng vào trận địa.",
+   "Giặc tưởng đã bắt được chủ tướng nên rút quân. Lê Lai hy sinh, còn Lê Lợi thoát nạn.",
+   "Đến nay người Việt vẫn nói: hai mốt Lê Lai, hai hai Lê Lợi. Giỗ Lê Lai được làm trước một ngày, vì không có Lê Lai thì không có Lê Lợi.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "One general put on his leader's robe and charged alone into the enemy lines.",
+   "In the early fifteenth century, Lê Lợi's rebels in Vietnam were trapped by the Ming army, starving, with no way out.",
+   "A general named Lê Lai asked to wear Lê Lợi's royal robe, and rode straight into battle.",
+   "The Ming thought they had captured the rebel leader, and pulled back. Lê Lai gave his life, and Lê Lợi escaped.",
+   "To this day, Vietnamese people honor Lê Lai's memorial one day before Lê Lợi's, because without Lê Lai, there would be no Lê Lợi.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "m2_tiengiay",
+  "seal": "缅",
+  "music": [
+   "assets/music/Hammersion_-_Ezra_Lipp.mp3",
+   10
+  ],
+  "hook": {
+   "vi": "TỜ TIỀN 45 VÀ 90",
+   "en": "THE 45 AND 90 NOTES"
+  },
+  "shots": [
+   {
+    "src": "assets/myanmar/images/mm_m15.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m14.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m15.jpg",
+    "f": [
+     0.4,
+     0.5
+    ],
+    "z": 1.35
+   },
+   {
+    "src": "assets/myanmar/images/mm_m11.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m18.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/myanmar/images/mm_m16.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   }
+  ],
+  "vi": [
+   "Có một đất nước từng in những tờ tiền mệnh giá bốn mươi lăm và chín mươi.",
+   "Năm 1987, tướng Ne Win của Miến Điện bất ngờ tuyên bố nhiều tờ tiền đang lưu hành không còn giá trị.",
+   "Thay vào đó là tờ bốn mươi lăm và chín mươi kyat, đều chia hết cho chín, con số người ta nói ông tin là may mắn.",
+   "Chỉ sau một đêm, phần lớn tiền tiết kiệm của người dân biến thành giấy vụn.",
+   "Đất nước từng xuất khẩu gạo nhiều nhất thế giới đã trở thành một trong những nước nghèo nhất châu Á.",
+   "Và chỉ một năm sau, người dân xuống đường.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "One country once printed banknotes worth forty-five and ninety.",
+   "In 1987, Burma's ruler, General Ne Win, suddenly declared that many notes in circulation were worthless.",
+   "In their place came forty-five and ninety kyat notes, both divisible by nine, a number he was said to consider lucky.",
+   "Overnight, most people's savings turned into scrap paper.",
+   "The country that was once the world's biggest rice exporter had become one of the poorest in Asia.",
+   "And just one year later, the people filled the streets.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v6_baphat",
+  "seal": "越",
+  "music": [
+   "assets/music/Hammersion_-_Ezra_Lipp.mp3",
+   40
+  ],
+  "hook": {
+   "vi": "\"KHÔNG BẮN NỔI BA PHÁT\"",
+   "en": "\"NOT EVEN THREE ROUNDS\""
+  },
+  "shots": [
+   {
+    "src": "assets/vietnam/images/dbp_d3.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/dbp_d1.mp4",
+   "assets/vietnam/clips/dbp_d8.mp4",
+   {
+    "src": "assets/vietnam/images/dbp_d9.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/dbp_d11.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.2
+   },
+   "assets/vietnam/clips/dbp_d12.mp4"
+  ],
+  "vi": [
+   "Chỉ huy pháo binh Pháp ở Điện Biên Phủ từng tuyên bố: đối phương sẽ không bắn nổi quá ba phát đạn.",
+   "Ông tin rằng không ai đưa nổi pháo hạng nặng qua núi rừng Tây Bắc.",
+   "Nhưng bộ đội đã kéo từng khẩu pháo lên sườn núi trong đêm tối, rồi giấu kín trong những hầm ngụy trang.",
+   "Tướng Võ Nguyên Giáp còn hoãn trận đánh gần hai tháng để chuẩn bị chắc chắn hơn.",
+   "Chiều ngày mười ba tháng ba năm 1954, pháo từ trên núi đồng loạt khai hỏa. Quân Pháp bàng hoàng.",
+   "Không phải ba phát, mà là hàng nghìn phát, suốt năm mươi sáu ngày đêm.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "The French artillery commander at Điện Biên Phủ boasted that the enemy would not manage to fire three rounds.",
+   "He believed no one could bring heavy guns through the mountains of northwest Vietnam.",
+   "But Vietnamese soldiers dragged the guns up the slopes by night, and hid them in camouflaged dugouts.",
+   "General Võ Nguyên Giáp even delayed the battle by almost two months to make sure.",
+   "On the afternoon of March thirteenth, 1954, the guns opened fire from the mountains. The French were stunned.",
+   "Not three rounds, but thousands, for fifty-six days.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "t3_borap",
+  "seal": "泰",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-vietnam-bamboo-flute-143601.mp3",
+   60
+  ],
+  "hook": {
+   "vi": "KHÔNG CÒN PHẢI BÒ RẠP",
+   "en": "NO MORE CRAWLING"
+  },
+  "shots": [
+   {
+    "src": "assets/thailand/images/th_t7.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/thailand/images/th_t7.jpg",
+    "f": [
+     0.5,
+     0.6
+    ],
+    "z": 1.35
+   },
+   "assets/thailand/clips/th_t8.mp4",
+   {
+    "src": "assets/thailand/images/th_t8.jpg",
+    "f": [
+     0.6,
+     0.5
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/thailand/images/th_t15.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/thailand/clips/th_t16.mp4"
+  ],
+  "vi": [
+   "Ở Xiêm La xưa, ai đến gặp vua cũng phải bò rạp dưới đất.",
+   "Năm mười lăm tuổi, Chulalongkorn lên ngôi, và ông quyết định thay đổi tất cả.",
+   "Ông bỏ tục bò rạp trước vua, rồi từng bước xóa bỏ chế độ nô lệ.",
+   "Ông xây đường sắt, bưu điện, trường học, và gửi các hoàng tử sang châu Âu du học.",
+   "Năm 1897, chính ông sang châu Âu, gặp Sa hoàng Nga và các nguyên thủ, chụp ảnh với họ như những người ngang hàng.",
+   "Đến nay, ảnh của ông vẫn được treo trong vô số gia đình Thái Lan.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In old Siam, anyone who met the king had to crawl on the floor.",
+   "At fifteen, Chulalongkorn took the throne, and decided to change everything.",
+   "He ended the custom of crawling before the king, and step by step abolished slavery.",
+   "He built railways, post offices and schools, and sent his sons to study in Europe.",
+   "In 1897, he traveled to Europe himself, met the Russian Tsar and other heads of state, and was photographed with them as an equal.",
+   "Today, his portrait still hangs in countless Thai homes.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v4_rua",
+  "seal": "越",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-ha-long-bay-serenity-147067.mp3",
+   70
+  ],
+  "hook": {
+   "vi": "CỤ RÙA HỒ GƯƠM CÓ THẬT",
+   "en": "THE REAL GIANT TURTLE"
+  },
+  "shots": [
+   "assets/vietnam/clips/ll_v16.mp4",
+   "assets/vietnam/clips/ll_v15.mp4",
+   {
+    "src": "assets/vietnam/images/ll_v15.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/vietnam/images/ll_v16.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.2
+   },
+   {
+    "src": "assets/vietnam/images/ll_v13.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/ll_v16.mp4"
+  ],
+  "vi": [
+   "Giữa Hà Nội có một cái hồ mà theo truyền thuyết, một con rùa từng đòi lại thanh gươm thần.",
+   "Tương truyền, sau khi đánh thắng quân Minh, vua Lê Lợi dạo thuyền trên hồ thì Rùa Vàng nổi lên xin trả gươm.",
+   "Gươm bay về phía rùa, rùa lặn xuống đáy hồ. Từ đó hồ mang tên Hoàn Kiếm, hồ Trả Gươm.",
+   "Điều kỳ lạ là trong hồ thật sự từng có những con rùa khổng lồ, nặng gần hai tạ.",
+   "Cụ rùa cuối cùng đã ra đi năm 2016, và nay vẫn được lưu giữ ở đền Ngọc Sơn, ngay trên hồ.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "In the heart of Hanoi, Vietnam, there is a lake where, legend says, a turtle took back a magic sword.",
+   "After King Lê Lợi defeated the Ming army, he was boating on the lake when a golden turtle rose and asked for the sword.",
+   "The sword flew to the turtle, and it sank back into the water. Ever since, it has been called the Lake of the Returned Sword.",
+   "The strange part: giant turtles really did live in that lake, weighing almost two hundred kilograms.",
+   "The last one passed away in 2016, and is still preserved in a temple on the lake.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v7_a1",
+  "seal": "越",
+  "music": [
+   "assets/music/Imperial_Forces_-_Aaron_Kenny.mp3",
+   80
+  ],
+  "hook": {
+   "vi": "ĐƯỜNG HẦM DƯỚI ĐỒI A1",
+   "en": "THE TUNNEL UNDER HILL A1"
+  },
+  "shots": [
+   "assets/vietnam/clips/dbp_d14.mp4",
+   {
+    "src": "assets/vietnam/images/dbp_d15.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/dbp_d15.jpg",
+    "f": [
+     0.5,
+     0.7
+    ],
+    "z": 1.35
+   },
+   {
+    "src": "assets/vietnam/images/dbp_d17.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/dbp_d18.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   "assets/vietnam/clips/dbp_d20.mp4"
+  ],
+  "vi": [
+   "Có một ngọn đồi mà hai bên giành nhau từng mét đất suốt hơn một tháng trời.",
+   "Đó là đồi A1 ở Điện Biên Phủ. Mùa mưa đến, chiến hào ngập bùn, không bên nào chịu lùi.",
+   "Cuối cùng, bộ đội lặng lẽ đào một đường hầm sâu vào lòng đồi, và đặt gần một tấn thuốc nổ.",
+   "Đêm mùng sáu tháng năm năm 1954, cả ngọn đồi rung chuyển.",
+   "Chiều hôm sau, lá cờ đỏ tung bay trên nóc hầm chỉ huy của tướng de Castries.",
+   "Ngày nay, bạn vẫn có thể thấy hố bộc phá trên đồi A1.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "There was a hill in Vietnam that two armies fought over, meter by meter, for more than a month.",
+   "It was Hill A1 at Điện Biên Phủ. The monsoon came, the trenches filled with mud, and neither side would give way.",
+   "In the end, Vietnamese soldiers secretly dug a tunnel deep into the hill, and packed it with nearly a ton of explosives.",
+   "On the night of May sixth, 1954, the whole hill shook.",
+   "The next afternoon, a red flag flew over the French command bunker.",
+   "Today, you can still see the crater on Hill A1.",
+   "Follow for more stories from Asia!"
+  ]
+ },
+ {
+  "id": "v3_kien",
+  "seal": "越",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-vietnam-bamboo-flute-143601.mp3",
+   90
+  ],
+  "hook": {
+   "vi": "CHỮ DO KIẾN VIẾT",
+   "en": "WORDS WRITTEN BY ANTS"
+  },
+  "shots": [
+   "assets/vietnam/clips/ll_v11.mp4",
+   {
+    "src": "assets/vietnam/images/ll_v11.jpg",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.3
+   },
+   {
+    "src": "assets/vietnam/images/ll_v4.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v5.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   },
+   {
+    "src": "assets/vietnam/images/ll_v14.jpg",
+    "f": [
+     0.5,
+     0.45
+    ],
+    "z": 1.15
+   }
+  ],
+  "vi": [
+   "Có những chiếc lá mang dòng chữ do kiến viết, và người dân tin đó là ý trời.",
+   "Tương truyền, quân sư Nguyễn Trãi lấy mỡ, có sách chép là mật, viết lên lá cây tám chữ: Lê Lợi vi quân, Nguyễn Trãi vi thần.",
+   "Nghĩa là Lê Lợi làm vua, Nguyễn Trãi làm tôi.",
+   "Kiến bò đến ăn, đục thủng lá thành chữ. Người dân nhặt được, tin rằng trời đã chọn Lê Lợi.",
+   "Mười năm sau, năm 1428, Lê Lợi lên ngôi thật, và Nguyễn Trãi viết Bình Ngô đại cáo.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "Some leaves once carried words written by ants, and people believed it was a sign from Heaven.",
+   "Legend says the strategist Nguyễn Trãi wrote eight words on leaves with honey: Lê Lợi will be king, Nguyễn Trãi his minister.",
+   "Ants came to eat the honey, and carved the words right into the leaves.",
+   "Villagers found them, and believed Heaven had chosen Lê Lợi to free Vietnam.",
+   "Ten years later, in 1428, Lê Lợi really did become king.",
+   "Follow for more stories from Asia!"
+  ]
  }
 ]
