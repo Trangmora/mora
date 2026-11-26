@@ -65,7 +65,7 @@ function sW(t){const t0=g('s8');title(null,'AI BỊ ẢNH HƯỞNG?',t0);
  box(680,180,540,380,g('k_a2'),{},a=>{photo('tanks',14,14,512,200);txt('Doanh nghiệp dùng khí',30,268,{size:30});n2o(30+tw('Doanh nghiệp dùng khí ',30),268,30);txt('cho thực phẩm, y tế:',30,310,{size:30});txt('theo dõi quy định Chính phủ',30,352,{size:28,w:600,col:GREY})});
  source(SRC2,1)}
 function sE(t){vxTodo(g('s9'),[[g('k_t1'),'Chủ quán, cửa hàng: dừng bán, quảng cáo','bóng cười trước 01/01/2027'],[g('s10'),'Phụ huynh, nhà trường:','cảnh báo học sinh về tác hại khí cười'],[g('s11'),'Thấy nơi bán bóng cười:','báo công an xã, phường'],[g('s12'),'Doanh nghiệp dùng khí N₂O hợp pháp:','theo dõi nghị định hướng dẫn']])}
-function sF(t){vxDisclaimer(g('out'),'Luật 24/2026/QH16 sửa đổi Luật Đầu tư · thông qua 24/8/2026 · cấm N₂O từ 01/01/2027','Hiệu lực chung của luật: 01/3/2027',g('k_src'),SRC1+'  ·  Ảnh minh họa: Unsplash')}
+function sF(t){vxDisclaimer(g('out'),'Luật 24/2026/QH16 (sửa đổi Luật Đầu tư) · thông qua 24/8/2026','Cấm kinh doanh N₂O từ 01/01/2027 · hiệu lực chung 01/3/2027',g('k_src'),SRC1+'  ·  Ảnh minh họa: Unsplash')}
 defineEpisode({header:'Luật 24/2026/QH16 sửa đổi Luật Đầu tư  ·  thông qua 24/8/2026  ·  cấm N₂O từ 01/01/2027',
  images:{balloons:'img/balloons.jpg',bar:'img/bar.jpg',tanks:'img/tanks.jpg'},
  scenes:[[0,sA],[()=>g('op2')-.15,sM],[()=>g('s1')-.15,sP],[()=>g('s2')-.15,sD],[()=>g('s3')-.15,sB],[()=>g('s4')-.15,sH],[()=>g('s6')-.15,sE6],[()=>g('s7')-.15,sC],[()=>g('s8')-.15,sW],[()=>g('s9')-.15,sE],[()=>g('out')-.15,sF]]});
