@@ -6,7 +6,7 @@ const [html, out, w = 1280, h = 720, fps = 30, t0a, t1a, stills] = process.argv.
 const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const pg = await b.newPage({ viewport: { width: +w, height: +h } });
 pg.on('console', m => { if (m.type() === 'error') console.log('LỖI trang:', m.text()); }); pg.on('pageerror', e => console.log('LỖI:', e.message));
-await pg.goto('file://' + path.resolve(html) + `?cap=1&w=${w}&h=${h}`); await pg.waitForFunction('window.READY === true', null, { timeout: 120000 });
+await pg.goto('file://' + path.resolve(html) + `?cap=1&w=${w}&h=${h}` + (process.env.CAM ? '&cam=' + process.env.CAM : '')); await pg.waitForFunction('window.READY === true', null, { timeout: 120000 });
 const grab = t => pg.evaluate(t => { renderAt(t); return document.querySelector('canvas').toDataURL('image/jpeg', .93); }, t).then(u => Buffer.from(u.split(',')[1], 'base64'));
 if (stills) { for (const s of stills.split(',')) { fs.writeFileSync(`${out}_${s}.jpg`, await grab(+s)); console.log('ảnh', s); } await b.close(); process.exit(0); }
 const dur = await pg.evaluate('window.FILM_DUR'), t0 = +(t0a || 0), t1 = +(t1a || dur), n = Math.round((t1 - t0) * fps);

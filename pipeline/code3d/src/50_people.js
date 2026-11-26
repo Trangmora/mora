@@ -17,31 +17,9 @@ const woodMat2 = litMat(`vec3(.20,.12,.07) * (.7 + .5*n3(vec3(vL.x*14., vL.y*2.,
 const hull = new THREE.Mesh(hullGeo(), woodMat2); hull.position.y = .12; boat.add(hull);
 for (const x of [-1.2, -.2, .9]) { const sb = new THREE.Mesh(new THREE.BoxGeometry(.12, .04, 1.05), woodMat); sb.position.set(x, .3, 0); boat.add(sb); }
 const cyl = (r1, r2, h, mat, seg = 14) => { const g = new THREE.CylinderGeometry(r1, r2, h, seg); g.translate(0, -h / 2, 0); return new THREE.Mesh(g, mat); };
-// Người: hông -> thân -> vai -> tay; trục quay ở khớp
-const man = new THREE.Group(); man.position.set(.2, .0, .05); boat.add(man);
-const legL = cyl(.075, .06, .72, darkMat); legL.position.set(-.1, .74, 0); man.add(legL);
-const legR = cyl(.075, .06, .72, darkMat); legR.position.set(.1, .74, 0); man.add(legR);
-const hip = new THREE.Group(); hip.position.y = .74; man.add(hip);
-const torso = new THREE.Mesh(new THREE.LatheGeometry([[.0,-.32],[.24,-.3],[.22,-.05],[.19,.25],[.21,.5],[.12,.62],[.0,.64]].map(a => new THREE.Vector2(a[0], a[1])), 20), tunicMat);
-hip.add(torso);
-const belt = new THREE.Mesh(new THREE.TorusGeometry(.2, .03, 6, 20).rotateX(Math.PI / 2), darkMat); belt.position.y = .02; hip.add(belt);
-const head = new THREE.Group(); head.position.y = .76; hip.add(head);
-head.add(new THREE.Mesh(new THREE.SphereGeometry(.11, 20, 16).scale(.92, 1.08, 1), skinMat));
-for (const sx of [-.038, .038]) { const ey = new THREE.Mesh(new THREE.SphereGeometry(.012, 8, 6), darkMat); ey.position.set(sx, .015, .095); head.add(ey); }
-{ const no = new THREE.Mesh(new THREE.ConeGeometry(.016, .04, 8).rotateX(Math.PI / 2), skinMat); no.position.set(0, -.01, .11); head.add(no);
-  const be = new THREE.Mesh(new THREE.SphereGeometry(.05, 10, 8).scale(1, .7, .6), darkMat); be.position.set(0, -.085, .07); head.add(be); }
-const wrap = new THREE.Mesh(new THREE.CylinderGeometry(.118, .115, .07, 20), darkMat); wrap.position.y = .05; head.add(wrap);
-const knot = new THREE.Mesh(new THREE.SphereGeometry(.05, 12, 10), darkMat); knot.position.set(0, .14, -.04); head.add(knot);
-const neck = cyl(.045, .05, .14, skinMat); neck.position.y = .7; hip.add(neck);
-function arm(side) {
-  const sh = new THREE.Group(); sh.position.set(side * .21, .56, 0); hip.add(sh);
-  const up = cyl(.055, .048, .32, tunicMat); sh.add(up);
-  const el = new THREE.Group(); el.position.y = -.32; sh.add(el);
-  const lo = cyl(.046, .036, .3, tunicMat); el.add(lo);
-  const hand = new THREE.Mesh(new THREE.SphereGeometry(.045, 10, 8), skinMat); hand.position.y = -.32; el.add(hand);
-  return { sh, el, hand };
-}
-const armL = arm(-1), armR = arm(1);
+// Người: dựng bằng SDF + bộ xương (40_human.js)
+const fisher = makeHuman(); fisher.mesh.position.set(.2, .02, .05); boat.add(fisher.mesh);
+const BN = fisher.bones;
 // Đuốc ở mũi thuyền
 const pole = cyl(.025, .03, 1.5, woodMat); pole.position.set(1.85, 1.62, .3); boat.add(pole);
 const flameMat = new THREE.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,

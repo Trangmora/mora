@@ -14,14 +14,22 @@ function film(t) {
   boat.updateMatrixWorld(true);
   // tư thế: 0-6 thả lưới chờ; 6-11.5 kéo lưới (cúi xuống rồi đứng lên, ba nhịp); 12.5+ giơ lưỡi gươm lên ngắm
   const pull = smooth(6.2, 11.5, t), lift = smooth(12.6, 15, t), beat = Math.sin(clamp((t - 6.2) / 5.3, 0, 1) * Math.PI * 3);
-  hip.rotation.x = lerp(lerp(.25, .55 - pull * .4 + beat * .12, smooth(5.5, 6.5, t)), .05, lift);
-  hip.rotation.y = lerp(0, .5, lift);
-  head.rotation.x = lerp(.35, -.25, lift); head.rotation.y = lerp(0, .25, lift);
-  const reach = lerp(-1.25 + pull * .5 + beat * .25, -2.3, lift);
-  armL.sh.rotation.set(reach, 0, -.15); armR.sh.rotation.set(lerp(reach, -1.1, lift), 0, .15);
-  armL.el.rotation.set(lerp(-.6, -.4, lift), 0, 0); armR.el.rotation.set(lerp(-.6, -.9, lift), 0, 0);
-  man.updateMatrixWorld(true);
-  const hL = armL.hand.getWorldPosition(new THREE.Vector3()), hR = armR.hand.getWorldPosition(new THREE.Vector3());
+  const bt = clamp((t - 6.2) / 5.3, 0, 1), crouch = smooth(5.4, 6.6, t) * (1 - lift);
+  const breath = Math.sin(t * 1.7) * .018;
+  BN.hip.position.y = .92 - crouch * (.05 + beat * .02);
+  BN.thighL.rotation.x = -crouch * (.4 + beat * .1); BN.thighR.rotation.x = -crouch * (.32 + beat * .1);
+  BN.shinL.rotation.x = crouch * (.65 + beat * .15); BN.shinR.rotation.x = crouch * (.55 + beat * .15);
+  BN.footL.rotation.x = -crouch * .3; BN.footR.rotation.x = -crouch * .25;
+  BN.spine.rotation.x = lerp(.12, .42 - pull * .18 + beat * .12, crouch) * (1 - lift) + lift * .02;
+  BN.chest.rotation.x = lerp(.08, .2 + beat * .06, crouch) * (1 - lift) - lift * .08 + breath;
+  BN.spine.rotation.y = lerp(0, .35, lift) + Math.sin(t * .6) * .03;
+  BN.neck.rotation.x = lerp(.25, .12, lift); BN.head.rotation.x = lerp(.3 - beat * .1, -.45, lift); BN.head.rotation.y = lerp(Math.sin(t * .4) * .1, .15, lift);
+  const reach = -(.95 + crouch * (.35 - beat * .3)) ;
+  fisher.pose('uarmL', lerp(reach, -.25, lift), 0, lerp(.25, .1, lift)); fisher.pose('uarmR', lerp(reach, -2.75, lift), 0, lerp(-.25, .15, lift));
+  BN.farmL.rotation.set(lerp(-.45 + beat * .25, -.3, lift), 0, 0); BN.farmR.rotation.set(lerp(-.45 + beat * .25, -.15, lift), 0, 0);
+  BN.handL.rotation.x = -.2; BN.handR.rotation.x = lerp(-.2, .3, lift);
+  boat.updateMatrixWorld(true);
+  const hL = BN.handL.localToWorld(V3(0, -.05, .02)), hR = BN.handR.localToWorld(V3(0, -.05, .02));
   // lưới: mép trên giữa hai bàn tay, thân lưới chìm dưới nước rồi được kéo lên
   const top = hL.clone().add(hR).multiplyScalar(.5), depth = lerp(2.2, .55, pull), out = lerp(1.4, .5, pull);
   const P = (u, v) => new THREE.Vector3(top.x + (u - .5) * lerp(1.6, .8, v * pull), top.y - v * depth - Math.sin(u * Math.PI) * v * .2, top.z + v * out + .15);
@@ -32,7 +40,7 @@ function film(t) {
   // lưỡi gươm: nằm trong lưới (dưới nước), sáng dần; khi giơ lên thì nằm trong tay phải
   const inNet = P(.5, .85), held = hR.clone().add(new THREE.Vector3(0, .02, 0));
   blade.position.copy(inNet.clone().lerp(held, lift));
-  blade.rotation.set(0, lerp(-.25, -1.2, lift), lerp(.15, 1.15, lift));
+  blade.rotation.set(0, lerp(-.25, -1.3, lift), lerp(.15, 1.4, lift));
   const glow = smooth(7.5, 11, t) * .7 + lift * .6 + Math.max(0, Math.sin(t * 2.3)) * .08 * lift;
   bladeMat.uniforms.uGlow.value = glow;
   aura.position.copy(blade.localToWorld(new THREE.Vector3(.55, 0, 0))); aura.quaternion.copy(camera.quaternion);
