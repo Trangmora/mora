@@ -26,6 +26,7 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | TH01_ThaiLan_vi.mp4 | Vì sao Thái Lan chưa từng bị thực dân đô hộ | Việt | 3:09 | 13 hình Nano Banana, 5 clip fal |
 | TH01_ThaiLan_en.mp4 | Why Thailand was never colonized | Anh | 3:24 | giọng nhanh 1,17 lần |
 | MM01_Myanmar_vi.mp4 | Lịch sử Myanmar qua các thời đại | Việt | 3:37 | 20 hình Nano Banana, chưa có clip (fal.ai hết số dư) |
+| MM01_Myanmar_en.mp4 | Myanmar: a thousand years of history | Anh | 3:38 | chưa có clip; giọng nhanh 1,2 lần |
 
 ## Video ngắn dọc (videos/shorts/)
 Mỗi video là một câu chuyện trọn vẹn 30–45 giây, 720×1280, có bản `_vi` và `_en`. Kịch bản ở `shorts/specs.json`, dựng bằng `pipeline/shorts/make_short.py`. Bản lưu ở đây đã nén nhẹ; bản đăng nằm trên R2.
