@@ -48,7 +48,7 @@ function sX(t){const t0=g('s6');title(null,'CHUYỂN DỮ LIỆU RA NƯỚC NGO�
  box(60,196,540,330,g('k_x1')-.2,{},a=>{photo('server',14,14,512,170);txt('TỔ CHỨC VI PHẠM QUY ĐỊNH',30,232,{size:21,col:GREY,ls:2});txt('chuyển dữ liệu cá nhân',30,276,{size:32});txt('ra nước ngoài',30,314,{size:32})});
  arrow(612,360,668,360,g('k_x2')-.3,.22);
  box(680,196,540,330,g('k_x2'),{lw:7},a=>{txt('PHẠT TỚI',30,60,{size:22,col:GREY,ls:3});txt('5%',30,190,{size:110,col:RED});txt('doanh thu năm trước liền kề',30,262,{size:30})});
- source('Nguồn: Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Điều 8 (theo Thư viện Pháp luật, Xây dựng chính sách). Bản dự thảo từng ghi 1%–5%.',1)}
+ source('Nguồn: Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Điều 8 (theo Thư viện Pháp luật, Xây dựng chính sách). Chờ đối chiếu văn bản gốc.',1)}
 function sK(t){const t0=g('s7');title(null,'NGOÀI TIỀN PHẠT',t0);
  box(60,200,540,280,g('k_k1')-.2,{lw:6},a=>{icon('paper',30,40,120,g('k_k1'),.5);txt('Buộc xóa',180,110,{size:40,col:RED});txt('dữ liệu đã xử lý',180,160,{size:30});txt('trái phép',180,200,{size:30})});
  box(680,200,540,280,g('k_k2'),{lw:6},a=>{icon('coin',30,40,120,g('k_k2'),.5);txt('Nộp lại',180,110,{size:40,col:RED});txt('khoản thu',180,160,{size:30});txt('bất hợp pháp',180,200,{size:30})});

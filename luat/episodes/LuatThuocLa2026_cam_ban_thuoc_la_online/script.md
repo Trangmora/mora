@@ -1,0 +1,53 @@
+# Từ 1/7/2027, cấm bán thuốc lá qua mạng và cấm trưng bày thuốc lá
+
+Văn bản: Luật sửa đổi, bổ sung một số điều của Luật Phòng, chống tác hại của thuốc lá. Quốc hội khóa XVI thông qua 21/11/2026. Hiệu lực 01/7/2027. Số hiệu: chờ công bố chính thức. Thời lượng: khoảng 2 phút 10 giây.
+
+## Lời đọc
+
+**op1**: Từ ngày một tháng bảy năm 2027, thuốc lá không được bán qua mạng, qua sàn thương mại điện tử, hay qua máy bán hàng tự động. Nơi bán cũng không được trưng bày thuốc lá.
+
+**op2**: Video này giải thích: luật mới cấm những gì, điều gì đã bị cấm từ trước, và người bán, người mua nên làm gì.
+
+**s1**: Đây là Luật sửa đổi, bổ sung một số điều của Luật Phòng, chống tác hại của thuốc lá. Quốc hội thông qua ngày hai mươi mốt tháng mười một năm 2026. Luật có hiệu lực từ ngày một tháng bảy năm 2027.
+
+**s2**: Môi trường điện tử là việc mua bán qua mạng: sàn thương mại điện tử, mạng xã hội, trang web, ứng dụng. Trưng bày là đặt sản phẩm, bao bì, hình ảnh ở nơi người mua nhìn thấy.
+
+**s3**: Hiện nay, theo Điều chín của Luật năm 2012, đã cấm bán thuốc lá cho người chưa đủ mười tám tuổi, và cấm bán thuốc lá bằng máy bán thuốc lá tự động.
+
+**s4**: Luật mới bổ sung: cấm bán thuốc lá trên môi trường điện tử, bao gồm sàn thương mại điện tử. Theo VietnamPlus, ngoại lệ là giao dịch giữa các tổ chức, cá nhân kinh doanh thuốc lá hợp pháp với nhau.
+
+**s5**: Lệnh cấm bán qua máy bán hàng tự động tiếp tục được quy định trong luật sửa đổi.
+
+**s6**: Luật mới còn nghiêm cấm trưng bày thuốc lá, bao bì, hình ảnh, nhãn hiệu thuốc lá, tại điểm bán và trên môi trường điện tử, trừ trường hợp Chính phủ cho phép. Mức độ chi tiết khác nhau giữa các bài báo, nên cần đọc văn bản gốc.
+
+**s6b**: Ví dụ: một tài khoản mạng xã hội đăng bán thuốc lá điếu, giao tận nhà. Từ ngày một tháng bảy năm 2027, đây là bán thuốc lá trên môi trường điện tử, thuộc hành vi bị cấm.
+
+**s7**: Ai bị ảnh hưởng? Người bán hàng online, chủ tiệm tạp hóa, đại lý thuốc lá. Và người quen đặt mua thuốc lá qua mạng. Mức xử phạt theo luật mới còn chờ Chính phủ hướng dẫn.
+
+**s8**: Bạn nên làm gì? Một: người bán trên sàn, trên mạng xã hội, hãy gỡ sản phẩm thuốc lá trước ngày một tháng bảy năm 2027.
+
+**s9**: Hai: chủ cửa hàng, đại lý, hãy rà lại cách trưng bày thuốc lá.
+
+**s10**: Ba: không bán thuốc lá cho người chưa đủ mười tám tuổi. Quy định này đã có từ trước.
+
+**s11**: Bốn: thấy rao bán thuốc lá trên mạng sau khi luật có hiệu lực, hãy phản ánh với sàn, hoặc cơ quan chức năng.
+
+**out**: Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý. Hãy kiểm tra văn bản gốc.
+
+## Dữ kiện trên hình
+
+| Dữ kiện | Giá trị | Nguồn (sources.md) | Mức kiểm chứng |
+|---|---|---|---|
+| Thông qua, hiệu lực | 21/11/2026; 01/7/2027 | 4, 5, 1 | XÁC MINH |
+| Cấm bán thuốc lá trên môi trường điện tử, kể cả sàn TMĐT | có | 1, 2, 3 | XÁC MINH |
+| Cấm bán qua máy bán hàng tự động | có | 1, 2, 3 | XÁC MINH |
+| Cấm trưng bày thuốc lá, bao bì, hình ảnh, nhãn hiệu tại điểm bán và trên môi trường điện tử, trừ khi Chính phủ cho phép | có | 7, 8, 9, 10 | XÁC MINH (mức chi tiết khác nhau giữa các bài) |
+| Đã cấm từ Luật 2012 (Điều 9): bán cho người dưới 18 tuổi; bán bằng máy bán thuốc lá tự động | có | 11, 12, 13 | Quy định hiện hành |
+| Ngoại lệ: giao dịch giữa các tổ chức, cá nhân kinh doanh thuốc lá hợp pháp | có | 6 | 1 NGUỒN, lời và hình ghi "theo VietnamPlus" |
+| Mức xử phạt theo luật mới | chờ Chính phủ hướng dẫn | nhận định | |
+
+## Chỗ cần chủ kênh lưu ý
+- Phát hiện khi kiểm: "cấm bán bằng máy bán thuốc lá tự động" đã có ở Điều 9 Luật 09/2012/QH13, nên video nói rõ đây không phải điều mới hoàn toàn (research cũ ghi "chưa có quy định cấm riêng" là chưa đúng). Điểm mới thật sự là cấm bán trên môi trường điện tử và cấm trưng bày.
+- Yếu nhất: ngoại lệ "giao dịch giữa các bên kinh doanh hợp pháp" chỉ có VietnamPlus. Nên đối chiếu khoản sửa đổi Điều 9 trong văn bản luật.
+- Tập này cùng văn bản với tập "cấm thuốc lá điện tử"; hai tập dùng chung cảnh "Văn bản nào, khi nào".
+- Không đưa: lộ trình tăng diện tích cảnh báo sức khỏe (dự kiến 1/7/2029, Chính phủ quy định sau), điều chuyển tiếp 1/1/2028 (1 nguồn), số phiếu (nguồn lệch).

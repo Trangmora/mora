@@ -44,7 +44,7 @@ function sO(t){const t0=g('s5');title(null,'SO VỚI TRƯỚC ĐÂY',t0,{sub:'Kh
  arrow(592,340,662,340,g('k_cu2')+.6,.22);
  box(680,190,540,300,g('k_cu2')+.8,{lw:7},a=>{txt('NGHỊ ĐỊNH 204/2026 · TỪ 01/8/2026',30,54,{size:21,col:RED,ls:1});txt('1 – 2',30,150,{size:72,col:RED});txt('triệu đồng',30,220,{size:58,col:RED})});
  box(330,512,620,80,g('k_x'),{},a=>{txt('Mức tối đa: gấp 2,5 lần mức cũ',310,54,{size:32,align:'center'})});
- source('Mức cũ: khoản 2 Điều 7 NĐ 90/2017/NĐ-CP (Thư viện Pháp luật, Hà Nội Online). Mức mới: '+SRC1.replace('Nguồn: ',''),1)}
+ source('Mức cũ: khoản 2 Điều 7 NĐ 90/2017/NĐ-CP (Thư viện Pháp luật, Hà Nội Online). Mức mới: LuatVietnam, Thư viện Pháp luật, An ninh Thủ đô.',1)}
 function sT(t){const t0=g('s6');title(null,'TỔ CHỨC VI PHẠM',t0);
  box(60,200,520,260,g('k_tc')-.2,{},a=>{txt('CÁ NHÂN',30,54,{size:22,col:GREY,ls:3});txt('1 – 2 triệu',30,160,{size:62})});
  arrow(592,330,662,330,g('k_tc')+.3,.22);
@@ -64,7 +64,7 @@ function sD(t){const t0=g('s8');title(null,'ÁP DỤNG TỪ KHI NÀO?',t0);
  box(500,350,680,180,g('k_hl3'),{lw:6},a=>{txt('HÀNH VI TỪ 01/8/2026',30,50,{size:21,col:RED,ls:2});txt('Xử phạt theo mức mới',30,112,{size:40});txt('Nghị định 204/2026/NĐ-CP',30,154,{size:26,w:600,col:GREY})});
  source(SRC2,1)}
 function sE(t){vxTodo(g('s9'),[[g('k_t1'),'Đưa chó ra đường: đeo rọ mõm, dây xích,','luôn có người dắt'],[g('s10'),'Tiêm phòng dại cho chó, mèo đầy đủ,','giữ giấy chứng nhận tiêm phòng'],[g('s11'),'Không thả rông chó','ra ngõ, ra đường'],[g('s12'),'Bị chó cắn: đến cơ sở y tế ngay,','báo chính quyền địa phương']])}
-function sF(t){vxDisclaimer(g('out'),'Nghị định 204/2026/NĐ-CP · ban hành 11/6/2026 · hiệu lực 01/8/2026 (đang áp dụng)','Thay thế Nghị định 90/2017/NĐ-CP',g('k_src'),SRC1+'  ·  Ảnh minh họa: Unsplash')}
+function sF(t){vxDisclaimer(g('out'),'Nghị định 204/2026/NĐ-CP · ban hành 11/6/2026 · hiệu lực 01/8/2026','Đang áp dụng · thay thế Nghị định 90/2017/NĐ-CP',g('k_src'),SRC1+'  ·  Ảnh minh họa: Unsplash')}
 defineEpisode({header:'Nghị định 204/2026/NĐ-CP  ·  ban hành 11/6/2026  ·  hiệu lực 01/8/2026',
  images:{muzzle:'img/muzzle.jpg',walk:'img/walk.jpg'},
  scenes:[[0,sA],[()=>g('op2')-.15,sM],[()=>g('s1')-.15,sP],[()=>g('s2')-.15,sB],[()=>g('s3')-.15,sC],[()=>g('s4')-.15,sV],[()=>g('s5')-.15,sO],[()=>g('s6')-.15,sT],[()=>g('s7')-.15,sX],[()=>g('s8')-.15,sD],[()=>g('s9')-.15,sE],[()=>g('out')-.15,sF]]});
