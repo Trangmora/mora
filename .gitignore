@@ -10,3 +10,6 @@ shorts/out/*.mp3
 shorts/out/
 assets/*/3d/fal_*.json
 assets/*/3d/g?.json
+pipeline/code3d/node_modules/
+pipeline/code3d/frames/
+pipeline/code3d/dist/

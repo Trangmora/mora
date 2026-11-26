@@ -1,0 +1,1 @@
+{"name":"code3d","private":true,"description":"Cảnh 3D dựng hoàn toàn bằng code (three.js), kết xuất từng khung bằng Chromium ẩn","dependencies":{"three":"0.180.0"}}
