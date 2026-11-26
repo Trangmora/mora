@@ -1735,5 +1735,100 @@
    "Ten years later, in 1428, Lê Lợi really did become king.",
    "Follow for more stories from Asia!"
   ]
+ },
+ {
+  "id": "v1_guom3d",
+  "seal": "越",
+  "music": [
+   "assets/music/vprodmusic_asia_bgm-vietnam-bamboo-flute-143601.mp3",
+   10
+  ],
+  "hook": {
+   "vi": "THANH SẮT TRONG LƯỚI",
+   "en": "THE IRON IN THE NET"
+  },
+  "shots": [
+   {
+    "src": "assets/vietnam/3d/g1.png",
+    "f": [
+     0.42,
+     0.5
+    ],
+    "z": 1.12,
+    "par": 22
+   },
+   {
+    "src": "assets/vietnam/3d/g2.png",
+    "f": [
+     0.55,
+     0.45
+    ],
+    "z": 1.1,
+    "par": 22
+   },
+   {
+    "src": "assets/vietnam/3d/g3.png",
+    "f": [
+     0.5,
+     0.4
+    ],
+    "z": 1.12,
+    "par": 22
+   },
+   {
+    "src": "assets/vietnam/3d/g4.png",
+    "f": [
+     0.4,
+     0.45
+    ],
+    "z": 1.12,
+    "par": 22
+   },
+   {
+    "src": "assets/vietnam/3d/g4.png",
+    "f": [
+     0.55,
+     0.35
+    ],
+    "z": 1.25,
+    "par": 16
+   },
+   {
+    "src": "assets/vietnam/3d/g5.png",
+    "f": [
+     0.45,
+     0.5
+    ],
+    "z": 1.12,
+    "par": 22
+   },
+   {
+    "src": "assets/vietnam/3d/g6.png",
+    "f": [
+     0.5,
+     0.5
+    ],
+    "z": 1.12,
+    "par": 22
+   }
+  ],
+  "vi": [
+   "Một người đánh cá ba lần thả lưới, ba lần vớt lên cùng một thanh sắt.",
+   "Ông ném đi, nó lại quay về lưới. Soi dưới đuốc, ông thấy hai chữ: Thuận Thiên, thuận theo ý trời.",
+   "Truyền thuyết kể rằng ít lâu sau, Lê Lợi thấy một chuôi gươm nạm ngọc phát sáng trên ngọn cây đa.",
+   "Đem lưỡi tra vào chuôi, vừa khít như được đúc cho nhau.",
+   "Từ đó, thanh gươm theo ông suốt mười năm đánh đuổi quân Minh.",
+   "Và khi đất nước yên bình, một con Rùa Vàng đã nổi lên giữa hồ để đòi lại gươm.",
+   "Theo dõi mình để nghe thêm chuyện văn hóa Á Đông nhé!"
+  ],
+  "en": [
+   "A fisherman cast his net three times, and three times he pulled up the same bar of iron.",
+   "He threw it away, and it came back. Under a torch, he saw two words: the will of Heaven.",
+   "Legend says that later, the rebel leader Lê Lợi saw a jeweled sword hilt glowing at the top of a banyan tree.",
+   "He fitted the blade into the hilt. A perfect match.",
+   "That sword followed him through ten years of war to free Vietnam from Ming China.",
+   "And when peace came, a golden turtle rose from a lake in Hanoi to take it back.",
+   "Follow for more stories from Asia!"
+  ]
  }
 ]

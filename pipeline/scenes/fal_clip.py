@@ -4,7 +4,8 @@ Mỗi prompt tự thêm câu giữ phong cách (STYLE_GUIDE mục 5). Xuất <ou
 import sys, json, base64, io, subprocess, time, concurrent.futures as cf
 from PIL import Image
 OUT = sys.argv[1]; jobs = [a.split('=', 1) for a in sys.argv[2:]]
-TAIL = " Gentle, slow, natural motion. Static camera, no zoom. Keep the exact flat paper-cut illustration style, colors, outlines and faces."
+import os
+TAIL = os.environ.get("FAL_TAIL", " Gentle, slow, natural motion. Static camera, no zoom. Keep the exact flat paper-cut illustration style, colors, outlines and faces.")
 EP = 'https://queue.fal.run/fal-ai/wan/v2.2-a14b/image-to-video/turbo'
 def run(job):
     name, spec = job; img, motion = spec.split('::', 1)

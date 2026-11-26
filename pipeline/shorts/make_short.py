@@ -21,7 +21,7 @@ for i, (sid, _) in enumerate(segs):
         a = s + (e - s) * j / n; b = s + (e - s) * (j + 1) / n
         sh = {"s": a, "e": b, "tr": "none" if i == 0 and j == 0 else "cross"}
         if src['src'].endswith('.mp4'): sh.update({"clip": src['src'], "speed": .6, "clip_t0": (a - s) * .6})
-        else: sh.update({"img": src['src'], "par": 0})
+        else: sh.update({"img": src["src"], "par": src.get("par", 0)})
         if 'f' in src and j == 0: sh.update({"f": [src['f'][0], src['f'][1]], "f1": [src['f'][0] + .06, src['f'][1]], "z": [src.get('z', 1.0), src.get('z', 1.0) + .06]})
         if j == 1: sh['z'] = [1.22, 1.3]
         if src.get('fx'): sh['fx'] = src['fx']
