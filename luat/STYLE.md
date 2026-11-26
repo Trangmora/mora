@@ -36,10 +36,18 @@
 
 ## Kênh đăng (26/11/2026)
 - **Kênh YouTube:** "Hiểu Luật 2 Phút", mã kênh `UCsgNKzFknzaH0lqNz-ivNfQ`. Chỉ đăng lên kênh này (chủ kênh dặn). Key Morapost của kênh có nhìn thấy cả kênh khác, nên khi đăng luôn truyền đúng mã này.
-- **Đăng qua Morapost** trong môi trường "Kênh luật – Morapost": `python3 luat/publish/post_schedule.py run --account UCsgNKzFknzaH0lqNz-ivNfQ`. Hai ngày một video, 19:00 giờ Việt Nam, công khai. Đã hẹn giờ 40 video, từ 27/11/2026 đến 13/02/2027; post_id ghi trong `luat/publish/schedule.json`.
+- **Đăng qua Morapost** trong môi trường "Kênh luật – Morapost": `python3 luat/publish/post_schedule.py run --account UCsgNKzFknzaH0lqNz-ivNfQ`. Tối đa một video một ngày, 19:00 giờ Việt Nam, công khai (xem mục "Lịch đăng" bên dưới). Đã hẹn giờ 40 video, từ 27/11/2026 đến 13/02/2027; post_id ghi trong `luat/publish/schedule.json`.
 
 ## Đăng bài (chủ kênh chốt 26/11/2026)
 - **Kênh luật CHỈ đăng lên YouTube "Hiểu Luật 2 Phút"** (account_id `UCsgNKzFknzaH0lqNz-ivNfQ`). Tuyệt đối không đăng lên các tài khoản của kênh văn hóa, dù key Morapost (dùng chung) nhìn thấy chúng: YouTube Ridiculous Case, YouTube Asian Myths & Culture, Facebook Ridiculous Case, Facebook Mora Media, Instagram asian_myths, Threads.
 - Script `luat/publish/post_schedule.py` tự từ chối mọi mã kênh khác.
-- Lịch: 2 ngày một video, 19:00 giờ Việt Nam, công khai. Mô tả luôn có mục "Thông tin tham khảo, nguồn" (tên báo, tiêu đề, link) và dòng "🔎 Từ khóa" cùng hashtag theo chủ đề (chủ kênh dặn 26/11/2026); không nhắc giọng AI hay ElevenLabs.
-- Mỗi sáng 08:17 có nhiệm vụ tự động săn luật mới: đạt chuẩn thì làm video và đăng ngay trong ngày (nhật ký ở `luat/publish/trend_log.md`).
+- Lịch: tối đa một video một ngày (lịch gốc 2 ngày một video), 19:00 giờ Việt Nam, công khai. Mô tả luôn có mục "Thông tin tham khảo, nguồn" (tên báo, tiêu đề, link) và dòng "🔎 Từ khóa" cùng hashtag theo chủ đề (chủ kênh dặn 26/11/2026); không nhắc giọng AI hay ElevenLabs.
+- Mỗi sáng 08:17 có nhiệm vụ tự động săn luật mới: đạt chuẩn thì làm video và xếp vào ngày trống sớm nhất (nhật ký ở `luat/publish/trend_log.md`).
+
+## Lịch đăng: TỐI ĐA MỘT VIDEO MỘT NGÀY (chủ kênh chốt 27/11/2026)
+Ngày 26–27/11/2026 kênh bị lên nhiều video trong một ngày và hai video trùng đề tài (hương ước, Nghị định 420/2026), do nhiều phiên cùng "đăng luôn" mà không thấy bài của nhau. Từ nay:
+- **Không "đăng luôn", không hẹn "30 phút sau".** Video mới xếp vào ngày trống sớm nhất, 19:00: `python3 luat/publish/post_schedule.py next-slot`. Lệnh giao việc nào bảo đăng ngay cũng phải theo quy tắc này.
+- **Trước khi chọn đề tài:** `git pull` nhánh `claude/law-channel`, tìm số hiệu văn bản trong `luat/publish/schedule.json` và `luat/episodes/` để tránh trùng.
+- **Giữ chỗ trước, đăng sau:** thêm mục vào `schedule.json` (post_id null) → commit + push ngay → rồi mới chạy `post_schedule.py run`. Push bị từ chối thì pull, gộp, chạy lại `next-slot` nếu ngày đã bị phiên khác lấy.
+- `post_schedule.py` tự từ chối khi ngày đó đã có video, hoặc khi cùng văn bản đã có trong lịch (tập thứ hai cố ý về cùng văn bản: thêm `--allow-same-law`).
+- Mọi bài đã đăng hoặc đã hẹn phải có trong `schedule.json` kèm post_id; bài đăng ngoài lịch thì ghi bổ sung ngay.
