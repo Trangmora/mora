@@ -19,8 +19,22 @@ def refs(ep, n=8):
         out.append(f'• {lab}\n  {url}'); seen.add(host)
         if len(out) >= n: break
     return out
+FOOT = """
+⚠️ Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý. Số liệu tổng hợp từ báo chí và cổng thông tin chính thống tại thời điểm làm video; hãy kiểm tra văn bản gốc trên vbpl.vn hoặc Công báo trước khi áp dụng.
+
+Ảnh minh họa: Unsplash.
+
+#luatmoi #phapluat #luatvietnam #hieuluat
+"""
+def from_publish(ep):
+    """Tạo mô tả từ <tập>/publish.json (các tập dựng sau đợt đầu)."""
+    j = json.load(open(os.path.join(EP, ep, 'publish.json'), encoding='utf-8'))
+    head = f"{j['intro']}\n\n📌 Văn bản: {j['van_ban']}\n📅 {j['moc']}\n" + (f"{j['so_hieu']}\n" if j.get('so_hieu') else '')
+    return head + '\nTrong video:\n' + '\n'.join('• ' + b for b in j['bullets']) + '\n' + FOOT
 for p in json.load(open(os.path.join(H, 'schedule.json'))):
-    f = os.path.join(H, f"desc_{p['file']}.txt"); d = open(f, encoding='utf-8').read()
+    f = os.path.join(H, f"desc_{p['file']}.txt")
+    if not os.path.exists(f): open(f, 'w', encoding='utf-8').write(from_publish(p['file'][:-3]))
+    d = open(f, encoding='utf-8').read()
     d = re.sub(r'\nNguồn: [^\n]*\n', '\n', d)
     d = re.sub(r'\n📚 THÔNG TIN THAM KHẢO.*?(?=\n⚠️)', '\n', d, flags=re.S)
     ep = p['file'][:-3]; r = refs(ep)
