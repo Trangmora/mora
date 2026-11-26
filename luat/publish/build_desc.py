@@ -23,21 +23,31 @@ FOOT = """
 ⚠️ Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý. Số liệu tổng hợp từ báo chí và cổng thông tin chính thống tại thời điểm làm video; hãy kiểm tra văn bản gốc trên vbpl.vn hoặc Công báo trước khi áp dụng.
 
 Ảnh minh họa: Unsplash.
-
-#luatmoi #phapluat #luatvietnam #hieuluat
 """
 def from_publish(ep):
     """Tạo mô tả từ <tập>/publish.json (các tập dựng sau đợt đầu)."""
     j = json.load(open(os.path.join(EP, ep, 'publish.json'), encoding='utf-8'))
     head = f"{j['intro']}\n\n📌 Văn bản: {j['van_ban']}\n📅 {j['moc']}\n" + (f"{j['so_hieu']}\n" if j.get('so_hieu') else '')
     return head + '\nTrong video:\n' + '\n'.join('• ' + b for b in j['bullets']) + '\n' + FOOT
+def hashtags(tags):
+    out = []
+    for t in tags.split(','):
+        h = '#' + re.sub(r'[^0-9a-zA-ZÀ-ỹđĐ]', '', t.strip().title())
+        if 3 < len(h) <= 30 and h.lower() not in [x.lower() for x in out]: out.append(h)
+    return out[:3]
+def kw_block(p):
+    tags = [t.strip() for t in p['tags'].split(',') if t.strip()]
+    hs = hashtags(p['tags']) + ['#LuatMoi', '#HieuLuat2Phut', '#PhapLuat']
+    return '\n🔎 Từ khóa: ' + ', '.join(tags[:10]) + '\n\n' + ' '.join(hs) + '\n'
 for p in json.load(open(os.path.join(H, 'schedule.json'))):
     f = os.path.join(H, f"desc_{p['file']}.txt")
     if not os.path.exists(f): open(f, 'w', encoding='utf-8').write(from_publish(p['file'][:-3]))
     d = open(f, encoding='utf-8').read()
     d = re.sub(r'\nNguồn: [^\n]*\n', '\n', d)
+    d = re.sub(r'\n🔎 Từ khóa:.*', '', d, flags=re.S)
+    d = re.sub(r'\n#luatmoi #phapluat #luatvietnam #hieuluat\n?', '\n', d)
     d = re.sub(r'\n📚 THÔNG TIN THAM KHẢO.*?(?=\n⚠️)', '\n', d, flags=re.S)
     ep = p['file'][:-3]; r = refs(ep)
     sec = '\n📚 THÔNG TIN THAM KHẢO, NGUỒN\n' + '\n'.join(r) + '\n'
-    d = d.replace('\n⚠️', sec + '\n⚠️', 1); d = re.sub(r'\n{3,}', '\n\n', d); open(f, 'w', encoding='utf-8').write(d)
+    d = d.replace('\n⚠️', sec + '\n⚠️', 1); d = d.rstrip() + '\n' + kw_block(p); d = re.sub(r'\n{3,}', '\n\n', d); open(f, 'w', encoding='utf-8').write(d)
     print(p['file'], len(r), 'nguồn,', len(d), 'ký tự')

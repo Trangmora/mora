@@ -31,7 +31,7 @@ Mở đầu nêu thay đổi chính → video này giải thích gì → văn b�
  "moc": "Ban hành/Quốc hội thông qua: dd/mm/yyyy (số phiếu nếu có) · Hiệu lực: dd/mm/yyyy",
  "so_hieu": "Số hiệu luật: chờ công bố chính thức  (bỏ trống nếu đã có số hiệu)",
  "bullets": ["5–7 ý trong video, có con số"],
- "tags": ["6–9 thẻ tìm kiếm tiếng Việt"]}
+ "tags": ["8–12 cụm từ khóa tiếng Việt người ta hay gõ tìm: tên văn bản, chủ đề, mức phạt, năm; 3 cụm đầu dùng làm hashtag"]}
 ```
 Không nhắc ElevenLabs, giọng AI hay Unsplash trong publish.json (phần mô tả tự thêm nguồn và câu lưu ý).
 
