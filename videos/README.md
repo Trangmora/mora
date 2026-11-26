@@ -20,6 +20,7 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | VN03_LeChiVien_vi.mp4 | Lịch sử Việt Nam · Vụ án Lệ Chi Viên | Việt | 3:35 | 14 hình Nano Banana, 5 clip fal; chữ trên màn hình tránh từ nhạy cảm |
 | VN03_LeChiVien_en.mp4 | Lịch sử Việt Nam · Vụ án Lệ Chi Viên | Anh | 3:36 | bỏ 3 đoạn phụ cho vừa độ dài; giọng nhanh 1,17 lần |
 | VN04_DienBienPhu_vi.mp4 | Lịch sử Việt Nam · Điện Biên Phủ | Việt | 3:12 | 14 hình Nano Banana, 6 clip fal |
+| VN04_DienBienPhu_en.mp4 | Lịch sử Việt Nam · Điện Biên Phủ | Anh | 3:33 | giọng nhanh 1,17 lần |
 | EP05_Ganges_vi.mp4 | Sông Hằng | Việt | 3:55 | 5 clip fal, nhạc Ấn Độ |
 | EP05_Ganges_en.mp4 | Sông Hằng | Anh | 4:43 | bản tiếng Anh |
 | TH01_ThaiLan_vi.mp4 | Vì sao Thái Lan chưa từng bị thực dân đô hộ | Việt | 3:09 | 13 hình Nano Banana, 5 clip fal |
