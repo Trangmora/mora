@@ -155,6 +155,9 @@ Extra outbound link keys for batch 3 (use like the others, `{{ext:KEY}}`): `fda-
 | `marketing-for-multi-location-chains` | marketing for multi-location chains (two-layer model, branch profiles, approval flow, one source of truth) | `marketing-cho-chuoi-nhieu-chi-nhanh` |
 | `agency-vs-in-house-vs-ai-automation` | agency vs in-house vs AI automation (comparison table, kinds of cost, 8 questions before signing) | `thue-agency-tuyen-nhan-vien-hay-ai-automation` |
 | `social-media-metrics-for-small-business` | 5 social media metrics to check weekly (where to find them, review table, simple A/B test) | `chi-so-mang-xa-hoi-nen-xem-moi-tuan` |
+| `holiday-content-plan-with-ai` | holiday content plan (Christmas, New Year, Tet 2027: 11-week calendar, what AI drafts, notice templates) | `ke-hoach-noi-dung-giang-sinh-nam-moi-tet-bang-ai` |
+| `how-to-write-a-faq-page-for-small-business` | how to write an FAQ page (where questions come from, 6 groups, 30-question template, one source) | `cach-viet-trang-hoi-dap-faq` |
+| `ai-marketing-rules-for-small-business` | rules for using AI in marketing (7 rules, pre-publish checklist, one-page team policy, when AI is wrong) | `nguyen-tac-dung-ai-trong-marketing` |
 | `dominos-brand-story`, `heinz-brand-story`, `glossier-brand-story`, `pizza-4ps-brand-story`, `cong-ca-phe-brand-story` | real brand stories (category `brand-stories`), each with sourced facts | see the files |
 
 Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.
@@ -186,7 +189,7 @@ Each blog article should include **2 to 4 outbound links to official resources**
 
 Do not attribute specific facts, numbers or quotes to these sources; link them as "the official place to do or read about this". Only use a link where it is genuinely relevant to the article.
 
-Keys added for AI marketing, SEO and GEO articles (facts from these may be stated with the link, see section 2): `google-ai-guide` (Google Search Central, May 2026: optimizing your website for generative AI features on Google Search), `google-ai-features` (Google Search Central: AI features and your website), `google-ai-controls` (Google blog, June 2026: new controls and insights for website owners), `geo-paper` (the research paper "GEO: Generative Engine Optimization", KDD 2024), `sej-geo-seo` (Search Engine Journal on Google's guide), `search-console` (Google Search Console), `pagespeed`, `claude` (Claude), `apify` (Apify), `morapost` (Morapost), `youtube-8-steps` (the 8-step video on the Trang AI channel). A new source needs a new entry in `EXT` in `src/build.cjs` first.
+Keys added for AI marketing, SEO and GEO articles (facts from these may be stated with the link, see section 2): `google-ai-guide` (Google Search Central, May 2026: optimizing your website for generative AI features on Google Search), `google-ai-features` (Google Search Central: AI features and your website), `google-ai-controls` (Google blog, June 2026: new controls and insights for website owners), `geo-paper` (the research paper "GEO: Generative Engine Optimization", KDD 2024), `sej-geo-seo` (Search Engine Journal on Google's guide), `search-console` (Google Search Console), `pagespeed`, `claude` (Claude), `apify` (Apify), `morapost` (Morapost), `youtube-8-steps` (the 8-step video on the Trang AI channel), `google-faq-changes` (Google Search Central blog, August 2023: changes to HowTo and FAQ rich results). A new source needs a new entry in `EXT` in `src/build.cjs` first.
 
 ## 4. Format A: landing page
 
