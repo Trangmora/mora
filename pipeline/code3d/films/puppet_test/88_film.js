@@ -1,9 +1,10 @@
 // Phim thử: nhân vật ảnh (OpenAI) làm rối có xương, đứng trên thuyền trong cảnh 3D code. 10 giây.
 const DUR = 10;
-const RIG = { split: { L: [[126, 360], [130, 540], [132, 580], [118, 620], [110, 660], [88, 700], [80, 760], [62, 800], [60, 870], [30, 1060]], R: [[398, 360], [394, 540], [392, 580], [405, 620], [413, 660], [434, 700], [430, 760], [457, 800], [462, 870], [500, 1060]] }, w: 527, h: 1431, height_m: 1.66, eyes: [[240, 137, 13, 5.5], [290, 137, 13, 5.5]], mouth: [265, 195, 19, 4], chin_y: 236,
+const RIG = { hideR: [418, 630, 540, 880], split: { L: [[126, 360], [130, 540], [132, 580], [118, 620], [110, 660], [88, 700], [80, 760], [62, 800], [60, 870], [30, 1060]], R: [[398, 360], [394, 540], [392, 580], [405, 620], [413, 660], [434, 700], [430, 760], [457, 800], [462, 870], [500, 1060]] }, w: 527, h: 1431, height_m: 1.66, eyes: [[240, 137, 13, 5.5], [290, 137, 13, 5.5]], mouth: [265, 195, 19, 4], chin_y: 236,
   joints: { hip: [263, 700], neck: [263, 252], headTop: [263, 30], shL: [132, 292], elL: [64, 528], wrL: [48, 660], handL: [50, 840],
     shR: [398, 292], elR: [472, 528], wrR: [480, 660], handR: [478, 840], feet: [263, 1420] } };
 const thanh = makePuppet(RIG, ASSET.le_than, ASSET.le_than_d);
+thanh.addGrip(ASSET.fistR, { w: 685, h: 1024, anchor: [395, 330], axis: [245, 670], guard: [560, 930], scale: .17, z: .1 });
 net.visible = false;
 function blinkAt(t, times) { let b = 0; for (const s of times) { const k = (t - s) / .16; if (k > 0 && k < 2) b = Math.max(b, 1 - Math.abs(k - 1)); } return b; }
 function film(t) {
@@ -17,10 +18,10 @@ function film(t) {
     uarmL: Math.sin(t * 1.1) * .03, farmL: 0,
     uarmR: -Math.sin(t * 1.0) * .03 + raise * 2.35, farmR: raise * .5,
     blink: blinkAt(t, [.9, 3.9, 6.0, 8.7]), mouth: talk });
-  // gươm trong tay phải khi giơ lên
-  const hand = thanh.world(RIG.joints.handR, 6), wr = thanh.world(RIG.joints.wrR, 6);
-  blade.visible = raise > .02; blade.position.copy(hand);
-  const dir = hand.clone().sub(wr).normalize(); blade.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), dir);
+  // gươm: khi giơ lên thì thay bàn tay xòe bằng bàn tay nắm chuôi gươm, lưỡi gươm mọc ra từ chắn tay
+  const gr = thanh.updateGrip(raise > .3);
+  blade.visible = !!gr;
+  if (gr) { blade.position.copy(gr.guard); blade.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), gr.dir); }
   const glow = raise * (.9 + Math.sin(t * 2.3) * .1); bladeMat.uniforms.uGlow.value = glow;
   aura.position.copy(blade.localToWorld(new THREE.Vector3(.55, 0, 0))); aura.quaternion.copy(camera.quaternion); auraMat.uniforms.uA.value = glow * .8;
   U.uBladePos.value.copy(blade.position); U.uBlade.value = glow * .5;

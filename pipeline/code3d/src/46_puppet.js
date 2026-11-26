@@ -31,7 +31,8 @@ function makePuppet(rig, imgURL, depthURL) {
   const mat = new THREE.ShaderMaterial({ transparent: false, side: THREE.DoubleSide,
     uniforms: Object.assign({}, U, { tImg: { value: loadTex(imgURL) }, tDep: { value: loadTex(depthURL) }, uB: { value: B }, uSize: { value: new THREE.Vector2(IW, IH) },
       uS: { value: s }, uRelief: { value: .16 }, uBlink: { value: 0 }, uMouth: { value: 0 },
-      uEye0: { value: new THREE.Vector4(...rig.eyes[0]) }, uEye1: { value: new THREE.Vector4(...rig.eyes[1]) }, uMo: { value: new THREE.Vector4(...rig.mouth) }, uChin: { value: rig.chin_y } }),
+      uEye0: { value: new THREE.Vector4(...rig.eyes[0]) }, uEye1: { value: new THREE.Vector4(...rig.eyes[1]) }, uMo: { value: new THREE.Vector4(...rig.mouth) }, uChin: { value: rig.chin_y },
+      uHideR: { value: 0 }, uHideBox: { value: new THREE.Vector4(...(rig.hideR || [0, 0, 0, 0])) } }),
     vertexShader: `attribute vec2 aPx; attribute vec4 aSi; attribute vec4 aSw; uniform mat3 uB[7]; uniform vec2 uSize; uniform float uS, uRelief, uMouth, uChin; uniform vec4 uMo; uniform sampler2D tDep;
       varying vec2 vPx; varying vec3 vP; varying vec3 vN0; varying vec3 vAx, vAy, vAz;
       void main(){ vec3 q = vec3(aPx, 1.); vec2 p = vec2(0.);
@@ -45,7 +46,7 @@ function makePuppet(rig, imgURL, depthURL) {
         vec3 lp = vec3((p.x - uSize.x * .5) * uS, (uSize.y - p.y) * uS, dep * uRelief);
         vec4 w = modelMatrix * vec4(lp, 1.); vP = w.xyz; vPx = aPx; vN0 = vec3(0.); vAx = mat3(modelMatrix)[0]; vAy = mat3(modelMatrix)[1]; vAz = mat3(modelMatrix)[2];
         gl_Position = projectionMatrix * viewMatrix * w; }`,
-    fragmentShader: GL_NOISE + GL_LIGHT + `uniform sampler2D tImg, tDep; uniform vec2 uSize; uniform float uBlink, uMouth, uClip; uniform vec4 uEye0, uEye1, uMo; varying vec2 vPx; varying vec3 vP; varying vec3 vAx, vAy, vAz;
+    fragmentShader: GL_NOISE + GL_LIGHT + `uniform sampler2D tImg, tDep; uniform vec2 uSize; uniform float uBlink, uMouth, uClip, uHideR; uniform vec4 uEye0, uEye1, uMo, uHideBox; varying vec2 vPx; varying vec3 vP; varying vec3 vAx, vAy, vAz;
       vec4 tex(vec2 px){ return texture2D(tImg, px / uSize); }
       vec3 lid(vec3 c, vec4 e){ vec2 q = (vPx - e.xy) / e.zw; float r = length(q * vec2(1., .85));
         if (r > 1.25 || uBlink < .01) return c;
@@ -57,6 +58,7 @@ function makePuppet(rig, imgURL, depthURL) {
         return c; }
       void main(){ if (uClip > .5 && vP.y < 0.) discard;
         vec4 t = tex(vPx); if (t.a < .5) discard;
+        if (uHideR > .5 && vPx.x > uHideBox.x && vPx.y > uHideBox.y && vPx.x < uHideBox.z && vPx.y < uHideBox.w) discard;
         vec3 c = t.rgb;
         c = lid(c, uEye0); c = lid(c, uEye1);
         if (uMouth > .02) { vec2 q = (vPx - uMo.xy - vec2(0., uMouth * 1.2)) / vec2(uMo.z * (.55 + .15 * uMouth), .5 + uMouth * 3.);
@@ -80,6 +82,29 @@ function makePuppet(rig, imgURL, depthURL) {
     // vị trí thế giới của một điểm ảnh sau khi xoay xương (ví dụ bàn tay để cầm gươm)
     world(pxpt, bone) { const v = new THREE.Vector3(pxpt[0], pxpt[1], 1).applyMatrix3(B[bone]);
       return mesh.localToWorld(new THREE.Vector3((v.x - IW / 2) * s, (IH - v.y) * s, .06)); },
+    // bàn tay rời: ảnh riêng (nền trong suốt), điểm neo cổ tay khớp vào cổ tay đã xoay, trục ảnh theo hướng cẳng tay
+    addGrip(url, g) {
+      const geo = new THREE.PlaneGeometry(1, 1); const gm = new THREE.ShaderMaterial({ side: THREE.DoubleSide,
+        uniforms: Object.assign({}, U, { tImg: { value: loadTex(url) } }),
+        vertexShader: `varying vec2 vUv; varying vec3 vP; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position, 1.); vP = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`,
+        fragmentShader: GL_NOISE + GL_LIGHT + `uniform sampler2D tImg; uniform float uClip; varying vec2 vUv; varying vec3 vP;
+          void main(){ if (uClip > .5 && vP.y < 0.) discard; vec4 t = texture2D(tImg, vUv); if (t.a < .5) discard;
+            vec3 alb = pow(t.rgb, vec3(2.2)); vec3 N = normalize(uCamPos - vP);
+            gl_FragColor = vec4(fog(light(vP, N, alb * 1.7, .12) + alb * .05, vP), 1.); }` });
+      const m = new THREE.Mesh(geo, gm); m.frustumCulled = false; mesh.add(m);
+      const pa = geo.attributes.position, uvs = geo.attributes.uv;
+      const P = this; P.grip = { m, g, on: false };
+      P.updateGrip = (on) => { m.visible = on; mat.uniforms.uHideR.value = on ? 1 : 0; if (!on) return null;
+        const E = new THREE.Vector3(J.elR[0], J.elR[1], 1).applyMatrix3(B[5]), Wr = new THREE.Vector3(J.wrR[0], J.wrR[1], 1).applyMatrix3(B[6]);
+        const d = new THREE.Vector2(Wr.x - E.x, Wr.y - E.y).normalize(), ax = new THREE.Vector2(g.axis[0], g.axis[1]).normalize();
+        const ang = Math.atan2(d.y, d.x) - Math.atan2(ax.y, ax.x), c = Math.cos(ang), sn = Math.sin(ang), k = g.scale;
+        const map = (x, y) => { const dx = (x - g.anchor[0]) * k, dy = (y - g.anchor[1]) * k; return [Wr.x + dx * c - dy * sn, Wr.y + dx * sn + dy * c]; };
+        const loc = ([x, y]) => new THREE.Vector3((x - IW / 2) * s, (IH - y) * s, g.z);
+        [[0, 0], [g.w, 0], [0, g.h], [g.w, g.h]].forEach(([x, y], i) => { const v = loc(map(x, y)); pa.setXYZ(i, v.x, v.y, v.z); uvs.setXY(i, x / g.w, y / g.h); });
+        pa.needsUpdate = true; uvs.needsUpdate = true;
+        const gp = loc(map(...g.guard)), gq = loc(map(g.guard[0] + g.axis[0], g.guard[1] + g.axis[1]));
+        return { guard: mesh.localToWorld(gp.clone()), dir: mesh.localToWorld(gq.clone()).sub(mesh.localToWorld(gp.clone())).normalize() }; };
+    },
     face(cam) { const w = mesh.getWorldPosition(new THREE.Vector3()); mesh.rotation.y = Math.atan2(cam.x - w.x, cam.z - w.z); } };
   P.pose({}); return P;
 }
