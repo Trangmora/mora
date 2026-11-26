@@ -15,8 +15,21 @@ Lưu ý: Morapost chỉ nhận video qua URL công khai (MP4/MOV, tối đa 200 
 """
 import argparse, json, subprocess, sys, uuid
 BASE = "https://www.morapost.com/api/v1"
+# CHỈ đăng vào các kênh văn hóa. Key Morapost dùng chung với kênh luật, nên mọi bài gửi đi đều bị kiểm tra ở đây.
+# TUYỆT ĐỐI KHÔNG dùng YouTube "Hiểu Luật 2 Phút" (UCsgNKzFknzaH0lqNz-ivNfQ): kênh đó chỉ của phiên kênh luật.
+ALLOWED = {"UCDHwhQBQk4ndvpwem5hWqCg",   # YouTube Ridiculous Case (VI)
+           "UC5u1YF6TmvZTKCKlEU6K9-w",   # YouTube Asian Myths & Culture (EN)
+           "1054215381111543",           # Facebook Ridiculous Case (EN)
+           "661562267031641",            # Facebook Mora Media (VI)
+           "29748236828134140",          # Instagram asian_myths (EN)
+           "41529474649984500"}          # Threads call me You (EN)
+def check_accounts(body):
+    acc = (body or {}).get("accounts") or {}
+    bad = [a for ids in acc.values() for a in ids if a not in ALLOWED]
+    if bad: raise SystemExit(f"CHẶN: tài khoản không thuộc kênh văn hóa: {bad}")
 
 def call(method, path, body=None, idem=None):
+    if method in ("POST", "PATCH"): check_accounts(body)
     cmd = ["curl", "-s", "-m", "120", "-X", method, BASE + path, "-H", "Content-Type: application/json"]
     if idem: cmd += ["-H", f"Idempotency-Key: {idem}"]
     if body is not None: cmd += ["--data-binary", json.dumps(body, ensure_ascii=False)]

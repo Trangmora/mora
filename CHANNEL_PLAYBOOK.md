@@ -68,4 +68,4 @@ Tóm tắt cách làm một tập, từ ý tưởng đến lúc đăng. Quy tắ
 - **Nhịp đăng:** 4 ngày một video dài (bản ngắn 1 phút cho TikTok, Instagram, Threads, X) (chủ kênh chốt 25/11/2026). Lịch cụ thể ở `SCHEDULE.md`. Đổi giờ: Morapost dùng `PATCH /api/v1/posts/<id>` với `scheduled_at`, Buffer dùng `editPost` với `dueAt`.
 
 ## Kênh "Hiểu luật 2 phút": KHÔNG đăng video văn hóa vào đây
-Kênh này trên Morapost dành cho video luật. Mọi script đăng bài (schedule_long.py, schedule_shorts.py, buffer_topup.py) chỉ dùng đúng các ID kênh văn hóa ghi trong file này; không bao giờ đăng theo kiểu "tất cả tài khoản".
+Kênh này (YouTube UCsgNKzFknzaH0lqNz-ivNfQ) chỉ dành cho video luật. pipeline/publish/morapost.py có danh sách ALLOWED: mọi bài POST/PATCH trỏ tới tài khoản ngoài danh sách sẽ bị chặn trước khi gửi.
