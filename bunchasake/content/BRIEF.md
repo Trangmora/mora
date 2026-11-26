@@ -149,6 +149,12 @@ Extra outbound link keys for batch 3 (use like the others, `{{ext:KEY}}`): `fda-
 | `what-is-ai-marketing-automation` | what is AI marketing automation (pillar: definition, parts of the system, three machines, cost, 30-day start) | `ai-automation-cho-marketing-la-gi` |
 | `generative-engine-optimization-for-small-business` | what is GEO (generative engine optimization): Google's guidance, the GEO paper, 7 things to do, self-check | `geo-la-gi` |
 | `marketing-with-ai-8-steps` | marketing with AI in 8 steps (written version of the Trang AI video, with the monthly cost table) | `8-buoc-lam-marketing-bang-ai` |
+| `ai-chatbot-for-customer-messages` | AI chatbot for customer messages (how it works, the knowledge document, 20 test questions, handover) | `chatbot-ai-tra-loi-tin-nhan-khach-hang` |
+| `ai-customer-care-for-returning-customers` | AI customer care for past customers (6 kinds of message, permission first, who does what) | `cham-soc-khach-hang-cu-bang-ai` |
+| `brand-voice-guide-for-ai` | teach AI your brand voice (one-page voice document in 7 parts, filled-in example, first ten drafts) | `day-ai-viet-dung-giong-thuong-hieu` |
+| `marketing-for-multi-location-chains` | marketing for multi-location chains (two-layer model, branch profiles, approval flow, one source of truth) | `marketing-cho-chuoi-nhieu-chi-nhanh` |
+| `agency-vs-in-house-vs-ai-automation` | agency vs in-house vs AI automation (comparison table, kinds of cost, 8 questions before signing) | `thue-agency-tuyen-nhan-vien-hay-ai-automation` |
+| `social-media-metrics-for-small-business` | 5 social media metrics to check weekly (where to find them, review table, simple A/B test) | `chi-so-mang-xa-hoi-nen-xem-moi-tuan` |
 | `dominos-brand-story`, `heinz-brand-story`, `glossier-brand-story`, `pizza-4ps-brand-story`, `cong-ca-phe-brand-story` | real brand stories (category `brand-stories`), each with sourced facts | see the files |
 
 Each page should link to its related landing page and to 2 or 3 genuinely related articles or pages from these tables.

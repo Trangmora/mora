@@ -502,5 +502,26 @@
   "photo": "https://unsplash.com/photos/smiling-man-beside-cups-5i_0w9tUk2Q?utm_source=bunchasake&utm_medium=referral",
   "id": "5i_0w9tUk2Q",
   "alt": "Smiling man beside cups"
+ },
+ "marketing-for-multi-location-chains": {
+  "user": "Julien",
+  "link": "https://unsplash.com/@domsson",
+  "photo": "https://unsplash.com/photos/restaurant-staff-works-in-a-busy-kitchen-_WXXnhng12Q?utm_source=bunchasake&utm_medium=referral",
+  "id": "_WXXnhng12Q",
+  "alt": "Restaurant staff works in a busy kitchen"
+ },
+ "social-media-metrics-for-small-business": {
+  "user": "Luke Chesser",
+  "link": "https://unsplash.com/@lukechesser",
+  "photo": "https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00?utm_source=bunchasake&utm_medium=referral",
+  "id": "JKUTrJ4vK00",
+  "alt": "Graphs of performance analytics on a laptop screen"
+ },
+ "agency-vs-in-house-vs-ai-automation": {
+  "user": "Headway",
+  "link": "https://unsplash.com/@headwayio",
+  "photo": "https://unsplash.com/photos/person-gesturing-during-meeting-with-laptop-5QgIuuBxKwM?utm_source=bunchasake&utm_medium=referral",
+  "id": "5QgIuuBxKwM",
+  "alt": "Person gesturing during meeting with laptop"
  }
 }
