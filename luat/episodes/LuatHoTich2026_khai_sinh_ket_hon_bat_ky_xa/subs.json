@@ -1,0 +1,252 @@
+{
+"op1": [
+[
+"Từ ngày",
+"Từ ngày 1/3/2027, đăng ký khai sinh"
+],
+[
+"và đăng ký",
+"và đăng ký kết hôn sẽ không còn"
+],
+[
+"phụ thuộc",
+"phụ thuộc vào nơi cư trú của bạn."
+]
+],
+"op2": [
+[
+"Video này",
+"Video này giải thích: luật mới nói gì,"
+],
+[
+"điểm nào",
+"điểm nào các nguồn tin còn chưa thống nhất,"
+],
+[
+"và bạn",
+"và bạn nên làm gì."
+]
+],
+"s1": [
+[
+"Đây là",
+"Đây là quy định tại Luật Hộ tịch (sửa đổi)."
+],
+[
+"Quốc hội",
+"Quốc hội thông qua ngày 23/4/2026,"
+],
+[
+"với bốn",
+"với 488/492 đại biểu tán thành."
+],
+[
+"Luật có",
+"Luật có hiệu lực từ ngày 1/3/2027,"
+],
+[
+"thay thế",
+"thay thế Luật Hộ tịch năm 2014."
+]
+],
+"s2": [
+[
+"Hộ tịch",
+"Hộ tịch là những sự kiện"
+],
+[
+"gắn với",
+"gắn với nhân thân mỗi người,"
+],
+[
+"như được",
+"như được sinh ra, kết hôn, hay qua đời."
+],
+[
+"Đăng ký",
+"Đăng ký hộ tịch là việc cơ quan nhà nước"
+],
+[
+"ghi nhận",
+"ghi nhận các sự kiện đó."
+]
+],
+"s3": [
+[
+"Hiện nay",
+"Hiện nay, theo Luật Hộ tịch năm 2014,"
+],
+[
+"việc đăng ký",
+"việc đăng ký gắn với nơi cư trú."
+],
+[
+"Khai sinh",
+"Khai sinh cho con làm ở xã"
+],
+[
+"nơi cư trú của cha",
+"nơi cư trú của cha hoặc mẹ."
+],
+[
+"Kết hôn",
+"Kết hôn làm ở xã nơi cư trú"
+],
+[
+"của một",
+"của một trong hai người."
+]
+],
+"s4": [
+[
+"Theo luật",
+"Theo luật mới, Ủy ban nhân dân cấp xã"
+],
+[
+"có thẩm quyền",
+"có thẩm quyền đăng ký khai sinh, kết hôn,"
+],
+[
+"không phụ thuộc",
+"không phụ thuộc nơi cư trú của người yêu cầu."
+]
+],
+"s5": [
+[
+"Tuy nhiên",
+"Tuy nhiên, phạm vi cụ thể"
+],
+[
+"chưa được",
+"chưa được đưa tin thống nhất."
+],
+[
+"Nhiều bài",
+"Nhiều bài báo viết: đăng ký ở bất kỳ xã nào."
+],
+[
+"Một số",
+"Một số bài khác viết:"
+],
+[
+"bất kỳ xã nào trên",
+"bất kỳ xã nào trên địa bàn tỉnh."
+],
+[
+"Vì vậy",
+"Vì vậy, nếu bạn định đăng ký ở tỉnh khác,"
+],
+[
+"hãy hỏi",
+"hãy hỏi trước."
+]
+],
+"s6": [
+[
+"Điểm mới",
+"Điểm mới thứ hai: Chủ tịch UBND cấp xã"
+],
+[
+"không được",
+"không được ủy quyền ký giấy khai sinh,"
+],
+[
+"và giấy",
+"và giấy chứng nhận kết hôn."
+]
+],
+"s7": [
+[
+"Khi đăng ký",
+"Khi đăng ký kết hôn, hai bên nam nữ"
+],
+[
+"vẫn phải",
+"vẫn phải cùng có mặt để ký."
+],
+[
+"Điều kiện",
+"Điều kiện kết hôn không thay đổi."
+]
+],
+"s8": [
+[
+"Quy định mới",
+"Quy định mới áp dụng từ ngày 1/3/2027."
+],
+[
+"Trước ngày",
+"Trước ngày đó, vẫn làm theo luật cũ,"
+],
+[
+"tức là",
+"tức là đến xã nơi cư trú."
+],
+[
+"Hồ sơ",
+"Hồ sơ cụ thể còn chờ nghị định hướng dẫn."
+]
+],
+"s9": [
+[
+"Bạn nên",
+"Bạn nên làm gì?"
+],
+[
+"Một:",
+"Một: nếu đăng ký trước ngày 1/3/2027,"
+],
+[
+"hãy đến",
+"hãy đến UBND xã nơi cư trú."
+]
+],
+"s10": [
+[
+"Hai:",
+"Hai: từ ngày 1/3/2027,"
+],
+[
+"bạn có thể",
+"bạn có thể chọn xã thuận tiện,"
+],
+[
+"nhưng nên",
+"nhưng nên hỏi trước, nhất là khi ở khác tỉnh."
+]
+],
+"s11": [
+[
+"Ba:",
+"Ba: khi đăng ký kết hôn, cả hai người cùng đi,"
+],
+[
+"mang theo",
+"mang theo giấy tờ tùy thân."
+]
+],
+"s12": [
+[
+"Bốn:",
+"Bốn: theo dõi nghị định hướng dẫn"
+],
+[
+"để biết",
+"để biết hồ sơ cụ thể."
+]
+],
+"out": [
+[
+"Nội dung",
+"Nội dung chỉ mang tính thông tin,"
+],
+[
+"không phải",
+"không phải tư vấn pháp lý."
+],
+[
+"Hãy",
+"Hãy kiểm tra văn bản gốc."
+]
+]
+}
