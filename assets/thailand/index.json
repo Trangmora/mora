@@ -1,0 +1,105 @@
+{
+ "th_t1": {
+  "file": "images/th_t1.jpg",
+  "desc": "Dusk on a wide river in Bangkok, 1893: two grey French steam gunboats with smoking funnels and French tricolor flags anchored in the middle of the river, their cannons pointed toward the golden spires and tiered roofs of",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t10": {
+  "file": "images/th_t10.jpg",
+  "desc": "A 19th-century political cartoon in paper-cut style: a calm white elephant wearing a small golden Thai crown standing on a small piece of land in the centre, squeezed between a huge roaring lion wearing a British flag ca",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t11": {
+  "file": "images/th_t11.jpg",
+  "desc": "Night: the king of Siam in a white uniform sitting alone and sad on a palace balcony, head lowered, a cup of medicine on a small table beside him; below, the dark river with the silhouettes of two gunboats and their ligh",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t12": {
+  "file": "images/th_t12.jpg",
+  "desc": "A grove of tall green bamboo bending deeply in a strong wind without breaking, leaves flying, with a golden Thai temple spire and stormy clouds behind.",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t14": {
+  "file": "images/th_t14.jpg",
+  "desc": "A 19th-century political cartoon in paper-cut style: a lion wearing a British flag cape and a rooster wearing a French tricolor sash shaking hands across a low wooden fence, while between them, inside the fenced garden, ",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t15": {
+  "file": "images/th_t15.jpg",
+  "desc": "1897, a European photographer's studio: the king of Siam in a white dress uniform with medals seated side by side as an equal with the Russian tsar in a dark uniform; a large wooden camera on a tripod with the photograph",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t16": {
+  "file": "images/th_t16.jpg",
+  "desc": "Present day Thailand: inside a small family shop-house, a framed portrait of a dignified king in a white uniform with a moustache hangs high on the wall, decorated with yellow marigold garlands; a grandmother and a child",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t2": {
+  "file": "images/th_t2.jpg",
+  "desc": "A symbolic scene of colonial Southeast Asia: four stylised landmarks side by side on small hills, a golden Burmese pagoda, a Vietnamese citadel gate, a Cambodian stone temple with towers and a Javanese stone temple; a Eu",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t4": {
+  "file": "images/th_t4.jpg",
+  "desc": "Inside a quiet Thai Buddhist temple: a thoughtful Siamese prince living as a monk in a saffron robe, with a shaved head, studying at a low desk with open European books, a brass telescope and a globe, while a friendly We",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t5": {
+  "file": "images/th_t5.jpg",
+  "desc": "1868, a beach camp in Siam: the king of Siam in a dignified silk jacket standing beside a brass telescope, surrounded by European scientists in suits and Siamese nobles, all looking up at a total solar eclipse, a black s",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t6": {
+  "file": "images/th_t6.jpg",
+  "desc": "1855, a Siamese palace hall: the king of Siam in royal dress seated at a table signing a treaty with a British envoy in a dark diplomatic uniform, both dignified and calm; through the open doors a river harbour full of s",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t7": {
+  "file": "images/th_t7.jpg",
+  "desc": "A Siamese throne hall: a fifteen-year-old king in a white military-style uniform with a gold sash seated on a golden throne, gently raising his hand, while the courtiers who had been lying face-down on the floor are risi",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t8": {
+  "file": "images/th_t8.jpg",
+  "desc": "Late 19th-century Siam modernising: a black steam locomotive pulling carriages on a new railway past Thai temples and palm trees, telegraph poles along the track, a small post office, and school children in uniforms wavi",
+  "episode": "th01-thai-lan-khong-bi-do-ho",
+  "model": "nano-banana"
+ },
+ "th_t1_clip": {
+  "file": "clips/th_t1.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of th_t1: Smoke rises from the funnels, the river flows, the small boats row away, the flags flutter.",
+  "episode": "th01-thai-lan-khong-bi-do-ho"
+ },
+ "th_t12_clip": {
+  "file": "clips/th_t12.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of th_t12: The bamboo bends and sways strongly in the wind, leaves fly past, clouds move.",
+  "episode": "th01-thai-lan-khong-bi-do-ho"
+ },
+ "th_t16_clip": {
+  "file": "clips/th_t16.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of th_t16: The grandmother and the child slowly place the flowers, the garlands sway slightly, warm light flickers.",
+  "episode": "th01-thai-lan-khong-bi-do-ho"
+ },
+ "th_t4_clip": {
+  "file": "clips/th_t4.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of th_t4: The monk slowly turns a page, the missionary nods and points at the book, the candle light flickers.",
+  "episode": "th01-thai-lan-khong-bi-do-ho"
+ },
+ "th_t8_clip": {
+  "file": "clips/th_t8.mp4",
+  "desc": "fal.ai Wan 2.2 clip (5 s, no audio) of th_t8: The steam train moves forward along the track, smoke puffs from the chimney, the children wave, palm leaves sway.",
+  "episode": "th01-thai-lan-khong-bi-do-ho"
+ }
+}
