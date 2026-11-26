@@ -1,84 +1,166 @@
 {
-"vi": [
-[
-"op1",
-"Xin chào các bạn. Một buổi tối tháng bảy năm 1893, hai tàu chiến Pháp vượt qua làn đạn, tiến thẳng vào giữa Bangkok, rồi chĩa đại bác về phía Hoàng cung."
-],
-[
-"op2",
-"Khi ấy, gần như cả Đông Nam Á đã thuộc về các nước phương Tây: Việt Nam, Campuchia thuộc Pháp; Miến Điện, Mã Lai thuộc Anh; Indonesia thuộc Hà Lan."
-],
-[
-"op3",
-"Vương quốc Xiêm, tức Thái Lan ngày nay, tưởng như sẽ là cái tên tiếp theo. Vậy mà điều đó đã không xảy ra. Vì sao?"
-],
-[
-"s1",
-"Câu chuyện bắt đầu từ vua Mông-kút. Trước khi lên ngôi, ông đã đi tu suốt hai mươi bảy năm, và trong thời gian ấy, ông tự học tiếng Anh, tiếng Latin, toán học và thiên văn với các giáo sĩ phương Tây."
-],
-[
-"s2",
-"Ông giỏi thiên văn đến mức tự tính trước được một lần nhật thực toàn phần, rồi mời cả các nhà khoa học châu Âu đến chứng kiến."
-],
-[
-"s3",
-"Nhờ hiểu phương Tây, ông sớm nhận ra: không thể thắng họ bằng gươm giáo. Năm 1855, ông chủ động ký hiệp ước mở cửa buôn bán với Anh, rồi với nhiều nước khác, để không nước nào có cớ đem tàu chiến đến."
-],
-[
-"s4",
-"Con trai ông, vua Chu-la-long-con, lên ngôi năm mười lăm tuổi và còn đi xa hơn. Ông bãi bỏ chế độ nô lệ, bỏ tục quỳ lạy trước nhà vua,"
-],
-[
-"s5",
-"xây đường sắt, lập bưu điện, trường học, và tổ chức lại bộ máy theo kiểu châu Âu. Ông gửi các hoàng tử sang châu Âu du học."
-],
-[
-"s6",
-"Thông điệp gửi tới phương Tây rất rõ ràng: Xiêm là một quốc gia văn minh, không cần ai đến khai hóa."
-],
-[
-"s7",
-"Nhưng cải cách thôi thì chưa đủ. Phía tây Xiêm là Miến Điện thuộc Anh, phía đông là Đông Dương thuộc Pháp."
-],
-[
-"s8",
-"Và năm 1893, khủng hoảng nổ ra: tàu chiến Pháp tiến vào Bangkok, đòi Xiêm nhượng toàn bộ vùng đất phía đông sông Mê Kông, tức nước Lào ngày nay."
-],
-[
-"s9",
-"Vua Chu-la-long-con đau buồn đến đổ bệnh, nhưng ông chấp nhận."
-],
-[
-"s10",
-"Người ta gọi cách làm ấy là ngoại giao cây tre: uốn mình theo gió để không bị gãy."
-],
-[
-"s11",
-"Xiêm lần lượt nhượng cho Pháp các vùng đất nay thuộc Lào và Campuchia, nhượng cho Anh bốn tiểu quốc nay thuộc Malaysia. Đổi lại, họ giữ được phần lõi của đất nước."
-],
-[
-"s12",
-"Cùng lúc đó, cả Anh và Pháp đều không muốn có chung đường biên giới với nhau. Năm 1896, hai nước thỏa thuận giữ Xiêm làm vùng đệm ở giữa."
-],
-[
-"s13",
-"Năm sau, vua Chu-la-long-con đích thân sang châu Âu, gặp Sa hoàng Nga và nhiều nguyên thủ, chụp ảnh cùng họ như những người ngang hàng."
-],
-[
-"s14",
-"Vậy là Xiêm mất nhiều vùng đất, nhưng trở thành quốc gia duy nhất ở Đông Nam Á chưa từng là thuộc địa."
-],
-[
-"s15",
-"Năm 1939, đất nước đổi tên thành Thái Lan, cái tên thường được hiểu là \"vùng đất của những người tự do\"."
-],
-[
-"s16",
-"Ngày nay, hình vua Chu-la-long-con vẫn được treo trong rất nhiều ngôi nhà Thái, và ngày mất của ông là ngày lễ của cả nước."
-],
-[
-"end",
-"Theo bạn, nhượng đất để giữ độc lập là khôn ngoan, hay là cái giá quá đắt? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
-]
-]
+ "vi": [
+  [
+   "op1",
+   "Xin chào các bạn. Một buổi tối tháng bảy năm 1893, hai tàu chiến Pháp vượt qua làn đạn, tiến thẳng vào giữa Bangkok, rồi chĩa đại bác về phía Hoàng cung."
+  ],
+  [
+   "op2",
+   "Khi ấy, gần như cả Đông Nam Á đã thuộc về các nước phương Tây: Việt Nam, Campuchia thuộc Pháp; Miến Điện, Mã Lai thuộc Anh; Indonesia thuộc Hà Lan."
+  ],
+  [
+   "op3",
+   "Vương quốc Xiêm, tức Thái Lan ngày nay, tưởng như sẽ là cái tên tiếp theo. Vậy mà điều đó đã không xảy ra. Vì sao?"
+  ],
+  [
+   "s1",
+   "Câu chuyện bắt đầu từ vua Mông-kút. Trước khi lên ngôi, ông đã đi tu suốt hai mươi bảy năm, và trong thời gian ấy, ông tự học tiếng Anh, tiếng Latin, toán học và thiên văn với các giáo sĩ phương Tây."
+  ],
+  [
+   "s2",
+   "Ông giỏi thiên văn đến mức tự tính trước được một lần nhật thực toàn phần, rồi mời cả các nhà khoa học châu Âu đến chứng kiến."
+  ],
+  [
+   "s3",
+   "Nhờ hiểu phương Tây, ông sớm nhận ra: không thể thắng họ bằng gươm giáo. Năm 1855, ông chủ động ký hiệp ước mở cửa buôn bán với Anh, rồi với nhiều nước khác, để không nước nào có cớ đem tàu chiến đến."
+  ],
+  [
+   "s4",
+   "Con trai ông, vua Chu-la-long-con, lên ngôi năm mười lăm tuổi và còn đi xa hơn. Ông bãi bỏ chế độ nô lệ, bỏ tục quỳ lạy trước nhà vua,"
+  ],
+  [
+   "s5",
+   "xây đường sắt, lập bưu điện, trường học, và tổ chức lại bộ máy theo kiểu châu Âu. Ông gửi các hoàng tử sang châu Âu du học."
+  ],
+  [
+   "s6",
+   "Thông điệp gửi tới phương Tây rất rõ ràng: Xiêm là một quốc gia văn minh, không cần ai đến khai hóa."
+  ],
+  [
+   "s7",
+   "Nhưng cải cách thôi thì chưa đủ. Phía tây Xiêm là Miến Điện thuộc Anh, phía đông là Đông Dương thuộc Pháp."
+  ],
+  [
+   "s8",
+   "Và năm 1893, khủng hoảng nổ ra: tàu chiến Pháp tiến vào Bangkok, đòi Xiêm nhượng toàn bộ vùng đất phía đông sông Mê Kông, tức nước Lào ngày nay."
+  ],
+  [
+   "s9",
+   "Vua Chu-la-long-con đau buồn đến đổ bệnh, nhưng ông chấp nhận."
+  ],
+  [
+   "s10",
+   "Người ta gọi cách làm ấy là ngoại giao cây tre: uốn mình theo gió để không bị gãy."
+  ],
+  [
+   "s11",
+   "Xiêm lần lượt nhượng cho Pháp các vùng đất nay thuộc Lào và Campuchia, nhượng cho Anh bốn tiểu quốc nay thuộc Malaysia. Đổi lại, họ giữ được phần lõi của đất nước."
+  ],
+  [
+   "s12",
+   "Cùng lúc đó, cả Anh và Pháp đều không muốn có chung đường biên giới với nhau. Năm 1896, hai nước thỏa thuận giữ Xiêm làm vùng đệm ở giữa."
+  ],
+  [
+   "s13",
+   "Năm sau, vua Chu-la-long-con đích thân sang châu Âu, gặp Sa hoàng Nga và nhiều nguyên thủ, chụp ảnh cùng họ như những người ngang hàng."
+  ],
+  [
+   "s14",
+   "Vậy là Xiêm mất nhiều vùng đất, nhưng trở thành quốc gia duy nhất ở Đông Nam Á chưa từng là thuộc địa."
+  ],
+  [
+   "s15",
+   "Năm 1939, đất nước đổi tên thành Thái Lan, cái tên thường được hiểu là \"vùng đất của những người tự do\"."
+  ],
+  [
+   "s16",
+   "Ngày nay, hình vua Chu-la-long-con vẫn được treo trong rất nhiều ngôi nhà Thái, và ngày mất của ông là ngày lễ của cả nước."
+  ],
+  [
+   "end",
+   "Theo bạn, nhượng đất để giữ độc lập là khôn ngoan, hay là cái giá quá đắt? Hãy để lại ý kiến cho mình nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
+  ]
+ ],
+ "en": [
+  [
+   "op1",
+   "Hello everyone. One evening in July 1893, two French warships forced their way past the coastal guns, steamed into the heart of Bangkok, and trained their cannons on the royal palace."
+  ],
+  [
+   "op2",
+   "By then, almost all of Southeast Asia belonged to Western powers: Vietnam and Cambodia to France, Burma and Malaya to Britain, Indonesia to the Dutch."
+  ],
+  [
+   "op3",
+   "The Kingdom of Siam, today's Thailand, looked certain to be next. But it never happened. Why?"
+  ],
+  [
+   "s1",
+   "The story begins with King Mongkut. Before taking the throne, he spent twenty-seven years as a Buddhist monk, and in that time he taught himself English, Latin, mathematics and astronomy with Western missionaries."
+  ],
+  [
+   "s2",
+   "He was so skilled at astronomy that he calculated a total solar eclipse in advance, and invited European scientists to come and watch."
+  ],
+  [
+   "s3",
+   "Because he understood the West, he saw early that it could not be beaten with swords and spears. In 1855, he chose to sign a trade treaty with Britain, and then with many other nations, so that none of them had an excuse to send warships."
+  ],
+  [
+   "s4",
+   "His son, King Chulalongkorn, took the throne at fifteen and went even further. He abolished slavery, ended the custom of crawling before the king,"
+  ],
+  [
+   "s5",
+   "built railways, post offices and schools, and reorganized the government along European lines. He sent his sons to study in Europe."
+  ],
+  [
+   "s6",
+   "The message to the West was clear: Siam is a civilized nation, and needs no one to civilize it."
+  ],
+  [
+   "s7",
+   "But reform alone was not enough. To the west lay British Burma; to the east, French Indochina."
+  ],
+  [
+   "s8",
+   "And in 1893, the crisis broke: French warships entered Bangkok and demanded all the land east of the Mekong River, today's Laos."
+  ],
+  [
+   "s9",
+   "King Chulalongkorn was so grief-stricken that he fell ill. But he accepted."
+  ],
+  [
+   "s10",
+   "People call this approach bamboo diplomacy: bend with the wind, so you do not break."
+  ],
+  [
+   "s11",
+   "Siam gave up lands that are now Laos and Cambodia to France, and four small states that are now part of Malaysia to Britain. In return, it kept the heart of the country."
+  ],
+  [
+   "s12",
+   "At the same time, neither Britain nor France wanted to share a border with the other. In 1896, they agreed to keep Siam as a buffer between them."
+  ],
+  [
+   "s13",
+   "The next year, King Chulalongkorn traveled to Europe himself, met the Russian Tsar and other heads of state, and was photographed with them as an equal."
+  ],
+  [
+   "s14",
+   "So Siam lost a great deal of land, but became the only country in Southeast Asia that was never colonized."
+  ],
+  [
+   "s15",
+   "In 1939, the country took the name Thailand, often understood as the land of the free."
+  ],
+  [
+   "s16",
+   "Today, portraits of King Chulalongkorn still hang in countless Thai homes, and the day of his death is a national holiday."
+  ],
+  [
+   "end",
+   "What do you think: was giving up land to stay independent a wise move, or too high a price? Tell me in the comments. Thanks for watching, and see you next time!"
+  ]
+ ]
 }

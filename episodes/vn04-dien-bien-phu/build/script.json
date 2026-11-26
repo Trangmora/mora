@@ -1,88 +1,174 @@
 {
-"vi": [
-[
-"op1",
-"Xin chào các bạn. Năm 1954, giữa một thung lũng hẻo lánh ở Tây Bắc Việt Nam, quân Pháp dựng lên một pháo đài mà họ tin là không thể bị đánh bại: mười sáu nghìn quân, xe tăng, máy bay, đại bác."
-],
-[
-"op2",
-"Viên chỉ huy pháo binh Pháp còn tuyên bố: đối phương sẽ không bắn nổi quá ba phát đạn."
-],
-[
-"op3",
-"Vậy mà chỉ sau năm mươi sáu ngày đêm, pháo đài ấy sụp đổ, kéo theo cả một đế chế thuộc địa. Chuyện gì đã xảy ra ở Điện Biên Phủ?"
-],
-[
-"s1",
-"Cuối năm 1953, sau gần tám năm chiến tranh, Pháp muốn có một trận đánh quyết định. Tướng Na-va cho quân nhảy dù xuống Điện Biên Phủ, một thung lũng nằm sát biên giới Lào, bốn bề là núi."
-],
-[
-"s2",
-"Kế hoạch rất đơn giản: nhử bộ đội Việt Nam kéo đến, rồi dùng hỏa lực nghiền nát."
-],
-[
-"s3",
-"Người Pháp tin chắc một điều: không ai có thể đưa pháo lớn vượt qua hàng trăm cây số núi rừng."
-],
-[
-"s4",
-"Nhưng họ đã nhầm. Hơn hai trăm sáu mươi nghìn dân công được huy động, cùng khoảng hai mươi nghìn chiếc xe đạp thồ, mỗi chiếc chở hai, ba tạ hàng, vượt đèo, lội suối ra mặt trận."
-],
-[
-"s5",
-"Còn những khẩu pháo nặng hơn hai tấn thì được kéo lên núi bằng dây tời và sức người, từng tấc một, ngay trong đêm."
-],
-[
-"s6",
-"Cuối tháng một năm 1954, mọi thứ đã sẵn sàng cho một trận đánh nhanh, chỉ trong vài ngày. Nhưng chỉ vài giờ trước giờ nổ súng, Đại tướng Võ Nguyên Giáp nhận ra quân Pháp đã mạnh lên quá nhiều."
-],
-[
-"s7",
-"Ông đưa ra quyết định mà sau này ông gọi là khó khăn nhất trong đời cầm quân: hoãn trận đánh, chuyển sang đánh chắc, tiến chắc."
-],
-[
-"s8",
-"Những khẩu pháo vừa kéo vào lại phải kéo ngược trở ra. Trận đánh lùi lại gần hai tháng."
-],
-[
-"s9",
-"Chiều ngày mười ba tháng ba, pháo Việt Nam đồng loạt nổ súng từ trên các sườn núi. Người Pháp sững sờ. Cứ điểm đầu tiên thất thủ chỉ sau vài giờ."
-],
-[
-"s10",
-"Rồi bộ đội đào hàng trăm cây số chiến hào, siết dần lấy thung lũng. Sân bay bị cắt đứt, đồ tiếp tế thả dù rơi cả sang phía đối phương."
-],
-[
-"s11",
-"Mùa mưa đến, chiến hào ngập bùn, hai bên giành nhau từng mét đất."
-],
-[
-"s12",
-"Cuộc giằng co ác liệt nhất diễn ra ở đồi A một, kéo dài hơn một tháng. Cuối cùng, bộ đội bí mật đào một đường hầm vào tận lòng đồi, đặt gần một tấn thuốc nổ."
-],
-[
-"s13",
-"Đêm mồng sáu tháng năm, cả ngọn đồi rung chuyển."
-],
-[
-"s14",
-"Chiều hôm sau, ngày bảy tháng năm năm 1954, lá cờ \"Quyết chiến Quyết thắng\" tung bay trên nóc hầm chỉ huy. Tướng Đờ Cát cùng hơn một vạn quân Pháp ra hàng."
-],
-[
-"s15",
-"Chỉ một ngày sau, hội nghị Giơ-ne-vơ bắt đầu bàn về Đông Dương, và đến tháng bảy, gần một trăm năm người Pháp có mặt ở đây chính thức khép lại."
-],
-[
-"s16",
-"Điện Biên Phủ được coi là lần đầu tiên một dân tộc thuộc địa ở châu Á đánh bại một cường quốc châu Âu trong một trận đánh lớn, và truyền cảm hứng cho các phong trào giành độc lập từ châu Á đến châu Phi."
-],
-[
-"s17",
-"Nếu có dịp lên Điện Biên, bạn vẫn có thể thấy hố bộc phá trên đồi A một và căn hầm của tướng Đờ Cát."
-],
-[
-"end",
-"Bạn đã đến đó chưa? Hãy kể cho mình nghe nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
-]
-]
+ "vi": [
+  [
+   "op1",
+   "Xin chào các bạn. Năm 1954, giữa một thung lũng hẻo lánh ở Tây Bắc Việt Nam, quân Pháp dựng lên một pháo đài mà họ tin là không thể bị đánh bại: mười sáu nghìn quân, xe tăng, máy bay, đại bác."
+  ],
+  [
+   "op2",
+   "Viên chỉ huy pháo binh Pháp còn tuyên bố: đối phương sẽ không bắn nổi quá ba phát đạn."
+  ],
+  [
+   "op3",
+   "Vậy mà chỉ sau năm mươi sáu ngày đêm, pháo đài ấy sụp đổ, kéo theo cả một đế chế thuộc địa. Chuyện gì đã xảy ra ở Điện Biên Phủ?"
+  ],
+  [
+   "s1",
+   "Cuối năm 1953, sau gần tám năm chiến tranh, Pháp muốn có một trận đánh quyết định. Tướng Na-va cho quân nhảy dù xuống Điện Biên Phủ, một thung lũng nằm sát biên giới Lào, bốn bề là núi."
+  ],
+  [
+   "s2",
+   "Kế hoạch rất đơn giản: nhử bộ đội Việt Nam kéo đến, rồi dùng hỏa lực nghiền nát."
+  ],
+  [
+   "s3",
+   "Người Pháp tin chắc một điều: không ai có thể đưa pháo lớn vượt qua hàng trăm cây số núi rừng."
+  ],
+  [
+   "s4",
+   "Nhưng họ đã nhầm. Hơn hai trăm sáu mươi nghìn dân công được huy động, cùng khoảng hai mươi nghìn chiếc xe đạp thồ, mỗi chiếc chở hai, ba tạ hàng, vượt đèo, lội suối ra mặt trận."
+  ],
+  [
+   "s5",
+   "Còn những khẩu pháo nặng hơn hai tấn thì được kéo lên núi bằng dây tời và sức người, từng tấc một, ngay trong đêm."
+  ],
+  [
+   "s6",
+   "Cuối tháng một năm 1954, mọi thứ đã sẵn sàng cho một trận đánh nhanh, chỉ trong vài ngày. Nhưng chỉ vài giờ trước giờ nổ súng, Đại tướng Võ Nguyên Giáp nhận ra quân Pháp đã mạnh lên quá nhiều."
+  ],
+  [
+   "s7",
+   "Ông đưa ra quyết định mà sau này ông gọi là khó khăn nhất trong đời cầm quân: hoãn trận đánh, chuyển sang đánh chắc, tiến chắc."
+  ],
+  [
+   "s8",
+   "Những khẩu pháo vừa kéo vào lại phải kéo ngược trở ra. Trận đánh lùi lại gần hai tháng."
+  ],
+  [
+   "s9",
+   "Chiều ngày mười ba tháng ba, pháo Việt Nam đồng loạt nổ súng từ trên các sườn núi. Người Pháp sững sờ. Cứ điểm đầu tiên thất thủ chỉ sau vài giờ."
+  ],
+  [
+   "s10",
+   "Rồi bộ đội đào hàng trăm cây số chiến hào, siết dần lấy thung lũng. Sân bay bị cắt đứt, đồ tiếp tế thả dù rơi cả sang phía đối phương."
+  ],
+  [
+   "s11",
+   "Mùa mưa đến, chiến hào ngập bùn, hai bên giành nhau từng mét đất."
+  ],
+  [
+   "s12",
+   "Cuộc giằng co ác liệt nhất diễn ra ở đồi A một, kéo dài hơn một tháng. Cuối cùng, bộ đội bí mật đào một đường hầm vào tận lòng đồi, đặt gần một tấn thuốc nổ."
+  ],
+  [
+   "s13",
+   "Đêm mồng sáu tháng năm, cả ngọn đồi rung chuyển."
+  ],
+  [
+   "s14",
+   "Chiều hôm sau, ngày bảy tháng năm năm 1954, lá cờ \"Quyết chiến Quyết thắng\" tung bay trên nóc hầm chỉ huy. Tướng Đờ Cát cùng hơn một vạn quân Pháp ra hàng."
+  ],
+  [
+   "s15",
+   "Chỉ một ngày sau, hội nghị Giơ-ne-vơ bắt đầu bàn về Đông Dương, và đến tháng bảy, gần một trăm năm người Pháp có mặt ở đây chính thức khép lại."
+  ],
+  [
+   "s16",
+   "Điện Biên Phủ được coi là lần đầu tiên một dân tộc thuộc địa ở châu Á đánh bại một cường quốc châu Âu trong một trận đánh lớn, và truyền cảm hứng cho các phong trào giành độc lập từ châu Á đến châu Phi."
+  ],
+  [
+   "s17",
+   "Nếu có dịp lên Điện Biên, bạn vẫn có thể thấy hố bộc phá trên đồi A một và căn hầm của tướng Đờ Cát."
+  ],
+  [
+   "end",
+   "Bạn đã đến đó chưa? Hãy kể cho mình nghe nhé. Cảm ơn các bạn đã xem, hẹn gặp lại!"
+  ]
+ ],
+ "en": [
+  [
+   "op1",
+   "Hello everyone. In 1954, in a remote valley in the mountains of northwest Vietnam, the French army built a fortress it believed could never fall: sixteen thousand troops, tanks, aircraft and heavy guns."
+  ],
+  [
+   "op2",
+   "The French artillery commander even boasted that the enemy would not manage to fire three rounds."
+  ],
+  [
+   "op3",
+   "Yet after just fifty-six days, the fortress collapsed, and a colonial empire fell with it. What happened at Điện Biên Phủ?"
+  ],
+  [
+   "s1",
+   "By late 1953, after nearly eight years of war, France wanted one decisive battle. General Navarre dropped paratroopers into Điện Biên Phủ, a valley near the Lao border, ringed by mountains."
+  ],
+  [
+   "s2",
+   "The plan was simple: lure the Vietnamese army in, then crush it with firepower."
+  ],
+  [
+   "s3",
+   "The French were sure of one thing: no one could haul heavy guns across hundreds of kilometers of jungle and mountains."
+  ],
+  [
+   "s4",
+   "They were wrong. More than two hundred and sixty thousand civilian porters were mobilized, along with some twenty thousand bicycles, each loaded with two or three hundred kilos of supplies and pushed over mountain passes to the front."
+  ],
+  [
+   "s5",
+   "And the guns, each weighing over two tons, were dragged up the slopes by rope and muscle, inch by inch, in the dark."
+  ],
+  [
+   "s6",
+   "By late January 1954, everything was ready for a quick strike of just a few days. But hours before the attack, General Võ Nguyên Giáp realized the French had grown far too strong."
+  ],
+  [
+   "s7",
+   "He made what he later called the hardest decision of his career: call off the attack, and switch to a slow, steady siege."
+  ],
+  [
+   "s8",
+   "The guns that had just been hauled in had to be hauled back out. The battle was delayed by almost two months."
+  ],
+  [
+   "s9",
+   "On the afternoon of March thirteenth, Vietnamese artillery opened fire from the mountainsides. The French were stunned. The first strongpoint fell within hours."
+  ],
+  [
+   "s10",
+   "Then the soldiers dug hundreds of kilometers of trenches, tightening around the valley. The airstrip was cut off, and parachuted supplies drifted into Vietnamese hands."
+  ],
+  [
+   "s11",
+   "The monsoon came, the trenches filled with mud, and both sides fought for every meter."
+  ],
+  [
+   "s12",
+   "The fiercest struggle was for a hill the Vietnamese called A-one, and it lasted more than a month. In the end, the soldiers secretly dug a tunnel deep into the hill and packed it with nearly a ton of explosives."
+  ],
+  [
+   "s13",
+   "On the night of May sixth, the whole hill shook."
+  ],
+  [
+   "s14",
+   "The next afternoon, May seventh, 1954, a red flag flew over the French command bunker. General de Castries and more than ten thousand French troops surrendered."
+  ],
+  [
+   "s15",
+   "Just one day later, the Geneva Conference turned to Indochina, and by July, nearly a century of French rule here came to an end."
+  ],
+  [
+   "s16",
+   "Điện Biên Phủ is remembered as the first time a colonized people in Asia defeated a European power in a major battle, and it inspired independence movements from Asia to Africa."
+  ],
+  [
+   "s17",
+   "If you visit Điện Biên today, you can still see the crater on hill A-one and the bunker of General de Castries."
+  ],
+  [
+   "end",
+   "Have you been there? Tell me in the comments. Thanks for watching, and see you next time!"
+  ]
+ ]
 }
