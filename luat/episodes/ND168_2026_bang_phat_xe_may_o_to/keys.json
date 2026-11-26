@@ -1,0 +1,12 @@
+{"k_xm":["op1","Xe máy, tới"],"k_m":["op2","bảy lỗi"],"k_cmp":["op2","so sánh"],
+"k_168":["s1","Nghị định"],"k_ad":["s1","áp dụng"],"k_238":["s2","Nghị định hai"],"k_hl":["s2","hiệu lực"],"k_gn":["s2","Riêng"],
+"k_a_low":["a1","Ở mức thấp"],"k_a_xm":["a1","xe máy bị"],"k_a_ot":["a1","Ô tô"],"k_a_pt":["a1","Cả hai"],
+"k_a3_xm":["a3","xe máy"],"k_a3_ot":["a3","ô tô"],"k_a3_t":["a3","tước"],
+"k_b_xm":["b1","Xe máy"],"k_b_ot":["b1","Ô tô"],"k_b_pt":["b1","Cả hai"],
+"k_c_xm":["c1","Xe máy"],"k_c_ot":["c1","Ô tô"],"k_c_pt":["c1","Cả hai"],
+"k_d1":["d1","Xe máy"],"k_d2":["d2","Ô tô"],"k_d3":["d2","Vượt quá hơn"],
+"k_e_def":["e1","đi ngược chiều"],"k_e_xm":["e1","Xe máy"],"k_e_ot":["e1","Ô tô"],
+"k_f_xm":["f1","đi xe máy"],"k_f_ot":["f1","Lái ô tô"],"k_f_pt":["f1","Hai lỗi"],
+"k_g_xm":["g1","Xe máy"],"k_g_ot":["g1","Ô tô"],
+"k_h12":["h1","mười hai điểm"],"k_h_r":["h1","Nếu chưa"],"k_h_ok":["h1","phục hồi đủ"],
+"k_t1b":["t1","tra cứu"],"k_src":["out","Hãy kiểm tra"]}
