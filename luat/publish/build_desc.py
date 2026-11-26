@@ -25,5 +25,5 @@ for p in json.load(open(os.path.join(H, 'schedule.json'))):
     d = re.sub(r'\n📚 THÔNG TIN THAM KHẢO.*?(?=\n⚠️)', '\n', d, flags=re.S)
     ep = p['file'][:-3]; r = refs(ep)
     sec = '\n📚 THÔNG TIN THAM KHẢO, NGUỒN\n' + '\n'.join(r) + '\n'
-    d = d.replace('\n⚠️', sec + '\n⚠️', 1); open(f, 'w', encoding='utf-8').write(d)
+    d = d.replace('\n⚠️', sec + '\n⚠️', 1); d = re.sub(r'\n{3,}', '\n\n', d); open(f, 'w', encoding='utf-8').write(d)
     print(p['file'], len(r), 'nguồn,', len(d), 'ký tự')
