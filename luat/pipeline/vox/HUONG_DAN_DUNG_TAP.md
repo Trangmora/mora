@@ -10,6 +10,17 @@
 - Câu cuối lời đọc (đoạn id "out"): "Nội dung chỉ mang tính thông tin, không phải tư vấn pháp lý. Hãy kiểm tra văn bản gốc."
 - Mỗi con số lên hình phải có 2 nguồn chính thống độc lập nói về văn bản ĐÃ ban hành/thông qua, hoặc là quy định hiện hành dẫn được điều luật. 1 NGUỒN / MÂU THUẪN / DỰ THẢO thì không đưa lên hình, hoặc nói rõ "theo báo chí", "còn chờ hướng dẫn".
 
+## Đổi kiểu cảnh (chủ kênh dặn 26/11/2026: dựng nhiều kiểu cho năng động, vẫn dễ hiểu)
+Mỗi video dùng ÍT NHẤT 4 kiểu cảnh khác nhau trong danh sách dưới, và mở đầu bằng kiểu KHÁC video gần nhất (xem `scenes.js` của tập mới nhất trong `luat/episodes/`). Hàm có sẵn trong `vox.html`:
+- `vxBig(t0, 'NHÃN', '5,7 triệu', 'chú thích')`: một con số thật lớn, tự đếm lên. Hợp cho mở đầu.
+- `vxCompare(t0, ['HIỆN NAY','dòng',...], ['LUẬT MỚI','dòng',...], t_phải)`: hai cột trước / sau.
+- `vxTimeline(t0, [[t,'01/3/2027','Luật có|hiệu lực'], ...])`: dòng thời gian (dấu | để xuống dòng), tối đa 4 mốc.
+- `vxBars(t0, [[t,'nhãn',giá_trị,'chữ',mới?], ...], tối_đa)`: biểu đồ cột ngang so sánh mức phạt, mức tiền; tối đa 4 cột.
+- `vxQA(t0, 'câu hỏi người xem hay hỏi', t_đáp, 'trả lời', 'dòng phụ')`: thẻ HỎI – ĐÁP.
+- `vxSteps(t0, [[t,'Bước|một'], ...])`: các bước thủ tục, tối đa 5 bước.
+- Các kiểu cũ: sơ đồ ô nối mũi tên (`box` + `arrow`), thẻ ảnh (`photoCard`), danh sách số (`badge`), con dấu (`stamp`), `vxTodo`, `vxDisclaimer`.
+Giữ nguyên: nền giấy, viền đỏ, chữ đen, mỗi cảnh một ý, chữ to dễ đọc, phụ đề, dòng nguồn.
+
 ## Cấu trúc lời gợi ý
 Mở đầu nêu thay đổi chính → video này giải thích gì → văn bản nào, khi nào → khái niệm bằng lời thường → hiện nay thế nào → quy định mới, từng ý → (ví dụ bằng số nếu hợp) → ai bị ảnh hưởng, từ khi nào, điều còn chờ hướng dẫn → bạn nên làm gì (3–4 ý) → lưu ý cuối.
 

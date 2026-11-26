@@ -94,6 +94,29 @@ function title(n,s,t0,o={}){const px=o.x??60,py=o.y??118,size=o.size??44;let tx=
  txt(s,tx,py,{size,a:P(t0+.05,.25)});underline(tx,py+12,tw(s,size),t0+.25,.35,{hand:o.hand});if(o.sub)txt(o.sub,tx,py+46,{size:19,w:600,col:GREY,a:P(t0+.3,.3)})}
 function subtitle(t){const c=SUBS.find(c=>t>=D+c.t0&&t<D+c.t1);if(!c)return;const m=tw(c.text,30,600),bw=m+60,bh=56,bx=640-bw/2,by=616;x.save();x.fillStyle='rgba(40,40,44,.94)';rr(bx,by,bw,bh,8);x.fill();x.restore();txt(c.text,640,by+38,{size:30,w:600,col:'#fff',align:'center'})}
 // ---- cảnh dùng chung (tên có tiền tố vx để không trùng hàm riêng của từng tập) ----
+// ---- các KIỂU CẢNH dùng chung (để mỗi video đổi phong cách mà vẫn dễ hiểu) ----
+// vxBig(t0, nhãn_trên, số_lớn, chú_thích, {col}): một con số thật lớn giữa màn hình, đếm dần lên nếu là số.
+function vxBig(t0,top,big,cap,o={}){const p=P(t0,.6);txt(top,640,210,{size:28,col:GREY,align:'center',ls:4,a:P(t0,.2)});
+ const m=String(big).match(/^([\d.,]+)(.*)$/);let s=big;if(m&&p<1){const n=parseFloat(m[1].replace(/\./g,'').replace(',','.'));if(!isNaN(n)){const v=n*ease(p);s=(Number.isInteger(n)?Math.round(v).toLocaleString('vi-VN'):v.toFixed(1).replace('.',','))+m[2]}}
+ txt(s,640,400,{size:150,col:o.col||RED,align:'center',a:P(t0,.15)});underline(640-tw(String(big),150)/2,425,tw(String(big),150),t0+.6,.4);txt(cap,640,500,{size:32,w:600,align:'center',a:P(t0+.4,.3)})}
+// vxCompare(t0, [nhãn_trái, dòng...], [nhãn_phải, dòng...], t_phải): hai cột TRƯỚC / SAU, cột cũ bị gạch chéo nhẹ.
+function vxCompare(t0,L,Rr,t1){const y=170,h=360;box(70,y,520,h,t0,{col:GREY},a=>{txt(L[0],260,56,{size:26,col:GREY,align:'center',ls:3});L.slice(1).forEach((s,i)=>txt(s,260,130+i*56,{size:32,align:'center',col:'#5a554d'}))});
+ arrow(600,y+h/2,680,y+h/2,t1-.2,.2);box(690,y,520,h,t1,{lw:7},a=>{txt(Rr[0],260,56,{size:26,col:RED,align:'center',ls:3});Rr.slice(1).forEach((s,i)=>txt(s,260,130+i*56,{size:32,align:'center',a:P(t1+.2+i*.25,.2)}))});
+ if(P(t1+.3,.3)>0)stamp('MỚI',1150,y+20,P(t1+.3,.35),{size:30,rot:.12})}
+// vxTimeline(t0, [[t, 'nhãn ngày', 'mô tả'], ...]): dòng thời gian ngang, mỗi mốc bật lên đúng lúc đọc tới.
+function vxTimeline(t0,items){const x0=110,x1=1170,y=330;sketch([seg(x0,y,x1,y,9)],t0,.7,{lw:6});const n=items.length;
+ items.forEach(([t,d,s],i)=>{const cx=x0+170+(x1-x0-340)*(n==1?.5:i/(n-1));const pa=P(t,.3);if(pa<=0)return;x.save();x.globalAlpha*=pa;x.fillStyle=RED;x.beginPath();x.arc(cx,y,14,0,6.2832);x.fill();x.restore();
+  txt(d,cx,y-36,{size:34,col:RED,align:'center',a:pa});const up=i%2==0;box(cx-150,up?y+40:y+40,300,120,t+.1,{lw:3},a=>{const ws=s.split('|');ws.forEach((w,k)=>txt(w,150,52+k*34,{size:24,align:'center'}))})})}
+// vxBars(t0, [[t, 'nhãn', giá_trị, 'chữ trên cột', mới?], ...], tối_đa): biểu đồ cột ngang so sánh mức phạt, mức tiền.
+function vxBars(t0,rows,max){const X=380,Wd=620;rows.forEach(([t,lab,v,s,isNew],i)=>{const y=190+i*92;txt(lab,X-24,y+42,{size:26,align:'right',a:P(t,.2)});
+ const w=Wd*v/max*ease(P(t,.7));x.save();x.shadowColor='rgba(40,25,10,.2)';x.shadowBlur=8;x.fillStyle=isNew?RED:'#bdb4a6';x.fillRect(X,y+8,w,48);x.restore();
+ if(P(t+.6,.2)>0)txt(s,X+w+14,y+44,{size:26,col:isNew?RED:GREY,a:P(t+.6,.2)})});sketch([seg(X,180,X,190+rows.length*92,3)],t0,.3,{lw:3,col:'#8a8276'})}
+// vxQA(t0, 'câu hỏi', t_trả_lời, 'trả lời dòng 1', 'dòng 2'): thẻ HỎI – ĐÁP như người xem hỏi.
+function vxQA(t0,q,t1,a1,a2){box(110,150,1060,150,t0,{col:BLUE,lw:4},a=>{txt('HỎI',40,58,{size:24,col:BLUE,ls:4});txt(q,40,112,{size:34})});
+ arrow(640,306,640,352,t1-.2,.18);box(110,360,1060,190,t1,{lw:6},a=>{txt('ĐÁP',40,58,{size:24,col:RED,ls:4});txt(a1,40,112,{size:34});if(a2)txt(a2,40,160,{size:30,w:600,a:P(t1+.6,.25)})})}
+// vxSteps(t0, [[t,'bước'], ...]): các bước làm thủ tục, nối bằng mũi tên theo hàng ngang.
+function vxSteps(t0,steps){const n=steps.length,w=Math.min(300,(1140-(n-1)*40)/n),x0=640-(n*w+(n-1)*40)/2;steps.forEach(([t,s],i)=>{const px=x0+i*(w+40);if(i)arrow(px-36,360,px-6,360,t-.2,.15);
+ box(px,250,w,220,t,{},a=>{badge(i+1,w/2,46,t+.1,24);s.split('|').forEach((l,k)=>txt(l,w/2,118+k*34,{size:Math.min(26,w/11),align:'center'}))})})}
 // vxTodo(t0, [[t, dòng1, dòng2], ...], ghi_chú): cảnh "BẠN NÊN LÀM GÌ?" với các ô viền xanh và dấu tích.
 function vxTodo(t0,items,note='Gợi ý chung, không thay cho tư vấn pháp lý.'){const s='BẠN NÊN LÀM GÌ?',m=tw(s,48);txt(s,640,122,{size:48,col:GREEN,align:'center',a:P(t0,.2)});underline(640-m/2,136,m,t0+.25,.35,{col:GREEN});
  const n=items.length,h=n>3?96:122,gap=n>3?12:16;items.forEach(([ti,a1,a2],i)=>{const y=172+i*(h+gap);box(170,y,940,h,ti,{col:GREEN},a=>{check(36,h/2-25,50,ti+.25,.25);if(a2){txt(a1,130,h/2-8,{size:n>3?26:30});txt(a2,130,h/2+(n>3?24:32),{size:n>3?26:30})}else txt(a1,130,h/2+11,{size:30})})});
