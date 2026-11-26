@@ -491,6 +491,15 @@ dialog.policy form { margin-top: 18px; }
 .who b { font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; }
 .who span { font-size: 14px; color: var(--muted); font-weight: 300; }
 .who i { font-style: normal; color: var(--mark); margin-top: 6px; }
+.bl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 3.4vw, 44px); }
+.bl-i { display: grid; align-content: start; gap: 12px; padding: clamp(24px, 2.4vw, 34px); border: 1px solid var(--line); border-radius: 20px; background: var(--raise); transition: transform .4s var(--ease), border-color .3s; }
+.bl-i:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+.bl-n { color: var(--mark); font-size: 12px; }
+.bl-i h3 { font-size: clamp(20px, 1.7vw, 26px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; text-wrap: balance; }
+.bl-i p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+.bl-go { margin-top: 6px; font-size: 14px; color: var(--ink); }
+.bl-all { margin-top: 22px; }
+@media (max-width: 900px) { .bl { grid-template-columns: 1fr; } }
 .more { font-size: 14px; color: var(--muted); border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; }
 .more:hover { color: var(--ink); border-bottom-color: var(--ink); }
 .who-foot { margin-top: 22px; display: flex; justify-content: flex-end; }
@@ -1073,6 +1082,21 @@ body {
     <span class="sc">Audio equipment</span>
     <span class="ch">Website</span>
   </a></li></ol>
+  </section>
+
+  <!-- Từ blog -->
+  <section class="sec blogrow" id="blog" aria-labelledby="blog-h">
+    <div class="sec-head">
+      <span class="lab cap"><span class="dot" aria-hidden="true"></span>Blog</span>
+      <h2 id="blog-h">More <span class="it">from the blog.</span></h2>
+      <p>Practical guides to marketing with AI, written for owners who are not technical.</p>
+    </div>
+    <div class="bl">
+      <a class="bl-i" href="/blog/what-is-ai-marketing-automation/"><span class="bl-n cap">01</span><h3>What is AI marketing automation?</h3><p>What the system is made of, what it can do, what it costs and where to start.</p><span class="bl-go">Read the article →</span></a>
+      <a class="bl-i" href="/blog/generative-engine-optimization-for-small-business/"><span class="bl-n cap">02</span><h3>What is GEO? Get ChatGPT and Gemini to mention you</h3><p>What Google says about optimising for AI, and 7 things a small business can do.</p><span class="bl-go">Read the article →</span></a>
+      <a class="bl-i" href="/blog/marketing-with-ai-8-steps/"><span class="bl-n cap">03</span><h3>Marketing with AI in 8 steps</h3><p>A video and the monthly cost table, for people who are not technical.</p><span class="bl-go">Read the article →</span></a>
+    </div>
+    <p class="bl-all"><a class="more" href="/blog/">See all articles →</a></p>
   </section>
 
   <!-- Bản tin -->
