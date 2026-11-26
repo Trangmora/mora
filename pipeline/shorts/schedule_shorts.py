@@ -35,5 +35,7 @@ for n, sid in enumerate(ids):
                 r = subprocess.run(['curl', '-s', '-m', '120', 'https://api.buffer.com', '-H', 'Content-Type: application/json', '-d', json.dumps({"query": Q, "variables": {"i": inp}})], capture_output=True, text=True)
                 dd = json.loads(r.stdout)['data']['createPost']
                 if dd['__typename'] == 'PostActionSuccess': log[f'{sid}_en_{nm}'] = dd['post']['id']
-                else: print(sid, nm, dd.get('message', '')[:100])
+                else:   # Buffer gói miễn phí: tối đa 10 bài hẹn giờ mỗi kênh. Bài chưa hẹn được thì cất vào hàng chờ.
+                    PF = 'pipeline/publish/buffer_pending.json'; P = json.load(open(PF)) if os.path.exists(PF) else []
+                    P.append(inp); json.dump(P, open(PF, 'w'), ensure_ascii=False, indent=1); print(sid, nm, 'vào hàng chờ:', dd.get('message', '')[:60])
 json.dump(log, open(LOGF, 'w'), indent=1)

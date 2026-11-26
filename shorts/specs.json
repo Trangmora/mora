@@ -717,8 +717,21 @@
    "en": "HE WROTE IT, THEN VANISHED"
   },
   "shots": [
-   "episodes/03-dao-giao/work/clip_A3.mp4",
-   "episodes/03-dao-giao/work/clip_A3.mp4",
+   {
+    "src": "episodes/03-dao-giao/work/clip_A3.mp4",
+    "f": [
+     0.27,
+     0.5
+    ]
+   },
+   {
+    "src": "episodes/03-dao-giao/work/clip_A3.mp4",
+    "f": [
+     0.3,
+     0.5
+    ],
+    "z": 1.05
+   },
    {
     "src": "episodes/03-dao-giao/work/img/A5.png",
     "f": [
@@ -734,7 +747,13 @@
      0.4
     ]
    },
-   "episodes/03-dao-giao/work/clip_A3.mp4"
+   {
+    "src": "episodes/03-dao-giao/work/clip_A3.mp4",
+    "f": [
+     0.27,
+     0.5
+    ]
+   }
   ],
   "vi": [
    "Ông viết một trong những cuốn sách nổi tiếng nhất thế giới... rồi biến mất mãi mãi.",
@@ -801,7 +820,8 @@
    "Tens of millions of pilgrims arrive at the same riverbank and build an entire city of tents.",
    "And twelve years later, they come back again.",
    "Follow for more stories from Asia!"
-  ]
+  ],
+  "credit": "Music: \"Asian Drums - Vadodara\" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License."
  },
  {
   "id": "g3_quyen",
