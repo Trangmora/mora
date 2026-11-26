@@ -1,5 +1,8 @@
 // Lõi dùng chung: tham số trang, nhiễu, tiện ích. Mọi thứ là hàm của thời gian phim t (giây).
 const Q = new URLSearchParams(location.search);
+let PEND = 0, MAIN_DONE = false;
+function loadTex(url, srgb = true) { const tx = new THREE.Texture(); PEND++; const im = new Image();
+  im.onload = () => { tx.image = im; tx.needsUpdate = true; if (--PEND === 0 && MAIN_DONE) window.READY = true; }; im.src = url; tx.flipY = false; return tx; }
 const W = +(Q.get('w') || 1280), H = +(Q.get('h') || 720);
 const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
 const lerp = (a, b, k) => a + (b - a) * k;

@@ -18,8 +18,8 @@ const hull = new THREE.Mesh(hullGeo(), woodMat2); hull.position.y = .12; boat.ad
 for (const x of [-1.2, -.2, .9]) { const sb = new THREE.Mesh(new THREE.BoxGeometry(.12, .04, 1.05), woodMat); sb.position.set(x, .3, 0); boat.add(sb); }
 const cyl = (r1, r2, h, mat, seg = 14) => { const g = new THREE.CylinderGeometry(r1, r2, h, seg); g.translate(0, -h / 2, 0); return new THREE.Mesh(g, mat); };
 // Người: dựng bằng SDF + bộ xương (40_human.js)
-const fisher = makeHuman(); fisher.mesh.position.set(.2, .02, .05); boat.add(fisher.mesh);
-const BN = fisher.bones;
+const fisher = window.NO_SDF_HUMAN ? null : makeHuman(); if (fisher) { fisher.mesh.position.set(.2, .02, .05); boat.add(fisher.mesh); }
+const BN = fisher ? fisher.bones : null;
 // Đuốc ở mũi thuyền
 const pole = cyl(.025, .03, 1.5, woodMat); pole.position.set(1.85, 1.62, .3); boat.add(pole);
 const flameMat = new THREE.ShaderMaterial({ uniforms: U, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,

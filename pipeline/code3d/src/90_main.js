@@ -10,4 +10,4 @@ function renderAt(t) {
 }
 window.renderAt = renderAt; window.FILM_DUR = DUR;
 if (!Q.has('cap')) { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DUR); requestAnimationFrame(loop); })(); }
-window.READY = true;
+MAIN_DONE = true; if (PEND === 0) window.READY = true;

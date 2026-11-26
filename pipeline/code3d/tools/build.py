@@ -4,7 +4,13 @@ import sys, glob, os
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); film = sys.argv[1]
 three = open(f'{R}/node_modules/three/build/three.cjs', encoding='utf-8').read()
 parts = sorted(glob.glob(f'{R}/src/*.js') + glob.glob(f'{R}/films/{film}/*.js'), key=os.path.basename)
-code = '\n'.join(f'// ===== {os.path.basename(p)}\n' + open(p, encoding='utf-8').read() for p in parts)
+import json, base64
+assets = {}
+AF = f'{R}/films/{film}/assets.json'
+if os.path.exists(AF):
+    for k, p in json.load(open(AF)).items():
+        ap = os.path.join(R, p); assets[k] = 'data:image/png;base64,' + base64.b64encode(open(ap, 'rb').read()).decode()
+code = 'const ASSET = ' + json.dumps(assets) + ';\n' + '\n'.join(f'// ===== {os.path.basename(p)}\n' + open(p, encoding='utf-8').read() for p in parts)
 html = f'''<!doctype html><html><head><meta charset="utf-8"><title>{film}</title>
 <style>html,body{{margin:0;background:#000;overflow:hidden}}canvas{{display:block;width:100vw;height:100vh;object-fit:contain}}</style></head><body>
 <script>const THREE = (function(){{ const module = {{exports:{{}}}}; const exports = module.exports;
