@@ -6,18 +6,20 @@ const RIG = { hideR: [418, 630, 540, 880], split: { L: [[126, 360], [130, 540], 
 const thanh = makePuppet(RIG, ASSET.le_than, ASSET.le_than_d);
 thanh.addGrip(ASSET.fistR, { w: 685, h: 1024, anchor: [395, 330], axis: [245, 670], guard: [560, 930], scale: .17, z: .1 });
 net.visible = false;
+vnBanks({ x0: 7 });
 function blinkAt(t, times) { let b = 0; for (const s of times) { const k = (t - s) / .16; if (k > 0 && k < 2) b = Math.max(b, 1 - Math.abs(k - 1)); } return b; }
 function film(t) {
-  const k = smooth(0, DUR, t);
-  camera.position.set(lerp(3.0, 2.2, k), lerp(1.45, 1.35, k), lerp(5.4, 3.6, k)); camera.lookAt(.15, lerp(1.0, 1.15, k), 0);
-  camera.fov = 34; camera.aspect = W / H; camera.updateProjectionMatrix();
+  if (t < 3.6) { const k = smooth(0, 3.6, t);   // cảnh rộng: sông giữa lũy tre, hàng cau, núi đá
+    camera.position.set(lerp(4.5, 3.2, k), lerp(4.2, 2.6, k), lerp(24, 13, k)); camera.lookAt(0, lerp(2.2, 1.2, k), lerp(-25, 0, k)); camera.fov = 40; }
+  else { const k = smooth(3.6, DUR, t);           // cận trung: nhân vật trên thuyền
+    camera.position.set(lerp(2.8, 2.0, k), lerp(1.45, 1.35, k), lerp(4.8, 3.4, k)); camera.lookAt(.15, lerp(1.05, 1.15, k), 0); camera.fov = 34; } camera.aspect = W / H; camera.updateProjectionMatrix();
   boat.position.set(0, Math.sin(t * 1.1) * .03, 0); boat.rotation.set(Math.sin(t * .8) * .02, -.25, Math.sin(t * 1.3) * .025); boat.updateMatrixWorld(true);
   const base = boat.localToWorld(new THREE.Vector3(.1, .08, .05)); thanh.mesh.position.copy(base); thanh.face(camera.position); thanh.mesh.updateMatrixWorld(true);
-  const raise = smooth(5.2, 7.2, t), talk = t > 1.4 && t < 3.6 ? Math.max(0, Math.sin(t * 17) * .5 + Math.sin(t * 7.3) * .5) : 0;
+  const raise = smooth(5.2, 7.2, t), talk = t > 3.9 && t < 5.2 ? Math.max(0, Math.sin(t * 17) * .5 + Math.sin(t * 7.3) * .5) : 0;
   thanh.pose({ chest: Math.sin(t * .9) * .015 + raise * .03, head: Math.sin(t * .6) * .04 + lerp(0, .08, smooth(3.8, 4.6, t)) * (1 - raise) - raise * .02,
     uarmL: Math.sin(t * 1.1) * .03, farmL: 0,
     uarmR: -Math.sin(t * 1.0) * .03 + raise * 2.35, farmR: raise * .5,
-    blink: blinkAt(t, [.9, 3.9, 6.0, 8.7]), mouth: talk });
+    blink: blinkAt(t, [.9, 4.3, 6.0, 8.7]), mouth: talk });
   // gươm: khi giơ lên thì thay bàn tay xòe bằng bàn tay nắm chuôi gươm, lưỡi gươm mọc ra từ chắn tay
   const gr = thanh.updateGrip(raise > .3);
   blade.visible = !!gr;
