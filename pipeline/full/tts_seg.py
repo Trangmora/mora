@@ -3,7 +3,7 @@ Dùng: python3 tts_seg.py <script.json> <lang> <outdir> [gap_giây_mặc_định
 Xuất: <outdir>/vo_<lang>.wav và <outdir>/T_<lang>.json (mốc bắt đầu mỗi đoạn, kèm mốc từng ký tự).
 Cài đặt giọng theo STYLE_GUIDE: eleven_v3, stability 0.5, style 0.3, không chỉnh tốc độ."""
 import json, subprocess, base64, sys, os
-VID = '1SF4Jqf4CNRoja3ACqWC'
+VID = os.environ.get('VOICE_ID', '1SF4Jqf4CNRoja3ACqWC')
 src, lang, out = sys.argv[1], sys.argv[2], sys.argv[3]
 gap_def = float(sys.argv[4]) if len(sys.argv) > 4 else 0.9
 gaps = dict(a.split('=') for a in sys.argv[5:])
@@ -13,7 +13,8 @@ SR = 44100
 T = {}; chars = {}; t = 0.0; parts = []
 for i, (sid, text) in enumerate(segs):
     body = {"text": text, "model_id": "eleven_v3",
-            "voice_settings": {"stability": 0.5, "similarity_boost": 0.85, "style": 0.3}}
+            "voice_settings": {"stability": float(os.environ.get("STABILITY", 0.5)), "similarity_boost": 0.85,
+                               "style": float(os.environ.get("STYLE", 0.3))}}
     if lang == 'vi': body['language_code'] = 'vi'
     bj = f'{out}/b_{lang}.json'; json.dump(body, open(bj, 'w'))
     r = subprocess.run(['curl', '-s', '-m', '300', '-X', 'POST',
