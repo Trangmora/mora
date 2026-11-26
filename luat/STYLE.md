@@ -37,3 +37,8 @@
 ## Kênh đăng (26/11/2026)
 - **Kênh YouTube:** "Hiểu Luật 2 Phút", mã kênh `UCsgNKzFknzaH0lqNz-ivNfQ`. Chỉ đăng lên kênh này (chủ kênh dặn). Key Morapost của kênh có nhìn thấy cả kênh khác, nên khi đăng luôn truyền đúng mã này.
 - **Đăng qua Morapost** trong môi trường "Kênh luật – Morapost": `python3 luat/publish/post_schedule.py run --account UCsgNKzFknzaH0lqNz-ivNfQ`. Hai ngày một video, 19:00 giờ Việt Nam, công khai. Đã hẹn giờ 40 video, từ 27/11/2026 đến 13/02/2027; post_id ghi trong `luat/publish/schedule.json`.
+
+## Đăng bài (chủ kênh chốt 26/11/2026)
+- **Kênh luật CHỈ đăng lên YouTube "Hiểu Luật 2 Phút"** (account_id `UCsgNKzFknzaH0lqNz-ivNfQ`). Tuyệt đối không đăng lên các tài khoản của kênh văn hóa, dù key Morapost (dùng chung) nhìn thấy chúng: YouTube Ridiculous Case, YouTube Asian Myths & Culture, Facebook Ridiculous Case, Facebook Mora Media, Instagram asian_myths, Threads.
+- Script `luat/publish/post_schedule.py` tự từ chối mọi mã kênh khác.
+- Lịch: 2 ngày một video, 19:00 giờ Việt Nam, công khai. Mô tả luôn có mục "Thông tin tham khảo, nguồn"; không nhắc giọng AI hay ElevenLabs.

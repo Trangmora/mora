@@ -8,7 +8,9 @@ import json, sys, subprocess, datetime, os
 H = os.path.dirname(os.path.abspath(__file__)); MP = os.path.join(H, '../../pipeline/publish/morapost.py'); S = os.path.join(H, 'schedule.json')
 a = sys.argv[1:]
 if not a or a[0] == 'accounts': subprocess.run([sys.executable, MP, 'accounts']); sys.exit()
+LAW_CHANNEL = 'UCsgNKzFknzaH0lqNz-ivNfQ'  # YouTube "Hiểu Luật 2 Phút": kênh luật CHỈ đăng lên kênh này (chủ kênh dặn 26/11/2026)
 acc = a[a.index('--account') + 1]; plan = json.load(open(S))
+if acc != LAW_CHANNEL: sys.exit(f'Từ chối: kênh luật chỉ đăng lên Hiểu Luật 2 Phút ({LAW_CHANNEL}), không đăng lên {acc}.')
 if '--shift-from' in a:
     d0 = datetime.date.fromisoformat(a[a.index('--shift-from') + 1]); pend = [p for p in plan if not p['post_id']]
     for i, p in enumerate(pend): p['date'] = str(d0 + datetime.timedelta(days=2 * i)); p['at'] = f"{p['date']}T19:00:00+07:00"
