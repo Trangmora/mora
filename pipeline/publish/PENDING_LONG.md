@@ -1,4 +1,4 @@
-# Việc còn chờ: hẹn video dài (chờ Morapost nhận key)
+# ĐÃ CHẠY XONG ngày 26/11/2026 (16 bài, ID trong scheduled_ids.json). Đừng chạy lại kẻo đăng trùng.
 Video + ảnh bìa đã ở R2, thư mục f806673a4d5b. Chạy từ thư mục gốc repo:
 ```
 export R=f806673a4d5b; S=pipeline/publish/schedule_long.py
