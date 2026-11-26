@@ -20,7 +20,7 @@ function instMat(albedoGLSL, opts = {}) {
       void main(){ if (uClip > .5 && vP.y < 0.) discard; vec3 P = vP, N = normalize(vN); if (!gl_FrontFacing) N = -N;
         vec3 alb = (${albedoGLSL}) * vC;
         vec3 V = normalize(uCamPos - P);
-        vec3 c = light(P, N, alb, .08) + alb * uMoonCol * max(dot(-N, uMoonDir), 0.) * .35;   // ánh sáng xuyên lá
+        vec3 c = light(P, N, alb, .08) + alb * uMoonCol * max(dot(-N, uMoonDir), 0.) * (.35 + uDay * .15) * vec3(.9,1.1,.5);   // ánh sáng xuyên lá
         gl_FragColor = vec4(fog(c, P), 1.); }` });
 }
 function addInstances(geo, mat, list) { // list: [{p:[x,y,z], r:[x,y,z], s:[x,y,z], c:[r,g,b]}]
@@ -67,8 +67,8 @@ function vnBanks(o = {}) {
         const wp = ob.localToWorld(cp.clone());
         leaves.push({ p: [wp.x, wp.y, wp.z], r: [2.2 + R(q + j) * 1.2, R(q * 11 + j) * 6.28, (R(q * 13 + k) - .5) * 1.4], s: [1.2, 1.2 + R(q) * .6, 1.2],
           c: [.75 + R(q * 17 + k) * .5, .85 + R(q * 19 + k) * .35, .6 + R(q * 23) * .3] }); } } }
-  addInstances(culm, instMat(`mix(vec3(.16,.2,.07), vec3(.25,.24,.1), fbm(vL*3.))`, { sway: '.004' }), culms);
-  addInstances(leaf, instMat(`vec3(.07,.13,.035)`, { sway: '.0' }), leaves);
+  addInstances(culm, instMat(`mix(vec3(.09,.14,.05), vec3(.16,.17,.08), fbm(vL*3.))`, { sway: '.004' }), culms);
+  addInstances(leaf, instMat(`vec3(.045,.10,.03)`, { sway: '.0' }), leaves);
   // cau: thân thẳng mảnh, có đốt, tán lá kép ở ngọn
   const trunk = new THREE.CylinderGeometry(.08, .11, 9, 8, 30); trunk.translate(0, 4.5, 0);
   { const p = trunk.attributes.position; for (let i = 0; i < p.count; i++) { const y = p.getY(i); p.setX(i, p.getX(i) + Math.sin(y * .25) * .15 * y / 9); } trunk.computeVertexNormals(); }

@@ -21,6 +21,7 @@ const waterMat = new THREE.ShaderMaterial({
       vec3 L = uTorchPos - P; float dl = length(L); L/=dl;
       c += uTorchCol * pow(max(dot(N, normalize(L+V)),0.), 120.) * uTorch * 6. / (1. + dl*.35);
       c += vec3(.9,.9,1.) * pow(max(dot(reflect(-V,N), uMoonDir),0.), 900.) * 1.2;
+      c = mix(c, mix(vec3(.02,.075,.07), refl * vec3(.85,.95,.9), clamp(fr*1.1 + .3, 0., .78)) + uMoonCol * pow(max(dot(reflect(-V,N), uMoonDir),0.), 200.) * 2., uDay);
       c = mix(c, vec3(1.25) * (.85 + .15*h0) * mix(vec3(1.), refl*1.2, .55), uInk);
       float bd = length(P.xz - uBladePos.xz); c += vec3(1.6,1.1,.4) * uBlade * exp(-bd*bd*1.8) * (.7 + .5*h0) * smoothstep(.6,-1.5,uBladePos.y) ;
       gl_FragColor = vec4(fog(c, P), 1.); }`

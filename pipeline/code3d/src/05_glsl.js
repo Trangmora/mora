@@ -8,7 +8,7 @@ float fbm(vec3 p){ float s=0., a=.5; for(int i=0;i<5;i++){ s+=a*n3(p); p*=2.03; 
 `;
 const GL_LIGHT = `
 uniform vec3 uMoonDir, uMoonCol, uSkyCol, uGroundCol, uFogCol, uTorchPos, uTorchCol, uCamPos;
-uniform float uFogDen, uTorch, uTime;
+uniform float uFogDen, uTorch, uTime, uDay;
 vec3 light(vec3 P, vec3 N, vec3 alb, float spec){
   vec3 V = normalize(uCamPos - P);
   float hemi = .5 + .5*N.y;

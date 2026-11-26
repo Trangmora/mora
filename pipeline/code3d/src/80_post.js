@@ -12,13 +12,16 @@ const blurMat = new THREE.ShaderMaterial({ uniforms: { tSrc: { value: null }, uD
   fragmentShader: `uniform sampler2D tSrc; uniform vec2 uDir; varying vec2 vU; void main(){ vec3 s = vec3(0.); float w[5]; w[0]=.227; w[1]=.195; w[2]=.122; w[3]=.054; w[4]=.016;
     s += texture2D(tSrc, vU).rgb * w[0]; for(int i=1;i<5;i++){ s += (texture2D(tSrc, vU + uDir*float(i)).rgb + texture2D(tSrc, vU - uDir*float(i)).rgb) * w[i]; }
     gl_FragColor = vec4(s, 1.); }` });
-const finalMat = new THREE.ShaderMaterial({ uniforms: { tSrc: { value: hdrRT.texture }, tBloom: { value: bA.texture }, uTime: U.uTime, uExp: { value: 1 }, uFade: { value: 1 } }, vertexShader: VQ,
-  fragmentShader: `uniform sampler2D tSrc, tBloom; uniform float uTime, uExp, uFade; varying vec2 vU;
+const finalMat = new THREE.ShaderMaterial({ uniforms: { tSrc: { value: hdrRT.texture }, tBloom: { value: bA.texture }, uTime: U.uTime, uExp: { value: 1 }, uFade: { value: 1 }, uGrade: { value: 0 } }, vertexShader: VQ,
+  fragmentShader: `uniform sampler2D tSrc, tBloom; uniform float uTime, uExp, uFade, uGrade; varying vec2 vU;
     vec3 aces(vec3 x){ return clamp((x*(2.51*x+.03))/(x*(2.43*x+.59)+.14), 0., 1.); }
     void main(){ vec2 d = (vU-.5); float ca = dot(d,d)*.004;
       vec3 c = vec3(texture2D(tSrc, vU + d*ca).r, texture2D(tSrc, vU).g, texture2D(tSrc, vU - d*ca).b);
       c += texture2D(tBloom, vU).rgb * .9; c *= uExp;
       c = aces(c * 1.6); c = pow(c, vec3(1./2.2));
+      float lu = dot(c, vec3(.3,.59,.11));
+      vec3 g = mix(c * vec3(.9,1.02,1.08), c * vec3(1.08,1.0,.88), smoothstep(.15,.75,lu)); g = mix(vec3(dot(g, vec3(.3,.59,.11))), g, 1.25); g = g + (g - .5) * .12 * smoothstep(0.,1.,g);
+      c = mix(c, g, uGrade);
       c *= 1. - smoothstep(.35, .95, length(d*vec2(1.1,1.))) * .55;
       c += (fract(sin(dot(vU*vec2(W_,H_) + uTime*61.7, vec2(12.9898,78.233)))*43758.5453) - .5) * .035;
       gl_FragColor = vec4(c * uFade, 1.); }`.replace('W_', W.toFixed(1)).replace('H_', H.toFixed(1)) });

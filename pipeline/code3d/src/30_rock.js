@@ -1,5 +1,5 @@
 // Núi đá vôi dạng tháp (karst): mặt tròn xoay có phình đầu, dời đỉnh bằng nhiễu; cây bụi trên mặt hướng lên.
-const rockMat = litMat(`mix(vec3(.13,.135,.14) * (.55 + .9*fbm(vec3(P.x*.9, P.y*.07, P.z*.9))), vec3(.035,.085,.045) * (.6 + .8*fbm(P*2.3)), smoothstep(.25,.65, N.y + (fbm(P*.4)-.5)*1.1)) * (.65 + .6*fbm(P*1.7))`, { spec: '.05' });
+const rockMat = litMat(`mix(vec3(1.), vec3(.75,1.1,.7), uDay*.0) * mix(vec3(.13,.135,.14) * (.55 + .9*fbm(vec3(P.x*.9, P.y*.07, P.z*.9))), mix(vec3(.035,.085,.045), vec3(.06,.16,.05), uDay) * (.6 + .8*fbm(P*2.3)), smoothstep(.05,.45, N.y + (fbm(P*.35)-.5)*1.3 + uDay*.55*(fbm(P*1.1)-.2))) * (.65 + .6*fbm(P*1.7))`, { spec: '.05' });
 function karst(x, z, h, r, seed) {
   const pts = [];
   for (let i = 0; i <= 24; i++) {

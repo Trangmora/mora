@@ -31,9 +31,9 @@ function makePuppet(rig, imgURL, depthURL) {
   const mat = new THREE.ShaderMaterial({ transparent: false, side: THREE.DoubleSide,
     uniforms: Object.assign({}, U, { tImg: { value: loadTex(imgURL) }, tDep: { value: loadTex(depthURL) }, uB: { value: B }, uSize: { value: new THREE.Vector2(IW, IH) },
       uS: { value: s }, uRelief: { value: .16 }, uBlink: { value: 0 }, uMouth: { value: 0 },
-      uEye0: { value: new THREE.Vector4(...rig.eyes[0]) }, uEye1: { value: new THREE.Vector4(...rig.eyes[1]) }, uMo: { value: new THREE.Vector4(...rig.mouth) }, uChin: { value: rig.chin_y },
+      uEye0: { value: new THREE.Vector4(...rig.eyes[0]) }, uEye1: { value: new THREE.Vector4(...rig.eyes[1]) }, uMo: { value: new THREE.Vector4(...rig.mouth) }, uChin: { value: rig.chin_y }, uSmile: { value: 0 },
       uHideR: { value: 0 }, uHideBox: { value: new THREE.Vector4(...(rig.hideR || [0, 0, 0, 0])) } }),
-    vertexShader: `attribute vec2 aPx; attribute vec4 aSi; attribute vec4 aSw; uniform mat3 uB[7]; uniform vec2 uSize; uniform float uS, uRelief, uMouth, uChin; uniform vec4 uMo; uniform sampler2D tDep;
+    vertexShader: `attribute vec2 aPx; attribute vec4 aSi; attribute vec4 aSw; uniform mat3 uB[7]; uniform vec2 uSize; uniform float uS, uRelief, uMouth, uChin, uSmile; uniform vec4 uMo; uniform vec4 uEyeA, uEyeB; uniform sampler2D tDep;
       varying vec2 vPx; varying vec3 vP; varying vec3 vN0; varying vec3 vAx, vAy, vAz;
       void main(){ vec3 q = vec3(aPx, 1.); vec2 p = vec2(0.);
         for (int k = 0; k < 4; k++) { int id = int(aSi[k] + .5); mat3 M = uB[0];
@@ -42,6 +42,10 @@ function makePuppet(rig, imgURL, depthURL) {
         // hàm dưới hạ xuống khi mở miệng
         float jaw = smoothstep(uMo.y - 2., uMo.y + 8., aPx.y) * smoothstep(uChin + 30., uChin - 5., aPx.y) * smoothstep(uMo.z * 2.6, uMo.z * .8, abs(aPx.x - uMo.x));
         p.y += jaw * uMouth * 5.;
+        // mỉm cười: khóe miệng kéo lên và sang hai bên, gò má nâng, mắt hơi híp
+        for (int s = -1; s <= 1; s += 2) { vec2 cn = uMo.xy + vec2(float(s) * uMo.z * .95, 0.); float f = exp(-dot(aPx - cn, aPx - cn) / (uMo.z * uMo.z * .55));
+          p += vec2(float(s) * 2.2, -4.) * f * uSmile;
+          vec2 ck = uMo.xy + vec2(float(s) * uMo.z * 1.5, -uMo.z * 1.2); float fc = exp(-dot(aPx - ck, aPx - ck) / (uMo.z * uMo.z * 1.4)); p.y -= 2.5 * fc * uSmile; }
         vec2 uv = aPx / uSize; float dep = texture2D(tDep, uv).r;
         vec3 lp = vec3((p.x - uSize.x * .5) * uS, (uSize.y - p.y) * uS, dep * uRelief);
         vec4 w = modelMatrix * vec4(lp, 1.); vP = w.xyz; vPx = aPx; vN0 = vec3(0.); vAx = mat3(modelMatrix)[0]; vAy = mat3(modelMatrix)[1]; vAz = mat3(modelMatrix)[2];
@@ -70,6 +74,8 @@ function makePuppet(rig, imgURL, depthURL) {
         vec3 Nl = normalize(vec3(-dx * 14., dy * 14., 1.));
         vec3 N = normalize(vAx * Nl.x + vAy * Nl.y + vAz * Nl.z);
         vec3 col = light(vP, N, alb * 1.7, .12) + alb * .05;
+        if (uDay > .5) { vec3 V = normalize(uCamPos - vP); float sun = max(dot(N, uMoonDir), 0.);
+          col = alb * (uSkyCol * 1.25 + uMoonCol * (.25 + .55 * sun)) + uMoonCol * pow(1. - max(dot(N, V), 0.), 3.) * .35 * smoothstep(-.3, .4, dot(-V, uMoonDir)) * alb * 3.; }
         gl_FragColor = vec4(fog(col, vP), 1.); }` });
   const mesh = new THREE.Mesh(g, mat); mesh.frustumCulled = false; scene.add(mesh);
   const P = { mesh, mat, rig,
@@ -78,7 +84,7 @@ function makePuppet(rig, imgURL, depthURL) {
       B[0].identity(); B[1].copy(rot(J.hip, a.chest || 0)); B[2].copy(B[1]).multiply(rot(J.neck, a.head || 0));
       B[3].copy(B[1]).multiply(rot(J.shL, a.uarmL || 0)); B[4].copy(B[3]).multiply(rot(J.elL, a.farmL || 0));
       B[5].copy(B[1]).multiply(rot(J.shR, a.uarmR || 0)); B[6].copy(B[5]).multiply(rot(J.elR, a.farmR || 0));
-      mat.uniforms.uBlink.value = a.blink || 0; mat.uniforms.uMouth.value = a.mouth || 0; },
+      mat.uniforms.uBlink.value = Math.max(a.blink || 0, (a.smile || 0) * .25); mat.uniforms.uMouth.value = a.mouth || 0; mat.uniforms.uSmile.value = a.smile || 0; },
     // vị trí thế giới của một điểm ảnh sau khi xoay xương (ví dụ bàn tay để cầm gươm)
     world(pxpt, bone) { const v = new THREE.Vector3(pxpt[0], pxpt[1], 1).applyMatrix3(B[bone]);
       return mesh.localToWorld(new THREE.Vector3((v.x - IW / 2) * s, (IH - v.y) * s, .06)); },
