@@ -6,7 +6,7 @@ function renderAt(t) {
   U.uCamPos.value.copy(camera.position);
   renderReflection();
   renderer.setRenderTarget(hdrRT); renderer.render(scene, camera);
-  postRender();
+  if (window.STYLE === 'ink') inkRender(); else postRender();
 }
 window.renderAt = renderAt; window.FILM_DUR = DUR;
 if (!Q.has('cap')) { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % DUR); requestAnimationFrame(loop); })(); }

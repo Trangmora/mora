@@ -6,7 +6,7 @@ const waterMat = new THREE.ShaderMaterial({
   uniforms: Object.assign({}, U, { uRefl: { value: reflRT.texture }, uTexMat: { value: texMat } }),
   vertexShader: `uniform mat4 uTexMat; varying vec3 vP; varying vec4 vR;
     void main(){ vec4 w = modelMatrix * vec4(position,1.); vP = w.xyz; vR = uTexMat * w; gl_Position = projectionMatrix * viewMatrix * w; }`,
-  fragmentShader: GL_NOISE + GL_LIGHT + `uniform sampler2D uRefl; varying vec3 vP; varying vec4 vR;
+  fragmentShader: GL_NOISE + GL_LIGHT + `uniform sampler2D uRefl; uniform float uInk; varying vec3 vP; varying vec4 vR;
     uniform vec3 uBladePos; uniform float uBlade;
     float wv(vec2 p){ return fbm(vec3(p*vec2(.35,.9) + vec2(0., uTime*.25), uTime*.12)) + .5*n3(vec3(p*2.2 - vec2(uTime*.4,0.), 1.)); }
     void main(){ vec3 P = vP; float e = .08;
@@ -21,6 +21,7 @@ const waterMat = new THREE.ShaderMaterial({
       vec3 L = uTorchPos - P; float dl = length(L); L/=dl;
       c += uTorchCol * pow(max(dot(N, normalize(L+V)),0.), 120.) * uTorch * 6. / (1. + dl*.35);
       c += vec3(.9,.9,1.) * pow(max(dot(reflect(-V,N), uMoonDir),0.), 900.) * 1.2;
+      c = mix(c, vec3(1.25) * (.85 + .15*h0) * mix(vec3(1.), refl*1.2, .55), uInk);
       float bd = length(P.xz - uBladePos.xz); c += vec3(1.6,1.1,.4) * uBlade * exp(-bd*bd*1.8) * (.7 + .5*h0) * smoothstep(.6,-1.5,uBladePos.y) ;
       gl_FragColor = vec4(fog(c, P), 1.); }`
 });

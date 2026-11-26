@@ -10,7 +10,7 @@ const U = {
   uSkyCol: { value: new THREE.Color(.035, .05, .10) }, uGroundCol: { value: new THREE.Color(.01, .012, .02) },
   uFogCol: { value: new THREE.Color(.028, .042, .085) }, uFogDen: { value: .006 },
   uTorchPos: { value: new THREE.Vector3() }, uTorchCol: { value: new THREE.Color(2.4, 1.05, .35) }, uTorch: { value: 1 },
-  uCamPos: { value: new THREE.Vector3() }, uTime: { value: 0 }, uClip: { value: 0 },
+  uCamPos: { value: new THREE.Vector3() }, uTime: { value: 0 }, uClip: { value: 0 }, uInk: { value: 0 },
   uBladePos: { value: new THREE.Vector3(0, -9, 0) }, uBlade: { value: 0 }
 };
 // Vật liệu: albedo viết bằng GLSL (biến P = vị trí thế giới, N = pháp tuyến), có thể tự phát sáng
