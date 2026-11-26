@@ -24,6 +24,7 @@ Hình và clip dùng để dựng nằm ở `assets/<nước>/` (xem `index.json
 | EP05_Ganges_vi.mp4 | Sông Hằng | Việt | 3:55 | 5 clip fal, nhạc Ấn Độ |
 | EP05_Ganges_en.mp4 | Sông Hằng | Anh | 4:43 | bản tiếng Anh |
 | TH01_ThaiLan_vi.mp4 | Vì sao Thái Lan chưa từng bị thực dân đô hộ | Việt | 3:09 | 13 hình Nano Banana, 5 clip fal |
+| TH01_ThaiLan_en.mp4 | Why Thailand was never colonized | Anh | 3:24 | giọng nhanh 1,17 lần |
 | MM01_Myanmar_vi.mp4 | Lịch sử Myanmar qua các thời đại | Việt | 3:37 | 20 hình Nano Banana, chưa có clip (fal.ai hết số dư) |
 
 ## Video ngắn dọc (videos/shorts/)
