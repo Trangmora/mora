@@ -481,5 +481,26 @@
   "photo": "https://www.youtube.com/watch?v=NIAJnaZuyxw",
   "id": "video-02",
   "alt": "Ảnh bìa video: làm marketing 2026 bằng AI trong 8 bước"
+ },
+ "ai-chatbot-for-customer-messages": {
+  "user": "Brooke Cagle",
+  "link": "https://unsplash.com/@brookecagle",
+  "photo": "https://unsplash.com/photos/a-woman-sitting-at-a-table-looking-at-her-cell-phone-eL4xIEuHzzk?utm_source=bunchasake&utm_medium=referral",
+  "id": "eL4xIEuHzzk",
+  "alt": "A woman sitting at a table looking at her cell phone"
+ },
+ "brand-voice-guide-for-ai": {
+  "user": "Thought Catalog",
+  "link": "https://unsplash.com/@thoughtcatalog",
+  "photo": "https://unsplash.com/photos/person-holding-ballpoint-pen-writing-on-notebook-505eectW54k?utm_source=bunchasake&utm_medium=referral",
+  "id": "505eectW54k",
+  "alt": "Person holding ballpoint pen writing on notebook"
+ },
+ "ai-customer-care-for-returning-customers": {
+  "user": "Tim Mossholder",
+  "link": "https://unsplash.com/@timmossholder",
+  "photo": "https://unsplash.com/photos/smiling-man-beside-cups-5i_0w9tUk2Q?utm_source=bunchasake&utm_medium=referral",
+  "id": "5i_0w9tUk2Q",
+  "alt": "Smiling man beside cups"
  }
 }
