@@ -199,3 +199,125 @@ def envelope(wav_path, fps=FPS):
     rms = np.sqrt((x[: n * hop].reshape(n, hop) ** 2).mean(1))
     rms = rms / (np.percentile(rms, 95) + 1e-6)
     return np.clip(rms, 0, 1.5)
+
+# =====================================================================
+# Phong cách "bàn làm việc sáng" (v2): mặt bàn gỗ sáng + tờ giấy chấm lưới,
+# nhãn giấy xé, ghim tròn, dây vàng, dải tiêu đề báo.
+# =====================================================================
+GOLD = "#f2b705"
+GOLD_DK = "#b88300"
+TEAL = "#1fa39a"
+NAVY = "#203a5c"
+MUSTARD = "#f4c542"
+
+def make_desk(width, seed=5):
+    """Mặt bàn gỗ sáng màu (sồi trắng), vân gỗ rất nhẹ."""
+    rng = np.random.default_rng(seed)
+    base = np.array([236, 226, 208], np.float32)
+    y = np.arange(H, dtype=np.float32)[:, None]
+    x = np.arange(width, dtype=np.float32)[None, :]
+    grain = (np.sin(y / 9.0 + np.sin(x / 140.0) * 2.2) * 0.5 + np.sin(y / 3.1 + x / 700.0) * 0.25)
+    plank = ((y // 270) % 2) * 4.0
+    a = base[None, None, :] + (grain[..., None] * 5.0) - plank[..., None]
+    for yy in range(270, H, 270):
+        a[yy - 1:yy + 1] -= 18
+    a += rng.normal(0, 2.0, (H, width, 1)).astype(np.float32)
+    return np.clip(a, 0, 255)
+
+def draw_sheet(arr, x0, y0, w, h, rot=0.0):
+    """Tờ giấy trắng chấm lưới, có bóng đổ, dán lên mảng nền (numpy RGB)."""
+    sheet = Image.new("RGBA", (w, h), (253, 252, 248, 255))
+    d = ImageDraw.Draw(sheet)
+    for yy in range(30, h, 36):
+        for xx in range(30, w, 36):
+            d.ellipse([xx - 1.6, yy - 1.6, xx + 1.6, yy + 1.6], fill=(196, 206, 220, 255))
+    if rot:
+        sheet = sheet.rotate(rot, resample=Image.BICUBIC, expand=True)
+    sh = Image.new("RGBA", sheet.size, (0, 0, 0, 0))
+    sh.putalpha(sheet.getchannel("A").point(lambda v: int(v * 0.22)))
+    sh = sh.filter(ImageFilter.GaussianBlur(14))
+    canvas = Image.fromarray(arr.astype("uint8"))
+    canvas.paste((60, 45, 30), (x0 + 12, y0 + 16), sh)
+    canvas.paste(sheet, (x0, y0), sheet)
+    return np.asarray(canvas, dtype=np.float32)
+
+def torn_path(x, y, w, h, seed=0, jag=7):
+    """Đường viền giấy xé (cạnh trên/dưới răng cưa nhẹ)."""
+    r = random.Random(seed)
+    pts = []
+    n = max(6, int(w / 22))
+    for k in range(n + 1):
+        pts.append((x + w * k / n, y + r.uniform(-jag, jag)))
+    m = max(3, int(h / 26))
+    for k in range(1, m):
+        pts.append((x + w + r.uniform(-jag / 2, jag / 2), y + h * k / m))
+    for k in range(n, -1, -1):
+        pts.append((x + w * k / n, y + h + r.uniform(-jag, jag)))
+    for k in range(m - 1, 0, -1):
+        pts.append((x + r.uniform(-jag / 2, jag / 2), y + h * k / m))
+    return "M" + " L".join(f"{px:.1f},{py:.1f}" for px, py in pts) + " Z"
+
+def torn_label(cx, cy, txt, size=64, color="#ffffff", ink=INK, rot=-2, k=1.0, seed=0, font="Be Vietnam Pro",
+               weight="800", pad=34):
+    if k <= 0:
+        return ""
+    s = ease_back(k)
+    w = len(txt) * size * 0.66 + pad * 2
+    h = size * 1.55
+    return (f'<g transform="translate({cx:.1f},{cy:.1f}) rotate({rot}) scale({s:.3f})">'
+            f'<path d="{torn_path(-w / 2 + 6, -h / 2 + 10, w, h, seed)}" fill="#000" opacity="0.16"/>'
+            f'<path d="{torn_path(-w / 2, -h / 2, w, h, seed)}" fill="{color}"/>'
+            f'<text x="0" y="{size * 0.36:.1f}" text-anchor="middle" font-family="{font}" font-weight="{weight}" '
+            f'font-size="{size}" fill="{ink}">{esc(txt)}</text></g>')
+
+def pin(x, y, color=TEAL, k=1.0):
+    if k <= 0:
+        return ""
+    s = ease_back(k)
+    return (f'<g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})">'
+            f'<ellipse cx="6" cy="10" rx="15" ry="7" fill="#000" opacity="0.2"/>'
+            f'<circle cx="0" cy="0" r="15" fill="{color}" stroke="{INK}" stroke-width="3"/>'
+            f'<circle cx="-5" cy="-5" r="5" fill="#ffffff" opacity="0.7"/></g>')
+
+def string(p0, p1, t, t0, t1, sag=40):
+    """Dây vàng xoắn căng giữa hai ghim (thay cho dây đỏ)."""
+    p = ease_io(prog(t, t0, t1))
+    if p <= 0:
+        return ""
+    (x0, y0), (x1, y1) = p0, p1
+    pts = []
+    for k in range(41):
+        u = k / 40 * p
+        pts.append((x0 + (x1 - x0) * u, y0 + (y1 - y0) * u + sag * math.sin(math.pi * u)))
+    d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    return (f'<path d="{d}" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="9" transform="translate(4,6)"/>'
+            f'<path d="{d}" fill="none" stroke="{GOLD_DK}" stroke-width="8" stroke-linecap="round"/>'
+            f'<path d="{d}" fill="none" stroke="{GOLD}" stroke-width="5" stroke-dasharray="7 5" stroke-linecap="round"/>')
+
+def headline(cx, cy, outlet, title, band, w=1300, k=1.0, rot=-1.0, seed=0, size=58):
+    """Dải tiêu đề báo xé: băng màu ghi tên báo + tiêu đề nguyên văn."""
+    if k <= 0:
+        return ""
+    dx = (1 - ease_out(k)) * 1400
+    words, lines, cur = title.split(), [], ""
+    maxc = int((w - 80) / (size * 0.62))
+    for wd in words:
+        if len(cur) + len(wd) + 1 > maxc:
+            lines.append(cur); cur = wd
+        else:
+            cur = (cur + " " + wd).strip()
+    lines.append(cur)
+    h = 92 + len(lines) * size * 1.18 + 30
+    txt = "".join(f'<text x="0" y="{92 + 20 + (i + 0.8) * size * 1.18:.1f}" text-anchor="middle" font-family="DejaVu Serif" '
+                  f'font-weight="bold" font-size="{size}" fill="#1b1b1b">{esc(l)}</text>' for i, l in enumerate(lines))
+    return (f'<g transform="translate({cx + dx:.1f},{cy:.1f}) rotate({rot})">'
+            f'<g transform="translate({-w / 2:.1f},{-h / 2:.1f})">'
+            f'<path d="{torn_path(8, 14, w, h, seed, 9)}" fill="#000" opacity="0.18"/>'
+            f'<path d="{torn_path(0, 0, w, h, seed, 9)}" fill="#f7f6f2"/>'
+            f'<rect x="0" y="0" width="{w}" height="78" fill="{band}"/>'
+            f'<text x="{w / 2}" y="54" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="40" '
+            f'fill="#ffffff" letter-spacing="2">{esc(outlet.upper())}</text>'
+            f'<g transform="translate({w / 2},0)">{txt}</g></g></g>')
+
+def polaroid_pin_xy(card, cx, cy):
+    return (cx, cy - card.height / 2 + 18)
