@@ -204,3 +204,136 @@ def chart_card(x, y, w, h, ttl, labels, series, k, t0, t, legend=None, ymax=None
                 g += (f'<text x="{u:.1f}" y="{v - 26:.1f}" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="30" '
                       f'fill="{BLACK}">{vals[i]:g}{unit}</text>')
     return g + "</g>"
+
+# =====================================================================
+# Chấm in báo nhanh (lưới xoay 45°) + nhân vật "hình dán" + cảnh biển dựng bằng code
+# =====================================================================
+def screen(gray, period=7.0, angle=45):
+    """gray: mảng 0..1 (1 = sáng). Trả về mảng 0..1 dạng chấm in báo (vector hoá, nhanh)."""
+    h, w = gray.shape
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    a = math.radians(angle)
+    u = (xx * math.cos(a) + yy * math.sin(a)) * (2 * math.pi / period)
+    v = (-xx * math.sin(a) + yy * math.cos(a)) * (2 * math.pi / period)
+    pat = (np.cos(u) * np.cos(v) + 1) / 2          # 0..1
+    dark = 1 - gray
+    dots = (pat < dark * 0.95).astype(np.float32)   # chấm to ở vùng tối
+    out = 1 - dots * 0.88
+    return np.clip(out * 0.35 + gray * 0.65 * out + 0.0, 0, 1)
+
+def sticker(cut_path, w, color=RED_RGB, outline=16, contrast=True):
+    """Ảnh người đã tách nền -> đen trắng chấm in báo + viền màu dày + bóng đổ."""
+    im = Image.open(cut_path).convert("RGBA")
+    bb = im.getchannel("A").getbbox()
+    im = im.crop(bb)
+    h = int(im.height * w / im.width)
+    im = im.resize((w, h), Image.LANCZOS)
+    alpha = im.getchannel("A")
+    g = ImageOps.autocontrast(im.convert("L"), cutoff=1)
+    ga = np.asarray(g, dtype=np.float32) / 255
+    ht = screen(ga, 6.0)
+    gray = Image.fromarray((ht * 255).astype("uint8")).convert("RGB")
+    pad = outline + 30
+    card = Image.new("RGBA", (w + 2 * pad, h + 2 * pad), (0, 0, 0, 0))
+    big = Image.new("L", card.size, 0)
+    big.paste(alpha, (pad, pad))
+    ring = big.filter(ImageFilter.MaxFilter(outline * 2 + 1)).filter(ImageFilter.GaussianBlur(1.2))
+    sh = Image.new("RGBA", card.size, (0, 0, 0, 0))
+    sh.putalpha(ring.point(lambda v: int(v * 0.30)))
+    sh = sh.filter(ImageFilter.GaussianBlur(12))
+    card.alpha_composite(sh, (10, 14))
+    col = Image.new("RGBA", card.size, color + (255,))
+    col.putalpha(ring)
+    card.alpha_composite(col)
+    person = Image.new("RGBA", card.size, (0, 0, 0, 0))
+    person.paste(gray, (pad, pad))
+    person.putalpha(big)
+    card.alpha_composite(person)
+    return card
+
+# ---------------- cảnh biển ----------------
+def ship_layer(w=1100):
+    """Tàu chở container vẽ bằng code (SVG) -> RGBA."""
+    hull = "#1d1d1d"
+    cont = "".join(f'<rect x="{180 + i * 58}" y="{-70 - (j * 34)}" width="54" height="32" fill="{["#3a3a3a", "#5a5a5a", "#2c2c2c", "#4a4a4a"][(i + j) % 4]}" stroke="#151515" stroke-width="2"/>'
+                   for i in range(12) for j in range(2 + (i % 3 == 0)))
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="420" viewBox="0 -260 1100 420">'
+           f'<path d="M 20 0 L 1040 0 L 1000 110 L 80 110 Q 40 80 20 0 Z" fill="{hull}"/>'
+           f'<rect x="20" y="0" width="1020" height="10" fill="#8a2f2f"/>'
+           f'{cont}'
+           f'<rect x="40" y="-150" width="120" height="150" fill="#e8e8e8" stroke="#222" stroke-width="3"/>'
+           + "".join(f'<rect x="{52 + i * 26}" y="{-138 + j * 30}" width="16" height="14" fill="#333"/>' for i in range(4) for j in range(4))
+           + f'<rect x="60" y="-200" width="80" height="50" fill="#d9d9d9" stroke="#222" stroke-width="3"/>'
+           f'<rect x="90" y="-250" width="16" height="50" fill="#222"/>'
+           f'<line x1="900" y1="-120" x2="900" y2="0" stroke="#222" stroke-width="6"/></svg>')
+    import cairosvg, io
+    return Image.open(io.BytesIO(cairosvg.svg2png(bytestring=svg.encode()))).convert("RGBA")
+
+class Ocean:
+    def __init__(self, horizon=540, ship_w=1000):
+        self.hz = horizon
+        self.ship = ship_layer(ship_w)
+        hgt = H - horizon
+        yy, xx = np.mgrid[0:hgt, 0:W].astype(np.float32)
+        self.z = 520.0 / (yy + 6.0)                      # độ sâu
+        self.wx = (xx - W / 2) * self.z / 400.0           # toạ độ thế giới
+        self.wz = self.z * 3.0
+        self.fog = np.clip(1 - (yy / hgt) * 1.4, 0, 1) ** 2
+
+    def height(self, x, z, t):
+        return (0.55 * np.sin(1.3 * x + 0.9 * z - 1.6 * t) + 0.35 * np.sin(0.7 * x - 1.7 * z - 1.1 * t)
+                + 0.18 * np.sin(3.1 * x + 2.3 * z - 2.7 * t) + 0.10 * np.sin(5.3 * x - 4.1 * z - 3.3 * t))
+
+    def frame(self, t, ship_x=None, bg=None):
+        """Trả về ảnh RGB (W×H): nền trên đường chân trời + mặt biển chấm in báo + tàu."""
+        x, z = self.wx, self.wz
+        e = 0.02
+        hc = self.height(x, z, t)
+        dx = (self.height(x + e, z, t) - hc) / e
+        dz = (self.height(x, z + e, t) - hc) / e
+        shade = 0.50 + 0.07 * dx - 0.09 * dz              # ánh sáng dịu
+        spec = np.clip(dx * 0.5 - dz * 0.4, 0, None) ** 3 * 0.06
+        g = np.clip(shade + spec, 0, 1)
+        g = g * (1 - self.fog) + 0.70 * self.fog          # xa mờ dần về xám
+        sea = np.full((H, W), 0.84, np.float32)
+        sea[self.hz:] = g
+        # tàu nhấp nhô theo sóng
+        sx = ship_x if ship_x is not None else W * 0.5
+        sy = self.hz + 175
+        bob = 8 * math.sin(t * 1.6) + 5 * math.sin(t * 2.7)
+        roll = 1.2 * math.sin(t * 1.3)
+        shp = self.ship.rotate(roll, resample=Image.BICUBIC, expand=True)
+        sa = np.asarray(shp, dtype=np.float32) / 255
+        x0, y0 = int(sx - shp.width / 2), int(sy - shp.height * 0.80 + bob)
+        x1, y1 = max(0, x0), max(0, y0)
+        x2, y2 = min(W, x0 + shp.width), min(H, y0 + shp.height)
+        if x2 > x1 and y2 > y1:
+            sub = sa[y1 - y0:y2 - y0, x1 - x0:x2 - x0]
+            lum = sub[..., :3].mean(-1)
+            a = sub[..., 3].copy()
+            # phần thân dưới mép nước bị sóng che (mép nước nhấp nhô)
+            cols = np.arange(x1, x2, dtype=np.float32)
+            wline = sy + bob * 0.3 + 5 * np.sin(cols * 0.03 + 3 * t)
+            rows = np.arange(y1, y2, dtype=np.float32)[:, None]
+            a[rows > wline[None, :]] = 0
+            sea[y1:y2, x1:x2] = sea[y1:y2, x1:x2] * (1 - a) + lum * a
+            # bọt nước quanh mũi và đuôi tàu
+            wl = min(H - 1, int(sy + bob + shp.height * 0.0))
+            for k in range(3):
+                yy = wl + 6 + k * 7
+                if yy < H:
+                    xs = slice(max(0, x0 - 40 - k * 60), min(W, x0 + 80))
+                    sea[yy:yy + 4, xs] = np.maximum(sea[yy:yy + 4, xs], 0.95 - k * 0.1)
+        ht = screen(sea, 6.5)
+        rgb = (np.stack([ht] * 3, -1) * 255).astype(np.float32)
+        if bg is not None:
+            top = np.asarray(bg, dtype=np.float32)[: self.hz]
+            rgb[: self.hz] = top
+            # dải chuyển mượt ở chân trời
+            for k in range(30):
+                yy = self.hz + k
+                if yy < H:
+                    f = k / 30
+                    rgb[yy] = rgb[yy] * f + np.asarray(bg, dtype=np.float32)[yy] * (1 - f)
+        tint = np.array([0.98, 0.97, 0.95], np.float32)
+        return np.clip(rgb * tint, 0, 255)

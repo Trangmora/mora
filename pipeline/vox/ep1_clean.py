@@ -14,6 +14,7 @@ import ep1_video as ev
 import clean as C
 
 G = {}
+PEOPLE = os.environ.get("PEOPLE_DIR", "")
 
 def build(photos):
     A = ev.A
@@ -28,15 +29,17 @@ def build(photos):
          "svg": lambda t: C.stat(580, 560, "cap", "MBA", "THẠC SĨ QTKD · Ý", prog(t, A(2, "MBA"), A(2, "MBA") + 0.4), size=190)},
         {"t": A(4, None, -0.1), "z": (1.0, 1.05), "cards": [(card("chatbot", 840), 560, 540, -1.5, A(4, None))],
          "svg": lambda t: C.title(1440, 540, "CHIA SẺ", 120, prog(t, A(4, "chia sẻ"), A(4, "chia sẻ") + 0.4), sub="KIẾN THỨC TÀI CHÍNH")},
-        {"t": A(7, None, -0.1), "z": (1.0, 1.05), "cards": [],
-         "svg": lambda t: C.title(960, 500, "CLAUDE", 250, prog(t, A(8, "Claude"), A(8, "Claude") + 0.4), sub="KIẾM TIỀN THẾ NÀO?")},
+        {"t": A(7, None, -0.1), "z": (1.0, 1.05), "cards": [(C.sticker(os.path.join(PEOPLE, "dario_cut.png"), 470, C.RED_RGB), 1460, 600, 0, A(8, "Claude", 0.3))],
+         "svg": lambda t: C.title(700, 230, "HÔM NAY", 70, prog(t, A(7, None, 0.1), A(7, None, 0.5)), bar=False, color=C.ORANGE)
+                          + C.title(700, 480, "CLAUDE", 230, prog(t, A(8, "Claude"), A(8, "Claude") + 0.4), sub="KIẾM TIỀN THẾ NÀO?")
+                          + C.title(1460, 1010, "DARIO AMODEI · CEO ANTHROPIC", 34, prog(t, A(8, "Claude", 0.6), A(8, "Claude", 1.0)), bar=False)},
         {"t": A(8, "kiếm tiền", 0.2), "z": (1.0, 1.06), "cards": [],
          "svg": lambda t: C.newspaper(960, 560, 1300, "FinanceFeeds", "NOV 2026 · AI", "Anthropic IPO Filing: $17B Quarter, $895B Commitments",
                                       "$895B Commitments", "Anthropic's S-1 shows the scale of the AI business",
                                       prog(t, A(8, "kiếm tiền", 0.2), A(8, "kiếm tiền", 0.7)), rot=-2,
                                       ht=prog(t, A(8, "kiếm tiền", 0.8), A(8, "kiếm tiền", 1.4)))},
-        {"t": A(8, "cỗ máy", -0.1), "z": (1.0, 1.05), "cards": [(card("datacenter", 760), 500, 540, -2, A(8, "cỗ máy"))],
-         "svg": lambda t: C.stat(1400, 560, "chip", "1.500 TỶ $", "ĐỊNH GIÁ KHI LÊN SÀN", prog(t, A(9, "nghìn"), A(9, "nghìn") + 0.4), size=120)},
+        {"t": A(8, "cỗ máy", -0.1), "z": (1.0, 1.0), "cards": [], "ocean": True,
+         "svg": lambda t: C.stat(1380, 250, "chip", "1.500 TỶ $", "ĐỊNH GIÁ KHI LÊN SÀN", prog(t, A(9, "nghìn"), A(9, "nghìn") + 0.4), size=110)},
         {"t": A(9, "lời", -0.3), "z": (1.0, 1.04), "cards": [],
          "svg": lambda t: C.chart_card(960, 560, 1300, 780, "DOANH THU ANTHROPIC (TỶ $) – LỜI HAY LỖ?", ["2024", "2025", "6T/2026"],
                                        [("Doanh thu", C.ORANGE, [0.39, 4.59, 16.3])], prog(t, A(9, "lời", -0.3), A(9, "lời", 0.1)),
@@ -58,6 +61,11 @@ def frame(i, t):
     vw, vh = bg.width / 1.12 / z, bg.height / 1.12 / z
     x0, y0 = (bg.width - vw) / 2, (bg.height - vh) / 2
     canvas = bg.crop((int(x0), int(y0), int(x0 + vw), int(y0 + vh))).resize((W, H), Image.BILINEAR).convert("RGBA")
+    if s.get("ocean"):
+        if "ocean" not in G:
+            G["ocean"] = C.Ocean()
+        sx = lerp(W * 0.42, W * 0.58, prog(t, t0, t1))
+        canvas = Image.fromarray(G["ocean"].frame(t, sx, canvas.convert("RGB")).astype("uint8")).convert("RGBA")
     for c, cx, cy, rot, ct in s["cards"]:
         k = ease_out(prog(t, ct, ct + 0.35))
         sc = z * lerp(1.06, 1.0, k)
