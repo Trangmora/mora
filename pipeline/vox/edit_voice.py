@@ -82,6 +82,8 @@ def build(stt, wav_in, keep, wav_out, words_out, max_gap=0.32, sent_gap=0.42, or
             t += n / sr
             last = ch[-1]["text"]
             g = sent_gap if last[-1] in ".?!" else (0.22 if last[-1] in ",;:" else 0.12)
+            if ci == len(chunks) - 1:  # chỗ nối hai cụm đã cắt: chừa hơi thở cho tự nhiên
+                g = max(g, 0.3)
             out.append(np.zeros(int(g * sr), np.float32))
             t += g
     y = np.concatenate(out)

@@ -1,5 +1,7 @@
 # Kênh "Story of the Company"
 
+> **Đọc trước: [`LUAT_DUNG_VIDEO.md`](LUAT_DUNG_VIDEO.md)** – bộ luật dựng video (28/11/2026): khung ngang, phong cách "Vật lý giấy cắt", luật cắt giọng, âm thanh (cấm tiếng "bùm"), kiểm tra trước khi gửi.
+
 Kênh kể chuyện **các công ty đã làm như thế nào**: họ kiếm tiền ra sao, những thương vụ lớn, cú vươn lên, bê bối, sụp đổ, và bài học tài chính cho người xem.
 Giọng kể: chủ kênh tự đọc (tiếng Việt, xưng "mình – các bạn"). Đây là kênh riêng, tách khỏi kênh văn hoá, kênh luật và kênh Lịch sử Thế giới.
 

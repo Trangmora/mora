@@ -1,15 +1,20 @@
 """Video 1 – danh sách đoạn giữ lại khi cắt gọn giọng (số câu theo segments.txt).
 "all" = giữ cả câu (tiếng đệm ờ/ờm tự bỏ); list = chỉ giữ các cụm chữ ghi trong đó."""
 KEEP = {
-    # --- Giới thiệu (rút gọn) ---
-    1: "all",
-    2: "all",
-    4: ["mình rất là muốn mở cái kênh Youtube này để mình chia sẻ với các bạn"],
+    # --- Giới thiệu (rút gọn 28/11): bỏ "founder của Mona AI" (sai tên + không giới thiệu chức danh),
+    #     bỏ MBA, bỏ câu "muốn mở kênh" (chung chung) – chỉ giữ 1 ý tạo uy tín: làm trong mảng tài chính ---
+    1: ["Xin chào các bạn, mình là Trang,"],
+    2: ["mình hiện tại đang ờm làm việc trong mảng tài chính"],
     # --- Vào đề ---
     7: "all", 8: "all", 9: "all",
     11: ["nó vừa được lên sàn chứng khoán IPO khoảng một tuần trước với cái con số được định giá nó khoảng tầm 1500 tỷ đô la."],
-    12: "all", 13: "all", 14: "all", 15: "all",
-    19: "all", 20: "all", 21: "all", 22: "all",
+    12: "all", 13: "all",
+    14: ["giới đầu tư tài chính đánh giá nó là con số"],   # bỏ "Đó là một con số khổng lồ và một con số mà" (lặp ý)
+    15: "all",
+    19: "all",
+    20: ["Câu hỏi đặt ra là họ bán cái gì", "tại sao nó lại được định giá cao như vậy?"],  # bỏ "mà lại" (vấp)
+    21: "all",
+    22: ["trong video này mình sẽ giải thích nó thật đơn giản."],  # bỏ "Đó, thì"
     # --- Claude là gì ---
     23: "all", 24: "all", 25: "all", 26: "all", 28: "all", 29: "all",
     30: ["Cách thứ hai đấy là các cái doanh nghiệp,"],

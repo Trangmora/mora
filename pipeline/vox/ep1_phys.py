@@ -38,7 +38,7 @@ def s_open(t0, t1):
         x += g.width + gap
         st.at(t0 + 0.35 + 0.17 * i, lambda s, g=g, cx=cx: s.solid(g, cx, -230, mass=10, box=(g.width - 12, g.height - 12),
                                                                   angle=s.rng.uniform(-0.05, 0.05), sound=("paper", 0.45)))
-    st.pour(t0 + 2.0, A(7, None, -0.4), 240, (190, 1920), -90, behind=True, rate=lambda u: 0.25 + u * 1.2)
+    st.pour(t0 + 1.6, A(8, "kiếm", -0.6), 200, (190, 1920), -90, behind=True, rate=lambda u: 0.25 + u * 1.2)
     hom = card(330, 96, [("HÔM NAY", 58, CREAM)], bg=BLACK, seed=3)
     st.at(A(7, "Hôm", -0.42), lambda s: s.solid(hom, 700, -120, mass=2.5, angle=-0.18, z=3))
     plank = card(1260, 176, [("KIẾM TIỀN THẾ NÀO?", 112, RED)], seed=4)
@@ -128,7 +128,7 @@ def s_ipo(t0, t1):
     st.pour(ti - 0.3, tla - 0.2, 150, (BX[0] - 200, BX[0] + 200), -90, rate=lambda u: 0.5 + u)
     tm, tn = A(13, "mấy"), A(13, "năm")
     st.pour(tm - 0.35, tn - 0.4, 51, (BX[1] - 200, BX[1] + 200), -90, color=RED)
-    t3, trec = A(14, "Đó", -0.4), A(15, "lớn")
+    t3, trec = A(14, None, -0.4), A(15, "lớn")
     st.shake += [(t3, 16), (trec, 16)]
     st.sounds += [(t3, "paper", 0.45), (trec, "paper", 0.45)]
     s3, srec = stamp("GẤP ~3 LẦN", 78, seed=2), stamp("KỶ LỤC NGÀNH AI", 84, seed=5)
@@ -151,7 +151,7 @@ def s_ipo(t0, t1):
 
     def cam(t):
         k = ease_io(prog(t, tp0, tp1))
-        k2 = ease_io(prog(t, A(14, "Đó"), t1))
+        k2 = ease_io(prog(t, A(14, None), t1))
         cx = 900 + 300 * k - 120 * k2
         vw = 2000 + 400 * k - 200 * k2
         return cx, 700 - 25 * k, vw
