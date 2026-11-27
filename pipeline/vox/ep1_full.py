@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import ep1_video as ev
 import ep1_phys as E
 from engine import mix_audio
-from phys import OW, OH, FPS, RED, BLACK, CREAM, GOLD, glyph, render_stage, page_slide
+from phys import OW, OH, FPS, RED, BLACK, CREAM, GOLD, glyph, render_stage, page_slide, ease_io, prog
 from phys_scenes import (T, mk, tag, num, board, bins, scale, bucket, meter, loop, factory, heading, stamps, source,
                          bowl_sprite, house_sprite, chip_sprite, egg_sprite, weight_sprite, LEAD, row)
 
@@ -49,7 +49,28 @@ def scenes(people):
     a = lambda seg, ph=None, off=0.0: A(seg, ph, off)
     cut = lambda seg: A(seg, None, -0.25)
 
-    # ---------------- MỞ ĐẦU (giữ như bản đã duyệt) ----------------
+    # ---------------- MỞ ĐẦU: giọng giới thiệu giữ NGUYÊN, hình KHÔNG nói về bản thân ----------------
+    def s_rain(t0, t1):   # mở màn: mưa tiền + chữ $ giấy khổng lồ (gợi chủ đề), chạy dưới lời chào
+        st = board(t0, t1, seed=90, FL=820, pours=[(t0 + 0.2, t1 - 0.3, 170, GOLD)],
+                   drops=[(t0 + 1.3, glyph("$", 640), 1056, {"mass": 30, "lead": 0.9})])
+        st.cam = lambda t: (1056, 640, 2112 - 230 * ease_io(prog(t, t0, t1)))
+        return st
+    add(cut(3), s_rain)
+    add(cut(7), lambda t0, t1: board(t0, t1, seed=91, FL=820,
+        heads=[(a(3, "hàng ngày"), "MỖI NGÀY MÌNH NGHIÊN CỨU", 68, BLACK, (1056, 150), a(4, "mở")),
+               (a(4, "mở"), "KÊNH NÀY ĐỂ CHIA SẺ", 72, RED, (1056, 150), a(6)),
+               (a(6), "HY VỌNG MANG LẠI GIÁ TRỊ", 72, RED, (1056, 150))],
+        drops=row([(a(3, "tài chính"), mk([T("TÀI CHÍNH", 66)], seed=1, minw=540)),
+                   (a(4, "deal"), mk([T("NHỮNG DEAL LỚN", 66)], seed=2, minw=540)),
+                   (a(4, "vận hành"), mk([T("TÀI CHÍNH VẬN HÀNH", 50), T("RA SAO", 50)], seed=3, minw=540))], gap=50)
+             + row([(a(4, "chia sẻ"), tag("CHIA SẺ", 58, 4)),
+                    (a(4, "suy nghĩ"), tag("CÙNG SUY NGHĨ", 54, 5)),
+                    (a(4, "hiểu biết"), tag("MONG MUỐN HIỂU BIẾT", 46, 6))], x0=300, x1=1812, gap=90)
+             + row([(a(6, "tham khảo"), mk([T("THAM KHẢO", 60, RED)], seed=7)),
+                    (a(6, "giá trị"), mk([T("GIÁ TRỊ", 60, RED)], seed=8)),
+                    (a(6, "cộng đồng"), mk([T("CỘNG ĐỒNG", 48, RED), T("NGƯỜI ĐANG HỌC", 40, RED)], seed=9))], x0=300, x1=1812, gap=90),
+        pours=[(a(3), a(6, None, 6.0), 90, GOLD)],
+        cam=lambda t, t0=None: (1056, 600, 1900)))
     add(A(8, "cỗ", -0.1), E.s_open)
     add(A(11, None, -0.2), E.s_scale)
     add(cut(19), E.s_ipo)

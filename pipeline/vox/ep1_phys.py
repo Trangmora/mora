@@ -38,9 +38,10 @@ def s_open(t0, t1):
         x += g.width + gap
         st.at(t0 + 0.35 + 0.17 * i, lambda s, g=g, cx=cx: s.solid(g, cx, -230, mass=10, box=(g.width - 12, g.height - 12),
                                                                   angle=s.rng.uniform(-0.05, 0.05), sound=("paper", 0.45)))
-    st.pour(t0 + 1.6, A(8, "kiếm", -0.6), 200, (190, 1920), -90, behind=True, rate=lambda u: 0.25 + u * 1.2)
+    pe = A(8, "kiếm", -0.6)
+    st.pour(t0 + 1.4, pe, min(200, int(55 * (pe - t0 - 1.4))), (190, 1920), -90, behind=True, rate=lambda u: 0.25 + u * 1.2)
     hom = card(330, 96, [("HÔM NAY", 58, CREAM)], bg=BLACK, seed=3)
-    st.at(A(7, "Hôm", -0.42), lambda s: s.solid(hom, 700, -120, mass=2.5, angle=-0.18, z=3))
+    st.at(max(A(7, "Hôm", -0.42), t0 + 1.3), lambda s: s.solid(hom, 700, -120, mass=2.5, angle=-0.18, z=3))
     plank = card(1260, 176, [("KIẾM TIỀN THẾ NÀO?", 112, RED)], seed=4)
     st.at(A(8, "kiếm", -0.5), lambda s: s.solid(plank, 1090, -190, mass=9, angle=0.04, z=4))
     tk = A(8, "kiếm")

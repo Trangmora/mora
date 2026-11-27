@@ -4,7 +4,10 @@ KEEP = {
     # --- Giới thiệu Trang: GIỮ NGUYÊN (chủ kênh yêu cầu 28/11) – chỉ nói bằng giọng, không hiện lên hình ---
     1: "all",
     2: "all",
-    4: ["mình rất là muốn mở cái kênh Youtube này để mình chia sẻ với các bạn"],
+    3: "all",
+    4: "all",
+    5: "all",
+    6: "all",
     # --- Vào đề ---
     7: "all", 8: "all", 9: "all",
     11: ["nó vừa được lên sàn chứng khoán IPO khoảng một tuần trước với cái con số được định giá nó khoảng tầm 1500 tỷ đô la."],

@@ -28,7 +28,7 @@
    - câu vấp hoặc nói lại ("mà lại", "công ty, ờ, chính của…");
    - câu lặp ý ("Đó là một con số khổng lồ và một con số mà…");
    - câu rào đón hoặc chung chung ("muốn mở kênh để chia sẻ", "câu chữ có thể không trọn vẹn");
-   - **NGOẠI LỆ – KHÔNG BAO GIỜ CẮT đoạn giới thiệu Trang** (lời chào, founder, làm tài chính, MBA tại Ý, lý do mở kênh): giữ nguyên như chủ kênh đọc (yêu cầu ngày 28/11). Đoạn này chỉ nói bằng giọng, KHÔNG hiện ảnh, tên hay chức danh lên hình.
+   - **NGOẠI LỆ – KHÔNG BAO GIỜ CẮT đoạn giới thiệu Trang** (lời chào, founder, làm tài chính, MBA tại Ý, việc mỗi ngày tổng hợp – nghiên cứu thông tin, lý do mở kênh, mong mang lại giá trị cho cộng đồng): giữ NGUYÊN TOÀN BỘ như chủ kênh đọc (yêu cầu ngày 28/11). Hình cho đoạn này: cảnh mở màn gợi chủ đề + cảnh "kênh này để chia sẻ" (thẻ chữ về nội dung kênh, không phải về cá nhân). Đoạn này chỉ nói bằng giọng, KHÔNG hiện ảnh, tên hay chức danh lên hình.
 3. **Không:**
    - cắt giữa một con số hoặc một tên riêng;
    - cắt làm câu sai ngữ pháp;
