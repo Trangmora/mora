@@ -27,10 +27,12 @@ STR = {
     "vi": {"jp": "Nhật Bản", "dv": "Đại Việt", "song": "nhà Tống", "fail": "thất bại", "also": "cũng như", "hello": "đây là", "hist": "lịch sử Nhật",
            "MONGOL": "MÔNG NGUYÊN", "JAPAN": "NHẬT BẢN", "DAIVIET": "ĐẠI VIỆT", "SONGPIN": "Nhà Tống sụp đổ (1279)", "FAILED": "THẤT BẠI",
            "HS": "Hoàng Sa", "TS": "Trường Sa", "CHANNEL": "LỊCH SỬ THẾ GIỚI", "T1": "LỊCH SỬ", "T2": "NHẬT BẢN", "TAG_M": "Quân Mông Nguyên", "TAG_S": "Samurai"},
-    "en": {"jp": "Japan", "dv": "Dai Viet", "song": "Song", "fail": "failed", "also": "Just as", "hello": "welcome", "hist": "history of Japan",
+    "en": {"jp": "In Japan", "dv": "Dai Viet", "song": "Song", "fail": "failed", "also": "and in a small", "hello": "Welcome", "hist": "history of Japan",
            "MONGOL": "MONGOL YUAN", "JAPAN": "JAPAN", "DAIVIET": "DAI VIET", "SONGPIN": "Song dynasty falls (1279)", "FAILED": "FAILED",
            "HS": "Hoàng Sa (Paracel Is.)", "TS": "Trường Sa (Spratly Is.)", "CHANNEL": "HISTORY OF THE WORLD", "T1": "HISTORY OF", "T2": "JAPAN",
-           "TAG_M": "Mongol soldier", "TAG_S": "Samurai"}}
+           "TAG_M": "Mongol soldier", "TAG_S": "Samurai", "YEARS": "200 YEARS", "LOCKED": "locked", "WENT": "went on"}}
+HILITE = {"vi": {"thất", "bại", "Đại", "Việt", "Mông", "Nguyên", "Nhật", "Bản"},
+          "en": {"failed", "failed.", "Dai", "Viet,", "Viet", "Mongols,", "Japan", "Japan.", "Japan...", "two", "hundred", "European", "empire", "China", "largest", "Vietnam", "Vietnam.", "locked", "doors"}}
 def S(k):
     return STR[LANG][k]
 
@@ -139,6 +141,87 @@ def title(t):
         o.append(big(960, 430, S("T1"), 120, YEL, BRN, 18, k, -3) + big(960, 570, S("T2"), 150, YEL, BRN, 22, k, -3))
     return "".join(o)
 
+# ---------- phụ đề: từ khóa tô vàng ----------
+_FONT = None
+def _font():
+    global _FONT
+    if _FONT is None:
+        from PIL import ImageFont
+        _FONT = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", 66)
+    return _FONT
+
+def caption_hl(t):
+    for a, b, txt in G["caps"]:
+        if a <= t < b:
+            k = ease_back(prog(t, a, a + 0.15), 2.2)
+            words = txt.split(" ")
+            hl = HILITE[LANG]
+            f = _font()
+            sp = f.getlength(" ")
+            ws = [f.getlength(w) for w in words]
+            x = -(sum(ws) + sp * (len(words) - 1)) / 2
+            st, fi = "", ""
+            for w, wl in zip(words, ws):
+                col = YEL if (w in hl or any(ch.isdigit() for ch in w)) else "#ffffff"
+                at = f'x="{x:.1f}" font-family="Inter" font-weight="800" font-size="66"'
+                st += f'<text {at} fill="#141414" stroke="#141414" stroke-width="13" stroke-linejoin="round">{w}</text>'
+                fi += f'<text {at} fill="{col}">{w}</text>'
+                x += wl + sp
+            return f'<g transform="translate({W / 2},{H - 92}) scale({0.6 + 0.4 * k:.3f})">{st}{fi}</g>'
+    return ""
+
+# ---------- đoạn cắt nhanh hé lộ (câu hứa hẹn h5) ----------
+PADLOCK = (f'<path d="M -60 -10 L -60 -70 Q -60 -130 0 -130 Q 60 -130 60 -70 L 60 -10" fill="none" stroke="#c9c9c9" stroke-width="26"/>'
+           f'<path d="M -60 -10 L -60 -70 Q -60 -130 0 -130 Q 60 -130 60 -70 L 60 -10" fill="none" stroke="{OUT}" stroke-width="6" opacity=".5"/>'
+           f'<rect x="-100" y="-20" width="200" height="160" rx="22" fill="#d9a93a" stroke="{OUT}" stroke-width="8"/>'
+           f'<circle cx="0" cy="44" r="20" fill="{OUT}"/><rect x="-8" y="50" width="16" height="44" fill="{OUT}"/>')
+
+def montage(t):
+    """trả về (kiểu nền, chỉ số khung 3D hoặc None, lớp phủ) cho đoạn h5"""
+    h5 = T("h5")
+    tl, tw = wt("h5", S("LOCKED"), -0.15), wt("h5", S("WENT"), -0.1)
+    if t < h5 + 0.55:
+        return "art", 2380 + int((t - h5) * 30), ""
+    if t < h5 + 1.1:
+        return "art", 420 + int((t - h5) * 30), ""
+    if t < tl:
+        return "art", 2480 + int((t - h5) * 20) % 50, ""
+    if t < tw:
+        k = prog(t, tl, tl + 0.3)
+        o = (f'<g transform="translate(960,420) scale({lerp(2.2, 1.0, ease_out(k)):.3f})" opacity="{min(1, k * 2):.2f}">{PADLOCK}</g>'
+             + big(960, 700, S("YEARS"), 130, YEL, BRN, 20, prog(t, tl + 0.3, tl + 0.6), -3))
+        return "map", None, o
+    k = prog(t, tw, tw + 0.25)
+    o = (f'<g transform="translate(960,470) rotate(-6) scale({lerp(2.6, 1.0, ease_out(k)):.3f})" opacity="{min(1, k * 2):.2f}">'
+         + outlined('y="60" text-anchor="middle" font-family="Inter" font-weight="900" font-size="260"', "1905", YEL, "#3b1d0a", 26) + "</g>"
+         + big(960, 720, "?", 200, "#ffffff", "#d62828", 22, prog(t, tw + 0.8, tw + 1.1), 8))
+    return "map", None, o
+
+def sfx_events():
+    d = G["sfxdir"]
+    ev = [(0.0, f"{d}/taiko.mp3", 0.9), (0.15, f"{d}/ocean.mp3", 0.55), (0.25, f"{d}/pop.mp3", 0.6),
+          (T("h2") - 0.35, f"{d}/whoosh.mp3", 0.7), (T("h2") + 0.2, f"{d}/rumble.mp3", 0.6),
+          (wt("h3", S("fail"), -0.1), f"{d}/boom.mp3", 0.9), (wt("h3", S("fail"), -0.1), f"{d}/stamp.mp3", 0.6),
+          (wt("h3", S("dv"), 0.2), f"{d}/boom.mp3", 0.9), (wt("h3", S("dv"), 0.2), f"{d}/stamp.mp3", 0.6),
+          (T("h4") - 0.3, f"{d}/whoosh.mp3", 0.7), (wt("h4", S("hello")), f"{d}/pop.mp3", 0.6), (wt("h4", S("hist"), -0.1), f"{d}/taiko.mp3", 0.9)]
+    if "h5" in G["T"]:
+        h5 = T("h5")
+        ev += [(h5 - 0.1, f"{d}/whoosh.mp3", 0.7), (h5 + 0.45, f"{d}/whoosh.mp3", 0.6), (h5 + 1.0, f"{d}/whoosh.mp3", 0.6),
+               (wt("h5", S("LOCKED"), -0.15), f"{d}/lock.mp3", 0.9), (wt("h5", S("WENT"), -0.1), f"{d}/boom.mp3", 1.0),
+               (wt("h5", S("WENT"), -0.1), f"{d}/taiko.mp3", 0.8)]
+    return ev
+
+def punch(t):
+    """giật nhẹ khung hình vào gần ở các khoảnh khắc mạnh"""
+    z = 1.0
+    keys = [wt("h3", S("fail"), -0.1), wt("h3", S("dv"), 0.2), wt("h4", S("hist"), -0.1)]
+    if "h5" in G["T"]:
+        keys.append(wt("h5", S("WENT"), -0.1))
+    for t0 in keys:
+        if t0 <= t < t0 + 0.6:
+            z = max(z, 1 + 0.06 * (1 - (t - t0) / 0.6) ** 2)
+    return z
+
 # ---------- địa cầu: hạm đội vượt biển ----------
 def globe_overlay(t, i):
     c = G["gcams"].get(i) or G["gcams"][min(G["gcams"], key=lambda j: abs(j - i))]
@@ -149,7 +232,7 @@ def globe_overlay(t, i):
     if t > 3.3:
         x, y = P(140, 37)
         o.append(lbl(x + 60, y, S("JAPAN"), 60, -5, prog(t, 3.4, 3.9)))
-    for (lo0, la0), n, t0 in (((126.8, 34.7), 6, 1.0), ((122.0, 30.0), 7, 1.6)):
+    for (lo0, la0), n, t0 in (((126.8, 34.7), 10, 0.8), ((122.0, 30.0), 12, 1.3)):
         for m in range(n):
             u = ease_out(prog(t, t0 + m * 0.12, t0 + 3.2 + m * 0.12))
             if u <= 0:
@@ -157,7 +240,7 @@ def globe_overlay(t, i):
             lo = lerp(lo0, 130.0, u) + math.sin(m * 2.3) * 0.5
             la = lerp(la0, 33.8, u) + math.cos(m * 1.7) * 0.4
             x, y = P(lo, la)
-            o.append(K.g(x, y, 0.5 + 0.25 * u, K.JUNK, math.sin(t * 2 + m) * 3))
+            o.append(K.g(x, y, 0.8 + 0.35 * u, K.JUNK, math.sin(t * 2 + m) * 3))
     k = ease_back(prog(t, 0.2, 0.6))
     o.append(big(330, 220, "1281", 150, YEL, BRN, 20, k, -4))
     return "".join(o)
@@ -165,7 +248,7 @@ def globe_overlay(t, i):
 # ---------- nhân vật ----------
 def cast():
     return [("mongol", 1690, 1.0, T("h4") + 0.4, [(0, "smug", "point"), (T("h2"), "laugh", "cheer"), (wt("h3", S("fail"), -0.1), "shock", "shock"), (wt("h3", S("dv"), 0.4), "sad", "sad")], S("TAG_M")),
-            ("samurai", 230, 3.4, 99, [(0, "shock", "shock"), (T("h2"), "shock", "idle"), (wt("h3", S("fail"), -0.1), "laugh", "cheer"), (T("h4"), "smile", "wave")], S("TAG_S"))]
+            ("samurai", 230, 3.4, (T("h5") - 0.3) if "h5" in G["T"] else 99, [(0, "shock", "shock"), (T("h2"), "shock", "idle"), (wt("h3", S("fail"), -0.1), "laugh", "cheer"), (T("h4"), "smile", "wave")], S("TAG_S"))]
 
 def background(kind, t, i):
     if kind == "globe":
@@ -180,6 +263,19 @@ def render(i):
     t = i / FPS
     b = T("h2") - 0.15
     kind = "globe" if t < b else "map"
+    if "h5" in G["T"] and t >= T("h5"):
+        mk, idx, mo = montage(t)
+        if mk == "art":
+            j = min(G["ahave"], key=lambda x: abs(x - idx))
+            base = np.clip(np.asarray(Image.open(f'{G["adir"]}/f{j:05d}.jpg').convert("RGB"), dtype=np.float32) * G["tex6"], 0, 255)
+        else:
+            base = background("map", t, i) * 0.75
+        fl = max(0.0, 1 - (t - T("h5")) / 0.12)  # chớp trắng khi vào đoạn cắt nhanh
+        base = base * (1 - fl) + 255 * fl
+        fg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">{mo}{caption_hl(t)}</svg>')
+        f = np.asarray(Image.open(io.BytesIO(cairosvg.svg2png(bytestring=fg.encode()))).convert("RGBA"), dtype=np.float32)
+        a = f[..., 3:4] / 255
+        return finish(base * (1 - a) + f[..., :3] * a, t)
     base = background(kind, t, i)
     if kind == "map" and t < b + 0.35:
         k = (t - b) / 0.35
@@ -193,10 +289,19 @@ def render(i):
     if sx or sy:
         base = np.roll(base, (int(sy), int(sx)), axis=(0, 1))
     fg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}"><g transform="translate({sx:.1f},{sy:.1f})">{layer}</g>'
-          f'{J.characters(t)}{title(t)}{caption(t, G["caps"])}</svg>')
+          f'{J.characters(t)}{title(t)}{caption_hl(t)}</svg>')
     f = np.asarray(Image.open(io.BytesIO(cairosvg.svg2png(bytestring=fg.encode()))).convert("RGBA"), dtype=np.float32)
     a = f[..., 3:4] / 255
-    return (base * (1 - a) + f[..., :3] * a).astype("uint8").tobytes()
+    return finish(base * (1 - a) + f[..., :3] * a, t)
+
+def finish(img, t):
+    z = punch(t)
+    if z > 1.001:
+        im = Image.fromarray(np.clip(img, 0, 255).astype("uint8"))
+        w2, h2 = int(W / z), int(H / z)
+        im = im.crop(((W - w2) // 2, (H - h2) // 2, (W - w2) // 2 + w2, (H - h2) // 2 + h2)).resize((W, H), Image.BILINEAR)
+        return np.asarray(im).tobytes()
+    return np.clip(img, 0, 255).astype("uint8").tobytes()
 
 def init(gdir, vo, gfr):
     d = json.load(open(f"{vo}/T_{LANG}.json"))
@@ -210,6 +315,10 @@ def init(gdir, vo, gfr):
     tex = make_texture(W, H)
     G["tex"], G["tex6"] = tex, tex ** 0.6
     J.G["cast"] = cast()
+    # tuỳ chọn: ART_DIR (khung hiện vật 3D cho đoạn cắt nhanh), SFX_DIR (tiếng động), MUSIC (nhạc nền)
+    G["adir"] = os.environ.get("ART_DIR", "")
+    G["ahave"] = sorted(int(f[1:6]) for f in os.listdir(G["adir"]) if f.endswith(".jpg")) if G["adir"] else [0]
+    G["sfxdir"] = os.environ.get("SFX_DIR", "")
 
 def main(gdir, vo, gfr, out, only=None):
     init(gdir, vo, gfr)
@@ -219,8 +328,14 @@ def main(gdir, vo, gfr, out, only=None):
             Image.fromarray(fr).resize((W // 2, H // 2)).save(f"{out}_{x}.png")
         return
     n = int(G["dur"] * FPS)
+    audio = f"{vo}/vo_{LANG}.wav"
+    if G["sfxdir"]:
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "full"))
+        from mixer import mix
+        audio = out + ".mix.wav"
+        mix(f"{vo}/vo_{LANG}.wav", os.environ.get("MUSIC"), sfx_events(), audio, G["dur"])
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                           "-r", str(FPS), "-i", "-", "-i", f"{vo}/vo_{LANG}.wav", "-af", "apad", "-shortest",
+                           "-r", str(FPS), "-i", "-", "-i", audio, "-af", "apad", "-shortest",
                            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18", "-c:a", "aac", "-b:a", "192k", out],
                           stdin=subprocess.PIPE)
     with Pool(4, initializer=init, initargs=(gdir, vo, gfr)) as pool:
