@@ -25,8 +25,22 @@ from clean_build import Align
 from engine import mix_audio
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../story-of-the-company"))
-B = f"{ROOT}/amazon/build/hook"
+LANG = os.environ.get("AMZ_LANG", "vi")
+B = f"{ROOT}/amazon/build/hook" + ("" if LANG == "vi" else "_en")
 A = Align(f"{B}/align.json")
+VI = LANG == "vi"
+TX = {k: (v if VI else e) for k, (v, e) in {
+    "stock": ("CỔ PHIẾU AMAZON", "AMAZON STOCK"), "peak": ("12/1999", "DEC 1999"), "low": ("$5,97", "$5.97"),
+    "coin": ("$1.000", "$1,000"), "vnd": ("≈ 15 TRIỆU ĐỒNG", "JUST $1,000"), "yours": ("TIỀN CỦA BẠN · 9/2001", "YOUR BET · SEP 2001"),
+    "have": ("NĂM {y} · BẠN ĐANG CÓ", "{y} · YOU NOW HAVE"), "then": ("1.000 ĐÔ NĂM 2001, HÔM NAY THÀNH", "$1,000 IN 2001 IS NOW WORTH"),
+    "total": ("$818.900", "$818,900"), "banner": ("HƠN 20 TỶ ĐỒNG", "819 TIMES YOUR MONEY"),
+    "date": ("31/5/1999", "MAY 31, 1999"),
+    "note": ("Ví dụ minh hoạ, mua đúng đáy 28/9/2001 ($5,97), giá đã điều chỉnh chia tách; giá 25/11/2026: $244,43. Không phải lời khuyên đầu tư.",
+             "Illustrative example: bought at the Sep 28, 2001 low ($5.97), split-adjusted; price on Nov 25, 2026: $244.43. Not investment advice."),
+}.items()}
+CUE = dict(zip("roi xuong bao bomb chet nhung nghin m15 homnay hon tuc".split(),
+               ["rơi", "xuống", "Báo chí", "Amazon chấm", "Ai cũng", "Nhưng", "một nghìn", "khoảng mười", "thì hôm", "Hơn tám", "Tức là"] if VI else
+               ["crashed", "to under", "Barron", "Amazon dot", "Everyone", "But what", "one thousand", "one thousand", "How much", "More than", "That's"]))
 
 GOLD, RED, WHITE, DIM = "#f5b941", "#ff4b3e", "#f3efe6", "#8b8f99"
 F = "Be Vietnam Pro"
@@ -70,8 +84,10 @@ def price_at(yr):
 
 
 # ---------------------------------------------------------------- mốc lời
-tRoi, tXuong, tBao, tBomb, tChet = A("rơi"), A("xuống"), A("Báo chí"), A("Amazon chấm"), A("Ai cũng")
-tNhung, tNghin, t15, tHomnay, tHon, tTuc = A("Nhưng"), A("một nghìn"), A("khoảng mười"), A("thì hôm"), A("Hơn tám"), A("Tức là")
+tRoi, tXuong, tBao, tBomb, tChet = [A(CUE[k]) for k in "roi xuong bao bomb chet".split()]
+tNhung, tNghin, t15, tHomnay, tHon, tTuc = [A(CUE[k]) for k in "nhung nghin m15 homnay hon tuc".split()]
+if not VI:
+    t15 += 0.7
 END = tTuc + 3.7
 
 # tiến trình vẽ đường (năm của đầu đường theo thời gian)
@@ -126,7 +142,7 @@ BG = make_bg()
 
 
 def fmt(v):
-    return f"{v:,.0f}".replace(",", ".")
+    return f"{v:,.0f}".replace(",", ".") if VI else f"{v:,.0f}"
 
 
 def frame_svg(t):
@@ -171,14 +187,14 @@ def frame_svg(t):
     if k > 0 and t < tHomnay:
         x, y = P(X(PEAK_Y), Y(5.33))
         g.append(f'<g opacity="{k * (1 - prog(t, tNhung, tNhung + 0.4)):.2f}"><text x="{x:.0f}" y="{y - 40:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="64" fill="{WHITE}">$106</text>'
-                 f'<text x="{x:.0f}" y="{y - 112:.0f}" text-anchor="middle" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3">12/1999</text></g>')
+                 f'<text x="{x:.0f}" y="{y - 112:.0f}" text-anchor="middle" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3">{TX["peak"]}</text></g>')
     # đáy: $5,97 + dấu -94%
     k = prog(t, tXuong + 0.85, tXuong + 1.1)
     if k > 0 and t < tNhung + 0.4:
         x, y = P(X(LOW_Y), Y(BUY))
         fade = 1 - prog(t, tNhung, tNhung + 0.4)
         s = ease_back(k, 2.0)
-        g.append(f'<g opacity="{fade:.2f}"><text x="{x:.0f}" y="{y + 90:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="56" fill="{RED}">$5,97</text></g>')
+        g.append(f'<g opacity="{fade:.2f}"><text x="{x:.0f}" y="{y + 90:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="56" fill="{RED}">{TX["low"]}</text></g>')
         g.append(f'<g transform="translate({x + 330:.0f},{y - 220:.0f}) rotate(-8) scale({s:.2f})" opacity="{fade:.2f}">'
                  f'<rect x="-210" y="-95" width="420" height="170" rx="14" fill="none" stroke="{RED}" stroke-width="10"/>'
                  f'<text y="45" text-anchor="middle" font-family="{F}" font-weight="800" font-size="130" fill="{RED}">-94%</text></g>')
@@ -198,11 +214,11 @@ def frame_svg(t):
             cyc = y - 95 + drop + bounce
             g.append(f'<g opacity="{fade:.2f}"><ellipse cx="{x:.0f}" cy="{y - 8:.0f}" rx="{60 * k:.0f}" ry="10" fill="#000" opacity="0.35"/>'
                      f'<circle cx="{x:.0f}" cy="{cyc:.0f}" r="82" fill="{GOLD}"/><circle cx="{x:.0f}" cy="{cyc:.0f}" r="66" fill="none" stroke="#c98d1c" stroke-width="5"/>'
-                     f'<text x="{x:.0f}" y="{cyc + 16:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="44" fill="#3a2a06">$1.000</text></g>')
+                     f'<text x="{x:.0f}" y="{cyc + 16:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="44" fill="#3a2a06">{TX["coin"]}</text></g>')
             k2 = prog(t, t15, t15 + 0.3)
             if k2 > 0:
-                g.append(f'<text x="{x:.0f}" y="{y + 110:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="40" fill="{WHITE}" opacity="{k2 * fade:.2f}">≈ 15 TRIỆU ĐỒNG</text>'
-                         f'<text x="{x:.0f}" y="{y + 152:.0f}" text-anchor="middle" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3" opacity="{k2 * fade:.2f}">TIỀN CỦA BẠN · 9/2001</text>')
+                g.append(f'<text x="{x:.0f}" y="{y + 110:.0f}" text-anchor="middle" font-family="{F}" font-weight="800" font-size="40" fill="{WHITE}" opacity="{k2 * fade:.2f}">{TX["vnd"]}</text>'
+                         f'<text x="{x:.0f}" y="{y + 152:.0f}" text-anchor="middle" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3" opacity="{k2 * fade:.2f}">{TX["yours"]}</text>')
     # đồng hồ tiền bám theo đầu đường
     if t >= tHomnay + 0.2 and ty > LOW_Y:
         val = 1000 * price_at(ty) / BUY
@@ -210,7 +226,7 @@ def frame_svg(t):
         if k > 0:
             bx = min(tp[0] + 40, W - 520)
             by = max(tp[1] - 40, 140)
-            g.append(f'<g opacity="{k:.2f}"><text x="{bx:.0f}" y="{by - 70:.0f}" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3">NĂM {int(ty)} · BẠN ĐANG CÓ</text>'
+            g.append(f'<g opacity="{k:.2f}"><text x="{bx:.0f}" y="{by - 70:.0f}" font-family="{F}" font-weight="600" font-size="24" fill="{DIM}" letter-spacing="3">{TX["have"].format(y=int(ty))}</text>'
                      f'<text x="{bx:.0f}" y="{by:.0f}" font-family="{F}" font-weight="800" font-size="76" fill="{GOLD}">${fmt(val)}</text></g>')
     # hé lộ
     if t >= tHon:
@@ -218,21 +234,21 @@ def frame_svg(t):
         s = ease_back(k, 1.6)
         g.append(f'<rect width="{W}" height="{H}" fill="#0b0c10" opacity="{0.55 * k:.2f}"/>')
         g.append(f'<g transform="translate({W / 2},{H / 2 - 60}) scale({s:.3f})">'
-                 f'<text y="-150" text-anchor="middle" font-family="{F}" font-weight="600" font-size="30" fill="{DIM}" letter-spacing="5">1.000 ĐÔ NĂM 2001, HÔM NAY THÀNH</text>'
-                 f'<text y="40" text-anchor="middle" font-family="{F}" font-weight="800" font-size="210" fill="{GOLD}">$818.900</text></g>')
+                 f'<text y="-150" text-anchor="middle" font-family="{F}" font-weight="600" font-size="30" fill="{DIM}" letter-spacing="5">{TX["then"]}</text>'
+                 f'<text y="40" text-anchor="middle" font-family="{F}" font-weight="800" font-size="210" fill="{GOLD}">{TX["total"]}</text></g>')
         k2 = prog(t, tTuc + 0.5, tTuc + 0.85)
         if k2 > 0:
             s2 = ease_back(k2, 2.2)
             g.append(f'<g transform="translate({W / 2},{H / 2 + 170}) rotate(-3) scale({s2:.3f})">'
                      f'<rect x="-470" y="-82" width="940" height="140" rx="16" fill="{GOLD}"/>'
-                     f'<text y="28" text-anchor="middle" font-family="{F}" font-weight="800" font-size="88" fill="#1a1406">HƠN 20 TỶ ĐỒNG</text></g>')
+                     f'<text y="28" text-anchor="middle" font-family="{F}" font-weight="800" font-size="88" fill="#1a1406">{TX["banner"]}</text></g>')
         g.append(f'<text x="{W / 2}" y="{H - 34}" text-anchor="middle" font-family="{F}" font-weight="600" font-size="20" fill="{DIM}" opacity="{k:.2f}">'
-                 f'Ví dụ minh hoạ, mua đúng đáy 28/9/2001 ($5,97), giá đã điều chỉnh chia tách; giá 25/11/2026: $244,43. Không phải lời khuyên đầu tư.</text>')
+                 f'{TX["note"]}</text>')
     # nhãn cố định góc trái: đường kẻ là gì + năm của đầu đường
     if t < tHon:
         k = prog(t, 0.1, 0.5) * (1 - prog(t, tHon - 0.3, tHon))
         g.append(f'<g opacity="{k:.2f}"><rect x="80" y="78" width="12" height="96" fill="{tc}"/>'
-                 f'<text x="112" y="116" font-family="{F}" font-weight="800" font-size="40" fill="{WHITE}" letter-spacing="2">CỔ PHIẾU AMAZON</text>'
+                 f'<text x="112" y="116" font-family="{F}" font-weight="800" font-size="40" fill="{WHITE}" letter-spacing="2">{TX["stock"]}</text>'
                  f'<text x="112" y="168" font-family="{F}" font-weight="800" font-size="46" fill="{tc}">{int(ty)}</text></g>')
     # mẩu báo Barron's
     if tBao - 0.1 < t < tChet + 0.2:
@@ -243,7 +259,7 @@ def frame_svg(t):
                  f'<rect x="-420" y="-210" width="860" height="440" fill="#000" opacity="0.45" transform="translate(16,20)"/>'
                  f'<rect x="-420" y="-210" width="860" height="440" fill="#efe9dc"/>'
                  f'<text x="-370" y="-140" font-family="DejaVu Serif" font-weight="bold" font-size="44" fill="#151515">BARRON\'S</text>'
-                 f'<text x="370" y="-140" text-anchor="end" font-family="{F}" font-weight="600" font-size="24" fill="#555">31/5/1999</text>'
+                 f'<text x="370" y="-140" text-anchor="end" font-family="{F}" font-weight="600" font-size="24" fill="#555">{TX["date"]}</text>'
                  f'<line x1="-370" y1="-115" x2="370" y2="-115" stroke="#151515" stroke-width="3"/>'
                  f'<rect x="-340" y="-55" width="{680 * hl:.0f}" height="120" fill="#ffd84a"/>'
                  f'<text y="40" text-anchor="middle" font-family="DejaVu Serif" font-weight="bold" font-size="104" fill="#151515">Amazon.bomb</text>'
@@ -273,7 +289,7 @@ if __name__ == "__main__":
     n = int(END * FPS)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
            "-i", "-", "-i", f"{B}/mix.wav", "-c:a", "aac", "-b:a", "192k", "-shortest", "-c:v", "libx264", "-pix_fmt",
-           "yuv420p", "-crf", "18", f"{B}/amazon_mo_dau_20s.mp4"]
+           "yuv420p", "-crf", "18", f"{B}/amazon_mo_dau_20s{"" if VI else "_en"}.mp4"]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for i in range(n):
         p.stdin.write(frame(i / FPS).tobytes())
