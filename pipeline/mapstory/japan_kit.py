@@ -47,9 +47,29 @@ def shoulder_plates(col, lace):
     return "".join(f'<g transform="translate({x},-196) rotate({r})"><rect x="-30" y="0" width="60" height="64" rx="5" fill="{col}" stroke="{OUT}" stroke-width="5"/>'
                    f'<path d="M -27 18 L 27 18 M -27 36 L 27 36 M -27 52 L 27 52" stroke="{lace}" stroke-width="4"/></g>' for x, r in ((-74, 12), (74, -12)))
 
+def face2(expr, t, glasses=False):
+    """biểu cảm hài mới: deadpan (tỉnh bơ), twitch (giật mí mắt), lookup (liếc lên trời), sweat (đổ mồ hôi)"""
+    if expr == "deadpan":
+        e = "".join(f'<path d="M {x - 13} -262 L {x + 13} -262" stroke="{OUT}" stroke-width="6" stroke-linecap="round"/>'
+                    f'<path d="M {x - 9} -262 Q {x} -254 {x + 9} -262" fill="{OUT}"/>' for x in (-22, 30))
+        return e + f'<path d="M -12 -224 L 20 -224" stroke="{OUT}" stroke-width="5" stroke-linecap="round"/>'
+    if expr == "twitch":
+        j = math.sin(t * 55) * 3
+        e = (f'<ellipse cx="-22" cy="-264" rx="7" ry="8" fill="{OUT}"/>'
+             f'<path d="M 16 {-262 + j:.1f} L 44 {-264 - j:.1f}" stroke="{OUT}" stroke-width="6" stroke-linecap="round"/>'
+             f'<path d="M 14 -286 L 46 {-280 + j:.1f}" stroke="{OUT}" stroke-width="5" stroke-linecap="round"/>'
+             f'<path d="M -38 -284 L -8 -286" stroke="{OUT}" stroke-width="5" stroke-linecap="round"/>')
+        return e + f'<path d="M -14 -224 Q -4 -230 6 -224 Q 14 -218 22 -224" fill="none" stroke="{OUT}" stroke-width="5" stroke-linecap="round"/>'
+    if expr == "lookup":
+        e = "".join(f'<circle cx="{x}" cy="-266" r="12" fill="#fff" stroke="{OUT}" stroke-width="4"/><circle cx="{x + 2}" cy="-273" r="5" fill="{OUT}"/>' for x in (-22, 30))
+        return e + f'<ellipse cx="4" cy="-222" rx="7" ry="8" fill="#5a1d1d" stroke="{OUT}" stroke-width="3"/>'
+    if expr == "sweat":
+        return (face("smile", t, glasses) + f'<path d="M 70 -330 Q 52 -296 70 -282 Q 88 -296 70 -330 Z" fill="#8fd0ff" stroke="{OUT}" stroke-width="4"/>')
+    return face(expr, t, glasses)
+
 def head(extra_back, extra_front, expr, t, glasses=False, rot=0.0, skin=SKIN):
     return (f'<g transform="rotate({rot:.2f} 0 -210)">{extra_back}<circle cx="0" cy="-262" r="80" fill="{skin}" stroke="{OUT}" stroke-width="6"/>'
-            f'{extra_front}{face(expr, t, glasses)}</g>')
+            f'{extra_front}{face2(expr, t, glasses)}</g>')
 
 MUST = f'<path d="M 4 -236 Q -16 -242 -34 -230 Q -38 -238 -30 -244 M 4 -236 Q 24 -244 42 -232 Q 46 -240 38 -246" fill="none" stroke="{HAIR}" stroke-width="6" stroke-linecap="round"/>'
 
@@ -103,6 +123,32 @@ def figure(kind, expr, aL, aR, t, rot=0.0):
                 + "".join(f'<circle cx="{x}" cy="{y}" r="6" fill="#e2b33c" stroke="{OUT}" stroke-width="2"/>' for x in (-18, 18) for y in (-170, -140, -110, -80))
                 + "".join(f'<ellipse cx="{x}" cy="-198" rx="28" ry="11" fill="#e2b33c" stroke="{OUT}" stroke-width="4"/>' for x in (-62, 62)))
         return arm(col, "#e2b33c", aL, -70) + legs("#e9e9e9") + body + head("", hf, expr, t, rot=rot) + arm(col, "#e2b33c", aR, 66)
+    if kind == "khan":  # Hốt Tất Liệt (cách điệu): áo bào vàng, mũ viền lông, râu dài
+        col = "#c99a2e"
+        hf = (f'<path d="M -84 -292 Q -80 -372 0 -380 Q 80 -372 84 -292 Z" fill="#8a2a22" stroke="{OUT}" stroke-width="5"/>'
+              f'<rect x="-96" y="-306" width="192" height="40" rx="20" fill="#e8dcc8" stroke="{OUT}" stroke-width="5"/>'
+              f'<circle cx="0" cy="-384" r="12" fill="#e8c25a" stroke="{OUT}" stroke-width="4"/>'
+              f'<path d="M 4 -234 Q -30 -238 -54 -214 M 4 -234 Q 38 -238 62 -214" fill="none" stroke="{HAIR}" stroke-width="8" stroke-linecap="round"/>'
+              f'<path d="M -14 -210 Q 4 -150 22 -210 Z" fill="{HAIR}"/>')
+        body = robe(col, "#8a2a22", "#3b1d0a", long=True) + "".join(f'<circle cx="0" cy="{y}" r="7" fill="#8a2a22"/>' for y in (-80, -50))
+        return arm(col, "#e8dcc8", aL, -70) + body + head("", hf, expr, t, rot=rot) + arm(col, "#e8dcc8", aR, 66)
+    if kind == "tran":  # tướng Đại Việt thời Trần (cách điệu): khăn đen, giáp đỏ nâu
+        col, lace = "#8a3a24", "#d9b15a"
+        hf = (f'<path d="M -84 -280 Q -86 -350 0 -356 Q 86 -350 84 -280 Q 40 -300 0 -298 Q -40 -300 -84 -280 Z" fill="#1c1c1c" stroke="{OUT}" stroke-width="5"/>'
+              f'<path d="M 70 -300 Q 110 -296 104 -250 Q 96 -280 72 -284 Z" fill="#1c1c1c" stroke="{OUT}" stroke-width="4"/>'
+              f'<path d="M -84 -296 Q 0 -316 84 -296" fill="none" stroke="#c8323c" stroke-width="8"/>' + MUST)
+        return (arm(col, lace, aL, -70) + legs("#3a2a20", "#2a1a10") + armor(col, lace)
+                + head("", hf, expr, t, rot=rot) + arm(col, lace, aR, 66))
+    if kind == "admiral":  # đô đốc Nga chung chung (không phải nhân vật có thật)
+        col = "#f2f2f0"
+        hf = (f'<path d="M -82 -300 Q -86 -352 0 -356 Q 86 -352 82 -300 Z" fill="#ffffff" stroke="{OUT}" stroke-width="5"/>'
+              f'<rect x="-86" y="-312" width="172" height="20" fill="#1d2b4f" stroke="{OUT}" stroke-width="4"/>'
+              f'<path d="M -66 -300 Q 0 -284 72 -298 L 88 -290 Q 0 -270 -66 -290 Z" fill="#111" stroke="{OUT}" stroke-width="4"/>'
+              f'<path d="M -70 -246 Q -60 -160 0 -150 Q 60 -160 70 -246 Q 40 -210 0 -212 Q -40 -210 -70 -246 Z" fill="#9a9a9a" stroke="{OUT}" stroke-width="4"/>')
+        body = (f'<path d="M -70 -198 Q 0 -212 70 -198 L 84 -50 Q 0 -40 -84 -50 Z" fill="{col}" stroke="{OUT}" stroke-width="6" stroke-linejoin="round"/>'
+                + "".join(f'<circle cx="{x}" cy="{y}" r="6" fill="#e2b33c" stroke="{OUT}" stroke-width="2"/>' for x in (-18, 18) for y in (-150, -120, -90))
+                + "".join(f'<ellipse cx="{x}" cy="-198" rx="30" ry="12" fill="#e2b33c" stroke="{OUT}" stroke-width="4"/>' for x in (-62, 62)))
+        return arm(col, "#e2b33c", aL, -70) + legs("#1d2b4f") + body + head("", hf, expr, t, rot=rot) + arm(col, "#e2b33c", aR, 66)
     if kind == "meiji":
         hf = f'<path d="M -84 -268 Q -90 -346 -8 -352 Q 76 -354 86 -272 Q 76 -300 30 -312 Q -10 -306 -40 -320 Q -66 -304 -84 -268 Z" fill="{HAIR}" stroke="{OUT}" stroke-width="5"/>' + MUST
         return arm("#1e1e24", "#ffffff", aL, -70) + legs("#1e1e24") + suit("#1e1e24", "#7a2a2a") + head("", hf, expr, t, rot=rot) + arm("#1e1e24", "#ffffff", aR, 66)

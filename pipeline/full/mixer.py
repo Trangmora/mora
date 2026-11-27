@@ -24,7 +24,7 @@ def envelope(x, win=0.05):
     pad = np.pad(e, (hold, 0))
     return sliding_window_view(pad, hold + 1).max(axis=1)[: len(e)]
 
-def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.035, fade_out=1.2, sfx_gain=0.7):
+def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.035, fade_out=1.2, sfx_gain=0.7, mutes=()):
     n = int(dur * SR)
     out = np.zeros((n, 2), np.float32)
     v = load(voice_wav)[:n]
@@ -41,6 +41,12 @@ def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.
         g = music_gain - (music_gain - duck_to) * speaking
         a = int(0.12 * SR)  # làm mượt đường âm lượng
         g = np.convolve(g, np.ones(a) / a, mode="same")
+        for a0, b0 in mutes:  # nhịp im lặng: tắt hẳn nhạc nền (có vào/ra mềm 60 ms)
+            i0, i1 = int(a0 * SR), int(b0 * SR)
+            r = int(0.06 * SR)
+            g[i0:i1] = 0
+            g[max(0, i0 - r):i0] *= np.linspace(1, 0, len(g[max(0, i0 - r):i0]))
+            g[i1:i1 + r] *= np.linspace(0, 1, len(g[i1:i1 + r]))
         fo = np.linspace(1, 0, int(fade_out * SR))
         g[-len(fo):] *= fo
         out += m * g[:, None]
