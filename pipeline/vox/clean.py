@@ -16,8 +16,38 @@ RED_RGB = (214, 69, 52)
 BLACK = "#1c1c1c"
 CREAM = "#f6f1e6"
 
+THEME = {"bg": "grid", "text": None, "bar": None, "sub": None, "num": None}
+RED_TXT = "#d7261e"
+
+def use_red_sand():
+    """Chủ đề chủ kênh chọn 27/11: nền giấy nhám (không kẻ ô) + chữ đỏ, gạch dưới đen."""
+    THEME.update(bg="sand", text=RED_TXT, bar=BLACK, sub=BLACK, num=RED_TXT)
+
+def make_sand(w, h, seed=7):
+    """Nền giấy nhám: nền kem ấm, hạt mịn dày, lấm tấm hạt sáng/tối, loang nhẹ."""
+    rng = np.random.default_rng(seed)
+    base = np.array([228, 221, 208], np.float32)
+    a = np.ones((h, w, 3), np.float32) * base
+    fine = rng.normal(0, 9.0, (h, w)).astype(np.float32)
+    a += fine[..., None]
+    low = rng.normal(0, 1, (h // 60 + 2, w // 60 + 2)).astype(np.float32)
+    low = np.asarray(Image.fromarray(((low * 30) + 128).clip(0, 255).astype("uint8")).resize((w, h), Image.BICUBIC), dtype=np.float32) / 255 - 0.5
+    a *= (1 + low * 0.06)[..., None]
+    n = int(w * h * 0.004)
+    ys, xs = rng.integers(0, h, n), rng.integers(0, w, n)
+    a[ys, xs] -= rng.uniform(25, 60, (n, 1))
+    ys, xs = rng.integers(0, h, n // 2), rng.integers(0, w, n // 2)
+    a[ys, xs] += rng.uniform(15, 30, (n // 2, 1))
+    img = Image.fromarray(np.clip(a, 0, 255).astype("uint8")).filter(ImageFilter.GaussianBlur(0.6))
+    a = np.asarray(img, dtype=np.float32)
+    yy, xx = np.mgrid[0:h, 0:w]
+    v = 1 - 0.12 * (((xx - w / 2) / w) ** 2 + ((yy - h / 2) / h) ** 2) * 4
+    return Image.fromarray(np.clip(a * v[..., None], 0, 255).astype("uint8"))
+
 def make_bg(scale=1.12):
     w, h = int(W * scale), int(H * scale)
+    if THEME["bg"] == "sand":
+        return make_sand(w, h)
     im = Image.new("RGB", (w, h), BG)
     d = ImageDraw.Draw(im)
     step = 64
@@ -149,22 +179,23 @@ def stat(x, y, icon, value, caption, k, size=150, anchor="start"):
     vw = len(value) * size * 0.66
     return (f'<g transform="translate({x},{y}) scale({s:.3f})" opacity="{min(1, k * 1.5):.2f}">'
             f'<g transform="translate({-vw / 2 - 90:.0f},{-size * 0.34:.0f}) scale({size / 150:.2f})">{ICONS[icon](ORANGE)}</g>'
-            f'<text x="{-vw / 2 + 10:.0f}" y="0" font-family="Be Vietnam Pro" font-weight="800" font-size="{size}" fill="{BLACK}">{esc(value)}</text>'
+            f'<text x="{-vw / 2 + 10:.0f}" y="0" font-family="Be Vietnam Pro" font-weight="800" font-size="{size}" fill="{THEME['num'] or BLACK}">{esc(value)}</text>'
             f'<text x="{-vw / 2 + 14:.0f}" y="{size * 0.5:.0f}" font-family="Be Vietnam Pro" font-weight="800" font-size="{size * 0.24:.0f}" '
             f'fill="{BLACK}" letter-spacing="3">{esc(caption)}</text></g>')
 
-def title(x, y, txt, size, k, color=BLACK, bar=True, sub=None):
+def title(x, y, txt, size, k, color=None, bar=True, sub=None):
     if k <= 0:
         return ""
+    color = color or THEME["text"] or BLACK
     s = ease_out(k)
     w = len(txt) * size * 0.64
     out = (f'<g transform="translate({x},{y + (1 - s) * 40:.1f})" opacity="{min(1, k * 1.6):.2f}">'
            f'<text text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="{size}" fill="{color}">{esc(txt)}</text>')
     if bar:
-        out += f'<rect x="{-w / 2 * s:.0f}" y="{size * 0.22:.0f}" width="{w * s:.0f}" height="{max(8, size * 0.07):.0f}" fill="{ORANGE}"/>'
+        out += f'<rect x="{-w / 2 * s:.0f}" y="{size * 0.22:.0f}" width="{w * s:.0f}" height="{max(8, size * 0.07):.0f}" fill="{THEME['bar'] or ORANGE}"/>'
     if sub:
         out += (f'<text y="{size * 0.29 + size * 0.3 * 1.25 + 8:.0f}" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="{size * 0.3:.0f}" '
-                f'fill="{ORANGE}" letter-spacing="4">{esc(sub)}</text>')
+                f'fill="{THEME['sub'] or ORANGE}" letter-spacing="4">{esc(sub)}</text>')
     return out + "</g>"
 
 def chart_card(x, y, w, h, ttl, labels, series, k, t0, t, legend=None, ymax=None, unit=""):

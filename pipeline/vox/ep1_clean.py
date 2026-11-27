@@ -22,7 +22,7 @@ def build(photos):
     shots = [
         {"t": 0.0, "z": (1.0, 1.04), "cards": [],
          "svg": lambda t: C.title(960, 520, "TRANG", 230, prog(t, A(1, "Trang"), A(1, "Trang") + 0.4))
-                          + C.title(960, 690, "FOUNDER · MORA AI", 64, prog(t, A(1, "founder"), A(1, "founder") + 0.4), bar=False, color=C.ORANGE)},
+                          + C.title(960, 690, "FOUNDER · MORA AI", 64, prog(t, A(1, "founder"), A(1, "founder") + 0.4), bar=False, color=C.BLACK)},
         {"t": A(2, None, -0.1), "z": (1.0, 1.05), "cards": [(card("stock", 840), 560, 540, -2.5, A(2, None))],
          "svg": lambda t: C.title(1440, 560, "TÀI CHÍNH", 120, prog(t, A(2, "tài chính"), A(2, "tài chính") + 0.4), sub="NƠI MÌNH LÀM VIỆC")},
         {"t": A(2, "tốt nghiệp", -0.1), "z": (1.0, 1.05), "cards": [(card("duomo", 760, C.RED_RGB, (-18, 18)), 1400, 540, 2.5, A(2, "tốt nghiệp"))],
@@ -30,9 +30,9 @@ def build(photos):
         {"t": A(4, None, -0.1), "z": (1.0, 1.05), "cards": [(card("chatbot", 840), 560, 540, -1.5, A(4, None))],
          "svg": lambda t: C.title(1440, 540, "CHIA SẺ", 120, prog(t, A(4, "chia sẻ"), A(4, "chia sẻ") + 0.4), sub="KIẾN THỨC TÀI CHÍNH")},
         {"t": A(7, None, -0.1), "z": (1.0, 1.05), "cards": [(C.sticker(os.path.join(PEOPLE, "dario_cut.png"), 470, C.RED_RGB), 1460, 600, 0, A(8, "Claude", 0.3))],
-         "svg": lambda t: C.title(700, 230, "HÔM NAY", 70, prog(t, A(7, None, 0.1), A(7, None, 0.5)), bar=False, color=C.ORANGE)
+         "svg": lambda t: C.title(700, 230, "HÔM NAY", 70, prog(t, A(7, None, 0.1), A(7, None, 0.5)), bar=False, color=C.BLACK)
                           + C.title(700, 480, "CLAUDE", 230, prog(t, A(8, "Claude"), A(8, "Claude") + 0.4), sub="KIẾM TIỀN THẾ NÀO?")
-                          + C.title(1460, 1010, "DARIO AMODEI · CEO ANTHROPIC", 34, prog(t, A(8, "Claude", 0.6), A(8, "Claude", 1.0)), bar=False)},
+                          + C.title(1460, 1010, "DARIO AMODEI · CEO ANTHROPIC", 34, prog(t, A(8, "Claude", 0.6), A(8, "Claude", 1.0)), bar=False, color=C.BLACK)},
         {"t": A(8, "kiếm tiền", 0.2), "z": (1.0, 1.06), "cards": [],
          "svg": lambda t: C.newspaper(960, 560, 1300, "FinanceFeeds", "NOV 2026 · AI", "Anthropic IPO Filing: $17B Quarter, $895B Commitments",
                                       "$895B Commitments", "Anthropic's S-1 shows the scale of the AI business",
@@ -42,12 +42,13 @@ def build(photos):
          "svg": lambda t: C.stat(1380, 250, "chip", "1.500 TỶ $", "ĐỊNH GIÁ KHI LÊN SÀN", prog(t, A(9, "nghìn"), A(9, "nghìn") + 0.4), size=110)},
         {"t": A(9, "lời", -0.3), "z": (1.0, 1.04), "cards": [],
          "svg": lambda t: C.chart_card(960, 560, 1300, 780, "DOANH THU ANTHROPIC (TỶ $) – LỜI HAY LỖ?", ["2024", "2025", "6T/2026"],
-                                       [("Doanh thu", C.ORANGE, [0.39, 4.59, 16.3])], prog(t, A(9, "lời", -0.3), A(9, "lời", 0.1)),
+                                       [("Doanh thu", C.RED_TXT, [0.39, 4.59, 16.3])], prog(t, A(9, "lời", -0.3), A(9, "lời", 0.1)),
                                        A(9, "lời", 0.0), t, ymax=20)},
     ]
     return shots
 
 def init(voice, words, photos):
+    C.use_red_sand()
     ev.WORDS = json.load(open(words))
     G["shots"] = build(photos)
     G["bg"] = C.make_bg(1.12)
