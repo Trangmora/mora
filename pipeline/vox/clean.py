@@ -136,6 +136,9 @@ ICONS = {
     "spark": lambda c: f'<path d="M 0 -60 Q 8 -8 60 0 Q 8 8 0 60 Q -8 8 -60 0 Q -8 -8 0 -60 Z" fill="{c}"/>',
     "coin": lambda c: f'<circle r="54" fill="{c}"/><text y="22" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="64" fill="#fff">$</text>',
     "pin": lambda c: f'<path d="M 0 60 C -50 0 -46 -54 0 -56 C 46 -54 50 0 0 60 Z" fill="{c}"/><circle cy="-14" r="18" fill="#fff"/>',
+    "car": lambda c: (f'<path d="M -70 20 L -70 -6 L -48 -10 L -30 -40 L 34 -40 L 54 -10 L 70 -4 L 70 20 Z" fill="{c}"/>'
+                      '<path d="M -22 -32 L 26 -32 L 40 -10 L -36 -10 Z" fill="#fff" opacity="0.9"/>'
+                      f'<circle cx="-40" cy="22" r="16" fill="#1c1c1c"/><circle cx="40" cy="22" r="16" fill="#1c1c1c"/>'),
 }
 
 def stat(x, y, icon, value, caption, k, size=150, anchor="start"):
