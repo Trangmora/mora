@@ -28,13 +28,13 @@
    - câu vấp hoặc nói lại ("mà lại", "công ty, ờ, chính của…");
    - câu lặp ý ("Đó là một con số khổng lồ và một con số mà…");
    - câu rào đón hoặc chung chung ("muốn mở kênh để chia sẻ", "câu chữ có thể không trọn vẹn");
-   - chức danh hoặc tên công ty của chủ kênh. Chủ kênh không muốn khoe chức danh, và giọng đang đọc nhầm "Mona AI".
+   - **NGOẠI LỆ – KHÔNG BAO GIỜ CẮT đoạn giới thiệu Trang** (lời chào, founder, làm tài chính, MBA tại Ý, lý do mở kênh): giữ nguyên như chủ kênh đọc (yêu cầu ngày 28/11). Đoạn này chỉ nói bằng giọng, KHÔNG hiện ảnh, tên hay chức danh lên hình.
 3. **Không:**
    - cắt giữa một con số hoặc một tên riêng;
    - cắt làm câu sai ngữ pháp;
    - đảo thứ tự làm sai logic.
 4. **Chỗ nối hai cụm đã cắt** luôn chừa tối thiểu 0,3 giây cho tự nhiên (đã cài trong `edit_voice.py`).
-5. **Phần mở đầu:** từ lời chào đến câu "hôm nay…" không quá 5 giây. Hook phải đến trước giây thứ 15.
+5. **Phần mở đầu:** giữ nguyên đoạn giới thiệu Trang. Trong lúc đó, hình phải là cảnh mở chủ đề hấp dẫn (hook bằng hình) để giữ người xem.
 6. Mọi quyết định cắt ghi chú lý do ngay trong `ep*_keep.py` để chủ kênh xem lại được.
 7. Nếu lời đọc **sai số liệu**, không sửa bằng hình. Báo chủ kênh để thu lại câu đó. Ví dụ: "13 lần" trong khi số liệu S-1 cho khoảng 11,8 lần.
 

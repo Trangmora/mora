@@ -1,10 +1,10 @@
 """Video 1 – danh sách đoạn giữ lại khi cắt gọn giọng (số câu theo segments.txt).
 "all" = giữ cả câu (tiếng đệm ờ/ờm tự bỏ); list = chỉ giữ các cụm chữ ghi trong đó."""
 KEEP = {
-    # --- Giới thiệu (rút gọn 28/11): bỏ "founder của Mona AI" (sai tên + không giới thiệu chức danh),
-    #     bỏ MBA, bỏ câu "muốn mở kênh" (chung chung) – chỉ giữ 1 ý tạo uy tín: làm trong mảng tài chính ---
-    1: ["Xin chào các bạn, mình là Trang,"],
-    2: ["mình hiện tại đang ờm làm việc trong mảng tài chính"],
+    # --- Giới thiệu Trang: GIỮ NGUYÊN (chủ kênh yêu cầu 28/11) – chỉ nói bằng giọng, không hiện lên hình ---
+    1: "all",
+    2: "all",
+    4: ["mình rất là muốn mở cái kênh Youtube này để mình chia sẻ với các bạn"],
     # --- Vào đề ---
     7: "all", 8: "all", 9: "all",
     11: ["nó vừa được lên sàn chứng khoán IPO khoảng một tuần trước với cái con số được định giá nó khoảng tầm 1500 tỷ đô la."],
