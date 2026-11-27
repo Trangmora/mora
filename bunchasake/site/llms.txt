@@ -34,6 +34,7 @@ Bunchasake runs on its own system: social media posts every day across several p
 - [AI automation for restaurants](https://bunchasake.com/social-media-automation-for-restaurants/): Social media automation for restaurants: an AI assistant, a 30-day calendar, drafts you approve, scheduled posts and inbox replies. Your team runs it.
 
 ## Guides
+- [Starbucks and AI: machines handle the routine, people look after customers](https://bunchasake.com/blog/starbucks-brand-story/): How Starbucks uses AI: the Deep Brew platform since 2019, the Green Dot Assist helper for baristas in 2025, and lessons on AI in marketing for growing chains.
 - [Agency, in-house hire or AI automation: how a small business should choose](https://bunchasake.com/blog/agency-vs-in-house-vs-ai-automation/): Hire an agency, hire a marketer or use AI automation? A comparison of four options, the kinds of cost, when to choose which, and 8 questions to ask before you sign.
 - [AI chatbot for customer messages: how it works and what to prepare](https://bunchasake.com/blog/ai-chatbot-for-customer-messages/): How an AI chatbot for customer messages works, how it differs from old auto-replies, what to prepare, and 20 test questions to run before customers see it.
 - [AI customer care for past customers: 6 kinds of message that bring people back](https://bunchasake.com/blog/ai-customer-care-for-returning-customers/): AI customer care for past customers: 6 kinds of message that bring people back, wording to copy, how to ask permission first and what a real person must still do.
