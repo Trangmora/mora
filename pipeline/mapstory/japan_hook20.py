@@ -22,6 +22,17 @@ COSF = J.COSF
 MONGOL = "#9a6a2a"
 VNC = "#d23a2f"
 G = {}
+LANG = os.environ.get("VLANG", "vi")
+STR = {
+    "vi": {"jp": "Nhật Bản", "dv": "Đại Việt", "song": "nhà Tống", "fail": "thất bại", "also": "cũng như", "hello": "đây là", "hist": "lịch sử Nhật",
+           "MONGOL": "MÔNG NGUYÊN", "JAPAN": "NHẬT BẢN", "DAIVIET": "ĐẠI VIỆT", "SONGPIN": "Nhà Tống sụp đổ (1279)", "FAILED": "THẤT BẠI",
+           "HS": "Hoàng Sa", "TS": "Trường Sa", "CHANNEL": "LỊCH SỬ THẾ GIỚI", "T1": "LỊCH SỬ", "T2": "NHẬT BẢN", "TAG_M": "Quân Mông Nguyên", "TAG_S": "Samurai"},
+    "en": {"jp": "Japan", "dv": "Dai Viet", "song": "Song", "fail": "failed", "also": "Just as", "hello": "welcome", "hist": "history of Japan",
+           "MONGOL": "MONGOL YUAN", "JAPAN": "JAPAN", "DAIVIET": "DAI VIET", "SONGPIN": "Song dynasty falls (1279)", "FAILED": "FAILED",
+           "HS": "Hoàng Sa (Paracel Is.)", "TS": "Trường Sa (Spratly Is.)", "CHANNEL": "HISTORY OF THE WORLD", "T1": "HISTORY OF", "T2": "JAPAN",
+           "TAG_M": "Mongol soldier", "TAG_S": "Samurai"}}
+def S(k):
+    return STR[LANG][k]
 
 def T(k):
     return G["T"][k]
@@ -46,10 +57,10 @@ def cam(t):
     return (lambda lo, la: (lo * COSF * s + tx, -la * s + ty)), s, tx, ty
 
 def jp_on(t):
-    return prog(t, wt("h3", "Nhật Bản", -0.2), wt("h3", "Nhật Bản", 0.5))
+    return prog(t, wt("h3", S("jp"), -0.2), wt("h3", S("jp"), 0.5))
 
 def vn_on(t):
-    return prog(t, wt("h3", "Đại Việt", -0.2), wt("h3", "Đại Việt", 0.5))
+    return prog(t, wt("h3", S("dv"), -0.2), wt("h3", S("dv"), 0.5))
 
 def map_bg(t):
     P, s, tx, ty = cam(t)
@@ -77,7 +88,8 @@ def map_bg(t):
     p.append("</g></svg>")
     return "".join(p)
 
-def stamp(x, y, t0, t, label="THẤT BẠI", by=54):
+def stamp(x, y, t0, t, label=None, by=54):
+    label = label or S("FAILED")
     k = prog(t, t0, t0 + 0.25)
     if k <= 0:
         return ""
@@ -93,13 +105,13 @@ def map_marks(t):
     a = window(t, T("h2") + 0.3, T("h3") + 0.6)
     if a > 0:
         x, y = P(104.0, 41.5)
-        o.append(f'<g opacity="{a:.2f}">' + lbl(x, y, "MÔNG NGUYÊN", 72, -5, prog(t, T("h2") + 0.3, T("h2") + 0.8), YEL) + "</g>")
-    o.append(J.pin(P, 120.15, 30.25, "Nhà Tống sụp đổ (1279)", t, wt("h2", "nhà Tống", -0.2), T("h3") + 0.2, 1, size=42))
+        o.append(f'<g opacity="{a:.2f}">' + lbl(x, y, S("MONGOL"), 72, -5, prog(t, T("h2") + 0.3, T("h2") + 0.8), YEL) + "</g>")
+    o.append(J.pin(P, 120.15, 30.25, S("SONGPIN"), t, wt("h2", S("song"), -0.2), T("h3") + 0.2, 1, size=42))
     # hai mũi tên xâm lược và dấu thất bại
-    fj, fv = wt("h3", "thất bại", -0.1), wt("h3", "Đại Việt", -0.4)
+    fj, fv = wt("h3", S("fail"), -0.1), wt("h3", S("dv"), -0.4)
     r, pj = J.route(P, (121.0, 31.0), (129.8, 33.4), t, T("h3") + 0.1, 1.0, T("h4") + 0.3, MONGOL, 0.25, 14)
     o.append(r)
-    r, pv = J.route(P, (112.0, 25.5), (106.2, 21.4), t, wt("h3", "cũng như", -0.3), 1.0, T("h4") + 0.3, MONGOL, -0.25, 14)
+    r, pv = J.route(P, (112.0, 25.5), (106.2, 21.4), t, wt("h3", S("also"), -0.3), 1.0, T("h4") + 0.3, MONGOL, -0.25, 14)
     o.append(r)
     a = window(t, T("h3"), T("h4") + 0.3)
     if a > 0:
@@ -108,23 +120,23 @@ def map_marks(t):
         if pv:
             o.append(f'<g opacity="{a:.2f}">' + stamp(*pv[-1], fv + 0.3, t, by=-130) + "</g>")
         x, y = P(138.5, 39.5)
-        o.append(f'<g opacity="{a * jp_on(t):.2f}">' + lbl(x + 90, y - 30, "NHẬT BẢN", 58, -5, jp_on(t)) + big(x + 90, y + 30, "1274 • 1281", 40, "#ffffff", "#141414", 9, jp_on(t)) + "</g>")
+        o.append(f'<g opacity="{a * jp_on(t):.2f}">' + lbl(x + 90, y - 30, S("JAPAN"), 58, -5, jp_on(t)) + big(x + 90, y + 30, "1274 • 1281", 40, "#ffffff", "#141414", 9, jp_on(t)) + "</g>")
         x, y = P(99.0, 11.5)
-        o.append(f'<g opacity="{a * vn_on(t):.2f}">' + lbl(x - 40, y, "ĐẠI VIỆT", 58, -5, vn_on(t)) + big(x - 40, y + 56, "1258 • 1285 • 1288", 38, "#ffffff", "#141414", 9, vn_on(t)) + "</g>")
-        for name, lo, la in (("Hoàng Sa", 112.0, 17.6), ("Trường Sa", 114.2, 12.4)):
+        o.append(f'<g opacity="{a * vn_on(t):.2f}">' + lbl(x - 40, y, S("DAIVIET"), 58, -5, vn_on(t)) + big(x - 40, y + 56, "1258 • 1285 • 1288", 38, "#ffffff", "#141414", 9, vn_on(t)) + "</g>")
+        for name, lo, la in ((S("HS"), 112.0, 17.6), (S("TS"), 114.2, 12.4)):
             x, y = P(lo, la)
             o.append(f'<g opacity="{a * vn_on(t):.2f}">' + outlined(f'x="{x + 20:.0f}" y="{y:.0f}" font-family="DejaVu Serif" font-weight="bold" font-size="26"', name, "#fff6d8", BRN, 6) + "</g>")
     return "".join(o)
 
 def title(t):
     o = []
-    k = prog(t, wt("h4", "đây là", 0.0), wt("h4", "đây là", 0.35))
+    k = prog(t, wt("h4", S("hello"), 0.0), wt("h4", S("hello"), 0.35))
     if k > 0:
         o.append(f'<g transform="translate(960,250) scale({ease_back(k):.3f})"><rect x="-260" y="-44" width="520" height="80" rx="40" fill="#8a2a22" stroke="{OUT}" stroke-width="6"/>'
-                 + outlined('y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44"', "LỊCH SỬ THẾ GIỚI", YEL, "#3b1d0a", 6) + "</g>")
-    k = prog(t, wt("h4", "lịch sử Nhật", -0.1), wt("h4", "lịch sử Nhật", 0.35))
+                 + outlined('y="14" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44"', S("CHANNEL"), YEL, "#3b1d0a", 6) + "</g>")
+    k = prog(t, wt("h4", S("hist"), -0.1), wt("h4", S("hist"), 0.35))
     if k > 0:
-        o.append(big(960, 430, "LỊCH SỬ", 120, YEL, BRN, 18, k, -3) + big(960, 570, "NHẬT BẢN", 150, YEL, BRN, 22, k, -3))
+        o.append(big(960, 430, S("T1"), 120, YEL, BRN, 18, k, -3) + big(960, 570, S("T2"), 150, YEL, BRN, 22, k, -3))
     return "".join(o)
 
 # ---------- địa cầu: hạm đội vượt biển ----------
@@ -133,10 +145,10 @@ def globe_overlay(t, i):
     P, vis = projector(c["pv"], c["cam"])
     o = []
     x, y = P(108, 38)
-    o.append(lbl(x, y, "MÔNG NGUYÊN", 64, -5, prog(t, 0.6, 1.1), YEL))
+    o.append(lbl(x, y, S("MONGOL"), 64, -5, prog(t, 0.6, 1.1), YEL))
     if t > 3.3:
         x, y = P(140, 37)
-        o.append(lbl(x + 60, y, "NHẬT BẢN", 60, -5, prog(t, 3.4, 3.9)))
+        o.append(lbl(x + 60, y, S("JAPAN"), 60, -5, prog(t, 3.4, 3.9)))
     for (lo0, la0), n, t0 in (((126.8, 34.7), 6, 1.0), ((122.0, 30.0), 7, 1.6)):
         for m in range(n):
             u = ease_out(prog(t, t0 + m * 0.12, t0 + 3.2 + m * 0.12))
@@ -152,8 +164,8 @@ def globe_overlay(t, i):
 
 # ---------- nhân vật ----------
 def cast():
-    return [("mongol", 1690, 1.0, T("h4") + 0.4, [(0, "smug", "point"), (T("h2"), "laugh", "cheer"), (wt("h3", "thất bại", -0.1), "shock", "shock"), (wt("h3", "Đại Việt", 0.4), "sad", "sad")], "Quân Mông Nguyên"),
-            ("samurai", 230, 3.4, 99, [(0, "shock", "shock"), (T("h2"), "shock", "idle"), (wt("h3", "thất bại", -0.1), "laugh", "cheer"), (T("h4"), "smile", "wave")], "Samurai")]
+    return [("mongol", 1690, 1.0, T("h4") + 0.4, [(0, "smug", "point"), (T("h2"), "laugh", "cheer"), (wt("h3", S("fail"), -0.1), "shock", "shock"), (wt("h3", S("dv"), 0.4), "sad", "sad")], S("TAG_M")),
+            ("samurai", 230, 3.4, 99, [(0, "shock", "shock"), (T("h2"), "shock", "idle"), (wt("h3", S("fail"), -0.1), "laugh", "cheer"), (T("h4"), "smile", "wave")], S("TAG_S"))]
 
 def background(kind, t, i):
     if kind == "globe":
@@ -174,7 +186,7 @@ def render(i):
         base = background("globe", t, i) * (1 - k) + base * k
     layer = globe_overlay(t, i) if kind == "globe" else map_marks(t)
     sx = sy = 0
-    for t0, amp in ((wt("h3", "thất bại", -0.1), 12), (wt("h3", "Đại Việt", 0.0), 12)):
+    for t0, amp in ((wt("h3", S("fail"), -0.1), 12), (wt("h3", S("dv"), 0.0), 12)):
         if t0 <= t < t0 + 0.45:
             kk = 1 - (t - t0) / 0.45
             sx, sy = math.sin(t * 90) * amp * kk, math.cos(t * 77) * amp * kk
@@ -187,7 +199,7 @@ def render(i):
     return (base * (1 - a) + f[..., :3] * a).astype("uint8").tobytes()
 
 def init(gdir, vo, gfr):
-    d = json.load(open(f"{vo}/T_vi.json"))
+    d = json.load(open(f"{vo}/T_{LANG}.json"))
     G["T"], G["chars"] = d["T"], d["chars"]
     G["dur"] = d["T"]["end"] + 0.8
     G["caps"] = build_captions(d["chars"], d["T"], G["dur"])
@@ -208,7 +220,7 @@ def main(gdir, vo, gfr, out, only=None):
         return
     n = int(G["dur"] * FPS)
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                           "-r", str(FPS), "-i", "-", "-i", f"{vo}/vo_vi.wav", "-af", "apad", "-shortest",
+                           "-r", str(FPS), "-i", "-", "-i", f"{vo}/vo_{LANG}.wav", "-af", "apad", "-shortest",
                            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18", "-c:a", "aac", "-b:a", "192k", out],
                           stdin=subprocess.PIPE)
     with Pool(4, initializer=init, initargs=(gdir, vo, gfr)) as pool:
