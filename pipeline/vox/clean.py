@@ -94,7 +94,7 @@ def newspaper(x, y, w, outlet, date, title, hl, deck, k, rot=-2.0, ht=None):
         return ""
     s = ease_out(k)
     size = 64
-    lines = wrap(title, int((w - 120) / (size * 0.5)))
+    lines = wrap(title, int((w - 140) / (size * 0.62)))
     hh = 230 + len(lines) * size * 1.12 + 260
     yy = 230
     body = ""
@@ -103,7 +103,7 @@ def newspaper(x, y, w, outlet, date, title, hl, deck, k, rot=-2.0, ht=None):
         if hl and hl in ln:
             pre = ln[:ln.index(hl)]
             # ước lượng vị trí cụm cần tô
-            cw = size * 0.5
+            cw = size * 0.6
             tot = len(ln) * cw
             x0 = w / 2 - tot / 2 + len(pre) * cw
             body += f'<rect x="{x0 - 6:.0f}" y="{yy - size * 0.82:.0f}" width="{(len(hl) * cw + 12) * hp:.0f}" height="{size * 1.0:.0f}" fill="#f7d23e"/>'
@@ -143,7 +143,7 @@ def stat(x, y, icon, value, caption, k, size=150, anchor="start"):
     if k <= 0:
         return ""
     s = ease_back(k, 1.2)
-    vw = len(value) * size * 0.6
+    vw = len(value) * size * 0.66
     return (f'<g transform="translate({x},{y}) scale({s:.3f})" opacity="{min(1, k * 1.5):.2f}">'
             f'<g transform="translate({-vw / 2 - 90:.0f},{-size * 0.34:.0f}) scale({size / 150:.2f})">{ICONS[icon](ORANGE)}</g>'
             f'<text x="{-vw / 2 + 10:.0f}" y="0" font-family="Be Vietnam Pro" font-weight="800" font-size="{size}" fill="{BLACK}">{esc(value)}</text>'
@@ -160,7 +160,7 @@ def title(x, y, txt, size, k, color=BLACK, bar=True, sub=None):
     if bar:
         out += f'<rect x="{-w / 2 * s:.0f}" y="{size * 0.22:.0f}" width="{w * s:.0f}" height="{max(8, size * 0.07):.0f}" fill="{ORANGE}"/>'
     if sub:
-        out += (f'<text y="{size * 0.22 + 70:.0f}" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="{size * 0.3:.0f}" '
+        out += (f'<text y="{size * 0.29 + size * 0.3 * 1.25 + 8:.0f}" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="{size * 0.3:.0f}" '
                 f'fill="{ORANGE}" letter-spacing="4">{esc(sub)}</text>')
     return out + "</g>"
 
