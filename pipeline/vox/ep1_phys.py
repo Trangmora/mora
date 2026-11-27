@@ -130,7 +130,7 @@ def s_ipo(t0, t1):
     st.pour(tm - 0.35, tn - 0.4, 51, (BX[1] - 200, BX[1] + 200), -90, color=RED)
     t3, trec = A(14, "Đó", -0.4), A(15, "lớn")
     st.shake += [(t3, 16), (trec, 16)]
-    st.sounds += [(t3, "hit", 0.5), (trec, "hit", 0.5)]
+    st.sounds += [(t3, "paper", 0.45), (trec, "paper", 0.45)]
     s3, srec = stamp("GẤP ~3 LẦN", 78, seed=2), stamp("KỶ LỤC NGÀNH AI", 84, seed=5)
 
     def top(d, img, t, snap):
@@ -184,7 +184,7 @@ def s_company(t0, t1, people):
     st.at(A(19, "Claude", -0.5), lambda s: s.solid(cla, 1490, -170, mass=8, angle=0.05))
     q = glyph("?", 520)
     st.at(A(20, "bán", -0.5), lambda s: s.solid(q, 1060, -420, mass=16, angle=0.25, box=(q.width - 40, q.height - 40), z=4,
-                                                   sound=("hit", 0.35)))
+                                                   sound=("paper", 0.5)))
     ta0, ta1 = A(19, "cha", -0.15), A(19, "cha", 0.75)
     pts = [(940 + 520 * u, 500 - 210 * math.sin(math.pi * u) + 80 * u) for u in np.linspace(0, 1, 60)]
 
@@ -291,6 +291,11 @@ def main(voice, words, people, sfx_dir, out):
             events.append((s.t0, "whoosh", 0.12))
     mixed = out.replace(".mp4", "_mix.wav")
     mix_audio(voice, [os.path.join(sfx_dir, "music2.mp3")], sfx_dir, events, [], mixed, dur, music_db=-31)
+    if os.environ.get("AUDIO_ONLY"):  # chỉ trộn lại tiếng, giữ nguyên hình của bản đã render
+        src = os.environ["AUDIO_ONLY"]
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-i", mixed, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                        "-c:a", "aac", "-b:a", "192k", "-shortest", out], check=True)
+        return
     ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{OW}x{OH}", "-r", str(FPS),
                            "-i", "-", "-i", mixed, "-shortest", "-c:v", "libx264", "-preset", "slow", "-pix_fmt", "yuv420p",
                            "-crf", "18", "-c:a", "aac", "-b:a", "192k", out], stdin=subprocess.PIPE)
