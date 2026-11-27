@@ -169,39 +169,50 @@ def paste_pop(canvas, im, cx, cy, k):
     w, h = int(im.width * sc), int(im.height * sc)
     canvas.alpha_composite(im.resize((max(1, w), max(1, h)), Image.BICUBIC), (int(cx - w / 2), int(cy - h / 2)))
 
+# Video NGANG cho YouTube: mô phỏng vẫn chạy trong "bàn" dọc (toạ độ thế giới W×H), rồi bàn được thu nhỏ đặt bên phải
+# khung 1920×1080; tiêu đề, thẻ kết, nguồn nằm bên trái.
+OW, OH = 1920, 1080
+CROP = (90, 270, 990, 1850)            # vùng bàn trong toạ độ thế giới
+BS = (OH - 40) / (CROP[3] - CROP[1])   # tỉ lệ thu
+BX, BY = 1360 - (CROP[2] - CROP[0]) * BS / 2, 20
+LX = 560                               # tâm cột chữ bên trái
+
 def main(sfx_dir, out):
     frames, landed, order, segs, pegs = simulate()
-    bg = C.make_oldgrid(W, H, cell=108).convert("RGBA")
-    base = bg.copy()
-    base.alpha_composite(static_layer(segs, pegs))
-    sd = ImageDraw.Draw(base)
-    sd.text((W / 2, 1878), SOURCE, font=font(24), fill=(90, 86, 80, 255), anchor="mm")
+    bg = C.make_oldgrid(OW, OH, cell=108).convert("RGBA")
+    sd = ImageDraw.Draw(bg)
+    sd.text((LX, 600), "1 ĐỒNG XU = 1$", font=font(40), fill=BLACK + (255,), anchor="mm")
+    sd.text((LX, 1035), SOURCE, font=font(24), fill=(90, 86, 80, 255), anchor="mm")
+    board0 = static_layer(segs, pegs)
     sprites = {(ci, a): shadowed(coin_sprite(CATS[ci][2], a * np.pi / 18), (5, 7), 4, 0.35)
                for ci in range(len(CATS)) for a in range(36)}
-    t1 = text_card([(TITLE1, 54, RED), (TITLE2, 92, BLACK)])
-    endc = text_card([(END1, 70, BLACK), (END2, 84, RED)], rot=2)
-    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+    t1 = text_card([(TITLE1, 60, RED), (TITLE2, 104, BLACK)])
+    endc = text_card([(END1, 76, BLACK), (END2, 92, RED)], rot=2)
+    ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{OW}x{OH}",
                            "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18",
                            out.replace(".mp4", "_v.mp4")], stdin=subprocess.PIPE)
+    bw, bh = int((CROP[2] - CROP[0]) * BS), int((CROP[3] - CROP[1]) * BS)
     for f, cs in enumerate(frames):
         t = f / FPS
-        cv = base.copy()
+        bd = board0.copy()
         sp0 = sprites[(0, 0)]
         for x, y, a, ci in cs:
             s = sprites[(ci, int(round(np.degrees(a) / 10)) % 36)]
-            cv.alpha_composite(s, (int(x - sp0.width / 2), int(y - sp0.height / 2)))
-        d = ImageDraw.Draw(cv)
+            bd.alpha_composite(s, (int(x - sp0.width / 2), int(y - sp0.height / 2)))
+        d = ImageDraw.Draw(bd)
         for ci, (_, _, _, n, cx) in enumerate(CATS):
             cnt = sum(1 for k, lt in enumerate(landed) if lt is not None and lt <= t and order[k] == ci)
             if cnt:
                 d.text((cx, BIN_TOP + 70), f"{cnt}$", font=font(96), fill=BLACK + (255,), anchor="mm",
                        stroke_width=8, stroke_fill=CREAM + (255,))
-        paste_pop(cv, t1, W / 2, 205, (t - 0.1) / 0.45)
+        cv = bg.copy()
+        cv.alpha_composite(bd.crop(CROP).resize((bw, bh), Image.LANCZOS), (int(BX), BY))
+        paste_pop(cv, t1, LX, 330, (t - 0.1) / 0.45)
         if t > 7.4:
             k = (t - 7.4) / 0.45
-            ov = Image.new("RGBA", (W, H), (20, 16, 12, int(90 * min(1, k))))
+            ov = Image.new("RGBA", (OW, OH), (20, 16, 12, int(90 * min(1, k))))
             cv.alpha_composite(ov)
-            paste_pop(cv, endc, W / 2, 660, k)
+            paste_pop(cv, endc, LX, 790, k)
         fade = min(1, t / 0.25, (DUR - t) / 0.35)
         arr = np.asarray(cv.convert("RGB"), dtype=np.float32) * max(0, fade)
         ff.stdin.write(arr.astype("uint8").tobytes())
