@@ -8,17 +8,18 @@ Giọng kể: chủ kênh tự đọc (tiếng Việt, xưng "mình – các b�
 - Cấu trúc gợi ý: câu hỏi gây tò mò → công ty bán gì / kiếm tiền thế nào → tiền đi đâu → lời hay lỗ → rủi ro / canh bạc → tóm tắt 3 ý → gợi mở tập sau.
 - Luôn ghi "không phải lời khuyên đầu tư".
 
-## Phong cách hình (đã được chủ kênh duyệt hướng đi – bản thử "video1_fast")
-Tham chiếu: kênh giải thích tài chính kiểu How Money Works, nhưng **không sao chép** (nền, màu, bố cục phải khác).
-- **Nhịp nhanh:** đổi cảnh mỗi 2–4 giây; hình **tràn khung**, luôn zoom/lia chậm; camera "dí" vào chi tiết đúng lúc nói.
-- **Chữ khoá ĐỎ** (#e3262f) trên dải giấy xé trắng ở 1/3 dưới, chữ to, ít chữ.
-- **Nét vẽ tay ĐỎ có cử động** (nét "rung" 10 lần/giây): khoanh tròn, mũi tên cong, gạch chân lượn sóng, tia "bùng nổ";
-  **vẽ tay chân + mặt cho đồ vật** (con số, nhãn, con dấu, dấu hỏi…) để chúng vẫy tay, đi bộ, nhảy, buồn/vui/ngạc nhiên.
-- **Sơ đồ** để giải thích: hộp viền vẽ tay + mũi tên (A → B → C), so sánh hai cột, dòng tiền vòng tròn.
-- **Cảm giác công nghệ:** chuyển cảnh nhiễu số (glitch), khung ngắm 4 góc, dòng chữ máy (JetBrains Mono) góc trên "● TAG // TAG", đồng hồ timecode góc dưới.
-- **Nền:** ảnh thật tràn khung, hoặc tờ giấy trắng chấm lưới trên bàn gỗ sáng.
-- **Tiêu đề báo thật** (nguyên văn, chỉ ghi tên báo bằng chữ, KHÔNG dùng logo); **trích tài liệu thật** (vd. hồ sơ S-1) có tô vàng.
-- Nhân vật MC hoạt hình: tuỳ chủ kênh (bản nhịp nhanh hiện không dùng MC để hình tràn khung).
+## Phong cách hình (chủ kênh CHỐT ngày 27/11/2026: "Vox sạch" theo video mẫu thứ 3)
+Bỏ các thử nghiệm trước (trang giấy chấm lưới nhiều chi tiết nhỏ; nét vẽ đỏ có tay chân; HUD/glitch) – chủ kênh KHÔNG thích.
+- **Nền:** xám ấm (#dbd8d2) có lưới ô vuông rất mảnh (bước 64 px), vân giấy nhẹ, tối nhẹ ở góc.
+- **Ảnh thật:** chuyển **đen trắng tương phản + chấm in báo (halftone)**, phía sau có **mảng màu cam/đỏ lệch** như ảnh cắt dán; đặt hơi nghiêng; zoom rất chậm.
+- **Mẩu báo:** tờ báo nền kem đặt nghiêng, tên báo kiểu serif, **tiêu đề thật (nguyên văn)**, **tô vàng** cụm quan trọng, cột chữ xám giả lập. Không dùng logo báo.
+- **Con số lớn:** chữ **đen đậm** cỡ rất lớn + **biểu tượng phẳng màu cam** bên trái + **chú thích nhỏ in hoa** bên dưới (vd. "$116 / PER BARREL").
+- **Biểu đồ:** **thẻ nền kem bo góc**, lưới mảnh, đường **cam** tự vẽ ra từng điểm (đường so sánh màu xám), nhãn số trên điểm.
+- **Tiêu đề / nhãn:** chữ đen đậm + gạch dưới cam; chú thích phụ màu cam in hoa.
+- **Bảng màu:** xám ấm, đen #1c1c1c, cam #e8762b, kem #f6f1e6, vàng tô #f7d23e. Tối giản, nhiều khoảng thở.
+- **Nhịp:** đổi cảnh 2–4 giây, mỗi cảnh **một ý**, chuyển cảnh gọn (cắt/mờ nhanh), zoom chậm.
+- Bộ dựng: `pipeline/vox/clean.py` (nền, ảnh halftone, mẩu báo, con số + biểu tượng, thẻ biểu đồ). Kịch bản cảnh theo mốc lời: xem `pipeline/vox/ep1_fast.py` (hàm A()).
+- Tài liệu tham khảo cách cắt giọng/ trộn âm: `pipeline/vox/edit_voice.py`, `pipeline/vox/engine.py` (mix_audio).
 
 ## Âm thanh (chủ kênh dặn: giống video gốc, KHÔNG nhiều âm)
 - Giọng chủ kênh là chính. Nhạc nền **rất nhỏ** (~ -31 dB, tự nhỏ thêm khi có giọng); chỗ ngắt gần như im lặng.
@@ -35,6 +36,7 @@ Tham chiếu: kênh giải thích tài chính kiểu How Money Works, nhưng **k
 7. Gửi bản thử 30–60 giây cho chủ kênh duyệt trước khi dựng cả tập.
 
 ## Nguồn ảnh
+- Tài nguyên sẵn có trong repo: `story-of-the-company/assets/` (audio: nhạc + tiếng động ElevenLabs; photos: ảnh Unsplash HD + credits; people: ảnh Wikimedia + credits).
 - Ảnh minh hoạ: Unsplash API (đã có key qua proxy), tải bản HD `urls.raw&w=2200` cho cảnh tràn khung; gọi `download_location` khi tải; ghi tên tác giả.
 - Ảnh người thật: **Wikimedia Commons** (giấy phép public domain / CC0 / CC BY…; ghi tác giả + giấy phép trong mô tả).
   KHÔNG lấy ảnh từ Google Images (bản quyền).

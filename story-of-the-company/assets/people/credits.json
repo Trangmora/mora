@@ -1,0 +1,37 @@
+[
+ {
+  "key": "dario",
+  "file": "Dario Amodei in 2023.jpg",
+  "license": "CC BY 2.0",
+  "artist": "UK Prime Minister",
+  "url": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_in_2023.jpg"
+ },
+ {
+  "key": "jensen",
+  "file": "Jensen huang stanford 2026-04-30 010 (cropped).jpg",
+  "license": "CC BY 4.0",
+  "artist": "Anders Eidesvik",
+  "url": "https://commons.wikimedia.org/wiki/File:Jensen_huang_stanford_2026-04-30_010_(cropped).jpg"
+ },
+ {
+  "key": "bernanke",
+  "file": "Ben Bernanke official portrait.jpg",
+  "license": "Public domain",
+  "artist": "United States Federal Reserve",
+  "url": "https://commons.wikimedia.org/wiki/File:Ben_Bernanke_official_portrait.jpg"
+ },
+ {
+  "key": "musk",
+  "file": "Elon Musk Colorado 2022 (cropped2).jpg",
+  "license": "Public domain",
+  "artist": "U.S. Air Force / Trevor Cokley",
+  "url": "https://commons.wikimedia.org/wiki/File:Elon_Musk_Colorado_2022_(cropped2).jpg"
+ },
+ {
+  "key": "sbf",
+  "file": "Sam Bankman-Fried (cropped).png",
+  "license": "CC BY 3.0",
+  "artist": "Cointelegraph",
+  "url": "https://commons.wikimedia.org/wiki/File:Sam_Bankman-Fried_(cropped).png"
+ }
+]
