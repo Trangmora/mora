@@ -3,29 +3,52 @@ Dùng:
   python3 post_schedule.py accounts                 # liệt kê kênh mà key nhìn thấy, để lấy mã kênh luật (UC...)
   python3 post_schedule.py run --account UCxxxx     # hẹn giờ mọi video chưa có post_id; bỏ qua video có giờ đăng đã qua
   python3 post_schedule.py run --account UCxxxx --shift-from 2026-11-29   # dời cả lịch để video đầu rơi vào ngày này (giữ nhịp 2 ngày)
-  python3 post_schedule.py next-slot                # ngày trống sớm nhất (từ ngày mai) để xếp video mới, giờ 19:00
+  python3 post_schedule.py next-slot                # ngày trống sớm nhất (từ ngày mai) để xếp video mới, giờ 09:00
+  python3 post_schedule.py reflow [--from 2026-11-28]   # xếp lại mọi video chưa đăng: mỗi ngày một video 09:00, đổi giờ trên Morapost
+  Video luật mới (bắt trend): thêm mục "trend": true, "at" = ngày hôm nay/ngày mai 09:00, rồi chạy reflow --from <ngày đó>:
+  video trend chiếm ngày đó, các video còn lại tự lùi một ngày.
 Ghi post_id vào schedule.json để không đăng lặp.
 QUY TẮC (chủ kênh chốt 27/11/2026): TỐI ĐA MỘT VIDEO MỘT NGÀY. Video mới không "đăng luôn" mà xếp vào ngày trống
 (lệnh next-slot). Script từ chối đăng nếu ngày đó đã có video khác, hoặc nếu cùng văn bản đã có trong lịch
 (thêm --allow-same-law khi cố ý làm tập thứ hai về cùng văn bản, ví dụ hai tập khác ý của cùng một luật).
 Trước khi chạy: git pull nhánh claude/law-channel; giữ chỗ trong schedule.json rồi commit + push NGAY, sau đó mới đăng."""
 import json, sys, subprocess, datetime, os
+SLOT = '09:00'  # giờ đăng cố định (chủ kênh chốt 27/11/2026: mỗi ngày một video, 9 giờ sáng)
 H = os.path.dirname(os.path.abspath(__file__)); MP = os.path.join(H, '../../pipeline/publish/morapost.py'); S = os.path.join(H, 'schedule.json')
 a = sys.argv[1:]
 if not a or a[0] == 'accounts': subprocess.run([sys.executable, MP, 'accounts']); sys.exit()
 VN = datetime.timezone(datetime.timedelta(hours=7))
 def vn_date(p): return datetime.datetime.fromisoformat(p['at']).astimezone(VN).date()
 def law_key(p): return p['file'].split('_')[0]  # số hiệu/tên văn bản ở đầu mã tập: ND168, TT108, BLHS2026, LuatNhaO2026
+if a[0] == 'reflow':
+    # Xếp lại MỌI video chưa đăng (giờ >= ngày bắt đầu) thành mỗi ngày một video lúc 09:00, giữ thứ tự;
+    # video có "trend": true được ưu tiên đứng trước trong cùng ngày. Đổi giờ trên Morapost bằng PATCH.
+    import subprocess as sp
+    d0 = datetime.date.fromisoformat(a[a.index('--from') + 1]) if '--from' in a else datetime.datetime.now(VN).date() + datetime.timedelta(days=1)
+    plan = json.load(open(S)); start = datetime.datetime.combine(d0, datetime.time(0), VN)
+    pend = sorted([p for p in plan if datetime.datetime.fromisoformat(p['at']) >= start], key=lambda p: (vn_date(p), not p.get('trend'), p['at']))
+    for i, p in enumerate(pend):
+        d = d0 + datetime.timedelta(days=i); at = f"{d}T{SLOT}:00+07:00"
+        if p['at'] == at: continue
+        if p['post_id']:
+            r = sp.run(['curl', '-s', '-m', '60', '-X', 'PATCH', f"https://www.morapost.com/api/v1/posts/{p['post_id']}", '-H', 'Content-Type: application/json',
+                        '--data-binary', json.dumps({'scheduled_at': at})], capture_output=True, text=True).stdout
+            try: ok = json.loads(r).get('ok')
+            except Exception: ok = False
+            if not ok: json.dump(plan, open(S, 'w'), ensure_ascii=False, indent=1); sys.exit(f"Dừng: đổi giờ lỗi {p['file']}: {r[:300]}")
+        p['date'], p['at'] = str(d), at; print(d, SLOT, p['file'])
+        json.dump(plan, open(S, 'w'), ensure_ascii=False, indent=1)
+    sys.exit()
 if a[0] == 'next-slot':
     used = {vn_date(p) for p in json.load(open(S))}; d = datetime.datetime.now(VN).date() + datetime.timedelta(days=1)
     while d in used: d += datetime.timedelta(days=1)
-    print(f'{d}  ->  "date": "{d}", "at": "{d}T19:00:00+07:00"'); sys.exit()
+    print(f'{d}  ->  "date": "{d}", "at": "{d}T{SLOT}:00+07:00"'); sys.exit()
 LAW_CHANNEL = 'UCsgNKzFknzaH0lqNz-ivNfQ'  # YouTube "Hiểu Luật 2 Phút": kênh luật CHỈ đăng lên kênh này (chủ kênh dặn 26/11/2026)
 acc = a[a.index('--account') + 1]; plan = json.load(open(S))
 if acc != LAW_CHANNEL: sys.exit(f'Từ chối: kênh luật chỉ đăng lên Hiểu Luật 2 Phút ({LAW_CHANNEL}), không đăng lên {acc}.')
 if '--shift-from' in a:
     d0 = datetime.date.fromisoformat(a[a.index('--shift-from') + 1]); pend = [p for p in plan if not p['post_id']]
-    for i, p in enumerate(pend): p['date'] = str(d0 + datetime.timedelta(days=2 * i)); p['at'] = f"{p['date']}T19:00:00+07:00"
+    for i, p in enumerate(pend): p['date'] = str(d0 + datetime.timedelta(days=2 * i)); p['at'] = f"{p['date']}T{SLOT}:00+07:00"
 now = datetime.datetime.now(datetime.timezone.utc)
 for p in plan:
     if p['post_id']: continue
