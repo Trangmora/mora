@@ -9,6 +9,7 @@ import json, re, sys, wave
 import numpy as np
 
 FILLERS = {"ờ", "ờm", "ừm", "à", "ừ", "ơ"}
+LEAD_FILLERS = {"thì"}
 SR = 44100
 
 def norm(w):
@@ -54,6 +55,9 @@ def build(stt, wav_in, keep, wav_out, words_out, max_gap=0.32, sent_gap=0.42, or
         spans = [list(range(len(sw)))] if keep[sid] == "all" else pick(sw, keep[sid])
         for sp in spans:
             run = [dict(sw[k], seg=sid) for k in sp if norm(sw[k]["text"]) not in FILLERS]
+            # bỏ chữ đệm đứng ĐẦU câu ("Thì thứ nhất là…" → "Thứ nhất là…") – chủ kênh yêu cầu 28/11
+            while run and norm(run[0]["text"]) in LEAD_FILLERS and len(run) > 1:
+                run = run[1:]
             if run:
                 runs.append(run)
     out, words, t = [], [], 0.0

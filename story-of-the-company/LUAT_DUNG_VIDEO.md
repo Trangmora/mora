@@ -33,7 +33,8 @@
    - cắt giữa một con số hoặc một tên riêng;
    - cắt làm câu sai ngữ pháp;
    - đảo thứ tự làm sai logic.
-4. **Chỗ nối hai cụm đã cắt** luôn chừa tối thiểu 0,3 giây cho tự nhiên (đã cài trong `edit_voice.py`).
+4. **Bỏ chữ "thì" đứng đầu câu** ("Thì thứ nhất là…" → "Thứ nhất là…") – tự động trong `edit_voice.py` (chủ kênh yêu cầu 28/11). "Thì" giữa câu giữ nguyên.
+4b. **Chỗ nối hai cụm đã cắt** luôn chừa tối thiểu 0,3 giây cho tự nhiên (đã cài trong `edit_voice.py`).
 5. **Phần mở đầu:** giữ nguyên đoạn giới thiệu Trang. Trong lúc đó, hình phải là cảnh mở chủ đề hấp dẫn (hook bằng hình) để giữ người xem.
 6. Mọi quyết định cắt ghi chú lý do ngay trong `ep*_keep.py` để chủ kênh xem lại được.
 7. Nếu lời đọc **sai số liệu**, không sửa bằng hình. Báo chủ kênh để thu lại câu đó. Ví dụ: "13 lần" trong khi số liệu S-1 cho khoảng 11,8 lần.

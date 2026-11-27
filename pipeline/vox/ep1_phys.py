@@ -159,7 +159,7 @@ def s_ipo(t0, t1):
     LEG = card(440, 72, [("1 ĐỒNG XU = 10 TỶ $", 34, CREAM)], bg=BLACK, seed=14)
 
     def scr(img, t):
-        place(img, LEG, (270, 74), prog(t, ti - 0.3, ti))
+        place(img, LEG, (1880 - LEG.width / 2, 1040), prog(t, ti - 0.3, ti))
         if t > tm:
             place(img, text_img("Nguồn: Tổng cục Thống kê – GDP Việt Nam 2025 ước 514 tỷ USD", 24, INK), (500, 1046), prog(t, tm, tm + 0.4), back=False)
     st.screen_fns.append(scr)

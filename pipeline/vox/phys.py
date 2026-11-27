@@ -176,9 +176,10 @@ class Stage:
         self.items.append((self.track(b), self.coin_cache[key], "coin", z))
         return b
 
-    def solid(self, sprite, x, y, mass=6, angle=0.0, vx=0, vy=0, box=None, z=2, elastic=0.15, friction=0.8, sound=("paper", 0.55)):
+    def solid(self, sprite, x, y, mass=6, angle=0.0, vx=0, vy=0, box=None, z=2, elastic=0.15, friction=0.8, sound=("paper", 0.55),
+              inertia=1.0):
         w, h = box or (sprite.width - 16, sprite.height - 16)
-        b = pymunk.Body(mass, pymunk.moment_for_box(mass, (w, h)))
+        b = pymunk.Body(mass, pymunk.moment_for_box(mass, (w, h)) * inertia)  # giấy dày: khó lật hơn khi rơi nhanh
         b.position, b.angle, b.velocity = (x, y), angle, (vx, vy)
         s = pymunk.Poly.create_box(b, (w, h), radius=2)
         s.elasticity, s.friction = elastic, friction
@@ -190,7 +191,12 @@ class Stage:
         return b
 
     def at(self, t, fn):
-        self.events.append((t, fn))
+        if getattr(self, "_running", False):   # sự kiện sinh ra trong lúc chạy → chèn đúng thứ tự thời gian
+            import heapq
+            self._seq += 1
+            heapq.heappush(self._heap, (t, self._seq, fn))
+        else:
+            self.events.append((t, fn))
 
     def pour(self, ta, tb, n, xr, y, R=24, color=GOLD, behind=False, vx=(-40, 40), rate=None):
         """Đổ n đồng xu trong [ta,tb]; rate(u)∈[0,1]→mật độ tương đối (mặc định đều)."""
@@ -205,23 +211,32 @@ class Stage:
 
     # --- mô phỏng ---
     def run(self, extra=0.5):
-        self.events.sort(key=lambda e: e[0])
-        ei, sub = 0, 10
+        import heapq
+        self._heap = [(t, i, fn) for i, (t, fn) in enumerate(self.events)]
+        heapq.heapify(self._heap)
+        self._seq = len(self._heap)
+        self._running = True
+        sub = 10
         dt = 1 / FPS / sub
-        nfr = int(math.ceil((self.t1 + extra - self.t0) * FPS))
+        start = min(self.t0, getattr(self, "pre_t", self.t0))   # chạy trước (không ghi hình) để thùng đã đầy sẵn
+        pre = int(round((self.t0 - start) * FPS))
+        nfr = int(math.ceil((self.t1 + extra - self.t0) * FPS)) + pre
         self.frames = []
         prev_v = {}
         last_snd = -1
         for f in range(nfr):
-            t = self.t0 + f / FPS
-            while ei < len(self.events) and self.events[ei][0] <= t:
-                self.events[ei][1](self)
-                ei += 1
+            t = start + f / FPS
+            self._now = t
+            while self._heap and self._heap[0][0] <= t:
+                heapq.heappop(self._heap)[2](self)
             for _ in range(sub):
                 self.sp.step(dt)
             snap = []
             for i, b in enumerate(self.bodies):
-                if b.position.y > self.kill_y:
+                if getattr(b, "dead", False) or b.position.y > getattr(b, "kill", self.kill_y):
+                    if not getattr(b, "dead", False):
+                        b.dead = True
+                        self.sp.remove(b, *b.shapes)
                     snap.append(None)
                     continue
                 v = b.velocity
@@ -238,7 +253,11 @@ class Stage:
                         b.hits = hit + 1
                 prev_v[i] = (v.x, v.y)
                 snap.append((b.position.x, b.position.y, b.angle))
-            self.frames.append(snap)
+            if f >= pre:
+                self.frames.append(snap)
+        self.sounds = [e for e in self.sounds if e[0] >= self.t0]
+        self._running = False
+        self._heap = None
         self.sp = None  # không cần nữa (để fork nhẹ)
         self.static_layer = self._static_layer()
         return self
