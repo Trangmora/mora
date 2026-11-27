@@ -51,5 +51,18 @@ Tiếng Việt 11:30 giờ VN (YouTube Shorts Ridiculous Case, Facebook Mora Med
 | 08/12 | Viết xong rồi biến mất (Lão Tử) | đã hẹn giờ; TikTok và X chờ Buffer |
 | 09/12 | Dòng sông có quyền như người? | đã hẹn giờ; TikTok và X chờ Buffer |
 | 10/12 | Ngôi đền 20 năm dựng lại (Ise) | đã hẹn giờ; TikTok và X chờ Buffer |
+| 11/12 | Thanh sắt trong lưới (Lê Lợi) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 12/12 | Ông vua đoán trước nhật thực (Thái Lan) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 13/12 | Vũ khí bí mật: xe đạp (Điện Biên Phủ) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 14/12 | Mười nghìn ngôi đền (Bagan) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 15/12 | Bí ẩn đêm vườn vải (Lệ Chi Viên) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 16/12 | Ngoại giao cây tre (Thái Lan) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 17/12 | Người mặc áo chủ tướng (Lê Lai) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 18/12 | Tờ tiền 45 và 90 (Myanmar) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 19/12 | "Không bắn nổi ba phát" (Điện Biên Phủ) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 20/12 | Không còn phải bò rạp (Thái Lan) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 21/12 | Cụ rùa Hồ Gươm có thật | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 22/12 | Đường hầm dưới đồi A1 | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
+| 23/12 | Chữ do kiến viết (Nguyễn Trãi) | đã hẹn giờ (YT, IG, Threads); FB Mora Media chờ kết nối lại; TikTok, X chờ Buffer |
 
 Buffer gói miễn phí chỉ giữ 10 bài hẹn giờ mỗi kênh. 10 bài TikTok và X của 06–10/12 nằm trong `pipeline/publish/buffer_pending.json`; đã đặt nhắc việc ngày 01/12 và 05/12 để chạy `buffer_topup.py`.
