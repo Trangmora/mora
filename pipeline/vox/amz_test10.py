@@ -1,4 +1,4 @@
-"""Amazon – bản thử 10 giây mở đầu (phong cách "Vox sạch"). Giọng tạm bằng máy để canh nhịp.
+"""Amazon – bản thử 10 giây mở đầu (phong cách "Vox sạch"). Giọng: clone "Trang giọng việt" (ElevenLabs eleven_v3).
 Chạy: python3 amz_test10.py
 """
 import os
@@ -14,7 +14,7 @@ from engine import mix_audio
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../story-of-the-company"))
 B = f"{ROOT}/amazon/build"
-SPEED = 1.08
+SPEED = 1.0  # giọng Trang đọc tốc độ tự nhiên
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{B}/tts.mp3", "-filter:a", f"atempo={SPEED}",
                 "-ar", "44100", "-ac", "1", f"{B}/voice.wav"], check=True)
 A = Align(f"{B}/align.json", SPEED)
