@@ -11,17 +11,25 @@ os.makedirs(out, exist_ok=True)
 segs = json.load(open(src))[lang]
 SR = 44100
 T = {}; chars = {}; t = 0.0; parts = []
+REDO = set(filter(None, os.environ.get('REDO', '').split(',')))  # REUSE=1: dùng lại đoạn đã thu, chỉ thu lại các đoạn trong REDO
 for i, (sid, text) in enumerate(segs):
+    cache = f'{out}/{lang}_{sid}.json'
+    if os.environ.get('REUSE') and sid not in REDO and os.path.exists(cache):
+        d = json.load(open(cache))
+    else:
+        d = None
     body = {"text": text, "model_id": "eleven_v3",
             "voice_settings": {"stability": float(os.environ.get("STABILITY", 0.5)), "similarity_boost": 0.85,
                                "style": float(os.environ.get("STYLE", 0.3))}}
     if lang == 'vi': body['language_code'] = 'vi'
-    bj = f'{out}/b_{lang}.json'; json.dump(body, open(bj, 'w'))
-    r = subprocess.run(['curl', '-s', '-m', '300', '-X', 'POST',
-        f'https://api.elevenlabs.io/v1/text-to-speech/{VID}/with-timestamps?output_format=mp3_44100_128',
-        '-H', 'Content-Type: application/json', '-d', '@' + bj], capture_output=True)
-    d = json.loads(r.stdout)
-    if 'audio_base64' not in d: print(sid, str(d)[:300]); sys.exit(1)
+    if d is None:
+        bj = f'{out}/b_{lang}.json'; json.dump(body, open(bj, 'w'))
+        r = subprocess.run(['curl', '-s', '-m', '300', '-X', 'POST',
+            f'https://api.elevenlabs.io/v1/text-to-speech/{VID}/with-timestamps?output_format=mp3_44100_128',
+            '-H', 'Content-Type: application/json', '-d', '@' + bj], capture_output=True)
+        d = json.loads(r.stdout)
+        if 'audio_base64' not in d: print(sid, str(d)[:300]); sys.exit(1)
+        json.dump(d, open(cache, 'w'))
     mp3 = f'{out}/{lang}_{sid}.mp3'; open(mp3, 'wb').write(base64.b64decode(d['audio_base64']))
     wav = f'{out}/{lang}_{sid}.wav'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', mp3, '-ar', str(SR), '-ac', '1', wav], check=True)
