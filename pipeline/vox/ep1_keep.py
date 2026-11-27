@@ -62,7 +62,7 @@ KEEP = {
     140: ["cái điều mà mọi người thường là nghĩ rằng là Anthropic nó tự có, tự làm chip nhưng thật ra không phải nha."],
     141: "all", 143: "all", 144: "all", 145: "all", 146: "all",
     147: ["Thì cái hợp đồng", "tám trăm chín mươi lăm tỷ đô này của Anthropic là như vậy."],
-    148: "all",
+    # 148 bỏ (28/11): "con số này gần bằng cả giá trị công ty" – SAI (895 tỷ ≈ 60% của 1.500 tỷ),
     # --- Lời hay lỗ ---
     150: "all", 151: "all", 152: "all", 153: "all", 154: "all",
     156: "all",

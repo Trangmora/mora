@@ -231,14 +231,14 @@ def s_burn(t0, t1):
             d.polygon(pts, fill=col + (255,), outline=BLACK + (255,) if layer == 0 else None, width=5)
         place(img, text_img("DOANH THU ĐỔ VÀO", 60, BLACK, stroke=6), (520, 250), prog(t, td - 0.2, td + 0.15))
         if t >= ttg:
-            v = "2024: 0,39 TỶ $" if t < tn else "2025: 4,59 TỶ $"
+            v = "6T ĐẦU 2025: 1,2 TỶ $" if t < tn else "6T ĐẦU 2026: 16,3 TỶ $"
             place(img, text_img(v, 64, RED, stroke=8), (520, 340), prog(t, ttg, ttg + 0.25) if t < tn else prog(t, tn, tn + 0.25))
         place(img, text_img("VẪN ĐỐT TIỀN", 96, RED, stroke=10), (1580, 960), prog(t, tdot - 0.1, tdot + 0.25))
     st.top_fns.append(fire)
     st.cam = lambda t: (1056, 600, 2112 - 120 * ease_io(prog(t, t0, t1)))
 
     def scr(img, t):
-        place(img, text_img("Nguồn: hồ sơ S-1 của Anthropic", 24, INK), (230, 1046), prog(t, ttg, ttg + 0.4), back=False)
+        place(img, text_img("Nguồn: hồ sơ S-1 của Anthropic (6 tháng đầu 2025 và 2026)", 24, INK), (380, 1046), prog(t, ttg, ttg + 0.4), back=False)
     st.screen_fns.append(scr)
     return st
 

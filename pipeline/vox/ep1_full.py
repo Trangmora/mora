@@ -225,7 +225,7 @@ def scenes(people):
                (a(143, "tám trăm"), w895, 1150, {"mass": 60, "box": (480, 300)}),
                (a(145, "dài hạn"), tag("HỢP ĐỒNG THUÊ DÀI HẠN", 44, 2), 1150, {"z": 4}),
                (a(146, "quán"), mk([T("NHƯ THUÊ QUÁN 10 NĂM", 46), T("ĐÔNG HAY VẮNG VẪN TRẢ", 34, RED)], seed=3), 1650)],
-        src=("Nguồn: hồ sơ S-1 của Anthropic", a(143))))
+        src=("Nguồn: hồ sơ S-1 của Anthropic (bản sửa đổi 2/11/2026 ghi ~901 tỷ $)", a(143))))
 
     # ---------------- PHẦN 5: LỜI HAY LỖ ----------------
     add(cut(156), lambda t0, t1: scale(t0, t1, left=[(a(153, "lời"), 6)], right=[(a(153, "lỗ"), 6)], seed=501,
@@ -305,8 +305,8 @@ def scenes(people):
                (a(237, "doanh nghiệp"), mk([T("DOANH NGHIỆP", 50, RED), T("DÙNG AI NHIỀU HƠN", 40)], seed=4), 620)],
         stamp_items=[(a(238, "canh bạc"), "CANH BẠC", (620, 470), -7, 80)]))
     add(cut(246), lambda t0, t1: bins(t0, t1, BW=440, R=20, seed=702, leg=("1 ĐỒNG XU = 1% LÃNH ĐẠO", a(241)),
-        src=("Nguồn: khảo sát được nêu trong video – cần kiểm chứng trước khi đăng", a(241)),
-        heads=[(a(241), "KHẢO SÁT ~1.500 LÃNH ĐẠO CÔNG NGHỆ", 60, BLACK, (1056, 140))],
+        src=("Nguồn: Cloudera – State of Enterprise AI 2026 (1.500 lãnh đạo CNTT, 9 nước, khảo sát 9/2026)", a(241)),
+        heads=[(a(241), "KHẢO SÁT 1.500 LÃNH ĐẠO CNTT", 60, BLACK, (1056, 140))],
         items=[dict(cx=700, n=89, color=RED, label="CẮT GIẢM / ĐỔI KẾ HOẠCH", sub="VÌ TỐN TIỀN", ta=a(241, "89%", -0.8), tb=a(241, "89%", 1.2),
                     fmt=lambda k, n: f"{k}%", tcol=RED, lab_t=a(241, "89%")),
                dict(cx=1412, n=11, color=GOLD, label="CÒN LẠI", ta=a(241, "89%", 1.2), tb=a(241, "89%", 1.8),
@@ -348,9 +348,10 @@ def scenes(people):
     add(cut(316), lambda t0, t1: board(t0, t1, seed=802,
         heads=[(a(300), "CHƯA DỪNG Ở ĐÂY...", 76, BLACK, (1056, 150), a(315)), (a(315), "GIẢI THÍCH Ở VIDEO SAU", 76, RED, (1056, 150))],
         drops=[(a(301, "bán cổ phiếu"), mk([T("BẠN MUA CỔ PHIẾU", 56)], seed=1), 480),
-               (a(303), mk([T("1 CÔNG TY NẮM HƠN 1/2 QUYỀN LỰC?", 40)], seed=2), 1380),
-               (a(305), mk([T("NHÓM 5 NGƯỜI CHỌN HĐQT?", 40)], seed=3), 1380),
-               (a(307, "75"), mk([T("QUỸ TỪ THIỆN 75 TỶ $?", 40, RED)], seed=4), 1380)],
+               (a(303), mk([T("LLC NHÀ SÁNG LẬP: 50,1% PHIẾU", 40)], seed=2), 1380),
+               (a(305), mk([T("QUỸ TÍN THÁC 5 GHẾ CHỌN ĐA SỐ HĐQT", 36)], seed=3), 1380),
+               (a(307, "75"), mk([T("QUỸ CÔNG ÍCH ~75–100 TỶ $", 40, RED)], seed=4), 1380)],
+        src=("Nguồn: hồ sơ S-1 của Anthropic; ước tính giá trị quỹ của AP", a(303)),
         stamp_items=[(a(302, "tiếng nói"), "GẦN NHƯ KHÔNG CÓ TIẾNG NÓI", (560, 440), -6, 52)]))
     add(None, lambda t0, t1: board(t0, t1, seed=803,
         heads=[(a(319), "CẢM ƠN CÁC BẠN!", 96, RED, (1056, 150))],

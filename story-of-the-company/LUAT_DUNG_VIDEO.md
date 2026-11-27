@@ -61,6 +61,13 @@
 - Không có tiếng nào to hơn giọng nói.
 
 ## 6. Sự thật
+- **Tự kiểm chứng trước, không đẩy việc cho chủ kênh** (chủ kênh yêu cầu 28/11). Mỗi con số, nhận định trong lời đọc:
+  tìm ≥ 2 nguồn (ưu tiên hồ sơ gốc như S-1/EDGAR, cơ quan thống kê, báo cáo khảo sát gốc), ghi lại nguồn và độ lệch giữa các nguồn.
+  - Đúng → hiện lên hình kèm dòng "Nguồn: …" cụ thể (tên báo cáo, thời điểm).
+  - Sai rõ ràng → cắt câu đó khỏi giọng (nếu không làm gãy logic) hoặc báo chủ kênh thu lại; không bao giờ để hình nói ngược lời.
+  - Chưa kiểm được → không hiện số lên hình, hoặc hiện kèm "ước tính" và báo chủ kênh.
+  - Ví dụ 28/11: "13 lần" ĐÚNG (6T/2025 1,2 tỷ $ → 6T/2026 16,3 tỷ $); "89% của 1.500 lãnh đạo" ĐÚNG (Cloudera 2026);
+    "895 tỷ gần bằng giá trị công ty" SAI (≈ 60%) → đã cắt câu.
 - Mọi con số trên hình phải có nguồn, ghi dòng nhỏ góc dưới trái ("Nguồn: …").
 - Nhận định của chủ kênh (ví dụ "kỷ lục ngành AI") được phép xuất hiện, nhưng phải báo chủ kênh nếu chưa kiểm được độc lập.
 - So sánh phải đúng tỉ lệ: số đồng xu tỉ lệ với số thật. Ví dụ 150 xu = 1.500 tỷ $, 51 xu ≈ 514 tỷ $.
