@@ -21,7 +21,7 @@ RED_TXT = "#d7261e"
 
 def use_red_sand():
     """Chủ đề chủ kênh chọn 27/11: nền giấy nhám (không kẻ ô) + chữ đỏ, gạch dưới đen."""
-    THEME.update(bg="sand", text=RED_TXT, bar=BLACK, sub=BLACK, num=RED_TXT)
+    THEME.update(bg="oldgrid", text=RED_TXT, bar=BLACK, sub=BLACK, num=RED_TXT)
 
 def make_sand(w, h, seed=7):
     """Nền giấy nhám: nền kem ấm, hạt mịn dày, lấm tấm hạt sáng/tối, loang nhẹ."""
@@ -44,8 +44,48 @@ def make_sand(w, h, seed=7):
     v = 1 - 0.12 * (((xx - w / 2) / w) ** 2 + ((yy - h / 2) / h) ** 2) * 4
     return Image.fromarray(np.clip(a * v[..., None], 0, 255).astype("uint8"))
 
+def make_oldgrid(w, h, cell=110, seed=11):
+    """Giấy sách cũ (theo video mẫu): nền xám ấm (216,216,209), hạt nhám lấm tấm, chấm trắng li ti,
+    ô kẻ TO (~110 px), đường kẻ TRẮNG sáng hơn nền, mảnh, hơi run/đứt như in trên giấy."""
+    rng = np.random.default_rng(seed)
+    a = np.ones((h, w, 3), np.float32) * np.array([225, 225, 218], np.float32)
+    # hạt nhám nhiều cỡ
+    for sc, amp in ((1, 4.0), (2, 3.0), (5, 2.5)):
+        n = rng.normal(0, 1, (h // sc + 1, w // sc + 1)).astype(np.float32)
+        if sc > 1:
+            n = np.asarray(Image.fromarray(((n * 40) + 128).clip(0, 255).astype("uint8")).resize((w, h), Image.BILINEAR), dtype=np.float32) / 40 - 3.2
+        else:
+            n = n[:h, :w]
+        a += (n * amp)[..., None]
+    # chấm trắng và chấm tối li ti
+    k = int(w * h * 0.006)
+    ys, xs = rng.integers(0, h, k), rng.integers(0, w, k)
+    a[ys, xs] += rng.uniform(12, 26, (k, 1))
+    k2 = int(w * h * 0.0015)
+    ys, xs = rng.integers(0, h, k2), rng.integers(0, w, k2)
+    a[ys, xs] -= rng.uniform(10, 22, (k2, 1))
+    # đường kẻ trắng, hơi run, độ đậm thay đổi dọc theo đường
+    lines = np.zeros((h, w), np.float32)
+    off = cell // 4
+    for x in range(off, w, cell):
+        strength = 0.55 + 0.45 * np.asarray(Image.fromarray((rng.random((h // 40 + 2, 1)) * 255).astype("uint8")).resize((1, h), Image.BILINEAR), dtype=np.float32)[:, 0] / 255
+        jit = int(rng.integers(-1, 2))
+        lines[:, max(0, x + jit):x + jit + 2] = np.maximum(lines[:, max(0, x + jit):x + jit + 2], strength[:, None])
+    for y in range(off, h, cell):
+        strength = 0.55 + 0.45 * np.asarray(Image.fromarray((rng.random((1, w // 40 + 2)) * 255).astype("uint8")).resize((w, 1), Image.BILINEAR), dtype=np.float32)[0] / 255
+        jit = int(rng.integers(-1, 2))
+        lines[max(0, y + jit):y + jit + 2, :] = np.maximum(lines[max(0, y + jit):y + jit + 2, :], strength[None, :])
+    lines *= (rng.random((h, w)) > 0.08)   # đứt nét li ti
+    lines = np.asarray(Image.fromarray((lines * 255).astype("uint8")).filter(ImageFilter.GaussianBlur(0.7)), dtype=np.float32) / 255
+    a = a * (1 - lines[..., None] * 0.85) + np.array([241, 241, 236], np.float32) * lines[..., None] * 0.85
+    yy, xx = np.mgrid[0:h, 0:w]
+    v = 1 - 0.06 * (((xx - w / 2) / w) ** 2 + ((yy - h / 2) / h) ** 2) * 4
+    return Image.fromarray(np.clip(a * v[..., None], 0, 255).astype("uint8"))
+
 def make_bg(scale=1.12):
     w, h = int(W * scale), int(H * scale)
+    if THEME["bg"] == "oldgrid":
+        return make_oldgrid(w, h, cell=int(110 * scale))
     if THEME["bg"] == "sand":
         return make_sand(w, h)
     im = Image.new("RGB", (w, h), BG)
