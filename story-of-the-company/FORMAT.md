@@ -46,3 +46,13 @@ Mục tiêu: người xem không rời mắt, bình luận nhiều, dễ lên xu
 - Search Engine Journal – Do faces help thumbnails: https://www.searchenginejournal.com/do-faces-help-youtube-thumbnails-heres-what-the-data-says/563944/
 - Vietcetera – Intentional watching on YouTube: https://vietcetera.com/en/the-new-prime-time-of-vietnams-digital-generation-the-rise-of-intentional-watching-on-youtube
 - VietNamNet – YouTube reaches 93% of internet users daily: https://vietnamnet.vn/en/youtube-reaches-93-of-vietnam-s-internet-users-daily-2556329.html
+
+## Nghiên cứu bổ sung (27/11/2026): phong cách Vox + thị trường kênh làm bằng AI
+**Thị trường:** kênh tài chính/kinh doanh "không mặt, làm bằng AI" đã bão hoà – hàng nghìn kênh giống nhau (giọng AI + video có sẵn + kịch bản chung chung). YouTube (7/2025, làm rõ 7/2026) cắt kiếm tiền nội dung "không chân thực": làm theo khuôn, lặp lại, sản xuất hàng loạt. AI không bị cấm nếu nội dung có giá trị riêng. Kênh trụ được: nghiên cứu từ nguồn gốc (báo cáo tài chính), kịch bản chặt (vấn đề → xung đột → giải quyết), móc trong 7 giây đầu, dựng có chủ ý.
+**Vox làm gì:** cân bằng "bằng chứng hình ảnh" với lời giải thích; xếp lớp (nền tĩnh + lớp giữa + lớp trước chuyển động); chuyển động hơi giật kiểu 12 khung/giây cho cảm giác thủ công; vân giấy, hạt, chú thích viết lên tài liệu thật.
+**Khoảng trống chưa ai làm (hướng của kênh):**
+1. **Bằng chứng gốc trên màn hình:** mỗi con số đi kèm tài liệu gốc (trang báo cáo SEC, thư cổ đông) được tô sáng ngay dòng đó – kênh AI đại trà gần như không làm.
+2. **Người xem là nhân vật chính:** "bạn" bỏ 1.000 đô, "bạn" ngồi ghế CEO quyết định – đồng hồ tiền của chính người xem chạy suốt video.
+3. **Hình tạo từ dữ liệu thật** (biểu đồ, bản đồ, dòng tiền tính từ số liệu), không dùng video có sẵn.
+4. **Mỗi tập một "câu hỏi lớn"** trả lời ở cuối; mỗi chương một câu hỏi nhỏ trả lời ngay trong chương.
+Nguồn: kapwing.com/resources/how-to-make-informational-videos-like-vox · premiumbeat.com/blog/replicating-vox-motion-graphic · techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos · tubefilter.com/2026/07/13/youtube-inauthentic-content-monetization-policy-update · faceless.my/youtube/faceless-finance-documentary-channels · motionarray.com/learn/premiere-pro/edit-documentary-in-premiere-pro
