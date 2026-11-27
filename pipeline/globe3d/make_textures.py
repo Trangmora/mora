@@ -53,9 +53,10 @@ def main(geo, outdir, *hl):
     finish(raster(land, SEA)).save(f"{outdir}/base.png")
     extra = ""
     for k, spec in enumerate(hl, 1):
-        code, col = spec.split("=")
+        codes, col = spec.split("=")  # nhiều nước cùng một bước: "CHN+MNG=#9a6a2a"
         dark = "#" + "".join(f"{int(int(col[i:i + 2], 16) * 0.45):02x}" for i in (1, 3, 5))
-        extra += f'<path d="{paths[code]}" fill="{col}" stroke="{dark}" stroke-width="3" stroke-linejoin="round"/>'
+        for code in codes.split("+"):
+            extra += f'<path d="{paths[code]}" fill="{col}" stroke="{dark}" stroke-width="3" stroke-linejoin="round"/>'
         finish(raster(land + extra, SEA)).save(f"{outdir}/hl{k}.png")
     # độ cao: mặt nạ đất làm mềm + núi theo nhiễu (chỉ trên đất)
     mask = raster("".join(f'<path d="{d}" fill="#fff"/>' for d in paths.values()), "#000").convert("L").resize((TW // 2, TH // 2))

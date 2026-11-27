@@ -40,8 +40,8 @@ def to_path(geom, simp):
     return "".join("M" + " ".join(f"{x * COSF:.3f},{-y:.3f}" for x, y in p.exterior.coords) + "Z"
                    for p in polys if p.geom_type == "Polygon" and p.area > 0.002)
 
-def load_geo(gdir):
-    region = box(95, 5, 170, 60)
+def load_geo(gdir, region=None):
+    region = region or box(95, 5, 170, 60)
     cs = []
     for f in json.load(open(f"{gdir}/ne_50m_admin_0_countries.geojson"))["features"]:
         c = f["properties"]["ADM0_A3"]
