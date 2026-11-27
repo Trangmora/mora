@@ -24,7 +24,7 @@ def envelope(x, win=0.05):
     pad = np.pad(e, (hold, 0))
     return sliding_window_view(pad, hold + 1).max(axis=1)[: len(e)]
 
-def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.32, duck_to=0.10, fade_out=1.2):
+def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.035, fade_out=1.2, sfx_gain=0.7):
     n = int(dur * SR)
     out = np.zeros((n, 2), np.float32)
     v = load(voice_wav)[:n]
@@ -50,7 +50,7 @@ def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.32, duck_to=0.
         if i >= n:
             continue
         j = min(n, i + len(s))
-        out[i:j] += s[: j - i] * gain
+        out[i:j] += s[: j - i] * gain * sfx_gain
     peak = np.abs(out).max()
     if peak > 0.98:
         out *= 0.98 / peak

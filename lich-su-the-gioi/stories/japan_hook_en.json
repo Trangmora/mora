@@ -1,8 +1,47 @@
-{"ghi_chu": "Hook tiếng Anh v2 (giọng nam George). Kiểm chứng: hạm đội 1281 khoảng 4.400 thuyền theo World History Encyclopedia, thường được gọi là một trong những cuộc đổ bộ đường biển lớn nhất lịch sử; nhà Tống mất 1279; Nhật đóng cửa từ thập niên 1630 đến 1853; Nhật thắng Nga 1905.",
+{
+ "ghi_chu": "Hook tiếng Anh v2 (giọng nam George). Kiểm chứng: hạm đội 1281 khoảng 4.400 thuyền theo World History Encyclopedia, thường được gọi là một trong những cuộc đổ bộ đường biển lớn nhất lịch sử; nhà Tống mất 1279; Nhật đóng cửa từ thập niên 1630 đến 1853; Nhật thắng Nga 1905.",
  "en": [
- ["h1", "In 1281, one of the largest invasion fleets in history sailed for Japan."],
- ["h2", "It belonged to the Mongols, who had just swallowed the Song dynasty, and all of China."],
- ["h3", "And yet, they failed. In Japan... and in a small kingdom to the south: Dai Viet, today's Vietnam."],
- ["h4", "Welcome to History of the World. Today: the entire history of Japan."],
- ["h5", "And by the end, you'll see how a country that locked its doors for two hundred years went on to defeat a European empire."]
- ]}
+  [
+   "h1",
+   "In 1281, one of the largest invasion fleets in history sailed for Japan."
+  ],
+  [
+   "h2",
+   "It belonged to the Mongols, who had just swallowed the Song dynasty, and all of China."
+  ],
+  [
+   "h3",
+   "And yet, they failed. In Japan... and in a small kingdom to the south: Dai Viet, today's Vietnam."
+  ],
+  [
+   "h4",
+   "Welcome to History of the World. Today: the entire history of Japan."
+  ],
+  [
+   "h5",
+   "And by the end, you'll see how a country that locked its doors for two hundred years went on to defeat a European empire."
+  ]
+ ],
+ "en_v3tags": [
+  [
+   "h1",
+   "[serious] In 1281, one of the largest invasion fleets in history sailed for Japan."
+  ],
+  [
+   "h2",
+   "It belonged to the Mongols, who had just swallowed the Song dynasty, and all of China."
+  ],
+  [
+   "h3",
+   "And yet... [dramatic pause] they failed. In Japan... and in a small kingdom to the south: Dai Viet, today's Vietnam."
+  ],
+  [
+   "h4",
+   "[warmly] Welcome to History of the World. Today: the entire history of Japan."
+  ],
+  [
+   "h5",
+   "[curious] And by the end, you'll see how a country that locked its doors for two hundred years went on to defeat a European empire."
+  ]
+ ]
+}
