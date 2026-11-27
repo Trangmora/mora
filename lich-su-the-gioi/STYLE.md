@@ -4,9 +4,14 @@ Kênh video ngắn kể chuyện lịch sử và chiến tranh bằng **bản đ
 Tách riêng khỏi kênh văn hóa (Asian Culture Stories) và kênh luật (Hiểu Luật 2 Phút).
 
 ## Định dạng
-- Video dọc 1080×1920, 30 fps, dài 30–60 giây.
+- Video **ngang 1920×1080**, 30 fps (chủ kênh chốt 27/11/2026: không làm bản dọc nữa).
 - Tiếng Việt (bản tiếng Anh: chưa chốt).
 - Nhịp nhanh: mỗi 2–4 giây có một chuyển động mới (zoom, tô màu lãnh thổ, nhân vật vào cảnh, mũi tên, nhãn bật ra).
+
+## Quy trình
+1. Gửi **kịch bản** cho chủ kênh duyệt trước. Chưa duyệt thì không thu giọng, không dựng.
+2. Kiểm chứng năm, số liệu, tên riêng trong kịch bản.
+3. Thu giọng (chủ kênh dự định tự thu hoặc clone giọng mình; giọng MC Anh Đức chỉ dùng tạm), rồi mới dựng.
 
 ## Phong cách hình
 - **Bản đồ cổ:** biển `#5f9a98`, đất `#dccb9c`, viền đất `#a8925f`, bóng đổ xanh đậm dưới đất liền, vân giấy và tối góc (vignette).
@@ -14,7 +19,7 @@ Tách riêng khỏi kênh văn hóa (Asian Culture Stories) và kênh luật (Hi
 - **Nhãn địa danh:** DejaVu Serif đậm, chữ vàng `#ffd54a`, viền nâu `#3b1d0a`, nghiêng nhẹ, bật ra (ease-back).
 - **Nhân vật:** 2D phẳng, đầu tròn, mắt chấm, viền đậm `#262220`, ghép từ nhiều bộ phận (đầu, miệng, tay) để diễn: nhép miệng, bắt tay, giơ tay, há miệng, trợn mắt, lắc đầu, nhún.
   Trang phục đúng thời kỳ (khăn đóng/áo dài quan Nguyễn, mũ kepi sĩ quan Pháp…).
-- **Phụ đề:** Inter 800, chữ trắng viền đen, 2–3 chữ mỗi cụm, giữa khung (y ≈ 1110), khớp mốc từng chữ của giọng đọc.
+- **Phụ đề:** Inter 800, chữ trắng viền đen, 2–3 chữ mỗi cụm, giữa đáy khung ngang (y ≈ 988), khớp mốc từng chữ của giọng đọc.
 - Không sao chép thiết kế nhân vật, bảng màu hay bố cục của kênh khác (kể cả kênh mẫu @GeoGlobeTales).
 
 ## Bộ công cụ (dùng chung với `pipeline/mapstory/`)

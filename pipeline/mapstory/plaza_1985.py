@@ -11,9 +11,23 @@ from PIL import Image
 from shapely.geometry import shape, box
 
 sys.path.insert(0, os.path.dirname(__file__))
-from demo import (W, H, clamp, prog, ease_io, ease_out, ease_back, lerp, mix, outlined, eyes, arm,
+from demo import (clamp, prog, ease_io, ease_out, ease_back, lerp, mix, outlined, eyes, arm,
                   make_texture, OUT, SKIN, LAND, LAND_EDGE, SEA)
-from ftx import build_captions, caption
+from ftx import build_captions
+
+W, H = 1920, 1080          # khung ngang
+OX, OY = 420, -180         # dời các cảnh phủ (thiết kế cho cột rộng 1080) vào giữa khung ngang
+S_CHAR, FEET = 1.1, 1066   # cỡ nhân vật, mép chân
+XJ, XU = 230, 1690         # chỗ đứng: Nhật bên trái, Mỹ bên phải
+
+def caption(t, caps):
+    for a, b, txt in caps:
+        if a <= t < b:
+            k = ease_back(prog(t, a, a + 0.15), 2.2)
+            return (f'<g transform="translate({W / 2},{H - 92}) scale({0.6 + 0.4 * k:.3f})">'
+                    + outlined('text-anchor="middle" font-family="Inter" font-weight="800" font-size="64"', txt,
+                               "#ffffff", "#141414", 13) + "</g>")
+    return ""
 
 FPS = 30
 COSF = math.cos(math.radians(30))
@@ -72,12 +86,12 @@ def load_california(path):
             return "M" + " ".join(f"{(x - c.x) * cs * k:.1f},{-(y - c.y) * k:.1f}" for x, y in poly.exterior.coords) + "Z"
 
 def camera(t, T):
-    wide = (205, 33, 6.8)
+    wide = (212, 33, 11)
     ny = (286.0, 40.7, 34)
-    jp = (138.5, 36.5, 38)
-    keys = [(0, (211, 28, 4.6)), (T["s01_end"], wide), (T["s04"], wide), (T["s04"] + 1.3, ny),
+    jp = (138.5, 36.8, 44)
+    keys = [(0, (212, 28, 7.5)), (T["s01_end"], wide), (T["s04"], wide), (T["s04"] + 1.3, ny),
             (T["s06"], ny), (T["s06"] + 1.2, wide), (T["s08"], wide), (T["s08"] + 1.2, jp),
-            (T["s11"], jp), (T["s11"] + 1.0, (140, 36, 20)), (1e9, (140, 36, 20))]
+            (T["s11"], jp), (T["s11"] + 1.0, (140, 36, 30)), (1e9, (140, 36, 30))]
     for (ta, a), (tb, b) in zip(keys, keys[1:]):
         if ta <= t < tb:
             z = ease_io(prog(t, ta, tb))
@@ -86,7 +100,7 @@ def camera(t, T):
 
 def map_svg(t, T):
     clon, clat, s = camera(t, T)
-    tx, ty = W / 2 - clon * COSF * s, H * 0.30 + clat * s
+    tx, ty = W / 2 - clon * COSF * s, H * 0.45 + clat * s
     to_px = lambda lon, lat: (lon * COSF * s + tx, -lat * s + ty)
     jp = ease_out(prog(t, T["s02"] + 0.2, T["s02"] + 0.9))
     us = ease_out(prog(t, T["s03"], T["s03"] + 0.7))
@@ -227,7 +241,7 @@ def scene_deficit(t, T):
     if a <= 0:
         return ""
     x, y = G["to_px"](262, 34)
-    hgt = 420 * ease_out(prog(t, T["s03"] + 0.6, T["s03_end"]))
+    hgt = 330 * ease_out(prog(t, T["s03"] + 0.6, T["s03_end"]))
     wob = math.sin(t * 30) * 4 * (hgt / 420)
     pts = f"{x - 230},{y} {x - 90 + wob},{y - hgt * 0.72} {x - 40},{y - hgt * 0.6} {x + wob},{y - hgt} {x + 70},{y - hgt * 0.7} {x + 230},{y}"
     s = (f'<g opacity="{a:.2f}"><polygon points="{pts}" fill="#d62828" stroke="{OUT}" stroke-width="8" stroke-linejoin="round"/>'
@@ -318,16 +332,16 @@ def scene_rates_money(t, T):
     a = window(t, T["s08"] + 1.6, T["s10"] + 0.1)
     if a > 0:
         rng = np.random.default_rng(3)
-        for i in range(26):
-            x0 = rng.uniform(80, 1000); sp = rng.uniform(260, 420); ph = rng.uniform(0, 1)
-            y = ((t - T["s08"]) * sp + ph * 1100) % 1100 - 100
+        for i in range(40):
+            x0 = rng.uniform(40, W - 40); sp = rng.uniform(260, 420); ph = rng.uniform(0, 1)
+            y = ((t - T["s08"]) * sp + ph * (H + 200)) % (H + 200) - 100
             s += bill(x0 + math.sin(t * 2 + i) * 30, y, math.sin(t * 3 + i * 1.7) * 30, 1.2, a)
     a = window(t, T["s08"] + 0.6, T["s09"] + 0.2)
     if a > 0:
         k = ease_io(prog(t, T["s08"] + 1.2, T["s08"] + 2.2))
         v = lerp(5.0, 2.5, k)
         txt = f"{v:.1f}%".replace(".", ",")
-        s += (f'<g opacity="{a:.2f}" transform="translate(540,330) scale({ease_back(prog(t, T["s08"] + 0.6, T["s08"] + 1.0)):.3f})">'
+        s += (f'<g opacity="{a:.2f}" transform="translate(960,170) scale({ease_back(prog(t, T["s08"] + 0.6, T["s08"] + 1.0)):.3f})">'
               f'<rect x="-330" y="-120" width="660" height="230" rx="26" fill="#fff6e0" stroke="{OUT}" stroke-width="8"/>'
               f'<text x="0" y="-40" text-anchor="middle" font-family="Inter" font-weight="800" font-size="52" fill="#5a4630">LÃI SUẤT</text>'
               f'<text x="-30" y="80" text-anchor="middle" font-family="Inter" font-weight="900" font-size="130" fill="{mix("#141414", "#2fa84f", k)}">{txt}</text>'
@@ -340,8 +354,8 @@ def scene_bubble(t, T):
     if a <= 0:
         return ""
     x, y = G["to_px"](139.7, 35.7)
-    r = 60 + 300 * ease_out(prog(t, T["s09"] + 0.6, T["s10"])) + math.sin(t * 7) * 8
-    cx, cy = x, y - r * 0.85
+    r = 50 + 190 * ease_out(prog(t, T["s09"] + 0.6, T["s10"])) + math.sin(t * 7) * 8
+    cx, cy = x, y - r * 0.7
     s = (f'<g opacity="{a:.2f}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#bfe8ff" fill-opacity="0.45" stroke="#ffffff" stroke-width="8"/>'
          f'<path d="M {cx - r * 0.55:.1f} {cy - r * 0.35:.1f} Q {cx - r * 0.45:.1f} {cy - r * 0.7:.1f} {cx - r * 0.05:.1f} {cy - r * 0.75:.1f}" '
          f'fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.9"/>')
@@ -532,7 +546,7 @@ def seg(t, T):
 
 def characters(t, T):
     sg = seg(t, T)
-    S = 1.4
+    S = S_CHAR
     bob = math.sin(t * 5) * 4
     # quan chức Nhật (trái)
     jp_expr = {"s02": "smile", "s03": "laugh", "s04": "smile", "s05": "smile", "s06": "shock", "s07": "sad", "s08": "talk",
@@ -567,12 +581,11 @@ def characters(t, T):
     hop = abs(math.sin(t * 9)) * 30 if sg in ("s09", "s11") or (sg == "s14" and t > T["s14"] + 2.0) else 0
     ej = ease_back(prog(t, T["s02"] + 0.2, T["s02"] + 0.8), 1.4)
     eu = ease_back(prog(t, T["s03"] + 0.1, T["s03"] + 0.7), 1.4)
-    xj, xu = 264, 816
-    if sg == "s05":  # Mỹ ghé tai thì thầm
-        lean = ease_io(prog(t, T["s05"], T["s05"] + 0.4))
-        xu = lerp(816, 740, lean)
-    yj = 1880 + (1 - ej) * 900 - bob + sad_dy - hop
-    yu = 1880 + (1 - eu) * 900 + bob * 0.7
+    # hai bên đi vào giữa để bắt tay ở Plaza rồi về chỗ
+    near = ease_io(prog(t, T["s04"] + 0.4, hs0)) * (1 - ease_io(prog(t, T["s05"] + 0.1, T["s05"] + 0.7)))
+    xj, xu = lerp(XJ, 760, near), lerp(XU, 1160, near)
+    yj = FEET + (1 - ej) * 600 - bob + sad_dy * S / 1.4 - hop * S / 1.4
+    yu = FEET + (1 - eu) * 600 + bob * 0.7
     s = ""
     if eu > -0.2 and t >= T["s03"]:
         s += f'<g transform="translate({xu:.1f},{yu:.1f}) scale({-S},{S})">{official("us", us_expr, aLu, aRu, t, hr_u)}</g>'
@@ -581,7 +594,7 @@ def characters(t, T):
     # nhãn tên nhỏ dưới chân
     k = prog(t, T["s03"] + 0.6, T["s03"] + 1.0) * (1 - prog(t, T["s04"] + 0.6, T["s04"] + 1.0))
     if k > 0:
-        s += (f'<g opacity="{k:.2f}">' + big(xj, 1890, "NHẬT", 50, "#ffffff", JP_COL, 10) + big(xu, 1890, "MỸ", 50, "#ffffff", US_COL, 10) + "</g>")
+        s += (f'<g opacity="{k:.2f}">' + big(xj, FEET - 430 * S, "NHẬT", 50, "#ffffff", JP_COL, 10) + big(xu, FEET - 430 * S, "MỸ", 50, "#ffffff", US_COL, 10) + "</g>")
     return s
 
 # ---------- dựng khung ----------
@@ -608,8 +621,9 @@ def render(i):
     base = np.clip(base * G["tex"], 0, 255) * (1 - dim_amount(t, T))
     fg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}"><g {sh}>'
           + scene_goods(t, T) + scene_deficit(t, T) + scene_rates_money(t, T) + scene_bubble(t, T)
+          + f'<g transform="translate({OX},{OY})">'
           + scene_title(t, T) + scene_plaza(t, T) + scene_seesaw(t, T) + scene_rate(t, T) + scene_price(t, T)
-          + scene_scale(t, T) + scene_chart(t, T) + scene_end(t, T)
+          + scene_scale(t, T) + scene_chart(t, T) + scene_end(t, T) + "</g>"
           + characters(t, T) + caption(t, G["caps"]) + "</g></svg>")
     f = np.asarray(Image.open(io.BytesIO(cairosvg.svg2png(bytestring=fg.encode()))).convert("RGBA"), dtype=np.float32)
     a = f[..., 3:4] / 255
@@ -622,7 +636,7 @@ def init(geo, geo1, vo):
     G["caps"] = build_captions(d["chars"], d["T"], G["dur"])
     G["countries"] = load_map(geo)
     G["calif"] = load_california(geo1)
-    G["tex"] = make_texture()
+    G["tex"] = make_texture(W, H)
 
 def main(geo, geo1, vo, out, only=None):
     init(geo, geo1, vo)

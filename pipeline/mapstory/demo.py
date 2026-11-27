@@ -190,7 +190,7 @@ def caption(t):
     return ""
 
 # ---------- giấy/vignette ----------
-def make_texture():
+def make_texture(W=W, H=H):
     rng = np.random.default_rng(7)
     n = Image.fromarray((rng.random((H // 4, W // 4)) * 255).astype("uint8")).resize((W, H), Image.BICUBIC)
     n = np.asarray(n.filter(ImageFilter.GaussianBlur(3)), dtype=np.float32) / 255
