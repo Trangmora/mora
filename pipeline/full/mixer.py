@@ -24,7 +24,16 @@ def envelope(x, win=0.05):
     pad = np.pad(e, (hold, 0))
     return sliding_window_view(pad, hold + 1).max(axis=1)[: len(e)]
 
-def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.035, fade_out=1.2, sfx_gain=0.7, mutes=()):
+def loudest(x, win=0.4):
+    """RMS lớn nhất trên cửa sổ 400 ms (độ to cảm nhận gần đúng)"""
+    m = (x.astype(np.float64) ** 2).mean(axis=1)
+    n = max(1, int(win * SR))
+    if len(m) <= n:
+        return float(np.sqrt(m.mean()))
+    c = np.cumsum(np.concatenate([[0], m]))
+    return float(np.sqrt(((c[n:] - c[:-n]) / n).max()))
+
+def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.035, fade_out=1.2, sfx_gain=1.0, mutes=(), sfx_rel=0.4, vpeak_cap=0.45):
     n = int(dur * SR)
     out = np.zeros((n, 2), np.float32)
     v = load(voice_wav)[:n]
@@ -50,11 +59,21 @@ def mix(voice_wav, music_path, events, out_wav, dur, music_gain=0.12, duck_to=0.
         fo = np.linspace(1, 0, int(fade_out * SR))
         g[-len(fo):] *= fo
         out += m * g[:, None]
+    # tiếng động: chuẩn hoá theo độ to (RMS 400 ms lớn nhất) so với giọng đọc, để không tiếng nào làm giật mình
+    vref = loudest(v) if len(v) else 0.1
     for t, path, gain in events:
         s = load(path)
         i = int(max(0, t) * SR)
         if i >= n:
             continue
+        lv = loudest(s)
+        if lv > 0:
+            s = s * (vref * sfx_rel / lv)
+        pk = np.abs(s).max()
+        if pk > vpeak_cap * np.abs(v).max():  # chặn đỉnh: không vượt 45% đỉnh giọng
+            s = s * (vpeak_cap * np.abs(v).max() / pk)
+        f = min(len(s), int(0.015 * SR))  # vào mềm 15 ms
+        s[:f] *= np.linspace(0, 1, f)[:, None]
         j = min(n, i + len(s))
         out[i:j] += s[: j - i] * gain * sfx_gain
     peak = np.abs(out).max()
