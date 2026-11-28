@@ -8,7 +8,7 @@ Dùng:
   Video luật mới (bắt trend): thêm mục "trend": true, "at" = ngày hôm nay/ngày mai 09:00, rồi chạy reflow --from <ngày đó>:
   video trend chiếm ngày đó, các video còn lại tự lùi một ngày.
 Ghi post_id vào schedule.json để không đăng lặp.
-QUY TẮC (chủ kênh chốt 27/11/2026): TỐI ĐA MỘT VIDEO MỘT NGÀY. Video mới không "đăng luôn" mà xếp vào ngày trống
+QUY TẮC (chủ kênh chốt 27–28/11/2026): MỖI NGÀY MỘT VIDEO 09:00; ngoại lệ: video tin trong ngày ("trend": true) lên ĐÚNG NGÀY đó dù đã qua 9 giờ (giờ = 30 phút sau khi xong). Video mới không "đăng luôn" mà xếp vào ngày trống
 (lệnh next-slot). Script từ chối đăng nếu ngày đó đã có video khác, hoặc nếu cùng văn bản đã có trong lịch
 (thêm --allow-same-law khi cố ý làm tập thứ hai về cùng văn bản, ví dụ hai tập khác ý của cùng một luật).
 Trước khi chạy: git pull nhánh claude/law-channel; giữ chỗ trong schedule.json rồi commit + push NGAY, sau đó mới đăng."""
@@ -54,7 +54,7 @@ for p in plan:
     if p['post_id']: continue
     if datetime.datetime.fromisoformat(p['at']) < now + datetime.timedelta(minutes=30): print('BỎ QUA (giờ đã qua):', p['file']); continue
     same_day = [q['file'] for q in plan if q is not p and vn_date(q) == vn_date(p)]
-    if same_day: sys.exit(f'Từ chối: ngày {vn_date(p)} đã có video {same_day} (tối đa một video một ngày). Chạy "next-slot" để lấy ngày trống.')
+    if same_day and not p.get('trend'): sys.exit(f'Từ chối: ngày {vn_date(p)} đã có video {same_day} (tối đa một video một ngày). Chạy "next-slot" để lấy ngày trống.')
     same_law = [q['file'] for q in plan if q is not p and law_key(q) == law_key(p)]
     if same_law and '--allow-same-law' not in a: sys.exit(f'Từ chối: {p["file"]} trùng văn bản với {same_law} đã có trong lịch. Kiểm tra trùng đề tài; nếu cố ý làm tập khác ý thì thêm --allow-same-law.')
     out = subprocess.run([sys.executable, MP, 'post', '--video-url', p['video_url'], '--account', acc, '--title', p['title'],
