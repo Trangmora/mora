@@ -51,6 +51,12 @@
 - Chữ nào cũng phải là tiếng Việt có dấu đầy đủ. Không dùng ký tự font không có (→ ↓ ① …).
 - Mỗi màn hình tối đa 1 ý chính + 1 ý phụ.
 
+## 4b. Người thật trong hình (chủ kênh yêu cầu 28/11)
+- Nhắc tới ai (CEO, nhà sáng lập, thành viên quỹ, đối thủ) → có **ảnh thật** của người đó trong thẻ/sơ đồ, dạng sticker đen trắng chấm báo, viền đỏ, tên + vai trò bên dưới (`person()` trong `phys_scenes.py`).
+- Ảnh chỉ lấy từ nguồn có giấy phép (Wikimedia Commons CC BY / CC BY-SA / PD), lưu `people/credits.json`, và **ghi công trong mô tả video** (`story-of-the-company/videos/ghi_cong_anh.md`).
+- Không có ảnh hợp lệ, hoặc ảnh quá xa/mờ/tách nền vỡ → dùng **hình bóng giấy + tên**, không dùng ảnh trôi nổi.
+- Font không có "→": viết bằng chữ (tự động thay bằng "»" nếu lỡ dùng).
+
 ## 5. Âm thanh
 - **Nhạc nền rất nhỏ** (−31 dB), tự hạ khi có giọng.
 - Hiệu ứng chỉ là **tiếng vật thật, nhỏ**:

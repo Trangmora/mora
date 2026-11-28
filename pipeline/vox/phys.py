@@ -62,6 +62,7 @@ def card(w, h, lines, bg=CREAM, seed=0, pad_y=0):
     im = Image.fromarray(a.clip(0, 255).astype("uint8"))
     d = ImageDraw.Draw(im)
     fit = []
+    lines = [(t_.replace("→", "»"), s_, c_) for t_, s_, c_ in lines]
     for t_, s_, c_ in lines:  # tự thu cỡ chữ cho vừa mảnh giấy (không bao giờ tràn mép)
         while s_ > 12 and font(s_).getbbox(t_)[2] - font(s_).getbbox(t_)[0] > w - 56:
             s_ -= 2
@@ -380,6 +381,7 @@ def comp(dst, im, x, y):
 _tc = {}
 
 def text_img(s, size, col=BLACK, stroke=0, rot=0.0):
+    s = s.replace("→", "»")  # font không có mũi tên
     key = (s, size, col, stroke, rot)
     if key not in _tc:
         f = font(size)

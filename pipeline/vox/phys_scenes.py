@@ -385,7 +385,7 @@ def factory(st, x=1056, base=860, w=520, label="ANTHROPIC", puffs_t=None, puff_l
     st.top_fns.append(labels)
 
 # ---------- hình nhỏ ----------
-def bowl_sprite():
+def bowl_sprite(txt="PHỞ"):
     im = Image.new("RGBA", (300, 230), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     for i in range(3):
@@ -393,7 +393,7 @@ def bowl_sprite():
         d.line([(x + 12 * math.sin(k / 3), 20 + k * 6) for k in range(12)], fill=INK + (255,), width=6)
     d.pieslice((20, 10, 280, 250), 0, 180, fill=CREAM + (255,), outline=BLACK + (255,), width=8)
     d.rectangle((20, 124, 280, 140), fill=RED + (255,))
-    d.text((150, 175), "PHỞ", font=font(44), fill=BLACK + (255,), anchor="mm")
+    d.text((150, 175), txt, font=font(44), fill=BLACK + (255,), anchor="mm")
     return im
 
 def house_sprite(seed=0):
@@ -448,3 +448,74 @@ def row(items, x0=200, x1=1912, gap=40):
         out.append((it[0], it[1], x + w / 2) + ((it[2],) if len(it) > 2 else ()))
         x += w + g
     return out
+
+# ======================================================================================
+# NGƯỜI THẬT: sticker đen trắng chấm báo + viền đỏ (ảnh có giấy phép, credits.json); thiếu ảnh → bóng giấy + tên
+import os as _os
+PEOPLE_DIR = _os.environ.get("PEOPLE_DIR", "")
+
+def silhouette(w=200):
+    from PIL import ImageFilter as _F
+    h = int(w * 1.2)
+    pad = 26
+    m = Image.new("L", (w + 2 * pad, h + 2 * pad), 0)
+    d = ImageDraw.Draw(m)
+    cx = pad + w / 2
+    d.ellipse((cx - w * 0.22, pad + h * 0.08, cx + w * 0.22, pad + h * 0.08 + w * 0.48), fill=255)
+    d.pieslice((pad + w * 0.05, pad + h * 0.55, pad + w * 0.95, pad + h * 1.45), 180, 360, fill=255)
+    ring = m.filter(_F.MaxFilter(21))
+    out = Image.new("RGBA", m.size, (0, 0, 0, 0))
+    red = Image.new("RGBA", m.size, RED + (255,))
+    red.putalpha(ring)
+    out.alpha_composite(red)
+    body = Image.new("RGBA", m.size, (70, 68, 64, 255))
+    body.putalpha(m)
+    out.alpha_composite(body)
+    return out
+
+def person(key, name, role=None, w=200, seed=0):
+    from phys import strip_baked_shadow
+    import clean as _C
+    cut = _os.path.join(PEOPLE_DIR, f"{key}_cut.png")
+    if key and _os.path.exists(cut):
+        st = strip_baked_shadow(_C.sticker(cut, w, _C.RED_RGB, outline=10))
+        maxh = int(st.width * 1.3)
+        if st.height > maxh:
+            st = st.crop((0, 0, st.width, maxh))
+    else:
+        st = silhouette(w)
+    lines = [T(name, 26, BLACK)] + ([T(role, 20, RED)] if role else [])
+    lab = mk(lines, seed=seed, padx=14, pady=6)
+    W_ = max(st.width, lab.width)
+    out = Image.new("RGBA", (W_, st.height + lab.height - 22), (0, 0, 0, 0))
+    out.alpha_composite(st, ((W_ - st.width) // 2, 0))
+    out.alpha_composite(lab, ((W_ - lab.width) // 2, st.height - 22))
+    return out
+
+def pops(st, items, bob=3.0):
+    """Sơ đồ: thẻ/ảnh bật ra đúng chữ (không rơi), nhấp nhô nhẹ như giấy treo."""
+    def f(d, img, t, snap):
+        for i, (ts, im, xy) in enumerate(items):
+            if t >= ts:
+                y = xy[1] + bob * math.sin(t * 1.6 + i)
+                place(img, im, (xy[0], y), prog(t, ts, ts + 0.35))
+    st.top_fns.append(f)
+    for ts, _, _ in items:
+        st.sounds.append((ts, "paper", 0.3))
+
+def arrows(st, items, col=BLACK, width=9):
+    """Mũi tên tự vẽ: (t, (x0,y0), (x1,y1), nhãn)."""
+    def f(d, img, t, snap):
+        for ts, p0, p1, lab in items:
+            if t < ts:
+                continue
+            k = ease_out(prog(t, ts, ts + 0.5))
+            x1, y1 = p0[0] + (p1[0] - p0[0]) * k, p0[1] + (p1[1] - p0[1]) * k
+            d.line((p0, (x1, y1)), fill=col + (255,), width=width)
+            if k >= 1:
+                a = math.atan2(p1[1] - p0[1], p1[0] - p0[0])
+                d.polygon([(x1 + 26 * math.cos(a), y1 + 26 * math.sin(a)), (x1 + 26 * math.cos(a + 2.5), y1 + 26 * math.sin(a + 2.5)),
+                           (x1 + 26 * math.cos(a - 2.5), y1 + 26 * math.sin(a - 2.5))], fill=col + (255,))
+            if lab:
+                place(img, text_img(lab, 34, RED, stroke=6), ((p0[0] + p1[0]) / 2 + 70, (p0[1] + p1[1]) / 2), prog(t, ts + 0.2, ts + 0.5))
+    st.world_fns.append(f)

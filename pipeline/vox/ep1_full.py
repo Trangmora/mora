@@ -16,7 +16,7 @@ import ep1_phys as E
 from engine import mix_audio
 from phys import OW, OH, FPS, RED, BLACK, CREAM, GOLD, glyph, render_stage, page_slide, ease_io, prog
 from phys_scenes import (T, mk, tag, num, board, bins, scale, bucket, meter, loop, factory, heading, stamps, source,
-                         bowl_sprite, house_sprite, chip_sprite, egg_sprite, weight_sprite, LEAD, row)
+                         bowl_sprite, house_sprite, chip_sprite, egg_sprite, weight_sprite, LEAD, row, person)
 
 A = ev.A
 G = {}
@@ -306,12 +306,14 @@ def scenes(people):
     # ---------------- PHẦN 6: AMAZON & GOOGLE ----------------
     add(cut(214), lambda t0, t1: board(t0, t1, seed=601,
         heads=[(a(204), "AMAZON & GOOGLE LÀ AI VỚI ANTHROPIC?", 62, BLACK)],
-        drops=[(a(204, "Amazon"), mk([T("AMAZON", 90)], seed=1, minw=600), 560, {"mass": 14}),
-               (a(204, "Google"), mk([T("GOOGLE", 90)], seed=2, minw=600), 1550, {"mass": 14}),
-               (a(206, "nhà đầu tư"), tag("1. NHÀ ĐẦU TƯ", 50, 3), 560), (a(206, "nhà đầu tư", 0.2), tag("1. NHÀ ĐẦU TƯ", 50, 4), 1550),
-               (a(207, "chủ nhà"), tag("2. CHỦ NHÀ · CHO THUÊ MÁY CHỦ", 40, 5), 560),
-               (a(207, "chủ nhà", 0.2), tag("2. CHỦ NHÀ · CHO THUÊ MÁY CHỦ", 40, 6), 1550),
-               (a(209, "đối thủ"), mk([T("3. ĐỐI THỦ · GEMINI", 46, CREAM)], bg=RED, seed=7), 1550)]))
+        drops=[(a(204, "Amazon"), mk([T("AMAZON", 84)], seed=1, minw=520), 780, {"mass": 14}),
+               (a(204, "Amazon", 0.3), person("jassy", "ANDY JASSY", "CEO AMAZON", w=150), 300, {"mass": 4}),
+               (a(204, "Google"), mk([T("GOOGLE", 84)], seed=2, minw=520), 1340, {"mass": 14}),
+               (a(204, "Google", 0.3), person("pichai", "SUNDAR PICHAI", "CEO GOOGLE", w=150), 1800, {"mass": 4}),
+               (a(206, "nhà đầu tư"), tag("1. NHÀ ĐẦU TƯ", 46, 3), 780), (a(206, "nhà đầu tư", 0.2), tag("1. NHÀ ĐẦU TƯ", 46, 4), 1340),
+               (a(207, "chủ nhà"), tag("2. CHO THUÊ MÁY CHỦ", 40, 5), 780),
+               (a(207, "chủ nhà", 0.2), tag("2. CHO THUÊ MÁY CHỦ", 40, 6), 1340),
+               (a(209, "đối thủ"), mk([T("3. ĐỐI THỦ · GEMINI", 42, CREAM)], bg=RED, seed=7), 1340)]))
     add(cut(230), lambda t0, t1: loop(t0, t1, "AMAZON", "ANTHROPIC", seed=602,
         steps=[(a(215, "đầu tư"), "ab", "1. ĐẦU TƯ TIỀN", 6), (a(217, "thuê"), "ba", "2. THUÊ LẠI MÁY CHỦ AMAZON", 6)],
         counter=(a(220, "doanh thu"), "+ GHI NHẬN DOANH THU"),
@@ -342,13 +344,17 @@ def scenes(people):
         stamp_items=[(a(248, "diễn ra"), "ĐANG DIỄN RA KHÁ TỐT", (1056, 340), -5, 80)]))
     add(cut(272), lambda t0, t1: board(t0, t1, seed=704,
         heads=[(a(251), "3. CLAUDE PHẢI LUÔN ĐỦ GIỎI", 76, RED, (1056, 150), a(254)),
-               (a(254), "ĐIỂM MẠNH: DOANH NGHIỆP + LẬP TRÌNH", 64, RED, (1056, 150))],
-        drops=[(a(252, "OpenAI"), mk([T("CHATGPT", 60), T("OPENAI", 34)], seed=1), 440),
-               (a(252, "Gemini"), mk([T("GEMINI", 60), T("GOOGLE", 34)], seed=2), 1056),
-               (a(252, "Grok"), mk([T("GROK", 60), T("ELON MUSK", 34)], seed=3), 1670),
-               (a(260, "ChatGPT"), tag("CHATGPT: TRỢ LÝ · GIẢI ĐÁP", 40, 4), 440),
-               (a(262, "Claude"), mk([T("CLAUDE: LẬP TRÌNH · LÀM LUÔN CHO DOANH NGHIỆP", 50, CREAM)], bg=RED, seed=5), 1150, {"z": 4})]))
-    add(cut(284), lambda t0, t1: bucket(t0, t1, [(a(272), a(283, None, 1.5), 230, lambda u: 0.4 + u)], hole=False, fire=False, seed=705,
+               (a(254), "ĐIỂM MẠNH: DOANH NGHIỆP + LẬP TRÌNH", 64, RED, (1056, 150), a(262, "Claude")),
+               (a(262, "Claude"), "CLAUDE: LẬP TRÌNH · LÀM LUÔN CHO DOANH NGHIỆP", 56, RED, (1056, 150))],
+        stamp_items=[(a(260, "ChatGPT"), "CHATGPT: TRỢ LÝ · GIẢI ĐÁP", (1056, 320), -3, 48)],
+        drops=[(a(252, "OpenAI"), mk([T("CHATGPT", 60), T("OPENAI", 34)], seed=1, minw=380), 440),
+               (a(252, "OpenAI", 0.35), person("altman", "SAM ALTMAN", w=140, seed=11), 440, {"mass": 3}),
+               (a(252, "Gemini"), mk([T("GEMINI", 60), T("GOOGLE", 34)], seed=2, minw=380), 1056),
+               (a(252, "Gemini", 0.35), person("pichai", "SUNDAR PICHAI", w=140, seed=12), 1056, {"mass": 3}),
+               (a(252, "Grok"), mk([T("GROK", 60), T("XAI", 34)], seed=3, minw=380), 1670),
+               (a(252, "Grok", 0.35), person("musk", "ELON MUSK", w=140, seed=13), 1670, {"mass": 3}),
+               ]))
+    add(cut(284), lambda t0, t1: bucket(t0, t1, [(a(272), a(283, None, 1.5), 165, lambda u: 0.4 + u)], hole=False, fire=False, seed=705,
         heads=[(a(272), "NẾU CẢ 3 LÁ BÀI ĐỀU THẮNG", 70, BLACK, (1056, 130))],
         labels=[(a(279, "giảm"), "GIẢM CHI XÂY DỰNG", 50, BLACK, (400, 460)), (a(282, "tiền vào"), "CHỈ CÒN TIỀN VÀO", 54, RED, (1640, 600))],
         stamp_items=[(a(283, "lãi rất"), "LÃI RẤT LỚN", (1056, 520), -6, 110)]))
